@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Info_IT
 {
-	public partial class Form1 : Form
-	{
-		public Form1()
-		{
-			InitializeComponent();
-		}
-	}
+    public partial class Staff : Form
+    {
+        public Staff()
+        {
+            InitializeComponent();
+        }
+    }
 }
