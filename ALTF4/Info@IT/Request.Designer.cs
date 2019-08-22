@@ -31,28 +31,28 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvRequest = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbStaffAssCode = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtDate = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTime = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbTaskTypeCode = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbStudentCode = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbStaffCode = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmbStaffCode = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmbStudentCode = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmbTaskTypeCode = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtDate = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtTime = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbStaffAssCode = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.addRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateSelectedRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listAllRequestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequest)).BeginInit();
@@ -101,6 +101,106 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Information";
             // 
+            // cmbStaffAssCode
+            // 
+            this.cmbStaffAssCode.FormattingEnabled = true;
+            this.cmbStaffAssCode.Location = new System.Drawing.Point(168, 294);
+            this.cmbStaffAssCode.Name = "cmbStaffAssCode";
+            this.cmbStaffAssCode.Size = new System.Drawing.Size(187, 21);
+            this.cmbStaffAssCode.TabIndex = 37;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(13, 298);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(137, 13);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "Staff Code (Assigned Staff):";
+            // 
+            // txtDate
+            // 
+            this.txtDate.Location = new System.Drawing.Point(168, 228);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(187, 20);
+            this.txtDate.TabIndex = 35;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 231);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Date:";
+            // 
+            // txtTime
+            // 
+            this.txtTime.Location = new System.Drawing.Point(168, 261);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Size = new System.Drawing.Size(187, 20);
+            this.txtTime.TabIndex = 33;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 264);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Time:";
+            // 
+            // cmbTaskTypeCode
+            // 
+            this.cmbTaskTypeCode.FormattingEnabled = true;
+            this.cmbTaskTypeCode.Location = new System.Drawing.Point(168, 194);
+            this.cmbTaskTypeCode.Name = "cmbTaskTypeCode";
+            this.cmbTaskTypeCode.Size = new System.Drawing.Size(187, 21);
+            this.cmbTaskTypeCode.TabIndex = 31;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 198);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 13);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "Task Type Code:";
+            // 
+            // cmbStudentCode
+            // 
+            this.cmbStudentCode.FormattingEnabled = true;
+            this.cmbStudentCode.Location = new System.Drawing.Point(168, 160);
+            this.cmbStudentCode.Name = "cmbStudentCode";
+            this.cmbStudentCode.Size = new System.Drawing.Size(187, 21);
+            this.cmbStudentCode.TabIndex = 29;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 164);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 13);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "Student Code:";
+            // 
+            // cmbStaffCode
+            // 
+            this.cmbStaffCode.FormattingEnabled = true;
+            this.cmbStaffCode.Location = new System.Drawing.Point(168, 126);
+            this.cmbStaffCode.Name = "cmbStaffCode";
+            this.cmbStaffCode.Size = new System.Drawing.Size(187, 21);
+            this.cmbStaffCode.TabIndex = 27;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 130);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 13);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Staff Code:";
+            // 
             // txtDescription
             // 
             this.txtDescription.Location = new System.Drawing.Point(168, 93);
@@ -142,14 +242,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Home";
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listAllRequestsToolStripMenuItem});
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.viewToolStripMenuItem.Text = "View";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // manageToolStripMenuItem
             // 
@@ -160,106 +253,6 @@
             this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
             this.manageToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.manageToolStripMenuItem.Text = "Manage";
-            // 
-            // cmbStaffCode
-            // 
-            this.cmbStaffCode.FormattingEnabled = true;
-            this.cmbStaffCode.Location = new System.Drawing.Point(168, 126);
-            this.cmbStaffCode.Name = "cmbStaffCode";
-            this.cmbStaffCode.Size = new System.Drawing.Size(187, 21);
-            this.cmbStaffCode.TabIndex = 27;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 130);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 13);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "Staff Code:";
-            // 
-            // cmbStudentCode
-            // 
-            this.cmbStudentCode.FormattingEnabled = true;
-            this.cmbStudentCode.Location = new System.Drawing.Point(168, 160);
-            this.cmbStudentCode.Name = "cmbStudentCode";
-            this.cmbStudentCode.Size = new System.Drawing.Size(187, 21);
-            this.cmbStudentCode.TabIndex = 29;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 164);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 13);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "Student Code:";
-            // 
-            // cmbTaskTypeCode
-            // 
-            this.cmbTaskTypeCode.FormattingEnabled = true;
-            this.cmbTaskTypeCode.Location = new System.Drawing.Point(168, 194);
-            this.cmbTaskTypeCode.Name = "cmbTaskTypeCode";
-            this.cmbTaskTypeCode.Size = new System.Drawing.Size(187, 21);
-            this.cmbTaskTypeCode.TabIndex = 31;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 198);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 13);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "Task Type Code:";
-            // 
-            // txtDate
-            // 
-            this.txtDate.Location = new System.Drawing.Point(168, 228);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(187, 20);
-            this.txtDate.TabIndex = 35;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 231);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Date:";
-            // 
-            // txtTime
-            // 
-            this.txtTime.Location = new System.Drawing.Point(168, 261);
-            this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(187, 20);
-            this.txtTime.TabIndex = 33;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 264);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 13);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Time:";
-            // 
-            // cmbStaffAssCode
-            // 
-            this.cmbStaffAssCode.FormattingEnabled = true;
-            this.cmbStaffAssCode.Location = new System.Drawing.Point(168, 294);
-            this.cmbStaffAssCode.Name = "cmbStaffAssCode";
-            this.cmbStaffAssCode.Size = new System.Drawing.Size(187, 21);
-            this.cmbStaffAssCode.TabIndex = 37;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 298);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(137, 13);
-            this.label7.TabIndex = 36;
-            this.label7.Text = "Staff Code (Assigned Staff):";
             // 
             // addRequestToolStripMenuItem
             // 
@@ -279,6 +272,14 @@
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.deleteToolStripMenuItem.Text = "Delete Selected Request";
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listAllRequestsToolStripMenuItem});
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.viewToolStripMenuItem.Text = "View";
             // 
             // listAllRequestsToolStripMenuItem
             // 

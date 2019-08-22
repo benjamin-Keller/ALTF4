@@ -46,6 +46,7 @@
             this.updateEquipmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteEquipmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.listEquipmentByTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquipment)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -148,11 +149,13 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.exitToolStripMenuItem.Text = "Home";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listAllEquipmentToolStripMenuItem});
+            this.listAllEquipmentToolStripMenuItem,
+            this.listEquipmentByTypeToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "View";
@@ -160,7 +163,7 @@
             // listAllEquipmentToolStripMenuItem
             // 
             this.listAllEquipmentToolStripMenuItem.Name = "listAllEquipmentToolStripMenuItem";
-            this.listAllEquipmentToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.listAllEquipmentToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.listAllEquipmentToolStripMenuItem.Text = "List All Equipment";
             // 
             // manageToolStripMenuItem
@@ -203,6 +206,12 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // listEquipmentByTypeToolStripMenuItem
+            // 
+            this.listEquipmentByTypeToolStripMenuItem.Name = "listEquipmentByTypeToolStripMenuItem";
+            this.listEquipmentByTypeToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.listEquipmentByTypeToolStripMenuItem.Text = "List Equipment by Type";
+            // 
             // Equipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,5 +252,6 @@
         private System.Windows.Forms.ToolStripMenuItem addEquipmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateEquipmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteEquipmentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listEquipmentByTypeToolStripMenuItem;
     }
 }

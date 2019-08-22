@@ -48,6 +48,8 @@
             this.addInspectionDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateInspectionDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listAllInspectionDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listInspectionDetailByVenueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInspectionDetail)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -200,6 +202,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.exitToolStripMenuItem.Text = "Home";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // manageToolStripMenuItem
             // 
@@ -224,9 +227,24 @@
             // 
             // viewToolStripMenuItem
             // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listAllInspectionDetailToolStripMenuItem,
+            this.listInspectionDetailByVenueToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "View";
+            // 
+            // listAllInspectionDetailToolStripMenuItem
+            // 
+            this.listAllInspectionDetailToolStripMenuItem.Name = "listAllInspectionDetailToolStripMenuItem";
+            this.listAllInspectionDetailToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.listAllInspectionDetailToolStripMenuItem.Text = "List All Inspection Detail";
+            // 
+            // listInspectionDetailByVenueToolStripMenuItem
+            // 
+            this.listInspectionDetailByVenueToolStripMenuItem.Name = "listInspectionDetailByVenueToolStripMenuItem";
+            this.listInspectionDetailByVenueToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.listInspectionDetailByVenueToolStripMenuItem.Text = "List Inspection Detail by Venue";
             // 
             // InspectionDetail
             // 
@@ -271,5 +289,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem addInspectionDetailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateInspectionDetailToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listAllInspectionDetailToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listInspectionDetailByVenueToolStripMenuItem;
     }
 }

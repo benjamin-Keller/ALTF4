@@ -36,10 +36,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addTaskTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateSelectedTaskTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listAllTaskTypesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaskType)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -116,12 +117,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Home";
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.viewToolStripMenuItem.Text = "View";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // manageToolStripMenuItem
             // 
@@ -143,6 +139,20 @@
             this.updateSelectedTaskTypeToolStripMenuItem.Name = "updateSelectedTaskTypeToolStripMenuItem";
             this.updateSelectedTaskTypeToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.updateSelectedTaskTypeToolStripMenuItem.Text = "Update Selected Task Type";
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listAllTaskTypesToolStripMenuItem});
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.viewToolStripMenuItem.Text = "View";
+            // 
+            // listAllTaskTypesToolStripMenuItem
+            // 
+            this.listAllTaskTypesToolStripMenuItem.Name = "listAllTaskTypesToolStripMenuItem";
+            this.listAllTaskTypesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listAllTaskTypesToolStripMenuItem.Text = "List All Task Types";
             // 
             // TaskType
             // 
@@ -179,5 +189,6 @@
         private System.Windows.Forms.ToolStripMenuItem manageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addTaskTypeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateSelectedTaskTypeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listAllTaskTypesToolStripMenuItem;
     }
 }

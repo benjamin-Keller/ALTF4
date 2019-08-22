@@ -40,6 +40,7 @@
             this.addEquipmentTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateEquipmentTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listAllEquipmentTypesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquipmentType)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -114,8 +115,9 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Home";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // manageToolStripMenuItem
             // 
@@ -140,9 +142,17 @@
             // 
             // viewToolStripMenuItem
             // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listAllEquipmentTypesToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "View";
+            // 
+            // listAllEquipmentTypesToolStripMenuItem
+            // 
+            this.listAllEquipmentTypesToolStripMenuItem.Name = "listAllEquipmentTypesToolStripMenuItem";
+            this.listAllEquipmentTypesToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.listAllEquipmentTypesToolStripMenuItem.Text = "List All Equipment Types";
             // 
             // EquipmentType
             // 
@@ -179,5 +189,6 @@
         private System.Windows.Forms.ToolStripMenuItem manageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addEquipmentTypeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateEquipmentTypeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listAllEquipmentTypesToolStripMenuItem;
     }
 }

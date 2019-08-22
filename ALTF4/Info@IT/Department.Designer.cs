@@ -31,6 +31,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvDepartment = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtContactNum = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtContactPerson = new System.Windows.Forms.TextBox();
@@ -42,12 +44,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtContactNum = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.addDepartmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateSelectedDepartmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listAllDepartmentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartment)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -90,6 +91,22 @@
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Information";
+            // 
+            // txtContactNum
+            // 
+            this.txtContactNum.Location = new System.Drawing.Point(162, 219);
+            this.txtContactNum.Name = "txtContactNum";
+            this.txtContactNum.Size = new System.Drawing.Size(187, 20);
+            this.txtContactNum.TabIndex = 25;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(33, 222);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Contact Number:";
             // 
             // txtEmail
             // 
@@ -180,12 +197,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Home";
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.viewToolStripMenuItem.Text = "View";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // manageToolStripMenuItem
             // 
@@ -195,22 +207,6 @@
             this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
             this.manageToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.manageToolStripMenuItem.Text = "Manage";
-            // 
-            // txtContactNum
-            // 
-            this.txtContactNum.Location = new System.Drawing.Point(162, 219);
-            this.txtContactNum.Name = "txtContactNum";
-            this.txtContactNum.Size = new System.Drawing.Size(187, 20);
-            this.txtContactNum.TabIndex = 25;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 222);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Contact Number:";
             // 
             // addDepartmentToolStripMenuItem
             // 
@@ -223,6 +219,20 @@
             this.updateSelectedDepartmentToolStripMenuItem.Name = "updateSelectedDepartmentToolStripMenuItem";
             this.updateSelectedDepartmentToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.updateSelectedDepartmentToolStripMenuItem.Text = "Update Selected Department";
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listAllDepartmentsToolStripMenuItem});
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.viewToolStripMenuItem.Text = "View";
+            // 
+            // listAllDepartmentsToolStripMenuItem
+            // 
+            this.listAllDepartmentsToolStripMenuItem.Name = "listAllDepartmentsToolStripMenuItem";
+            this.listAllDepartmentsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listAllDepartmentsToolStripMenuItem.Text = "List All Departments";
             // 
             // Department
             // 
@@ -267,5 +277,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem addDepartmentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateSelectedDepartmentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listAllDepartmentsToolStripMenuItem;
     }
 }
