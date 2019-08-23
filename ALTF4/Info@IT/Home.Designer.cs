@@ -76,8 +76,8 @@
 			// 
 			// btnVenue
 			// 
-			this.btnVenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-			this.btnVenue.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			this.btnVenue.BackColor = System.Drawing.Color.DarkTurquoise;
+			this.btnVenue.FlatAppearance.BorderColor = System.Drawing.Color.DarkTurquoise;
 			this.btnVenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnVenue.Location = new System.Drawing.Point(471, 128);
 			this.btnVenue.Name = "btnVenue";
@@ -130,8 +130,8 @@
 			// 
 			// btnDepartment
 			// 
-			this.btnDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-			this.btnDepartment.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			this.btnDepartment.BackColor = System.Drawing.Color.DarkTurquoise;
+			this.btnDepartment.FlatAppearance.BorderColor = System.Drawing.Color.DarkTurquoise;
 			this.btnDepartment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnDepartment.Location = new System.Drawing.Point(471, 162);
 			this.btnDepartment.Name = "btnDepartment";
@@ -142,8 +142,8 @@
 			// 
 			// btnEquipment
 			// 
-			this.btnEquipment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-			this.btnEquipment.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			this.btnEquipment.BackColor = System.Drawing.Color.DarkTurquoise;
+			this.btnEquipment.FlatAppearance.BorderColor = System.Drawing.Color.DarkTurquoise;
 			this.btnEquipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnEquipment.Location = new System.Drawing.Point(265, 128);
 			this.btnEquipment.Name = "btnEquipment";
@@ -156,8 +156,8 @@
 			// 
 			// btnRequest
 			// 
-			this.btnRequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-			this.btnRequest.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			this.btnRequest.BackColor = System.Drawing.Color.Gray;
+			this.btnRequest.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnRequest.Location = new System.Drawing.Point(265, 196);
 			this.btnRequest.Name = "btnRequest";
@@ -168,8 +168,8 @@
 			// 
 			// btnEquipmentType
 			// 
-			this.btnEquipmentType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-			this.btnEquipmentType.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			this.btnEquipmentType.BackColor = System.Drawing.Color.Gray;
+			this.btnEquipmentType.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnEquipmentType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnEquipmentType.Location = new System.Drawing.Point(265, 162);
 			this.btnEquipmentType.Name = "btnEquipmentType";
@@ -180,8 +180,8 @@
 			// 
 			// btnTutorReq
 			// 
-			this.btnTutorReq.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-			this.btnTutorReq.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			this.btnTutorReq.BackColor = System.Drawing.Color.Gray;
+			this.btnTutorReq.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnTutorReq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnTutorReq.Location = new System.Drawing.Point(471, 196);
 			this.btnTutorReq.Name = "btnTutorReq";
@@ -192,8 +192,8 @@
 			// 
 			// btnInspection
 			// 
-			this.btnInspection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-			this.btnInspection.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			this.btnInspection.BackColor = System.Drawing.Color.Gray;
+			this.btnInspection.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnInspection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnInspection.Location = new System.Drawing.Point(265, 230);
 			this.btnInspection.Name = "btnInspection";
@@ -204,8 +204,8 @@
 			// 
 			// btnInspecDetail
 			// 
-			this.btnInspecDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-			this.btnInspecDetail.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			this.btnInspecDetail.BackColor = System.Drawing.Color.Gray;
+			this.btnInspecDetail.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnInspecDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnInspecDetail.Location = new System.Drawing.Point(471, 230);
 			this.btnInspecDetail.Name = "btnInspecDetail";
@@ -216,8 +216,8 @@
 			// 
 			// btnTaskType
 			// 
-			this.btnTaskType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-			this.btnTaskType.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			this.btnTaskType.BackColor = System.Drawing.Color.Gray;
+			this.btnTaskType.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnTaskType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnTaskType.Location = new System.Drawing.Point(265, 264);
 			this.btnTaskType.Name = "btnTaskType";
@@ -228,8 +228,8 @@
 			// 
 			// btnStaff
 			// 
-			this.btnStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-			this.btnStaff.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			this.btnStaff.BackColor = System.Drawing.Color.Gray;
+			this.btnStaff.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnStaff.Location = new System.Drawing.Point(471, 264);
 			this.btnStaff.Name = "btnStaff";
@@ -240,8 +240,8 @@
 			// 
 			// btnStudent
 			// 
-			this.btnStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-			this.btnStudent.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			this.btnStudent.BackColor = System.Drawing.Color.Gray;
+			this.btnStudent.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
 			this.btnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnStudent.Location = new System.Drawing.Point(371, 298);
 			this.btnStudent.Name = "btnStudent";
