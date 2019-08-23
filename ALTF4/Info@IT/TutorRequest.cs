@@ -23,5 +23,11 @@ namespace Info_IT
             h.Show();
             this.Hide();
         }
-    }
+
+		private void TutorRequest_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			Home home = new Home();
+			home.Show();
+		}
+	}
 }

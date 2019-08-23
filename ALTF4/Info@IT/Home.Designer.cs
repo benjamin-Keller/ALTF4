@@ -45,6 +45,7 @@
 			this.btnTaskType = new System.Windows.Forms.Button();
 			this.btnStaff = new System.Windows.Forms.Button();
 			this.btnStudent = new System.Windows.Forms.Button();
+			this.label4 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -53,15 +54,14 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Gill Sans MT Condensed", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Font = new System.Drawing.Font("Gill Sans MT Condensed", 50F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.Color.Black;
-			this.label1.Location = new System.Drawing.Point(17, 6);
+			this.label1.Location = new System.Drawing.Point(35, -11);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(137, 58);
+			this.label1.Size = new System.Drawing.Size(103, 83);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "ALTF4\'s HelpDesk\r\nProject";
+			this.label1.Text = "@";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.label1.Click += new System.EventHandler(this.Label1_Click);
 			// 
 			// label2
 			// 
@@ -85,7 +85,7 @@
 			this.btnVenue.TabIndex = 2;
 			this.btnVenue.Text = "Venue";
 			this.btnVenue.UseVisualStyleBackColor = false;
-			this.btnVenue.Click += new System.EventHandler(this.button1_Click);
+			this.btnVenue.Click += new System.EventHandler(this.btnVenue_Click);
 			this.btnVenue.MouseEnter += new System.EventHandler(this.BtnVenue_MouseEnter);
 			this.btnVenue.MouseLeave += new System.EventHandler(this.BtnVenue_MouseLeave);
 			// 
@@ -139,6 +139,9 @@
 			this.btnDepartment.TabIndex = 9;
 			this.btnDepartment.Text = "Department";
 			this.btnDepartment.UseVisualStyleBackColor = false;
+			this.btnDepartment.Click += new System.EventHandler(this.btnDepartment_Click);
+			this.btnDepartment.MouseEnter += new System.EventHandler(this.BtnDepartment_MouseEnter);
+			this.btnDepartment.MouseLeave += new System.EventHandler(this.BtnDepartment_MouseLeave);
 			// 
 			// btnEquipment
 			// 
@@ -151,13 +154,14 @@
 			this.btnEquipment.TabIndex = 14;
 			this.btnEquipment.Text = "Equipment";
 			this.btnEquipment.UseVisualStyleBackColor = false;
+			this.btnEquipment.Click += new System.EventHandler(this.btnEquipment_Click);
 			this.btnEquipment.MouseEnter += new System.EventHandler(this.BtnEquipment_MouseEnter);
 			this.btnEquipment.MouseLeave += new System.EventHandler(this.BtnEquipment_MouseLeave);
 			// 
 			// btnRequest
 			// 
-			this.btnRequest.BackColor = System.Drawing.Color.Gray;
-			this.btnRequest.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnRequest.BackColor = System.Drawing.Color.DarkTurquoise;
+			this.btnRequest.FlatAppearance.BorderColor = System.Drawing.Color.DarkTurquoise;
 			this.btnRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnRequest.Location = new System.Drawing.Point(265, 196);
 			this.btnRequest.Name = "btnRequest";
@@ -165,11 +169,14 @@
 			this.btnRequest.TabIndex = 15;
 			this.btnRequest.Text = "Request";
 			this.btnRequest.UseVisualStyleBackColor = false;
+			this.btnRequest.Click += new System.EventHandler(this.btnRequest_Click);
+			this.btnRequest.MouseEnter += new System.EventHandler(this.BtnRequest_MouseEnter);
+			this.btnRequest.MouseLeave += new System.EventHandler(this.BtnRequest_MouseLeave);
 			// 
 			// btnEquipmentType
 			// 
-			this.btnEquipmentType.BackColor = System.Drawing.Color.Gray;
-			this.btnEquipmentType.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnEquipmentType.BackColor = System.Drawing.Color.DarkTurquoise;
+			this.btnEquipmentType.FlatAppearance.BorderColor = System.Drawing.Color.DarkTurquoise;
 			this.btnEquipmentType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnEquipmentType.Location = new System.Drawing.Point(265, 162);
 			this.btnEquipmentType.Name = "btnEquipmentType";
@@ -177,11 +184,14 @@
 			this.btnEquipmentType.TabIndex = 16;
 			this.btnEquipmentType.Text = "Equipment Type";
 			this.btnEquipmentType.UseVisualStyleBackColor = false;
+			this.btnEquipmentType.Click += new System.EventHandler(this.btnEquipmentType_Click);
+			this.btnEquipmentType.MouseEnter += new System.EventHandler(this.BtnEquipmentType_MouseEnter);
+			this.btnEquipmentType.MouseLeave += new System.EventHandler(this.BtnEquipmentType_MouseLeave);
 			// 
 			// btnTutorReq
 			// 
-			this.btnTutorReq.BackColor = System.Drawing.Color.Gray;
-			this.btnTutorReq.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnTutorReq.BackColor = System.Drawing.Color.DarkTurquoise;
+			this.btnTutorReq.FlatAppearance.BorderColor = System.Drawing.Color.DarkTurquoise;
 			this.btnTutorReq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnTutorReq.Location = new System.Drawing.Point(471, 196);
 			this.btnTutorReq.Name = "btnTutorReq";
@@ -189,11 +199,14 @@
 			this.btnTutorReq.TabIndex = 17;
 			this.btnTutorReq.Text = "Tutor Request";
 			this.btnTutorReq.UseVisualStyleBackColor = false;
+			this.btnTutorReq.Click += new System.EventHandler(this.btnTutorReq_Click);
+			this.btnTutorReq.MouseEnter += new System.EventHandler(this.BtnTutorReq_MouseEnter);
+			this.btnTutorReq.MouseLeave += new System.EventHandler(this.BtnTutorReq_MouseLeave);
 			// 
 			// btnInspection
 			// 
-			this.btnInspection.BackColor = System.Drawing.Color.Gray;
-			this.btnInspection.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnInspection.BackColor = System.Drawing.Color.DarkTurquoise;
+			this.btnInspection.FlatAppearance.BorderColor = System.Drawing.Color.DarkTurquoise;
 			this.btnInspection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnInspection.Location = new System.Drawing.Point(265, 230);
 			this.btnInspection.Name = "btnInspection";
@@ -201,11 +214,14 @@
 			this.btnInspection.TabIndex = 18;
 			this.btnInspection.Text = "Inspection";
 			this.btnInspection.UseVisualStyleBackColor = false;
+			this.btnInspection.Click += new System.EventHandler(this.btnInspection_Click);
+			this.btnInspection.MouseEnter += new System.EventHandler(this.BtnInspection_MouseEnter);
+			this.btnInspection.MouseLeave += new System.EventHandler(this.BtnInspection_MouseLeave);
 			// 
 			// btnInspecDetail
 			// 
-			this.btnInspecDetail.BackColor = System.Drawing.Color.Gray;
-			this.btnInspecDetail.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnInspecDetail.BackColor = System.Drawing.Color.DarkTurquoise;
+			this.btnInspecDetail.FlatAppearance.BorderColor = System.Drawing.Color.DarkTurquoise;
 			this.btnInspecDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnInspecDetail.Location = new System.Drawing.Point(471, 230);
 			this.btnInspecDetail.Name = "btnInspecDetail";
@@ -213,11 +229,14 @@
 			this.btnInspecDetail.TabIndex = 19;
 			this.btnInspecDetail.Text = "Inspection Detail";
 			this.btnInspecDetail.UseVisualStyleBackColor = false;
+			this.btnInspecDetail.Click += new System.EventHandler(this.btnInspecDetail_Click);
+			this.btnInspecDetail.MouseEnter += new System.EventHandler(this.BtnInspecDetail_MouseEnter);
+			this.btnInspecDetail.MouseLeave += new System.EventHandler(this.BtnInspecDetail_MouseLeave);
 			// 
 			// btnTaskType
 			// 
-			this.btnTaskType.BackColor = System.Drawing.Color.Gray;
-			this.btnTaskType.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnTaskType.BackColor = System.Drawing.Color.DarkTurquoise;
+			this.btnTaskType.FlatAppearance.BorderColor = System.Drawing.Color.DarkTurquoise;
 			this.btnTaskType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnTaskType.Location = new System.Drawing.Point(265, 264);
 			this.btnTaskType.Name = "btnTaskType";
@@ -225,11 +244,14 @@
 			this.btnTaskType.TabIndex = 20;
 			this.btnTaskType.Text = "Task Type";
 			this.btnTaskType.UseVisualStyleBackColor = false;
+			this.btnTaskType.Click += new System.EventHandler(this.btnTaskType_Click);
+			this.btnTaskType.MouseEnter += new System.EventHandler(this.BtnTaskType_MouseEnter);
+			this.btnTaskType.MouseLeave += new System.EventHandler(this.BtnTaskType_MouseLeave);
 			// 
 			// btnStaff
 			// 
-			this.btnStaff.BackColor = System.Drawing.Color.Gray;
-			this.btnStaff.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnStaff.BackColor = System.Drawing.Color.DarkTurquoise;
+			this.btnStaff.FlatAppearance.BorderColor = System.Drawing.Color.DarkTurquoise;
 			this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnStaff.Location = new System.Drawing.Point(471, 264);
 			this.btnStaff.Name = "btnStaff";
@@ -237,11 +259,14 @@
 			this.btnStaff.TabIndex = 21;
 			this.btnStaff.Text = "Staff";
 			this.btnStaff.UseVisualStyleBackColor = false;
+			this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
+			this.btnStaff.MouseEnter += new System.EventHandler(this.BtnStaff_MouseEnter);
+			this.btnStaff.MouseLeave += new System.EventHandler(this.BtnStaff_MouseLeave);
 			// 
 			// btnStudent
 			// 
-			this.btnStudent.BackColor = System.Drawing.Color.Gray;
-			this.btnStudent.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+			this.btnStudent.BackColor = System.Drawing.Color.DarkTurquoise;
+			this.btnStudent.FlatAppearance.BorderColor = System.Drawing.Color.DarkTurquoise;
 			this.btnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnStudent.Location = new System.Drawing.Point(371, 298);
 			this.btnStudent.Name = "btnStudent";
@@ -249,6 +274,20 @@
 			this.btnStudent.TabIndex = 22;
 			this.btnStudent.Text = "Student";
 			this.btnStudent.UseVisualStyleBackColor = false;
+			this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click);
+			this.btnStudent.MouseEnter += new System.EventHandler(this.BtnStudent_MouseEnter);
+			this.btnStudent.MouseLeave += new System.EventHandler(this.BtnStudent_MouseLeave);
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Gill Sans MT Condensed", 50F, System.Drawing.FontStyle.Italic);
+			this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+			this.label4.Location = new System.Drawing.Point(370, 22);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(210, 83);
+			this.label4.TabIndex = 23;
+			this.label4.Text = "Info@IT";
 			// 
 			// Home
 			// 
@@ -256,6 +295,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.label4);
 			this.Controls.Add(this.btnStudent);
 			this.Controls.Add(this.btnStaff);
 			this.Controls.Add(this.btnTaskType);
@@ -272,6 +312,7 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "Home";
 			this.Text = "Home";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Home_FormClosed);
 			this.panel1.ResumeLayout(false);
 			this.panel3.ResumeLayout(false);
 			this.panel3.PerformLayout();
@@ -301,5 +342,6 @@
 		private System.Windows.Forms.Button btnTaskType;
 		private System.Windows.Forms.Button btnStaff;
 		private System.Windows.Forms.Button btnStudent;
+		private System.Windows.Forms.Label label4;
 	}
 }

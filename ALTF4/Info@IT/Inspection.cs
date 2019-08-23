@@ -23,5 +23,11 @@ namespace Info_IT
             h.Show();
             this.Hide();
         }
-    }
+
+		private void Inspection_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			Home home = new Home();
+			home.Show();
+		}
+	}
 }
