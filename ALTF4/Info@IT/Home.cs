@@ -98,5 +98,31 @@ namespace Info_IT
 		{
 
 		}
+
+
+		// On hover color change events
+		private void BtnEquipment_MouseEnter(object sender, EventArgs e)
+		{
+			btnEquipment.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(128, 200, 255);
+			btnEquipment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(128, 200, 255);
+		}
+
+		private void BtnEquipment_MouseLeave(object sender, EventArgs e)
+		{
+			btnEquipment.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(192, 192, 0);
+			btnEquipment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(192, 192, 0);
+		}
+
+		private void BtnVenue_MouseEnter(object sender, EventArgs e)
+		{
+			btnVenue.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(128, 200, 255);
+			btnVenue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(128, 200, 255);
+		}
+
+		private void BtnVenue_MouseLeave(object sender, EventArgs e)
+		{
+			btnVenue.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(192, 192, 0);
+			btnVenue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(192, 192, 0);
+		}
 	}
 }

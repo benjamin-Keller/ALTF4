@@ -86,6 +86,8 @@
 			this.btnVenue.Text = "Venue";
 			this.btnVenue.UseVisualStyleBackColor = false;
 			this.btnVenue.Click += new System.EventHandler(this.button1_Click);
+			this.btnVenue.MouseEnter += new System.EventHandler(this.BtnVenue_MouseEnter);
+			this.btnVenue.MouseLeave += new System.EventHandler(this.BtnVenue_MouseLeave);
 			// 
 			// panel1
 			// 
@@ -149,6 +151,8 @@
 			this.btnEquipment.TabIndex = 14;
 			this.btnEquipment.Text = "Equipment";
 			this.btnEquipment.UseVisualStyleBackColor = false;
+			this.btnEquipment.MouseEnter += new System.EventHandler(this.BtnEquipment_MouseEnter);
+			this.btnEquipment.MouseLeave += new System.EventHandler(this.BtnEquipment_MouseLeave);
 			// 
 			// btnRequest
 			// 
