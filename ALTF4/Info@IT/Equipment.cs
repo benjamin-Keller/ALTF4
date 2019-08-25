@@ -82,5 +82,41 @@ namespace Info_IT
 		private void Equipment_Load(object sender, EventArgs e)
 		{
 		}
+
+		private void BtnNavigation_MouseEnter(object sender, EventArgs e)
+		{
+			btnNavigation.FlatAppearance.BorderColor = Color.FromArgb(128, 200, 255);
+			btnNavigation.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 200, 255);
+		}
+
+		private void BtnNavigation_MouseLeave(object sender, EventArgs e)
+		{
+			btnNavigation.FlatAppearance.BorderColor = Color.DarkTurquoise;
+			btnNavigation.FlatAppearance.MouseOverBackColor = Color.DarkTurquoise;
+		}
+
+		private void BtnManage_MouseEnter(object sender, EventArgs e)
+		{
+			btnManage.FlatAppearance.BorderColor = Color.FromArgb(128, 200, 255);
+			btnManage.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 200, 255);
+		}
+
+		private void BtnManage_MouseLeave(object sender, EventArgs e)
+		{
+			btnManage.FlatAppearance.BorderColor = Color.DarkTurquoise;
+			btnManage.FlatAppearance.MouseOverBackColor = Color.DarkTurquoise;
+		}
+
+		private void BtnView_MouseEnter(object sender, EventArgs e)
+		{
+			btnView.FlatAppearance.BorderColor = Color.FromArgb(128, 200, 255);
+			btnView.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 200, 255);
+		}
+
+		private void BtnView_MouseLeave(object sender, EventArgs e)
+		{
+			btnView.FlatAppearance.BorderColor = Color.DarkTurquoise;
+			btnView.FlatAppearance.MouseOverBackColor = Color.DarkTurquoise;
+		}
 	}
 }

@@ -213,6 +213,8 @@
 			this.btnView.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
 			this.btnView.UseVisualStyleBackColor = false;
 			this.btnView.Click += new System.EventHandler(this.BtnView_Click);
+			this.btnView.MouseEnter += new System.EventHandler(this.BtnView_MouseEnter);
+			this.btnView.MouseLeave += new System.EventHandler(this.BtnView_MouseLeave);
 			// 
 			// pnlManage
 			// 
@@ -281,6 +283,8 @@
 			this.btnManage.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
 			this.btnManage.UseVisualStyleBackColor = false;
 			this.btnManage.Click += new System.EventHandler(this.BtnManage_Click);
+			this.btnManage.MouseEnter += new System.EventHandler(this.BtnManage_MouseEnter);
+			this.btnManage.MouseLeave += new System.EventHandler(this.BtnManage_MouseLeave);
 			// 
 			// pnlNavigation
 			// 
@@ -321,6 +325,8 @@
 			this.btnNavigation.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
 			this.btnNavigation.UseVisualStyleBackColor = false;
 			this.btnNavigation.Click += new System.EventHandler(this.Button1_Click_1);
+			this.btnNavigation.MouseEnter += new System.EventHandler(this.BtnNavigation_MouseEnter);
+			this.btnNavigation.MouseLeave += new System.EventHandler(this.BtnNavigation_MouseLeave);
 			// 
 			// panel2
 			// 
