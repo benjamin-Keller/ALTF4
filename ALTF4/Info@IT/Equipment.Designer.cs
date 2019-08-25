@@ -37,7 +37,6 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.dgvEquipment = new System.Windows.Forms.DataGridView();
 			this.pnlView = new System.Windows.Forms.Panel();
 			this.btnViewListType = new System.Windows.Forms.Button();
 			this.btnViewList = new System.Windows.Forms.Button();
@@ -52,17 +51,18 @@
 			this.btnNavigation = new System.Windows.Forms.Button();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.label2 = new System.Windows.Forms.Label();
+			this.dgvEquipment = new System.Windows.Forms.DataGridView();
 			this.tmrNavigation = new System.Windows.Forms.Timer(this.components);
 			this.tmrManage = new System.Windows.Forms.Timer(this.components);
 			this.tmrView = new System.Windows.Forms.Timer(this.components);
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.groupBox1.SuspendLayout();
 			this.panel1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvEquipment)).BeginInit();
 			this.pnlView.SuspendLayout();
 			this.pnlManage.SuspendLayout();
 			this.pnlNavigation.SuspendLayout();
 			this.panel2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvEquipment)).BeginInit();
 			this.panel3.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -77,7 +77,7 @@
 			this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
 			this.groupBox1.Location = new System.Drawing.Point(186, 12);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(596, 71);
+			this.groupBox1.Size = new System.Drawing.Size(602, 71);
 			this.groupBox1.TabIndex = 3;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Information";
@@ -150,16 +150,6 @@
 			this.panel1.Size = new System.Drawing.Size(180, 450);
 			this.panel1.TabIndex = 5;
 			// 
-			// dgvEquipment
-			// 
-			this.dgvEquipment.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-			this.dgvEquipment.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.dgvEquipment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvEquipment.Location = new System.Drawing.Point(4, 3);
-			this.dgvEquipment.Name = "dgvEquipment";
-			this.dgvEquipment.Size = new System.Drawing.Size(590, 328);
-			this.dgvEquipment.TabIndex = 6;
-			// 
 			// pnlView
 			// 
 			this.pnlView.Controls.Add(this.btnViewListType);
@@ -185,6 +175,7 @@
 			this.btnViewListType.TabIndex = 7;
 			this.btnViewListType.Text = "List All Equipment by Type";
 			this.btnViewListType.UseVisualStyleBackColor = false;
+			this.btnViewListType.Click += new System.EventHandler(this.BtnViewListType_Click);
 			// 
 			// btnViewList
 			// 
@@ -198,6 +189,7 @@
 			this.btnViewList.TabIndex = 6;
 			this.btnViewList.Text = "List All Equipment";
 			this.btnViewList.UseVisualStyleBackColor = false;
+			this.btnViewList.Click += new System.EventHandler(this.BtnViewList_Click);
 			// 
 			// btnView
 			// 
@@ -242,6 +234,7 @@
 			this.btnManageDelete.TabIndex = 8;
 			this.btnManageDelete.Text = "Delete Selected Equipment";
 			this.btnManageDelete.UseVisualStyleBackColor = false;
+			this.btnManageDelete.Click += new System.EventHandler(this.BtnManageDelete_Click);
 			// 
 			// btnManageUpdate
 			// 
@@ -255,6 +248,7 @@
 			this.btnManageUpdate.TabIndex = 7;
 			this.btnManageUpdate.Text = "Update Selected Equipment";
 			this.btnManageUpdate.UseVisualStyleBackColor = false;
+			this.btnManageUpdate.Click += new System.EventHandler(this.BtnManageUpdate_Click);
 			// 
 			// btnManageAdd
 			// 
@@ -268,6 +262,7 @@
 			this.btnManageAdd.TabIndex = 6;
 			this.btnManageAdd.Text = "Add Equipment";
 			this.btnManageAdd.UseVisualStyleBackColor = false;
+			this.btnManageAdd.Click += new System.EventHandler(this.BtnManageAdd_Click);
 			// 
 			// btnManage
 			// 
@@ -310,6 +305,7 @@
 			this.btnNavHome.TabIndex = 6;
 			this.btnNavHome.Text = "Home";
 			this.btnNavHome.UseVisualStyleBackColor = false;
+			this.btnNavHome.Click += new System.EventHandler(this.BtnNavHome_Click);
 			// 
 			// btnNavigation
 			// 
@@ -324,7 +320,7 @@
 			this.btnNavigation.Text = "Navigation";
 			this.btnNavigation.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
 			this.btnNavigation.UseVisualStyleBackColor = false;
-			this.btnNavigation.Click += new System.EventHandler(this.Button1_Click_1);
+			this.btnNavigation.Click += new System.EventHandler(this.BtnNavigation_Click);
 			this.btnNavigation.MouseEnter += new System.EventHandler(this.BtnNavigation_MouseEnter);
 			this.btnNavigation.MouseLeave += new System.EventHandler(this.BtnNavigation_MouseLeave);
 			// 
@@ -349,6 +345,16 @@
 			this.label2.TabIndex = 0;
 			this.label2.Text = "@";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// dgvEquipment
+			// 
+			this.dgvEquipment.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+			this.dgvEquipment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.dgvEquipment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvEquipment.Location = new System.Drawing.Point(4, 3);
+			this.dgvEquipment.Name = "dgvEquipment";
+			this.dgvEquipment.Size = new System.Drawing.Size(590, 328);
+			this.dgvEquipment.TabIndex = 6;
 			// 
 			// tmrNavigation
 			// 
@@ -387,12 +393,12 @@
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			this.panel1.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dgvEquipment)).EndInit();
 			this.pnlView.ResumeLayout(false);
 			this.pnlManage.ResumeLayout(false);
 			this.pnlNavigation.ResumeLayout(false);
 			this.panel2.ResumeLayout(false);
 			this.panel2.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvEquipment)).EndInit();
 			this.panel3.ResumeLayout(false);
 			this.ResumeLayout(false);
 
