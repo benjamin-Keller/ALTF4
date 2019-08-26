@@ -116,6 +116,10 @@ namespace Info_IT
 			btnView.FlatAppearance.BorderColor = Color.DarkTurquoise;
 			btnView.FlatAppearance.MouseOverBackColor = Color.DarkTurquoise;
 		}
+		private void BtnNavHome_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
 
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
@@ -128,11 +132,6 @@ namespace Info_IT
 		}
 
 		private void BtnManageDelete_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void BtnNavHome_Click(object sender, EventArgs e)
 		{
 
 		}

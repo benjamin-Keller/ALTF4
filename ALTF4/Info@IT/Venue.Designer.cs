@@ -72,7 +72,7 @@
 			// panel3
 			// 
 			this.panel3.Controls.Add(this.dgvVenue);
-			this.panel3.Location = new System.Drawing.Point(186, 89);
+			this.panel3.Location = new System.Drawing.Point(188, 89);
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(609, 349);
 			this.panel3.TabIndex = 9;
@@ -119,6 +119,7 @@
 			this.btnNavHome.TabIndex = 6;
 			this.btnNavHome.Text = "Home";
 			this.btnNavHome.UseVisualStyleBackColor = false;
+			this.btnNavHome.Click += new System.EventHandler(this.BtnNavHome_Click);
 			// 
 			// btnNavigation
 			// 
@@ -415,6 +416,7 @@
 			this.Controls.Add(this.panel3);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.groupBox1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "Venue";
 			this.Text = "Venue";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Venue_FormClosing);
