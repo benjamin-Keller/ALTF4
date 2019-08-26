@@ -50,15 +50,15 @@
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.cmbEquipTypeCode = new System.Windows.Forms.ComboBox();
+			this.cmbBuilding = new System.Windows.Forms.ComboBox();
 			this.txtDescription = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.label6 = new System.Windows.Forms.Label();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.cmbBuildingBlock = new System.Windows.Forms.ComboBox();
+			this.txtDoorNo = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.txtCapacity = new System.Windows.Forms.TextBox();
 			this.panel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvVenue)).BeginInit();
 			this.pnlView.SuspendLayout();
@@ -317,13 +317,13 @@
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Description:";
 			// 
-			// cmbEquipTypeCode
+			// cmbBuilding
 			// 
-			this.cmbEquipTypeCode.FormattingEnabled = true;
-			this.cmbEquipTypeCode.Location = new System.Drawing.Point(448, 35);
-			this.cmbEquipTypeCode.Name = "cmbEquipTypeCode";
-			this.cmbEquipTypeCode.Size = new System.Drawing.Size(144, 21);
-			this.cmbEquipTypeCode.TabIndex = 4;
+			this.cmbBuilding.FormattingEnabled = true;
+			this.cmbBuilding.Location = new System.Drawing.Point(448, 35);
+			this.cmbBuilding.Name = "cmbBuilding";
+			this.cmbBuilding.Size = new System.Drawing.Size(144, 21);
+			this.cmbBuilding.TabIndex = 4;
 			// 
 			// txtDescription
 			// 
@@ -346,12 +346,12 @@
 			// groupBox1
 			// 
 			this.groupBox1.Controls.Add(this.label6);
-			this.groupBox1.Controls.Add(this.comboBox1);
-			this.groupBox1.Controls.Add(this.textBox2);
+			this.groupBox1.Controls.Add(this.cmbBuildingBlock);
+			this.groupBox1.Controls.Add(this.txtDoorNo);
 			this.groupBox1.Controls.Add(this.label5);
-			this.groupBox1.Controls.Add(this.textBox1);
+			this.groupBox1.Controls.Add(this.txtCapacity);
 			this.groupBox1.Controls.Add(this.label4);
-			this.groupBox1.Controls.Add(this.cmbEquipTypeCode);
+			this.groupBox1.Controls.Add(this.cmbBuilding);
 			this.groupBox1.Controls.Add(this.txtDescription);
 			this.groupBox1.Controls.Add(this.label3);
 			this.groupBox1.Controls.Add(this.label1);
@@ -374,20 +374,20 @@
 			this.label6.TabIndex = 11;
 			this.label6.Text = "Building:";
 			// 
-			// comboBox1
+			// cmbBuildingBlock
 			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(324, 34);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(118, 21);
-			this.comboBox1.TabIndex = 10;
+			this.cmbBuildingBlock.FormattingEnabled = true;
+			this.cmbBuildingBlock.Location = new System.Drawing.Point(324, 34);
+			this.cmbBuildingBlock.Name = "cmbBuildingBlock";
+			this.cmbBuildingBlock.Size = new System.Drawing.Size(118, 21);
+			this.cmbBuildingBlock.TabIndex = 10;
 			// 
-			// textBox2
+			// txtDoorNo
 			// 
-			this.textBox2.Location = new System.Drawing.Point(271, 35);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(47, 20);
-			this.textBox2.TabIndex = 9;
+			this.txtDoorNo.Location = new System.Drawing.Point(271, 35);
+			this.txtDoorNo.Name = "txtDoorNo";
+			this.txtDoorNo.Size = new System.Drawing.Size(47, 20);
+			this.txtDoorNo.TabIndex = 9;
 			// 
 			// label5
 			// 
@@ -400,12 +400,12 @@
 			this.label5.TabIndex = 8;
 			this.label5.Text = "Door #:";
 			// 
-			// textBox1
+			// txtCapacity
 			// 
-			this.textBox1.Location = new System.Drawing.Point(208, 35);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(57, 20);
-			this.textBox1.TabIndex = 7;
+			this.txtCapacity.Location = new System.Drawing.Point(208, 35);
+			this.txtCapacity.Name = "txtCapacity";
+			this.txtCapacity.Size = new System.Drawing.Size(57, 20);
+			this.txtCapacity.TabIndex = 7;
 			// 
 			// Venue
 			// 
@@ -457,15 +457,15 @@
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.ComboBox cmbEquipTypeCode;
+		private System.Windows.Forms.ComboBox cmbBuilding;
 		private System.Windows.Forms.TextBox txtDescription;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.TextBox textBox2;
+		private System.Windows.Forms.TextBox txtDoorNo;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.TextBox txtCapacity;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.ComboBox cmbBuildingBlock;
 	}
 }
 

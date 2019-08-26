@@ -38,11 +38,6 @@ namespace Info_IT
 
 		}
 
-		private void BtnManageDelete_Click(object sender, EventArgs e)
-		{
-
-		}
-
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
 

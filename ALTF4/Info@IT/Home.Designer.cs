@@ -108,6 +108,7 @@
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(176, 28);
 			this.panel3.TabIndex = 1;
+			this.panel3.Click += new System.EventHandler(this.Panel3_Click);
 			// 
 			// label3
 			// 
@@ -117,6 +118,7 @@
 			this.label3.Size = new System.Drawing.Size(89, 13);
 			this.label3.TabIndex = 0;
 			this.label3.Text = "Made by ALT+F4";
+			this.label3.Click += new System.EventHandler(this.Label3_Click);
 			// 
 			// panel2
 			// 

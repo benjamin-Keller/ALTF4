@@ -42,7 +42,6 @@
 			this.btnViewList = new System.Windows.Forms.Button();
 			this.btnView = new System.Windows.Forms.Button();
 			this.pnlManage = new System.Windows.Forms.Panel();
-			this.btnManageDelete = new System.Windows.Forms.Button();
 			this.btnManageUpdate = new System.Windows.Forms.Button();
 			this.btnManageAdd = new System.Windows.Forms.Button();
 			this.btnManage = new System.Windows.Forms.Button();
@@ -191,7 +190,7 @@
 			this.btnViewList.Name = "btnViewList";
 			this.btnViewList.Size = new System.Drawing.Size(180, 31);
 			this.btnViewList.TabIndex = 6;
-			this.btnViewList.Text = "List All Venues";
+			this.btnViewList.Text = "List All Equipment Types";
 			this.btnViewList.UseVisualStyleBackColor = false;
 			this.btnViewList.Click += new System.EventHandler(this.BtnViewList_Click);
 			// 
@@ -215,31 +214,16 @@
 			// 
 			// pnlManage
 			// 
-			this.pnlManage.Controls.Add(this.btnManageDelete);
 			this.pnlManage.Controls.Add(this.btnManageUpdate);
 			this.pnlManage.Controls.Add(this.btnManageAdd);
 			this.pnlManage.Controls.Add(this.btnManage);
 			this.pnlManage.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlManage.Location = new System.Drawing.Point(0, 122);
-			this.pnlManage.MaximumSize = new System.Drawing.Size(180, 144);
+			this.pnlManage.MaximumSize = new System.Drawing.Size(180, 114);
 			this.pnlManage.MinimumSize = new System.Drawing.Size(180, 53);
 			this.pnlManage.Name = "pnlManage";
 			this.pnlManage.Size = new System.Drawing.Size(180, 53);
 			this.pnlManage.TabIndex = 7;
-			// 
-			// btnManageDelete
-			// 
-			this.btnManageDelete.BackColor = System.Drawing.Color.Teal;
-			this.btnManageDelete.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnManageDelete.FlatAppearance.BorderSize = 0;
-			this.btnManageDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnManageDelete.Location = new System.Drawing.Point(0, 115);
-			this.btnManageDelete.Name = "btnManageDelete";
-			this.btnManageDelete.Size = new System.Drawing.Size(180, 31);
-			this.btnManageDelete.TabIndex = 8;
-			this.btnManageDelete.Text = "Delete Selected Venue";
-			this.btnManageDelete.UseVisualStyleBackColor = false;
-			this.btnManageDelete.Click += new System.EventHandler(this.BtnManageDelete_Click);
 			// 
 			// btnManageUpdate
 			// 
@@ -251,7 +235,7 @@
 			this.btnManageUpdate.Name = "btnManageUpdate";
 			this.btnManageUpdate.Size = new System.Drawing.Size(180, 31);
 			this.btnManageUpdate.TabIndex = 7;
-			this.btnManageUpdate.Text = "Update Selected Venue\r\n";
+			this.btnManageUpdate.Text = "Update Selected Equipment Type\r\n";
 			this.btnManageUpdate.UseVisualStyleBackColor = false;
 			this.btnManageUpdate.Click += new System.EventHandler(this.BtnManageUpdate_Click);
 			// 
@@ -265,7 +249,7 @@
 			this.btnManageAdd.Name = "btnManageAdd";
 			this.btnManageAdd.Size = new System.Drawing.Size(180, 31);
 			this.btnManageAdd.TabIndex = 6;
-			this.btnManageAdd.Text = "Add Venue";
+			this.btnManageAdd.Text = "Add Equipment Type";
 			this.btnManageAdd.UseVisualStyleBackColor = false;
 			this.btnManageAdd.Click += new System.EventHandler(this.BtnManageAdd_Click);
 			// 
@@ -359,7 +343,6 @@
 		private System.Windows.Forms.Button btnViewList;
 		private System.Windows.Forms.Button btnView;
 		private System.Windows.Forms.Panel pnlManage;
-		private System.Windows.Forms.Button btnManageDelete;
 		private System.Windows.Forms.Button btnManageUpdate;
 		private System.Windows.Forms.Button btnManageAdd;
 		private System.Windows.Forms.Button btnManage;

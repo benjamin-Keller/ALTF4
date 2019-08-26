@@ -233,5 +233,15 @@ namespace Info_IT
 		{
 			Application.Exit();
 		}
+
+		private void Panel3_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+
+		private void Label3_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
 	}
 }
