@@ -29,5 +29,12 @@ namespace Info_IT
 			Home home = new Home();
 			home.Show();
 		}
-	}
+
+        private void Staff_Load(object sender, EventArgs e)
+        {
+            cmbStaffType.Items.Add("Student Assistant");
+            cmbStaffType.Items.Add("Info@IT Staff");
+            cmbStaffType.Items.Add("ICT Helpdesk Staff");
+        }
+    }
 }
