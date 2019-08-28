@@ -39,11 +39,36 @@ namespace Info_IT
             }
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-            Home h = new Home();
-            h.Show();
-            this.Hide();
-        }
-    }
+		private void BtnLogin_Click(object sender, EventArgs e)
+		{
+			Home h = new Home();
+			h.isLoggedIn = true;
+			h.Show();
+			this.Hide();
+		}
+
+		private void BtnSignUp_MouseEnter(object sender, EventArgs e)
+		{
+			btnSignUp.FlatAppearance.BorderColor = Color.FromArgb(128, 200, 255);
+			btnSignUp.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 200, 255);
+		}
+
+		private void BtnSignUp_MouseLeave(object sender, EventArgs e)
+		{
+			btnSignUp.FlatAppearance.BorderColor = Color.DarkTurquoise;
+			btnSignUp.FlatAppearance.MouseOverBackColor = Color.DarkTurquoise;
+		}
+
+		private void BtnLogin_MouseEnter(object sender, EventArgs e)
+		{
+			btnLogin.FlatAppearance.BorderColor = Color.FromArgb(128, 200, 255);
+			btnLogin.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 200, 255);
+		}
+
+		private void BtnLogin_MouseLeave(object sender, EventArgs e)
+		{
+			btnLogin.FlatAppearance.BorderColor = Color.DarkTurquoise;
+			btnLogin.FlatAppearance.MouseOverBackColor = Color.DarkTurquoise;
+		}
+	}
 }

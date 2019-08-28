@@ -12,9 +12,22 @@ namespace Info_IT
 {
 	public partial class Home : Form
 	{
+		public bool isLoggedIn;
+		
 		public Home()
 		{
 			InitializeComponent();
+		}
+		private void Home_Load(object sender, EventArgs e)
+		{
+			if(isLoggedIn)
+			{
+				btnLog.Text = "Log Out";
+
+			} else
+			{
+				btnLog.Text = "Log In";
+			}
 		}
 
 		private void btnVenue_Click(object sender, EventArgs e)
@@ -243,5 +256,14 @@ namespace Info_IT
 		{
 			this.Close();
 		}
+
+		private void BtnLogout_Click(object sender, EventArgs e)
+		{
+			Login l = new Login();
+			this.Hide();
+			l.Show();
+		}
+
+	
 	}
 }

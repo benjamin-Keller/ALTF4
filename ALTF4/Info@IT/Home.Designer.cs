@@ -46,6 +46,7 @@
 			this.btnStaff = new System.Windows.Forms.Button();
 			this.btnStudent = new System.Windows.Forms.Button();
 			this.label4 = new System.Windows.Forms.Label();
+			this.btnLog = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -270,7 +271,7 @@
 			this.btnStudent.BackColor = System.Drawing.Color.DarkTurquoise;
 			this.btnStudent.FlatAppearance.BorderColor = System.Drawing.Color.DarkTurquoise;
 			this.btnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnStudent.Location = new System.Drawing.Point(371, 298);
+			this.btnStudent.Location = new System.Drawing.Point(265, 298);
 			this.btnStudent.Name = "btnStudent";
 			this.btnStudent.Size = new System.Drawing.Size(200, 28);
 			this.btnStudent.TabIndex = 22;
@@ -291,12 +292,26 @@
 			this.label4.TabIndex = 23;
 			this.label4.Text = "Info@IT";
 			// 
+			// btnLog
+			// 
+			this.btnLog.BackColor = System.Drawing.Color.DarkTurquoise;
+			this.btnLog.FlatAppearance.BorderColor = System.Drawing.Color.DarkTurquoise;
+			this.btnLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnLog.Location = new System.Drawing.Point(471, 298);
+			this.btnLog.Name = "btnLog";
+			this.btnLog.Size = new System.Drawing.Size(200, 28);
+			this.btnLog.TabIndex = 24;
+			this.btnLog.Text = "Log In/Out";
+			this.btnLog.UseVisualStyleBackColor = false;
+			this.btnLog.Click += new System.EventHandler(this.BtnLogout_Click);
+			// 
 			// Home
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.btnLog);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.btnStudent);
 			this.Controls.Add(this.btnStaff);
@@ -315,6 +330,7 @@
 			this.Name = "Home";
 			this.Text = "Home";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Home_FormClosed);
+			this.Load += new System.EventHandler(this.Home_Load);
 			this.panel1.ResumeLayout(false);
 			this.panel3.ResumeLayout(false);
 			this.panel3.PerformLayout();
@@ -345,5 +361,6 @@
 		private System.Windows.Forms.Button btnStaff;
 		private System.Windows.Forms.Button btnStudent;
 		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Button btnLog;
 	}
 }
