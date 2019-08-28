@@ -1,0 +1,6 @@
+CREATE PROCEDURE sp_DisplayEquipmentType
+AS
+BEGIN
+SELECT * FROM tblEquipType
+END
+GO
