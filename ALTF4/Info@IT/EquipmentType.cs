@@ -17,27 +17,6 @@ namespace Info_IT
 			home.Show();
 		}
 
-		private void BtnNavHome_Click(object sender, EventArgs e)
-		{
-			this.Close();
-		}
-
-		private void BtnManageAdd_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void BtnManageUpdate_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void BtnViewList_Click(object sender, EventArgs e)
-		{
-
-		}
-
-
 		//Menu button (Navigation)
 		private void BtnNavigation_Click(object sender, EventArgs e)
 		{
@@ -53,6 +32,7 @@ namespace Info_IT
 			pnlNavigation.Height = pnlNavigation.MaximumSize.Height;
 			pnlView.Height = pnlView.MinimumSize.Height;
 			pnlManage.Height = pnlManage.MinimumSize.Height;
+
 			tmrNavigation.Stop();
 		}
 
@@ -71,6 +51,7 @@ namespace Info_IT
 			pnlManage.Height = pnlManage.MaximumSize.Height;
 			pnlNavigation.Height = pnlNavigation.MinimumSize.Height;
 			pnlView.Height = pnlView.MinimumSize.Height;
+
 			tmrManage.Stop();
 		}
 
@@ -90,6 +71,10 @@ namespace Info_IT
 			pnlNavigation.Height = pnlNavigation.MinimumSize.Height;
 			pnlManage.Height = pnlManage.MinimumSize.Height;
 			tmrView.Stop();
+		}
+
+		private void Equipment_Load(object sender, EventArgs e)
+		{
 		}
 
 		private void BtnNavigation_MouseEnter(object sender, EventArgs e)
@@ -128,5 +113,59 @@ namespace Info_IT
 			btnView.FlatAppearance.MouseOverBackColor = Color.DarkTurquoise;
 		}
 
+		private void BtnNavHome_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+
+		private void BtnNavVenue_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void BtnNavEquipment_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void BtnNavDepartment_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void BtnNavRequest_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void BtnNavTutorRequest_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void BtnNavInspection_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void BtnNavInspectionDetail_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void BtnNavTaskType_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void BtnManageAdd_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void BtnManageUpdate_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

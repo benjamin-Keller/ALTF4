@@ -117,9 +117,71 @@ namespace Info_IT
 			btnView.FlatAppearance.MouseOverBackColor = Color.DarkTurquoise;
 		}
 
+		private void BtnNavEquipment_Click(object sender, EventArgs e)
+		{
+			Equipment form = new Equipment();
+			form.Show();
+			this.Close();
+		}
+
+		private void BtnNavVenue_Click(object sender, EventArgs e)
+		{
+			Venue form = new Venue();
+			form.Show();
+			this.Close();
+		}
+
+		private void BtnNavEquipmentType_Click(object sender, EventArgs e)
+		{
+			EquipmentType form = new EquipmentType();
+			form.Show();
+			this.Close();
+		}
+
+		private void BtnNavDepartment_Click(object sender, EventArgs e)
+		{
+			Department form = new Department();
+			form.Show();
+			this.Close();
+		}
+
+		private void BtnNavRequest_Click(object sender, EventArgs e)
+		{
+			Request form = new Request();
+			form.Show();
+			this.Close();
+		}
+
+		private void BtnNavTutorRequest_Click(object sender, EventArgs e)
+		{
+			TutorRequest form = new TutorRequest();
+			form.Show();
+			this.Close();
+		}
+
+		private void BtnNavInspection_Click(object sender, EventArgs e)
+		{
+			Inspection form = new Inspection();
+			form.Show();
+			this.Close();
+		}
+
+		private void BtnNavInspectionDetail_Click(object sender, EventArgs e)
+		{
+			InspectionDetail form = new InspectionDetail();
+			form.Show();
+			this.Close();
+		}
+
+		private void BtnNavTaskType_Click(object sender, EventArgs e)
+		{
+			TaskType form = new TaskType();
+			form.Show();
+			this.Close();
+		}
+
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
-
 		}
 
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
@@ -127,17 +189,7 @@ namespace Info_IT
 
 		}
 
-		private void BtnManageDelete_Click(object sender, EventArgs e)
-		{
-
-		}
-
 		private void BtnViewList_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void DateRequest_ValueChanged(object sender, EventArgs e)
 		{
 
 		}

@@ -17,6 +17,7 @@ namespace Info_IT
 			Home home = new Home();
 			home.Show();
 		}
+
 		//Menu button (Navigation)
 		private void BtnNavigation_Click(object sender, EventArgs e)
 		{
@@ -32,6 +33,7 @@ namespace Info_IT
 			pnlNavigation.Height = pnlNavigation.MaximumSize.Height;
 			pnlView.Height = pnlView.MinimumSize.Height;
 			pnlManage.Height = pnlManage.MinimumSize.Height;
+			
 			tmrNavigation.Stop();
 		}
 
@@ -50,6 +52,7 @@ namespace Info_IT
 			pnlManage.Height = pnlManage.MaximumSize.Height;
 			pnlNavigation.Height = pnlNavigation.MinimumSize.Height;
 			pnlView.Height = pnlView.MinimumSize.Height;
+			
 			tmrManage.Stop();
 		}
 
@@ -110,8 +113,87 @@ namespace Info_IT
 			btnView.FlatAppearance.BorderColor = Color.DarkTurquoise;
 			btnView.FlatAppearance.MouseOverBackColor = Color.DarkTurquoise;
 		}
+
 		private void BtnNavHome_Click(object sender, EventArgs e)
 		{
+			this.Close();
+		}
+
+		private void BtnViewListType_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void PnlManage_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void PnlNavigation_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void BtnNavEquipment_Click(object sender, EventArgs e)
+		{
+			Equipment form = new Equipment();
+			form.Show();
+			this.Close();
+		}
+
+		private void BtnNavVenue_Click(object sender, EventArgs e)
+		{
+			Venue form = new Venue();
+			form.Show();
+			this.Close();
+		}
+
+		private void BtnNavEquipmentType_Click(object sender, EventArgs e)
+		{
+			EquipmentType form = new EquipmentType();
+			form.Show();
+			this.Close();
+		}
+
+		private void BtnNavDepartment_Click(object sender, EventArgs e)
+		{
+			Department form = new Department();
+			form.Show();
+			this.Close();
+		}
+
+		private void BtnNavRequest_Click(object sender, EventArgs e)
+		{
+			Request form = new Request();
+			form.Show();
+			this.Close();
+		}
+
+		private void BtnNavTutorRequest_Click(object sender, EventArgs e)
+		{
+			TutorRequest form = new TutorRequest();
+			form.Show();
+			this.Close();
+		}
+
+		private void BtnNavInspection_Click(object sender, EventArgs e)
+		{
+			Inspection form = new Inspection();
+			form.Show();
+			this.Close();
+		}
+
+		private void BtnNavInspectionDetail_Click(object sender, EventArgs e)
+		{
+			InspectionDetail form = new InspectionDetail();
+			form.Show();
+			this.Close();
+		}
+
+		private void BtnNavTaskType_Click(object sender, EventArgs e)
+		{
+			TaskType form = new TaskType();
+			form.Show();
 			this.Close();
 		}
 
@@ -125,19 +207,6 @@ namespace Info_IT
 
 		}
 
-		private void BtnManageDelete_Click(object sender, EventArgs e)
-		{
 
-		}
-
-		private void BtnViewList_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void BtnViewListType_Click(object sender, EventArgs e)
-		{
-
-		}
 	}
 }

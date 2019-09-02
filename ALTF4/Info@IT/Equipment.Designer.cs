@@ -36,34 +36,41 @@
 			this.txtDescription = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.panel1 = new System.Windows.Forms.Panel();
-			this.pnlView = new System.Windows.Forms.Panel();
-			this.btnViewListType = new System.Windows.Forms.Button();
-			this.btnViewList = new System.Windows.Forms.Button();
-			this.btnView = new System.Windows.Forms.Button();
-			this.pnlManage = new System.Windows.Forms.Panel();
-			this.btnManageDelete = new System.Windows.Forms.Button();
-			this.btnManageUpdate = new System.Windows.Forms.Button();
-			this.btnManageAdd = new System.Windows.Forms.Button();
-			this.btnManage = new System.Windows.Forms.Button();
-			this.pnlNavigation = new System.Windows.Forms.Panel();
-			this.btnNavHome = new System.Windows.Forms.Button();
-			this.btnNavigation = new System.Windows.Forms.Button();
-			this.panel2 = new System.Windows.Forms.Panel();
-			this.label2 = new System.Windows.Forms.Label();
 			this.dgvEquipment = new System.Windows.Forms.DataGridView();
 			this.tmrNavigation = new System.Windows.Forms.Timer(this.components);
 			this.tmrManage = new System.Windows.Forms.Timer(this.components);
 			this.tmrView = new System.Windows.Forms.Timer(this.components);
 			this.panel3 = new System.Windows.Forms.Panel();
+			this.panel1 = new System.Windows.Forms.Panel();
+			this.pnlView = new System.Windows.Forms.Panel();
+			this.btnViewList = new System.Windows.Forms.Button();
+			this.btnView = new System.Windows.Forms.Button();
+			this.pnlManage = new System.Windows.Forms.Panel();
+			this.btnManageUpdate = new System.Windows.Forms.Button();
+			this.btnManageAdd = new System.Windows.Forms.Button();
+			this.btnManage = new System.Windows.Forms.Button();
+			this.pnlNavigation = new System.Windows.Forms.Panel();
+			this.btnNavTaskType = new System.Windows.Forms.Button();
+			this.btnNavInspectionDetail = new System.Windows.Forms.Button();
+			this.btnNavInspection = new System.Windows.Forms.Button();
+			this.btnNavTutorRequest = new System.Windows.Forms.Button();
+			this.btnNavRequest = new System.Windows.Forms.Button();
+			this.btnNavDepartment = new System.Windows.Forms.Button();
+			this.btnNavEquipmentType = new System.Windows.Forms.Button();
+			this.btnNavVenue = new System.Windows.Forms.Button();
+			this.btnNavEquipment = new System.Windows.Forms.Button();
+			this.btnNavHome = new System.Windows.Forms.Button();
+			this.btnNavigation = new System.Windows.Forms.Button();
+			this.panel2 = new System.Windows.Forms.Panel();
+			this.label2 = new System.Windows.Forms.Label();
 			this.groupBox1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvEquipment)).BeginInit();
+			this.panel3.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.pnlView.SuspendLayout();
 			this.pnlManage.SuspendLayout();
 			this.pnlNavigation.SuspendLayout();
 			this.panel2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvEquipment)).BeginInit();
-			this.panel3.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// groupBox1
@@ -138,6 +145,36 @@
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Description:";
 			// 
+			// dgvEquipment
+			// 
+			this.dgvEquipment.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+			this.dgvEquipment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.dgvEquipment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvEquipment.Location = new System.Drawing.Point(4, 3);
+			this.dgvEquipment.Name = "dgvEquipment";
+			this.dgvEquipment.Size = new System.Drawing.Size(590, 328);
+			this.dgvEquipment.TabIndex = 6;
+			// 
+			// tmrNavigation
+			// 
+			this.tmrNavigation.Tick += new System.EventHandler(this.Timer1_Tick);
+			// 
+			// tmrManage
+			// 
+			this.tmrManage.Tick += new System.EventHandler(this.TmrManage_Tick);
+			// 
+			// tmrView
+			// 
+			this.tmrView.Tick += new System.EventHandler(this.TmrView_Tick);
+			// 
+			// panel3
+			// 
+			this.panel3.Controls.Add(this.dgvEquipment);
+			this.panel3.Location = new System.Drawing.Point(188, 89);
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new System.Drawing.Size(600, 349);
+			this.panel3.TabIndex = 6;
+			// 
 			// panel1
 			// 
 			this.panel1.Controls.Add(this.pnlView);
@@ -148,11 +185,10 @@
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(180, 450);
-			this.panel1.TabIndex = 5;
+			this.panel1.TabIndex = 12;
 			// 
 			// pnlView
 			// 
-			this.pnlView.Controls.Add(this.btnViewListType);
 			this.pnlView.Controls.Add(this.btnViewList);
 			this.pnlView.Controls.Add(this.btnView);
 			this.pnlView.Dock = System.Windows.Forms.DockStyle.Top;
@@ -162,20 +198,6 @@
 			this.pnlView.Name = "pnlView";
 			this.pnlView.Size = new System.Drawing.Size(180, 53);
 			this.pnlView.TabIndex = 8;
-			// 
-			// btnViewListType
-			// 
-			this.btnViewListType.BackColor = System.Drawing.Color.Teal;
-			this.btnViewListType.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnViewListType.FlatAppearance.BorderSize = 0;
-			this.btnViewListType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnViewListType.Location = new System.Drawing.Point(0, 84);
-			this.btnViewListType.Name = "btnViewListType";
-			this.btnViewListType.Size = new System.Drawing.Size(180, 31);
-			this.btnViewListType.TabIndex = 7;
-			this.btnViewListType.Text = "List All Equipment by Type";
-			this.btnViewListType.UseVisualStyleBackColor = false;
-			this.btnViewListType.Click += new System.EventHandler(this.BtnViewListType_Click);
 			// 
 			// btnViewList
 			// 
@@ -189,7 +211,7 @@
 			this.btnViewList.TabIndex = 6;
 			this.btnViewList.Text = "List All Equipment";
 			this.btnViewList.UseVisualStyleBackColor = false;
-			this.btnViewList.Click += new System.EventHandler(this.BtnViewList_Click);
+			this.btnViewList.Click += new System.EventHandler(this.BtnViewListType_Click);
 			// 
 			// btnView
 			// 
@@ -198,6 +220,7 @@
 			this.btnView.FlatAppearance.BorderSize = 0;
 			this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnView.Location = new System.Drawing.Point(0, 0);
+			this.btnView.MinimumSize = new System.Drawing.Size(180, 53);
 			this.btnView.Name = "btnView";
 			this.btnView.Size = new System.Drawing.Size(180, 53);
 			this.btnView.TabIndex = 5;
@@ -210,31 +233,17 @@
 			// 
 			// pnlManage
 			// 
-			this.pnlManage.Controls.Add(this.btnManageDelete);
 			this.pnlManage.Controls.Add(this.btnManageUpdate);
 			this.pnlManage.Controls.Add(this.btnManageAdd);
 			this.pnlManage.Controls.Add(this.btnManage);
 			this.pnlManage.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlManage.Location = new System.Drawing.Point(0, 122);
-			this.pnlManage.MaximumSize = new System.Drawing.Size(180, 145);
+			this.pnlManage.MaximumSize = new System.Drawing.Size(180, 114);
 			this.pnlManage.MinimumSize = new System.Drawing.Size(180, 53);
 			this.pnlManage.Name = "pnlManage";
 			this.pnlManage.Size = new System.Drawing.Size(180, 53);
 			this.pnlManage.TabIndex = 7;
-			// 
-			// btnManageDelete
-			// 
-			this.btnManageDelete.BackColor = System.Drawing.Color.Teal;
-			this.btnManageDelete.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnManageDelete.FlatAppearance.BorderSize = 0;
-			this.btnManageDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnManageDelete.Location = new System.Drawing.Point(0, 115);
-			this.btnManageDelete.Name = "btnManageDelete";
-			this.btnManageDelete.Size = new System.Drawing.Size(180, 31);
-			this.btnManageDelete.TabIndex = 8;
-			this.btnManageDelete.Text = "Delete Selected Equipment";
-			this.btnManageDelete.UseVisualStyleBackColor = false;
-			this.btnManageDelete.Click += new System.EventHandler(this.BtnManageDelete_Click);
+			this.pnlManage.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlManage_Paint);
 			// 
 			// btnManageUpdate
 			// 
@@ -271,6 +280,7 @@
 			this.btnManage.FlatAppearance.BorderSize = 0;
 			this.btnManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnManage.Location = new System.Drawing.Point(0, 0);
+			this.btnManage.MinimumSize = new System.Drawing.Size(180, 53);
 			this.btnManage.Name = "btnManage";
 			this.btnManage.Size = new System.Drawing.Size(180, 53);
 			this.btnManage.TabIndex = 5;
@@ -283,15 +293,151 @@
 			// 
 			// pnlNavigation
 			// 
+			this.pnlNavigation.Controls.Add(this.btnNavTaskType);
+			this.pnlNavigation.Controls.Add(this.btnNavInspectionDetail);
+			this.pnlNavigation.Controls.Add(this.btnNavInspection);
+			this.pnlNavigation.Controls.Add(this.btnNavTutorRequest);
+			this.pnlNavigation.Controls.Add(this.btnNavRequest);
+			this.pnlNavigation.Controls.Add(this.btnNavDepartment);
+			this.pnlNavigation.Controls.Add(this.btnNavEquipmentType);
+			this.pnlNavigation.Controls.Add(this.btnNavVenue);
+			this.pnlNavigation.Controls.Add(this.btnNavEquipment);
 			this.pnlNavigation.Controls.Add(this.btnNavHome);
 			this.pnlNavigation.Controls.Add(this.btnNavigation);
 			this.pnlNavigation.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlNavigation.Location = new System.Drawing.Point(0, 69);
-			this.pnlNavigation.MaximumSize = new System.Drawing.Size(180, 84);
+			this.pnlNavigation.MaximumSize = new System.Drawing.Size(180, 363);
 			this.pnlNavigation.MinimumSize = new System.Drawing.Size(180, 53);
 			this.pnlNavigation.Name = "pnlNavigation";
 			this.pnlNavigation.Size = new System.Drawing.Size(180, 53);
 			this.pnlNavigation.TabIndex = 2;
+			this.pnlNavigation.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlNavigation_Paint);
+			// 
+			// btnNavTaskType
+			// 
+			this.btnNavTaskType.BackColor = System.Drawing.Color.Teal;
+			this.btnNavTaskType.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnNavTaskType.FlatAppearance.BorderSize = 0;
+			this.btnNavTaskType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnNavTaskType.Location = new System.Drawing.Point(0, 332);
+			this.btnNavTaskType.Name = "btnNavTaskType";
+			this.btnNavTaskType.Size = new System.Drawing.Size(180, 31);
+			this.btnNavTaskType.TabIndex = 23;
+			this.btnNavTaskType.Text = "Task Type";
+			this.btnNavTaskType.UseVisualStyleBackColor = false;
+			this.btnNavTaskType.Click += new System.EventHandler(this.BtnNavTaskType_Click);
+			// 
+			// btnNavInspectionDetail
+			// 
+			this.btnNavInspectionDetail.BackColor = System.Drawing.Color.Teal;
+			this.btnNavInspectionDetail.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnNavInspectionDetail.FlatAppearance.BorderSize = 0;
+			this.btnNavInspectionDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnNavInspectionDetail.Location = new System.Drawing.Point(0, 301);
+			this.btnNavInspectionDetail.Name = "btnNavInspectionDetail";
+			this.btnNavInspectionDetail.Size = new System.Drawing.Size(180, 31);
+			this.btnNavInspectionDetail.TabIndex = 22;
+			this.btnNavInspectionDetail.Text = "Inspection Details";
+			this.btnNavInspectionDetail.UseVisualStyleBackColor = false;
+			this.btnNavInspectionDetail.Click += new System.EventHandler(this.BtnNavInspectionDetail_Click);
+			// 
+			// btnNavInspection
+			// 
+			this.btnNavInspection.BackColor = System.Drawing.Color.Teal;
+			this.btnNavInspection.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnNavInspection.FlatAppearance.BorderSize = 0;
+			this.btnNavInspection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnNavInspection.Location = new System.Drawing.Point(0, 270);
+			this.btnNavInspection.Name = "btnNavInspection";
+			this.btnNavInspection.Size = new System.Drawing.Size(180, 31);
+			this.btnNavInspection.TabIndex = 21;
+			this.btnNavInspection.Text = "Inspection";
+			this.btnNavInspection.UseVisualStyleBackColor = false;
+			this.btnNavInspection.Click += new System.EventHandler(this.BtnNavInspection_Click);
+			// 
+			// btnNavTutorRequest
+			// 
+			this.btnNavTutorRequest.BackColor = System.Drawing.Color.Teal;
+			this.btnNavTutorRequest.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnNavTutorRequest.FlatAppearance.BorderSize = 0;
+			this.btnNavTutorRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnNavTutorRequest.Location = new System.Drawing.Point(0, 239);
+			this.btnNavTutorRequest.Name = "btnNavTutorRequest";
+			this.btnNavTutorRequest.Size = new System.Drawing.Size(180, 31);
+			this.btnNavTutorRequest.TabIndex = 20;
+			this.btnNavTutorRequest.Text = "Tutor Request";
+			this.btnNavTutorRequest.UseVisualStyleBackColor = false;
+			this.btnNavTutorRequest.Click += new System.EventHandler(this.BtnNavTutorRequest_Click);
+			// 
+			// btnNavRequest
+			// 
+			this.btnNavRequest.BackColor = System.Drawing.Color.Teal;
+			this.btnNavRequest.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnNavRequest.FlatAppearance.BorderSize = 0;
+			this.btnNavRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnNavRequest.Location = new System.Drawing.Point(0, 208);
+			this.btnNavRequest.Name = "btnNavRequest";
+			this.btnNavRequest.Size = new System.Drawing.Size(180, 31);
+			this.btnNavRequest.TabIndex = 19;
+			this.btnNavRequest.Text = "Request";
+			this.btnNavRequest.UseVisualStyleBackColor = false;
+			this.btnNavRequest.Click += new System.EventHandler(this.BtnNavRequest_Click);
+			// 
+			// btnNavDepartment
+			// 
+			this.btnNavDepartment.BackColor = System.Drawing.Color.Teal;
+			this.btnNavDepartment.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnNavDepartment.FlatAppearance.BorderSize = 0;
+			this.btnNavDepartment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnNavDepartment.Location = new System.Drawing.Point(0, 177);
+			this.btnNavDepartment.Name = "btnNavDepartment";
+			this.btnNavDepartment.Size = new System.Drawing.Size(180, 31);
+			this.btnNavDepartment.TabIndex = 18;
+			this.btnNavDepartment.Text = "Department";
+			this.btnNavDepartment.UseVisualStyleBackColor = false;
+			this.btnNavDepartment.Click += new System.EventHandler(this.BtnNavDepartment_Click);
+			// 
+			// btnNavEquipmentType
+			// 
+			this.btnNavEquipmentType.BackColor = System.Drawing.Color.Teal;
+			this.btnNavEquipmentType.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnNavEquipmentType.FlatAppearance.BorderSize = 0;
+			this.btnNavEquipmentType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnNavEquipmentType.Location = new System.Drawing.Point(0, 146);
+			this.btnNavEquipmentType.Name = "btnNavEquipmentType";
+			this.btnNavEquipmentType.Size = new System.Drawing.Size(180, 31);
+			this.btnNavEquipmentType.TabIndex = 17;
+			this.btnNavEquipmentType.Text = "Equipment Type";
+			this.btnNavEquipmentType.UseVisualStyleBackColor = false;
+			this.btnNavEquipmentType.Click += new System.EventHandler(this.BtnNavEquipmentType_Click);
+			// 
+			// btnNavVenue
+			// 
+			this.btnNavVenue.BackColor = System.Drawing.Color.Teal;
+			this.btnNavVenue.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnNavVenue.FlatAppearance.BorderSize = 0;
+			this.btnNavVenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnNavVenue.Location = new System.Drawing.Point(0, 115);
+			this.btnNavVenue.Name = "btnNavVenue";
+			this.btnNavVenue.Size = new System.Drawing.Size(180, 31);
+			this.btnNavVenue.TabIndex = 16;
+			this.btnNavVenue.Text = "Venue";
+			this.btnNavVenue.UseVisualStyleBackColor = false;
+			this.btnNavVenue.Click += new System.EventHandler(this.BtnNavVenue_Click);
+			// 
+			// btnNavEquipment
+			// 
+			this.btnNavEquipment.BackColor = System.Drawing.Color.Teal;
+			this.btnNavEquipment.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnNavEquipment.FlatAppearance.BorderSize = 0;
+			this.btnNavEquipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnNavEquipment.Location = new System.Drawing.Point(0, 84);
+			this.btnNavEquipment.Name = "btnNavEquipment";
+			this.btnNavEquipment.Size = new System.Drawing.Size(180, 31);
+			this.btnNavEquipment.TabIndex = 15;
+			this.btnNavEquipment.Text = "Equipment";
+			this.btnNavEquipment.UseVisualStyleBackColor = false;
+			this.btnNavEquipment.Click += new System.EventHandler(this.BtnNavEquipment_Click);
 			// 
 			// btnNavHome
 			// 
@@ -314,6 +460,7 @@
 			this.btnNavigation.FlatAppearance.BorderSize = 0;
 			this.btnNavigation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnNavigation.Location = new System.Drawing.Point(0, 0);
+			this.btnNavigation.MinimumSize = new System.Drawing.Size(180, 53);
 			this.btnNavigation.Name = "btnNavigation";
 			this.btnNavigation.Size = new System.Drawing.Size(180, 53);
 			this.btnNavigation.TabIndex = 5;
@@ -346,44 +493,14 @@
 			this.label2.Text = "@";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// dgvEquipment
-			// 
-			this.dgvEquipment.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-			this.dgvEquipment.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.dgvEquipment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvEquipment.Location = new System.Drawing.Point(4, 3);
-			this.dgvEquipment.Name = "dgvEquipment";
-			this.dgvEquipment.Size = new System.Drawing.Size(590, 328);
-			this.dgvEquipment.TabIndex = 6;
-			// 
-			// tmrNavigation
-			// 
-			this.tmrNavigation.Tick += new System.EventHandler(this.Timer1_Tick);
-			// 
-			// tmrManage
-			// 
-			this.tmrManage.Tick += new System.EventHandler(this.TmrManage_Tick);
-			// 
-			// tmrView
-			// 
-			this.tmrView.Tick += new System.EventHandler(this.TmrView_Tick);
-			// 
-			// panel3
-			// 
-			this.panel3.Controls.Add(this.dgvEquipment);
-			this.panel3.Location = new System.Drawing.Point(188, 89);
-			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(600, 349);
-			this.panel3.TabIndex = 6;
-			// 
 			// Equipment
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
 			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Controls.Add(this.panel3);
 			this.Controls.Add(this.panel1);
+			this.Controls.Add(this.panel3);
 			this.Controls.Add(this.groupBox1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "Equipment";
@@ -392,14 +509,14 @@
 			this.Load += new System.EventHandler(this.Equipment_Load);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvEquipment)).EndInit();
+			this.panel3.ResumeLayout(false);
 			this.panel1.ResumeLayout(false);
 			this.pnlView.ResumeLayout(false);
 			this.pnlManage.ResumeLayout(false);
 			this.pnlNavigation.ResumeLayout(false);
 			this.panel2.ResumeLayout(false);
 			this.panel2.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvEquipment)).EndInit();
-			this.panel3.ResumeLayout(false);
 			this.ResumeLayout(false);
 
         }
@@ -412,25 +529,32 @@
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.Panel panel2;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Panel pnlNavigation;
-		private System.Windows.Forms.Button btnNavigation;
-		private System.Windows.Forms.Button btnNavHome;
 		private System.Windows.Forms.Timer tmrNavigation;
-		private System.Windows.Forms.Panel pnlManage;
-		private System.Windows.Forms.Button btnManageAdd;
-		private System.Windows.Forms.Button btnManage;
-		private System.Windows.Forms.Button btnManageUpdate;
-		private System.Windows.Forms.Button btnManageDelete;
 		private System.Windows.Forms.Timer tmrManage;
-		private System.Windows.Forms.Panel pnlView;
-		private System.Windows.Forms.Button btnViewListType;
-		private System.Windows.Forms.Button btnViewList;
-		private System.Windows.Forms.Button btnView;
 		private System.Windows.Forms.Timer tmrView;
 		private System.Windows.Forms.DataGridView dgvEquipment;
 		private System.Windows.Forms.Panel panel3;
+		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.Panel pnlView;
+		private System.Windows.Forms.Button btnViewList;
+		private System.Windows.Forms.Button btnView;
+		private System.Windows.Forms.Panel pnlManage;
+		private System.Windows.Forms.Button btnManageUpdate;
+		private System.Windows.Forms.Button btnManageAdd;
+		private System.Windows.Forms.Button btnManage;
+		private System.Windows.Forms.Panel pnlNavigation;
+		private System.Windows.Forms.Button btnNavHome;
+		private System.Windows.Forms.Button btnNavigation;
+		private System.Windows.Forms.Panel panel2;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Button btnNavTaskType;
+		private System.Windows.Forms.Button btnNavInspectionDetail;
+		private System.Windows.Forms.Button btnNavInspection;
+		private System.Windows.Forms.Button btnNavTutorRequest;
+		private System.Windows.Forms.Button btnNavRequest;
+		private System.Windows.Forms.Button btnNavDepartment;
+		private System.Windows.Forms.Button btnNavEquipmentType;
+		private System.Windows.Forms.Button btnNavVenue;
+		private System.Windows.Forms.Button btnNavEquipment;
 	}
 }

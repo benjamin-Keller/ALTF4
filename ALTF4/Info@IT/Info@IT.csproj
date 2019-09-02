@@ -114,12 +114,6 @@
     <Compile Include="Request.Designer.cs">
       <DependentUpon>Request.cs</DependentUpon>
     </Compile>
-    <Compile Include="sideMenu.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="sideMenu.Designer.cs">
-      <DependentUpon>sideMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Staff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,9 +175,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Request.resx">
       <DependentUpon>Request.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="sideMenu.resx">
-      <DependentUpon>sideMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
