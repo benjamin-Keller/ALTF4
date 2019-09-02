@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Info_IT
@@ -13,18 +7,19 @@ namespace Info_IT
 	public partial class Home : Form
 	{
 		public bool isLoggedIn;
-		
+
 		public Home()
 		{
 			InitializeComponent();
 		}
 		private void Home_Load(object sender, EventArgs e)
 		{
-			if(isLoggedIn)
+			if (isLoggedIn)
 			{
 				btnLog.Text = "Log Out";
 
-			} else
+			}
+			else
 			{
 				btnLog.Text = "Log In";
 			}
@@ -109,7 +104,7 @@ namespace Info_IT
 
 
 		// On hover color change events
-		
+
 		private void BtnEquipment_MouseEnter(object sender, EventArgs e)
 		{
 			btnEquipment.FlatAppearance.BorderColor = Color.FromArgb(128, 200, 255);
@@ -264,6 +259,6 @@ namespace Info_IT
 			l.Show();
 		}
 
-	
+
 	}
 }

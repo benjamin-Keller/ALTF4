@@ -114,6 +114,12 @@
     <Compile Include="Request.Designer.cs">
       <DependentUpon>Request.cs</DependentUpon>
     </Compile>
+    <Compile Include="sideMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sideMenu.Designer.cs">
+      <DependentUpon>sideMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Staff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,12 @@
     </Compile>
     <Compile Include="TaskType.Designer.cs">
       <DependentUpon>TaskType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Template.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Template.Designer.cs">
+      <DependentUpon>Template.cs</DependentUpon>
     </Compile>
     <Compile Include="TutorRequest.cs">
       <SubType>Form</SubType>
@@ -170,6 +182,9 @@
     <EmbeddedResource Include="Request.resx">
       <DependentUpon>Request.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="sideMenu.resx">
+      <DependentUpon>sideMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TaskType.resx">
       <DependentUpon>TaskType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template.resx">
+      <DependentUpon>Template.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TutorRequest.resx">
       <DependentUpon>TutorRequest.cs</DependentUpon>
@@ -220,8 +238,15 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Content Include="App_Data\info-IT_DB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\info-IT_DB_log.ldf">
+      <DependentUpon>info-IT_DB.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BAL\BLL.csproj">
