@@ -20,7 +20,8 @@ namespace Info_IT
 		private void BtnHome_Click(object sender, EventArgs e)
 		{
 			Home h = new Home();
-			
+			h.Show();
+			this.Hide();
 		}
 	}
 }

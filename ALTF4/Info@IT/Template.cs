@@ -19,7 +19,32 @@ namespace Info_IT
 
 		private void BtnNavigation_Click(object sender, EventArgs e)
 		{
-			
+			tabControl.SelectedTab = tabNavigation;
+		}
+
+		private void BtnManage_Click(object sender, EventArgs e)
+		{
+			tabControl.SelectedTab = tabManage;
+		}
+
+		private void BtnView_Click(object sender, EventArgs e)
+		{
+			tabControl.SelectedTab = tabView;
+
+		}
+
+		private void Template_Resize(object sender, EventArgs e)
+		{
+			tabControl.Height = this.Height;
+		}
+
+		private void Button4_Click(object sender, EventArgs e)
+		{
+			Home h = new Home();
+			h.TopLevel = false;
+			h.AutoScroll = true;
+			this.pnlForm.Controls.Add(h);
+			h.Show();
 		}
 	}
 }

@@ -28,56 +28,36 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.tabView = new System.Windows.Forms.TabControl();
-			this.tabPage1 = new System.Windows.Forms.TabPage();
-			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.tabPage3 = new System.Windows.Forms.TabPage();
+			this.tabControl = new System.Windows.Forms.TabControl();
+			this.tabNavigation = new System.Windows.Forms.TabPage();
 			this.btnHome = new System.Windows.Forms.Button();
-			this.tabView.SuspendLayout();
-			this.tabPage1.SuspendLayout();
+			this.tabManage = new System.Windows.Forms.TabPage();
+			this.tabView = new System.Windows.Forms.TabPage();
+			this.tabControl.SuspendLayout();
+			this.tabNavigation.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// tabView
+			// tabControl
 			// 
-			this.tabView.Controls.Add(this.tabPage1);
-			this.tabView.Controls.Add(this.tabPage2);
-			this.tabView.Controls.Add(this.tabPage3);
-			this.tabView.Location = new System.Drawing.Point(0, 0);
-			this.tabView.Name = "tabView";
-			this.tabView.SelectedIndex = 0;
-			this.tabView.Size = new System.Drawing.Size(227, 393);
-			this.tabView.TabIndex = 0;
+			this.tabControl.Controls.Add(this.tabNavigation);
+			this.tabControl.Controls.Add(this.tabManage);
+			this.tabControl.Controls.Add(this.tabView);
+			this.tabControl.Location = new System.Drawing.Point(-8, -24);
+			this.tabControl.Name = "tabControl";
+			this.tabControl.SelectedIndex = 0;
+			this.tabControl.Size = new System.Drawing.Size(245, 526);
+			this.tabControl.TabIndex = 0;
 			// 
-			// tabPage1
+			// tabNavigation
 			// 
-			this.tabPage1.Controls.Add(this.btnHome);
-			this.tabPage1.Location = new System.Drawing.Point(4, 22);
-			this.tabPage1.Name = "tabPage1";
-			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(219, 367);
-			this.tabPage1.TabIndex = 0;
-			this.tabPage1.Text = "tabPage1";
-			this.tabPage1.UseVisualStyleBackColor = true;
-			// 
-			// tabPage2
-			// 
-			this.tabPage2.Location = new System.Drawing.Point(4, 22);
-			this.tabPage2.Name = "tabPage2";
-			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(192, 74);
-			this.tabPage2.TabIndex = 1;
-			this.tabPage2.Text = "tabPage2";
-			this.tabPage2.UseVisualStyleBackColor = true;
-			// 
-			// tabPage3
-			// 
-			this.tabPage3.Location = new System.Drawing.Point(4, 22);
-			this.tabPage3.Name = "tabPage3";
-			this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage3.Size = new System.Drawing.Size(192, 74);
-			this.tabPage3.TabIndex = 2;
-			this.tabPage3.Text = "tabPage3";
-			this.tabPage3.UseVisualStyleBackColor = true;
+			this.tabNavigation.Controls.Add(this.btnHome);
+			this.tabNavigation.Location = new System.Drawing.Point(4, 22);
+			this.tabNavigation.Name = "tabNavigation";
+			this.tabNavigation.Padding = new System.Windows.Forms.Padding(3);
+			this.tabNavigation.Size = new System.Drawing.Size(237, 500);
+			this.tabNavigation.TabIndex = 0;
+			this.tabNavigation.Text = "Navigation";
+			this.tabNavigation.UseVisualStyleBackColor = true;
 			// 
 			// btnHome
 			// 
@@ -89,32 +69,52 @@
 			this.btnHome.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnHome.Location = new System.Drawing.Point(3, 3);
 			this.btnHome.Name = "btnHome";
-			this.btnHome.Size = new System.Drawing.Size(213, 42);
+			this.btnHome.Size = new System.Drawing.Size(231, 42);
 			this.btnHome.TabIndex = 3;
 			this.btnHome.Text = "Home";
 			this.btnHome.UseVisualStyleBackColor = false;
 			this.btnHome.Click += new System.EventHandler(this.BtnHome_Click);
 			// 
+			// tabManage
+			// 
+			this.tabManage.Location = new System.Drawing.Point(4, 22);
+			this.tabManage.Name = "tabManage";
+			this.tabManage.Padding = new System.Windows.Forms.Padding(3);
+			this.tabManage.Size = new System.Drawing.Size(237, 401);
+			this.tabManage.TabIndex = 1;
+			this.tabManage.Text = "Manage";
+			this.tabManage.UseVisualStyleBackColor = true;
+			// 
+			// tabView
+			// 
+			this.tabView.Location = new System.Drawing.Point(4, 22);
+			this.tabView.Name = "tabView";
+			this.tabView.Padding = new System.Windows.Forms.Padding(3);
+			this.tabView.Size = new System.Drawing.Size(237, 500);
+			this.tabView.TabIndex = 2;
+			this.tabView.Text = "View";
+			this.tabView.UseVisualStyleBackColor = true;
+			// 
 			// sideMenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.tabView);
+			this.Controls.Add(this.tabControl);
 			this.Name = "sideMenu";
-			this.Size = new System.Drawing.Size(227, 393);
-			this.tabView.ResumeLayout(false);
-			this.tabPage1.ResumeLayout(false);
-			this.tabPage1.PerformLayout();
+			this.Size = new System.Drawing.Size(227, 493);
+			this.tabControl.ResumeLayout(false);
+			this.tabNavigation.ResumeLayout(false);
+			this.tabNavigation.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-		private System.Windows.Forms.TabControl tabView;
-		private System.Windows.Forms.TabPage tabPage1;
-		private System.Windows.Forms.TabPage tabPage2;
-		private System.Windows.Forms.TabPage tabPage3;
+		private System.Windows.Forms.TabControl tabControl;
+		private System.Windows.Forms.TabPage tabNavigation;
+		private System.Windows.Forms.TabPage tabManage;
+		private System.Windows.Forms.TabPage tabView;
 		private System.Windows.Forms.Button btnHome;
 	}
 }

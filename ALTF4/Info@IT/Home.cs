@@ -244,7 +244,10 @@ namespace Info_IT
 
 		private void Panel3_Click(object sender, EventArgs e)
 		{
-			this.Close();
+			Template t = new Template();
+			t.Show();
+			this.Hide();
+			
 		}
 
 		private void Label3_Click(object sender, EventArgs e)
@@ -258,7 +261,5 @@ namespace Info_IT
 			this.Hide();
 			l.Show();
 		}
-
-
 	}
 }
