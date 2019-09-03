@@ -181,7 +181,7 @@ namespace Info_IT
 
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
-			//int x = bll.AddVenue(Venues);
+			int x = bll.AddVenue(Venues);
 		}
 
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
@@ -191,7 +191,7 @@ namespace Info_IT
 
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
-
+            dgvVenue.DataSource = bll.GetVenues();
 		}
 	}
 }

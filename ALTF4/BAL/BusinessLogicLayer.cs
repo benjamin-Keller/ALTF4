@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using DAL;
 
+
 namespace BLL
 {
     public class BusinessLogicLayer
@@ -16,5 +17,7 @@ namespace BLL
         {
             return dal.GetVenues();
         }
+
+        public int AddVenue(Venues)
     }
 }
