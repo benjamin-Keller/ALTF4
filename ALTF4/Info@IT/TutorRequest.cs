@@ -92,7 +92,7 @@ namespace Info_IT
 
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
-            dgvVenue.DataSource = bll.GetTutorRequest();
+            dgvTutorRequest.DataSource = bll.GetTutorRequest();
 
         }
 

@@ -13,6 +13,8 @@ namespace DAL
     public class DataAccessLayer
     {
         SqlConnection dbConn = new SqlConnection(@"Data Source=.\SQLExpress;Initial Catalog=Info@IT;Integrated Security=SSPI;");
+        //For Ben (so I can connect to the database for now)
+		//SqlConnection dbConn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\zhero\source\repos\zhero42\ALTF4\ALTF4\Info@IT\App_Data\info-IT_DB.mdf;Integrated Security=True");
         SqlCommand dbCmd;
         
         public DataTable GetVenues()
