@@ -53,7 +53,7 @@
 			this.tmrView = new System.Windows.Forms.Timer(this.components);
 			this.tmrNavigation = new System.Windows.Forms.Timer(this.components);
 			this.tmrManage = new System.Windows.Forms.Timer(this.components);
-			this.dgvVenue = new System.Windows.Forms.DataGridView();
+			this.dgvTutorRequest = new System.Windows.Forms.DataGridView();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.txtEndTime = new System.Windows.Forms.MaskedTextBox();
@@ -73,7 +73,7 @@
 			this.panel1.SuspendLayout();
 			this.pnlView.SuspendLayout();
 			this.pnlManage.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvVenue)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvTutorRequest)).BeginInit();
 			this.panel3.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
@@ -385,19 +385,19 @@
 			// 
 			this.tmrManage.Tick += new System.EventHandler(this.TmrManage_Tick);
 			// 
-			// dgvVenue
+			// dgvTutorRequest
 			// 
-			this.dgvVenue.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-			this.dgvVenue.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.dgvVenue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvVenue.Location = new System.Drawing.Point(5, 3);
-			this.dgvVenue.Name = "dgvVenue";
-			this.dgvVenue.Size = new System.Drawing.Size(598, 304);
-			this.dgvVenue.TabIndex = 6;
+			this.dgvTutorRequest.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+			this.dgvTutorRequest.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.dgvTutorRequest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvTutorRequest.Location = new System.Drawing.Point(5, 3);
+			this.dgvTutorRequest.Name = "dgvTutorRequest";
+			this.dgvTutorRequest.Size = new System.Drawing.Size(598, 304);
+			this.dgvTutorRequest.TabIndex = 6;
 			// 
 			// panel3
 			// 
-			this.panel3.Controls.Add(this.dgvVenue);
+			this.panel3.Controls.Add(this.dgvTutorRequest);
 			this.panel3.Location = new System.Drawing.Point(188, 128);
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(609, 310);
@@ -554,14 +554,13 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "TutorRequest";
 			this.Text = "TutorRequest";
-			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TutorRequest_FormClosing);
 			this.pnlNavigation.ResumeLayout(false);
 			this.panel2.ResumeLayout(false);
 			this.panel2.PerformLayout();
 			this.panel1.ResumeLayout(false);
 			this.pnlView.ResumeLayout(false);
 			this.pnlManage.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dgvVenue)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvTutorRequest)).EndInit();
 			this.panel3.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
@@ -586,7 +585,7 @@
 		private System.Windows.Forms.Timer tmrView;
 		private System.Windows.Forms.Timer tmrNavigation;
 		private System.Windows.Forms.Timer tmrManage;
-		private System.Windows.Forms.DataGridView dgvVenue;
+		private System.Windows.Forms.DataGridView dgvTutorRequest;
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.Label label7;

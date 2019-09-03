@@ -575,7 +575,6 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "Request";
 			this.Text = "Request";
-			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Request_FormClosing);
 			this.Load += new System.EventHandler(this.Request_Load);
 			this.panel3.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgvVenue)).EndInit();

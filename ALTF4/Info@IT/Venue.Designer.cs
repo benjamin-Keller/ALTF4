@@ -531,7 +531,6 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "Venue";
 			this.Text = "Venue";
-			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Venue_FormClosing);
 			this.panel3.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgvVenue)).EndInit();
 			this.groupBox1.ResumeLayout(false);

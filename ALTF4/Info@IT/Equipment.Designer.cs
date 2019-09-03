@@ -505,7 +505,6 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Name = "Equipment";
 			this.Text = "Equipment";
-			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Equipment_FormClosing);
 			this.Load += new System.EventHandler(this.Equipment_Load);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();

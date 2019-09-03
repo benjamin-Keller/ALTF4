@@ -510,7 +510,6 @@
 			this.Controls.Add(this.panel3);
 			this.Name = "Department";
 			this.Text = "Department";
-			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Department_FormClosing);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvVenue)).EndInit();

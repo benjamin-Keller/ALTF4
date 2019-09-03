@@ -25,6 +25,8 @@ namespace Info_IT
 
 		private void BtnNavHome_Click(object sender, EventArgs e)
 		{
+			Home home = new Home();
+			home.Show();
 			this.Close();
 		}
 
