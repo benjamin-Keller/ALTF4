@@ -17,7 +17,67 @@ namespace DAL
         
         public DataTable GetVenues()
         {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
             dbCmd = new SqlCommand("dbo.sp_DisplayVenue", dbConn);
+            //dbCmd.CommandText = "sp_DisplayVenue";
+            //dbCmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return dt;
+        }
+
+        public int AddVenue(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+                //VenueClass venue = new VenueClass();
+                dbCmd = new SqlCommand("dbo.sp_AddVenue", dbConn);
+                //dbCmd.CommandText = "dbo.sp_AddVenue";
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
+                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
+                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
+                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
+                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch(Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public DataTable PopulateCmbBuilding()
+        {
+            dbCmd = new SqlCommand("dbo.sp_PopulateBuilding", dbConn);
             //dbCmd.CommandText = "sp_DisplayVenue";
             //dbCmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
@@ -26,10 +86,5 @@ namespace DAL
             sda.Fill(dt);
             return dt;
         }
-
-        //public int AddVenue()
-        //{
-        //    dbCmd = new SqlCommand("dbo.sp_DisplayVenue", dbConn);
-        //}
     }
 }

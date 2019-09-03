@@ -2,12 +2,14 @@
 using System.Drawing;
 using System.Windows.Forms;
 using BLL;
+using DAL;
 
 namespace Info_IT
 {
 	public partial class Venue : Form
 	{
         BusinessLogicLayer bll = new BusinessLogicLayer();
+        DataAccessLayer dll = new DataAccessLayer();
 		public Venue()
 		{
 			InitializeComponent();
@@ -181,8 +183,23 @@ namespace Info_IT
 
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
-			int x = bll.AddVenue(Venues);
-		}
+
+            VenueClass venue = new VenueClass(txtDescription.Text, int.Parse(txtCapacity.Text), txtDoorNo.Text, /*(int)cmbBuildingBlock.SelectedValue*/ 5, /*(int)cmbBuilding.SelectedValue*/ 2);
+			int x = bll.AddVenue(venue);
+            if (x > 0)
+            {
+                MessageBox.Show("Venue Added.");
+                txtDescription.Clear();
+                txtCapacity.Clear();
+                txtDoorNo.Clear();
+                cmbBuilding.SelectedValue = 0;
+                cmbBuildingBlock.SelectedValue = 0;
+            }
+            else
+            {
+                MessageBox.Show("Nothing Added. Please enter valid Data,");
+            }
+        }
 
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
 		{

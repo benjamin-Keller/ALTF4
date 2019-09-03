@@ -6,34 +6,30 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class Venue
+    public class VenueClass
     { 
-        public string VenueCode { get; set; }
-
         public string VenueDescription { get; set; }
 
-        public string VenueCapacity { get; set; }
+        public int VenueCapacity { get; set; }
 
         public string VenueDoorNo { get; set; }
 
-        public string VenueBuildingBlock { get; set; }
+        public int VenueBuildingBlock { get; set; }
 
-        public string VenueBuilding { get; set; }
+        public int VenueBuilding { get; set; }
 
-        public Venue()
+        public VenueClass()
         {
 
         }
 
-        public Venue(string code, string description, string capacity, string doorNo, string buildingBlock, string building)
+        public VenueClass(string description, int capacity, string doorNo, int buildingBlock, int building)
         {
-            VenueCode = code;
             VenueDescription = description;
             VenueCapacity = capacity;
             VenueDoorNo = doorNo;
             VenueBuildingBlock = buildingBlock;
             VenueBuilding = building;
-
         }
         
     }

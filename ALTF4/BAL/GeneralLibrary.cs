@@ -5,22 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using DAL;
 
-
-namespace BLL
+namespace DAL
 {
-    public class BusinessLogicLayer
+    class GeneralLibrary
     {
+        //This is where we add any Methods that we need
         DataAccessLayer dal = new DataAccessLayer();
-        public DataTable GetVenues()
+        public DataTable PopulateCmbBuilding()
         {
-            return dal.GetVenues();
+            
+            return dal.PopulateCmbBuilding();
         }
 
-        public int AddVenue(VenueClass venue)
-        {
-            return dal.AddVenue(venue);
-        }
     }
 }
