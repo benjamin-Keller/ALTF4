@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
+using BLL;
 
 namespace Info_IT
 {
 	public partial class TaskType : Form
-	{
-		public TaskType()
+    {
+        BusinessLogicLayer bll = new BusinessLogicLayer();
+
+        public TaskType()
 		{
 			InitializeComponent();
 		}

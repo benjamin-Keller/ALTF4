@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
+using BLL;
 
 namespace Info_IT
 {
 	public partial class TutorRequest : Form
-	{
-		public TutorRequest()
+    {
+        BusinessLogicLayer bll = new BusinessLogicLayer();
+
+        public TutorRequest()
 		{
 			InitializeComponent();
 		}
@@ -89,10 +92,11 @@ namespace Info_IT
 
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
+            dgvVenue.DataSource = bll.GetTutorRequest();
 
-		}
+        }
 
-		private void BtnNavVenue_Click(object sender, EventArgs e)
+        private void BtnNavVenue_Click(object sender, EventArgs e)
 		{
 			Venue v = new Venue();
 			v.Show();
