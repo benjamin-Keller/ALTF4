@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using BLL;
 
 namespace Info_IT
 {
 	public partial class Home : Form
-	{
-		public bool isLoggedIn;
+    {
+        BusinessLogicLayer bll = new BusinessLogicLayer();
+
+        public bool isLoggedIn;
 
 		public Home()
 		{

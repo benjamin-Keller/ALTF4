@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
+using BLL;
 
 namespace Info_IT
 {
 	public partial class Student : Form
-	{
-		public Student()
+    {
+        BusinessLogicLayer bll = new BusinessLogicLayer();
+
+        public Student()
 		{
 			InitializeComponent();
 		}

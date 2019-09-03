@@ -49,9 +49,8 @@ namespace DAL
             int x;
             try
             {
-                //VenueClass venue = new VenueClass();
+                
                 dbCmd = new SqlCommand("dbo.sp_AddVenue", dbConn);
-                //dbCmd.CommandText = "dbo.sp_AddVenue";
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
                 dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
@@ -86,5 +85,214 @@ namespace DAL
             sda.Fill(dt);
             return dt;
         }
+
+        public DataTable GetDepartment()
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+            dbCmd = new SqlCommand("dbo.sp_DisplayAllDepart", dbConn);
+            //dbCmd.CommandText = "sp_DisplayVenue";
+            //dbCmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return dt;
+        }
+
+        public DataTable GetEquipment()
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+            dbCmd = new SqlCommand("dbo.sp_DisplayEquip", dbConn);
+            //dbCmd.CommandText = "sp_DisplayVenue";
+            //dbCmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return dt;
+        }
+
+        public DataTable GetEquipmentType()
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+            dbCmd = new SqlCommand("dbo.sp_DisplayEquipmentType", dbConn);
+            //dbCmd.CommandText = "sp_DisplayVenue";
+            //dbCmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return dt;
+        }
+
+        public DataTable GetInspectionDetail()
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+            dbCmd = new SqlCommand("dbo.sp_DisplayInspectionFaults", dbConn);
+            //dbCmd.CommandText = "sp_DisplayVenue";
+            //dbCmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return dt;
+        }
+
+        public DataTable GetRequests()
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+            dbCmd = new SqlCommand("dbo.sp_DisplayLabRequests", dbConn);
+            //dbCmd.CommandText = "sp_DisplayVenue";
+            //dbCmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return dt;
+        }
+
+        public DataTable GetStaff()
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+            dbCmd = new SqlCommand("dbo.sp_DisplayAllStaff", dbConn);
+            //dbCmd.CommandText = "sp_DisplayVenue";
+            //dbCmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return dt;
+        }
+
+        public DataTable GetStudent()
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+            dbCmd = new SqlCommand("dbo.sp_DisplayAllStudents", dbConn);
+            //dbCmd.CommandText = "sp_DisplayVenue";
+            //dbCmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return dt;
+        }
+
+        public DataTable GetTasktype()
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+            dbCmd = new SqlCommand("dbo.sp_DisplayRequestModules", dbConn);
+            //dbCmd.CommandText = "sp_DisplayVenue";
+            //dbCmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return dt;
+        }
+
+        public DataTable GetTutorRequest()
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+            dbCmd = new SqlCommand("dbo.sp_DisplayRequestTutor", dbConn);
+            //dbCmd.CommandText = "sp_DisplayVenue";
+            //dbCmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return dt;
+        }
+
+
     }
 }

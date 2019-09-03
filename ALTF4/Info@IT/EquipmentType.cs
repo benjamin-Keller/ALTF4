@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using BLL;
 
 namespace Info_IT
 {
 	public partial class EquipmentType : Form
-	{
-		public EquipmentType()
+    {
+        BusinessLogicLayer bll = new BusinessLogicLayer();
+
+        public EquipmentType()
 		{
 			InitializeComponent();
 		}
@@ -75,9 +78,11 @@ namespace Info_IT
 
 		private void Equipment_Load(object sender, EventArgs e)
 		{
-		}
+            dgvEquipType.DataSource = bll.GetEquipmentType();
 
-		private void BtnNavigation_MouseEnter(object sender, EventArgs e)
+        }
+
+        private void BtnNavigation_MouseEnter(object sender, EventArgs e)
 		{
 			btnNavigation.FlatAppearance.BorderColor = Color.FromArgb(128, 200, 255);
 			btnNavigation.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 200, 255);

@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Drawing;
+using BLL;
 
 
 namespace Info_IT
 {
 	public partial class Department : Form
 	{
-		public Department()
+        BusinessLogicLayer bll = new BusinessLogicLayer();
+        public Department()
 		{
 			InitializeComponent();
 		}
@@ -191,7 +193,7 @@ namespace Info_IT
 		}
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
-
+            dgvVenue.DataSource = bll.GetDepartment();
 		}
 	}
 }

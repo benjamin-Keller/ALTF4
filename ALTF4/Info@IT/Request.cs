@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using BLL;
 
 namespace Info_IT
 {
 	public partial class Request : Form
-	{
-		public Request()
+    {
+        BusinessLogicLayer bll = new BusinessLogicLayer();
+
+        public Request()
 		{
 			InitializeComponent();
 		}
@@ -193,7 +196,8 @@ namespace Info_IT
 
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
+            dgvVenue.DataSource = bll.GetRequests();
 
-		}
-	}
+        }
+    }
 }

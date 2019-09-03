@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
+using BLL;
 
 namespace Info_IT
 {
 	public partial class InspectionDetail : Form
-	{
-		public InspectionDetail()
+    {
+        BusinessLogicLayer bll = new BusinessLogicLayer();
+
+        public InspectionDetail()
 		{
 			InitializeComponent();
 		}

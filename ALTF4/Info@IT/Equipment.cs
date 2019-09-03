@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using BLL;
 
 namespace Info_IT
 {
 	public partial class Equipment : Form
 	{
+        BusinessLogicLayer bll = new BusinessLogicLayer();
 
-		public Equipment()
+        public Equipment()
 		{
 			InitializeComponent();
 		}
@@ -123,10 +125,11 @@ namespace Info_IT
 
 		private void BtnViewListType_Click(object sender, EventArgs e)
 		{
+            dgvEquipment.DataSource = bll.GetEquipment();
 
-		}
+        }
 
-		private void PnlManage_Paint(object sender, PaintEventArgs e)
+        private void PnlManage_Paint(object sender, PaintEventArgs e)
 		{
 
 		}
