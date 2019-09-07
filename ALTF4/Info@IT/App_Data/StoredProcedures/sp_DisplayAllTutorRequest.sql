@@ -1,6 +1,5 @@
-create procedure sp_DisplayAllTutorRequest
+﻿create procedure sp_DisplayAllTutorRequest
 as
 begin
 select * from tblTutorRequests
 end
-go

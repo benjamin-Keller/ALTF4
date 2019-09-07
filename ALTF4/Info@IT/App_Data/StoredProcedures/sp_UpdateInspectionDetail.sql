@@ -1,4 +1,4 @@
-CREATE PROCEDURE sp_UpdateInspectionDetail
+﻿CREATE PROCEDURE sp_UpdateInspectionDetail
 @InspectionDetailCode int,
 @InspectinCode int,
 @EquipmentCode int,

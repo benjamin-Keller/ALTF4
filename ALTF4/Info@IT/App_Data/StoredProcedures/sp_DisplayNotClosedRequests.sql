@@ -1,7 +1,7 @@
-create procedure sp_DisplayNotClosedRequests
+﻿create procedure sp_DisplayNotClosedRequests
 as
 begin
 select * from tblRequests
-where RequestDescription not like 'Closed'
+where RequestStatus not like 'Closed'
 end
 go

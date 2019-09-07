@@ -1,6 +1,5 @@
-create procedure sp_DisplayAllStudents
+﻿create procedure sp_DisplayAllStudents
 as
 begin
 select * from tblStudent
 end
-go
