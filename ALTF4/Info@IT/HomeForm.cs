@@ -1,29 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Info_IT
 {
-	public partial class HomeForm : Form
+	public partial class Home : Form
 	{
-		public HomeForm()
+		public Home()
 		{
 			InitializeComponent();
 		}
 		private void Template_Load(object sender, EventArgs e)
 		{
-			//lblLoginText.Width = pnlLogin.Width;
-			//lblLoginText.TextAlign = ContentAlignment.MiddleCenter;
-			//lblLoginText.Text = "Please Login";
-
 			HideAll();
-			
+			ucHome1.Show();
+			this.Text = "Home";
+			lblLocation.Text = "Home";
+
 		}
 
 		private void Template_Resize(object sender, EventArgs e)
@@ -35,7 +28,10 @@ namespace Info_IT
 		}
 		private void HideAll()
 		{
-			//ucEquipment1.Hide();
+			ucEquipment1.Hide();
+			ucHome1.Hide();
+			ucVenue1.Hide();
+			ucDepartment1.Hide();
 		}
 		//Login bar
 		private void PnlLogin_Click(object sender, EventArgs e)
@@ -65,7 +61,7 @@ namespace Info_IT
 			tmrNavigation.Stop();
 		}
 
-		
+
 
 		private void BtnNavigation_MouseEnter(object sender, EventArgs e)
 		{
@@ -80,31 +76,40 @@ namespace Info_IT
 		}
 
 
-		
+
 
 		private void BtnNavHome_Click(object sender, EventArgs e)
 		{
-			Home h = new Home();
-			h.TopLevel = false;
-			h.AutoScroll = true;
-			this.pnlContent.Controls.Add(h);
-			h.Show();
+			HideAll();
+			ucHome1.Show();
+			this.Text = "Info@IT";
+			lblLocation.Text = "Home";
 		}
 
 		private void BtnNavEquipment_Click(object sender, EventArgs e)
 		{
-
-			
+			HideAll();
+			ucEquipment1.Show();
+			this.Text = "Equipment";
+			lblLocation.Text = "Equipment";
 
 		}
 
 		private void BtnNavVenue_Click(object sender, EventArgs e)
 		{
+			HideAll();
+			ucVenue1.Show();
+			this.Text = "Venue";
+			lblLocation.Text = "Venue";
 
 		}
 
 		private void BtnNavDepartment_Click(object sender, EventArgs e)
 		{
+			HideAll();
+			ucDepartment1.Show();
+			this.Text = "Department";
+			lblLocation.Text = "Department";
 
 		}
 

@@ -1,15 +1,15 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
-using BLL;
 
 namespace Info_IT
 {
 	public partial class EquipmentType : Form
-    {
-        BusinessLogicLayer bll = new BusinessLogicLayer();
+	{
+		BusinessLogicLayer bll = new BusinessLogicLayer();
 
-        public EquipmentType()
+		public EquipmentType()
 		{
 			InitializeComponent();
 		}
@@ -78,11 +78,11 @@ namespace Info_IT
 
 		private void Equipment_Load(object sender, EventArgs e)
 		{
-            dgvEquipType.DataSource = bll.GetEquipmentType();
+			dgvEquipType.DataSource = bll.GetEquipmentType();
 
-        }
+		}
 
-        private void BtnNavigation_MouseEnter(object sender, EventArgs e)
+		private void BtnNavigation_MouseEnter(object sender, EventArgs e)
 		{
 			btnNavigation.FlatAppearance.BorderColor = Color.FromArgb(128, 200, 255);
 			btnNavigation.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 200, 255);
@@ -118,12 +118,6 @@ namespace Info_IT
 			btnView.FlatAppearance.MouseOverBackColor = Color.DarkTurquoise;
 		}
 
-		private void BtnNavHome_Click(object sender, EventArgs e)
-		{
-			Home home = new Home();
-			home.Show();
-			this.Close();
-		}
 
 		private void BtnNavVenue_Click(object sender, EventArgs e)
 		{

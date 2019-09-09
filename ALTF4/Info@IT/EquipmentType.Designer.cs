@@ -373,20 +373,7 @@
 			this.btnNavEquipment.Text = "Equipment";
 			this.btnNavEquipment.UseVisualStyleBackColor = false;
 			this.btnNavEquipment.Click += new System.EventHandler(this.BtnNavEquipment_Click);
-			// 
-			// btnNavHome
-			// 
-			this.btnNavHome.BackColor = System.Drawing.Color.Teal;
-			this.btnNavHome.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnNavHome.FlatAppearance.BorderSize = 0;
-			this.btnNavHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnNavHome.Location = new System.Drawing.Point(0, 53);
-			this.btnNavHome.Name = "btnNavHome";
-			this.btnNavHome.Size = new System.Drawing.Size(180, 31);
-			this.btnNavHome.TabIndex = 6;
-			this.btnNavHome.Text = "Home";
-			this.btnNavHome.UseVisualStyleBackColor = false;
-			this.btnNavHome.Click += new System.EventHandler(this.BtnNavHome_Click);
+			
 			// 
 			// btnNavigation
 			// 

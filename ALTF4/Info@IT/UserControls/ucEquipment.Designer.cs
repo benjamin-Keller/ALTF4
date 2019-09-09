@@ -1,6 +1,6 @@
 ﻿namespace Info_IT.UserControls
 {
-	partial class ucEquipment
+	partial class UcEquipment
 	{
 		/// <summary> 
 		/// Required designer variable.
@@ -59,9 +59,9 @@
 			// panel3
 			// 
 			this.panel3.Controls.Add(this.dgvEquipment);
-			this.panel3.Location = new System.Drawing.Point(236, 103);
+			this.panel3.Location = new System.Drawing.Point(234, 100);
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(782, 455);
+			this.panel3.Size = new System.Drawing.Size(782, 429);
 			this.panel3.TabIndex = 8;
 			// 
 			// dgvEquipment
@@ -85,7 +85,7 @@
 			this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
 			this.groupBox1.Location = new System.Drawing.Point(234, 23);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(784, 77);
+			this.groupBox1.Size = new System.Drawing.Size(784, 71);
 			this.groupBox1.TabIndex = 7;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Information";
@@ -155,7 +155,7 @@
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(200, 590);
+			this.panel1.Size = new System.Drawing.Size(200, 562);
 			this.panel1.TabIndex = 9;
 			// 
 			// pnlView
@@ -275,7 +275,7 @@
 			this.Controls.Add(this.panel3);
 			this.Controls.Add(this.groupBox1);
 			this.Name = "ucEquipment";
-			this.Size = new System.Drawing.Size(1056, 590);
+			this.Size = new System.Drawing.Size(1056, 562);
 			this.panel3.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgvEquipment)).EndInit();
 			this.groupBox1.ResumeLayout(false);

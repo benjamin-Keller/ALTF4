@@ -1,14 +1,14 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Windows.Forms;
-using BLL;
 
 namespace Info_IT
 {
 	public partial class Staff : Form
-    {
-        BusinessLogicLayer bll = new BusinessLogicLayer();
+	{
+		BusinessLogicLayer bll = new BusinessLogicLayer();
 
-        public Staff()
+		public Staff()
 		{
 			InitializeComponent();
 		}
@@ -31,8 +31,8 @@ namespace Info_IT
 			cmbStaffType.Items.Add("Student Assistant");
 			cmbStaffType.Items.Add("Info@IT Staff");
 			cmbStaffType.Items.Add("ICT Helpdesk Staff");
-            dgvStaff.DataSource = bll.GetStaff();
+			dgvStaff.DataSource = bll.GetStaff();
 
-        }
-    }
+		}
+	}
 }

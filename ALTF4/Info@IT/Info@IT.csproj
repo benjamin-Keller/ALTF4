@@ -66,29 +66,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Department.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Department.Designer.cs">
-      <DependentUpon>Department.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Equipment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Equipment.Designer.cs">
-      <DependentUpon>Equipment.cs</DependentUpon>
-    </Compile>
     <Compile Include="EquipmentType.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EquipmentType.Designer.cs">
       <DependentUpon>EquipmentType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Inspection.cs">
       <SubType>Form</SubType>
@@ -144,31 +126,34 @@
     <Compile Include="TutorRequest.Designer.cs">
       <DependentUpon>TutorRequest.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucDepartment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucDepartment.Designer.cs">
+      <DependentUpon>ucDepartment.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucEquipment.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\ucEquipment.Designer.cs">
       <DependentUpon>ucEquipment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Venue.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\ucHome.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Venue.Designer.cs">
-      <DependentUpon>Venue.cs</DependentUpon>
+    <Compile Include="UserControls\ucHome.Designer.cs">
+      <DependentUpon>ucHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucVenue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucVenue.Designer.cs">
+      <DependentUpon>ucVenue.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Department.resx">
-      <DependentUpon>Department.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Equipment.resx">
-      <DependentUpon>Equipment.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EquipmentType.resx">
       <DependentUpon>EquipmentType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inspection.resx">
       <DependentUpon>Inspection.cs</DependentUpon>
@@ -197,11 +182,17 @@
     <EmbeddedResource Include="TutorRequest.resx">
       <DependentUpon>TutorRequest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucDepartment.resx">
+      <DependentUpon>ucDepartment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucEquipment.resx">
       <DependentUpon>ucEquipment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Venue.resx">
-      <DependentUpon>Venue.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\ucHome.resx">
+      <DependentUpon>ucHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucVenue.resx">
+      <DependentUpon>ucVenue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

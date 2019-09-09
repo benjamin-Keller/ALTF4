@@ -1,6 +1,6 @@
 ﻿namespace Info_IT
 {
-	partial class HomeForm
+	partial class Home
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -47,19 +47,22 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.btnHelp = new System.Windows.Forms.Button();
 			this.tmrNavigation = new System.Windows.Forms.Timer(this.components);
-			this.tmrManage = new System.Windows.Forms.Timer(this.components);
-			this.tmrView = new System.Windows.Forms.Timer(this.components);
 			this.pnlContent = new System.Windows.Forms.Panel();
+			this.panel6 = new System.Windows.Forms.Panel();
 			this.pnlLogin = new System.Windows.Forms.Panel();
 			this.lblLoginText = new System.Windows.Forms.Label();
 			this.panel5 = new System.Windows.Forms.Panel();
-			this.panel6 = new System.Windows.Forms.Panel();
-			this.ucEquipment1 = new Info_IT.UserControls.ucEquipment();
+			this.lblLocation = new System.Windows.Forms.Label();
+			this.ucDepartment1 = new Info_IT.UserControls.ucDepartment();
+			this.ucEquipment1 = new Info_IT.UserControls.UcEquipment();
+			this.ucHome1 = new Info_IT.UserControls.ucHome();
+			this.ucVenue1 = new Info_IT.UserControls.ucVenue();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.pnlNavigation.SuspendLayout();
 			this.panel4.SuspendLayout();
 			this.pnlContent.SuspendLayout();
+			this.panel6.SuspendLayout();
 			this.pnlLogin.SuspendLayout();
 			this.panel5.SuspendLayout();
 			this.SuspendLayout();
@@ -111,7 +114,7 @@
 			this.pnlNavigation.MaximumSize = new System.Drawing.Size(200, 332);
 			this.pnlNavigation.MinimumSize = new System.Drawing.Size(200, 53);
 			this.pnlNavigation.Name = "pnlNavigation";
-			this.pnlNavigation.Size = new System.Drawing.Size(200, 53);
+			this.pnlNavigation.Size = new System.Drawing.Size(200, 332);
 			this.pnlNavigation.TabIndex = 9;
 			// 
 			// btnNavTaskType
@@ -295,13 +298,26 @@
 			// 
 			// pnlContent
 			// 
+			this.pnlContent.Controls.Add(this.ucVenue1);
+			this.pnlContent.Controls.Add(this.ucHome1);
 			this.pnlContent.Controls.Add(this.ucEquipment1);
+			this.pnlContent.Controls.Add(this.ucDepartment1);
 			this.pnlContent.Controls.Add(this.panel6);
 			this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.pnlContent.Location = new System.Drawing.Point(200, 0);
 			this.pnlContent.Name = "pnlContent";
 			this.pnlContent.Size = new System.Drawing.Size(1056, 620);
 			this.pnlContent.TabIndex = 3;
+			// 
+			// panel6
+			// 
+			this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.panel6.Controls.Add(this.lblLocation);
+			this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel6.Location = new System.Drawing.Point(0, 0);
+			this.panel6.Name = "panel6";
+			this.panel6.Size = new System.Drawing.Size(1056, 67);
+			this.panel6.TabIndex = 0;
 			// 
 			// pnlLogin
 			// 
@@ -333,23 +349,45 @@
 			this.panel5.Size = new System.Drawing.Size(1056, 30);
 			this.panel5.TabIndex = 2;
 			// 
-			// panel6
+			// lblLocation
 			// 
-			this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel6.Location = new System.Drawing.Point(0, 0);
-			this.panel6.Name = "panel6";
-			this.panel6.Size = new System.Drawing.Size(1056, 30);
-			this.panel6.TabIndex = 0;
+			this.lblLocation.AutoSize = true;
+			this.lblLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblLocation.Location = new System.Drawing.Point(6, 9);
+			this.lblLocation.Name = "lblLocation";
+			this.lblLocation.Size = new System.Drawing.Size(146, 39);
+			this.lblLocation.TabIndex = 0;
+			this.lblLocation.Text = "Location";
+			// 
+			// ucDepartment1
+			// 
+			this.ucDepartment1.Location = new System.Drawing.Point(0, 58);
+			this.ucDepartment1.Name = "ucDepartment1";
+			this.ucDepartment1.Size = new System.Drawing.Size(1056, 562);
+			this.ucDepartment1.TabIndex = 1;
 			// 
 			// ucEquipment1
 			// 
-			this.ucEquipment1.Location = new System.Drawing.Point(0, 30);
+			this.ucEquipment1.Location = new System.Drawing.Point(0, 58);
 			this.ucEquipment1.Name = "ucEquipment1";
-			this.ucEquipment1.Size = new System.Drawing.Size(1056, 590);
-			this.ucEquipment1.TabIndex = 1;
+			this.ucEquipment1.Size = new System.Drawing.Size(1056, 562);
+			this.ucEquipment1.TabIndex = 2;
 			// 
-			// HomeForm
+			// ucHome1
+			// 
+			this.ucHome1.Location = new System.Drawing.Point(0, 58);
+			this.ucHome1.Name = "ucHome1";
+			this.ucHome1.Size = new System.Drawing.Size(1056, 562);
+			this.ucHome1.TabIndex = 3;
+			// 
+			// ucVenue1
+			// 
+			this.ucVenue1.Location = new System.Drawing.Point(0, 58);
+			this.ucVenue1.Name = "ucVenue1";
+			this.ucVenue1.Size = new System.Drawing.Size(1056, 562);
+			this.ucVenue1.TabIndex = 4;
+			// 
+			// Home
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -358,7 +396,7 @@
 			this.Controls.Add(this.panel5);
 			this.Controls.Add(this.panel2);
 			this.MinimumSize = new System.Drawing.Size(920, 532);
-			this.Name = "HomeForm";
+			this.Name = "Home";
 			this.Text = "Template";
 			this.Load += new System.EventHandler(this.Template_Load);
 			this.Resize += new System.EventHandler(this.Template_Resize);
@@ -368,6 +406,8 @@
 			this.panel4.ResumeLayout(false);
 			this.panel4.PerformLayout();
 			this.pnlContent.ResumeLayout(false);
+			this.panel6.ResumeLayout(false);
+			this.panel6.PerformLayout();
 			this.pnlLogin.ResumeLayout(false);
 			this.pnlLogin.PerformLayout();
 			this.panel5.ResumeLayout(false);
@@ -394,13 +434,15 @@
 		private System.Windows.Forms.Button btnNavHome;
 		private System.Windows.Forms.Button btnNavigation;
 		private System.Windows.Forms.Timer tmrNavigation;
-		private System.Windows.Forms.Timer tmrManage;
-		private System.Windows.Forms.Timer tmrView;
 		private System.Windows.Forms.Panel pnlContent;
 		private System.Windows.Forms.Panel pnlLogin;
 		private System.Windows.Forms.Label lblLoginText;
 		private System.Windows.Forms.Panel panel5;
 		private System.Windows.Forms.Panel panel6;
-		private UserControls.ucEquipment ucEquipment1;
+		private System.Windows.Forms.Label lblLocation;
+		private UserControls.ucDepartment ucDepartment1;
+		private UserControls.ucVenue ucVenue1;
+		private UserControls.ucHome ucHome1;
+		private UserControls.UcEquipment ucEquipment1;
 	}
 }

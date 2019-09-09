@@ -143,62 +143,7 @@
 			this.btnNavRequest.Text = "Request";
 			this.btnNavRequest.UseVisualStyleBackColor = false;
 			this.btnNavRequest.Click += new System.EventHandler(this.BtnNavRequest_Click);
-			// 
-			// btnNavDepartment
-			// 
-			this.btnNavDepartment.BackColor = System.Drawing.Color.Teal;
-			this.btnNavDepartment.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnNavDepartment.FlatAppearance.BorderSize = 0;
-			this.btnNavDepartment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnNavDepartment.Location = new System.Drawing.Point(0, 177);
-			this.btnNavDepartment.Name = "btnNavDepartment";
-			this.btnNavDepartment.Size = new System.Drawing.Size(180, 31);
-			this.btnNavDepartment.TabIndex = 18;
-			this.btnNavDepartment.Text = "Department";
-			this.btnNavDepartment.UseVisualStyleBackColor = false;
-			this.btnNavDepartment.Click += new System.EventHandler(this.BtnNavDepartment_Click);
-			// 
-			// btnNavEquipmentType
-			// 
-			this.btnNavEquipmentType.BackColor = System.Drawing.Color.Teal;
-			this.btnNavEquipmentType.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnNavEquipmentType.FlatAppearance.BorderSize = 0;
-			this.btnNavEquipmentType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnNavEquipmentType.Location = new System.Drawing.Point(0, 146);
-			this.btnNavEquipmentType.Name = "btnNavEquipmentType";
-			this.btnNavEquipmentType.Size = new System.Drawing.Size(180, 31);
-			this.btnNavEquipmentType.TabIndex = 17;
-			this.btnNavEquipmentType.Text = "Equipment Type";
-			this.btnNavEquipmentType.UseVisualStyleBackColor = false;
-			this.btnNavEquipmentType.Click += new System.EventHandler(this.BtnNavEquipmentType_Click);
-			// 
-			// btnNavVenue
-			// 
-			this.btnNavVenue.BackColor = System.Drawing.Color.Teal;
-			this.btnNavVenue.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnNavVenue.FlatAppearance.BorderSize = 0;
-			this.btnNavVenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnNavVenue.Location = new System.Drawing.Point(0, 115);
-			this.btnNavVenue.Name = "btnNavVenue";
-			this.btnNavVenue.Size = new System.Drawing.Size(180, 31);
-			this.btnNavVenue.TabIndex = 16;
-			this.btnNavVenue.Text = "Venue";
-			this.btnNavVenue.UseVisualStyleBackColor = false;
-			this.btnNavVenue.Click += new System.EventHandler(this.BtnNavVenue_Click);
-			// 
-			// btnNavEquipment
-			// 
-			this.btnNavEquipment.BackColor = System.Drawing.Color.Teal;
-			this.btnNavEquipment.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnNavEquipment.FlatAppearance.BorderSize = 0;
-			this.btnNavEquipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnNavEquipment.Location = new System.Drawing.Point(0, 84);
-			this.btnNavEquipment.Name = "btnNavEquipment";
-			this.btnNavEquipment.Size = new System.Drawing.Size(180, 31);
-			this.btnNavEquipment.TabIndex = 15;
-			this.btnNavEquipment.Text = "Equipment";
-			this.btnNavEquipment.UseVisualStyleBackColor = false;
-			this.btnNavEquipment.Click += new System.EventHandler(this.BtnNavEquipment_Click);
+			
 			// 
 			// btnNavHome
 			// 

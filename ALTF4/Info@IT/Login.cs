@@ -36,7 +36,7 @@ namespace Info_IT
 		private void BtnLogin_Click(object sender, EventArgs e)
 		{
 			Home h = new Home();
-			h.isLoggedIn = true;
+			//h.isLoggedIn = true;
 			h.Show();
 			this.Hide();
 		}
