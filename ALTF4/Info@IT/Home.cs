@@ -247,7 +247,7 @@ namespace Info_IT
 
 		private void Panel3_Click(object sender, EventArgs e)
 		{
-			Template t = new Template();
+			HomeForm t = new HomeForm();
 			t.Show();
 			this.Hide();
 			

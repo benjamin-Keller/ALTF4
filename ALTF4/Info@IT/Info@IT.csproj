@@ -132,11 +132,11 @@
     <Compile Include="TaskType.Designer.cs">
       <DependentUpon>TaskType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Template.cs">
+    <Compile Include="HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Template.Designer.cs">
-      <DependentUpon>Template.cs</DependentUpon>
+    <Compile Include="HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="TutorRequest.cs">
       <SubType>Form</SubType>
@@ -185,8 +185,8 @@
     <EmbeddedResource Include="TaskType.resx">
       <DependentUpon>TaskType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Template.resx">
-      <DependentUpon>Template.cs</DependentUpon>
+    <EmbeddedResource Include="HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TutorRequest.resx">
       <DependentUpon>TutorRequest.cs</DependentUpon>
@@ -229,7 +229,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UserControls\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\info-IT_DB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
