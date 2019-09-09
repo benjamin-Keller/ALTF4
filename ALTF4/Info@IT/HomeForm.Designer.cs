@@ -32,13 +32,6 @@
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
-			this.pnlView = new System.Windows.Forms.Panel();
-			this.btnViewList = new System.Windows.Forms.Button();
-			this.btnView = new System.Windows.Forms.Button();
-			this.pnlManage = new System.Windows.Forms.Panel();
-			this.btnManageUpdate = new System.Windows.Forms.Button();
-			this.btnManageAdd = new System.Windows.Forms.Button();
-			this.btnManage = new System.Windows.Forms.Button();
 			this.pnlNavigation = new System.Windows.Forms.Panel();
 			this.btnNavTaskType = new System.Windows.Forms.Button();
 			this.btnNavInspectionDetail = new System.Windows.Forms.Button();
@@ -56,18 +49,19 @@
 			this.tmrNavigation = new System.Windows.Forms.Timer(this.components);
 			this.tmrManage = new System.Windows.Forms.Timer(this.components);
 			this.tmrView = new System.Windows.Forms.Timer(this.components);
-			this.panel5 = new System.Windows.Forms.Panel();
+			this.pnlContent = new System.Windows.Forms.Panel();
 			this.pnlLogin = new System.Windows.Forms.Panel();
 			this.lblLoginText = new System.Windows.Forms.Label();
-			this.pnlContent = new System.Windows.Forms.Panel();
+			this.panel5 = new System.Windows.Forms.Panel();
+			this.panel6 = new System.Windows.Forms.Panel();
+			this.ucEquipment1 = new Info_IT.UserControls.ucEquipment();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
-			this.pnlView.SuspendLayout();
-			this.pnlManage.SuspendLayout();
 			this.pnlNavigation.SuspendLayout();
 			this.panel4.SuspendLayout();
-			this.panel5.SuspendLayout();
+			this.pnlContent.SuspendLayout();
 			this.pnlLogin.SuspendLayout();
+			this.panel5.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel2
@@ -79,7 +73,7 @@
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
 			this.panel2.Location = new System.Drawing.Point(0, 0);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(200, 493);
+			this.panel2.Size = new System.Drawing.Size(200, 620);
 			this.panel2.TabIndex = 1;
 			// 
 			// panel1
@@ -92,111 +86,13 @@
 			// 
 			// panel3
 			// 
-			this.panel3.Controls.Add(this.pnlView);
-			this.panel3.Controls.Add(this.pnlManage);
 			this.panel3.Controls.Add(this.pnlNavigation);
 			this.panel3.Controls.Add(this.panel4);
 			this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
 			this.panel3.Location = new System.Drawing.Point(0, 0);
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(200, 451);
+			this.panel3.Size = new System.Drawing.Size(200, 578);
 			this.panel3.TabIndex = 6;
-			// 
-			// pnlView
-			// 
-			this.pnlView.Controls.Add(this.btnViewList);
-			this.pnlView.Controls.Add(this.btnView);
-			this.pnlView.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlView.Location = new System.Drawing.Point(0, 206);
-			this.pnlView.MaximumSize = new System.Drawing.Size(200, 115);
-			this.pnlView.MinimumSize = new System.Drawing.Size(200, 53);
-			this.pnlView.Name = "pnlView";
-			this.pnlView.Size = new System.Drawing.Size(200, 53);
-			this.pnlView.TabIndex = 11;
-			// 
-			// btnViewList
-			// 
-			this.btnViewList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
-			this.btnViewList.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnViewList.FlatAppearance.BorderSize = 0;
-			this.btnViewList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnViewList.Location = new System.Drawing.Point(0, 53);
-			this.btnViewList.Name = "btnViewList";
-			this.btnViewList.Size = new System.Drawing.Size(200, 31);
-			this.btnViewList.TabIndex = 6;
-			this.btnViewList.Text = "List All Equipment Type";
-			this.btnViewList.UseVisualStyleBackColor = false;
-			// 
-			// btnView
-			// 
-			this.btnView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(250)))));
-			this.btnView.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnView.FlatAppearance.BorderSize = 0;
-			this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnView.Location = new System.Drawing.Point(0, 0);
-			this.btnView.MinimumSize = new System.Drawing.Size(180, 53);
-			this.btnView.Name = "btnView";
-			this.btnView.Size = new System.Drawing.Size(200, 53);
-			this.btnView.TabIndex = 5;
-			this.btnView.Text = "View";
-			this.btnView.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-			this.btnView.UseVisualStyleBackColor = false;
-			this.btnView.Click += new System.EventHandler(this.BtnView_Click);
-			// 
-			// pnlManage
-			// 
-			this.pnlManage.Controls.Add(this.btnManageUpdate);
-			this.pnlManage.Controls.Add(this.btnManageAdd);
-			this.pnlManage.Controls.Add(this.btnManage);
-			this.pnlManage.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlManage.Location = new System.Drawing.Point(0, 153);
-			this.pnlManage.MaximumSize = new System.Drawing.Size(200, 114);
-			this.pnlManage.MinimumSize = new System.Drawing.Size(200, 53);
-			this.pnlManage.Name = "pnlManage";
-			this.pnlManage.Size = new System.Drawing.Size(200, 53);
-			this.pnlManage.TabIndex = 10;
-			// 
-			// btnManageUpdate
-			// 
-			this.btnManageUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
-			this.btnManageUpdate.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnManageUpdate.FlatAppearance.BorderSize = 0;
-			this.btnManageUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnManageUpdate.Location = new System.Drawing.Point(0, 84);
-			this.btnManageUpdate.Name = "btnManageUpdate";
-			this.btnManageUpdate.Size = new System.Drawing.Size(200, 31);
-			this.btnManageUpdate.TabIndex = 7;
-			this.btnManageUpdate.Text = "Update Selected Equipment Type";
-			this.btnManageUpdate.UseVisualStyleBackColor = false;
-			// 
-			// btnManageAdd
-			// 
-			this.btnManageAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
-			this.btnManageAdd.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnManageAdd.FlatAppearance.BorderSize = 0;
-			this.btnManageAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnManageAdd.Location = new System.Drawing.Point(0, 53);
-			this.btnManageAdd.Name = "btnManageAdd";
-			this.btnManageAdd.Size = new System.Drawing.Size(200, 31);
-			this.btnManageAdd.TabIndex = 6;
-			this.btnManageAdd.Text = "Add Equipment Type";
-			this.btnManageAdd.UseVisualStyleBackColor = false;
-			// 
-			// btnManage
-			// 
-			this.btnManage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(250)))));
-			this.btnManage.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnManage.FlatAppearance.BorderSize = 0;
-			this.btnManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnManage.Location = new System.Drawing.Point(0, 0);
-			this.btnManage.MinimumSize = new System.Drawing.Size(180, 53);
-			this.btnManage.Name = "btnManage";
-			this.btnManage.Size = new System.Drawing.Size(200, 53);
-			this.btnManage.TabIndex = 5;
-			this.btnManage.Text = "Manage";
-			this.btnManage.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-			this.btnManage.UseVisualStyleBackColor = false;
-			this.btnManage.Click += new System.EventHandler(this.BtnManage_Click);
 			// 
 			// pnlNavigation
 			// 
@@ -386,7 +282,7 @@
 			this.btnHelp.FlatAppearance.BorderSize = 0;
 			this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnHelp.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnHelp.Location = new System.Drawing.Point(0, 451);
+			this.btnHelp.Location = new System.Drawing.Point(0, 578);
 			this.btnHelp.Name = "btnHelp";
 			this.btnHelp.Size = new System.Drawing.Size(200, 42);
 			this.btnHelp.TabIndex = 5;
@@ -397,29 +293,22 @@
 			// 
 			this.tmrNavigation.Tick += new System.EventHandler(this.TmrNavigation_Tick);
 			// 
-			// tmrManage
+			// pnlContent
 			// 
-			this.tmrManage.Tick += new System.EventHandler(this.TmrManage_Tick);
-			// 
-			// tmrView
-			// 
-			this.tmrView.Tick += new System.EventHandler(this.TmrView_Tick);
-			// 
-			// panel5
-			// 
-			this.panel5.Controls.Add(this.pnlLogin);
-			this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel5.Location = new System.Drawing.Point(200, 0);
-			this.panel5.Name = "panel5";
-			this.panel5.Size = new System.Drawing.Size(704, 30);
-			this.panel5.TabIndex = 2;
+			this.pnlContent.Controls.Add(this.ucEquipment1);
+			this.pnlContent.Controls.Add(this.panel6);
+			this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pnlContent.Location = new System.Drawing.Point(200, 0);
+			this.pnlContent.Name = "pnlContent";
+			this.pnlContent.Size = new System.Drawing.Size(1056, 620);
+			this.pnlContent.TabIndex = 3;
 			// 
 			// pnlLogin
 			// 
 			this.pnlLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.pnlLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
 			this.pnlLogin.Controls.Add(this.lblLoginText);
-			this.pnlLogin.Location = new System.Drawing.Point(509, 0);
+			this.pnlLogin.Location = new System.Drawing.Point(861, 0);
 			this.pnlLogin.Name = "pnlLogin";
 			this.pnlLogin.Size = new System.Drawing.Size(195, 29);
 			this.pnlLogin.TabIndex = 1;
@@ -436,36 +325,52 @@
 			this.lblLoginText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.lblLoginText.Click += new System.EventHandler(this.LblLoginText_Click);
 			// 
-			// pnlContent
+			// panel5
 			// 
-			this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pnlContent.Location = new System.Drawing.Point(200, 30);
-			this.pnlContent.Name = "pnlContent";
-			this.pnlContent.Size = new System.Drawing.Size(704, 463);
-			this.pnlContent.TabIndex = 3;
+			this.panel5.Controls.Add(this.pnlLogin);
+			this.panel5.Location = new System.Drawing.Point(200, 0);
+			this.panel5.Name = "panel5";
+			this.panel5.Size = new System.Drawing.Size(1056, 30);
+			this.panel5.TabIndex = 2;
+			// 
+			// panel6
+			// 
+			this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel6.Location = new System.Drawing.Point(0, 0);
+			this.panel6.Name = "panel6";
+			this.panel6.Size = new System.Drawing.Size(1056, 30);
+			this.panel6.TabIndex = 0;
+			// 
+			// ucEquipment1
+			// 
+			this.ucEquipment1.Location = new System.Drawing.Point(0, 30);
+			this.ucEquipment1.Name = "ucEquipment1";
+			this.ucEquipment1.Size = new System.Drawing.Size(1056, 590);
+			this.ucEquipment1.TabIndex = 1;
 			// 
 			// HomeForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(904, 493);
+			this.ClientSize = new System.Drawing.Size(1256, 620);
 			this.Controls.Add(this.pnlContent);
 			this.Controls.Add(this.panel5);
 			this.Controls.Add(this.panel2);
+			this.MinimumSize = new System.Drawing.Size(920, 532);
 			this.Name = "HomeForm";
 			this.Text = "Template";
 			this.Load += new System.EventHandler(this.Template_Load);
 			this.Resize += new System.EventHandler(this.Template_Resize);
 			this.panel2.ResumeLayout(false);
 			this.panel3.ResumeLayout(false);
-			this.pnlView.ResumeLayout(false);
-			this.pnlManage.ResumeLayout(false);
 			this.pnlNavigation.ResumeLayout(false);
 			this.panel4.ResumeLayout(false);
 			this.panel4.PerformLayout();
-			this.panel5.ResumeLayout(false);
+			this.pnlContent.ResumeLayout(false);
 			this.pnlLogin.ResumeLayout(false);
 			this.pnlLogin.PerformLayout();
+			this.panel5.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -477,13 +382,6 @@
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Panel panel4;
-		private System.Windows.Forms.Panel pnlView;
-		private System.Windows.Forms.Button btnViewList;
-		private System.Windows.Forms.Button btnView;
-		private System.Windows.Forms.Panel pnlManage;
-		private System.Windows.Forms.Button btnManageUpdate;
-		private System.Windows.Forms.Button btnManageAdd;
-		private System.Windows.Forms.Button btnManage;
 		private System.Windows.Forms.Panel pnlNavigation;
 		private System.Windows.Forms.Button btnNavTaskType;
 		private System.Windows.Forms.Button btnNavInspectionDetail;
@@ -498,9 +396,11 @@
 		private System.Windows.Forms.Timer tmrNavigation;
 		private System.Windows.Forms.Timer tmrManage;
 		private System.Windows.Forms.Timer tmrView;
-		private System.Windows.Forms.Panel panel5;
+		private System.Windows.Forms.Panel pnlContent;
 		private System.Windows.Forms.Panel pnlLogin;
 		private System.Windows.Forms.Label lblLoginText;
-		private System.Windows.Forms.Panel pnlContent;
+		private System.Windows.Forms.Panel panel5;
+		private System.Windows.Forms.Panel panel6;
+		private UserControls.ucEquipment ucEquipment1;
 	}
 }

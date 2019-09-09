@@ -144,6 +144,12 @@
     <Compile Include="TutorRequest.Designer.cs">
       <DependentUpon>TutorRequest.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucEquipment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucEquipment.Designer.cs">
+      <DependentUpon>ucEquipment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Venue.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,9 @@
     <EmbeddedResource Include="TutorRequest.resx">
       <DependentUpon>TutorRequest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucEquipment.resx">
+      <DependentUpon>ucEquipment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Venue.resx">
       <DependentUpon>Venue.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,9 +238,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UserControls\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="App_Data\info-IT_DB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
