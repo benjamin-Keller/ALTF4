@@ -294,6 +294,401 @@ namespace DAL
             catch { }
             return dt;
         }
+        
+        public int AddDepartment(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_AddDepartment", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
+                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
+                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
+                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
+                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public int AddEquipment(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_AddEquipment", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
+                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
+                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
+                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
+                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public int AddEquipmentType(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_AddEquipmentType", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
+                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
+                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
+                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
+                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public int AddInspection(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_AddInspection", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
+                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
+                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
+                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
+                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public int AddInspectionDetail(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_AddInspectionDetail", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
+                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
+                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
+                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
+                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public int AddRequest(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_AddRequest", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
+                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
+                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
+                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
+                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public int AddStaff(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_AddStaff", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
+                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
+                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
+                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
+                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public int AddStudent(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_AddStudent", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
+                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
+                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
+                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
+                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public int AddTaskType(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_AddTaskType", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
+                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
+                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
+                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
+                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public int AddTutorRequest(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_AddTutorRequest", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
+                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
+                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
+                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
+                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public int AddUsers(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_AddUser", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@Username", venue.VenueDescription);
+                dbCmd.Parameters.AddWithValue("@Password", venue.VenueCapacity);
+                dbCmd.Parameters.AddWithValue("@Role", venue.VenueDoorNo);
+                dbCmd.Parameters.AddWithValue("@UserAdmin", venue.VenueBuildingBlock);
+
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
 
 
     }
