@@ -34,7 +34,6 @@
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.pnlNavigation = new System.Windows.Forms.Panel();
 			this.btnNavTaskType = new System.Windows.Forms.Button();
-			this.btnNavInspectionDetail = new System.Windows.Forms.Button();
 			this.btnNavInspection = new System.Windows.Forms.Button();
 			this.btnNavTutorRequest = new System.Windows.Forms.Button();
 			this.btnNavRequest = new System.Windows.Forms.Button();
@@ -48,6 +47,7 @@
 			this.btnHelp = new System.Windows.Forms.Button();
 			this.tmrNavigation = new System.Windows.Forms.Timer(this.components);
 			this.pnlContent = new System.Windows.Forms.Panel();
+			this.ucNavInspection1 = new Info_IT.UserControls.ucInspection();
 			this.ucTutorRequest1 = new Info_IT.UserControls.ucTutorRequest();
 			this.ucRequest1 = new Info_IT.UserControls.ucRequest();
 			this.doubleBitmapControl1 = new BunifuAnimatorNS.DoubleBitmapControl();
@@ -60,7 +60,6 @@
 			this.pnlLogin = new System.Windows.Forms.Panel();
 			this.lblLoginText = new System.Windows.Forms.Label();
 			this.panel5 = new System.Windows.Forms.Panel();
-			this.ucNavInspection1 = new Info_IT.UserControls.ucNavInspection();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.pnlNavigation.SuspendLayout();
@@ -104,7 +103,6 @@
 			// pnlNavigation
 			// 
 			this.pnlNavigation.Controls.Add(this.btnNavTaskType);
-			this.pnlNavigation.Controls.Add(this.btnNavInspectionDetail);
 			this.pnlNavigation.Controls.Add(this.btnNavInspection);
 			this.pnlNavigation.Controls.Add(this.btnNavTutorRequest);
 			this.pnlNavigation.Controls.Add(this.btnNavRequest);
@@ -127,27 +125,13 @@
 			this.btnNavTaskType.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnNavTaskType.FlatAppearance.BorderSize = 0;
 			this.btnNavTaskType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnNavTaskType.Location = new System.Drawing.Point(0, 301);
+			this.btnNavTaskType.Location = new System.Drawing.Point(0, 270);
 			this.btnNavTaskType.Name = "btnNavTaskType";
 			this.btnNavTaskType.Size = new System.Drawing.Size(200, 31);
 			this.btnNavTaskType.TabIndex = 23;
 			this.btnNavTaskType.Text = "Task Type";
 			this.btnNavTaskType.UseVisualStyleBackColor = false;
 			this.btnNavTaskType.Click += new System.EventHandler(this.BtnNavTaskType_Click);
-			// 
-			// btnNavInspectionDetail
-			// 
-			this.btnNavInspectionDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
-			this.btnNavInspectionDetail.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnNavInspectionDetail.FlatAppearance.BorderSize = 0;
-			this.btnNavInspectionDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnNavInspectionDetail.Location = new System.Drawing.Point(0, 270);
-			this.btnNavInspectionDetail.Name = "btnNavInspectionDetail";
-			this.btnNavInspectionDetail.Size = new System.Drawing.Size(200, 31);
-			this.btnNavInspectionDetail.TabIndex = 22;
-			this.btnNavInspectionDetail.Text = "Inspection Details";
-			this.btnNavInspectionDetail.UseVisualStyleBackColor = false;
-			this.btnNavInspectionDetail.Click += new System.EventHandler(this.BtnNavInspectionDetail_Click);
 			// 
 			// btnNavInspection
 			// 
@@ -317,6 +301,13 @@
 			this.pnlContent.Size = new System.Drawing.Size(1056, 620);
 			this.pnlContent.TabIndex = 3;
 			// 
+			// ucNavInspection1
+			// 
+			this.ucNavInspection1.Location = new System.Drawing.Point(0, 58);
+			this.ucNavInspection1.Name = "ucNavInspection1";
+			this.ucNavInspection1.Size = new System.Drawing.Size(1056, 562);
+			this.ucNavInspection1.TabIndex = 8;
+			// 
 			// ucTutorRequest1
 			// 
 			this.ucTutorRequest1.Location = new System.Drawing.Point(0, 58);
@@ -418,13 +409,6 @@
 			this.panel5.Size = new System.Drawing.Size(1056, 30);
 			this.panel5.TabIndex = 2;
 			// 
-			// ucNavInspection1
-			// 
-			this.ucNavInspection1.Location = new System.Drawing.Point(0, 58);
-			this.ucNavInspection1.Name = "ucNavInspection1";
-			this.ucNavInspection1.Size = new System.Drawing.Size(1056, 562);
-			this.ucNavInspection1.TabIndex = 8;
-			// 
 			// Home
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -462,7 +446,6 @@
 		private System.Windows.Forms.Panel panel4;
 		private System.Windows.Forms.Panel pnlNavigation;
 		private System.Windows.Forms.Button btnNavTaskType;
-		private System.Windows.Forms.Button btnNavInspectionDetail;
 		private System.Windows.Forms.Button btnNavInspection;
 		private System.Windows.Forms.Button btnNavTutorRequest;
 		private System.Windows.Forms.Button btnNavRequest;
@@ -485,6 +468,6 @@
 		private BunifuAnimatorNS.DoubleBitmapControl doubleBitmapControl1;
 		private UserControls.ucRequest ucRequest1;
 		private UserControls.ucTutorRequest ucTutorRequest1;
-		private UserControls.ucNavInspection ucNavInspection1;
+		private UserControls.ucInspection ucNavInspection1;
 	}
 }

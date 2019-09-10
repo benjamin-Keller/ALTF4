@@ -1,6 +1,6 @@
 ﻿namespace Info_IT.UserControls
 {
-	partial class ucNavInspection
+	partial class ucInspection
 	{
 		/// <summary> 
 		/// Required designer variable.
@@ -29,8 +29,8 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.bunifuFormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
 			this.tmrView = new System.Windows.Forms.Timer(this.components);
 			this.tmrManage = new System.Windows.Forms.Timer(this.components);
@@ -41,6 +41,7 @@
 			this.btnViewList = new System.Windows.Forms.Button();
 			this.btnView = new System.Windows.Forms.Button();
 			this.pnlView = new System.Windows.Forms.Panel();
+			this.btnViewInspectiondetails = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.dgvInspection = new Bunifu.Framework.UI.BunifuCustomDataGrid();
 			this.panel3 = new System.Windows.Forms.Panel();
@@ -55,7 +56,7 @@
 			this.dateInspection = new System.Windows.Forms.DateTimePicker();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.btnViewInspectiondetails = new System.Windows.Forms.Button();
+			this.ucInspectionDetails1 = new Info_IT.UserControls.ucInspectionDetails();
 			this.pnlManage.SuspendLayout();
 			this.pnlView.SuspendLayout();
 			this.panel1.SuspendLayout();
@@ -178,6 +179,20 @@
 			this.pnlView.Size = new System.Drawing.Size(200, 53);
 			this.pnlView.TabIndex = 13;
 			// 
+			// btnViewInspectiondetails
+			// 
+			this.btnViewInspectiondetails.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.btnViewInspectiondetails.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnViewInspectiondetails.FlatAppearance.BorderSize = 0;
+			this.btnViewInspectiondetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnViewInspectiondetails.Location = new System.Drawing.Point(0, 84);
+			this.btnViewInspectiondetails.Name = "btnViewInspectiondetails";
+			this.btnViewInspectiondetails.Size = new System.Drawing.Size(200, 31);
+			this.btnViewInspectiondetails.TabIndex = 7;
+			this.btnViewInspectiondetails.Text = "View Inspection Details";
+			this.btnViewInspectiondetails.UseVisualStyleBackColor = false;
+			this.btnViewInspectiondetails.Click += new System.EventHandler(this.BtnViewInspectiondetails_Click);
+			// 
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
@@ -191,20 +206,20 @@
 			// 
 			// dgvInspection
 			// 
-			dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvInspection.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+			dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvInspection.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
 			this.dgvInspection.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvInspection.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvInspection.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvInspection.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvInspection.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+			dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvInspection.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
 			this.dgvInspection.ColumnHeadersHeight = 50;
 			this.dgvInspection.DoubleBuffered = true;
 			this.dgvInspection.EnableHeadersVisualStyles = false;
@@ -340,29 +355,24 @@
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Date:";
 			// 
-			// btnViewInspectiondetails
+			// ucInspectionDetails1
 			// 
-			this.btnViewInspectiondetails.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.btnViewInspectiondetails.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnViewInspectiondetails.FlatAppearance.BorderSize = 0;
-			this.btnViewInspectiondetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnViewInspectiondetails.Location = new System.Drawing.Point(0, 84);
-			this.btnViewInspectiondetails.Name = "btnViewInspectiondetails";
-			this.btnViewInspectiondetails.Size = new System.Drawing.Size(200, 31);
-			this.btnViewInspectiondetails.TabIndex = 7;
-			this.btnViewInspectiondetails.Text = "View Inspection Details";
-			this.btnViewInspectiondetails.UseVisualStyleBackColor = false;
-			this.btnViewInspectiondetails.Click += new System.EventHandler(this.BtnViewInspectiondetails_Click);
+			this.ucInspectionDetails1.Location = new System.Drawing.Point(0, 0);
+			this.ucInspectionDetails1.Name = "ucInspectionDetails1";
+			this.ucInspectionDetails1.Size = new System.Drawing.Size(1056, 562);
+			this.ucInspectionDetails1.TabIndex = 14;
 			// 
-			// ucNavInspection
+			// ucInspection
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.ucInspectionDetails1);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.panel3);
-			this.Name = "ucNavInspection";
+			this.Name = "ucInspection";
 			this.Size = new System.Drawing.Size(1056, 562);
+			this.Load += new System.EventHandler(this.UcNavInspection_Load);
 			this.pnlManage.ResumeLayout(false);
 			this.pnlView.ResumeLayout(false);
 			this.panel1.ResumeLayout(false);
@@ -400,5 +410,6 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button btnViewInspectiondetails;
+		private ucInspectionDetails ucInspectionDetails1;
 	}
 }

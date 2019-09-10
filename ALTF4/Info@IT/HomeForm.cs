@@ -32,7 +32,6 @@ namespace Info_IT
 			btnNavEquipment.BackColor = Color.FromArgb(0,100,200);
 			btnNavHome.BackColor = Color.FromArgb(0,100,200);
 			btnNavInspection.BackColor = Color.FromArgb(0,100,200);
-			btnNavInspectionDetail.BackColor = Color.FromArgb(0,100,200);
 			btnNavRequest.BackColor = Color.FromArgb(0,100,200);
 			btnNavTaskType.BackColor = Color.FromArgb(0,100,200);
 			btnNavTutorRequest.BackColor = Color.FromArgb(0,100,200);
@@ -48,6 +47,7 @@ namespace Info_IT
 			ucRequest1.Hide();
 			ucTutorRequest1.Hide();
 			ucNavInspection1.Hide();
+			
 		}
 		//Login bar
 		private void PnlLogin_Click(object sender, EventArgs e)
@@ -172,14 +172,6 @@ namespace Info_IT
 			ucNavInspection1.Show();
 			this.Text = "Inspections";
 			lblLocation.Text = "Inspections";
-		}
-
-		private void BtnNavInspectionDetail_Click(object sender, EventArgs e)
-		{
-			HideAll();
-			InactiveButtons();
-			btnNavInspectionDetail.BackColor = Color.FromArgb(0, 150, 250);
-
 		}
 
 		private void BtnNavTaskType_Click(object sender, EventArgs e)

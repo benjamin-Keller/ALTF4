@@ -7,17 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
 
 namespace Info_IT.UserControls
 {
-	public partial class ucNavInspection : UserControl
+	public partial class ucInspectionDetails : UserControl
 	{
-		BusinessLogicLayer bll = new BusinessLogicLayer();
-
-		public ucNavInspection()
+		public ucInspectionDetails()
 		{
 			InitializeComponent();
+		}
+		private void UcInspectionDetails_Load(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void BtnCloseDetails_Click(object sender, EventArgs e)
+		{
+			this.Hide();
 		}
 
 		//Menu button (Manage)
@@ -55,6 +61,7 @@ namespace Info_IT.UserControls
 			tmrView.Stop();
 		}
 
+
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
 
@@ -68,12 +75,6 @@ namespace Info_IT.UserControls
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
 
-		}
-
-		private void BtnViewInspectiondetails_Click(object sender, EventArgs e)
-		{
-
-			dgvInspection.BackgroundColor = Color.White;
 		}
 	}
 }
