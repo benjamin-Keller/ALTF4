@@ -32,6 +32,7 @@
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel3 = new System.Windows.Forms.Panel();
+			this.dgvEquipment = new Bunifu.Framework.UI.BunifuCustomDataGrid();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.cmbVenue = new System.Windows.Forms.ComboBox();
@@ -49,13 +50,13 @@
 			this.btnManage = new System.Windows.Forms.Button();
 			this.tmrManage = new System.Windows.Forms.Timer(this.components);
 			this.tmrView = new System.Windows.Forms.Timer(this.components);
-			this.dgvEquipment = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+			this.bunifuFormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
 			this.panel3.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvEquipment)).BeginInit();
 			this.groupBox1.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.pnlView.SuspendLayout();
 			this.pnlManage.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvEquipment)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel3
@@ -65,6 +66,33 @@
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(782, 429);
 			this.panel3.TabIndex = 8;
+			// 
+			// dgvEquipment
+			// 
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvEquipment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			this.dgvEquipment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvEquipment.BackgroundColor = System.Drawing.SystemColors.Control;
+			this.dgvEquipment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.dgvEquipment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvEquipment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			this.dgvEquipment.ColumnHeadersHeight = 50;
+			this.dgvEquipment.DoubleBuffered = true;
+			this.dgvEquipment.EnableHeadersVisualStyles = false;
+			this.dgvEquipment.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.dgvEquipment.HeaderForeColor = System.Drawing.Color.White;
+			this.dgvEquipment.Location = new System.Drawing.Point(0, 0);
+			this.dgvEquipment.Name = "dgvEquipment";
+			this.dgvEquipment.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			this.dgvEquipment.Size = new System.Drawing.Size(782, 429);
+			this.dgvEquipment.TabIndex = 0;
 			// 
 			// groupBox1
 			// 
@@ -259,32 +287,9 @@
 			// 
 			this.tmrView.Tick += new System.EventHandler(this.TmrView_Tick);
 			// 
-			// dgvEquipment
+			// bunifuFormFadeTransition1
 			// 
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvEquipment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-			this.dgvEquipment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.dgvEquipment.BackgroundColor = System.Drawing.SystemColors.Control;
-			this.dgvEquipment.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.dgvEquipment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvEquipment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-			this.dgvEquipment.ColumnHeadersHeight = 50;
-			this.dgvEquipment.DoubleBuffered = true;
-			this.dgvEquipment.EnableHeadersVisualStyles = false;
-			this.dgvEquipment.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.dgvEquipment.HeaderForeColor = System.Drawing.Color.White;
-			this.dgvEquipment.Location = new System.Drawing.Point(0, 0);
-			this.dgvEquipment.Name = "dgvEquipment";
-			this.dgvEquipment.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			this.dgvEquipment.Size = new System.Drawing.Size(782, 429);
-			this.dgvEquipment.TabIndex = 0;
+			this.bunifuFormFadeTransition1.Delay = 1;
 			// 
 			// UcEquipment
 			// 
@@ -297,12 +302,12 @@
 			this.Size = new System.Drawing.Size(1056, 562);
 			this.Load += new System.EventHandler(this.UcEquipment_Load);
 			this.panel3.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dgvEquipment)).EndInit();
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			this.panel1.ResumeLayout(false);
 			this.pnlView.ResumeLayout(false);
 			this.pnlManage.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dgvEquipment)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -328,5 +333,6 @@
 		private System.Windows.Forms.Timer tmrManage;
 		private System.Windows.Forms.Timer tmrView;
 		private Bunifu.Framework.UI.BunifuCustomDataGrid dgvEquipment;
+		private Bunifu.Framework.UI.BunifuFormFadeTransition bunifuFormFadeTransition1;
 	}
 }
