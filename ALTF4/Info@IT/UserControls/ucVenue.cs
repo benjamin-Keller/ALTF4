@@ -81,7 +81,9 @@ namespace Info_IT.UserControls
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
 		{
             dgvVenue.DataSource = bll.GetVenues();
-        }
+			dgvVenue.BackgroundColor = Color.White;
+
+		}
 
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{

@@ -6,12 +6,15 @@ namespace Info_IT
 {
 	public partial class Home : Form
 	{
+		bool isLoggedIn = false;
+
 		public Home()
 		{
 			InitializeComponent();
 		}
 		private void Template_Load(object sender, EventArgs e)
 		{
+			LoginPanel();
 			HideAll();
 			ucHome1.Show();
 			this.Text = "Home";
@@ -24,7 +27,16 @@ namespace Info_IT
 		}
 		private void LoginPanel()
 		{
-
+			switch(isLoggedIn) {
+				case true:
+					lblLoginText.Text = "Log out";
+					isLoggedIn = false;
+					break;
+				case false:
+					lblLoginText.Text = "Log In";
+					isLoggedIn = true;
+					break;
+			}
 		}
 		private void InactiveButtons()
 		{
@@ -91,8 +103,27 @@ namespace Info_IT
 			btnNavigation.FlatAppearance.MouseOverBackColor = Color.DarkTurquoise;
 		}
 
+		private void PnlLogin_MouseEnter(object sender, EventArgs e)
+		{
+			pnlLogin.BackColor = Color.FromArgb(0, 150, 250);
+		}
 
+		private void PnlLogin_MouseLeave(object sender, EventArgs e)
+		{
+			pnlLogin.BackColor = Color.FromArgb(0, 100, 200);
 
+		}
+		private void LblLoginText_MouseEnter(object sender, EventArgs e)
+		{
+			pnlLogin.BackColor = Color.FromArgb(0, 150, 250);
+
+		}
+
+		private void LblLoginText_MouseLeave(object sender, EventArgs e)
+		{
+			pnlLogin.BackColor = Color.FromArgb(0, 100, 200);
+
+		}
 
 		private void BtnNavHome_Click(object sender, EventArgs e)
 		{
@@ -181,5 +212,7 @@ namespace Info_IT
 			btnNavTaskType.BackColor = Color.FromArgb(0, 150, 250);
 
 		}
+
+
 	}
 }

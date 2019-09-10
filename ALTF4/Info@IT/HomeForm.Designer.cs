@@ -67,7 +67,6 @@
 			this.pnlContent.SuspendLayout();
 			this.panel6.SuspendLayout();
 			this.pnlLogin.SuspendLayout();
-			this.panel5.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel2
@@ -362,6 +361,7 @@
 			// panel6
 			// 
 			this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.panel6.Controls.Add(this.pnlLogin);
 			this.panel6.Controls.Add(this.lblLocation);
 			this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel6.Location = new System.Drawing.Point(0, 0);
@@ -389,6 +389,8 @@
 			this.pnlLogin.Size = new System.Drawing.Size(195, 29);
 			this.pnlLogin.TabIndex = 1;
 			this.pnlLogin.Click += new System.EventHandler(this.PnlLogin_Click);
+			this.pnlLogin.MouseEnter += new System.EventHandler(this.PnlLogin_MouseEnter);
+			this.pnlLogin.MouseLeave += new System.EventHandler(this.PnlLogin_MouseLeave);
 			// 
 			// lblLoginText
 			// 
@@ -400,10 +402,11 @@
 			this.lblLoginText.Text = "label2";
 			this.lblLoginText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			this.lblLoginText.Click += new System.EventHandler(this.LblLoginText_Click);
+			this.lblLoginText.MouseEnter += new System.EventHandler(this.LblLoginText_MouseEnter);
+			this.lblLoginText.MouseLeave += new System.EventHandler(this.LblLoginText_MouseLeave);
 			// 
 			// panel5
 			// 
-			this.panel5.Controls.Add(this.pnlLogin);
 			this.panel5.Location = new System.Drawing.Point(200, 0);
 			this.panel5.Name = "panel5";
 			this.panel5.Size = new System.Drawing.Size(1056, 30);
@@ -432,7 +435,6 @@
 			this.panel6.PerformLayout();
 			this.pnlLogin.ResumeLayout(false);
 			this.pnlLogin.PerformLayout();
-			this.panel5.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
