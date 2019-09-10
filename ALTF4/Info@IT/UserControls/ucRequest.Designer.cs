@@ -1,6 +1,6 @@
 ﻿namespace Info_IT.UserControls
 {
-	partial class ucVenue
+	partial class ucRequest
 	{
 		/// <summary> 
 		/// Required designer variable.
@@ -29,9 +29,10 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			this.tmrView = new System.Windows.Forms.Timer(this.components);
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			this.bunifuFormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
+			this.tmrManage = new System.Windows.Forms.Timer(this.components);
 			this.btnManageUpdate = new System.Windows.Forms.Button();
 			this.btnManageAdd = new System.Windows.Forms.Button();
 			this.btnManage = new System.Windows.Forms.Button();
@@ -39,32 +40,40 @@
 			this.btnViewList = new System.Windows.Forms.Button();
 			this.btnView = new System.Windows.Forms.Button();
 			this.pnlView = new System.Windows.Forms.Panel();
-			this.tmrManage = new System.Windows.Forms.Timer(this.components);
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.panel3 = new System.Windows.Forms.Panel();
+			this.tmrView = new System.Windows.Forms.Timer(this.components);
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.cmbAssignedStaffCode = new System.Windows.Forms.ComboBox();
+			this.label8 = new System.Windows.Forms.Label();
+			this.txtTime = new System.Windows.Forms.MaskedTextBox();
+			this.label7 = new System.Windows.Forms.Label();
+			this.dateRequest = new System.Windows.Forms.DateTimePicker();
+			this.cmbTaskTypeCode = new System.Windows.Forms.ComboBox();
+			this.cmbStudentCode = new System.Windows.Forms.ComboBox();
+			this.cmbStaffCode = new System.Windows.Forms.ComboBox();
 			this.label6 = new System.Windows.Forms.Label();
-			this.cmbBuildingBlock = new System.Windows.Forms.ComboBox();
-			this.txtDoorNo = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
-			this.txtCapacity = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
-			this.cmbBuilding = new System.Windows.Forms.ComboBox();
 			this.txtDescription = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.dgvVenue = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+			this.panel3 = new System.Windows.Forms.Panel();
+			this.dgvRequest = new Bunifu.Framework.UI.BunifuCustomDataGrid();
 			this.pnlManage.SuspendLayout();
 			this.pnlView.SuspendLayout();
 			this.panel1.SuspendLayout();
-			this.panel3.SuspendLayout();
 			this.groupBox1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvVenue)).BeginInit();
+			this.panel3.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvRequest)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// tmrView
+			// bunifuFormFadeTransition1
 			// 
-			this.tmrView.Tick += new System.EventHandler(this.TmrView_Tick);
+			this.bunifuFormFadeTransition1.Delay = 1;
+			// 
+			// tmrManage
+			// 
+			this.tmrManage.Tick += new System.EventHandler(this.TmrManage_Tick);
 			// 
 			// btnManageUpdate
 			// 
@@ -76,7 +85,7 @@
 			this.btnManageUpdate.Name = "btnManageUpdate";
 			this.btnManageUpdate.Size = new System.Drawing.Size(200, 31);
 			this.btnManageUpdate.TabIndex = 7;
-			this.btnManageUpdate.Text = "Update Selected Venue Type";
+			this.btnManageUpdate.Text = "Update Selected Request";
 			this.btnManageUpdate.UseVisualStyleBackColor = false;
 			this.btnManageUpdate.Click += new System.EventHandler(this.BtnManageUpdate_Click);
 			// 
@@ -90,7 +99,7 @@
 			this.btnManageAdd.Name = "btnManageAdd";
 			this.btnManageAdd.Size = new System.Drawing.Size(200, 31);
 			this.btnManageAdd.TabIndex = 6;
-			this.btnManageAdd.Text = "Add Venue Type";
+			this.btnManageAdd.Text = "Add Request";
 			this.btnManageAdd.UseVisualStyleBackColor = false;
 			this.btnManageAdd.Click += new System.EventHandler(this.BtnManageAdd_Click);
 			// 
@@ -134,7 +143,7 @@
 			this.btnViewList.Name = "btnViewList";
 			this.btnViewList.Size = new System.Drawing.Size(200, 31);
 			this.btnViewList.TabIndex = 6;
-			this.btnViewList.Text = "List All Venue Type";
+			this.btnViewList.Text = "List All Request";
 			this.btnViewList.UseVisualStyleBackColor = false;
 			this.btnViewList.Click += new System.EventHandler(this.BtnViewList_Click);
 			// 
@@ -167,10 +176,6 @@
 			this.pnlView.Size = new System.Drawing.Size(200, 53);
 			this.pnlView.TabIndex = 13;
 			// 
-			// tmrManage
-			// 
-			this.tmrManage.Tick += new System.EventHandler(this.TmrManage_Tick);
-			// 
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
@@ -182,102 +187,144 @@
 			this.panel1.Size = new System.Drawing.Size(200, 562);
 			this.panel1.TabIndex = 12;
 			// 
-			// panel3
+			// tmrView
 			// 
-			this.panel3.Controls.Add(this.dgvVenue);
-			this.panel3.Location = new System.Drawing.Point(234, 100);
-			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(782, 426);
-			this.panel3.TabIndex = 11;
+			this.tmrView.Tick += new System.EventHandler(this.TmrView_Tick);
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.cmbAssignedStaffCode);
+			this.groupBox1.Controls.Add(this.label8);
+			this.groupBox1.Controls.Add(this.txtTime);
+			this.groupBox1.Controls.Add(this.label7);
+			this.groupBox1.Controls.Add(this.dateRequest);
+			this.groupBox1.Controls.Add(this.cmbTaskTypeCode);
+			this.groupBox1.Controls.Add(this.cmbStudentCode);
+			this.groupBox1.Controls.Add(this.cmbStaffCode);
 			this.groupBox1.Controls.Add(this.label6);
-			this.groupBox1.Controls.Add(this.cmbBuildingBlock);
-			this.groupBox1.Controls.Add(this.txtDoorNo);
 			this.groupBox1.Controls.Add(this.label5);
-			this.groupBox1.Controls.Add(this.txtCapacity);
 			this.groupBox1.Controls.Add(this.label4);
-			this.groupBox1.Controls.Add(this.cmbBuilding);
 			this.groupBox1.Controls.Add(this.txtDescription);
 			this.groupBox1.Controls.Add(this.label3);
 			this.groupBox1.Controls.Add(this.label1);
 			this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
 			this.groupBox1.Location = new System.Drawing.Point(234, 23);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(782, 71);
-			this.groupBox1.TabIndex = 13;
+			this.groupBox1.Size = new System.Drawing.Size(782, 110);
+			this.groupBox1.TabIndex = 14;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Information";
+			// 
+			// cmbAssignedStaffCode
+			// 
+			this.cmbAssignedStaffCode.FormattingEnabled = true;
+			this.cmbAssignedStaffCode.Location = new System.Drawing.Point(111, 71);
+			this.cmbAssignedStaffCode.Name = "cmbAssignedStaffCode";
+			this.cmbAssignedStaffCode.Size = new System.Drawing.Size(162, 21);
+			this.cmbAssignedStaffCode.TabIndex = 21;
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+			this.label8.Location = new System.Drawing.Point(108, 54);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(165, 13);
+			this.label8.TabIndex = 20;
+			this.label8.Text = "Staff Code (Assigned Staff):";
+			// 
+			// txtTime
+			// 
+			this.txtTime.Location = new System.Drawing.Point(15, 72);
+			this.txtTime.Mask = "00:00";
+			this.txtTime.Name = "txtTime";
+			this.txtTime.Size = new System.Drawing.Size(90, 20);
+			this.txtTime.TabIndex = 19;
+			this.txtTime.ValidatingType = typeof(System.DateTime);
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+			this.label7.Location = new System.Drawing.Point(12, 57);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(93, 13);
+			this.label7.TabIndex = 17;
+			this.label7.Text = "Time (24 hour):";
+			// 
+			// dateRequest
+			// 
+			this.dateRequest.CustomFormat = "dd MMMM yyyy";
+			this.dateRequest.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+			this.dateRequest.Location = new System.Drawing.Point(602, 34);
+			this.dateRequest.Name = "dateRequest";
+			this.dateRequest.Size = new System.Drawing.Size(144, 20);
+			this.dateRequest.TabIndex = 16;
+			// 
+			// cmbTaskTypeCode
+			// 
+			this.cmbTaskTypeCode.FormattingEnabled = true;
+			this.cmbTaskTypeCode.Location = new System.Drawing.Point(480, 33);
+			this.cmbTaskTypeCode.Name = "cmbTaskTypeCode";
+			this.cmbTaskTypeCode.Size = new System.Drawing.Size(116, 21);
+			this.cmbTaskTypeCode.TabIndex = 15;
+			// 
+			// cmbStudentCode
+			// 
+			this.cmbStudentCode.FormattingEnabled = true;
+			this.cmbStudentCode.Location = new System.Drawing.Point(358, 33);
+			this.cmbStudentCode.Name = "cmbStudentCode";
+			this.cmbStudentCode.Size = new System.Drawing.Size(116, 21);
+			this.cmbStudentCode.TabIndex = 14;
+			// 
+			// cmbStaffCode
+			// 
+			this.cmbStaffCode.FormattingEnabled = true;
+			this.cmbStaffCode.Location = new System.Drawing.Point(236, 33);
+			this.cmbStaffCode.Name = "cmbStaffCode";
+			this.cmbStaffCode.Size = new System.Drawing.Size(116, 21);
+			this.cmbStaffCode.TabIndex = 7;
 			// 
 			// label6
 			// 
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-			this.label6.Location = new System.Drawing.Point(594, 19);
+			this.label6.Location = new System.Drawing.Point(602, 18);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(56, 13);
+			this.label6.Size = new System.Drawing.Size(38, 13);
 			this.label6.TabIndex = 11;
-			this.label6.Text = "Building:";
-			// 
-			// cmbBuildingBlock
-			// 
-			this.cmbBuildingBlock.FormattingEnabled = true;
-			this.cmbBuildingBlock.Location = new System.Drawing.Point(473, 35);
-			this.cmbBuildingBlock.Name = "cmbBuildingBlock";
-			this.cmbBuildingBlock.Size = new System.Drawing.Size(118, 21);
-			this.cmbBuildingBlock.TabIndex = 10;
-			// 
-			// txtDoorNo
-			// 
-			this.txtDoorNo.Location = new System.Drawing.Point(342, 35);
-			this.txtDoorNo.Name = "txtDoorNo";
-			this.txtDoorNo.Size = new System.Drawing.Size(125, 20);
-			this.txtDoorNo.TabIndex = 9;
+			this.label6.Text = "Date:";
 			// 
 			// label5
 			// 
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-			this.label5.Location = new System.Drawing.Point(339, 19);
+			this.label5.Location = new System.Drawing.Point(355, 16);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(50, 13);
+			this.label5.Size = new System.Drawing.Size(88, 13);
 			this.label5.TabIndex = 8;
-			this.label5.Text = "Door #:";
-			// 
-			// txtCapacity
-			// 
-			this.txtCapacity.Location = new System.Drawing.Point(208, 35);
-			this.txtCapacity.Name = "txtCapacity";
-			this.txtCapacity.Size = new System.Drawing.Size(128, 20);
-			this.txtCapacity.TabIndex = 7;
+			this.label5.Text = "Student Code:";
 			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-			this.label4.Location = new System.Drawing.Point(473, 20);
+			this.label4.Location = new System.Drawing.Point(477, 17);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(92, 13);
+			this.label4.Size = new System.Drawing.Size(104, 13);
 			this.label4.TabIndex = 6;
-			this.label4.Text = "Building Block:";
-			// 
-			// cmbBuilding
-			// 
-			this.cmbBuilding.FormattingEnabled = true;
-			this.cmbBuilding.Location = new System.Drawing.Point(597, 35);
-			this.cmbBuilding.Name = "cmbBuilding";
-			this.cmbBuilding.Size = new System.Drawing.Size(144, 21);
-			this.cmbBuilding.TabIndex = 4;
+			this.label4.Text = "Task Type Code:";
 			// 
 			// txtDescription
 			// 
-			this.txtDescription.Location = new System.Drawing.Point(15, 35);
+			this.txtDescription.Location = new System.Drawing.Point(15, 34);
 			this.txtDescription.Name = "txtDescription";
-			this.txtDescription.Size = new System.Drawing.Size(187, 20);
+			this.txtDescription.Size = new System.Drawing.Size(215, 20);
 			this.txtDescription.TabIndex = 3;
 			// 
 			// label3
@@ -285,11 +332,11 @@
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-			this.label3.Location = new System.Drawing.Point(205, 19);
+			this.label3.Location = new System.Drawing.Point(233, 16);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(60, 13);
+			this.label3.Size = new System.Drawing.Size(71, 13);
 			this.label3.TabIndex = 2;
-			this.label3.Text = "Capacity:";
+			this.label3.Text = "Staff Code:";
 			// 
 			// label1
 			// 
@@ -302,57 +349,66 @@
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Description:";
 			// 
-			// dgvVenue
+			// panel3
 			// 
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvVenue.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-			this.dgvVenue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.dgvVenue.BackgroundColor = System.Drawing.SystemColors.Control;
-			this.dgvVenue.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.dgvVenue.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvVenue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-			this.dgvVenue.ColumnHeadersHeight = 50;
-			this.dgvVenue.DoubleBuffered = true;
-			this.dgvVenue.EnableHeadersVisualStyles = false;
-			this.dgvVenue.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.dgvVenue.HeaderForeColor = System.Drawing.Color.White;
-			this.dgvVenue.Location = new System.Drawing.Point(0, -1);
-			this.dgvVenue.Name = "dgvVenue";
-			this.dgvVenue.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			this.dgvVenue.Size = new System.Drawing.Size(782, 429);
-			this.dgvVenue.TabIndex = 1;
+			this.panel3.Controls.Add(this.dgvRequest);
+			this.panel3.Location = new System.Drawing.Point(234, 139);
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new System.Drawing.Size(782, 390);
+			this.panel3.TabIndex = 15;
 			// 
-			// ucVenue
+			// dgvRequest
+			// 
+			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvRequest.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+			this.dgvRequest.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvRequest.BackgroundColor = System.Drawing.SystemColors.Control;
+			this.dgvRequest.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.dgvRequest.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvRequest.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			this.dgvRequest.ColumnHeadersHeight = 50;
+			this.dgvRequest.DoubleBuffered = true;
+			this.dgvRequest.EnableHeadersVisualStyles = false;
+			this.dgvRequest.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.dgvRequest.HeaderForeColor = System.Drawing.Color.White;
+			this.dgvRequest.Location = new System.Drawing.Point(0, 0);
+			this.dgvRequest.Name = "dgvRequest";
+			this.dgvRequest.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			this.dgvRequest.Size = new System.Drawing.Size(782, 390);
+			this.dgvRequest.TabIndex = 0;
+			// 
+			// ucRequest
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.panel3);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.panel1);
-			this.Controls.Add(this.panel3);
-			this.Name = "ucVenue";
+			this.Name = "ucRequest";
 			this.Size = new System.Drawing.Size(1056, 562);
-			this.Load += new System.EventHandler(this.UcVenue_Load);
+			this.Load += new System.EventHandler(this.UcRequest_Load);
 			this.pnlManage.ResumeLayout(false);
 			this.pnlView.ResumeLayout(false);
 			this.panel1.ResumeLayout(false);
-			this.panel3.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvVenue)).EndInit();
+			this.panel3.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dgvRequest)).EndInit();
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-		private System.Windows.Forms.Timer tmrView;
+		private Bunifu.Framework.UI.BunifuFormFadeTransition bunifuFormFadeTransition1;
+		private System.Windows.Forms.Timer tmrManage;
 		private System.Windows.Forms.Button btnManageUpdate;
 		private System.Windows.Forms.Button btnManageAdd;
 		private System.Windows.Forms.Button btnManage;
@@ -360,20 +416,24 @@
 		private System.Windows.Forms.Button btnViewList;
 		private System.Windows.Forms.Button btnView;
 		private System.Windows.Forms.Panel pnlView;
-		private System.Windows.Forms.Timer tmrManage;
 		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.Panel panel3;
+		private System.Windows.Forms.Timer tmrView;
 		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.ComboBox cmbAssignedStaffCode;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.MaskedTextBox txtTime;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.ComboBox cmbTaskTypeCode;
+		private System.Windows.Forms.ComboBox cmbStudentCode;
+		private System.Windows.Forms.ComboBox cmbStaffCode;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.ComboBox cmbBuildingBlock;
-		private System.Windows.Forms.TextBox txtDoorNo;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.TextBox txtCapacity;
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.ComboBox cmbBuilding;
 		private System.Windows.Forms.TextBox txtDescription;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label1;
-		private Bunifu.Framework.UI.BunifuCustomDataGrid dgvVenue;
+		private System.Windows.Forms.Panel panel3;
+		private Bunifu.Framework.UI.BunifuCustomDataGrid dgvRequest;
+		private System.Windows.Forms.DateTimePicker dateRequest;
 	}
 }

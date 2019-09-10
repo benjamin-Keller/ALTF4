@@ -1,6 +1,7 @@
 ﻿using BLL;
 using System;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace Info_IT.UserControls
 {
@@ -85,6 +86,8 @@ namespace Info_IT.UserControls
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
 			dgvVenue.DataSource = bll.GetVenues();
+			dgvVenue.BackgroundColor = Color.White;
+
 		}
 
 

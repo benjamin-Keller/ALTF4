@@ -1,6 +1,6 @@
 ﻿namespace Info_IT.UserControls
 {
-	partial class ucDepartment
+	partial class ucTutorRequest
 	{
 		/// <summary> 
 		/// Required designer variable.
@@ -29,8 +29,11 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+			this.panel3 = new System.Windows.Forms.Panel();
+			this.dgvTutorRequest = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+			this.tmrView = new System.Windows.Forms.Timer(this.components);
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.pnlView = new System.Windows.Forms.Panel();
 			this.btnViewList = new System.Windows.Forms.Button();
@@ -39,28 +42,67 @@
 			this.btnManageUpdate = new System.Windows.Forms.Button();
 			this.btnManageAdd = new System.Windows.Forms.Button();
 			this.btnManage = new System.Windows.Forms.Button();
-			this.panel3 = new System.Windows.Forms.Panel();
+			this.bunifuFormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
 			this.tmrManage = new System.Windows.Forms.Timer(this.components);
-			this.tmrView = new System.Windows.Forms.Timer(this.components);
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.cmbBuilding = new System.Windows.Forms.ComboBox();
-			this.txtEmailAddress = new System.Windows.Forms.TextBox();
-			this.txtContactNo = new System.Windows.Forms.TextBox();
-			this.label6 = new System.Windows.Forms.Label();
-			this.txtContactPerson = new System.Windows.Forms.TextBox();
-			this.label5 = new System.Windows.Forms.Label();
+			this.txtEndTime = new System.Windows.Forms.MaskedTextBox();
+			this.txtStartTime = new System.Windows.Forms.MaskedTextBox();
 			this.label4 = new System.Windows.Forms.Label();
-			this.txtName = new System.Windows.Forms.TextBox();
+			this.cmbRequestCode = new System.Windows.Forms.ComboBox();
+			this.label7 = new System.Windows.Forms.Label();
+			this.dateRequest = new System.Windows.Forms.DateTimePicker();
+			this.cmbVenueCode = new System.Windows.Forms.ComboBox();
+			this.cmbModuleCode = new System.Windows.Forms.ComboBox();
+			this.label6 = new System.Windows.Forms.Label();
+			this.label5 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.dgvDepartment = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+			this.panel3.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvTutorRequest)).BeginInit();
 			this.panel1.SuspendLayout();
 			this.pnlView.SuspendLayout();
 			this.pnlManage.SuspendLayout();
-			this.panel3.SuspendLayout();
 			this.groupBox1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvDepartment)).BeginInit();
 			this.SuspendLayout();
+			// 
+			// panel3
+			// 
+			this.panel3.Controls.Add(this.dgvTutorRequest);
+			this.panel3.Location = new System.Drawing.Point(234, 100);
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new System.Drawing.Size(782, 429);
+			this.panel3.TabIndex = 18;
+			// 
+			// dgvTutorRequest
+			// 
+			dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvTutorRequest.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle23;
+			this.dgvTutorRequest.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvTutorRequest.BackgroundColor = System.Drawing.SystemColors.Control;
+			this.dgvTutorRequest.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.dgvTutorRequest.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle24.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvTutorRequest.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle24;
+			this.dgvTutorRequest.ColumnHeadersHeight = 50;
+			this.dgvTutorRequest.DoubleBuffered = true;
+			this.dgvTutorRequest.EnableHeadersVisualStyles = false;
+			this.dgvTutorRequest.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.dgvTutorRequest.HeaderForeColor = System.Drawing.Color.White;
+			this.dgvTutorRequest.Location = new System.Drawing.Point(0, 0);
+			this.dgvTutorRequest.Name = "dgvTutorRequest";
+			this.dgvTutorRequest.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			this.dgvTutorRequest.Size = new System.Drawing.Size(782, 429);
+			this.dgvTutorRequest.TabIndex = 0;
+			// 
+			// tmrView
+			// 
+			this.tmrView.Tick += new System.EventHandler(this.TmrView_Tick);
 			// 
 			// panel1
 			// 
@@ -71,7 +113,7 @@
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(200, 562);
-			this.panel1.TabIndex = 15;
+			this.panel1.TabIndex = 16;
 			// 
 			// pnlView
 			// 
@@ -96,7 +138,7 @@
 			this.btnViewList.Name = "btnViewList";
 			this.btnViewList.Size = new System.Drawing.Size(200, 31);
 			this.btnViewList.TabIndex = 6;
-			this.btnViewList.Text = "List All Departments";
+			this.btnViewList.Text = "List All Tutor Requests";
 			this.btnViewList.UseVisualStyleBackColor = false;
 			this.btnViewList.Click += new System.EventHandler(this.BtnViewList_Click);
 			// 
@@ -140,7 +182,7 @@
 			this.btnManageUpdate.Name = "btnManageUpdate";
 			this.btnManageUpdate.Size = new System.Drawing.Size(200, 31);
 			this.btnManageUpdate.TabIndex = 7;
-			this.btnManageUpdate.Text = "Update Selected Department";
+			this.btnManageUpdate.Text = "Update Selected Tutor Request";
 			this.btnManageUpdate.UseVisualStyleBackColor = false;
 			this.btnManageUpdate.Click += new System.EventHandler(this.BtnManageUpdate_Click);
 			// 
@@ -154,7 +196,7 @@
 			this.btnManageAdd.Name = "btnManageAdd";
 			this.btnManageAdd.Size = new System.Drawing.Size(200, 31);
 			this.btnManageAdd.TabIndex = 6;
-			this.btnManageAdd.Text = "Add Department";
+			this.btnManageAdd.Text = "Add Tutor Request";
 			this.btnManageAdd.UseVisualStyleBackColor = false;
 			this.btnManageAdd.Click += new System.EventHandler(this.BtnManageAdd_Click);
 			// 
@@ -174,121 +216,141 @@
 			this.btnManage.UseVisualStyleBackColor = false;
 			this.btnManage.Click += new System.EventHandler(this.BtnManage_Click);
 			// 
-			// panel3
+			// bunifuFormFadeTransition1
 			// 
-			this.panel3.Controls.Add(this.dgvDepartment);
-			this.panel3.Location = new System.Drawing.Point(236, 100);
-			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(782, 429);
-			this.panel3.TabIndex = 14;
+			this.bunifuFormFadeTransition1.Delay = 1;
 			// 
 			// tmrManage
 			// 
 			this.tmrManage.Tick += new System.EventHandler(this.TmrManage_Tick);
 			// 
-			// tmrView
-			// 
-			this.tmrView.Tick += new System.EventHandler(this.TmrView_Tick);
-			// 
 			// groupBox1
 			// 
-			this.groupBox1.Controls.Add(this.cmbBuilding);
-			this.groupBox1.Controls.Add(this.txtEmailAddress);
-			this.groupBox1.Controls.Add(this.txtContactNo);
-			this.groupBox1.Controls.Add(this.label6);
-			this.groupBox1.Controls.Add(this.txtContactPerson);
-			this.groupBox1.Controls.Add(this.label5);
+			this.groupBox1.Controls.Add(this.txtEndTime);
+			this.groupBox1.Controls.Add(this.txtStartTime);
 			this.groupBox1.Controls.Add(this.label4);
-			this.groupBox1.Controls.Add(this.txtName);
+			this.groupBox1.Controls.Add(this.cmbRequestCode);
+			this.groupBox1.Controls.Add(this.label7);
+			this.groupBox1.Controls.Add(this.dateRequest);
+			this.groupBox1.Controls.Add(this.cmbVenueCode);
+			this.groupBox1.Controls.Add(this.cmbModuleCode);
+			this.groupBox1.Controls.Add(this.label6);
+			this.groupBox1.Controls.Add(this.label5);
 			this.groupBox1.Controls.Add(this.label3);
 			this.groupBox1.Controls.Add(this.label1);
 			this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
 			this.groupBox1.Location = new System.Drawing.Point(234, 23);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(784, 71);
-			this.groupBox1.TabIndex = 16;
+			this.groupBox1.TabIndex = 15;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Information";
 			// 
-			// cmbBuilding
+			// txtEndTime
 			// 
-			this.cmbBuilding.FormattingEnabled = true;
-			this.cmbBuilding.Location = new System.Drawing.Point(135, 35);
-			this.cmbBuilding.Name = "cmbBuilding";
-			this.cmbBuilding.Size = new System.Drawing.Size(125, 21);
-			this.cmbBuilding.TabIndex = 7;
+			this.txtEndTime.Location = new System.Drawing.Point(653, 33);
+			this.txtEndTime.Mask = "00:00";
+			this.txtEndTime.Name = "txtEndTime";
+			this.txtEndTime.Size = new System.Drawing.Size(116, 20);
+			this.txtEndTime.TabIndex = 25;
+			this.txtEndTime.ValidatingType = typeof(System.DateTime);
 			// 
-			// txtEmailAddress
+			// txtStartTime
 			// 
-			this.txtEmailAddress.Location = new System.Drawing.Point(559, 35);
-			this.txtEmailAddress.Name = "txtEmailAddress";
-			this.txtEmailAddress.Size = new System.Drawing.Size(188, 20);
-			this.txtEmailAddress.TabIndex = 13;
-			// 
-			// txtContactNo
-			// 
-			this.txtContactNo.Location = new System.Drawing.Point(406, 35);
-			this.txtContactNo.Name = "txtContactNo";
-			this.txtContactNo.Size = new System.Drawing.Size(147, 20);
-			this.txtContactNo.TabIndex = 12;
-			// 
-			// label6
-			// 
-			this.label6.AutoSize = true;
-			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-			this.label6.Location = new System.Drawing.Point(559, 19);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(90, 13);
-			this.label6.TabIndex = 11;
-			this.label6.Text = "Email Address:";
-			// 
-			// txtContactPerson
-			// 
-			this.txtContactPerson.Location = new System.Drawing.Point(266, 35);
-			this.txtContactPerson.Name = "txtContactPerson";
-			this.txtContactPerson.Size = new System.Drawing.Size(134, 20);
-			this.txtContactPerson.TabIndex = 9;
-			// 
-			// label5
-			// 
-			this.label5.AutoSize = true;
-			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-			this.label5.Location = new System.Drawing.Point(263, 19);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(98, 13);
-			this.label5.TabIndex = 8;
-			this.label5.Text = "Contact Person:";
+			this.txtStartTime.Location = new System.Drawing.Point(531, 34);
+			this.txtStartTime.Mask = "00:00";
+			this.txtStartTime.Name = "txtStartTime";
+			this.txtStartTime.Size = new System.Drawing.Size(116, 20);
+			this.txtStartTime.TabIndex = 24;
+			this.txtStartTime.ValidatingType = typeof(System.DateTime);
 			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-			this.label4.Location = new System.Drawing.Point(403, 19);
+			this.label4.Location = new System.Drawing.Point(528, 19);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(102, 13);
-			this.label4.TabIndex = 6;
-			this.label4.Text = "Contact Number:";
+			this.label4.Size = new System.Drawing.Size(124, 13);
+			this.label4.TabIndex = 23;
+			this.label4.Text = "Start Time (24 hour):";
 			// 
-			// txtName
+			// cmbRequestCode
 			// 
-			this.txtName.Location = new System.Drawing.Point(15, 35);
-			this.txtName.Name = "txtName";
-			this.txtName.Size = new System.Drawing.Size(114, 20);
-			this.txtName.TabIndex = 3;
+			this.cmbRequestCode.FormattingEnabled = true;
+			this.cmbRequestCode.Location = new System.Drawing.Point(15, 33);
+			this.cmbRequestCode.Name = "cmbRequestCode";
+			this.cmbRequestCode.Size = new System.Drawing.Size(116, 21);
+			this.cmbRequestCode.TabIndex = 22;
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+			this.label7.Location = new System.Drawing.Point(653, 18);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(119, 13);
+			this.label7.TabIndex = 17;
+			this.label7.Text = "End Time (24 hour):";
+			// 
+			// dateRequest
+			// 
+			this.dateRequest.CustomFormat = "dd MMMM yyyy";
+			this.dateRequest.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+			this.dateRequest.Location = new System.Drawing.Point(137, 33);
+			this.dateRequest.Name = "dateRequest";
+			this.dateRequest.Size = new System.Drawing.Size(144, 20);
+			this.dateRequest.TabIndex = 16;
+			// 
+			// cmbVenueCode
+			// 
+			this.cmbVenueCode.FormattingEnabled = true;
+			this.cmbVenueCode.Location = new System.Drawing.Point(409, 33);
+			this.cmbVenueCode.Name = "cmbVenueCode";
+			this.cmbVenueCode.Size = new System.Drawing.Size(116, 21);
+			this.cmbVenueCode.TabIndex = 14;
+			// 
+			// cmbModuleCode
+			// 
+			this.cmbModuleCode.FormattingEnabled = true;
+			this.cmbModuleCode.Location = new System.Drawing.Point(287, 33);
+			this.cmbModuleCode.Name = "cmbModuleCode";
+			this.cmbModuleCode.Size = new System.Drawing.Size(116, 21);
+			this.cmbModuleCode.TabIndex = 7;
+			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+			this.label6.Location = new System.Drawing.Point(137, 17);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(38, 13);
+			this.label6.TabIndex = 11;
+			this.label6.Text = "Date:";
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+			this.label5.Location = new System.Drawing.Point(406, 16);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(80, 13);
+			this.label5.TabIndex = 8;
+			this.label5.Text = "Venue Code:";
 			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-			this.label3.Location = new System.Drawing.Point(132, 19);
+			this.label3.Location = new System.Drawing.Point(284, 16);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(56, 13);
+			this.label3.Size = new System.Drawing.Size(85, 13);
 			this.label3.TabIndex = 2;
-			this.label3.Text = "Building:";
+			this.label3.Text = "Module Code:";
 			// 
 			// label1
 			// 
@@ -297,58 +359,36 @@
 			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
 			this.label1.Location = new System.Drawing.Point(12, 19);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(43, 13);
+			this.label1.Size = new System.Drawing.Size(91, 13);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "Name:";
+			this.label1.Text = "Request Code:";
 			// 
-			// dgvDepartment
-			// 
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvDepartment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-			this.dgvDepartment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.dgvDepartment.BackgroundColor = System.Drawing.SystemColors.Control;
-			this.dgvDepartment.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.dgvDepartment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvDepartment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-			this.dgvDepartment.ColumnHeadersHeight = 50;
-			this.dgvDepartment.DoubleBuffered = true;
-			this.dgvDepartment.EnableHeadersVisualStyles = false;
-			this.dgvDepartment.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.dgvDepartment.HeaderForeColor = System.Drawing.Color.White;
-			this.dgvDepartment.Location = new System.Drawing.Point(0, 0);
-			this.dgvDepartment.Name = "dgvDepartment";
-			this.dgvDepartment.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			this.dgvDepartment.Size = new System.Drawing.Size(782, 429);
-			this.dgvDepartment.TabIndex = 1;
-			// 
-			// ucDepartment
+			// ucTutorRequest
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.Controls.Add(this.groupBox1);
-			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.panel3);
-			this.Name = "ucDepartment";
+			this.Controls.Add(this.panel1);
+			this.Name = "ucTutorRequest";
 			this.Size = new System.Drawing.Size(1056, 562);
+			this.Load += new System.EventHandler(this.UcTutorRequest_Load);
+			this.panel3.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dgvTutorRequest)).EndInit();
 			this.panel1.ResumeLayout(false);
 			this.pnlView.ResumeLayout(false);
 			this.pnlManage.ResumeLayout(false);
-			this.panel3.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvDepartment)).EndInit();
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
+
+		private System.Windows.Forms.Panel panel3;
+		private Bunifu.Framework.UI.BunifuCustomDataGrid dgvTutorRequest;
+		private System.Windows.Forms.Timer tmrView;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Panel pnlView;
 		private System.Windows.Forms.Button btnViewList;
@@ -357,20 +397,20 @@
 		private System.Windows.Forms.Button btnManageUpdate;
 		private System.Windows.Forms.Button btnManageAdd;
 		private System.Windows.Forms.Button btnManage;
-		private System.Windows.Forms.Panel panel3;
+		private Bunifu.Framework.UI.BunifuFormFadeTransition bunifuFormFadeTransition1;
 		private System.Windows.Forms.Timer tmrManage;
-		private System.Windows.Forms.Timer tmrView;
 		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.TextBox txtEmailAddress;
-		private System.Windows.Forms.TextBox txtContactNo;
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.TextBox txtContactPerson;
-		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.MaskedTextBox txtEndTime;
+		private System.Windows.Forms.MaskedTextBox txtStartTime;
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.TextBox txtName;
+		private System.Windows.Forms.ComboBox cmbRequestCode;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.DateTimePicker dateRequest;
+		private System.Windows.Forms.ComboBox cmbVenueCode;
+		private System.Windows.Forms.ComboBox cmbModuleCode;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.ComboBox cmbBuilding;
-		private Bunifu.Framework.UI.BunifuCustomDataGrid dgvDepartment;
 	}
 }

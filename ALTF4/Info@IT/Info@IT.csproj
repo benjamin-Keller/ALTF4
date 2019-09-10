@@ -95,12 +95,6 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Request.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Request.Designer.cs">
-      <DependentUpon>Request.cs</DependentUpon>
-    </Compile>
     <Compile Include="Staff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +143,24 @@
     <Compile Include="UserControls\ucHome.Designer.cs">
       <DependentUpon>ucHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucNavInspection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucNavInspection.Designer.cs">
+      <DependentUpon>ucNavInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucRequest.Designer.cs">
+      <DependentUpon>ucRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTutorRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTutorRequest.Designer.cs">
+      <DependentUpon>ucTutorRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucVenue.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -168,9 +180,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Request.resx">
-      <DependentUpon>Request.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
@@ -195,6 +204,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucHome.resx">
       <DependentUpon>ucHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucNavInspection.resx">
+      <DependentUpon>ucNavInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucRequest.resx">
+      <DependentUpon>ucRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTutorRequest.resx">
+      <DependentUpon>ucTutorRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucVenue.resx">
       <DependentUpon>ucVenue.cs</DependentUpon>

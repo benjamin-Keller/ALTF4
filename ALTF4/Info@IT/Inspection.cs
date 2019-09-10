@@ -134,9 +134,9 @@ namespace Info_IT
 
 		private void BtnNavRequest_Click(object sender, EventArgs e)
 		{
-			Request form = new Request();
-			form.Show();
-			this.Close();
+			//Request form = new Request();
+			//form.Show();
+			//this.Close();
 		}
 
 		private void BtnNavTutorRequest_Click(object sender, EventArgs e)
