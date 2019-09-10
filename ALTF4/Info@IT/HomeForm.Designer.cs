@@ -48,15 +48,16 @@
 			this.btnHelp = new System.Windows.Forms.Button();
 			this.tmrNavigation = new System.Windows.Forms.Timer(this.components);
 			this.pnlContent = new System.Windows.Forms.Panel();
+			this.ucVenue1 = new Info_IT.UserControls.ucVenue();
+			this.ucHome1 = new Info_IT.UserControls.ucHome();
+			this.ucEquipment1 = new Info_IT.UserControls.UcEquipment();
+			this.ucDepartment1 = new Info_IT.UserControls.ucDepartment();
 			this.panel6 = new System.Windows.Forms.Panel();
+			this.lblLocation = new System.Windows.Forms.Label();
 			this.pnlLogin = new System.Windows.Forms.Panel();
 			this.lblLoginText = new System.Windows.Forms.Label();
 			this.panel5 = new System.Windows.Forms.Panel();
-			this.lblLocation = new System.Windows.Forms.Label();
-			this.ucDepartment1 = new Info_IT.UserControls.ucDepartment();
-			this.ucEquipment1 = new Info_IT.UserControls.UcEquipment();
-			this.ucHome1 = new Info_IT.UserControls.ucHome();
-			this.ucVenue1 = new Info_IT.UserControls.ucVenue();
+			this.doubleBitmapControl1 = new BunifuAnimatorNS.DoubleBitmapControl();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.pnlNavigation.SuspendLayout();
@@ -298,6 +299,7 @@
 			// 
 			// pnlContent
 			// 
+			this.pnlContent.Controls.Add(this.doubleBitmapControl1);
 			this.pnlContent.Controls.Add(this.ucVenue1);
 			this.pnlContent.Controls.Add(this.ucHome1);
 			this.pnlContent.Controls.Add(this.ucEquipment1);
@@ -309,6 +311,34 @@
 			this.pnlContent.Size = new System.Drawing.Size(1056, 620);
 			this.pnlContent.TabIndex = 3;
 			// 
+			// ucVenue1
+			// 
+			this.ucVenue1.Location = new System.Drawing.Point(0, 58);
+			this.ucVenue1.Name = "ucVenue1";
+			this.ucVenue1.Size = new System.Drawing.Size(1056, 562);
+			this.ucVenue1.TabIndex = 4;
+			// 
+			// ucHome1
+			// 
+			this.ucHome1.Location = new System.Drawing.Point(0, 58);
+			this.ucHome1.Name = "ucHome1";
+			this.ucHome1.Size = new System.Drawing.Size(1056, 562);
+			this.ucHome1.TabIndex = 3;
+			// 
+			// ucEquipment1
+			// 
+			this.ucEquipment1.Location = new System.Drawing.Point(0, 58);
+			this.ucEquipment1.Name = "ucEquipment1";
+			this.ucEquipment1.Size = new System.Drawing.Size(1056, 562);
+			this.ucEquipment1.TabIndex = 2;
+			// 
+			// ucDepartment1
+			// 
+			this.ucDepartment1.Location = new System.Drawing.Point(0, 58);
+			this.ucDepartment1.Name = "ucDepartment1";
+			this.ucDepartment1.Size = new System.Drawing.Size(1056, 562);
+			this.ucDepartment1.TabIndex = 1;
+			// 
 			// panel6
 			// 
 			this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
@@ -318,6 +348,16 @@
 			this.panel6.Name = "panel6";
 			this.panel6.Size = new System.Drawing.Size(1056, 67);
 			this.panel6.TabIndex = 0;
+			// 
+			// lblLocation
+			// 
+			this.lblLocation.AutoSize = true;
+			this.lblLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblLocation.Location = new System.Drawing.Point(6, 9);
+			this.lblLocation.Name = "lblLocation";
+			this.lblLocation.Size = new System.Drawing.Size(146, 39);
+			this.lblLocation.TabIndex = 0;
+			this.lblLocation.Text = "Location";
 			// 
 			// pnlLogin
 			// 
@@ -349,43 +389,14 @@
 			this.panel5.Size = new System.Drawing.Size(1056, 30);
 			this.panel5.TabIndex = 2;
 			// 
-			// lblLocation
+			// doubleBitmapControl1
 			// 
-			this.lblLocation.AutoSize = true;
-			this.lblLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblLocation.Location = new System.Drawing.Point(6, 9);
-			this.lblLocation.Name = "lblLocation";
-			this.lblLocation.Size = new System.Drawing.Size(146, 39);
-			this.lblLocation.TabIndex = 0;
-			this.lblLocation.Text = "Location";
-			// 
-			// ucDepartment1
-			// 
-			this.ucDepartment1.Location = new System.Drawing.Point(0, 58);
-			this.ucDepartment1.Name = "ucDepartment1";
-			this.ucDepartment1.Size = new System.Drawing.Size(1056, 562);
-			this.ucDepartment1.TabIndex = 1;
-			// 
-			// ucEquipment1
-			// 
-			this.ucEquipment1.Location = new System.Drawing.Point(0, 58);
-			this.ucEquipment1.Name = "ucEquipment1";
-			this.ucEquipment1.Size = new System.Drawing.Size(1056, 562);
-			this.ucEquipment1.TabIndex = 2;
-			// 
-			// ucHome1
-			// 
-			this.ucHome1.Location = new System.Drawing.Point(0, 58);
-			this.ucHome1.Name = "ucHome1";
-			this.ucHome1.Size = new System.Drawing.Size(1056, 562);
-			this.ucHome1.TabIndex = 3;
-			// 
-			// ucVenue1
-			// 
-			this.ucVenue1.Location = new System.Drawing.Point(0, 58);
-			this.ucVenue1.Name = "ucVenue1";
-			this.ucVenue1.Size = new System.Drawing.Size(1056, 562);
-			this.ucVenue1.TabIndex = 4;
+			this.doubleBitmapControl1.Location = new System.Drawing.Point(252, 192);
+			this.doubleBitmapControl1.Name = "doubleBitmapControl1";
+			this.doubleBitmapControl1.Size = new System.Drawing.Size(75, 23);
+			this.doubleBitmapControl1.TabIndex = 5;
+			this.doubleBitmapControl1.Text = "doubleBitmapControl1";
+			this.doubleBitmapControl1.Visible = false;
 			// 
 			// Home
 			// 
@@ -444,5 +455,6 @@
 		private UserControls.ucVenue ucVenue1;
 		private UserControls.ucHome ucHome1;
 		private UserControls.UcEquipment ucEquipment1;
+		private BunifuAnimatorNS.DoubleBitmapControl doubleBitmapControl1;
 	}
 }

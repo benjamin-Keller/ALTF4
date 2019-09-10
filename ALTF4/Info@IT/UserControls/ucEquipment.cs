@@ -1,6 +1,7 @@
 ﻿using BLL;
 using System;
 using System.Windows.Forms;
+using System.Drawing;
 
 
 namespace Info_IT.UserControls
@@ -13,7 +14,10 @@ namespace Info_IT.UserControls
 		{
 			InitializeComponent();
 		}
+		private void UcEquipment_Load(object sender, EventArgs e)
+		{
 
+		}
 		private void CmbEquipTypeCode_SelectedIndexChanged(object sender, EventArgs e)
 		{
 
@@ -69,7 +73,9 @@ namespace Info_IT.UserControls
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
 			dgvEquipment.DataSource = bll.GetEquipment();
+			dgvEquipment.BackgroundColor = Color.White;
 		}
 
+		
 	}
 }
