@@ -1,4 +1,4 @@
-create procedure sp_GetBuilding
+﻿create procedure sp_GetBuilding
 as
 begin
 select BuildingName from  tblBuilding

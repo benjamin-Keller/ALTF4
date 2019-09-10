@@ -1,40 +1,26 @@
 ﻿using BLL;
 using System;
 using System.Windows.Forms;
+using System.Drawing;
 
-namespace Info_IT
+
+namespace Info_IT.UserControls
 {
-	public partial class TutorRequest : Form
+	public partial class UcEquipment : UserControl
 	{
 		BusinessLogicLayer bll = new BusinessLogicLayer();
 
-		public TutorRequest()
+		public UcEquipment()
 		{
 			InitializeComponent();
 		}
+		private void UcEquipment_Load(object sender, EventArgs e)
+		{
 
-		private void TutorRequest_FormClosing(object sender, FormClosingEventArgs e)
-		{
-			Home home = new Home();
-			home.Show();
 		}
+		private void CmbEquipTypeCode_SelectedIndexChanged(object sender, EventArgs e)
+		{
 
-		//Menu button (Navigation)
-		private void BtnNavigation_Click(object sender, EventArgs e)
-		{
-			tmrNavigation.Start();
-			if (!(pnlNavigation.Height == pnlNavigation.MinimumSize.Height))
-			{
-				pnlNavigation.Height = pnlNavigation.MinimumSize.Height;
-				tmrNavigation.Enabled = false;
-			}
-		}
-		private void Timer1_Tick(object sender, EventArgs e)
-		{
-			pnlNavigation.Height = pnlNavigation.MaximumSize.Height;
-			pnlView.Height = pnlView.MinimumSize.Height;
-			pnlManage.Height = pnlManage.MinimumSize.Height;
-			tmrNavigation.Stop();
 		}
 
 		//Menu button (Manage)
@@ -50,8 +36,8 @@ namespace Info_IT
 		private void TmrManage_Tick(object sender, EventArgs e)
 		{
 			pnlManage.Height = pnlManage.MaximumSize.Height;
-			pnlNavigation.Height = pnlNavigation.MinimumSize.Height;
 			pnlView.Height = pnlView.MinimumSize.Height;
+
 			tmrManage.Stop();
 		}
 
@@ -68,18 +54,12 @@ namespace Info_IT
 		private void TmrView_Tick(object sender, EventArgs e)
 		{
 			pnlView.Height = pnlView.MaximumSize.Height;
-			pnlNavigation.Height = pnlNavigation.MinimumSize.Height;
 			pnlManage.Height = pnlManage.MinimumSize.Height;
 			tmrView.Stop();
 		}
 
-		private void BtnNavHome_Click(object sender, EventArgs e)
-		{
-			Home h = new Home();
-			h.Show();
-			this.Hide();
-		}
 
+		//Sub-Nav buttons
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
 
@@ -92,10 +72,10 @@ namespace Info_IT
 
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
-			dgvTutorRequest.DataSource = bll.GetTutorRequest();
-
+			dgvEquipment.DataSource = bll.GetEquipment();
+			dgvEquipment.BackgroundColor = Color.White;
 		}
 
-
+		
 	}
 }

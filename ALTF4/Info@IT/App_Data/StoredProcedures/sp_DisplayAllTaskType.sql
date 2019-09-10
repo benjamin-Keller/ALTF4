@@ -1,4 +1,4 @@
-create procedure sp_DisplayAllTaskType
+﻿create procedure sp_DisplayAllTaskType
 as
 begin
 select * from tblTaskType

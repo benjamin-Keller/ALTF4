@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Windows.Forms;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace Info_IT
 {
@@ -130,33 +130,7 @@ namespace Info_IT
 
 		}
 
-		private void BtnNavEquipment_Click(object sender, EventArgs e)
-		{
-			Equipment form = new Equipment();
-			form.Show();
-			this.Close();
-		}
 
-		private void BtnNavVenue_Click(object sender, EventArgs e)
-		{
-			Venue form = new Venue();
-			form.Show();
-			this.Close();
-		}
-
-		private void BtnNavEquipmentType_Click(object sender, EventArgs e)
-		{
-			EquipmentType form = new EquipmentType();
-			form.Show();
-			this.Close();
-		}
-
-		private void BtnNavDepartment_Click(object sender, EventArgs e)
-		{
-			Department form = new Department();
-			form.Show();
-			this.Close();
-		}
 
 		private void BtnNavRequest_Click(object sender, EventArgs e)
 		{
