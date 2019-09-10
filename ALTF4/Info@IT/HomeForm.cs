@@ -26,12 +26,28 @@ namespace Info_IT
 		{
 
 		}
+		private void InactiveButtons()
+		{
+			btnNavDepartment.BackColor = Color.FromArgb(0,100,200);
+			btnNavEquipment.BackColor = Color.FromArgb(0,100,200);
+			btnNavHome.BackColor = Color.FromArgb(0,100,200);
+			btnNavInspection.BackColor = Color.FromArgb(0,100,200);
+			btnNavInspectionDetail.BackColor = Color.FromArgb(0,100,200);
+			btnNavRequest.BackColor = Color.FromArgb(0,100,200);
+			btnNavTaskType.BackColor = Color.FromArgb(0,100,200);
+			btnNavTutorRequest.BackColor = Color.FromArgb(0,100,200);
+			btnNavVenue.BackColor = Color.FromArgb(0,100,200);
+		}
+
 		private void HideAll()
 		{
 			ucEquipment1.Hide();
 			ucHome1.Hide();
 			ucVenue1.Hide();
 			ucDepartment1.Hide();
+			ucRequest1.Hide();
+			ucTutorRequest1.Hide();
+			ucNavInspection1.Hide();
 		}
 		//Login bar
 		private void PnlLogin_Click(object sender, EventArgs e)
@@ -81,6 +97,9 @@ namespace Info_IT
 		private void BtnNavHome_Click(object sender, EventArgs e)
 		{
 			HideAll();
+			InactiveButtons();
+			btnNavHome.BackColor = Color.FromArgb(0, 150, 250);
+
 			ucHome1.Show();
 			this.Text = "Info@IT";
 			lblLocation.Text = "Home";
@@ -89,6 +108,9 @@ namespace Info_IT
 		private void BtnNavEquipment_Click(object sender, EventArgs e)
 		{
 			HideAll();
+			InactiveButtons();
+			btnNavEquipment.BackColor = Color.FromArgb(0, 150, 250);
+
 			ucEquipment1.Show();
 			this.Text = "Equipment";
 			lblLocation.Text = "Equipment";
@@ -98,6 +120,9 @@ namespace Info_IT
 		private void BtnNavVenue_Click(object sender, EventArgs e)
 		{
 			HideAll();
+			InactiveButtons();
+			btnNavVenue.BackColor = Color.FromArgb(0, 150, 250);
+
 			ucVenue1.Show();
 			this.Text = "Venue";
 			lblLocation.Text = "Venue";
@@ -107,6 +132,9 @@ namespace Info_IT
 		private void BtnNavDepartment_Click(object sender, EventArgs e)
 		{
 			HideAll();
+			InactiveButtons();
+			btnNavDepartment.BackColor = Color.FromArgb(0, 150, 250);
+
 			ucDepartment1.Show();
 			this.Text = "Department";
 			lblLocation.Text = "Department";
@@ -115,26 +143,50 @@ namespace Info_IT
 
 		private void BtnNavRequest_Click(object sender, EventArgs e)
 		{
+			HideAll();
+			InactiveButtons();
+			btnNavRequest.BackColor = Color.FromArgb(0, 150, 250);
 
+			ucRequest1.Show();
+			this.Text = "Request";
+			lblLocation.Text = "Request";
 		}
 
 		private void BtnNavTutorRequest_Click(object sender, EventArgs e)
 		{
+			HideAll();
+			InactiveButtons();
+			btnNavTutorRequest.BackColor = Color.FromArgb(0, 150, 250);
 
+			ucTutorRequest1.Show();
+			this.Text = "Tutor Requests";
+			lblLocation.Text = "Tutor Request";
 		}
 
 		private void BtnNavInspection_Click(object sender, EventArgs e)
 		{
+			HideAll();
+			InactiveButtons();
+			btnNavInspection.BackColor = Color.FromArgb(0, 150, 250);
 
+			ucNavInspection1.Show();
+			this.Text = "Inspections";
+			lblLocation.Text = "Inspections";
 		}
 
 		private void BtnNavInspectionDetail_Click(object sender, EventArgs e)
 		{
+			HideAll();
+			InactiveButtons();
+			btnNavInspectionDetail.BackColor = Color.FromArgb(0, 150, 250);
 
 		}
 
 		private void BtnNavTaskType_Click(object sender, EventArgs e)
 		{
+			HideAll();
+			InactiveButtons();
+			btnNavTaskType.BackColor = Color.FromArgb(0, 150, 250);
 
 		}
 	}

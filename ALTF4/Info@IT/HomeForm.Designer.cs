@@ -48,6 +48,9 @@
 			this.btnHelp = new System.Windows.Forms.Button();
 			this.tmrNavigation = new System.Windows.Forms.Timer(this.components);
 			this.pnlContent = new System.Windows.Forms.Panel();
+			this.ucTutorRequest1 = new Info_IT.UserControls.ucTutorRequest();
+			this.ucRequest1 = new Info_IT.UserControls.ucRequest();
+			this.doubleBitmapControl1 = new BunifuAnimatorNS.DoubleBitmapControl();
 			this.ucVenue1 = new Info_IT.UserControls.ucVenue();
 			this.ucHome1 = new Info_IT.UserControls.ucHome();
 			this.ucEquipment1 = new Info_IT.UserControls.UcEquipment();
@@ -57,7 +60,7 @@
 			this.pnlLogin = new System.Windows.Forms.Panel();
 			this.lblLoginText = new System.Windows.Forms.Label();
 			this.panel5 = new System.Windows.Forms.Panel();
-			this.doubleBitmapControl1 = new BunifuAnimatorNS.DoubleBitmapControl();
+			this.ucNavInspection1 = new Info_IT.UserControls.ucNavInspection();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.pnlNavigation.SuspendLayout();
@@ -299,6 +302,9 @@
 			// 
 			// pnlContent
 			// 
+			this.pnlContent.Controls.Add(this.ucNavInspection1);
+			this.pnlContent.Controls.Add(this.ucTutorRequest1);
+			this.pnlContent.Controls.Add(this.ucRequest1);
 			this.pnlContent.Controls.Add(this.doubleBitmapControl1);
 			this.pnlContent.Controls.Add(this.ucVenue1);
 			this.pnlContent.Controls.Add(this.ucHome1);
@@ -310,6 +316,29 @@
 			this.pnlContent.Name = "pnlContent";
 			this.pnlContent.Size = new System.Drawing.Size(1056, 620);
 			this.pnlContent.TabIndex = 3;
+			// 
+			// ucTutorRequest1
+			// 
+			this.ucTutorRequest1.Location = new System.Drawing.Point(0, 58);
+			this.ucTutorRequest1.Name = "ucTutorRequest1";
+			this.ucTutorRequest1.Size = new System.Drawing.Size(1056, 562);
+			this.ucTutorRequest1.TabIndex = 7;
+			// 
+			// ucRequest1
+			// 
+			this.ucRequest1.Location = new System.Drawing.Point(0, 58);
+			this.ucRequest1.Name = "ucRequest1";
+			this.ucRequest1.Size = new System.Drawing.Size(1056, 562);
+			this.ucRequest1.TabIndex = 6;
+			// 
+			// doubleBitmapControl1
+			// 
+			this.doubleBitmapControl1.Location = new System.Drawing.Point(252, 192);
+			this.doubleBitmapControl1.Name = "doubleBitmapControl1";
+			this.doubleBitmapControl1.Size = new System.Drawing.Size(75, 23);
+			this.doubleBitmapControl1.TabIndex = 5;
+			this.doubleBitmapControl1.Text = "doubleBitmapControl1";
+			this.doubleBitmapControl1.Visible = false;
 			// 
 			// ucVenue1
 			// 
@@ -389,14 +418,12 @@
 			this.panel5.Size = new System.Drawing.Size(1056, 30);
 			this.panel5.TabIndex = 2;
 			// 
-			// doubleBitmapControl1
+			// ucNavInspection1
 			// 
-			this.doubleBitmapControl1.Location = new System.Drawing.Point(252, 192);
-			this.doubleBitmapControl1.Name = "doubleBitmapControl1";
-			this.doubleBitmapControl1.Size = new System.Drawing.Size(75, 23);
-			this.doubleBitmapControl1.TabIndex = 5;
-			this.doubleBitmapControl1.Text = "doubleBitmapControl1";
-			this.doubleBitmapControl1.Visible = false;
+			this.ucNavInspection1.Location = new System.Drawing.Point(0, 58);
+			this.ucNavInspection1.Name = "ucNavInspection1";
+			this.ucNavInspection1.Size = new System.Drawing.Size(1056, 562);
+			this.ucNavInspection1.TabIndex = 8;
 			// 
 			// Home
 			// 
@@ -456,5 +483,8 @@
 		private UserControls.ucHome ucHome1;
 		private UserControls.UcEquipment ucEquipment1;
 		private BunifuAnimatorNS.DoubleBitmapControl doubleBitmapControl1;
+		private UserControls.ucRequest ucRequest1;
+		private UserControls.ucTutorRequest ucTutorRequest1;
+		private UserControls.ucNavInspection ucNavInspection1;
 	}
 }

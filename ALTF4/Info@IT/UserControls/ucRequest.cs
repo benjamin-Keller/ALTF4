@@ -1,18 +1,28 @@
-﻿using BLL;
-using System;
-using System.Windows.Forms;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using BLL;
 
 namespace Info_IT.UserControls
 {
-	public partial class ucDepartment : UserControl
+	public partial class ucRequest : UserControl
 	{
 		BusinessLogicLayer bll = new BusinessLogicLayer();
-		public ucDepartment()
+
+		public ucRequest()
 		{
 			InitializeComponent();
 		}
-
+		private void UcRequest_Load(object sender, EventArgs e)
+		{
+			dateRequest.Value = DateTime.Now;
+		}
 		//Menu button (Manage)
 		private void BtnManage_Click(object sender, EventArgs e)
 		{
@@ -60,11 +70,9 @@ namespace Info_IT.UserControls
 
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
-			dgvDepartment.DataSource = bll.GetDepartment();
-			dgvDepartment.BackgroundColor = Color.White;
-
+			dgvRequest.DataSource = bll.GetRequests();
+			dgvRequest.BackgroundColor = Color.White;
 
 		}
-
 	}
 }

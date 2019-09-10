@@ -1,14 +1,21 @@
-﻿using BLL;
-using System;
-using System.Windows.Forms;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using BLL;
 
 namespace Info_IT.UserControls
 {
-	public partial class ucDepartment : UserControl
+	public partial class ucNavInspection : UserControl
 	{
 		BusinessLogicLayer bll = new BusinessLogicLayer();
-		public ucDepartment()
+
+		public ucNavInspection()
 		{
 			InitializeComponent();
 		}
@@ -60,11 +67,13 @@ namespace Info_IT.UserControls
 
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
-			dgvDepartment.DataSource = bll.GetDepartment();
-			dgvDepartment.BackgroundColor = Color.White;
-
 
 		}
 
+		private void BtnViewInspectiondetails_Click(object sender, EventArgs e)
+		{
+
+			dgvInspection.BackgroundColor = Color.White;
+		}
 	}
 }
