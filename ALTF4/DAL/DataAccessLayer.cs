@@ -78,13 +78,45 @@ namespace DAL
 
         public DataTable PopulateCmbBuilding()
         {
-            dbCmd = new SqlCommand("dbo.sp_PopulateBuilding", dbConn);
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+            dbCmd = new SqlCommand("dbo.sp_GetBuilding", dbConn);
             //dbCmd.CommandText = "sp_DisplayVenue";
             //dbCmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
 
             DataTable dt = new DataTable();
             sda.Fill(dt);
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return dt;
+        }
+
+        public DataTable PopulateCmbBuildingBlock()
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+            dbCmd = new SqlCommand("dbo.sp_GetBuildingblock", dbConn);
+            //dbCmd.CommandText = "sp_DisplayVenue";
+            //dbCmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
             return dt;
         }
 

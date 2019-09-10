@@ -67,5 +67,19 @@ namespace BLL
         {
             return dal.GetTutorRequest();
         }
+
+        public DataTable LoadCMBBuilding()
+        {
+            //string[] val = { "232"};
+            //DataTable dt = dal.PopulateCmbBuilding();
+            //dt.Rows.Add(val);
+            //return dt;
+            return dal.PopulateCmbBuilding();
+        }
+
+        public DataTable LoadCMBBuildingBlock()
+        {
+            return dal.PopulateCmbBuildingBlock();
+        }
     }
 }

@@ -14,8 +14,12 @@ namespace Info_IT.UserControls
 
 		private void UcVenue_Load(object sender, EventArgs e)
 		{
-
-		}
+            dgvVenue.DataSource = bll.GetVenues();
+            
+            cmbBuilding.DataSource = bll.LoadCMBBuilding();
+            
+            cmbBuildingBlock.DataSource = bll.LoadCMBBuildingBlock();
+        }
 
 		//Menu button (Manage)
 		private void BtnManage_Click(object sender, EventArgs e)
@@ -54,13 +58,29 @@ namespace Info_IT.UserControls
 
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
+            DAL.VenueClass venue = new DAL.VenueClass(txtDescription.Text, int.Parse(txtCapacity.Text), int.Parse(txtDoorNo.Text), cmbBuildingBlock.SelectedIndex, cmbBuilding.SelectedIndex);
+            int x = bll.AddVenue(venue);
 
-		}
+            if(x>0)
+            {
+                txtDescription.Clear();
+                txtCapacity.Clear();
+                txtDoorNo.Clear();
+                cmbBuildingBlock.ValueMember = "";
+                cmbBuilding.ValueMember = "";
+            }
+            else
+            {
+                MessageBox.Show("Please input valid data.");
+            }
+
+            dgvVenue.DataSource = bll.GetVenues();
+        }
 
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
 		{
-
-		}
+            dgvVenue.DataSource = bll.GetVenues();
+        }
 
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{

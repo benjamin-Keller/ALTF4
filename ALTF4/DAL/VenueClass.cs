@@ -12,7 +12,7 @@ namespace DAL
 
         public int VenueCapacity { get; set; }
 
-        public string VenueDoorNo { get; set; }
+        public int VenueDoorNo { get; set; }
 
         public int VenueBuildingBlock { get; set; }
 
@@ -23,7 +23,7 @@ namespace DAL
 
         }
 
-        public VenueClass(string description, int capacity, string doorNo, int buildingBlock, int building)
+        public VenueClass(string description, int capacity, int doorNo, int buildingBlock, int building)
         {
             VenueDescription = description;
             VenueCapacity = capacity;
