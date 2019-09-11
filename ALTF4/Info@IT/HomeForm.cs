@@ -15,28 +15,30 @@ namespace Info_IT
 		}
 		private void Template_Load(object sender, EventArgs e)
 		{
-			LoginPanel();
 			HideAll();
-			pnlLoginFields.Show();
-			this.Text = "Home";
-			lblLocation.Text = "Home";
+			LoginPanel();
+			
 
 		}
 
 		public void LoginPanel()
 		{
-			pnlLoginFields.Show();
+			pnlLoginFields.Visible = true;
+
+			this.Text = "Login";
+			lblLocation.Text = "Login";
 
 			//This is like an If Else statement for isLoggedIn
-			switch(isLoggedIn) {
+			switch (isLoggedIn) {
 				case true:
 					lblLoginText.Text = "Log out";
 					isLoggedIn = false;
+					pnlLogin.Show();
 					break;
 
 				case false:
 					lblLoginText.Text = "Log In";
-					Show();
+					pnlLogin.Show();
 					break;
 			}
 
@@ -45,17 +47,74 @@ namespace Info_IT
 			{
 				case "Admin":
 					lblLoginText.Text = "Log out";
-					//What can Admin see
+					////What can Admin see
 
+					//btnNavHome.Hide();
+					//btnNavEquipment.Hide();
+					//btnNavVenue.Hide();
+					//btnNavDepartment.Hide();
+					//btnNavDepartment.Hide();
+					//btnNavRequest.Hide();
+					//btnNavTutorRequest.Hide();
+					//btnNavInspection.Hide();
+					//btnNavTaskType.Hide();
+					break;
+
+				case "Staff":
+					lblLoginText.Text = "Log In";
+					////What can Staff see
+
+					//btnNavHome.Hide();
+					//btnNavEquipment.Hide();
+					//btnNavVenue.Hide();
+					//btnNavDepartment.Hide();
+					//btnNavDepartment.Hide();
+					//btnNavRequest.Hide();
+					//btnNavTutorRequest.Hide();
+					//btnNavInspection.Hide();
+					//btnNavTaskType.Hide();
+					break;
+				case "ICT":
+					////What can Info@It Staff see
+
+					//btnNavHome.Hide();
+					//btnNavEquipment.Hide();
+					//btnNavVenue.Hide();
+					//btnNavDepartment.Hide();
+					//btnNavDepartment.Hide();
+					//btnNavRequest.Hide();
+					//btnNavTutorRequest.Hide();
+					//btnNavInspection.Hide();
+					//btnNavTaskType.Hide();
 					break;
 
 				case "SI":
-					lblLoginText.Text = "Log In";
-					//What can SI see
+					////What can SI see
 
+					//btnNavHome.Hide();
+					//btnNavEquipment.Hide();
+					//btnNavVenue.Hide();
+					//btnNavDepartment.Hide();
+					//btnNavDepartment.Hide();
+					//btnNavRequest.Hide();
+					//btnNavTutorRequest.Hide();
+					//btnNavInspection.Hide();
+					//btnNavTaskType.Hide();
 					break;
+
 			}
+
 		}
+
+		private void BtnLogIn_Click(object sender, EventArgs e)
+		{
+			isLoggedIn = true;
+			LoginPanel();
+			HideAll();
+			ucHome1.Show();
+		}
+
+
 		private void InactiveButtons()
 		{
 			btnNavDepartment.BackColor = Color.FromArgb(0,100,200);
@@ -231,6 +290,6 @@ namespace Info_IT
 
 		}
 
-
+	
 	}
 }

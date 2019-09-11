@@ -155,12 +155,6 @@
     <Compile Include="UserControls\ucInspection.Designer.cs">
       <DependentUpon>ucInspection.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ucLogin.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\ucLogin.Designer.cs">
-      <DependentUpon>ucLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\ucRequest.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -222,9 +216,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucInspection.resx">
       <DependentUpon>ucInspection.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ucLogin.resx">
-      <DependentUpon>ucLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucRequest.resx">
       <DependentUpon>ucRequest.cs</DependentUpon>
