@@ -60,6 +60,7 @@
 			this.ucHome1 = new Info_IT.UserControls.ucHome();
 			this.ucEquipment1 = new Info_IT.UserControls.UcEquipment();
 			this.ucDepartment1 = new Info_IT.UserControls.ucDepartment();
+			this.ucLogin1 = new Info_IT.UserControls.ucLogin();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.pnlNavigation.SuspendLayout();
@@ -285,6 +286,7 @@
 			// 
 			// pnlContent
 			// 
+			this.pnlContent.Controls.Add(this.ucLogin1);
 			this.pnlContent.Controls.Add(this.ucNavInspection1);
 			this.pnlContent.Controls.Add(this.ucTutorRequest1);
 			this.pnlContent.Controls.Add(this.ucRequest1);
@@ -413,6 +415,14 @@
 			this.ucDepartment1.Size = new System.Drawing.Size(1056, 562);
 			this.ucDepartment1.TabIndex = 1;
 			// 
+			// ucLogin1
+			// 
+			this.ucLogin1.isLoggedIn = false;
+			this.ucLogin1.Location = new System.Drawing.Point(0, 58);
+			this.ucLogin1.Name = "ucLogin1";
+			this.ucLogin1.Size = new System.Drawing.Size(1056, 562);
+			this.ucLogin1.TabIndex = 9;
+			// 
 			// Home
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -472,5 +482,6 @@
 		private UserControls.ucRequest ucRequest1;
 		private UserControls.ucTutorRequest ucTutorRequest1;
 		private UserControls.ucInspection ucNavInspection1;
+		private UserControls.ucLogin ucLogin1;
 	}
 }

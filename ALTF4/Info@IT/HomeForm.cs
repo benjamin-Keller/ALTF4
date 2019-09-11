@@ -27,6 +27,7 @@ namespace Info_IT
 		}
 		private void LoginPanel()
 		{
+			HideAll();
 			//This is like an If Else statement for isLoggedIn
 			switch(isLoggedIn) {
 				case true:
@@ -35,7 +36,7 @@ namespace Info_IT
 					break;
 				case false:
 					lblLoginText.Text = "Log In";
-					isLoggedIn = true;
+					ucLogin1.Show();
 					break;
 			}
 		}
@@ -60,7 +61,7 @@ namespace Info_IT
 			ucRequest1.Hide();
 			ucTutorRequest1.Hide();
 			ucNavInspection1.Hide();
-			
+			ucLogin1.Hide();
 		}
 		//Login bar
 		private void PnlLogin_Click(object sender, EventArgs e)
