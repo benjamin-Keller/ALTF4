@@ -15,7 +15,7 @@ namespace Info_IT.UserControls
 
 		private void UcVenue_Load(object sender, EventArgs e)
 		{
-            dgvVenue.DataSource = bll.GetVenues();
+            //dgvVenue.DataSource = bll.GetVenues();
             
             
             cmbBuilding.DataSource = bll.LoadCMBBuilding();
@@ -95,7 +95,9 @@ namespace Info_IT.UserControls
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
 		{
             dgvVenue.DataSource = bll.GetVenues();
-        }
+			dgvVenue.BackgroundColor = Color.White;
+
+		}
 
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{

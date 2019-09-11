@@ -29,8 +29,8 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dgvEquipment = new Bunifu.Framework.UI.BunifuCustomDataGrid();
 			this.panel1 = new System.Windows.Forms.Panel();
@@ -69,20 +69,20 @@
 			// 
 			// dgvEquipment
 			// 
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvEquipment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvEquipment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
 			this.dgvEquipment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvEquipment.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvEquipment.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvEquipment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvEquipment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvEquipment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
 			this.dgvEquipment.ColumnHeadersHeight = 50;
 			this.dgvEquipment.DoubleBuffered = true;
 			this.dgvEquipment.EnableHeadersVisualStyles = false;
@@ -124,6 +124,7 @@
 			this.btnViewList.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnViewList.FlatAppearance.BorderSize = 0;
 			this.btnViewList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnViewList.Font = new System.Drawing.Font("Segoe UI", 8.75F);
 			this.btnViewList.Location = new System.Drawing.Point(0, 53);
 			this.btnViewList.Name = "btnViewList";
 			this.btnViewList.Size = new System.Drawing.Size(200, 31);
@@ -138,6 +139,7 @@
 			this.btnView.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnView.FlatAppearance.BorderSize = 0;
 			this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnView.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnView.Location = new System.Drawing.Point(0, 0);
 			this.btnView.MinimumSize = new System.Drawing.Size(180, 53);
 			this.btnView.Name = "btnView";
@@ -168,6 +170,7 @@
 			this.btnManageUpdate.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnManageUpdate.FlatAppearance.BorderSize = 0;
 			this.btnManageUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnManageUpdate.Font = new System.Drawing.Font("Segoe UI", 8.75F);
 			this.btnManageUpdate.Location = new System.Drawing.Point(0, 84);
 			this.btnManageUpdate.Name = "btnManageUpdate";
 			this.btnManageUpdate.Size = new System.Drawing.Size(200, 31);
@@ -182,6 +185,7 @@
 			this.btnManageAdd.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnManageAdd.FlatAppearance.BorderSize = 0;
 			this.btnManageAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnManageAdd.Font = new System.Drawing.Font("Segoe UI", 8.75F);
 			this.btnManageAdd.Location = new System.Drawing.Point(0, 53);
 			this.btnManageAdd.Name = "btnManageAdd";
 			this.btnManageAdd.Size = new System.Drawing.Size(200, 31);
@@ -196,6 +200,7 @@
 			this.btnManage.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnManage.FlatAppearance.BorderSize = 0;
 			this.btnManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnManage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnManage.Location = new System.Drawing.Point(0, 0);
 			this.btnManage.MinimumSize = new System.Drawing.Size(180, 53);
 			this.btnManage.Name = "btnManage";
@@ -221,22 +226,22 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-			this.label1.Location = new System.Drawing.Point(12, 19);
+			this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label1.Location = new System.Drawing.Point(12, 16);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(75, 13);
+			this.label1.Size = new System.Drawing.Size(83, 17);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Description:";
 			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-			this.label3.Location = new System.Drawing.Point(205, 19);
+			this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label3.Location = new System.Drawing.Point(205, 16);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(80, 13);
+			this.label3.Size = new System.Drawing.Size(85, 17);
 			this.label3.TabIndex = 2;
 			this.label3.Text = "Venue Code:";
 			// 
@@ -244,7 +249,7 @@
 			// 
 			this.txtDescription.Location = new System.Drawing.Point(15, 35);
 			this.txtDescription.Name = "txtDescription";
-			this.txtDescription.Size = new System.Drawing.Size(187, 20);
+			this.txtDescription.Size = new System.Drawing.Size(187, 23);
 			this.txtDescription.TabIndex = 3;
 			// 
 			// cmbEquipTypeCode
@@ -252,7 +257,7 @@
 			this.cmbEquipTypeCode.FormattingEnabled = true;
 			this.cmbEquipTypeCode.Location = new System.Drawing.Point(405, 35);
 			this.cmbEquipTypeCode.Name = "cmbEquipTypeCode";
-			this.cmbEquipTypeCode.Size = new System.Drawing.Size(187, 21);
+			this.cmbEquipTypeCode.Size = new System.Drawing.Size(187, 23);
 			this.cmbEquipTypeCode.TabIndex = 4;
 			this.cmbEquipTypeCode.SelectedIndexChanged += new System.EventHandler(this.CmbEquipTypeCode_SelectedIndexChanged);
 			// 
@@ -261,17 +266,17 @@
 			this.cmbVenue.FormattingEnabled = true;
 			this.cmbVenue.Location = new System.Drawing.Point(208, 35);
 			this.cmbVenue.Name = "cmbVenue";
-			this.cmbVenue.Size = new System.Drawing.Size(187, 21);
+			this.cmbVenue.Size = new System.Drawing.Size(187, 23);
 			this.cmbVenue.TabIndex = 5;
 			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-			this.label4.Location = new System.Drawing.Point(402, 19);
+			this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label4.Location = new System.Drawing.Point(402, 16);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(135, 13);
+			this.label4.Size = new System.Drawing.Size(147, 17);
 			this.label4.TabIndex = 6;
 			this.label4.Text = "Equipment Type Code:";
 			// 
@@ -283,6 +288,7 @@
 			this.groupBox1.Controls.Add(this.txtDescription);
 			this.groupBox1.Controls.Add(this.label3);
 			this.groupBox1.Controls.Add(this.label1);
+			this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
 			this.groupBox1.Location = new System.Drawing.Point(234, 23);
 			this.groupBox1.Name = "groupBox1";
