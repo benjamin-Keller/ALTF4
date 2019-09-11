@@ -58,8 +58,8 @@ namespace DAL
                 dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
                 dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
                 dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
-                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
-                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+                dbCmd.Parameters.AddWithValue("@BuildingBlockID", venue.VenueBuildingBlock);
+                dbCmd.Parameters.AddWithValue("@BuildingID", venue.VenueBuilding);
 
                 x = dbCmd.ExecuteNonQuery();
             }
