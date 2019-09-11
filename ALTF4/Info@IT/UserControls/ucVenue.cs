@@ -73,6 +73,7 @@ namespace Info_IT.UserControls
 
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
+			//Error for input string not found
             DAL.VenueClass venue = new DAL.VenueClass(txtDescription.Text, int.Parse(txtCapacity.Text), int.Parse(txtDoorNo.Text), int.Parse(cmbBuildingBlock.SelectedValue.ToString()), int.Parse(cmbBuilding.SelectedIndex.ToString()));
             int x = bll.AddVenue(venue);
 
