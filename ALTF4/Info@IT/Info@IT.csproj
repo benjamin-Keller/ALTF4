@@ -137,6 +137,12 @@
     <Compile Include="UserControls\ucEquipment.Designer.cs">
       <DependentUpon>ucEquipment.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucEquipmentType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucEquipmentType.Designer.cs">
+      <DependentUpon>ucEquipmentType.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -207,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucEquipment.resx">
       <DependentUpon>ucEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucEquipmentType.resx">
+      <DependentUpon>ucEquipmentType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucHome.resx">
       <DependentUpon>ucHome.cs</DependentUpon>

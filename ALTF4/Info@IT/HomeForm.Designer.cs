@@ -530,6 +530,7 @@
 			this.Controls.Add(this.pnlContent);
 			this.Controls.Add(this.panel5);
 			this.Controls.Add(this.panel2);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MinimumSize = new System.Drawing.Size(920, 532);
 			this.Name = "Home";
 			this.Text = "Template";
