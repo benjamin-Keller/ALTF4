@@ -30,7 +30,7 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucLogin));
 			this.label1 = new System.Windows.Forms.Label();
-			this.txtUserrname = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+			this.txtUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
 			this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
 			this.btnLogIn = new Bunifu.Framework.UI.BunifuThinButton2();
 			this.SuspendLayout();
@@ -45,25 +45,26 @@
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Log In";
 			// 
-			// txtUserrname
+			// txtUsername
 			// 
-			this.txtUserrname.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.txtUserrname.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.txtUserrname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.txtUserrname.HintForeColor = System.Drawing.Color.Empty;
-			this.txtUserrname.HintText = "";
-			this.txtUserrname.isPassword = false;
-			this.txtUserrname.LineFocusedColor = System.Drawing.Color.Blue;
-			this.txtUserrname.LineIdleColor = System.Drawing.Color.Gray;
-			this.txtUserrname.LineMouseHoverColor = System.Drawing.Color.Blue;
-			this.txtUserrname.LineThickness = 3;
-			this.txtUserrname.Location = new System.Drawing.Point(324, 204);
-			this.txtUserrname.Margin = new System.Windows.Forms.Padding(4);
-			this.txtUserrname.Name = "txtUserrname";
-			this.txtUserrname.Size = new System.Drawing.Size(370, 44);
-			this.txtUserrname.TabIndex = 1;
-			this.txtUserrname.Text = "Username";
-			this.txtUserrname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+			this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.txtUsername.HintForeColor = System.Drawing.Color.Empty;
+			this.txtUsername.HintText = "";
+			this.txtUsername.isPassword = false;
+			this.txtUsername.LineFocusedColor = System.Drawing.Color.Blue;
+			this.txtUsername.LineIdleColor = System.Drawing.Color.Gray;
+			this.txtUsername.LineMouseHoverColor = System.Drawing.Color.Blue;
+			this.txtUsername.LineThickness = 3;
+			this.txtUsername.Location = new System.Drawing.Point(324, 204);
+			this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+			this.txtUsername.Name = "txtUsername";
+			this.txtUsername.Size = new System.Drawing.Size(370, 44);
+			this.txtUsername.TabIndex = 1;
+			this.txtUsername.Text = "Username";
+			this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.txtUsername.Click += new System.EventHandler(this.TxtUsername_Click);
 			// 
 			// txtPassword
 			// 
@@ -84,6 +85,7 @@
 			this.txtPassword.TabIndex = 2;
 			this.txtPassword.Text = "Password";
 			this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.txtPassword.Click += new System.EventHandler(this.TxtPassword_Click);
 			// 
 			// btnLogIn
 			// 
@@ -117,7 +119,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.Controls.Add(this.btnLogIn);
 			this.Controls.Add(this.txtPassword);
-			this.Controls.Add(this.txtUserrname);
+			this.Controls.Add(this.txtUsername);
 			this.Controls.Add(this.label1);
 			this.Name = "ucLogin";
 			this.Size = new System.Drawing.Size(1056, 562);
@@ -130,7 +132,7 @@
 		#endregion
 
 		private System.Windows.Forms.Label label1;
-		private Bunifu.Framework.UI.BunifuMaterialTextbox txtUserrname;
+		private Bunifu.Framework.UI.BunifuMaterialTextbox txtUsername;
 		private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassword;
 		private Bunifu.Framework.UI.BunifuThinButton2 btnLogIn;
 	}

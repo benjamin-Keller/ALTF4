@@ -6,7 +6,8 @@ namespace Info_IT
 {
 	public partial class Home : Form
 	{
-		bool isLoggedIn = false;
+		public bool isLoggedIn;
+		public string role;
 
 		public Home()
 		{
@@ -16,27 +17,42 @@ namespace Info_IT
 		{
 			LoginPanel();
 			HideAll();
-			ucHome1.Show();
+			pnlLoginFields.Show();
 			this.Text = "Home";
 			lblLocation.Text = "Home";
 
 		}
 
-		private void Template_Resize(object sender, EventArgs e)
+		public void LoginPanel()
 		{
-		}
-		private void LoginPanel()
-		{
-			HideAll();
+			pnlLoginFields.Show();
+
 			//This is like an If Else statement for isLoggedIn
 			switch(isLoggedIn) {
 				case true:
 					lblLoginText.Text = "Log out";
 					isLoggedIn = false;
 					break;
+
 				case false:
 					lblLoginText.Text = "Log In";
-					ucLogin1.Show();
+					Show();
+					break;
+			}
+
+			//This is like an If Else statement for getting the Role
+			switch (role)
+			{
+				case "Admin":
+					lblLoginText.Text = "Log out";
+					//What can Admin see
+
+					break;
+
+				case "SI":
+					lblLoginText.Text = "Log In";
+					//What can SI see
+
 					break;
 			}
 		}
@@ -61,7 +77,7 @@ namespace Info_IT
 			ucRequest1.Hide();
 			ucTutorRequest1.Hide();
 			ucNavInspection1.Hide();
-			ucLogin1.Hide();
+			pnlLoginFields.Hide();			
 		}
 		//Login bar
 		private void PnlLogin_Click(object sender, EventArgs e)
