@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
@@ -47,20 +48,24 @@
 			this.btnHelp = new System.Windows.Forms.Button();
 			this.tmrNavigation = new System.Windows.Forms.Timer(this.components);
 			this.pnlContent = new System.Windows.Forms.Panel();
+			this.ucNavInspection1 = new Info_IT.UserControls.ucInspection();
+			this.ucTutorRequest1 = new Info_IT.UserControls.ucTutorRequest();
+			this.ucRequest1 = new Info_IT.UserControls.ucRequest();
 			this.doubleBitmapControl1 = new BunifuAnimatorNS.DoubleBitmapControl();
+			this.ucVenue1 = new Info_IT.UserControls.ucVenue();
+			this.ucHome1 = new Info_IT.UserControls.ucHome();
+			this.ucEquipment1 = new Info_IT.UserControls.UcEquipment();
+			this.ucDepartment1 = new Info_IT.UserControls.ucDepartment();
 			this.panel6 = new System.Windows.Forms.Panel();
 			this.pnlLogin = new System.Windows.Forms.Panel();
 			this.lblLoginText = new System.Windows.Forms.Label();
 			this.lblLocation = new System.Windows.Forms.Label();
 			this.panel5 = new System.Windows.Forms.Panel();
-			this.ucNavInspection1 = new Info_IT.UserControls.ucInspection();
-			this.ucTutorRequest1 = new Info_IT.UserControls.ucTutorRequest();
-			this.ucRequest1 = new Info_IT.UserControls.ucRequest();
-			this.ucVenue1 = new Info_IT.UserControls.ucVenue();
-			this.ucHome1 = new Info_IT.UserControls.ucHome();
-			this.ucEquipment1 = new Info_IT.UserControls.UcEquipment();
-			this.ucDepartment1 = new Info_IT.UserControls.ucDepartment();
-			this.ucLogin1 = new Info_IT.UserControls.ucLogin();
+			this.pnlLoginFields = new System.Windows.Forms.Panel();
+			this.btnLogIn = new Bunifu.Framework.UI.BunifuThinButton2();
+			this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+			this.txtUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+			this.label2 = new System.Windows.Forms.Label();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.pnlNavigation.SuspendLayout();
@@ -68,6 +73,7 @@
 			this.pnlContent.SuspendLayout();
 			this.panel6.SuspendLayout();
 			this.pnlLogin.SuspendLayout();
+			this.pnlLoginFields.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel2
@@ -286,7 +292,7 @@
 			// 
 			// pnlContent
 			// 
-			this.pnlContent.Controls.Add(this.ucLogin1);
+			this.pnlContent.Controls.Add(this.pnlLoginFields);
 			this.pnlContent.Controls.Add(this.ucNavInspection1);
 			this.pnlContent.Controls.Add(this.ucTutorRequest1);
 			this.pnlContent.Controls.Add(this.ucRequest1);
@@ -301,70 +307,6 @@
 			this.pnlContent.Name = "pnlContent";
 			this.pnlContent.Size = new System.Drawing.Size(1056, 620);
 			this.pnlContent.TabIndex = 3;
-			// 
-			// doubleBitmapControl1
-			// 
-			this.doubleBitmapControl1.Location = new System.Drawing.Point(252, 192);
-			this.doubleBitmapControl1.Name = "doubleBitmapControl1";
-			this.doubleBitmapControl1.Size = new System.Drawing.Size(75, 23);
-			this.doubleBitmapControl1.TabIndex = 5;
-			this.doubleBitmapControl1.Text = "doubleBitmapControl1";
-			this.doubleBitmapControl1.Visible = false;
-			// 
-			// panel6
-			// 
-			this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.panel6.Controls.Add(this.pnlLogin);
-			this.panel6.Controls.Add(this.lblLocation);
-			this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel6.Location = new System.Drawing.Point(0, 0);
-			this.panel6.Name = "panel6";
-			this.panel6.Size = new System.Drawing.Size(1056, 67);
-			this.panel6.TabIndex = 0;
-			// 
-			// pnlLogin
-			// 
-			this.pnlLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.pnlLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.pnlLogin.Controls.Add(this.lblLoginText);
-			this.pnlLogin.Location = new System.Drawing.Point(861, 0);
-			this.pnlLogin.Name = "pnlLogin";
-			this.pnlLogin.Size = new System.Drawing.Size(195, 29);
-			this.pnlLogin.TabIndex = 1;
-			this.pnlLogin.Click += new System.EventHandler(this.PnlLogin_Click);
-			this.pnlLogin.MouseEnter += new System.EventHandler(this.PnlLogin_MouseEnter);
-			this.pnlLogin.MouseLeave += new System.EventHandler(this.PnlLogin_MouseLeave);
-			// 
-			// lblLoginText
-			// 
-			this.lblLoginText.AutoSize = true;
-			this.lblLoginText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblLoginText.Location = new System.Drawing.Point(70, 0);
-			this.lblLoginText.Name = "lblLoginText";
-			this.lblLoginText.Size = new System.Drawing.Size(70, 25);
-			this.lblLoginText.TabIndex = 0;
-			this.lblLoginText.Text = "label2";
-			this.lblLoginText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.lblLoginText.Click += new System.EventHandler(this.LblLoginText_Click);
-			this.lblLoginText.MouseEnter += new System.EventHandler(this.LblLoginText_MouseEnter);
-			this.lblLoginText.MouseLeave += new System.EventHandler(this.LblLoginText_MouseLeave);
-			// 
-			// lblLocation
-			// 
-			this.lblLocation.AutoSize = true;
-			this.lblLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblLocation.Location = new System.Drawing.Point(6, 9);
-			this.lblLocation.Name = "lblLocation";
-			this.lblLocation.Size = new System.Drawing.Size(146, 39);
-			this.lblLocation.TabIndex = 0;
-			this.lblLocation.Text = "Location";
-			// 
-			// panel5
-			// 
-			this.panel5.Location = new System.Drawing.Point(200, 0);
-			this.panel5.Name = "panel5";
-			this.panel5.Size = new System.Drawing.Size(1056, 30);
-			this.panel5.TabIndex = 2;
 			// 
 			// ucNavInspection1
 			// 
@@ -386,6 +328,15 @@
 			this.ucRequest1.Name = "ucRequest1";
 			this.ucRequest1.Size = new System.Drawing.Size(1056, 562);
 			this.ucRequest1.TabIndex = 6;
+			// 
+			// doubleBitmapControl1
+			// 
+			this.doubleBitmapControl1.Location = new System.Drawing.Point(252, 192);
+			this.doubleBitmapControl1.Name = "doubleBitmapControl1";
+			this.doubleBitmapControl1.Size = new System.Drawing.Size(75, 23);
+			this.doubleBitmapControl1.TabIndex = 5;
+			this.doubleBitmapControl1.Text = "doubleBitmapControl1";
+			this.doubleBitmapControl1.Visible = false;
 			// 
 			// ucVenue1
 			// 
@@ -415,13 +366,146 @@
 			this.ucDepartment1.Size = new System.Drawing.Size(1056, 562);
 			this.ucDepartment1.TabIndex = 1;
 			// 
-			// ucLogin1
+			// panel6
 			// 
-			this.ucLogin1.isLoggedIn = false;
-			this.ucLogin1.Location = new System.Drawing.Point(0, 58);
-			this.ucLogin1.Name = "ucLogin1";
-			this.ucLogin1.Size = new System.Drawing.Size(1056, 562);
-			this.ucLogin1.TabIndex = 9;
+			this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.panel6.Controls.Add(this.pnlLogin);
+			this.panel6.Controls.Add(this.lblLocation);
+			this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel6.Location = new System.Drawing.Point(0, 0);
+			this.panel6.Name = "panel6";
+			this.panel6.Size = new System.Drawing.Size(1056, 63);
+			this.panel6.TabIndex = 0;
+			// 
+			// pnlLogin
+			// 
+			this.pnlLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.pnlLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.pnlLogin.Controls.Add(this.lblLoginText);
+			this.pnlLogin.Location = new System.Drawing.Point(861, 0);
+			this.pnlLogin.Name = "pnlLogin";
+			this.pnlLogin.Size = new System.Drawing.Size(195, 29);
+			this.pnlLogin.TabIndex = 1;
+			this.pnlLogin.Click += new System.EventHandler(this.PnlLogin_Click);
+			this.pnlLogin.MouseEnter += new System.EventHandler(this.PnlLogin_MouseEnter);
+			this.pnlLogin.MouseLeave += new System.EventHandler(this.PnlLogin_MouseLeave);
+			// 
+			// lblLoginText
+			// 
+			this.lblLoginText.AutoSize = true;
+			this.lblLoginText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblLoginText.Location = new System.Drawing.Point(35, 0);
+			this.lblLoginText.Name = "lblLoginText";
+			this.lblLoginText.Size = new System.Drawing.Size(119, 25);
+			this.lblLoginText.TabIndex = 0;
+			this.lblLoginText.Text = "Log In Text";
+			this.lblLoginText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.lblLoginText.Click += new System.EventHandler(this.LblLoginText_Click);
+			this.lblLoginText.MouseEnter += new System.EventHandler(this.LblLoginText_MouseEnter);
+			this.lblLoginText.MouseLeave += new System.EventHandler(this.LblLoginText_MouseLeave);
+			// 
+			// lblLocation
+			// 
+			this.lblLocation.AutoSize = true;
+			this.lblLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblLocation.Location = new System.Drawing.Point(6, 9);
+			this.lblLocation.Name = "lblLocation";
+			this.lblLocation.Size = new System.Drawing.Size(146, 39);
+			this.lblLocation.TabIndex = 0;
+			this.lblLocation.Text = "Location";
+			// 
+			// panel5
+			// 
+			this.panel5.Location = new System.Drawing.Point(200, 0);
+			this.panel5.Name = "panel5";
+			this.panel5.Size = new System.Drawing.Size(1056, 30);
+			this.panel5.TabIndex = 2;
+			// 
+			// pnlLoginFields
+			// 
+			this.pnlLoginFields.Controls.Add(this.btnLogIn);
+			this.pnlLoginFields.Controls.Add(this.txtPassword);
+			this.pnlLoginFields.Controls.Add(this.txtUsername);
+			this.pnlLoginFields.Controls.Add(this.label2);
+			this.pnlLoginFields.Location = new System.Drawing.Point(0, 58);
+			this.pnlLoginFields.Name = "pnlLoginFields";
+			this.pnlLoginFields.Size = new System.Drawing.Size(1056, 562);
+			this.pnlLoginFields.TabIndex = 2;
+			// 
+			// btnLogIn
+			// 
+			this.btnLogIn.ActiveBorderThickness = 1;
+			this.btnLogIn.ActiveCornerRadius = 20;
+			this.btnLogIn.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnLogIn.ActiveForecolor = System.Drawing.Color.White;
+			this.btnLogIn.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnLogIn.BackColor = System.Drawing.SystemColors.Control;
+			this.btnLogIn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogIn.BackgroundImage")));
+			this.btnLogIn.ButtonText = "Log In";
+			this.btnLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnLogIn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnLogIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnLogIn.IdleBorderThickness = 1;
+			this.btnLogIn.IdleCornerRadius = 20;
+			this.btnLogIn.IdleFillColor = System.Drawing.Color.White;
+			this.btnLogIn.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnLogIn.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnLogIn.Location = new System.Drawing.Point(437, 353);
+			this.btnLogIn.Margin = new System.Windows.Forms.Padding(5);
+			this.btnLogIn.Name = "btnLogIn";
+			this.btnLogIn.Size = new System.Drawing.Size(181, 41);
+			this.btnLogIn.TabIndex = 7;
+			this.btnLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// txtPassword
+			// 
+			this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+			this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.txtPassword.HintForeColor = System.Drawing.Color.Empty;
+			this.txtPassword.HintText = "";
+			this.txtPassword.isPassword = false;
+			this.txtPassword.LineFocusedColor = System.Drawing.Color.Blue;
+			this.txtPassword.LineIdleColor = System.Drawing.Color.Gray;
+			this.txtPassword.LineMouseHoverColor = System.Drawing.Color.Blue;
+			this.txtPassword.LineThickness = 3;
+			this.txtPassword.Location = new System.Drawing.Point(343, 272);
+			this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+			this.txtPassword.Name = "txtPassword";
+			this.txtPassword.Size = new System.Drawing.Size(370, 44);
+			this.txtPassword.TabIndex = 6;
+			this.txtPassword.Text = "Password";
+			this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			// 
+			// txtUsername
+			// 
+			this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+			this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.txtUsername.HintForeColor = System.Drawing.Color.Empty;
+			this.txtUsername.HintText = "";
+			this.txtUsername.isPassword = false;
+			this.txtUsername.LineFocusedColor = System.Drawing.Color.Blue;
+			this.txtUsername.LineIdleColor = System.Drawing.Color.Gray;
+			this.txtUsername.LineMouseHoverColor = System.Drawing.Color.Blue;
+			this.txtUsername.LineThickness = 3;
+			this.txtUsername.Location = new System.Drawing.Point(343, 220);
+			this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+			this.txtUsername.Name = "txtUsername";
+			this.txtUsername.Size = new System.Drawing.Size(370, 44);
+			this.txtUsername.TabIndex = 5;
+			this.txtUsername.Text = "Username";
+			this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(465, 169);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(119, 47);
+			this.label2.TabIndex = 4;
+			this.label2.Text = "Log In";
 			// 
 			// Home
 			// 
@@ -435,7 +519,6 @@
 			this.Name = "Home";
 			this.Text = "Template";
 			this.Load += new System.EventHandler(this.Template_Load);
-			this.Resize += new System.EventHandler(this.Template_Resize);
 			this.panel2.ResumeLayout(false);
 			this.panel3.ResumeLayout(false);
 			this.pnlNavigation.ResumeLayout(false);
@@ -446,6 +529,8 @@
 			this.panel6.PerformLayout();
 			this.pnlLogin.ResumeLayout(false);
 			this.pnlLogin.PerformLayout();
+			this.pnlLoginFields.ResumeLayout(false);
+			this.pnlLoginFields.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -482,6 +567,10 @@
 		private UserControls.ucRequest ucRequest1;
 		private UserControls.ucTutorRequest ucTutorRequest1;
 		private UserControls.ucInspection ucNavInspection1;
-		private UserControls.ucLogin ucLogin1;
+		private System.Windows.Forms.Panel pnlLoginFields;
+		private Bunifu.Framework.UI.BunifuThinButton2 btnLogIn;
+		private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassword;
+		private Bunifu.Framework.UI.BunifuMaterialTextbox txtUsername;
+		private System.Windows.Forms.Label label2;
 	}
 }
