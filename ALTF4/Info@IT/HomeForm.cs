@@ -27,6 +27,7 @@ namespace Info_IT
 		}
 		private void LoginPanel()
 		{
+			//This is like an If Else statement for isLoggedIn
 			switch(isLoggedIn) {
 				case true:
 					lblLoginText.Text = "Log out";

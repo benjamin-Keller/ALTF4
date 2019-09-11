@@ -15,7 +15,7 @@ namespace Info_IT.UserControls
 
 		private void UcVenue_Load(object sender, EventArgs e)
 		{
-            dgvVenue.DataSource = bll.GetVenues();
+            //dgvVenue.DataSource = bll.GetVenues();
             
             cmbBuilding.DataSource = bll.LoadCMBBuilding();
             

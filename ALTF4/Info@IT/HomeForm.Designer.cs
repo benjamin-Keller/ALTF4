@@ -47,19 +47,19 @@
 			this.btnHelp = new System.Windows.Forms.Button();
 			this.tmrNavigation = new System.Windows.Forms.Timer(this.components);
 			this.pnlContent = new System.Windows.Forms.Panel();
+			this.doubleBitmapControl1 = new BunifuAnimatorNS.DoubleBitmapControl();
+			this.panel6 = new System.Windows.Forms.Panel();
+			this.pnlLogin = new System.Windows.Forms.Panel();
+			this.lblLoginText = new System.Windows.Forms.Label();
+			this.lblLocation = new System.Windows.Forms.Label();
+			this.panel5 = new System.Windows.Forms.Panel();
 			this.ucNavInspection1 = new Info_IT.UserControls.ucInspection();
 			this.ucTutorRequest1 = new Info_IT.UserControls.ucTutorRequest();
 			this.ucRequest1 = new Info_IT.UserControls.ucRequest();
-			this.doubleBitmapControl1 = new BunifuAnimatorNS.DoubleBitmapControl();
 			this.ucVenue1 = new Info_IT.UserControls.ucVenue();
 			this.ucHome1 = new Info_IT.UserControls.ucHome();
 			this.ucEquipment1 = new Info_IT.UserControls.UcEquipment();
 			this.ucDepartment1 = new Info_IT.UserControls.ucDepartment();
-			this.panel6 = new System.Windows.Forms.Panel();
-			this.lblLocation = new System.Windows.Forms.Label();
-			this.pnlLogin = new System.Windows.Forms.Panel();
-			this.lblLoginText = new System.Windows.Forms.Label();
-			this.panel5 = new System.Windows.Forms.Panel();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.pnlNavigation.SuspendLayout();
@@ -300,6 +300,70 @@
 			this.pnlContent.Size = new System.Drawing.Size(1056, 620);
 			this.pnlContent.TabIndex = 3;
 			// 
+			// doubleBitmapControl1
+			// 
+			this.doubleBitmapControl1.Location = new System.Drawing.Point(252, 192);
+			this.doubleBitmapControl1.Name = "doubleBitmapControl1";
+			this.doubleBitmapControl1.Size = new System.Drawing.Size(75, 23);
+			this.doubleBitmapControl1.TabIndex = 5;
+			this.doubleBitmapControl1.Text = "doubleBitmapControl1";
+			this.doubleBitmapControl1.Visible = false;
+			// 
+			// panel6
+			// 
+			this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.panel6.Controls.Add(this.pnlLogin);
+			this.panel6.Controls.Add(this.lblLocation);
+			this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel6.Location = new System.Drawing.Point(0, 0);
+			this.panel6.Name = "panel6";
+			this.panel6.Size = new System.Drawing.Size(1056, 67);
+			this.panel6.TabIndex = 0;
+			// 
+			// pnlLogin
+			// 
+			this.pnlLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.pnlLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.pnlLogin.Controls.Add(this.lblLoginText);
+			this.pnlLogin.Location = new System.Drawing.Point(861, 0);
+			this.pnlLogin.Name = "pnlLogin";
+			this.pnlLogin.Size = new System.Drawing.Size(195, 29);
+			this.pnlLogin.TabIndex = 1;
+			this.pnlLogin.Click += new System.EventHandler(this.PnlLogin_Click);
+			this.pnlLogin.MouseEnter += new System.EventHandler(this.PnlLogin_MouseEnter);
+			this.pnlLogin.MouseLeave += new System.EventHandler(this.PnlLogin_MouseLeave);
+			// 
+			// lblLoginText
+			// 
+			this.lblLoginText.AutoSize = true;
+			this.lblLoginText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblLoginText.Location = new System.Drawing.Point(70, 0);
+			this.lblLoginText.Name = "lblLoginText";
+			this.lblLoginText.Size = new System.Drawing.Size(70, 25);
+			this.lblLoginText.TabIndex = 0;
+			this.lblLoginText.Text = "label2";
+			this.lblLoginText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.lblLoginText.Click += new System.EventHandler(this.LblLoginText_Click);
+			this.lblLoginText.MouseEnter += new System.EventHandler(this.LblLoginText_MouseEnter);
+			this.lblLoginText.MouseLeave += new System.EventHandler(this.LblLoginText_MouseLeave);
+			// 
+			// lblLocation
+			// 
+			this.lblLocation.AutoSize = true;
+			this.lblLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblLocation.Location = new System.Drawing.Point(6, 9);
+			this.lblLocation.Name = "lblLocation";
+			this.lblLocation.Size = new System.Drawing.Size(146, 39);
+			this.lblLocation.TabIndex = 0;
+			this.lblLocation.Text = "Location";
+			// 
+			// panel5
+			// 
+			this.panel5.Location = new System.Drawing.Point(200, 0);
+			this.panel5.Name = "panel5";
+			this.panel5.Size = new System.Drawing.Size(1056, 30);
+			this.panel5.TabIndex = 2;
+			// 
 			// ucNavInspection1
 			// 
 			this.ucNavInspection1.Location = new System.Drawing.Point(0, 58);
@@ -320,15 +384,6 @@
 			this.ucRequest1.Name = "ucRequest1";
 			this.ucRequest1.Size = new System.Drawing.Size(1056, 562);
 			this.ucRequest1.TabIndex = 6;
-			// 
-			// doubleBitmapControl1
-			// 
-			this.doubleBitmapControl1.Location = new System.Drawing.Point(252, 192);
-			this.doubleBitmapControl1.Name = "doubleBitmapControl1";
-			this.doubleBitmapControl1.Size = new System.Drawing.Size(75, 23);
-			this.doubleBitmapControl1.TabIndex = 5;
-			this.doubleBitmapControl1.Text = "doubleBitmapControl1";
-			this.doubleBitmapControl1.Visible = false;
 			// 
 			// ucVenue1
 			// 
@@ -357,60 +412,6 @@
 			this.ucDepartment1.Name = "ucDepartment1";
 			this.ucDepartment1.Size = new System.Drawing.Size(1056, 562);
 			this.ucDepartment1.TabIndex = 1;
-			// 
-			// panel6
-			// 
-			this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.panel6.Controls.Add(this.pnlLogin);
-			this.panel6.Controls.Add(this.lblLocation);
-			this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel6.Location = new System.Drawing.Point(0, 0);
-			this.panel6.Name = "panel6";
-			this.panel6.Size = new System.Drawing.Size(1056, 67);
-			this.panel6.TabIndex = 0;
-			// 
-			// lblLocation
-			// 
-			this.lblLocation.AutoSize = true;
-			this.lblLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblLocation.Location = new System.Drawing.Point(6, 9);
-			this.lblLocation.Name = "lblLocation";
-			this.lblLocation.Size = new System.Drawing.Size(146, 39);
-			this.lblLocation.TabIndex = 0;
-			this.lblLocation.Text = "Location";
-			// 
-			// pnlLogin
-			// 
-			this.pnlLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.pnlLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.pnlLogin.Controls.Add(this.lblLoginText);
-			this.pnlLogin.Location = new System.Drawing.Point(861, 0);
-			this.pnlLogin.Name = "pnlLogin";
-			this.pnlLogin.Size = new System.Drawing.Size(195, 29);
-			this.pnlLogin.TabIndex = 1;
-			this.pnlLogin.Click += new System.EventHandler(this.PnlLogin_Click);
-			this.pnlLogin.MouseEnter += new System.EventHandler(this.PnlLogin_MouseEnter);
-			this.pnlLogin.MouseLeave += new System.EventHandler(this.PnlLogin_MouseLeave);
-			// 
-			// lblLoginText
-			// 
-			this.lblLoginText.AutoSize = true;
-			this.lblLoginText.Location = new System.Drawing.Point(75, 9);
-			this.lblLoginText.Name = "lblLoginText";
-			this.lblLoginText.Size = new System.Drawing.Size(35, 13);
-			this.lblLoginText.TabIndex = 0;
-			this.lblLoginText.Text = "label2";
-			this.lblLoginText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.lblLoginText.Click += new System.EventHandler(this.LblLoginText_Click);
-			this.lblLoginText.MouseEnter += new System.EventHandler(this.LblLoginText_MouseEnter);
-			this.lblLoginText.MouseLeave += new System.EventHandler(this.LblLoginText_MouseLeave);
-			// 
-			// panel5
-			// 
-			this.panel5.Location = new System.Drawing.Point(200, 0);
-			this.panel5.Name = "panel5";
-			this.panel5.Size = new System.Drawing.Size(1056, 30);
-			this.panel5.TabIndex = 2;
 			// 
 			// Home
 			// 
