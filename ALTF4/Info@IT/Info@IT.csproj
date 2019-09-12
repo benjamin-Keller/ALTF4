@@ -84,30 +84,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EquipmentType.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EquipmentType.Designer.cs">
-      <DependentUpon>EquipmentType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Inspection.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inspection.Designer.cs">
-      <DependentUpon>Inspection.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InspectionDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InspectionDetail.Designer.cs">
-      <DependentUpon>InspectionDetail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="Staff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,23 +96,11 @@
     <Compile Include="Student.Designer.cs">
       <DependentUpon>Student.cs</DependentUpon>
     </Compile>
-    <Compile Include="TaskType.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TaskType.Designer.cs">
-      <DependentUpon>TaskType.cs</DependentUpon>
-    </Compile>
     <Compile Include="HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TutorRequest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TutorRequest.Designer.cs">
-      <DependentUpon>TutorRequest.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucDepartment.cs">
       <SubType>UserControl</SubType>
@@ -206,32 +170,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="EquipmentType.resx">
-      <DependentUpon>EquipmentType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inspection.resx">
-      <DependentUpon>Inspection.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InspectionDetail.resx">
-      <DependentUpon>InspectionDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student.resx">
       <DependentUpon>Student.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TaskType.resx">
-      <DependentUpon>TaskType.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TutorRequest.resx">
-      <DependentUpon>TutorRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucDepartment.resx">
       <DependentUpon>ucDepartment.cs</DependentUpon>
@@ -276,7 +222,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Info%40IT_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
