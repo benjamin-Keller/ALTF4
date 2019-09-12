@@ -185,15 +185,7 @@ namespace Info_IT
 			pnlLoginFields.Hide();	
 		}
 		//Login bar
-		private void PnlLogin_Click(object sender, EventArgs e)
-		{
-			LoginPanel();
-
-			//Hidden when first launching
-			pnlNavigation.Hide();
-			pnlLogin.Hide();
-		}
-		private void LblLoginText_Click(object sender, EventArgs e)
+		private void Login_Click(object sender, EventArgs e)
 		{
 			LoginPanel();
 
