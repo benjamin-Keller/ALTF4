@@ -17,8 +17,10 @@ namespace Info_IT
 		{
 			HideAll();
 			LoginPanel();
-			
 
+			//Hidden when first launching
+			pnlNavigation.Hide();
+			pnlLogin.Hide();
 		}
 
 		public void LoginPanel()
@@ -112,6 +114,11 @@ namespace Info_IT
 			LoginPanel();
 			HideAll();
 			ucHome1.Show();
+
+			this.Text = "Info@IT";
+			lblLocation.Text = "Home";
+
+			pnlNavigation.Show();
 		}
 
 
@@ -142,10 +149,18 @@ namespace Info_IT
 		private void PnlLogin_Click(object sender, EventArgs e)
 		{
 			LoginPanel();
+
+			//Hidden when first launching
+			pnlNavigation.Hide();
+			pnlLogin.Hide();
 		}
 		private void LblLoginText_Click(object sender, EventArgs e)
 		{
 			LoginPanel();
+
+			//Hidden when first launching
+			pnlNavigation.Hide();
+			pnlLogin.Hide();
 		}
 
 

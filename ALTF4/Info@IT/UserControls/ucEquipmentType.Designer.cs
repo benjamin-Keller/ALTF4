@@ -1,6 +1,6 @@
 ﻿namespace Info_IT.UserControls
 {
-	partial class ucVenue
+	partial class ucEquipmentType
 	{
 		/// <summary> 
 		/// Required designer variable.
@@ -29,9 +29,9 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			this.tmrView = new System.Windows.Forms.Timer(this.components);
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			this.tmrManage = new System.Windows.Forms.Timer(this.components);
 			this.btnManageUpdate = new System.Windows.Forms.Button();
 			this.btnManageAdd = new System.Windows.Forms.Button();
 			this.btnManage = new System.Windows.Forms.Button();
@@ -39,32 +39,25 @@
 			this.btnViewList = new System.Windows.Forms.Button();
 			this.btnView = new System.Windows.Forms.Button();
 			this.pnlView = new System.Windows.Forms.Panel();
-			this.tmrManage = new System.Windows.Forms.Timer(this.components);
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.panel3 = new System.Windows.Forms.Panel();
-			this.dgvVenue = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+			this.btnCloseDetails = new Bunifu.Framework.UI.BunifuFlatButton();
+			this.dgvEquipmentDetails = new Bunifu.Framework.UI.BunifuCustomDataGrid();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.label6 = new System.Windows.Forms.Label();
-			this.cmbBuildingBlock = new System.Windows.Forms.ComboBox();
-			this.txtDoorNo = new System.Windows.Forms.TextBox();
-			this.label5 = new System.Windows.Forms.Label();
-			this.txtCapacity = new System.Windows.Forms.TextBox();
-			this.label4 = new System.Windows.Forms.Label();
-			this.cmbBuilding = new System.Windows.Forms.ComboBox();
-			this.txtDescription = new System.Windows.Forms.TextBox();
-			this.label3 = new System.Windows.Forms.Label();
+			this.tmrView = new System.Windows.Forms.Timer(this.components);
+			this.panel3 = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
+			this.txtEquipmentType = new System.Windows.Forms.TextBox();
 			this.pnlManage.SuspendLayout();
 			this.pnlView.SuspendLayout();
 			this.panel1.SuspendLayout();
-			this.panel3.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvVenue)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvEquipmentDetails)).BeginInit();
 			this.groupBox1.SuspendLayout();
+			this.panel3.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// tmrView
+			// tmrManage
 			// 
-			this.tmrView.Tick += new System.EventHandler(this.TmrView_Tick);
+			this.tmrManage.Tick += new System.EventHandler(this.TmrManage_Tick);
 			// 
 			// btnManageUpdate
 			// 
@@ -77,7 +70,7 @@
 			this.btnManageUpdate.Name = "btnManageUpdate";
 			this.btnManageUpdate.Size = new System.Drawing.Size(200, 31);
 			this.btnManageUpdate.TabIndex = 7;
-			this.btnManageUpdate.Text = "Update Selected Venue Type";
+			this.btnManageUpdate.Text = "Update Selected Equipment Type";
 			this.btnManageUpdate.UseVisualStyleBackColor = false;
 			this.btnManageUpdate.Click += new System.EventHandler(this.BtnManageUpdate_Click);
 			// 
@@ -92,7 +85,7 @@
 			this.btnManageAdd.Name = "btnManageAdd";
 			this.btnManageAdd.Size = new System.Drawing.Size(200, 31);
 			this.btnManageAdd.TabIndex = 6;
-			this.btnManageAdd.Text = "Add Venue Type";
+			this.btnManageAdd.Text = "Add Equipment Type";
 			this.btnManageAdd.UseVisualStyleBackColor = false;
 			this.btnManageAdd.Click += new System.EventHandler(this.BtnManageAdd_Click);
 			// 
@@ -138,7 +131,7 @@
 			this.btnViewList.Name = "btnViewList";
 			this.btnViewList.Size = new System.Drawing.Size(200, 31);
 			this.btnViewList.TabIndex = 6;
-			this.btnViewList.Text = "List All Venue Type";
+			this.btnViewList.Text = "List All Equipment Types";
 			this.btnViewList.UseVisualStyleBackColor = false;
 			this.btnViewList.Click += new System.EventHandler(this.BtnViewList_Click);
 			// 
@@ -172,10 +165,6 @@
 			this.pnlView.Size = new System.Drawing.Size(200, 53);
 			this.pnlView.TabIndex = 13;
 			// 
-			// tmrManage
-			// 
-			this.tmrManage.Tick += new System.EventHandler(this.TmrManage_Tick);
-			// 
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
@@ -185,182 +174,140 @@
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(200, 562);
-			this.panel1.TabIndex = 12;
+			this.panel1.TabIndex = 21;
 			// 
-			// panel3
+			// btnCloseDetails
 			// 
-			this.panel3.Controls.Add(this.dgvVenue);
-			this.panel3.Location = new System.Drawing.Point(234, 100);
-			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(782, 426);
-			this.panel3.TabIndex = 11;
+			this.btnCloseDetails.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnCloseDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnCloseDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnCloseDetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.btnCloseDetails.BorderRadius = 0;
+			this.btnCloseDetails.ButtonText = "X";
+			this.btnCloseDetails.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnCloseDetails.DisabledColor = System.Drawing.Color.Gray;
+			this.btnCloseDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCloseDetails.Iconcolor = System.Drawing.Color.Transparent;
+			this.btnCloseDetails.Iconimage = null;
+			this.btnCloseDetails.Iconimage_right = null;
+			this.btnCloseDetails.Iconimage_right_Selected = null;
+			this.btnCloseDetails.Iconimage_Selected = null;
+			this.btnCloseDetails.IconMarginLeft = 0;
+			this.btnCloseDetails.IconMarginRight = 0;
+			this.btnCloseDetails.IconRightVisible = true;
+			this.btnCloseDetails.IconRightZoom = 0D;
+			this.btnCloseDetails.IconVisible = true;
+			this.btnCloseDetails.IconZoom = 90D;
+			this.btnCloseDetails.IsTab = false;
+			this.btnCloseDetails.Location = new System.Drawing.Point(1025, 0);
+			this.btnCloseDetails.Margin = new System.Windows.Forms.Padding(4);
+			this.btnCloseDetails.Name = "btnCloseDetails";
+			this.btnCloseDetails.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnCloseDetails.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+			this.btnCloseDetails.OnHoverTextColor = System.Drawing.Color.White;
+			this.btnCloseDetails.selected = false;
+			this.btnCloseDetails.Size = new System.Drawing.Size(32, 32);
+			this.btnCloseDetails.TabIndex = 18;
+			this.btnCloseDetails.Text = "X";
+			this.btnCloseDetails.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.btnCloseDetails.Textcolor = System.Drawing.Color.White;
+			this.btnCloseDetails.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCloseDetails.Click += new System.EventHandler(this.BtnCloseDetails_Click);
 			// 
-			// dgvVenue
+			// dgvEquipmentDetails
 			// 
-			this.dgvVenue.AllowUserToAddRows = false;
-			this.dgvVenue.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvVenue.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-			this.dgvVenue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.dgvVenue.BackgroundColor = System.Drawing.SystemColors.Control;
-			this.dgvVenue.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.dgvVenue.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvVenue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-			this.dgvVenue.ColumnHeadersHeight = 50;
-			this.dgvVenue.DoubleBuffered = true;
-			this.dgvVenue.EnableHeadersVisualStyles = false;
-			this.dgvVenue.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.dgvVenue.HeaderForeColor = System.Drawing.Color.White;
-			this.dgvVenue.Location = new System.Drawing.Point(0, -1);
-			this.dgvVenue.Name = "dgvVenue";
-			this.dgvVenue.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			this.dgvVenue.Size = new System.Drawing.Size(782, 429);
-			this.dgvVenue.TabIndex = 1;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvEquipmentDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+			this.dgvEquipmentDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvEquipmentDetails.BackgroundColor = System.Drawing.SystemColors.Control;
+			this.dgvEquipmentDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.dgvEquipmentDetails.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvEquipmentDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+			this.dgvEquipmentDetails.ColumnHeadersHeight = 50;
+			this.dgvEquipmentDetails.DoubleBuffered = true;
+			this.dgvEquipmentDetails.EnableHeadersVisualStyles = false;
+			this.dgvEquipmentDetails.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.dgvEquipmentDetails.HeaderForeColor = System.Drawing.Color.White;
+			this.dgvEquipmentDetails.Location = new System.Drawing.Point(0, 0);
+			this.dgvEquipmentDetails.Name = "dgvEquipmentDetails";
+			this.dgvEquipmentDetails.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			this.dgvEquipmentDetails.Size = new System.Drawing.Size(782, 429);
+			this.dgvEquipmentDetails.TabIndex = 0;
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Controls.Add(this.label6);
-			this.groupBox1.Controls.Add(this.cmbBuildingBlock);
-			this.groupBox1.Controls.Add(this.txtDoorNo);
-			this.groupBox1.Controls.Add(this.label5);
-			this.groupBox1.Controls.Add(this.txtCapacity);
-			this.groupBox1.Controls.Add(this.label4);
-			this.groupBox1.Controls.Add(this.cmbBuilding);
-			this.groupBox1.Controls.Add(this.txtDescription);
-			this.groupBox1.Controls.Add(this.label3);
+			this.groupBox1.Controls.Add(this.txtEquipmentType);
 			this.groupBox1.Controls.Add(this.label1);
 			this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
 			this.groupBox1.Location = new System.Drawing.Point(234, 23);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(782, 71);
-			this.groupBox1.TabIndex = 13;
+			this.groupBox1.Size = new System.Drawing.Size(784, 71);
+			this.groupBox1.TabIndex = 20;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Information";
 			// 
-			// label6
+			// tmrView
 			// 
-			this.label6.AutoSize = true;
-			this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label6.Location = new System.Drawing.Point(594, 16);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(64, 17);
-			this.label6.TabIndex = 11;
-			this.label6.Text = "Building:";
+			this.tmrView.Tick += new System.EventHandler(this.TmrView_Tick);
 			// 
-			// cmbBuildingBlock
+			// panel3
 			// 
-			this.cmbBuildingBlock.FormattingEnabled = true;
-			this.cmbBuildingBlock.Location = new System.Drawing.Point(473, 35);
-			this.cmbBuildingBlock.Name = "cmbBuildingBlock";
-			this.cmbBuildingBlock.Size = new System.Drawing.Size(118, 23);
-			this.cmbBuildingBlock.TabIndex = 10;
-			// 
-			// txtDoorNo
-			// 
-			this.txtDoorNo.Location = new System.Drawing.Point(342, 35);
-			this.txtDoorNo.Name = "txtDoorNo";
-			this.txtDoorNo.Size = new System.Drawing.Size(125, 23);
-			this.txtDoorNo.TabIndex = 9;
-			// 
-			// label5
-			// 
-			this.label5.AutoSize = true;
-			this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label5.Location = new System.Drawing.Point(339, 16);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(55, 17);
-			this.label5.TabIndex = 8;
-			this.label5.Text = "Door #:";
-			// 
-			// txtCapacity
-			// 
-			this.txtCapacity.Location = new System.Drawing.Point(208, 35);
-			this.txtCapacity.Name = "txtCapacity";
-			this.txtCapacity.Size = new System.Drawing.Size(128, 23);
-			this.txtCapacity.TabIndex = 7;
-			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label4.Location = new System.Drawing.Point(473, 17);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(102, 17);
-			this.label4.TabIndex = 6;
-			this.label4.Text = "Building Block:";
-			// 
-			// cmbBuilding
-			// 
-			this.cmbBuilding.FormattingEnabled = true;
-			this.cmbBuilding.Location = new System.Drawing.Point(597, 35);
-			this.cmbBuilding.Name = "cmbBuilding";
-			this.cmbBuilding.Size = new System.Drawing.Size(144, 23);
-			this.cmbBuilding.TabIndex = 4;
-			// 
-			// txtDescription
-			// 
-			this.txtDescription.Location = new System.Drawing.Point(15, 35);
-			this.txtDescription.Name = "txtDescription";
-			this.txtDescription.Size = new System.Drawing.Size(187, 23);
-			this.txtDescription.TabIndex = 3;
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label3.Location = new System.Drawing.Point(205, 16);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(64, 17);
-			this.label3.TabIndex = 2;
-			this.label3.Text = "Capacity:";
+			this.panel3.Controls.Add(this.dgvEquipmentDetails);
+			this.panel3.Location = new System.Drawing.Point(234, 100);
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new System.Drawing.Size(782, 429);
+			this.panel3.TabIndex = 19;
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
 			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label1.Location = new System.Drawing.Point(12, 16);
+			this.label1.Location = new System.Drawing.Point(12, 18);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(83, 17);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Description:";
+			this.label1.Size = new System.Drawing.Size(112, 17);
+			this.label1.TabIndex = 32;
+			this.label1.Text = "Equipment Type:";
 			// 
-			// ucVenue
+			// txtEquipmentType
+			// 
+			this.txtEquipmentType.Location = new System.Drawing.Point(15, 35);
+			this.txtEquipmentType.Name = "txtEquipmentType";
+			this.txtEquipmentType.Size = new System.Drawing.Size(205, 23);
+			this.txtEquipmentType.TabIndex = 33;
+			// 
+			// ucEquipmentType
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.panel1);
+			this.Controls.Add(this.btnCloseDetails);
+			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.panel3);
-			this.Name = "ucVenue";
+			this.Name = "ucEquipmentType";
 			this.Size = new System.Drawing.Size(1056, 562);
-			this.Load += new System.EventHandler(this.UcVenue_Load);
 			this.pnlManage.ResumeLayout(false);
 			this.pnlView.ResumeLayout(false);
 			this.panel1.ResumeLayout(false);
-			this.panel3.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dgvVenue)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvEquipmentDetails)).EndInit();
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
+			this.panel3.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-		private System.Windows.Forms.Timer tmrView;
+		private System.Windows.Forms.Timer tmrManage;
 		private System.Windows.Forms.Button btnManageUpdate;
 		private System.Windows.Forms.Button btnManageAdd;
 		private System.Windows.Forms.Button btnManage;
@@ -368,20 +315,13 @@
 		private System.Windows.Forms.Button btnViewList;
 		private System.Windows.Forms.Button btnView;
 		private System.Windows.Forms.Panel pnlView;
-		private System.Windows.Forms.Timer tmrManage;
 		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.Panel panel3;
+		private Bunifu.Framework.UI.BunifuFlatButton btnCloseDetails;
+		private Bunifu.Framework.UI.BunifuCustomDataGrid dgvEquipmentDetails;
 		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.ComboBox cmbBuildingBlock;
-		private System.Windows.Forms.TextBox txtDoorNo;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.TextBox txtCapacity;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.ComboBox cmbBuilding;
-		private System.Windows.Forms.TextBox txtDescription;
-		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Timer tmrView;
+		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.Label label1;
-		private Bunifu.Framework.UI.BunifuCustomDataGrid dgvVenue;
+		private System.Windows.Forms.TextBox txtEquipmentType;
 	}
 }

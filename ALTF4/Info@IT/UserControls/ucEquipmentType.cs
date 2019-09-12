@@ -1,27 +1,27 @@
-﻿using BLL;
-using System;
-using System.Windows.Forms;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
-
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Info_IT.UserControls
 {
-	public partial class UcEquipment : UserControl
+	public partial class ucEquipmentType : UserControl
 	{
-		BusinessLogicLayer bll = new BusinessLogicLayer();
-
-		public UcEquipment()
+		public ucEquipmentType()
 		{
 			InitializeComponent();
 		}
-		private void UcEquipment_Load(object sender, EventArgs e)
-		{
-			ucEquipmentType1.Hide();
-		}
-		private void CmbEquipTypeCode_SelectedIndexChanged(object sender, EventArgs e)
-		{
 
+		private void BtnCloseDetails_Click(object sender, EventArgs e)
+		{
+			this.Hide();
 		}
+
 
 		//Menu button (Manage)
 		private void BtnManage_Click(object sender, EventArgs e)
@@ -59,7 +59,6 @@ namespace Info_IT.UserControls
 		}
 
 
-		//Sub-Nav buttons
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
 
@@ -72,13 +71,7 @@ namespace Info_IT.UserControls
 
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
-			dgvEquipment.DataSource = bll.GetEquipment();
-			dgvEquipment.BackgroundColor = Color.White;
-		}
 
-		private void BtnViewEquipmentTypes_Click(object sender, EventArgs e)
-		{
-			ucEquipmentType1.Show();
 		}
 	}
 }
