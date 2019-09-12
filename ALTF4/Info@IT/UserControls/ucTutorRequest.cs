@@ -39,6 +39,11 @@ namespace Info_IT.UserControls
             cmbVenueCode.DisplayMember = "VenueDescription";
             cmbVenueCode.ValueMember = "VenueCode";
 
+            cmbModuleCode.DataSource = bll.LoadCMBModels();
+
+            cmbModuleCode.DisplayMember = "ModuleDescription";
+            cmbModuleCode.ValueMember = "ModuleCode";
+
         }
 
 		//Menu button (Manage)
@@ -78,7 +83,7 @@ namespace Info_IT.UserControls
 
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
-            DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), dateRequest.ToString(), int.Parse(txtStartTime.Text), int.Parse(txtEndTime.Text), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()));
+            DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), dateRequest.ToString(), Convert.ToDateTime(txtStartTime.Text), Convert.ToDateTime(txtEndTime.Text), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()));
 
             int x = bll.AddTutorRequest(tutorRequest);
 

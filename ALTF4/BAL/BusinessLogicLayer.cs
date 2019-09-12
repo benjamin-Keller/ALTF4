@@ -81,6 +81,11 @@ namespace BLL
         {
             return dal.PopulateCmbBuildingBlock();
         }
+        public DataTable LoadCMBModels()
+        {
+            return dal.PopulateCmbModels();
+        }
+        
 
         public int AddDepartment(DepartmentClass department)
         {

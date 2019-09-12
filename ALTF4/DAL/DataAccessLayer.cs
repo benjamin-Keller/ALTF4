@@ -120,6 +120,28 @@ namespace DAL
             return dt;
         }
 
+        public DataTable PopulateCmbModels()
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+            dbCmd = new SqlCommand("dbo.sp_GetAllModules", dbConn);
+            //dbCmd.CommandText = "sp_DisplayVenue";
+            //dbCmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return dt;
+        }
+
         public DataTable GetDepartment()
         {
             try
@@ -659,8 +681,8 @@ namespace DAL
 
                 dbCmd = new SqlCommand("dbo.sp_AddTutorRequest", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
-
-                dbCmd.Parameters.AddWithValue("@TutorRequestDate", tutorRequest.Date);
+                dbCmd.Parameters.AddWithValue("@RequestCode", tutorRequest.RequestCode);
+                dbCmd.Parameters.AddWithValue("@TutorRequestDate", Convert.ToDateTime(tutorRequest.Date));
                 dbCmd.Parameters.AddWithValue("@StartTime", tutorRequest.StartTime);
                 dbCmd.Parameters.AddWithValue("@EndTime", tutorRequest.EndTime);
                 dbCmd.Parameters.AddWithValue("@ModuleCode", tutorRequest.ModuleCode);
