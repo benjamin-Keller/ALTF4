@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class StudentClass
+    public class StudentClass
     {
+        public int StudentNumber { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string EmailAddress { get; set; }
+
+
+        public StudentClass(int studentNumber, string name, string surname, string emailAddress)
+        {
+            StudentNumber = studentNumber;
+            Name = name;
+            Surname = surname;
+            EmailAddress = emailAddress;
+        }
     }
 }
