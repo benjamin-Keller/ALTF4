@@ -48,32 +48,34 @@
 			this.btnHelp = new System.Windows.Forms.Button();
 			this.tmrNavigation = new System.Windows.Forms.Timer(this.components);
 			this.pnlContent = new System.Windows.Forms.Panel();
-			this.pnlLoginFields = new System.Windows.Forms.Panel();
-			this.btnLogIn = new Bunifu.Framework.UI.BunifuThinButton2();
-			this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-			this.txtUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.ucNavInspection1 = new Info_IT.UserControls.ucInspection();
-			this.ucTutorRequest1 = new Info_IT.UserControls.ucTutorRequest();
-			this.ucRequest1 = new Info_IT.UserControls.ucRequest();
 			this.doubleBitmapControl1 = new BunifuAnimatorNS.DoubleBitmapControl();
-			this.ucVenue1 = new Info_IT.UserControls.ucVenue();
-			this.ucHome1 = new Info_IT.UserControls.ucHome();
-			this.ucEquipment1 = new Info_IT.UserControls.UcEquipment();
-			this.ucDepartment1 = new Info_IT.UserControls.ucDepartment();
 			this.panel6 = new System.Windows.Forms.Panel();
 			this.pnlLogin = new System.Windows.Forms.Panel();
 			this.lblLoginText = new System.Windows.Forms.Label();
 			this.lblLocation = new System.Windows.Forms.Label();
 			this.panel5 = new System.Windows.Forms.Panel();
+			this.ucTaskType1 = new Info_IT.UserControls.ucTaskType();
+			this.ucNavInspection1 = new Info_IT.UserControls.ucInspection();
+			this.ucTutorRequest1 = new Info_IT.UserControls.ucTutorRequest();
+			this.ucRequest1 = new Info_IT.UserControls.ucRequest();
+			this.ucVenue1 = new Info_IT.UserControls.ucVenue();
+			this.ucHome1 = new Info_IT.UserControls.ucHome();
+			this.ucEquipment1 = new Info_IT.UserControls.UcEquipment();
+			this.ucDepartment1 = new Info_IT.UserControls.ucDepartment();
+			this.ucHelp1 = new Info_IT.UserControls.ucHelp();
+			this.pnlLoginFields = new System.Windows.Forms.Panel();
+			this.btnLogIn = new Bunifu.Framework.UI.BunifuThinButton2();
+			this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+			this.txtUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+			this.label2 = new System.Windows.Forms.Label();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.pnlNavigation.SuspendLayout();
 			this.panel4.SuspendLayout();
 			this.pnlContent.SuspendLayout();
-			this.pnlLoginFields.SuspendLayout();
 			this.panel6.SuspendLayout();
 			this.pnlLogin.SuspendLayout();
+			this.pnlLoginFields.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel2
@@ -297,6 +299,7 @@
 			this.btnHelp.TabIndex = 5;
 			this.btnHelp.Text = "Help";
 			this.btnHelp.UseVisualStyleBackColor = false;
+			this.btnHelp.Click += new System.EventHandler(this.BtnHelp_Click);
 			// 
 			// tmrNavigation
 			// 
@@ -305,6 +308,8 @@
 			// pnlContent
 			// 
 			this.pnlContent.Controls.Add(this.pnlLoginFields);
+			this.pnlContent.Controls.Add(this.ucHelp1);
+			this.pnlContent.Controls.Add(this.ucTaskType1);
 			this.pnlContent.Controls.Add(this.ucNavInspection1);
 			this.pnlContent.Controls.Add(this.ucTutorRequest1);
 			this.pnlContent.Controls.Add(this.ucRequest1);
@@ -320,6 +325,135 @@
 			this.pnlContent.Size = new System.Drawing.Size(1056, 620);
 			this.pnlContent.TabIndex = 3;
 			// 
+			// doubleBitmapControl1
+			// 
+			this.doubleBitmapControl1.Location = new System.Drawing.Point(252, 192);
+			this.doubleBitmapControl1.Name = "doubleBitmapControl1";
+			this.doubleBitmapControl1.Size = new System.Drawing.Size(75, 23);
+			this.doubleBitmapControl1.TabIndex = 5;
+			this.doubleBitmapControl1.Text = "doubleBitmapControl1";
+			this.doubleBitmapControl1.Visible = false;
+			// 
+			// panel6
+			// 
+			this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.panel6.Controls.Add(this.pnlLogin);
+			this.panel6.Controls.Add(this.lblLocation);
+			this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel6.Location = new System.Drawing.Point(0, 0);
+			this.panel6.Name = "panel6";
+			this.panel6.Size = new System.Drawing.Size(1056, 63);
+			this.panel6.TabIndex = 0;
+			// 
+			// pnlLogin
+			// 
+			this.pnlLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.pnlLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.pnlLogin.Controls.Add(this.lblLoginText);
+			this.pnlLogin.Location = new System.Drawing.Point(861, 0);
+			this.pnlLogin.Name = "pnlLogin";
+			this.pnlLogin.Size = new System.Drawing.Size(195, 29);
+			this.pnlLogin.TabIndex = 1;
+			this.pnlLogin.Click += new System.EventHandler(this.PnlLogin_Click);
+			this.pnlLogin.MouseEnter += new System.EventHandler(this.PnlLogin_MouseEnter);
+			this.pnlLogin.MouseLeave += new System.EventHandler(this.PnlLogin_MouseLeave);
+			// 
+			// lblLoginText
+			// 
+			this.lblLoginText.AutoSize = true;
+			this.lblLoginText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblLoginText.ForeColor = System.Drawing.Color.White;
+			this.lblLoginText.Location = new System.Drawing.Point(41, -2);
+			this.lblLoginText.Name = "lblLoginText";
+			this.lblLoginText.Size = new System.Drawing.Size(114, 30);
+			this.lblLoginText.TabIndex = 0;
+			this.lblLoginText.Text = "Log In Text";
+			this.lblLoginText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.lblLoginText.Click += new System.EventHandler(this.LblLoginText_Click);
+			this.lblLoginText.MouseEnter += new System.EventHandler(this.LblLoginText_MouseEnter);
+			this.lblLoginText.MouseLeave += new System.EventHandler(this.LblLoginText_MouseLeave);
+			// 
+			// lblLocation
+			// 
+			this.lblLocation.AutoSize = true;
+			this.lblLocation.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblLocation.ForeColor = System.Drawing.Color.White;
+			this.lblLocation.Location = new System.Drawing.Point(6, 9);
+			this.lblLocation.Name = "lblLocation";
+			this.lblLocation.Size = new System.Drawing.Size(144, 45);
+			this.lblLocation.TabIndex = 0;
+			this.lblLocation.Text = "Location";
+			// 
+			// panel5
+			// 
+			this.panel5.Location = new System.Drawing.Point(200, 0);
+			this.panel5.Name = "panel5";
+			this.panel5.Size = new System.Drawing.Size(1056, 30);
+			this.panel5.TabIndex = 2;
+			// 
+			// ucTaskType1
+			// 
+			this.ucTaskType1.Location = new System.Drawing.Point(0, 58);
+			this.ucTaskType1.Name = "ucTaskType1";
+			this.ucTaskType1.Size = new System.Drawing.Size(1056, 562);
+			this.ucTaskType1.TabIndex = 9;
+			// 
+			// ucNavInspection1
+			// 
+			this.ucNavInspection1.Location = new System.Drawing.Point(0, 58);
+			this.ucNavInspection1.Name = "ucNavInspection1";
+			this.ucNavInspection1.Size = new System.Drawing.Size(1056, 562);
+			this.ucNavInspection1.TabIndex = 8;
+			// 
+			// ucTutorRequest1
+			// 
+			this.ucTutorRequest1.Location = new System.Drawing.Point(0, 58);
+			this.ucTutorRequest1.Name = "ucTutorRequest1";
+			this.ucTutorRequest1.Size = new System.Drawing.Size(1056, 562);
+			this.ucTutorRequest1.TabIndex = 7;
+			// 
+			// ucRequest1
+			// 
+			this.ucRequest1.Location = new System.Drawing.Point(0, 58);
+			this.ucRequest1.Name = "ucRequest1";
+			this.ucRequest1.Size = new System.Drawing.Size(1056, 562);
+			this.ucRequest1.TabIndex = 6;
+			// 
+			// ucVenue1
+			// 
+			this.ucVenue1.Location = new System.Drawing.Point(0, 58);
+			this.ucVenue1.Name = "ucVenue1";
+			this.ucVenue1.Size = new System.Drawing.Size(1056, 562);
+			this.ucVenue1.TabIndex = 4;
+			// 
+			// ucHome1
+			// 
+			this.ucHome1.Location = new System.Drawing.Point(0, 58);
+			this.ucHome1.Name = "ucHome1";
+			this.ucHome1.Size = new System.Drawing.Size(1056, 562);
+			this.ucHome1.TabIndex = 3;
+			// 
+			// ucEquipment1
+			// 
+			this.ucEquipment1.Location = new System.Drawing.Point(0, 58);
+			this.ucEquipment1.Name = "ucEquipment1";
+			this.ucEquipment1.Size = new System.Drawing.Size(1056, 562);
+			this.ucEquipment1.TabIndex = 2;
+			// 
+			// ucDepartment1
+			// 
+			this.ucDepartment1.Location = new System.Drawing.Point(0, 58);
+			this.ucDepartment1.Name = "ucDepartment1";
+			this.ucDepartment1.Size = new System.Drawing.Size(1056, 562);
+			this.ucDepartment1.TabIndex = 1;
+			// 
+			// ucHelp1
+			// 
+			this.ucHelp1.Location = new System.Drawing.Point(0, 58);
+			this.ucHelp1.Name = "ucHelp1";
+			this.ucHelp1.Size = new System.Drawing.Size(1056, 562);
+			this.ucHelp1.TabIndex = 10;
+			// 
 			// pnlLoginFields
 			// 
 			this.pnlLoginFields.Controls.Add(this.btnLogIn);
@@ -329,7 +463,7 @@
 			this.pnlLoginFields.Location = new System.Drawing.Point(0, 58);
 			this.pnlLoginFields.Name = "pnlLoginFields";
 			this.pnlLoginFields.Size = new System.Drawing.Size(1056, 562);
-			this.pnlLoginFields.TabIndex = 2;
+			this.pnlLoginFields.TabIndex = 11;
 			// 
 			// btnLogIn
 			// 
@@ -407,121 +541,6 @@
 			this.label2.TabIndex = 4;
 			this.label2.Text = "Log In";
 			// 
-			// ucNavInspection1
-			// 
-			this.ucNavInspection1.Location = new System.Drawing.Point(0, 58);
-			this.ucNavInspection1.Name = "ucNavInspection1";
-			this.ucNavInspection1.Size = new System.Drawing.Size(1056, 562);
-			this.ucNavInspection1.TabIndex = 8;
-			// 
-			// ucTutorRequest1
-			// 
-			this.ucTutorRequest1.Location = new System.Drawing.Point(0, 58);
-			this.ucTutorRequest1.Name = "ucTutorRequest1";
-			this.ucTutorRequest1.Size = new System.Drawing.Size(1056, 562);
-			this.ucTutorRequest1.TabIndex = 7;
-			// 
-			// ucRequest1
-			// 
-			this.ucRequest1.Location = new System.Drawing.Point(0, 58);
-			this.ucRequest1.Name = "ucRequest1";
-			this.ucRequest1.Size = new System.Drawing.Size(1056, 562);
-			this.ucRequest1.TabIndex = 6;
-			// 
-			// doubleBitmapControl1
-			// 
-			this.doubleBitmapControl1.Location = new System.Drawing.Point(252, 192);
-			this.doubleBitmapControl1.Name = "doubleBitmapControl1";
-			this.doubleBitmapControl1.Size = new System.Drawing.Size(75, 23);
-			this.doubleBitmapControl1.TabIndex = 5;
-			this.doubleBitmapControl1.Text = "doubleBitmapControl1";
-			this.doubleBitmapControl1.Visible = false;
-			// 
-			// ucVenue1
-			// 
-			this.ucVenue1.Location = new System.Drawing.Point(0, 58);
-			this.ucVenue1.Name = "ucVenue1";
-			this.ucVenue1.Size = new System.Drawing.Size(1056, 562);
-			this.ucVenue1.TabIndex = 4;
-			// 
-			// ucHome1
-			// 
-			this.ucHome1.Location = new System.Drawing.Point(0, 58);
-			this.ucHome1.Name = "ucHome1";
-			this.ucHome1.Size = new System.Drawing.Size(1056, 562);
-			this.ucHome1.TabIndex = 3;
-			// 
-			// ucEquipment1
-			// 
-			this.ucEquipment1.Location = new System.Drawing.Point(0, 58);
-			this.ucEquipment1.Name = "ucEquipment1";
-			this.ucEquipment1.Size = new System.Drawing.Size(1056, 562);
-			this.ucEquipment1.TabIndex = 2;
-			// 
-			// ucDepartment1
-			// 
-			this.ucDepartment1.Location = new System.Drawing.Point(0, 58);
-			this.ucDepartment1.Name = "ucDepartment1";
-			this.ucDepartment1.Size = new System.Drawing.Size(1056, 562);
-			this.ucDepartment1.TabIndex = 1;
-			// 
-			// panel6
-			// 
-			this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.panel6.Controls.Add(this.pnlLogin);
-			this.panel6.Controls.Add(this.lblLocation);
-			this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel6.Location = new System.Drawing.Point(0, 0);
-			this.panel6.Name = "panel6";
-			this.panel6.Size = new System.Drawing.Size(1056, 63);
-			this.panel6.TabIndex = 0;
-			// 
-			// pnlLogin
-			// 
-			this.pnlLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.pnlLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.pnlLogin.Controls.Add(this.lblLoginText);
-			this.pnlLogin.Location = new System.Drawing.Point(861, 0);
-			this.pnlLogin.Name = "pnlLogin";
-			this.pnlLogin.Size = new System.Drawing.Size(195, 29);
-			this.pnlLogin.TabIndex = 1;
-			this.pnlLogin.Click += new System.EventHandler(this.PnlLogin_Click);
-			this.pnlLogin.MouseEnter += new System.EventHandler(this.PnlLogin_MouseEnter);
-			this.pnlLogin.MouseLeave += new System.EventHandler(this.PnlLogin_MouseLeave);
-			// 
-			// lblLoginText
-			// 
-			this.lblLoginText.AutoSize = true;
-			this.lblLoginText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblLoginText.ForeColor = System.Drawing.Color.White;
-			this.lblLoginText.Location = new System.Drawing.Point(41, -2);
-			this.lblLoginText.Name = "lblLoginText";
-			this.lblLoginText.Size = new System.Drawing.Size(114, 30);
-			this.lblLoginText.TabIndex = 0;
-			this.lblLoginText.Text = "Log In Text";
-			this.lblLoginText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.lblLoginText.Click += new System.EventHandler(this.LblLoginText_Click);
-			this.lblLoginText.MouseEnter += new System.EventHandler(this.LblLoginText_MouseEnter);
-			this.lblLoginText.MouseLeave += new System.EventHandler(this.LblLoginText_MouseLeave);
-			// 
-			// lblLocation
-			// 
-			this.lblLocation.AutoSize = true;
-			this.lblLocation.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblLocation.ForeColor = System.Drawing.Color.White;
-			this.lblLocation.Location = new System.Drawing.Point(6, 9);
-			this.lblLocation.Name = "lblLocation";
-			this.lblLocation.Size = new System.Drawing.Size(144, 45);
-			this.lblLocation.TabIndex = 0;
-			this.lblLocation.Text = "Location";
-			// 
-			// panel5
-			// 
-			this.panel5.Location = new System.Drawing.Point(200, 0);
-			this.panel5.Name = "panel5";
-			this.panel5.Size = new System.Drawing.Size(1056, 30);
-			this.panel5.TabIndex = 2;
-			// 
 			// Home
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -531,8 +550,10 @@
 			this.Controls.Add(this.panel5);
 			this.Controls.Add(this.panel2);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.MinimumSize = new System.Drawing.Size(920, 532);
+			this.MaximumSize = new System.Drawing.Size(1272, 659);
+			this.MinimumSize = new System.Drawing.Size(1272, 659);
 			this.Name = "Home";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Template";
 			this.Load += new System.EventHandler(this.Template_Load);
 			this.panel2.ResumeLayout(false);
@@ -541,12 +562,12 @@
 			this.panel4.ResumeLayout(false);
 			this.panel4.PerformLayout();
 			this.pnlContent.ResumeLayout(false);
-			this.pnlLoginFields.ResumeLayout(false);
-			this.pnlLoginFields.PerformLayout();
 			this.panel6.ResumeLayout(false);
 			this.panel6.PerformLayout();
 			this.pnlLogin.ResumeLayout(false);
 			this.pnlLogin.PerformLayout();
+			this.pnlLoginFields.ResumeLayout(false);
+			this.pnlLoginFields.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -583,6 +604,8 @@
 		private UserControls.ucRequest ucRequest1;
 		private UserControls.ucTutorRequest ucTutorRequest1;
 		private UserControls.ucInspection ucNavInspection1;
+		private UserControls.ucTaskType ucTaskType1;
+		private UserControls.ucHelp ucHelp1;
 		private System.Windows.Forms.Panel pnlLoginFields;
 		private Bunifu.Framework.UI.BunifuThinButton2 btnLogIn;
 		private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassword;

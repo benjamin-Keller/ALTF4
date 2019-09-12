@@ -45,6 +45,8 @@
 			this.bunifuFormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
 			this.tmrManage = new System.Windows.Forms.Timer(this.components);
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.txtEndTime = new System.Windows.Forms.TextBox();
+			this.txtStartTime = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.cmbRequestCode = new System.Windows.Forms.ComboBox();
 			this.label7 = new System.Windows.Forms.Label();
@@ -55,8 +57,6 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.txtStartTime = new System.Windows.Forms.TextBox();
-			this.txtEndTime = new System.Windows.Forms.TextBox();
 			this.panel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvTutorRequest)).BeginInit();
 			this.panel1.SuspendLayout();
@@ -252,6 +252,20 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Information";
 			// 
+			// txtEndTime
+			// 
+			this.txtEndTime.Location = new System.Drawing.Point(656, 34);
+			this.txtEndTime.Name = "txtEndTime";
+			this.txtEndTime.Size = new System.Drawing.Size(119, 23);
+			this.txtEndTime.TabIndex = 25;
+			// 
+			// txtStartTime
+			// 
+			this.txtStartTime.Location = new System.Drawing.Point(531, 34);
+			this.txtStartTime.Name = "txtStartTime";
+			this.txtStartTime.Size = new System.Drawing.Size(119, 23);
+			this.txtStartTime.TabIndex = 24;
+			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
@@ -350,20 +364,6 @@
 			this.label1.Size = new System.Drawing.Size(96, 17);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Request Code:";
-			// 
-			// txtStartTime
-			// 
-			this.txtStartTime.Location = new System.Drawing.Point(531, 35);
-			this.txtStartTime.Name = "txtStartTime";
-			this.txtStartTime.Size = new System.Drawing.Size(119, 23);
-			this.txtStartTime.TabIndex = 24;
-			// 
-			// txtEndTime
-			// 
-			this.txtEndTime.Location = new System.Drawing.Point(656, 36);
-			this.txtEndTime.Name = "txtEndTime";
-			this.txtEndTime.Size = new System.Drawing.Size(119, 23);
-			this.txtEndTime.TabIndex = 25;
 			// 
 			// ucTutorRequest
 			// 

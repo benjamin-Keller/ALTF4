@@ -27,7 +27,7 @@ namespace Info_IT.UserControls
             //cmbBuilding.DisplayMember = "BuildingName";
             //cmbBuilding.ValueMember = "BuildingID";
 
-            dgvTutorRequest.DataSource = bll.GetTutorRequest();
+            //dgvTutorRequest.DataSource = bll.GetTutorRequest();
 
             cmbRequestCode.DataSource = bll.GetRequests();
 

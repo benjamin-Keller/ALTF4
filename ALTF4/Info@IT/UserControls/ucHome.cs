@@ -9,10 +9,5 @@ namespace Info_IT.UserControls
 		{
 			InitializeComponent();
 		}
-
-		private void BtnLogin_Click(object sender, EventArgs e)
-		{
-
-		}
 	}
 }

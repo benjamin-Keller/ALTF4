@@ -156,6 +156,12 @@
     <Compile Include="UserControls\ucEquipmentType.Designer.cs">
       <DependentUpon>ucEquipmentType.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucHelp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucHelp.Designer.cs">
+      <DependentUpon>ucHelp.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -179,6 +185,12 @@
     </Compile>
     <Compile Include="UserControls\ucRequest.Designer.cs">
       <DependentUpon>ucRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTaskType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTaskType.Designer.cs">
+      <DependentUpon>ucTaskType.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucTutorRequest.cs">
       <SubType>UserControl</SubType>
@@ -230,6 +242,9 @@
     <EmbeddedResource Include="UserControls\ucEquipmentType.resx">
       <DependentUpon>ucEquipmentType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucHelp.resx">
+      <DependentUpon>ucHelp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucHome.resx">
       <DependentUpon>ucHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucRequest.resx">
       <DependentUpon>ucRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTaskType.resx">
+      <DependentUpon>ucTaskType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucTutorRequest.resx">
       <DependentUpon>ucTutorRequest.cs</DependentUpon>

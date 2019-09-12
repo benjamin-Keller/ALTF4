@@ -52,11 +52,11 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.cmbVenueCode = new System.Windows.Forms.ComboBox();
 			this.label5 = new System.Windows.Forms.Label();
-			this.txtTime = new System.Windows.Forms.MaskedTextBox();
 			this.dateInspection = new System.Windows.Forms.DateTimePicker();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.ucInspectionDetails1 = new Info_IT.UserControls.ucInspectionDetails();
+			this.txtTime = new System.Windows.Forms.TextBox();
 			this.pnlManage.SuspendLayout();
 			this.pnlView.SuspendLayout();
 			this.panel1.SuspendLayout();
@@ -247,13 +247,13 @@
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.txtTime);
 			this.groupBox1.Controls.Add(this.txtComment);
 			this.groupBox1.Controls.Add(this.label6);
 			this.groupBox1.Controls.Add(this.cmbStaffCode);
 			this.groupBox1.Controls.Add(this.label4);
 			this.groupBox1.Controls.Add(this.cmbVenueCode);
 			this.groupBox1.Controls.Add(this.label5);
-			this.groupBox1.Controls.Add(this.txtTime);
 			this.groupBox1.Controls.Add(this.dateInspection);
 			this.groupBox1.Controls.Add(this.label3);
 			this.groupBox1.Controls.Add(this.label1);
@@ -322,15 +322,6 @@
 			this.label5.TabIndex = 26;
 			this.label5.Text = "Venue Code:";
 			// 
-			// txtTime
-			// 
-			this.txtTime.Location = new System.Drawing.Point(165, 36);
-			this.txtTime.Mask = "00:00";
-			this.txtTime.Name = "txtTime";
-			this.txtTime.Size = new System.Drawing.Size(116, 23);
-			this.txtTime.TabIndex = 25;
-			this.txtTime.ValidatingType = typeof(System.DateTime);
-			// 
 			// dateInspection
 			// 
 			this.dateInspection.CustomFormat = "dd MMMM yyyy";
@@ -368,6 +359,13 @@
 			this.ucInspectionDetails1.Name = "ucInspectionDetails1";
 			this.ucInspectionDetails1.Size = new System.Drawing.Size(1056, 562);
 			this.ucInspectionDetails1.TabIndex = 14;
+			// 
+			// txtTime
+			// 
+			this.txtTime.Location = new System.Drawing.Point(165, 35);
+			this.txtTime.Name = "txtTime";
+			this.txtTime.Size = new System.Drawing.Size(113, 23);
+			this.txtTime.TabIndex = 32;
 			// 
 			// ucInspection
 			// 
@@ -412,11 +410,11 @@
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.ComboBox cmbVenueCode;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.MaskedTextBox txtTime;
 		private System.Windows.Forms.DateTimePicker dateInspection;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button btnViewInspectiondetails;
 		private ucInspectionDetails ucInspectionDetails1;
+		private System.Windows.Forms.TextBox txtTime;
 	}
 }
