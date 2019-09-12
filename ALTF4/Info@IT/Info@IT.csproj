@@ -84,18 +84,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Staff.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Staff.Designer.cs">
-      <DependentUpon>Staff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Student.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Student.Designer.cs">
-      <DependentUpon>Student.cs</DependentUpon>
-    </Compile>
     <Compile Include="HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +138,18 @@
     <Compile Include="UserControls\ucRequest.Designer.cs">
       <DependentUpon>ucRequest.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucStaff.Designer.cs">
+      <DependentUpon>ucStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucStudent.Designer.cs">
+      <DependentUpon>ucStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucTaskType.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -170,12 +170,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Staff.resx">
-      <DependentUpon>Staff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Student.resx">
-      <DependentUpon>Student.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,6 +196,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucRequest.resx">
       <DependentUpon>ucRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucStaff.resx">
+      <DependentUpon>ucStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucStudent.resx">
+      <DependentUpon>ucStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucTaskType.resx">
       <DependentUpon>ucTaskType.cs</DependentUpon>

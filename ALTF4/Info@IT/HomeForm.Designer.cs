@@ -53,6 +53,8 @@
 			this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
 			this.txtUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
 			this.label2 = new System.Windows.Forms.Label();
+			this.ucStudent1 = new Info_IT.UserControls.ucStudent();
+			this.ucStaff1 = new Info_IT.UserControls.ucStaff();
 			this.ucHelp1 = new Info_IT.UserControls.ucHelp();
 			this.ucTaskType1 = new Info_IT.UserControls.ucTaskType();
 			this.ucNavInspection1 = new Info_IT.UserControls.ucInspection();
@@ -68,6 +70,8 @@
 			this.lblLoginText = new System.Windows.Forms.Label();
 			this.lblLocation = new System.Windows.Forms.Label();
 			this.panel5 = new System.Windows.Forms.Panel();
+			this.btnStudent = new System.Windows.Forms.Button();
+			this.btnStaff = new System.Windows.Forms.Button();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.pnlNavigation.SuspendLayout();
@@ -110,6 +114,8 @@
 			// 
 			// pnlNavigation
 			// 
+			this.pnlNavigation.Controls.Add(this.btnStaff);
+			this.pnlNavigation.Controls.Add(this.btnStudent);
 			this.pnlNavigation.Controls.Add(this.btnNavTaskType);
 			this.pnlNavigation.Controls.Add(this.btnNavInspection);
 			this.pnlNavigation.Controls.Add(this.btnNavTutorRequest);
@@ -122,10 +128,10 @@
 			this.pnlNavigation.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlNavigation.ForeColor = System.Drawing.Color.White;
 			this.pnlNavigation.Location = new System.Drawing.Point(0, 109);
-			this.pnlNavigation.MaximumSize = new System.Drawing.Size(200, 332);
+			this.pnlNavigation.MaximumSize = new System.Drawing.Size(200, 400);
 			this.pnlNavigation.MinimumSize = new System.Drawing.Size(200, 53);
 			this.pnlNavigation.Name = "pnlNavigation";
-			this.pnlNavigation.Size = new System.Drawing.Size(200, 332);
+			this.pnlNavigation.Size = new System.Drawing.Size(200, 400);
 			this.pnlNavigation.TabIndex = 9;
 			// 
 			// btnNavTaskType
@@ -308,6 +314,8 @@
 			// pnlContent
 			// 
 			this.pnlContent.Controls.Add(this.pnlLoginFields);
+			this.pnlContent.Controls.Add(this.ucStudent1);
+			this.pnlContent.Controls.Add(this.ucStaff1);
 			this.pnlContent.Controls.Add(this.ucHelp1);
 			this.pnlContent.Controls.Add(this.ucTaskType1);
 			this.pnlContent.Controls.Add(this.ucNavInspection1);
@@ -334,7 +342,7 @@
 			this.pnlLoginFields.Location = new System.Drawing.Point(0, 58);
 			this.pnlLoginFields.Name = "pnlLoginFields";
 			this.pnlLoginFields.Size = new System.Drawing.Size(1056, 562);
-			this.pnlLoginFields.TabIndex = 11;
+			this.pnlLoginFields.TabIndex = 13;
 			// 
 			// btnLogIn
 			// 
@@ -381,8 +389,6 @@
 			this.txtPassword.TabIndex = 6;
 			this.txtPassword.Text = "Password";
 			this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-			this.txtPassword.Enter += new System.EventHandler(this.TxtPassword_Enter);
-			this.txtPassword.Leave += new System.EventHandler(this.TxtPassword_Leave);
 			// 
 			// txtUsername
 			// 
@@ -403,8 +409,6 @@
 			this.txtUsername.TabIndex = 5;
 			this.txtUsername.Text = "Username";
 			this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-			this.txtUsername.Enter += new System.EventHandler(this.TxtUsername_Enter);
-			this.txtUsername.Leave += new System.EventHandler(this.TxtUsername_Leave);
 			// 
 			// label2
 			// 
@@ -415,6 +419,20 @@
 			this.label2.Size = new System.Drawing.Size(119, 47);
 			this.label2.TabIndex = 4;
 			this.label2.Text = "Log In";
+			// 
+			// ucStudent1
+			// 
+			this.ucStudent1.Location = new System.Drawing.Point(0, 58);
+			this.ucStudent1.Name = "ucStudent1";
+			this.ucStudent1.Size = new System.Drawing.Size(1056, 562);
+			this.ucStudent1.TabIndex = 12;
+			// 
+			// ucStaff1
+			// 
+			this.ucStaff1.Location = new System.Drawing.Point(0, 58);
+			this.ucStaff1.Name = "ucStaff1";
+			this.ucStaff1.Size = new System.Drawing.Size(1056, 562);
+			this.ucStaff1.TabIndex = 11;
 			// 
 			// ucHelp1
 			// 
@@ -517,7 +535,7 @@
 			this.lblLoginText.AutoSize = true;
 			this.lblLoginText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblLoginText.ForeColor = System.Drawing.Color.White;
-			this.lblLoginText.Location = new System.Drawing.Point(41, -2);
+			this.lblLoginText.Location = new System.Drawing.Point(50, -2);
 			this.lblLoginText.Name = "lblLoginText";
 			this.lblLoginText.Size = new System.Drawing.Size(114, 30);
 			this.lblLoginText.TabIndex = 0;
@@ -544,6 +562,36 @@
 			this.panel5.Name = "panel5";
 			this.panel5.Size = new System.Drawing.Size(1056, 30);
 			this.panel5.TabIndex = 2;
+			// 
+			// btnStudent
+			// 
+			this.btnStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
+			this.btnStudent.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnStudent.FlatAppearance.BorderSize = 0;
+			this.btnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnStudent.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnStudent.Location = new System.Drawing.Point(0, 301);
+			this.btnStudent.Name = "btnStudent";
+			this.btnStudent.Size = new System.Drawing.Size(200, 31);
+			this.btnStudent.TabIndex = 24;
+			this.btnStudent.Text = "Student";
+			this.btnStudent.UseVisualStyleBackColor = false;
+			this.btnStudent.Click += new System.EventHandler(this.BtnStudent_Click);
+			// 
+			// btnStaff
+			// 
+			this.btnStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
+			this.btnStaff.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnStaff.FlatAppearance.BorderSize = 0;
+			this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnStaff.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnStaff.Location = new System.Drawing.Point(0, 332);
+			this.btnStaff.Name = "btnStaff";
+			this.btnStaff.Size = new System.Drawing.Size(200, 31);
+			this.btnStaff.TabIndex = 25;
+			this.btnStaff.Text = "Staff";
+			this.btnStaff.UseVisualStyleBackColor = false;
+			this.btnStaff.Click += new System.EventHandler(this.BtnStaff_Click);
 			// 
 			// Home
 			// 
@@ -610,10 +658,14 @@
 		private UserControls.ucInspection ucNavInspection1;
 		private UserControls.ucTaskType ucTaskType1;
 		private UserControls.ucHelp ucHelp1;
+		private UserControls.ucStaff ucStaff1;
+		private UserControls.ucStudent ucStudent1;
 		private System.Windows.Forms.Panel pnlLoginFields;
 		private Bunifu.Framework.UI.BunifuThinButton2 btnLogIn;
 		private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassword;
 		private Bunifu.Framework.UI.BunifuMaterialTextbox txtUsername;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Button btnStudent;
+		private System.Windows.Forms.Button btnStaff;
 	}
 }

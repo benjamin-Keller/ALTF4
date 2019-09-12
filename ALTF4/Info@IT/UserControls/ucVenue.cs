@@ -107,9 +107,5 @@ namespace Info_IT.UserControls
 
 		}
 
-        private void dgvVenue_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-    }
+	}
 }

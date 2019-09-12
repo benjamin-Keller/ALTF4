@@ -46,6 +46,7 @@
 			this.dgvInspection = new Bunifu.Framework.UI.BunifuCustomDataGrid();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.txtTime = new System.Windows.Forms.TextBox();
 			this.txtComment = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.cmbStaffCode = new System.Windows.Forms.ComboBox();
@@ -56,7 +57,6 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.ucInspectionDetails1 = new Info_IT.UserControls.ucInspectionDetails();
-			this.txtTime = new System.Windows.Forms.TextBox();
 			this.pnlManage.SuspendLayout();
 			this.pnlView.SuspendLayout();
 			this.panel1.SuspendLayout();
@@ -220,7 +220,7 @@
 			this.dgvInspection.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
 			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
 			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
 			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -265,6 +265,13 @@
 			this.groupBox1.TabIndex = 14;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Information";
+			// 
+			// txtTime
+			// 
+			this.txtTime.Location = new System.Drawing.Point(165, 35);
+			this.txtTime.Name = "txtTime";
+			this.txtTime.Size = new System.Drawing.Size(113, 23);
+			this.txtTime.TabIndex = 32;
 			// 
 			// txtComment
 			// 
@@ -359,13 +366,6 @@
 			this.ucInspectionDetails1.Name = "ucInspectionDetails1";
 			this.ucInspectionDetails1.Size = new System.Drawing.Size(1056, 562);
 			this.ucInspectionDetails1.TabIndex = 14;
-			// 
-			// txtTime
-			// 
-			this.txtTime.Location = new System.Drawing.Point(165, 35);
-			this.txtTime.Name = "txtTime";
-			this.txtTime.Size = new System.Drawing.Size(113, 23);
-			this.txtTime.TabIndex = 32;
 			// 
 			// ucInspection
 			// 

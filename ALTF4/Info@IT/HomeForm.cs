@@ -177,6 +177,9 @@ namespace Info_IT
 			ucNavInspection1.Hide();
 			ucTaskType1.Hide();
 			ucHelp1.Hide();
+			ucStudent1.Hide();
+			ucStaff1.Hide();
+
 			pnlLoginFields.Hide();	
 		}
 		//Login bar
@@ -351,5 +354,26 @@ namespace Info_IT
 			lblLocation.Text = "Help";
 		}
 
+		private void BtnStudent_Click(object sender, EventArgs e)
+		{
+			HideAll();
+			InactiveButtons();
+			btnStudent.BackColor = Color.FromArgb(0, 150, 250);
+
+			ucStudent1.Show();
+			this.Text = "Student";
+			lblLocation.Text = "Student";
+		}
+
+		private void BtnStaff_Click(object sender, EventArgs e)
+		{
+			HideAll();
+			InactiveButtons();
+			btnStaff.BackColor = Color.FromArgb(0, 150, 250);
+
+			ucStaff1.Show();
+			this.Text = "Staff";
+			lblLocation.Text = "Staff";
+		}
 	}
 }
