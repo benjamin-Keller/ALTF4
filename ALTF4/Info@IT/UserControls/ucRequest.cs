@@ -22,7 +22,31 @@ namespace Info_IT.UserControls
 		private void UcRequest_Load(object sender, EventArgs e)
 		{
 			dateRequest.Value = DateTime.Now;
-		}
+
+            dgvRequest.DataSource = bll.GetRequests();
+
+            cmbTaskTypeCode.DataSource = bll.GetTasktype();
+            
+            cmbTaskTypeCode.DisplayMember = "TaskName";
+            cmbTaskTypeCode.ValueMember = "taskTypeCode";
+
+            cmbAssignedStaffCode.DataSource = bll.GetStaff();
+
+            cmbAssignedStaffCode.DisplayMember = "FirstName";
+            cmbAssignedStaffCode.ValueMember = "StaffCode";
+
+            cmbStaffCode.DataSource = bll.GetStaff();
+
+            cmbStaffCode.DisplayMember = "FirstName";
+            cmbStaffCode.ValueMember = "StaffCode";
+
+            cmbStudentCode.DataSource = bll.GetStudent();
+
+            cmbStudentCode.DisplayMember = "FirstName";
+            cmbStudentCode.ValueMember = "StudentCode";
+
+
+        }
 		//Menu button (Manage)
 		private void BtnManage_Click(object sender, EventArgs e)
 		{
@@ -60,8 +84,26 @@ namespace Info_IT.UserControls
 
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
+            DAL.RequestClass request = new DAL.RequestClass(txtDescription.Text, int.Parse(cmbStaffCode.SelectedValue.ToString()), int.Parse(cmbStudentCode.SelectedValue.ToString()), int.Parse(cmbTaskTypeCode.SelectedValue.ToString()), dateRequest.ToString(), int.Parse(txtTime.Text), int.Parse(cmbAssignedStaffCode.SelectedValue.ToString()), "Pending");
 
-		}
+            int x = bll.AddRequest(request);
+
+            if (x > 0)
+            {
+                txtDescription.Clear();
+                txtTime.Clear();
+                cmbStaffCode.ResetText();
+                cmbStudentCode.ResetText();
+                cmbTaskTypeCode.ResetText();
+                dateRequest.ResetText();
+            }
+            else
+            {
+                MessageBox.Show("Please input valid data.");
+            }
+
+            dgvRequest.DataSource = bll.GetTutorRequest();
+        }
 
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
 		{

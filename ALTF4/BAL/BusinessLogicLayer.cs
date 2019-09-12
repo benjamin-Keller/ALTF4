@@ -81,5 +81,61 @@ namespace BLL
         {
             return dal.PopulateCmbBuildingBlock();
         }
+
+        public int AddDepartment(DepartmentClass department)
+        {
+            return dal.AddDepartment(department);
+        }
+
+        public int AddEquipment(EquipmentClass equipment)
+        {
+            return dal.AddEquipment(equipment);
+        }
+
+        public int AddEquipmentType(EquipmentTypeClass equipmentType)
+        {
+            return dal.AddEquipmentType(equipmentType);
+        }
+
+        public int AddInspection(InspectionClass inspection)
+        {
+            return dal.AddInspection(inspection);
+        }
+
+        public int AddInspectionDetail(InspectionDetailClass inspectionDetail)
+        {
+            return dal.AddInspectionDetail(inspectionDetail);
+        }
+
+        public int AddStaff(StaffClass staff)
+        {
+            return dal.AddStaff(staff);
+        }
+
+        public int AddStudent(StudentClass student)
+        {
+            return dal.AddStudent(student);
+        }
+
+        public int AddTaskType(TaskTypeClass taskType)
+        {
+            return dal.AddTaskType(taskType);
+        }
+
+        public int AddRequest(RequestClass request)
+        {
+            return dal.AddRequest(request);
+        }
+
+        public int AddTutorRequest(TutorRequestClass tutorRequest)
+        {
+            return dal.AddTutorRequest(tutorRequest);
+        }
+
+        //public int AddUser(UsersClass user)
+        //{
+        //    return dal.AddUser(user);
+        //}
+
     }
 }

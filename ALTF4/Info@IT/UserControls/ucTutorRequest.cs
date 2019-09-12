@@ -22,8 +22,24 @@ namespace Info_IT.UserControls
 
 		private void UcTutorRequest_Load(object sender, EventArgs e)
 		{
+            //cmbModuleCode.DataSource = bll.();
 
-		}
+            //cmbBuilding.DisplayMember = "BuildingName";
+            //cmbBuilding.ValueMember = "BuildingID";
+
+            dgvTutorRequest.DataSource = bll.GetTutorRequest();
+
+            cmbRequestCode.DataSource = bll.GetRequests();
+
+            cmbRequestCode.ValueMember = "RequestCode";
+            cmbRequestCode.DisplayMember = "RequestCode";
+
+            cmbVenueCode.DataSource = bll.GetVenues();
+
+            cmbVenueCode.DisplayMember = "VenueDescription";
+            cmbVenueCode.ValueMember = "VenueCode";
+
+        }
 
 		//Menu button (Manage)
 		private void BtnManage_Click(object sender, EventArgs e)
@@ -62,8 +78,27 @@ namespace Info_IT.UserControls
 
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
+            DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), dateRequest.ToString(), int.Parse(txtStartTime.Text), int.Parse(txtEndTime.Text), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()));
 
-		}
+            int x = bll.AddTutorRequest(tutorRequest);
+
+            if (x > 0)
+            {
+                txtStartTime.Clear();
+                txtEndTime.Clear();
+                cmbRequestCode.ResetText();
+                cmbModuleCode.ResetText();
+                cmbVenueCode.ResetText();
+                dateRequest.ResetText();
+            }
+            else
+            {
+                MessageBox.Show("Please input valid data.");
+            }
+
+            dgvTutorRequest.DataSource = bll.GetTutorRequest();
+
+        }
 
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
 		{

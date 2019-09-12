@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class TaskTypeClass
+    public class TaskTypeClass
     {
+        public string Name { get; set; }
+
+
+        public TaskTypeClass(string name)
+        {
+            Name = name;
+        }
     }
 }

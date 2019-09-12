@@ -219,7 +219,7 @@ namespace DAL
                 dbConn.Open();
             }
             catch { }
-            dbCmd = new SqlCommand("dbo.sp_DisplayLabRequests", dbConn);
+            dbCmd = new SqlCommand("dbo.sp_DisplayAllRequests", dbConn);
             //dbCmd.CommandText = "sp_DisplayVenue";
             //dbCmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
@@ -288,7 +288,7 @@ namespace DAL
                 dbConn.Open();
             }
             catch { }
-            dbCmd = new SqlCommand("dbo.sp_DisplayRequestModules", dbConn);
+            dbCmd = new SqlCommand("dbo.sp_DisplayAllTaskType", dbConn);
             //dbCmd.CommandText = "sp_DisplayVenue";
             //dbCmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
@@ -311,7 +311,7 @@ namespace DAL
                 dbConn.Open();
             }
             catch { }
-            dbCmd = new SqlCommand("dbo.sp_DisplayRequestTutor", dbConn);
+            dbCmd = new SqlCommand("dbo.sp_DisplayAllTutorRequest", dbConn);
             //dbCmd.CommandText = "sp_DisplayVenue";
             //dbCmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
@@ -327,7 +327,7 @@ namespace DAL
             return dt;
         }
         
-        public int AddDepartment(VenueClass venue)
+        public int AddDepartment(DepartmentClass department)
         {
             try
             {
@@ -339,14 +339,14 @@ namespace DAL
             try
             {
 
-                dbCmd = new SqlCommand("dbo.sp_AddDepartment", dbConn);
+                dbCmd = new SqlCommand("dbo.sp_AddDepart", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
-                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
-                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
-                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
-                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
-                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+                dbCmd.Parameters.AddWithValue("@DepartmentName", department.DepartmentName);
+                dbCmd.Parameters.AddWithValue("@BuildingID", department.Building);
+                dbCmd.Parameters.AddWithValue("@ContactPerson", department.ContactPerson);
+                dbCmd.Parameters.AddWithValue("@Email", department.Email);
+                dbCmd.Parameters.AddWithValue("@ContactNumber", department.ContactNumber);
 
                 x = dbCmd.ExecuteNonQuery();
             }
@@ -363,7 +363,7 @@ namespace DAL
             return x;
         }
 
-        public int AddEquipment(VenueClass venue)
+        public int AddEquipment(EquipmentClass equipment)
         {
             try
             {
@@ -375,14 +375,12 @@ namespace DAL
             try
             {
 
-                dbCmd = new SqlCommand("dbo.sp_AddEquipment", dbConn);
+                dbCmd = new SqlCommand("dbo.sp_AddEquip", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
-                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
-                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
-                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
-                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
-                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+                dbCmd.Parameters.AddWithValue("@EquipmentDescription", equipment.EquipmentDescription);
+                dbCmd.Parameters.AddWithValue("@EquipTypeCode", equipment.EquipTypeCode);
+                dbCmd.Parameters.AddWithValue("@VenueCode", equipment.VenueCode);
 
                 x = dbCmd.ExecuteNonQuery();
             }
@@ -399,7 +397,7 @@ namespace DAL
             return x;
         }
 
-        public int AddEquipmentType(VenueClass venue)
+        public int AddEquipmentType(EquipmentTypeClass equipmentType)
         {
             try
             {
@@ -411,14 +409,10 @@ namespace DAL
             try
             {
 
-                dbCmd = new SqlCommand("dbo.sp_AddEquipmentType", dbConn);
+                dbCmd = new SqlCommand("dbo.sp_AddEquipType", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
-                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
-                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
-                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
-                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
-                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+                dbCmd.Parameters.AddWithValue("@TypeDescription", equipmentType.TypeDescription);
 
                 x = dbCmd.ExecuteNonQuery();
             }
@@ -435,7 +429,7 @@ namespace DAL
             return x;
         }
 
-        public int AddInspection(VenueClass venue)
+        public int AddInspection(InspectionClass inspection)
         {
             try
             {
@@ -450,11 +444,11 @@ namespace DAL
                 dbCmd = new SqlCommand("dbo.sp_AddInspection", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
-                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
-                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
-                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
-                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
-                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+                dbCmd.Parameters.AddWithValue("@VenueCode", inspection.VenueCode);
+                dbCmd.Parameters.AddWithValue("@StaffCode", inspection.StaffCode);
+                dbCmd.Parameters.AddWithValue("@InspectionDate", inspection.InspectionDate);
+                dbCmd.Parameters.AddWithValue("@InspectionTime", inspection.InspectionTime);
+                dbCmd.Parameters.AddWithValue("@Comment", inspection.Comment);
 
                 x = dbCmd.ExecuteNonQuery();
             }
@@ -471,7 +465,7 @@ namespace DAL
             return x;
         }
 
-        public int AddInspectionDetail(VenueClass venue)
+        public int AddInspectionDetail(InspectionDetailClass inspectionDetail)
         {
             try
             {
@@ -486,11 +480,11 @@ namespace DAL
                 dbCmd = new SqlCommand("dbo.sp_AddInspectionDetail", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
-                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
-                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
-                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
-                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
-                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+                dbCmd.Parameters.AddWithValue("@InspectionCode", inspectionDetail.InspectionCode);
+                dbCmd.Parameters.AddWithValue("@EquipmentCode", inspectionDetail.EquipmentCode);
+                dbCmd.Parameters.AddWithValue("@StaffCode", inspectionDetail.StaffCode);
+                dbCmd.Parameters.AddWithValue("@FaultComment", inspectionDetail.FaultComment);
+                dbCmd.Parameters.AddWithValue("@InspectionStatus", inspectionDetail.InspectionStatus);
 
                 x = dbCmd.ExecuteNonQuery();
             }
@@ -507,7 +501,7 @@ namespace DAL
             return x;
         }
 
-        public int AddRequest(VenueClass venue)
+        public int AddRequest(RequestClass request)
         {
             try
             {
@@ -522,11 +516,14 @@ namespace DAL
                 dbCmd = new SqlCommand("dbo.sp_AddRequest", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
-                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
-                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
-                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
-                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
-                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+                dbCmd.Parameters.AddWithValue("@RequestDescription", request.RequestDescription);
+                dbCmd.Parameters.AddWithValue("@StaffCode", request.RequestStaffCode);
+                dbCmd.Parameters.AddWithValue("@StudentCode", request.RequestStudentCode);
+                dbCmd.Parameters.AddWithValue("@TaskTypeCode", request.RequestTaskTypeCode);
+                dbCmd.Parameters.AddWithValue("@Building", request.RequestDate);
+                dbCmd.Parameters.AddWithValue("@Capacity", request.RequestTime);
+                dbCmd.Parameters.AddWithValue("@DoorNo", request.RequestAssignedStaffCode);
+                dbCmd.Parameters.AddWithValue("@BuildingBlock", request.RequestStatus);
 
                 x = dbCmd.ExecuteNonQuery();
             }
@@ -543,7 +540,7 @@ namespace DAL
             return x;
         }
 
-        public int AddStaff(VenueClass venue)
+        public int AddStaff(StaffClass staff)
         {
             try
             {
@@ -558,11 +555,13 @@ namespace DAL
                 dbCmd = new SqlCommand("dbo.sp_AddStaff", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
-                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
-                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
-                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
-                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
-                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+                dbCmd.Parameters.AddWithValue("@StaffNumber", staff.StaffNumber);
+                dbCmd.Parameters.AddWithValue("@FirstName", staff.Name);
+                dbCmd.Parameters.AddWithValue("@LastName", staff.Surname);
+                dbCmd.Parameters.AddWithValue("@Email", staff.EmailAddress);
+                dbCmd.Parameters.AddWithValue("@ContactNumber", staff.ContactNumber);
+                dbCmd.Parameters.AddWithValue("@StaffType", staff.StaffType);
+                dbCmd.Parameters.AddWithValue("@DepartmentCode", staff.DepartmentCode);
 
                 x = dbCmd.ExecuteNonQuery();
             }
@@ -579,7 +578,7 @@ namespace DAL
             return x;
         }
 
-        public int AddStudent(VenueClass venue)
+        public int AddStudent(StudentClass student)
         {
             try
             {
@@ -594,11 +593,10 @@ namespace DAL
                 dbCmd = new SqlCommand("dbo.sp_AddStudent", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
-                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
-                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
-                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
-                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
-                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+                dbCmd.Parameters.AddWithValue("@StudentNumber", student.StudentNumber);
+                dbCmd.Parameters.AddWithValue("@Name", student.Name);
+                dbCmd.Parameters.AddWithValue("@Surname", student.Surname);
+                dbCmd.Parameters.AddWithValue("@Email", student.EmailAddress);
 
                 x = dbCmd.ExecuteNonQuery();
             }
@@ -615,7 +613,7 @@ namespace DAL
             return x;
         }
 
-        public int AddTaskType(VenueClass venue)
+        public int AddTaskType(TaskTypeClass taskType)
         {
             try
             {
@@ -630,11 +628,7 @@ namespace DAL
                 dbCmd = new SqlCommand("dbo.sp_AddTaskType", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
-                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
-                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
-                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
-                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
-                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+                dbCmd.Parameters.AddWithValue("@VenueDescription", taskType.Name);
 
                 x = dbCmd.ExecuteNonQuery();
             }
@@ -651,7 +645,7 @@ namespace DAL
             return x;
         }
 
-        public int AddTutorRequest(VenueClass venue)
+        public int AddTutorRequest(TutorRequestClass tutorRequest)
         {
             try
             {
@@ -666,11 +660,11 @@ namespace DAL
                 dbCmd = new SqlCommand("dbo.sp_AddTutorRequest", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
-                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
-                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
-                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
-                dbCmd.Parameters.AddWithValue("@BuildingBlock", venue.VenueBuildingBlock);
-                dbCmd.Parameters.AddWithValue("@Building", venue.VenueBuilding);
+                dbCmd.Parameters.AddWithValue("@TutorRequestDate", tutorRequest.Date);
+                dbCmd.Parameters.AddWithValue("@StartTime", tutorRequest.StartTime);
+                dbCmd.Parameters.AddWithValue("@EndTime", tutorRequest.EndTime);
+                dbCmd.Parameters.AddWithValue("@ModuleCode", tutorRequest.ModuleCode);
+                dbCmd.Parameters.AddWithValue("@VenueCode", tutorRequest.VenueCode);
 
                 x = dbCmd.ExecuteNonQuery();
             }
@@ -687,40 +681,40 @@ namespace DAL
             return x;
         }
 
-        public int AddUsers(VenueClass venue)
-        {
-            try
-            {
-                dbConn.Open();
-            }
-            catch { }
+        //public int AddUsers(UsersClass user)
+        //{
+        //    try
+        //    {
+        //        dbConn.Open();
+        //    }
+        //    catch { }
 
-            int x;
-            try
-            {
+        //    int x;
+        //    try
+        //    {
 
-                dbCmd = new SqlCommand("dbo.sp_AddUser", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+        //        dbCmd = new SqlCommand("dbo.sp_AddUser", dbConn);
+        //        dbCmd.CommandType = CommandType.StoredProcedure;
 
-                dbCmd.Parameters.AddWithValue("@Username", venue.VenueDescription);
-                dbCmd.Parameters.AddWithValue("@Password", venue.VenueCapacity);
-                dbCmd.Parameters.AddWithValue("@Role", venue.VenueDoorNo);
-                dbCmd.Parameters.AddWithValue("@UserAdmin", venue.VenueBuildingBlock);
+        //        dbCmd.Parameters.AddWithValue("@Username", user.Username);
+        //        dbCmd.Parameters.AddWithValue("@Password", user.Password);
+        //        dbCmd.Parameters.AddWithValue("@Role", user.Role);
+        //        //dbCmd.Parameters.AddWithValue("@UserAdmin", user.VenueBuildingBlock);
 
-                x = dbCmd.ExecuteNonQuery();
-            }
-            catch (Exception e)
-            {
-                return 0;
-            }
+        //        x = dbCmd.ExecuteNonQuery();
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        return 0;
+        //    }
 
-            try
-            {
-                dbConn.Close();
-            }
-            catch { }
-            return x;
-        }
+        //    try
+        //    {
+        //        dbConn.Close();
+        //    }
+        //    catch { }
+        //    return x;
+        //}
 
 
     }
