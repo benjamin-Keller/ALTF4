@@ -23,7 +23,7 @@ namespace Info_IT.UserControls
 		{
 			dateRequest.Value = DateTime.Now;
 
-            dgvRequest.DataSource = bll.GetRequests();
+            //dgvRequest.DataSource = bll.GetRequests();
 
             cmbTaskTypeCode.DataSource = bll.GetTasktype();
             

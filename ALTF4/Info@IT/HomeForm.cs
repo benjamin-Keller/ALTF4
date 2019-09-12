@@ -8,6 +8,8 @@ namespace Info_IT
 	{
 		public bool isLoggedIn;
 		public string role;
+		public bool firstUser;
+		public bool firstPass;
 
 		public Home()
 		{
@@ -108,6 +110,36 @@ namespace Info_IT
 
 		}
 
+		private void TxtUsername_Enter(object sender, EventArgs e)
+		{
+			if (txtUsername.Text == "Username")
+			{
+				txtUsername.Text = "";
+			}
+		}
+		private void TxtUsername_Leave(object sender, EventArgs e)
+		{
+			if (txtUsername.Text == "" || txtUsername.Text == null)
+			{
+				txtUsername.Text = "Username";
+			}
+		}
+		private void TxtPassword_Enter(object sender, EventArgs e)
+		{
+			if (txtPassword.Text == "Password")
+			{
+				txtPassword.Text = "";
+			}
+		}
+		private void TxtPassword_Leave(object sender, EventArgs e)
+		{
+			if (txtPassword.Text == "" || txtPassword.Text == null)
+			{
+				txtPassword.Text = "Password";
+			}
+		}
+
+
 		private void BtnLogIn_Click(object sender, EventArgs e)
 		{
 			isLoggedIn = true;
@@ -143,7 +175,9 @@ namespace Info_IT
 			ucRequest1.Hide();
 			ucTutorRequest1.Hide();
 			ucNavInspection1.Hide();
-			pnlLoginFields.Hide();			
+			ucTaskType1.Hide();
+			ucHelp1.Hide();
+			pnlLoginFields.Hide();	
 		}
 		//Login bar
 		private void PnlLogin_Click(object sender, EventArgs e)
@@ -180,8 +214,6 @@ namespace Info_IT
 
 			tmrNavigation.Stop();
 		}
-
-
 
 		private void BtnNavigation_MouseEnter(object sender, EventArgs e)
 		{
@@ -303,8 +335,21 @@ namespace Info_IT
 			InactiveButtons();
 			btnNavTaskType.BackColor = Color.FromArgb(0, 150, 250);
 
+			ucTaskType1.Show();
+			this.Text = "Task Type";
+			lblLocation.Text = "Task Type";
 		}
 
-	
+		private void BtnHelp_Click(object sender, EventArgs e)
+		{
+			HideAll();
+			InactiveButtons();
+			btnHelp.BackColor = Color.FromArgb(0, 150, 250);
+
+			ucHelp1.Show();
+			this.Text = "Help";
+			lblLocation.Text = "Help";
+		}
+
 	}
 }

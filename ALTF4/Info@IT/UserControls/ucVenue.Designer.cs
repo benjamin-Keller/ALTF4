@@ -29,8 +29,8 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.tmrView = new System.Windows.Forms.Timer(this.components);
 			this.btnManageUpdate = new System.Windows.Forms.Button();
 			this.btnManageAdd = new System.Windows.Forms.Button();
@@ -77,7 +77,7 @@
 			this.btnManageUpdate.Name = "btnManageUpdate";
 			this.btnManageUpdate.Size = new System.Drawing.Size(200, 31);
 			this.btnManageUpdate.TabIndex = 7;
-			this.btnManageUpdate.Text = "Update Selected Venue Type";
+			this.btnManageUpdate.Text = "Update Selected Venue";
 			this.btnManageUpdate.UseVisualStyleBackColor = false;
 			this.btnManageUpdate.Click += new System.EventHandler(this.BtnManageUpdate_Click);
 			// 
@@ -92,7 +92,7 @@
 			this.btnManageAdd.Name = "btnManageAdd";
 			this.btnManageAdd.Size = new System.Drawing.Size(200, 31);
 			this.btnManageAdd.TabIndex = 6;
-			this.btnManageAdd.Text = "Add Venue Type";
+			this.btnManageAdd.Text = "Add Venue";
 			this.btnManageAdd.UseVisualStyleBackColor = false;
 			this.btnManageAdd.Click += new System.EventHandler(this.BtnManageAdd_Click);
 			// 
@@ -138,7 +138,7 @@
 			this.btnViewList.Name = "btnViewList";
 			this.btnViewList.Size = new System.Drawing.Size(200, 31);
 			this.btnViewList.TabIndex = 6;
-			this.btnViewList.Text = "List All Venue Type";
+			this.btnViewList.Text = "List All Venue";
 			this.btnViewList.UseVisualStyleBackColor = false;
 			this.btnViewList.Click += new System.EventHandler(this.BtnViewList_Click);
 			// 
@@ -199,20 +199,20 @@
 			// 
 			this.dgvVenue.AllowUserToAddRows = false;
 			this.dgvVenue.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvVenue.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvVenue.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
 			this.dgvVenue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvVenue.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvVenue.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvVenue.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvVenue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvVenue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
 			this.dgvVenue.ColumnHeadersHeight = 50;
 			this.dgvVenue.DoubleBuffered = true;
 			this.dgvVenue.EnableHeadersVisualStyles = false;

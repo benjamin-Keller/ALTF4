@@ -29,8 +29,8 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dgvTutorRequest = new Bunifu.Framework.UI.BunifuCustomDataGrid();
 			this.tmrView = new System.Windows.Forms.Timer(this.components);
@@ -45,8 +45,8 @@
 			this.bunifuFormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
 			this.tmrManage = new System.Windows.Forms.Timer(this.components);
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.txtEndTime = new System.Windows.Forms.MaskedTextBox();
-			this.txtStartTime = new System.Windows.Forms.MaskedTextBox();
+			this.txtEndTime = new System.Windows.Forms.TextBox();
+			this.txtStartTime = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.cmbRequestCode = new System.Windows.Forms.ComboBox();
 			this.label7 = new System.Windows.Forms.Label();
@@ -75,20 +75,20 @@
 			// 
 			// dgvTutorRequest
 			// 
-			dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvTutorRequest.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvTutorRequest.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvTutorRequest.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvTutorRequest.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvTutorRequest.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvTutorRequest.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvTutorRequest.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvTutorRequest.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvTutorRequest.ColumnHeadersHeight = 50;
 			this.dgvTutorRequest.DoubleBuffered = true;
 			this.dgvTutorRequest.EnableHeadersVisualStyles = false;
@@ -254,21 +254,17 @@
 			// 
 			// txtEndTime
 			// 
-			this.txtEndTime.Location = new System.Drawing.Point(653, 33);
-			this.txtEndTime.Mask = "00:00";
+			this.txtEndTime.Location = new System.Drawing.Point(656, 34);
 			this.txtEndTime.Name = "txtEndTime";
-			this.txtEndTime.Size = new System.Drawing.Size(116, 23);
+			this.txtEndTime.Size = new System.Drawing.Size(119, 23);
 			this.txtEndTime.TabIndex = 25;
-			this.txtEndTime.ValidatingType = typeof(System.DateTime);
 			// 
 			// txtStartTime
 			// 
 			this.txtStartTime.Location = new System.Drawing.Point(531, 34);
-			this.txtStartTime.Mask = "00:00";
 			this.txtStartTime.Name = "txtStartTime";
-			this.txtStartTime.Size = new System.Drawing.Size(116, 23);
+			this.txtStartTime.Size = new System.Drawing.Size(119, 23);
 			this.txtStartTime.TabIndex = 24;
-			this.txtStartTime.ValidatingType = typeof(System.DateTime);
 			// 
 			// label4
 			// 
@@ -406,8 +402,6 @@
 		private Bunifu.Framework.UI.BunifuFormFadeTransition bunifuFormFadeTransition1;
 		private System.Windows.Forms.Timer tmrManage;
 		private System.Windows.Forms.GroupBox groupBox1;
-		private System.Windows.Forms.MaskedTextBox txtEndTime;
-		private System.Windows.Forms.MaskedTextBox txtStartTime;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.ComboBox cmbRequestCode;
 		private System.Windows.Forms.Label label7;
@@ -418,5 +412,7 @@
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.TextBox txtEndTime;
+		private System.Windows.Forms.TextBox txtStartTime;
 	}
 }

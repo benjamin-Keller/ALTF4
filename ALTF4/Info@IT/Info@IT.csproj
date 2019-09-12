@@ -27,6 +27,7 @@
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -51,6 +52,18 @@
   <PropertyGroup>
     <StartupObject>
     </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>07E887E58B71197606CCAE0E6126BA7021E0E5C9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Info%40IT_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -143,6 +156,12 @@
     <Compile Include="UserControls\ucEquipmentType.Designer.cs">
       <DependentUpon>ucEquipmentType.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucHelp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucHelp.Designer.cs">
+      <DependentUpon>ucHelp.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -166,6 +185,12 @@
     </Compile>
     <Compile Include="UserControls\ucRequest.Designer.cs">
       <DependentUpon>ucRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTaskType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTaskType.Designer.cs">
+      <DependentUpon>ucTaskType.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucTutorRequest.cs">
       <SubType>UserControl</SubType>
@@ -217,6 +242,9 @@
     <EmbeddedResource Include="UserControls\ucEquipmentType.resx">
       <DependentUpon>ucEquipmentType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucHelp.resx">
+      <DependentUpon>ucHelp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucHome.resx">
       <DependentUpon>ucHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucRequest.resx">
       <DependentUpon>ucRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTaskType.resx">
+      <DependentUpon>ucTaskType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucTutorRequest.resx">
       <DependentUpon>ucTutorRequest.cs</DependentUpon>
@@ -245,6 +276,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Info%40IT_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

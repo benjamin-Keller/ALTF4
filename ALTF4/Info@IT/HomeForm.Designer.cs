@@ -53,6 +53,8 @@
 			this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
 			this.txtUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
 			this.label2 = new System.Windows.Forms.Label();
+			this.ucHelp1 = new Info_IT.UserControls.ucHelp();
+			this.ucTaskType1 = new Info_IT.UserControls.ucTaskType();
 			this.ucNavInspection1 = new Info_IT.UserControls.ucInspection();
 			this.ucTutorRequest1 = new Info_IT.UserControls.ucTutorRequest();
 			this.ucRequest1 = new Info_IT.UserControls.ucRequest();
@@ -297,6 +299,7 @@
 			this.btnHelp.TabIndex = 5;
 			this.btnHelp.Text = "Help";
 			this.btnHelp.UseVisualStyleBackColor = false;
+			this.btnHelp.Click += new System.EventHandler(this.BtnHelp_Click);
 			// 
 			// tmrNavigation
 			// 
@@ -305,6 +308,8 @@
 			// pnlContent
 			// 
 			this.pnlContent.Controls.Add(this.pnlLoginFields);
+			this.pnlContent.Controls.Add(this.ucHelp1);
+			this.pnlContent.Controls.Add(this.ucTaskType1);
 			this.pnlContent.Controls.Add(this.ucNavInspection1);
 			this.pnlContent.Controls.Add(this.ucTutorRequest1);
 			this.pnlContent.Controls.Add(this.ucRequest1);
@@ -329,7 +334,7 @@
 			this.pnlLoginFields.Location = new System.Drawing.Point(0, 58);
 			this.pnlLoginFields.Name = "pnlLoginFields";
 			this.pnlLoginFields.Size = new System.Drawing.Size(1056, 562);
-			this.pnlLoginFields.TabIndex = 2;
+			this.pnlLoginFields.TabIndex = 11;
 			// 
 			// btnLogIn
 			// 
@@ -376,6 +381,8 @@
 			this.txtPassword.TabIndex = 6;
 			this.txtPassword.Text = "Password";
 			this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.txtPassword.Enter += new System.EventHandler(this.TxtPassword_Enter);
+			this.txtPassword.Leave += new System.EventHandler(this.TxtPassword_Leave);
 			// 
 			// txtUsername
 			// 
@@ -396,6 +403,8 @@
 			this.txtUsername.TabIndex = 5;
 			this.txtUsername.Text = "Username";
 			this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.txtUsername.Enter += new System.EventHandler(this.TxtUsername_Enter);
+			this.txtUsername.Leave += new System.EventHandler(this.TxtUsername_Leave);
 			// 
 			// label2
 			// 
@@ -406,6 +415,20 @@
 			this.label2.Size = new System.Drawing.Size(119, 47);
 			this.label2.TabIndex = 4;
 			this.label2.Text = "Log In";
+			// 
+			// ucHelp1
+			// 
+			this.ucHelp1.Location = new System.Drawing.Point(0, 58);
+			this.ucHelp1.Name = "ucHelp1";
+			this.ucHelp1.Size = new System.Drawing.Size(1056, 562);
+			this.ucHelp1.TabIndex = 10;
+			// 
+			// ucTaskType1
+			// 
+			this.ucTaskType1.Location = new System.Drawing.Point(0, 58);
+			this.ucTaskType1.Name = "ucTaskType1";
+			this.ucTaskType1.Size = new System.Drawing.Size(1056, 562);
+			this.ucTaskType1.TabIndex = 9;
 			// 
 			// ucNavInspection1
 			// 
@@ -531,8 +554,10 @@
 			this.Controls.Add(this.panel5);
 			this.Controls.Add(this.panel2);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.MinimumSize = new System.Drawing.Size(920, 532);
+			this.MaximumSize = new System.Drawing.Size(1272, 659);
+			this.MinimumSize = new System.Drawing.Size(1272, 659);
 			this.Name = "Home";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Template";
 			this.Load += new System.EventHandler(this.Template_Load);
 			this.panel2.ResumeLayout(false);
@@ -583,6 +608,8 @@
 		private UserControls.ucRequest ucRequest1;
 		private UserControls.ucTutorRequest ucTutorRequest1;
 		private UserControls.ucInspection ucNavInspection1;
+		private UserControls.ucTaskType ucTaskType1;
+		private UserControls.ucHelp ucHelp1;
 		private System.Windows.Forms.Panel pnlLoginFields;
 		private Bunifu.Framework.UI.BunifuThinButton2 btnLogIn;
 		private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassword;

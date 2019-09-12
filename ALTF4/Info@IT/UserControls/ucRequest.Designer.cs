@@ -29,8 +29,8 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.bunifuFormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
 			this.tmrManage = new System.Windows.Forms.Timer(this.components);
 			this.btnManageUpdate = new System.Windows.Forms.Button();
@@ -45,7 +45,6 @@
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.cmbAssignedStaffCode = new System.Windows.Forms.ComboBox();
 			this.label8 = new System.Windows.Forms.Label();
-			this.txtTime = new System.Windows.Forms.MaskedTextBox();
 			this.label7 = new System.Windows.Forms.Label();
 			this.dateRequest = new System.Windows.Forms.DateTimePicker();
 			this.cmbTaskTypeCode = new System.Windows.Forms.ComboBox();
@@ -59,6 +58,7 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dgvRequest = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+			this.txtTime = new System.Windows.Forms.TextBox();
 			this.pnlManage.SuspendLayout();
 			this.pnlView.SuspendLayout();
 			this.panel1.SuspendLayout();
@@ -178,7 +178,7 @@
 			this.pnlView.MaximumSize = new System.Drawing.Size(200, 115);
 			this.pnlView.MinimumSize = new System.Drawing.Size(200, 53);
 			this.pnlView.Name = "pnlView";
-			this.pnlView.Size = new System.Drawing.Size(200, 115);
+			this.pnlView.Size = new System.Drawing.Size(200, 53);
 			this.pnlView.TabIndex = 13;
 			// 
 			// panel1
@@ -198,9 +198,9 @@
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.txtTime);
 			this.groupBox1.Controls.Add(this.cmbAssignedStaffCode);
 			this.groupBox1.Controls.Add(this.label8);
-			this.groupBox1.Controls.Add(this.txtTime);
 			this.groupBox1.Controls.Add(this.label7);
 			this.groupBox1.Controls.Add(this.dateRequest);
 			this.groupBox1.Controls.Add(this.cmbTaskTypeCode);
@@ -239,15 +239,6 @@
 			this.label8.Size = new System.Drawing.Size(179, 17);
 			this.label8.TabIndex = 20;
 			this.label8.Text = "Staff Code (Assigned Staff):";
-			// 
-			// txtTime
-			// 
-			this.txtTime.Location = new System.Drawing.Point(15, 75);
-			this.txtTime.Mask = "00:00";
-			this.txtTime.Name = "txtTime";
-			this.txtTime.Size = new System.Drawing.Size(90, 23);
-			this.txtTime.TabIndex = 19;
-			this.txtTime.ValidatingType = typeof(System.DateTime);
 			// 
 			// label7
 			// 
@@ -365,20 +356,20 @@
 			// 
 			// dgvRequest
 			// 
-			dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvRequest.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvRequest.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvRequest.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvRequest.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvRequest.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvRequest.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvRequest.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvRequest.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvRequest.ColumnHeadersHeight = 50;
 			this.dgvRequest.DoubleBuffered = true;
 			this.dgvRequest.EnableHeadersVisualStyles = false;
@@ -389,6 +380,13 @@
 			this.dgvRequest.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
 			this.dgvRequest.Size = new System.Drawing.Size(782, 390);
 			this.dgvRequest.TabIndex = 0;
+			// 
+			// txtTime
+			// 
+			this.txtTime.Location = new System.Drawing.Point(15, 74);
+			this.txtTime.Name = "txtTime";
+			this.txtTime.Size = new System.Drawing.Size(90, 23);
+			this.txtTime.TabIndex = 25;
 			// 
 			// ucRequest
 			// 
@@ -427,7 +425,6 @@
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.ComboBox cmbAssignedStaffCode;
 		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.MaskedTextBox txtTime;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.ComboBox cmbTaskTypeCode;
 		private System.Windows.Forms.ComboBox cmbStudentCode;
@@ -441,5 +438,6 @@
 		private System.Windows.Forms.Panel panel3;
 		private Bunifu.Framework.UI.BunifuCustomDataGrid dgvRequest;
 		private System.Windows.Forms.DateTimePicker dateRequest;
+		private System.Windows.Forms.TextBox txtTime;
 	}
 }
