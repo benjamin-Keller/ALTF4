@@ -164,6 +164,8 @@ namespace Info_IT
 			btnNavTaskType.BackColor = Color.FromArgb(0,100,200);
 			btnNavTutorRequest.BackColor = Color.FromArgb(0,100,200);
 			btnNavVenue.BackColor = Color.FromArgb(0,100,200);
+			btnNavStudent.BackColor = Color.FromArgb(0,100,200);
+			btnNavStaff.BackColor = Color.FromArgb(0,100,200);
 		}
 
 		private void HideAll()
@@ -358,7 +360,7 @@ namespace Info_IT
 		{
 			HideAll();
 			InactiveButtons();
-			btnStudent.BackColor = Color.FromArgb(0, 150, 250);
+			btnNavStudent.BackColor = Color.FromArgb(0, 150, 250);
 
 			ucStudent1.Show();
 			this.Text = "Student";
@@ -369,11 +371,27 @@ namespace Info_IT
 		{
 			HideAll();
 			InactiveButtons();
-			btnStaff.BackColor = Color.FromArgb(0, 150, 250);
+			btnNavStaff.BackColor = Color.FromArgb(0, 150, 250);
 
 			ucStaff1.Show();
 			this.Text = "Staff";
 			lblLocation.Text = "Staff";
+		}
+
+		private void Logo_Click(object sender, EventArgs e)
+		{
+			//Making sure you cannot click it during log on
+			if(pnlLoginFields.Visible == false)
+			{
+				HideAll();
+				InactiveButtons();
+				btnNavHome.BackColor = Color.FromArgb(0, 150, 250);
+
+				ucHome1.Show();
+				this.Text = "Info@IT";
+				lblLocation.Text = "Home";
+			}
+
 		}
 	}
 }

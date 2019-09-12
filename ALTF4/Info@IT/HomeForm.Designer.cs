@@ -34,6 +34,8 @@
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.pnlNavigation = new System.Windows.Forms.Panel();
+			this.btnNavStaff = new System.Windows.Forms.Button();
+			this.btnNavStudent = new System.Windows.Forms.Button();
 			this.btnNavTaskType = new System.Windows.Forms.Button();
 			this.btnNavInspection = new System.Windows.Forms.Button();
 			this.btnNavTutorRequest = new System.Windows.Forms.Button();
@@ -70,8 +72,6 @@
 			this.lblLoginText = new System.Windows.Forms.Label();
 			this.lblLocation = new System.Windows.Forms.Label();
 			this.panel5 = new System.Windows.Forms.Panel();
-			this.btnStudent = new System.Windows.Forms.Button();
-			this.btnStaff = new System.Windows.Forms.Button();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.pnlNavigation.SuspendLayout();
@@ -114,8 +114,8 @@
 			// 
 			// pnlNavigation
 			// 
-			this.pnlNavigation.Controls.Add(this.btnStaff);
-			this.pnlNavigation.Controls.Add(this.btnStudent);
+			this.pnlNavigation.Controls.Add(this.btnNavStaff);
+			this.pnlNavigation.Controls.Add(this.btnNavStudent);
 			this.pnlNavigation.Controls.Add(this.btnNavTaskType);
 			this.pnlNavigation.Controls.Add(this.btnNavInspection);
 			this.pnlNavigation.Controls.Add(this.btnNavTutorRequest);
@@ -133,6 +133,36 @@
 			this.pnlNavigation.Name = "pnlNavigation";
 			this.pnlNavigation.Size = new System.Drawing.Size(200, 400);
 			this.pnlNavigation.TabIndex = 9;
+			// 
+			// btnNavStaff
+			// 
+			this.btnNavStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
+			this.btnNavStaff.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnNavStaff.FlatAppearance.BorderSize = 0;
+			this.btnNavStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnNavStaff.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnNavStaff.Location = new System.Drawing.Point(0, 332);
+			this.btnNavStaff.Name = "btnNavStaff";
+			this.btnNavStaff.Size = new System.Drawing.Size(200, 31);
+			this.btnNavStaff.TabIndex = 25;
+			this.btnNavStaff.Text = "Staff";
+			this.btnNavStaff.UseVisualStyleBackColor = false;
+			this.btnNavStaff.Click += new System.EventHandler(this.BtnStaff_Click);
+			// 
+			// btnNavStudent
+			// 
+			this.btnNavStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
+			this.btnNavStudent.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnNavStudent.FlatAppearance.BorderSize = 0;
+			this.btnNavStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnNavStudent.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnNavStudent.Location = new System.Drawing.Point(0, 301);
+			this.btnNavStudent.Name = "btnNavStudent";
+			this.btnNavStudent.Size = new System.Drawing.Size(200, 31);
+			this.btnNavStudent.TabIndex = 24;
+			this.btnNavStudent.Text = "Student";
+			this.btnNavStudent.UseVisualStyleBackColor = false;
+			this.btnNavStudent.Click += new System.EventHandler(this.BtnStudent_Click);
 			// 
 			// btnNavTaskType
 			// 
@@ -279,6 +309,7 @@
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new System.Drawing.Size(200, 109);
 			this.panel4.TabIndex = 1;
+			this.panel4.Click += new System.EventHandler(this.Logo_Click);
 			// 
 			// label1
 			// 
@@ -290,6 +321,7 @@
 			this.label1.Size = new System.Drawing.Size(143, 125);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "@";
+			this.label1.Click += new System.EventHandler(this.Logo_Click);
 			// 
 			// btnHelp
 			// 
@@ -563,36 +595,6 @@
 			this.panel5.Size = new System.Drawing.Size(1056, 30);
 			this.panel5.TabIndex = 2;
 			// 
-			// btnStudent
-			// 
-			this.btnStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
-			this.btnStudent.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnStudent.FlatAppearance.BorderSize = 0;
-			this.btnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnStudent.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnStudent.Location = new System.Drawing.Point(0, 301);
-			this.btnStudent.Name = "btnStudent";
-			this.btnStudent.Size = new System.Drawing.Size(200, 31);
-			this.btnStudent.TabIndex = 24;
-			this.btnStudent.Text = "Student";
-			this.btnStudent.UseVisualStyleBackColor = false;
-			this.btnStudent.Click += new System.EventHandler(this.BtnStudent_Click);
-			// 
-			// btnStaff
-			// 
-			this.btnStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
-			this.btnStaff.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnStaff.FlatAppearance.BorderSize = 0;
-			this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnStaff.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnStaff.Location = new System.Drawing.Point(0, 332);
-			this.btnStaff.Name = "btnStaff";
-			this.btnStaff.Size = new System.Drawing.Size(200, 31);
-			this.btnStaff.TabIndex = 25;
-			this.btnStaff.Text = "Staff";
-			this.btnStaff.UseVisualStyleBackColor = false;
-			this.btnStaff.Click += new System.EventHandler(this.BtnStaff_Click);
-			// 
 			// Home
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -665,7 +667,7 @@
 		private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassword;
 		private Bunifu.Framework.UI.BunifuMaterialTextbox txtUsername;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Button btnStudent;
-		private System.Windows.Forms.Button btnStaff;
+		private System.Windows.Forms.Button btnNavStudent;
+		private System.Windows.Forms.Button btnNavStaff;
 	}
 }
