@@ -32,6 +32,7 @@ namespace Info_IT
 		public void LoginPanel()
 		{
 			pnlLoginFields.Visible = true;
+            pnlLoginFields.Focus();
 
 			this.Text = "Login";
 			lblLocation.Text = "Login";
@@ -114,28 +115,28 @@ namespace Info_IT
 
 		}
 
-		private void TxtUsername_Enter(object sender, EventArgs e)
+		private void txtUsername_Enter(object sender, EventArgs e)
 		{
 			if (txtUsername.Text == "Username")
 			{
 				txtUsername.Text = "";
 			}
 		}
-		private void TxtUsername_Leave(object sender, EventArgs e)
+		private void txtUsername_Leave(object sender, EventArgs e)
 		{
 			if (txtUsername.Text == "" || txtUsername.Text == null)
 			{
 				txtUsername.Text = "Username";
 			}
 		}
-		private void TxtPassword_Enter(object sender, EventArgs e)
+		private void txtPassword_Enter(object sender, EventArgs e)
 		{
 			if (txtPassword.Text == "Password")
 			{
 				txtPassword.Text = "";
 			}
 		}
-		private void TxtPassword_Leave(object sender, EventArgs e)
+		private void txtPassword_Leave(object sender, EventArgs e)
 		{
 			if (txtPassword.Text == "" || txtPassword.Text == null)
 			{
@@ -367,13 +368,17 @@ namespace Info_IT
 
 		private void BtnHelp_Click(object sender, EventArgs e)
 		{
-			HideAll();
-			InactiveButtons();
-			btnHelp.BackColor = Color.FromArgb(0, 150, 250);
+            //Making sure you cannot click it during log on
+            if (pnlLoginFields.Visible == false)
+            {
+                HideAll();
+                InactiveButtons();
+                btnHelp.BackColor = Color.FromArgb(0, 150, 250);
 
-			ucHelp1.Show();
-			this.Text = "Help";
-			lblLocation.Text = "Help";
+                ucHelp1.Show();
+                this.Text = "Help";
+                lblLocation.Text = "Help";
+            }
 		}
 
 		private void BtnStudent_Click(object sender, EventArgs e)
@@ -411,7 +416,6 @@ namespace Info_IT
 				this.Text = "Info@IT";
 				lblLocation.Text = "Home";
 			}
-
 		}
-	}
+    }
 }
