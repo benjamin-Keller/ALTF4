@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using BLL;
+using System.Data;
 
 namespace Info_IT
 {
@@ -11,7 +13,9 @@ namespace Info_IT
 		public bool firstUser;
 		public bool firstPass;
 
-		public Home()
+        BusinessLogicLayer bll = new BusinessLogicLayer();
+
+        public Home()
 		{
 			InitializeComponent();
 		}
@@ -142,16 +146,40 @@ namespace Info_IT
 
 		private void BtnLogIn_Click(object sender, EventArgs e)
 		{
-			isLoggedIn = true;
-			LoginPanel();
-			HideAll();
-			ucHome1.Show();
+            //DAL.LoginClass login = new DAL.LoginClass(txtUsername.Text, txtPassword.Text);
+            //DataTable x = new DataTable();
 
-			this.Text = "Info@IT";
-			lblLocation.Text = "Home";
+            //x = bll.GetLogin(login);
 
-			pnlNavigation.Show();
-		}
+            //if (x.Rows[0] == null)
+            //{
+            //    MessageBox.Show("Incorrect Username and Password");
+            //}
+            //else
+            //{
+            //    isLoggedIn = true;
+            //    LoginPanel();
+            //    HideAll();
+            //    ucHome1.Show();
+
+            //    this.Text = "Info@IT";
+            //    lblLocation.Text = "Home";
+
+            //    pnlNavigation.Show();
+            //}
+
+            isLoggedIn = true;
+            LoginPanel();
+            HideAll();
+            ucHome1.Show();
+
+            this.Text = "Info@IT";
+            lblLocation.Text = "Home";
+
+            pnlNavigation.Show();
+
+
+        }
 
 
 		private void InactiveButtons()
