@@ -44,22 +44,22 @@
 			this.pnlManage = new System.Windows.Forms.Panel();
 			this.txtEmailAddress = new System.Windows.Forms.TextBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.label8 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
+			this.cmbGender = new System.Windows.Forms.ComboBox();
+			this.label6 = new System.Windows.Forms.Label();
+			this.txtIDNo = new System.Windows.Forms.TextBox();
+			this.label4 = new System.Windows.Forms.Label();
+			this.txtPhoneNo = new System.Windows.Forms.TextBox();
+			this.label2 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.txtName = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.txtPhoneNo = new System.Windows.Forms.TextBox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.txtIDNo = new System.Windows.Forms.TextBox();
-			this.label4 = new System.Windows.Forms.Label();
-			this.label6 = new System.Windows.Forms.Label();
-			this.cmbGender = new System.Windows.Forms.ComboBox();
-			this.txtBank = new System.Windows.Forms.TextBox();
-			this.label7 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.label8 = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dgvUser = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.pnlView.SuspendLayout();
 			this.pnlManage.SuspendLayout();
 			this.groupBox1.SuspendLayout();
@@ -209,9 +209,9 @@
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.comboBox1);
 			this.groupBox1.Controls.Add(this.textBox1);
 			this.groupBox1.Controls.Add(this.label8);
-			this.groupBox1.Controls.Add(this.txtBank);
 			this.groupBox1.Controls.Add(this.label7);
 			this.groupBox1.Controls.Add(this.cmbGender);
 			this.groupBox1.Controls.Add(this.label6);
@@ -233,6 +233,94 @@
 			this.groupBox1.TabIndex = 19;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Information";
+			// 
+			// textBox1
+			// 
+			this.textBox1.Location = new System.Drawing.Point(594, 83);
+			this.textBox1.Name = "textBox1";
+			this.textBox1.Size = new System.Drawing.Size(187, 23);
+			this.textBox1.TabIndex = 20;
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label8.Location = new System.Drawing.Point(591, 64);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(86, 17);
+			this.label8.TabIndex = 19;
+			this.label8.Text = "SNS Number";
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label7.Location = new System.Drawing.Point(398, 64);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(39, 17);
+			this.label7.TabIndex = 17;
+			this.label7.Text = "Role:";
+			// 
+			// cmbGender
+			// 
+			this.cmbGender.FormattingEnabled = true;
+			this.cmbGender.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Other"});
+			this.cmbGender.Location = new System.Drawing.Point(401, 35);
+			this.cmbGender.Name = "cmbGender";
+			this.cmbGender.Size = new System.Drawing.Size(187, 23);
+			this.cmbGender.TabIndex = 16;
+			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label6.Location = new System.Drawing.Point(398, 16);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(52, 17);
+			this.label6.TabIndex = 15;
+			this.label6.Text = "Gender";
+			// 
+			// txtIDNo
+			// 
+			this.txtIDNo.Location = new System.Drawing.Point(594, 35);
+			this.txtIDNo.Name = "txtIDNo";
+			this.txtIDNo.Size = new System.Drawing.Size(187, 23);
+			this.txtIDNo.TabIndex = 14;
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label4.Location = new System.Drawing.Point(591, 16);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(81, 17);
+			this.label4.TabIndex = 13;
+			this.label4.Text = "ID Number:";
+			// 
+			// txtPhoneNo
+			// 
+			this.txtPhoneNo.Location = new System.Drawing.Point(208, 83);
+			this.txtPhoneNo.Name = "txtPhoneNo";
+			this.txtPhoneNo.Size = new System.Drawing.Size(187, 23);
+			this.txtPhoneNo.TabIndex = 12;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label2.Location = new System.Drawing.Point(205, 64);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(106, 17);
+			this.label2.TabIndex = 11;
+			this.label2.Text = "Phone Number:";
 			// 
 			// label5
 			// 
@@ -274,101 +362,6 @@
 			this.panel1.Size = new System.Drawing.Size(200, 562);
 			this.panel1.TabIndex = 18;
 			// 
-			// txtPhoneNo
-			// 
-			this.txtPhoneNo.Location = new System.Drawing.Point(208, 83);
-			this.txtPhoneNo.Name = "txtPhoneNo";
-			this.txtPhoneNo.Size = new System.Drawing.Size(187, 23);
-			this.txtPhoneNo.TabIndex = 12;
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label2.Location = new System.Drawing.Point(205, 64);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(106, 17);
-			this.label2.TabIndex = 11;
-			this.label2.Text = "Phone Number:";
-			// 
-			// txtIDNo
-			// 
-			this.txtIDNo.Location = new System.Drawing.Point(594, 35);
-			this.txtIDNo.Name = "txtIDNo";
-			this.txtIDNo.Size = new System.Drawing.Size(187, 23);
-			this.txtIDNo.TabIndex = 14;
-			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label4.Location = new System.Drawing.Point(591, 16);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(81, 17);
-			this.label4.TabIndex = 13;
-			this.label4.Text = "ID Number:";
-			// 
-			// label6
-			// 
-			this.label6.AutoSize = true;
-			this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label6.Location = new System.Drawing.Point(398, 16);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(52, 17);
-			this.label6.TabIndex = 15;
-			this.label6.Text = "Gender";
-			// 
-			// cmbGender
-			// 
-			this.cmbGender.FormattingEnabled = true;
-			this.cmbGender.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "Other"});
-			this.cmbGender.Location = new System.Drawing.Point(401, 35);
-			this.cmbGender.Name = "cmbGender";
-			this.cmbGender.Size = new System.Drawing.Size(187, 23);
-			this.cmbGender.TabIndex = 16;
-			// 
-			// txtBank
-			// 
-			this.txtBank.Location = new System.Drawing.Point(401, 83);
-			this.txtBank.Name = "txtBank";
-			this.txtBank.Size = new System.Drawing.Size(187, 23);
-			this.txtBank.TabIndex = 18;
-			// 
-			// label7
-			// 
-			this.label7.AutoSize = true;
-			this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label7.Location = new System.Drawing.Point(398, 64);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(94, 17);
-			this.label7.TabIndex = 17;
-			this.label7.Text = "Bank account:";
-			// 
-			// textBox1
-			// 
-			this.textBox1.Location = new System.Drawing.Point(594, 83);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(187, 23);
-			this.textBox1.TabIndex = 20;
-			// 
-			// label8
-			// 
-			this.label8.AutoSize = true;
-			this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label8.Location = new System.Drawing.Point(591, 64);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(86, 17);
-			this.label8.TabIndex = 19;
-			this.label8.Text = "SNS Number";
-			// 
 			// panel3
 			// 
 			this.panel3.Controls.Add(this.dgvUser);
@@ -404,6 +397,14 @@
 			this.dgvUser.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
 			this.dgvUser.Size = new System.Drawing.Size(796, 378);
 			this.dgvUser.TabIndex = 1;
+			// 
+			// comboBox1
+			// 
+			this.comboBox1.FormattingEnabled = true;
+			this.comboBox1.Location = new System.Drawing.Point(401, 83);
+			this.comboBox1.Name = "comboBox1";
+			this.comboBox1.Size = new System.Drawing.Size(187, 23);
+			this.comboBox1.TabIndex = 2;
 			// 
 			// ucUser
 			// 
@@ -450,11 +451,11 @@
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.ComboBox cmbGender;
-		private System.Windows.Forms.TextBox txtBank;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Panel panel3;
 		private Bunifu.Framework.UI.BunifuCustomDataGrid dgvUser;
+		private System.Windows.Forms.ComboBox comboBox1;
 	}
 }

@@ -126,18 +126,18 @@ namespace Info_IT
 				default:
 					////What can everyone else see
 
-					//btnNavHome.Hide();
-					//btnNavEquipment.Hide();
-					//btnNavVenue.Hide();
-					//btnNavDepartment.Hide();
-					//btnNavDepartment.Hide();
-					//btnNavRequest.Hide();
-					//btnNavTutorRequest.Hide();
-					//btnNavInspection.Hide();
-					//btnNavTaskType.Hide();
-					//btnNavStudent.Hide();
-					//btnNavStaff.Hide();
-					//btnNavUser.Hide();
+					btnNavHome.Hide();
+					btnNavEquipment.Hide();
+					btnNavVenue.Hide();
+					btnNavDepartment.Hide();
+					btnNavDepartment.Hide();
+					btnNavRequest.Hide();
+					btnNavTutorRequest.Hide();
+					btnNavInspection.Hide();
+					btnNavTaskType.Hide();
+					btnNavStudent.Hide();
+					btnNavStaff.Hide();
+					btnNavUser.Hide();
 					break;
 
 			}
