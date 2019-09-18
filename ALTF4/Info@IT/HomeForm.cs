@@ -9,7 +9,7 @@ namespace Info_IT
 	public partial class Home : Form
 	{
 		public bool isLoggedIn;
-		public string role;
+		public string role = "Admin";
 		public bool firstUser;
 		public bool firstPass;
 
@@ -23,6 +23,9 @@ namespace Info_IT
 		{
 			HideAll();
 			LoginPanel();
+
+            //Focus label instead of txtUsername
+            this.ActiveControl = label2;
 
 			//Hidden when first launching
 			pnlNavigation.Hide();
@@ -448,9 +451,10 @@ namespace Info_IT
 
 		private void Logo_Click(object sender, EventArgs e)
 		{
-			//Making sure you cannot click it during log on
-			if(pnlLoginFields.Visible == false)
-			{
+            //Making sure you cannot click it during log on
+            //if (!isLoggedIn) 
+            if (pnlLoginFields.Visible == false)
+            {
 				HideAll();
 				InactiveButtons();
 				btnNavHome.BackColor = Color.FromArgb(0, 150, 250);

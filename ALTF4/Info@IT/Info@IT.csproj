@@ -90,6 +90,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Errors\ucErrorFailedToAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Errors\ucErrorFailedToAdd.Designer.cs">
+      <DependentUpon>ucErrorFailedToAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Errors\ucErrorStaffNotFound.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Errors\ucErrorStaffNotFound.Designer.cs">
+      <DependentUpon>ucErrorStaffNotFound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Errors\ucErrorStudentNotFound.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Errors\ucErrorStudentNotFound.Designer.cs">
+      <DependentUpon>ucErrorStudentNotFound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Errors\ucErrorUserNotFound.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Errors\ucErrorUserNotFound.Designer.cs">
+      <DependentUpon>ucErrorUserNotFound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Errors\ucErrorVenueNotFound.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Errors\ucErrorVenueNotFound.Designer.cs">
+      <DependentUpon>ucErrorVenueNotFound.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +212,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Errors\ucErrorFailedToAdd.resx">
+      <DependentUpon>ucErrorFailedToAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Errors\ucErrorStaffNotFound.resx">
+      <DependentUpon>ucErrorStaffNotFound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Errors\ucErrorStudentNotFound.resx">
+      <DependentUpon>ucErrorStudentNotFound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Errors\ucErrorUserNotFound.resx">
+      <DependentUpon>ucErrorUserNotFound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Errors\ucErrorVenueNotFound.resx">
+      <DependentUpon>ucErrorVenueNotFound.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>

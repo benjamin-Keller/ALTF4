@@ -51,6 +51,7 @@
 			this.btnNavHelp = new System.Windows.Forms.Button();
 			this.tmrNavigation = new System.Windows.Forms.Timer(this.components);
 			this.pnlContent = new System.Windows.Forms.Panel();
+			this.ucUser1 = new Info_IT.UserControls.ucUser();
 			this.ucStudent1 = new Info_IT.UserControls.ucStudent();
 			this.ucStaff1 = new Info_IT.UserControls.ucStaff();
 			this.ucHelp1 = new Info_IT.UserControls.ucHelp();
@@ -68,7 +69,11 @@
 			this.lblLoginText = new System.Windows.Forms.Label();
 			this.lblLocation = new System.Windows.Forms.Label();
 			this.panel5 = new System.Windows.Forms.Panel();
-			this.ucUser1 = new Info_IT.UserControls.ucUser();
+			this.ucErrorStudentNotFound1 = new Info_IT.Errors.ucErrorStudentNotFound();
+			this.ucErrorVenueNotFound1 = new Info_IT.Errors.ucErrorVenueNotFound();
+			this.ucErrorStaffNotFound1 = new Info_IT.Errors.ucErrorStaffNotFound();
+			this.ucErrorUserNotFound1 = new Info_IT.Errors.ucErrorUserNotFound();
+			this.ucErrorFailedToAdd1 = new Info_IT.Errors.ucErrorFailedToAdd();
 			this.pnlLoginFields = new System.Windows.Forms.Panel();
 			this.btnLogIn = new Bunifu.Framework.UI.BunifuThinButton2();
 			this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -364,6 +369,11 @@
 			// pnlContent
 			// 
 			this.pnlContent.Controls.Add(this.pnlLoginFields);
+			this.pnlContent.Controls.Add(this.ucErrorFailedToAdd1);
+			this.pnlContent.Controls.Add(this.ucErrorUserNotFound1);
+			this.pnlContent.Controls.Add(this.ucErrorStaffNotFound1);
+			this.pnlContent.Controls.Add(this.ucErrorVenueNotFound1);
+			this.pnlContent.Controls.Add(this.ucErrorStudentNotFound1);
 			this.pnlContent.Controls.Add(this.ucUser1);
 			this.pnlContent.Controls.Add(this.ucStudent1);
 			this.pnlContent.Controls.Add(this.ucStaff1);
@@ -383,6 +393,13 @@
 			this.pnlContent.Name = "pnlContent";
 			this.pnlContent.Size = new System.Drawing.Size(1056, 620);
 			this.pnlContent.TabIndex = 3;
+			// 
+			// ucUser1
+			// 
+			this.ucUser1.Location = new System.Drawing.Point(0, 58);
+			this.ucUser1.Name = "ucUser1";
+			this.ucUser1.Size = new System.Drawing.Size(1056, 562);
+			this.ucUser1.TabIndex = 0;
 			// 
 			// ucStudent1
 			// 
@@ -527,12 +544,41 @@
 			this.panel5.Size = new System.Drawing.Size(1056, 30);
 			this.panel5.TabIndex = 2;
 			// 
-			// ucUser1
+			// ucErrorStudentNotFound1
 			// 
-			this.ucUser1.Location = new System.Drawing.Point(0, 58);
-			this.ucUser1.Name = "ucUser1";
-			this.ucUser1.Size = new System.Drawing.Size(1056, 562);
-			this.ucUser1.TabIndex = 0;
+			this.ucErrorStudentNotFound1.Location = new System.Drawing.Point(0, 57);
+			this.ucErrorStudentNotFound1.Name = "ucErrorStudentNotFound1";
+			this.ucErrorStudentNotFound1.Size = new System.Drawing.Size(1056, 562);
+			this.ucErrorStudentNotFound1.TabIndex = 13;
+			// 
+			// ucErrorVenueNotFound1
+			// 
+			this.ucErrorVenueNotFound1.Location = new System.Drawing.Point(0, 57);
+			this.ucErrorVenueNotFound1.Name = "ucErrorVenueNotFound1";
+			this.ucErrorVenueNotFound1.Size = new System.Drawing.Size(1056, 562);
+			this.ucErrorVenueNotFound1.TabIndex = 14;
+			// 
+			// ucErrorStaffNotFound1
+			// 
+			this.ucErrorStaffNotFound1.Location = new System.Drawing.Point(0, 58);
+			this.ucErrorStaffNotFound1.Name = "ucErrorStaffNotFound1";
+			this.ucErrorStaffNotFound1.Size = new System.Drawing.Size(1056, 562);
+			this.ucErrorStaffNotFound1.TabIndex = 15;
+			// 
+			// ucErrorUserNotFound1
+			// 
+			this.ucErrorUserNotFound1.Location = new System.Drawing.Point(0, 58);
+			this.ucErrorUserNotFound1.Name = "ucErrorUserNotFound1";
+			this.ucErrorUserNotFound1.Size = new System.Drawing.Size(1056, 562);
+			this.ucErrorUserNotFound1.TabIndex = 16;
+			// 
+			// ucErrorFailedToAdd1
+			// 
+			this.ucErrorFailedToAdd1._Data = null;
+			this.ucErrorFailedToAdd1.Location = new System.Drawing.Point(0, 58);
+			this.ucErrorFailedToAdd1.Name = "ucErrorFailedToAdd1";
+			this.ucErrorFailedToAdd1.Size = new System.Drawing.Size(1056, 562);
+			this.ucErrorFailedToAdd1.TabIndex = 17;
 			// 
 			// pnlLoginFields
 			// 
@@ -543,7 +589,7 @@
 			this.pnlLoginFields.Location = new System.Drawing.Point(0, 58);
 			this.pnlLoginFields.Name = "pnlLoginFields";
 			this.pnlLoginFields.Size = new System.Drawing.Size(1056, 562);
-			this.pnlLoginFields.TabIndex = 14;
+			this.pnlLoginFields.TabIndex = 18;
 			// 
 			// btnLogIn
 			// 
@@ -569,7 +615,7 @@
 			this.btnLogIn.Size = new System.Drawing.Size(181, 41);
 			this.btnLogIn.TabIndex = 7;
 			this.btnLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.btnLogIn.Click += new System.EventHandler(this.BtnLogIn_Click);
+			this.btnLogIn.Click += new System.EventHandler(this.Login_Click);
 			// 
 			// txtPassword
 			// 
@@ -691,11 +737,16 @@
 		private System.Windows.Forms.Button btnNavStudent;
 		private System.Windows.Forms.Button btnNavStaff;
 		private System.Windows.Forms.Button btnNavUser;
+		private UserControls.ucUser ucUser1;
 		private System.Windows.Forms.Panel pnlLoginFields;
 		private Bunifu.Framework.UI.BunifuThinButton2 btnLogIn;
 		private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassword;
 		private Bunifu.Framework.UI.BunifuMaterialTextbox txtUsername;
 		private System.Windows.Forms.Label label2;
-		private UserControls.ucUser ucUser1;
+		private Errors.ucErrorFailedToAdd ucErrorFailedToAdd1;
+		private Errors.ucErrorUserNotFound ucErrorUserNotFound1;
+		private Errors.ucErrorStaffNotFound ucErrorStaffNotFound1;
+		private Errors.ucErrorVenueNotFound ucErrorVenueNotFound1;
+		private Errors.ucErrorStudentNotFound ucErrorStudentNotFound1;
 	}
 }
