@@ -765,5 +765,42 @@ namespace DAL
         }
 
 
+        public int UpdateVenue(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_UpdateVenue", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@VenueCode", venue.VenueCode);
+                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
+                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
+                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
+                dbCmd.Parameters.AddWithValue("@BuildingBlockID", venue.VenueBuildingBlock);
+                dbCmd.Parameters.AddWithValue("@BuildingID", venue.VenueBuilding);
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+
     }
 }
