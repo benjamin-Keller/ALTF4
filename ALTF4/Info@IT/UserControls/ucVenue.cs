@@ -138,12 +138,12 @@ namespace Info_IT.UserControls
 
         private void dgvVenue_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtDescription.Text = dgvVenue.SelectedRows[0].Cells[1].ToString();
-            txtCapacity.Text = dgvVenue.SelectedRows[0].Cells[2].ToString();
-            txtDoorNo.Text = dgvVenue.SelectedRows[0].Cells[3].ToString();
-            cmbBuilding.SelectedText = dgvVenue.SelectedRows[0].Cells[4].ToString();
-            cmbBuildingBlock.SelectedText = dgvVenue.SelectedRows[0].Cells[5].ToString();
-            
+            txtDescription.Text = dgvVenue.SelectedRows[0].Cells[1].Value.ToString();
+            txtCapacity.Text = dgvVenue.SelectedRows[0].Cells[2].Value.ToString();
+            txtDoorNo.Text = dgvVenue.SelectedRows[0].Cells[3].Value.ToString();
+            cmbBuilding.SelectedText = dgvVenue.SelectedRows[0].Cells[4].Value.ToString();
+            cmbBuildingBlock.SelectedText = dgvVenue.SelectedRows[0].Cells[5].Value.ToString();
+
 
         }
     }

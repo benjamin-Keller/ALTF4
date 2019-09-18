@@ -437,7 +437,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPassword.HintForeColor = System.Drawing.Color.Empty;
-            this.txtPassword.HintText = "";
+            this.txtPassword.HintText = "Password";
             this.txtPassword.isPassword = false;
             this.txtPassword.LineFocusedColor = System.Drawing.Color.Blue;
             this.txtPassword.LineIdleColor = System.Drawing.Color.Gray;
@@ -448,7 +448,6 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(370, 44);
             this.txtPassword.TabIndex = 6;
-            this.txtPassword.Text = "Password";
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtUsername
@@ -457,7 +456,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtUsername.HintForeColor = System.Drawing.Color.Empty;
-            this.txtUsername.HintText = "";
+            this.txtUsername.HintText = "Username";
             this.txtUsername.isPassword = false;
             this.txtUsername.LineFocusedColor = System.Drawing.Color.Blue;
             this.txtUsername.LineIdleColor = System.Drawing.Color.Gray;
@@ -468,7 +467,6 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(370, 44);
             this.txtUsername.TabIndex = 5;
-            this.txtUsername.Text = "Username";
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label2
