@@ -83,23 +83,32 @@ namespace Info_IT.UserControls
 
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
-            DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), dateRequest.ToString(), Convert.ToDateTime(txtStartTime.Text), Convert.ToDateTime(txtEndTime.Text), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()));
-
-            int x = bll.AddTutorRequest(tutorRequest);
-
-            if (x > 0)
+            try
             {
-                txtStartTime.Clear();
-                txtEndTime.Clear();
-                cmbRequestCode.ResetText();
-                cmbModuleCode.ResetText();
-                cmbVenueCode.ResetText();
-                dateRequest.ResetText();
+                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), dateRequest.ToString(), Convert.ToDateTime(txtStartTime.Text), Convert.ToDateTime(txtEndTime.Text), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()));
+
+                int x = bll.AddTutorRequest(tutorRequest);
+
+                if (x > 0)
+                {
+                    txtStartTime.Clear();
+                    txtEndTime.Clear();
+                    cmbRequestCode.ResetText();
+                    cmbModuleCode.ResetText();
+                    cmbVenueCode.ResetText();
+                    dateRequest.ResetText();
+                }
+                else
+                {
+                    MessageBox.Show("Please input valid data.");
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show("Please input valid data.");
+                MessageBox.Show("Please Enter a valid Time.");
             }
+
+            
 
             dgvTutorRequest.DataSource = bll.GetTutorRequest();
 
