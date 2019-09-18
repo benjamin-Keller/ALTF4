@@ -168,6 +168,12 @@
     <Compile Include="UserControls\ucTutorRequest.Designer.cs">
       <DependentUpon>ucTutorRequest.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucUser.Designer.cs">
+      <DependentUpon>ucUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucVenue.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -214,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucTutorRequest.resx">
       <DependentUpon>ucTutorRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucUser.resx">
+      <DependentUpon>ucUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucVenue.resx">
       <DependentUpon>ucVenue.cs</DependentUpon>

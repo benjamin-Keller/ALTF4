@@ -27,6 +27,7 @@ namespace Info_IT
 			//Hidden when first launching
 			pnlNavigation.Hide();
 			pnlLogin.Hide();
+			btnNavHelp.Hide();
 		}
 
 		public void LoginPanel()
@@ -67,6 +68,9 @@ namespace Info_IT
 					//btnNavTutorRequest.Hide();
 					//btnNavInspection.Hide();
 					//btnNavTaskType.Hide();
+					//btnNavStudent.Hide();
+					//btnNavStaff.Hide();
+					//btnNavUser.Hide();
 					break;
 
 				case "Staff":
@@ -82,6 +86,9 @@ namespace Info_IT
 					//btnNavTutorRequest.Hide();
 					//btnNavInspection.Hide();
 					//btnNavTaskType.Hide();
+					//btnNavStudent.Hide();
+					//btnNavStaff.Hide();
+					//btnNavUser.Hide();
 					break;
 				case "ICT":
 					////What can Info@It Staff see
@@ -95,6 +102,9 @@ namespace Info_IT
 					//btnNavTutorRequest.Hide();
 					//btnNavInspection.Hide();
 					//btnNavTaskType.Hide();
+					//btnNavStudent.Hide();
+					//btnNavStaff.Hide();
+					//btnNavUser.Hide();
 					break;
 
 				case "SI":
@@ -109,6 +119,25 @@ namespace Info_IT
 					//btnNavTutorRequest.Hide();
 					//btnNavInspection.Hide();
 					//btnNavTaskType.Hide();
+					//btnNavStudent.Hide();
+					//btnNavStaff.Hide();
+					//btnNavUser.Hide();
+					break;
+				default:
+					////What can everyone else see
+
+					btnNavHome.Hide();
+					btnNavEquipment.Hide();
+					btnNavVenue.Hide();
+					btnNavDepartment.Hide();
+					btnNavDepartment.Hide();
+					btnNavRequest.Hide();
+					btnNavTutorRequest.Hide();
+					btnNavInspection.Hide();
+					btnNavTaskType.Hide();
+					btnNavStudent.Hide();
+					btnNavStaff.Hide();
+					btnNavUser.Hide();
 					break;
 
 			}
@@ -178,7 +207,7 @@ namespace Info_IT
             lblLocation.Text = "Home";
 
             pnlNavigation.Show();
-
+			btnNavHelp.Show();
 
         }
 
@@ -195,6 +224,8 @@ namespace Info_IT
 			btnNavVenue.BackColor = Color.FromArgb(0,100,200);
 			btnNavStudent.BackColor = Color.FromArgb(0,100,200);
 			btnNavStaff.BackColor = Color.FromArgb(0,100,200);
+			btnNavUser.BackColor = Color.FromArgb(0,100,200);
+			btnNavHelp.BackColor = Color.FromArgb(0, 100, 200);
 		}
 
 		private void HideAll()
@@ -210,6 +241,7 @@ namespace Info_IT
 			ucHelp1.Hide();
 			ucStudent1.Hide();
 			ucStaff1.Hide();
+			ucUser1.Hide();
 
 			pnlLoginFields.Hide();	
 		}
@@ -219,6 +251,7 @@ namespace Info_IT
 			LoginPanel();
 
 			//Hidden when first launching
+			btnNavHelp.Hide();
 			pnlNavigation.Hide();
 			pnlLogin.Hide();
 		}
@@ -373,7 +406,7 @@ namespace Info_IT
             {
                 HideAll();
                 InactiveButtons();
-                btnHelp.BackColor = Color.FromArgb(0, 150, 250);
+                btnNavHelp.BackColor = Color.FromArgb(0, 150, 250);
 
                 ucHelp1.Show();
                 this.Text = "Help";
@@ -402,6 +435,16 @@ namespace Info_IT
 			this.Text = "Staff";
 			lblLocation.Text = "Staff";
 		}
+		private void BtnNavUser_Click(object sender, EventArgs e)
+		{
+			HideAll();
+			InactiveButtons();
+			btnNavUser.BackColor = Color.FromArgb(0, 150, 250);
+
+			ucUser1.Show();
+			this.Text = "User";
+			lblLocation.Text = "User";
+		}
 
 		private void Logo_Click(object sender, EventArgs e)
 		{
@@ -417,5 +460,7 @@ namespace Info_IT
 				lblLocation.Text = "Home";
 			}
 		}
-    }
+
+
+	}
 }
