@@ -9,7 +9,7 @@ namespace Info_IT
 	public partial class Home : Form
 	{
 		public bool isLoggedIn;
-		public string role;
+		public string role = "Admin";
 		public bool firstUser;
 		public bool firstPass;
 
