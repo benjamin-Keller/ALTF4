@@ -85,14 +85,14 @@ namespace Info_IT.UserControls
 		{
             try
             {
-                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), dateRequest.ToString(), Convert.ToDateTime(txtStartTime.Text), Convert.ToDateTime(txtEndTime.Text), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()));
+                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), Convert.ToDateTime(cmbStartTime.Text), Convert.ToDateTime(cmbEndTime.Text), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()));
 
                 int x = bll.AddTutorRequest(tutorRequest);
 
                 if (x > 0)
                 {
-                    txtStartTime.Clear();
-                    txtEndTime.Clear();
+                    cmbStartTime.ResetText();
+                    cmbEndTime.ResetText();
                     cmbRequestCode.ResetText();
                     cmbModuleCode.ResetText();
                     cmbVenueCode.ResetText();
@@ -103,7 +103,7 @@ namespace Info_IT.UserControls
                     MessageBox.Show("Please input valid data.");
                 }
             }
-            catch
+            catch(Exception error)
             {
                 MessageBox.Show("Please Enter a valid Time.");
             }
