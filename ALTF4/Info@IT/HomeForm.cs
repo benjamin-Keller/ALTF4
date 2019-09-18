@@ -180,9 +180,9 @@ namespace Info_IT
 		private void BtnLogIn_Click(object sender, EventArgs e)
 		{
             //DAL.LoginClass login = new DAL.LoginClass(txtUsername.Text, txtPassword.Text);
-            //DataTable x = new DataTable();
+            //DataGridView x = new DataGridView();
 
-            //x = bll.GetLogin(login);
+            //x.DataSource = bll.GetLogin(login);
 
             //if (x.Rows[0] == null)
             //{
@@ -191,6 +191,7 @@ namespace Info_IT
             //else
             //{
             //    isLoggedIn = true;
+            //    role = x.Rows[0].Cells["StaffType"].Value.ToString();
             //    LoginPanel();
             //    HideAll();
             //    ucHome1.Show();
@@ -201,6 +202,8 @@ namespace Info_IT
             //    pnlNavigation.Show();
             //}
 
+
+
             isLoggedIn = true;
             LoginPanel();
             HideAll();
@@ -210,7 +213,7 @@ namespace Info_IT
             lblLocation.Text = "Home";
 
             pnlNavigation.Show();
-			btnNavHelp.Show();
+            btnNavHelp.Show();
 
         }
 
