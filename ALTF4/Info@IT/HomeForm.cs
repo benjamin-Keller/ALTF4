@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using BLL;
+using System.Data;
 
 namespace Info_IT
 {
@@ -11,7 +13,9 @@ namespace Info_IT
 		public bool firstUser;
 		public bool firstPass;
 
-		public Home()
+        BusinessLogicLayer bll = new BusinessLogicLayer();
+
+        public Home()
 		{
 			InitializeComponent();
 		}
@@ -28,6 +32,7 @@ namespace Info_IT
 		public void LoginPanel()
 		{
 			pnlLoginFields.Visible = true;
+            pnlLoginFields.Focus();
 
 			this.Text = "Login";
 			lblLocation.Text = "Login";
@@ -110,28 +115,28 @@ namespace Info_IT
 
 		}
 
-		private void TxtUsername_Enter(object sender, EventArgs e)
+		private void txtUsername_Enter(object sender, EventArgs e)
 		{
 			if (txtUsername.Text == "Username")
 			{
 				txtUsername.Text = "";
 			}
 		}
-		private void TxtUsername_Leave(object sender, EventArgs e)
+		private void txtUsername_Leave(object sender, EventArgs e)
 		{
 			if (txtUsername.Text == "" || txtUsername.Text == null)
 			{
 				txtUsername.Text = "Username";
 			}
 		}
-		private void TxtPassword_Enter(object sender, EventArgs e)
+		private void txtPassword_Enter(object sender, EventArgs e)
 		{
 			if (txtPassword.Text == "Password")
 			{
 				txtPassword.Text = "";
 			}
 		}
-		private void TxtPassword_Leave(object sender, EventArgs e)
+		private void txtPassword_Leave(object sender, EventArgs e)
 		{
 			if (txtPassword.Text == "" || txtPassword.Text == null)
 			{
@@ -142,16 +147,40 @@ namespace Info_IT
 
 		private void BtnLogIn_Click(object sender, EventArgs e)
 		{
-			isLoggedIn = true;
-			LoginPanel();
-			HideAll();
-			ucHome1.Show();
+            //DAL.LoginClass login = new DAL.LoginClass(txtUsername.Text, txtPassword.Text);
+            //DataTable x = new DataTable();
 
-			this.Text = "Info@IT";
-			lblLocation.Text = "Home";
+            //x = bll.GetLogin(login);
 
-			pnlNavigation.Show();
-		}
+            //if (x.Rows[0] == null)
+            //{
+            //    MessageBox.Show("Incorrect Username and Password");
+            //}
+            //else
+            //{
+            //    isLoggedIn = true;
+            //    LoginPanel();
+            //    HideAll();
+            //    ucHome1.Show();
+
+            //    this.Text = "Info@IT";
+            //    lblLocation.Text = "Home";
+
+            //    pnlNavigation.Show();
+            //}
+
+            isLoggedIn = true;
+            LoginPanel();
+            HideAll();
+            ucHome1.Show();
+
+            this.Text = "Info@IT";
+            lblLocation.Text = "Home";
+
+            pnlNavigation.Show();
+
+
+        }
 
 
 		private void InactiveButtons()
@@ -164,6 +193,8 @@ namespace Info_IT
 			btnNavTaskType.BackColor = Color.FromArgb(0,100,200);
 			btnNavTutorRequest.BackColor = Color.FromArgb(0,100,200);
 			btnNavVenue.BackColor = Color.FromArgb(0,100,200);
+			btnNavStudent.BackColor = Color.FromArgb(0,100,200);
+			btnNavStaff.BackColor = Color.FromArgb(0,100,200);
 		}
 
 		private void HideAll()
@@ -177,18 +208,13 @@ namespace Info_IT
 			ucNavInspection1.Hide();
 			ucTaskType1.Hide();
 			ucHelp1.Hide();
+			ucStudent1.Hide();
+			ucStaff1.Hide();
+
 			pnlLoginFields.Hide();	
 		}
 		//Login bar
-		private void PnlLogin_Click(object sender, EventArgs e)
-		{
-			LoginPanel();
-
-			//Hidden when first launching
-			pnlNavigation.Hide();
-			pnlLogin.Hide();
-		}
-		private void LblLoginText_Click(object sender, EventArgs e)
+		private void Login_Click(object sender, EventArgs e)
 		{
 			LoginPanel();
 
@@ -342,14 +368,54 @@ namespace Info_IT
 
 		private void BtnHelp_Click(object sender, EventArgs e)
 		{
-			HideAll();
-			InactiveButtons();
-			btnHelp.BackColor = Color.FromArgb(0, 150, 250);
+            //Making sure you cannot click it during log on
+            if (pnlLoginFields.Visible == false)
+            {
+                HideAll();
+                InactiveButtons();
+                btnHelp.BackColor = Color.FromArgb(0, 150, 250);
 
-			ucHelp1.Show();
-			this.Text = "Help";
-			lblLocation.Text = "Help";
+                ucHelp1.Show();
+                this.Text = "Help";
+                lblLocation.Text = "Help";
+            }
 		}
 
-	}
+		private void BtnStudent_Click(object sender, EventArgs e)
+		{
+			HideAll();
+			InactiveButtons();
+			btnNavStudent.BackColor = Color.FromArgb(0, 150, 250);
+
+			ucStudent1.Show();
+			this.Text = "Student";
+			lblLocation.Text = "Student";
+		}
+
+		private void BtnStaff_Click(object sender, EventArgs e)
+		{
+			HideAll();
+			InactiveButtons();
+			btnNavStaff.BackColor = Color.FromArgb(0, 150, 250);
+
+			ucStaff1.Show();
+			this.Text = "Staff";
+			lblLocation.Text = "Staff";
+		}
+
+		private void Logo_Click(object sender, EventArgs e)
+		{
+			//Making sure you cannot click it during log on
+			if(pnlLoginFields.Visible == false)
+			{
+				HideAll();
+				InactiveButtons();
+				btnNavHome.BackColor = Color.FromArgb(0, 150, 250);
+
+				ucHome1.Show();
+				this.Text = "Info@IT";
+				lblLocation.Text = "Home";
+			}
+		}
+    }
 }

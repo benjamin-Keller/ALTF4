@@ -738,6 +738,32 @@ namespace DAL
         //    return x;
         //}
 
+        public DataTable GetLogin(LoginClass login)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+            dbCmd = new SqlCommand("dbo.sp_Login", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@Username", login.Username);
+            dbCmd.Parameters.AddWithValue("@Password", login.Password);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return dt;
+        }
+
 
     }
 }

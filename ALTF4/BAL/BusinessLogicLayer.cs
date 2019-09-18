@@ -142,5 +142,9 @@ namespace BLL
         //    return dal.AddUser(user);
         //}
 
+        public DataTable GetLogin(LoginClass login)
+        {
+            return dal.GetLogin(login);
+        }
     }
 }
