@@ -1,6 +1,6 @@
 ﻿namespace Info_IT.Errors
 {
-	partial class ucErrorUserNotFound
+	partial class ucErrorFailedToAdd
 	{
 		/// <summary> 
 		/// Required designer variable.
@@ -31,8 +31,9 @@
 			this.btnClose = new Bunifu.Framework.UI.BunifuFlatButton();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.label1 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
+			this.lblDataSub = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
+			this.lblData = new System.Windows.Forms.Label();
 			this.panel2.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -85,7 +86,7 @@
 			this.panel2.Location = new System.Drawing.Point(0, 0);
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(1056, 52);
-			this.panel2.TabIndex = 12;
+			this.panel2.TabIndex = 15;
 			// 
 			// label1
 			// 
@@ -101,19 +102,19 @@
 			this.label1.TabIndex = 0;
 			this.label1.Text = "ERROR";
 			// 
-			// label3
+			// lblDataSub
 			// 
-			this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.lblDataSub.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("Segoe UI", 24F);
-			this.label3.Location = new System.Drawing.Point(273, 247);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(535, 90);
-			this.label3.TabIndex = 14;
-			this.label3.Text = "Please make sure you are logged on\r\nwith a known Staff Account";
-			this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			this.lblDataSub.AutoSize = true;
+			this.lblDataSub.Font = new System.Drawing.Font("Segoe UI", 24F);
+			this.lblDataSub.Location = new System.Drawing.Point(280, 247);
+			this.lblDataSub.Name = "lblDataSub";
+			this.lblDataSub.Size = new System.Drawing.Size(507, 45);
+			this.lblDataSub.TabIndex = 17;
+			this.lblDataSub.Text = "Failed to add data to the database";
+			this.lblDataSub.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
 			// label2
 			// 
@@ -122,21 +123,36 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(360, 188);
+			this.label2.Location = new System.Drawing.Point(339, 188);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(336, 59);
-			this.label2.TabIndex = 13;
-			this.label2.Text = "User Not Found";
+			this.label2.Size = new System.Drawing.Size(308, 59);
+			this.label2.TabIndex = 16;
+			this.label2.Text = "Failed to Add: ";
 			// 
-			// ucErrorUserNotFound
+			// lblData
+			// 
+			this.lblData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.lblData.AutoSize = true;
+			this.lblData.Font = new System.Drawing.Font("Segoe UI Semibold", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblData.Location = new System.Drawing.Point(621, 188);
+			this.lblData.Name = "lblData";
+			this.lblData.Size = new System.Drawing.Size(116, 59);
+			this.lblData.TabIndex = 18;
+			this.lblData.Text = "Data";
+			// 
+			// ucErrorFailedToAdd
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.lblData);
 			this.Controls.Add(this.panel2);
-			this.Controls.Add(this.label3);
+			this.Controls.Add(this.lblDataSub);
 			this.Controls.Add(this.label2);
-			this.Name = "ucErrorUserNotFound";
+			this.Name = "ucErrorFailedToAdd";
 			this.Size = new System.Drawing.Size(1056, 562);
+			this.Load += new System.EventHandler(this.UcErrorFailedToAdd_Load);
 			this.panel2.ResumeLayout(false);
 			this.panel2.PerformLayout();
 			this.ResumeLayout(false);
@@ -149,7 +165,8 @@
 		private Bunifu.Framework.UI.BunifuFlatButton btnClose;
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label lblDataSub;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label lblData;
 	}
 }

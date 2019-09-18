@@ -90,6 +90,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Errors\ucErrorFailedToAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Errors\ucErrorFailedToAdd.Designer.cs">
+      <DependentUpon>ucErrorFailedToAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Errors\ucErrorStaffNotFound.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Errors\ucErrorFailedToAdd.resx">
+      <DependentUpon>ucErrorFailedToAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Errors\ucErrorStaffNotFound.resx">
       <DependentUpon>ucErrorStaffNotFound.cs</DependentUpon>
     </EmbeddedResource>
