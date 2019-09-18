@@ -31,6 +31,7 @@ namespace Info_IT
 			pnlNavigation.Hide();
 			pnlLogin.Hide();
 			btnNavHelp.Hide();
+            lblDisplayName.Hide();
 		}
 
 		public void LoginPanel()
@@ -52,7 +53,8 @@ namespace Info_IT
 				case false:
 					lblLoginText.Text = "Log In";
 					pnlLogin.Show();
-					break;
+                    lblDisplayName.Hide();
+                    break;
 			}
 
 			//This is like an If Else statement for getting the Role
@@ -203,6 +205,7 @@ namespace Info_IT
                     var a = x.Rows[0].Table.Rows[0].ItemArray;
                     role = a[6].ToString();
                     lblDisplayName.Text = a[3].ToString() + ", " + a[2].ToString() + "(" + a[6].ToString() + ")";
+                    lblDisplayName.Show();
                 }
                 catch
                 {
