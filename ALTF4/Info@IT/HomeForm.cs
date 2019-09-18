@@ -245,6 +245,11 @@ namespace Info_IT
 			ucStudent1.Hide();
 			ucStaff1.Hide();
 			ucUser1.Hide();
+			ucErrorFailedToAdd1.Hide();
+			ucErrorStaffNotFound1.Hide();
+			ucErrorStudentNotFound1.Hide();
+			ucErrorUserNotFound1.Hide();
+			ucErrorVenueNotFound1.Hide();
 
 			pnlLoginFields.Hide();	
 		}
