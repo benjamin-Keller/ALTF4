@@ -562,16 +562,14 @@
             // lblDisplayName
             // 
             this.lblDisplayName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDisplayName.AutoSize = true;
             this.lblDisplayName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDisplayName.ForeColor = System.Drawing.Color.White;
-            this.lblDisplayName.Location = new System.Drawing.Point(677, 0);
-            this.lblDisplayName.MaximumSize = new System.Drawing.Size(600, 0);
+            this.lblDisplayName.Location = new System.Drawing.Point(241, -2);
             this.lblDisplayName.Name = "lblDisplayName";
-            this.lblDisplayName.Size = new System.Drawing.Size(151, 30);
+            this.lblDisplayName.Size = new System.Drawing.Size(604, 30);
             this.lblDisplayName.TabIndex = 2;
             this.lblDisplayName.Text = "Last, First(Role)";
-            this.lblDisplayName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDisplayName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ucErrorFailedToAdd1
             // 
