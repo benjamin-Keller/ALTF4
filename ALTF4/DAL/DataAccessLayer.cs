@@ -745,11 +745,12 @@ namespace DAL
                 dbConn.Open();
             }
             catch { }
+            
             dbCmd = new SqlCommand("dbo.sp_Login", dbConn);
             dbCmd.CommandType = CommandType.StoredProcedure;
 
             dbCmd.Parameters.AddWithValue("@Username", login.Username);
-            dbCmd.Parameters.AddWithValue("@Password", login.Password);
+            dbCmd.Parameters.AddWithValue("@StaffPassword", login.Password);
 
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
 
@@ -761,7 +762,9 @@ namespace DAL
                 dbConn.Close();
             }
             catch { }
+
             return dt;
+
         }
 
 

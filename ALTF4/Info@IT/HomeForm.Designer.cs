@@ -62,6 +62,8 @@
             this.lblLoginText = new System.Windows.Forms.Label();
             this.lblLocation = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblDisplayName = new System.Windows.Forms.Label();
             this.ucErrorFailedToAdd1 = new Info_IT.Errors.ucErrorFailedToAdd();
             this.ucErrorUserNotFound1 = new Info_IT.Errors.ucErrorUserNotFound();
             this.ucErrorStaffNotFound1 = new Info_IT.Errors.ucErrorStaffNotFound();
@@ -396,6 +398,7 @@
             // 
             // pnlLoginFields
             // 
+            this.pnlLoginFields.Controls.Add(this.label3);
             this.pnlLoginFields.Controls.Add(this.btnLogIn);
             this.pnlLoginFields.Controls.Add(this.txtPassword);
             this.pnlLoginFields.Controls.Add(this.txtUsername);
@@ -491,6 +494,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+            this.panel6.Controls.Add(this.lblDisplayName);
             this.panel6.Controls.Add(this.pnlLogin);
             this.panel6.Controls.Add(this.lblLocation);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
@@ -544,6 +548,30 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1056, 30);
             this.panel5.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(761, 161);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(249, 139);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "FOR TESTING: Username: admin Password: admin";
+            // 
+            // lblDisplayName
+            // 
+            this.lblDisplayName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDisplayName.AutoSize = true;
+            this.lblDisplayName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisplayName.ForeColor = System.Drawing.Color.White;
+            this.lblDisplayName.Location = new System.Drawing.Point(677, 0);
+            this.lblDisplayName.MaximumSize = new System.Drawing.Size(600, 0);
+            this.lblDisplayName.Name = "lblDisplayName";
+            this.lblDisplayName.Size = new System.Drawing.Size(151, 30);
+            this.lblDisplayName.TabIndex = 2;
+            this.lblDisplayName.Text = "Last, First(Role)";
+            this.lblDisplayName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ucErrorFailedToAdd1
             // 
@@ -746,5 +774,7 @@
 		private Errors.ucErrorStaffNotFound ucErrorStaffNotFound1;
 		private Errors.ucErrorVenueNotFound ucErrorVenueNotFound1;
 		private Errors.ucErrorStudentNotFound ucErrorStudentNotFound1;
-	}
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblDisplayName;
+    }
 }

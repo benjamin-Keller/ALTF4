@@ -60,71 +60,107 @@ namespace Info_IT
 			{
 				case "Admin":
 					lblLoginText.Text = "Log out";
-					////What can Admin see
+                    ////What can Admin see
 
-					//btnNavHome.Hide();
-					//btnNavEquipment.Hide();
-					//btnNavVenue.Hide();
-					//btnNavDepartment.Hide();
-					//btnNavDepartment.Hide();
-					//btnNavRequest.Hide();
-					//btnNavTutorRequest.Hide();
-					//btnNavInspection.Hide();
-					//btnNavTaskType.Hide();
-					//btnNavStudent.Hide();
-					//btnNavStaff.Hide();
-					//btnNavUser.Hide();
-					break;
+                    btnNavHome.Show();
+                    btnNavEquipment.Show();
+                    btnNavVenue.Show();
+                    btnNavDepartment.Show();
+                    btnNavDepartment.Show();
+                    btnNavRequest.Show();
+                    btnNavTutorRequest.Show();
+                    btnNavInspection.Show();
+                    btnNavTaskType.Show();
+                    btnNavStudent.Show();
+                    btnNavStaff.Show();
+                    btnNavUser.Show();
+                    break;
 
-				case "Staff":
+                case "ICT HelpDesk":
 					lblLoginText.Text = "Log In";
-					////What can Staff see
+                    ////What can Staff see
 
-					//btnNavHome.Hide();
-					//btnNavEquipment.Hide();
-					//btnNavVenue.Hide();
-					//btnNavDepartment.Hide();
-					//btnNavDepartment.Hide();
+                    btnNavHome.Show();
+                    btnNavEquipment.Show();
+                    btnNavVenue.Show();
+                    btnNavDepartment.Show();
+                    btnNavDepartment.Show();
+                    btnNavRequest.Show();
+                    btnNavTutorRequest.Show();
+                    btnNavInspection.Show();
+                    btnNavTaskType.Show();
+                    btnNavStudent.Show();
+                    btnNavStaff.Show();
+                    btnNavUser.Show();
+
+                    //btnNavHome.Hide();
+                    //btnNavEquipment.Hide();
+                    //btnNavVenue.Hide();
+                    //btnNavDepartment.Hide();
+                    //btnNavRequest.Hide();
+                    //btnNavTutorRequest.Hide();
+                    //btnNavInspection.Hide();
+                    //btnNavTaskType.Hide();
+                    //btnNavStudent.Hide();
+                    //btnNavStaff.Hide();
+                    //btnNavUser.Hide();
+                    break;
+				case "Info@IT":
+                    ////What can Info@It Staff see
+
+                    btnNavHome.Show();
+                    btnNavEquipment.Show();
+                    btnNavVenue.Show();
+                    btnNavDepartment.Show();
+                    btnNavDepartment.Show();
+                    btnNavRequest.Show();
+                    btnNavTutorRequest.Show();
+                    btnNavInspection.Show();
+                    btnNavTaskType.Show();
+                    btnNavStudent.Show();
+                    btnNavStaff.Show();
+                    btnNavUser.Show();
+
+                    //btnNavHome.Hide();
+                    //btnNavEquipment.Hide();
+                    btnNavVenue.Hide();
+					btnNavDepartment.Hide();
 					//btnNavRequest.Hide();
 					//btnNavTutorRequest.Hide();
 					//btnNavInspection.Hide();
 					//btnNavTaskType.Hide();
 					//btnNavStudent.Hide();
-					//btnNavStaff.Hide();
-					//btnNavUser.Hide();
+					btnNavStaff.Hide();
+					btnNavUser.Hide();
 					break;
-				case "ICT":
-					////What can Info@It Staff see
 
-					//btnNavHome.Hide();
-					//btnNavEquipment.Hide();
-					//btnNavVenue.Hide();
-					//btnNavDepartment.Hide();
-					//btnNavDepartment.Hide();
+				case "Student Assistant":
+                    ////What can SI see
+
+                    btnNavHome.Show();
+                    btnNavEquipment.Show();
+                    btnNavVenue.Show();
+                    btnNavDepartment.Show();
+                    btnNavDepartment.Show();
+                    btnNavRequest.Show();
+                    btnNavTutorRequest.Show();
+                    btnNavInspection.Show();
+                    btnNavTaskType.Show();
+                    btnNavStudent.Show();
+                    btnNavStaff.Show();
+                    btnNavUser.Show();
+
+                    //btnNavHome.Hide();
+                    //btnNavEquipment.Hide();
+                    btnNavVenue.Hide();
+					btnNavDepartment.Hide();
 					//btnNavRequest.Hide();
 					//btnNavTutorRequest.Hide();
 					//btnNavInspection.Hide();
-					//btnNavTaskType.Hide();
-					//btnNavStudent.Hide();
-					//btnNavStaff.Hide();
-					//btnNavUser.Hide();
-					break;
-
-				case "SI":
-					////What can SI see
-
-					//btnNavHome.Hide();
-					//btnNavEquipment.Hide();
-					//btnNavVenue.Hide();
-					//btnNavDepartment.Hide();
-					//btnNavDepartment.Hide();
-					//btnNavRequest.Hide();
-					//btnNavTutorRequest.Hide();
-					//btnNavInspection.Hide();
-					//btnNavTaskType.Hide();
-					//btnNavStudent.Hide();
-					//btnNavStaff.Hide();
-					//btnNavUser.Hide();
+					btnNavTaskType.Hide();
+					btnNavStudent.Hide();
+					btnNavStaff.Hide();
+					btnNavUser.Hide();
 					break;
 				default:
 					////What can everyone else see
@@ -147,73 +183,57 @@ namespace Info_IT
 
 		}
 
-		private void txtUsername_Enter(object sender, EventArgs e)
-		{
-			if (txtUsername.Text == "Username")
-			{
-				txtUsername.Text = "";
-			}
-		}
-		private void txtUsername_Leave(object sender, EventArgs e)
-		{
-			if (txtUsername.Text == "" || txtUsername.Text == null)
-			{
-				txtUsername.Text = "Username";
-			}
-		}
-		private void txtPassword_Enter(object sender, EventArgs e)
-		{
-			if (txtPassword.Text == "Password")
-			{
-				txtPassword.Text = "";
-			}
-		}
-		private void txtPassword_Leave(object sender, EventArgs e)
-		{
-			if (txtPassword.Text == "" || txtPassword.Text == null)
-			{
-				txtPassword.Text = "Password";
-			}
-		}
-
 
 		private void BtnLogIn_Click(object sender, EventArgs e)
 		{
-            //DAL.LoginClass login = new DAL.LoginClass(txtUsername.Text, txtPassword.Text);
+            DAL.LoginClass login = new DAL.LoginClass(txtUsername.Text, txtPassword.Text);
             //DataGridView x = new DataGridView();
 
-            //x.DataSource = bll.GetLogin(login);
+            var x = bll.GetLogin(login);
 
-            //if (x.Rows[0] == null)
-            //{
-            //    MessageBox.Show("Incorrect Username and Password");
-            //}
-            //else
-            //{
-            //    isLoggedIn = true;
-            //    role = x.Rows[0].Cells["StaffType"].Value.ToString();
-            //    LoginPanel();
-            //    HideAll();
-            //    ucHome1.Show();
+            if (x.Rows.Count == 0)
+            {
+                MessageBox.Show("Incorrect Username and Password");
+            }
+            else
+            {
+                isLoggedIn = true;
+                try
+                {
+                    var a = x.Rows[0].Table.Rows[0].ItemArray;
+                    role = a[6].ToString();
+                    lblDisplayName.Text = a[3].ToString() + ", " + a[2].ToString() + "(" + a[6].ToString() + ")";
+                }
+                catch
+                {
+                    int i = x.Rows.Count;
+                    MessageBox.Show(i.ToString());
+                }
+                LoginPanel();
+                HideAll();
+                ucHome1.Show();
 
-            //    this.Text = "Info@IT";
-            //    lblLocation.Text = "Home";
+                this.Text = "Info@IT";
+                lblLocation.Text = "Home";
 
-            //    pnlNavigation.Show();
-            //}
+                pnlNavigation.Show();
+
+                txtUsername.Text = "";
+                txtPassword.Text = "";
+            }
 
 
 
-            isLoggedIn = true;
-            LoginPanel();
-            HideAll();
-            ucHome1.Show();
+            //isLoggedIn = true;
+            //LoginPanel();
+            //HideAll();
+            //ucHome1.Show();
 
-            this.Text = "Info@IT";
-            lblLocation.Text = "Home";
+            //this.Text = "Info@IT";
+            //lblLocation.Text = "Home";
 
-            pnlNavigation.Show();
-            btnNavHelp.Show();
+            //pnlNavigation.Show();
+            //btnNavHelp.Show();
 
         }
 
