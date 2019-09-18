@@ -101,11 +101,9 @@ namespace Info_IT.UserControls
 
             try
             {
-
-
                 //Error for input string not found
-                DAL.VenueClass venue = new DAL.VenueClass(txtDescription.Text, int.Parse(txtCapacity.Text), int.Parse(txtDoorNo.Text), int.Parse(cmbBuildingBlock.SelectedValue.ToString()), int.Parse(cmbBuilding.SelectedIndex.ToString()));
-                int x = bll.AddVenue(venue);
+                DAL.VenueClass venue = new DAL.VenueClass(dgvVenue.SelectedRows[0].Cells[0].Value.ToString(),txtDescription.Text, int.Parse(txtCapacity.Text), int.Parse(txtDoorNo.Text), int.Parse(cmbBuildingBlock.SelectedValue.ToString()), int.Parse(cmbBuilding.SelectedIndex.ToString()));
+                int x = bll.UpdateVenue(venue);
 
                 if (x > 0)
                 {
@@ -120,7 +118,7 @@ namespace Info_IT.UserControls
                     MessageBox.Show("Please input valid data.");
                 }
             }
-            catch
+            catch(Exception b)
             {
                 MessageBox.Show("Please input valid data.");
             }
@@ -141,8 +139,9 @@ namespace Info_IT.UserControls
             txtDescription.Text = dgvVenue.SelectedRows[0].Cells[1].Value.ToString();
             txtCapacity.Text = dgvVenue.SelectedRows[0].Cells[2].Value.ToString();
             txtDoorNo.Text = dgvVenue.SelectedRows[0].Cells[3].Value.ToString();
-            cmbBuilding.SelectedText = dgvVenue.SelectedRows[0].Cells[4].Value.ToString();
-            cmbBuildingBlock.SelectedText = dgvVenue.SelectedRows[0].Cells[5].Value.ToString();
+            
+            cmbBuildingBlock.SelectedText = dgvVenue.SelectedRows[0].Cells[4].Value.ToString();
+            cmbBuilding.SelectedText = dgvVenue.SelectedRows[0].Cells[5].Value.ToString();
 
 
         }

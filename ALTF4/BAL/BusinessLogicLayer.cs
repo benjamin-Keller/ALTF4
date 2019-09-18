@@ -23,6 +23,11 @@ namespace BLL
             return dal.AddVenue(venue);
         }
 
+        public int UpdateVenue(VenueClass venue)
+        {
+            return dal.UpdateVenue(venue);
+        }
+
         public DataTable GetDepartment()
         {
             return dal.GetDepartment();
