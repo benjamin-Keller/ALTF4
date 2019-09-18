@@ -24,6 +24,9 @@ namespace Info_IT
 			HideAll();
 			LoginPanel();
 
+            //Focus label instead of txtUsername
+            this.ActiveControl = label2;
+
 			//Hidden when first launching
 			pnlNavigation.Hide();
 			pnlLogin.Hide();
@@ -448,9 +451,10 @@ namespace Info_IT
 
 		private void Logo_Click(object sender, EventArgs e)
 		{
-			//Making sure you cannot click it during log on
-			if(pnlLoginFields.Visible == false)
-			{
+            //Making sure you cannot click it during log on
+            //if (!isLoggedIn) 
+            if (pnlLoginFields.Visible == false)
+            {
 				HideAll();
 				InactiveButtons();
 				btnNavHome.BackColor = Color.FromArgb(0, 150, 250);
