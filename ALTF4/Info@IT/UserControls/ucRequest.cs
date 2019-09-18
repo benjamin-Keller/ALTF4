@@ -23,7 +23,7 @@ namespace Info_IT.UserControls
 		{
 			dateRequest.Value = DateTime.Now;
 
-            //dgvRequest.DataSource = bll.GetRequests();
+            dgvRequest.DataSource = bll.GetRequests();
 
             cmbTaskTypeCode.DataSource = bll.GetTasktype();
             
@@ -84,17 +84,18 @@ namespace Info_IT.UserControls
 
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
-            DAL.RequestClass request = new DAL.RequestClass(txtDescription.Text, int.Parse(cmbStaffCode.SelectedValue.ToString()), int.Parse(cmbStudentCode.SelectedValue.ToString()), int.Parse(cmbTaskTypeCode.SelectedValue.ToString()), dateRequest.ToString(), int.Parse(txtTime.Text), int.Parse(cmbAssignedStaffCode.SelectedValue.ToString()), "Pending");
+            DAL.RequestClass request = new DAL.RequestClass(txtDescription.Text, int.Parse(cmbStaffCode.SelectedValue.ToString()), int.Parse(cmbStudentCode.SelectedValue.ToString()), int.Parse(cmbTaskTypeCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), Convert.ToDateTime(cmbTime.Text), int.Parse(cmbAssignedStaffCode.SelectedValue.ToString()), "Pending");
 
             int x = bll.AddRequest(request);
 
             if (x > 0)
             {
                 txtDescription.Clear();
-                txtTime.Clear();
+                cmbTime.ResetText();
                 cmbStaffCode.ResetText();
                 cmbStudentCode.ResetText();
                 cmbTaskTypeCode.ResetText();
+                cmbAssignedStaffCode.ResetText();
                 dateRequest.ResetText();
             }
             else
@@ -102,7 +103,7 @@ namespace Info_IT.UserControls
                 MessageBox.Show("Please input valid data.");
             }
 
-            dgvRequest.DataSource = bll.GetTutorRequest();
+            dgvRequest.DataSource = bll.GetRequests();
         }
 
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
@@ -116,5 +117,10 @@ namespace Info_IT.UserControls
 			dgvRequest.BackgroundColor = Color.White;
 
 		}
-	}
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

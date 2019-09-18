@@ -51,16 +51,6 @@
 			this.btnNavHelp = new System.Windows.Forms.Button();
 			this.tmrNavigation = new System.Windows.Forms.Timer(this.components);
 			this.pnlContent = new System.Windows.Forms.Panel();
-			this.pnlLoginFields = new System.Windows.Forms.Panel();
-			this.btnLogIn = new Bunifu.Framework.UI.BunifuThinButton2();
-			this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-			this.txtUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.ucErrorFailedToAdd1 = new Info_IT.Errors.ucErrorFailedToAdd();
-			this.ucErrorUserNotFound1 = new Info_IT.Errors.ucErrorUserNotFound();
-			this.ucErrorStaffNotFound1 = new Info_IT.Errors.ucErrorStaffNotFound();
-			this.ucErrorVenueNotFound1 = new Info_IT.Errors.ucErrorVenueNotFound();
-			this.ucErrorStudentNotFound1 = new Info_IT.Errors.ucErrorStudentNotFound();
 			this.ucUser1 = new Info_IT.UserControls.ucUser();
 			this.ucStudent1 = new Info_IT.UserControls.ucStudent();
 			this.ucStaff1 = new Info_IT.UserControls.ucStaff();
@@ -79,14 +69,24 @@
 			this.lblLoginText = new System.Windows.Forms.Label();
 			this.lblLocation = new System.Windows.Forms.Label();
 			this.panel5 = new System.Windows.Forms.Panel();
+			this.ucErrorStudentNotFound1 = new Info_IT.Errors.ucErrorStudentNotFound();
+			this.ucErrorVenueNotFound1 = new Info_IT.Errors.ucErrorVenueNotFound();
+			this.ucErrorStaffNotFound1 = new Info_IT.Errors.ucErrorStaffNotFound();
+			this.ucErrorUserNotFound1 = new Info_IT.Errors.ucErrorUserNotFound();
+			this.ucErrorFailedToAdd1 = new Info_IT.Errors.ucErrorFailedToAdd();
+			this.pnlLoginFields = new System.Windows.Forms.Panel();
+			this.btnLogIn = new Bunifu.Framework.UI.BunifuThinButton2();
+			this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+			this.txtUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+			this.label2 = new System.Windows.Forms.Label();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.pnlNavigation.SuspendLayout();
 			this.panel4.SuspendLayout();
 			this.pnlContent.SuspendLayout();
-			this.pnlLoginFields.SuspendLayout();
 			this.panel6.SuspendLayout();
 			this.pnlLogin.SuspendLayout();
+			this.pnlLoginFields.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel2
@@ -394,129 +394,6 @@
 			this.pnlContent.Size = new System.Drawing.Size(1056, 620);
 			this.pnlContent.TabIndex = 3;
 			// 
-			// pnlLoginFields
-			// 
-			this.pnlLoginFields.Controls.Add(this.btnLogIn);
-			this.pnlLoginFields.Controls.Add(this.txtPassword);
-			this.pnlLoginFields.Controls.Add(this.txtUsername);
-			this.pnlLoginFields.Controls.Add(this.label2);
-			this.pnlLoginFields.Location = new System.Drawing.Point(0, 58);
-			this.pnlLoginFields.Name = "pnlLoginFields";
-			this.pnlLoginFields.Size = new System.Drawing.Size(1056, 562);
-			this.pnlLoginFields.TabIndex = 18;
-			// 
-			// btnLogIn
-			// 
-			this.btnLogIn.ActiveBorderThickness = 1;
-			this.btnLogIn.ActiveCornerRadius = 20;
-			this.btnLogIn.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.btnLogIn.ActiveForecolor = System.Drawing.Color.White;
-			this.btnLogIn.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.btnLogIn.BackColor = System.Drawing.SystemColors.Control;
-			this.btnLogIn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogIn.BackgroundImage")));
-			this.btnLogIn.ButtonText = "Log In";
-			this.btnLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnLogIn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnLogIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.btnLogIn.IdleBorderThickness = 1;
-			this.btnLogIn.IdleCornerRadius = 20;
-			this.btnLogIn.IdleFillColor = System.Drawing.Color.White;
-			this.btnLogIn.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.btnLogIn.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.btnLogIn.Location = new System.Drawing.Point(427, 333);
-			this.btnLogIn.Margin = new System.Windows.Forms.Padding(5);
-			this.btnLogIn.Name = "btnLogIn";
-			this.btnLogIn.Size = new System.Drawing.Size(181, 41);
-			this.btnLogIn.TabIndex = 7;
-			this.btnLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.btnLogIn.Click += new System.EventHandler(this.BtnLogIn_Click);
-			// 
-			// txtPassword
-			// 
-			this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.txtPassword.HintForeColor = System.Drawing.Color.Empty;
-			this.txtPassword.HintText = "";
-			this.txtPassword.isPassword = false;
-			this.txtPassword.LineFocusedColor = System.Drawing.Color.Blue;
-			this.txtPassword.LineIdleColor = System.Drawing.Color.Gray;
-			this.txtPassword.LineMouseHoverColor = System.Drawing.Color.Blue;
-			this.txtPassword.LineThickness = 3;
-			this.txtPassword.Location = new System.Drawing.Point(333, 252);
-			this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
-			this.txtPassword.Name = "txtPassword";
-			this.txtPassword.Size = new System.Drawing.Size(370, 44);
-			this.txtPassword.TabIndex = 6;
-			this.txtPassword.Text = "Password";
-			this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-			// 
-			// txtUsername
-			// 
-			this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.txtUsername.HintForeColor = System.Drawing.Color.Empty;
-			this.txtUsername.HintText = "";
-			this.txtUsername.isPassword = false;
-			this.txtUsername.LineFocusedColor = System.Drawing.Color.Blue;
-			this.txtUsername.LineIdleColor = System.Drawing.Color.Gray;
-			this.txtUsername.LineMouseHoverColor = System.Drawing.Color.Blue;
-			this.txtUsername.LineThickness = 3;
-			this.txtUsername.Location = new System.Drawing.Point(333, 200);
-			this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
-			this.txtUsername.Name = "txtUsername";
-			this.txtUsername.Size = new System.Drawing.Size(370, 44);
-			this.txtUsername.TabIndex = 5;
-			this.txtUsername.Text = "Username";
-			this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(455, 149);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(119, 47);
-			this.label2.TabIndex = 4;
-			this.label2.Text = "Log In";
-			// 
-			// ucErrorFailedToAdd1
-			// 
-			this.ucErrorFailedToAdd1._Data = null;
-			this.ucErrorFailedToAdd1.Location = new System.Drawing.Point(0, 58);
-			this.ucErrorFailedToAdd1.Name = "ucErrorFailedToAdd1";
-			this.ucErrorFailedToAdd1.Size = new System.Drawing.Size(1056, 562);
-			this.ucErrorFailedToAdd1.TabIndex = 17;
-			// 
-			// ucErrorUserNotFound1
-			// 
-			this.ucErrorUserNotFound1.Location = new System.Drawing.Point(0, 58);
-			this.ucErrorUserNotFound1.Name = "ucErrorUserNotFound1";
-			this.ucErrorUserNotFound1.Size = new System.Drawing.Size(1056, 562);
-			this.ucErrorUserNotFound1.TabIndex = 16;
-			// 
-			// ucErrorStaffNotFound1
-			// 
-			this.ucErrorStaffNotFound1.Location = new System.Drawing.Point(0, 58);
-			this.ucErrorStaffNotFound1.Name = "ucErrorStaffNotFound1";
-			this.ucErrorStaffNotFound1.Size = new System.Drawing.Size(1056, 562);
-			this.ucErrorStaffNotFound1.TabIndex = 15;
-			// 
-			// ucErrorVenueNotFound1
-			// 
-			this.ucErrorVenueNotFound1.Location = new System.Drawing.Point(0, 57);
-			this.ucErrorVenueNotFound1.Name = "ucErrorVenueNotFound1";
-			this.ucErrorVenueNotFound1.Size = new System.Drawing.Size(1056, 562);
-			this.ucErrorVenueNotFound1.TabIndex = 14;
-			// 
-			// ucErrorStudentNotFound1
-			// 
-			this.ucErrorStudentNotFound1.Location = new System.Drawing.Point(0, 57);
-			this.ucErrorStudentNotFound1.Name = "ucErrorStudentNotFound1";
-			this.ucErrorStudentNotFound1.Size = new System.Drawing.Size(1056, 562);
-			this.ucErrorStudentNotFound1.TabIndex = 13;
-			// 
 			// ucUser1
 			// 
 			this.ucUser1.Location = new System.Drawing.Point(0, 58);
@@ -667,6 +544,129 @@
 			this.panel5.Size = new System.Drawing.Size(1056, 30);
 			this.panel5.TabIndex = 2;
 			// 
+			// ucErrorStudentNotFound1
+			// 
+			this.ucErrorStudentNotFound1.Location = new System.Drawing.Point(0, 57);
+			this.ucErrorStudentNotFound1.Name = "ucErrorStudentNotFound1";
+			this.ucErrorStudentNotFound1.Size = new System.Drawing.Size(1056, 562);
+			this.ucErrorStudentNotFound1.TabIndex = 13;
+			// 
+			// ucErrorVenueNotFound1
+			// 
+			this.ucErrorVenueNotFound1.Location = new System.Drawing.Point(0, 57);
+			this.ucErrorVenueNotFound1.Name = "ucErrorVenueNotFound1";
+			this.ucErrorVenueNotFound1.Size = new System.Drawing.Size(1056, 562);
+			this.ucErrorVenueNotFound1.TabIndex = 14;
+			// 
+			// ucErrorStaffNotFound1
+			// 
+			this.ucErrorStaffNotFound1.Location = new System.Drawing.Point(0, 58);
+			this.ucErrorStaffNotFound1.Name = "ucErrorStaffNotFound1";
+			this.ucErrorStaffNotFound1.Size = new System.Drawing.Size(1056, 562);
+			this.ucErrorStaffNotFound1.TabIndex = 15;
+			// 
+			// ucErrorUserNotFound1
+			// 
+			this.ucErrorUserNotFound1.Location = new System.Drawing.Point(0, 58);
+			this.ucErrorUserNotFound1.Name = "ucErrorUserNotFound1";
+			this.ucErrorUserNotFound1.Size = new System.Drawing.Size(1056, 562);
+			this.ucErrorUserNotFound1.TabIndex = 16;
+			// 
+			// ucErrorFailedToAdd1
+			// 
+			this.ucErrorFailedToAdd1._Data = null;
+			this.ucErrorFailedToAdd1.Location = new System.Drawing.Point(0, 58);
+			this.ucErrorFailedToAdd1.Name = "ucErrorFailedToAdd1";
+			this.ucErrorFailedToAdd1.Size = new System.Drawing.Size(1056, 562);
+			this.ucErrorFailedToAdd1.TabIndex = 17;
+			// 
+			// pnlLoginFields
+			// 
+			this.pnlLoginFields.Controls.Add(this.btnLogIn);
+			this.pnlLoginFields.Controls.Add(this.txtPassword);
+			this.pnlLoginFields.Controls.Add(this.txtUsername);
+			this.pnlLoginFields.Controls.Add(this.label2);
+			this.pnlLoginFields.Location = new System.Drawing.Point(0, 58);
+			this.pnlLoginFields.Name = "pnlLoginFields";
+			this.pnlLoginFields.Size = new System.Drawing.Size(1056, 562);
+			this.pnlLoginFields.TabIndex = 18;
+			// 
+			// btnLogIn
+			// 
+			this.btnLogIn.ActiveBorderThickness = 1;
+			this.btnLogIn.ActiveCornerRadius = 20;
+			this.btnLogIn.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnLogIn.ActiveForecolor = System.Drawing.Color.White;
+			this.btnLogIn.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnLogIn.BackColor = System.Drawing.SystemColors.Control;
+			this.btnLogIn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogIn.BackgroundImage")));
+			this.btnLogIn.ButtonText = "Log In";
+			this.btnLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnLogIn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnLogIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnLogIn.IdleBorderThickness = 1;
+			this.btnLogIn.IdleCornerRadius = 20;
+			this.btnLogIn.IdleFillColor = System.Drawing.Color.White;
+			this.btnLogIn.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnLogIn.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnLogIn.Location = new System.Drawing.Point(427, 333);
+			this.btnLogIn.Margin = new System.Windows.Forms.Padding(5);
+			this.btnLogIn.Name = "btnLogIn";
+			this.btnLogIn.Size = new System.Drawing.Size(181, 41);
+			this.btnLogIn.TabIndex = 7;
+			this.btnLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.btnLogIn.Click += new System.EventHandler(this.Login_Click);
+			// 
+			// txtPassword
+			// 
+			this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+			this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.txtPassword.HintForeColor = System.Drawing.Color.Empty;
+			this.txtPassword.HintText = "";
+			this.txtPassword.isPassword = false;
+			this.txtPassword.LineFocusedColor = System.Drawing.Color.Blue;
+			this.txtPassword.LineIdleColor = System.Drawing.Color.Gray;
+			this.txtPassword.LineMouseHoverColor = System.Drawing.Color.Blue;
+			this.txtPassword.LineThickness = 3;
+			this.txtPassword.Location = new System.Drawing.Point(333, 252);
+			this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+			this.txtPassword.Name = "txtPassword";
+			this.txtPassword.Size = new System.Drawing.Size(370, 44);
+			this.txtPassword.TabIndex = 6;
+			this.txtPassword.Text = "Password";
+			this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			// 
+			// txtUsername
+			// 
+			this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+			this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.txtUsername.HintForeColor = System.Drawing.Color.Empty;
+			this.txtUsername.HintText = "";
+			this.txtUsername.isPassword = false;
+			this.txtUsername.LineFocusedColor = System.Drawing.Color.Blue;
+			this.txtUsername.LineIdleColor = System.Drawing.Color.Gray;
+			this.txtUsername.LineMouseHoverColor = System.Drawing.Color.Blue;
+			this.txtUsername.LineThickness = 3;
+			this.txtUsername.Location = new System.Drawing.Point(333, 200);
+			this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+			this.txtUsername.Name = "txtUsername";
+			this.txtUsername.Size = new System.Drawing.Size(370, 44);
+			this.txtUsername.TabIndex = 5;
+			this.txtUsername.Text = "Username";
+			this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(455, 149);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(119, 47);
+			this.label2.TabIndex = 4;
+			this.label2.Text = "Log In";
+			// 
 			// Home
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -688,12 +688,12 @@
 			this.panel4.ResumeLayout(false);
 			this.panel4.PerformLayout();
 			this.pnlContent.ResumeLayout(false);
-			this.pnlLoginFields.ResumeLayout(false);
-			this.pnlLoginFields.PerformLayout();
 			this.panel6.ResumeLayout(false);
 			this.panel6.PerformLayout();
 			this.pnlLogin.ResumeLayout(false);
 			this.pnlLogin.PerformLayout();
+			this.pnlLoginFields.ResumeLayout(false);
+			this.pnlLoginFields.PerformLayout();
 			this.ResumeLayout(false);
 
 		}

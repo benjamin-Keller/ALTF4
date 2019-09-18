@@ -15,25 +15,17 @@ namespace Info_IT.UserControls
 
 		private void UcVenue_Load(object sender, EventArgs e)
 		{
-            //dgvVenue.DataSource = bll.GetVenues();
-            
-            
             cmbBuilding.DataSource = bll.LoadCMBBuilding();
             
             cmbBuilding.DisplayMember = "BuildingName";
             cmbBuilding.ValueMember = "BuildingID";
             
-            //cmbBuilding.SelectedText = "-Select-";
-            //cmbBuildingBlock.SelectedText.Replace("082", "");
-
-
             cmbBuildingBlock.DataSource = bll.LoadCMBBuildingBlock();
             
             cmbBuildingBlock.DisplayMember = "BuildingBlock";
             cmbBuildingBlock.ValueMember = "BuildingBlockID";
             
-            //cmbBuildingBlock.SelectedText = "-Select-";
-            //cmbBuildingBlock.SelectedText.Replace("A", "");
+            dgvVenue.DataSource = bll.GetVenues();
         }
 
 		//Menu button (Manage)
@@ -73,19 +65,28 @@ namespace Info_IT.UserControls
 
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
-			//Error for input string not found
-            DAL.VenueClass venue = new DAL.VenueClass(txtDescription.Text, int.Parse(txtCapacity.Text), int.Parse(txtDoorNo.Text), int.Parse(cmbBuildingBlock.SelectedValue.ToString()), int.Parse(cmbBuilding.SelectedIndex.ToString()));
-            int x = bll.AddVenue(venue);
-
-            if(x>0)
+            try
             {
-                txtDescription.Clear();
-                txtCapacity.Clear();
-                txtDoorNo.Clear();
-                cmbBuildingBlock.ValueMember = "";
-                cmbBuilding.ValueMember = "";
+
+
+                //Error for input string not found
+                DAL.VenueClass venue = new DAL.VenueClass(txtDescription.Text, int.Parse(txtCapacity.Text), int.Parse(txtDoorNo.Text), int.Parse(cmbBuildingBlock.SelectedValue.ToString()), int.Parse(cmbBuilding.SelectedIndex.ToString()));
+                int x = bll.AddVenue(venue);
+
+                if (x > 0)
+                {
+                    txtDescription.Clear();
+                    txtCapacity.Clear();
+                    txtDoorNo.Clear();
+                    cmbBuildingBlock.ValueMember = "";
+                    cmbBuilding.ValueMember = "";
+                }
+                else
+                {
+                    MessageBox.Show("Please input valid data.");
+                }
             }
-            else
+            catch
             {
                 MessageBox.Show("Please input valid data.");
             }
@@ -98,7 +99,35 @@ namespace Info_IT.UserControls
             dgvVenue.DataSource = bll.GetVenues();
 			dgvVenue.BackgroundColor = Color.White;
 
-		}
+            try
+            {
+
+
+                //Error for input string not found
+                DAL.VenueClass venue = new DAL.VenueClass(txtDescription.Text, int.Parse(txtCapacity.Text), int.Parse(txtDoorNo.Text), int.Parse(cmbBuildingBlock.SelectedValue.ToString()), int.Parse(cmbBuilding.SelectedIndex.ToString()));
+                int x = bll.AddVenue(venue);
+
+                if (x > 0)
+                {
+                    txtDescription.Clear();
+                    txtCapacity.Clear();
+                    txtDoorNo.Clear();
+                    cmbBuildingBlock.ValueMember = "";
+                    cmbBuilding.ValueMember = "";
+                }
+                else
+                {
+                    MessageBox.Show("Please input valid data.");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Please input valid data.");
+            }
+
+            dgvVenue.DataSource = bll.GetVenues();
+
+        }
 
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
@@ -107,5 +136,15 @@ namespace Info_IT.UserControls
 
 		}
 
-	}
+        private void dgvVenue_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtDescription.Text = dgvVenue.SelectedRows[0].Cells[1].ToString();
+            txtCapacity.Text = dgvVenue.SelectedRows[0].Cells[2].ToString();
+            txtDoorNo.Text = dgvVenue.SelectedRows[0].Cells[3].ToString();
+            cmbBuilding.SelectedText = dgvVenue.SelectedRows[0].Cells[4].ToString();
+            cmbBuildingBlock.SelectedText = dgvVenue.SelectedRows[0].Cells[5].ToString();
+            
+
+        }
+    }
 }

@@ -542,10 +542,10 @@ namespace DAL
                 dbCmd.Parameters.AddWithValue("@StaffCode", request.RequestStaffCode);
                 dbCmd.Parameters.AddWithValue("@StudentCode", request.RequestStudentCode);
                 dbCmd.Parameters.AddWithValue("@TaskTypeCode", request.RequestTaskTypeCode);
-                dbCmd.Parameters.AddWithValue("@Building", request.RequestDate);
-                dbCmd.Parameters.AddWithValue("@Capacity", request.RequestTime);
-                dbCmd.Parameters.AddWithValue("@DoorNo", request.RequestAssignedStaffCode);
-                dbCmd.Parameters.AddWithValue("@BuildingBlock", request.RequestStatus);
+                dbCmd.Parameters.AddWithValue("@RequestDate", request.RequestDate);
+                dbCmd.Parameters.AddWithValue("@RequestTime", request.RequestTime);
+                dbCmd.Parameters.AddWithValue("@AssignedStaffCode", request.RequestAssignedStaffCode);
+                dbCmd.Parameters.AddWithValue("@RequestStatus", request.RequestStatus);
 
                 x = dbCmd.ExecuteNonQuery();
             }
@@ -682,9 +682,9 @@ namespace DAL
                 dbCmd = new SqlCommand("dbo.sp_AddTutorRequest", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
                 dbCmd.Parameters.AddWithValue("@RequestCode", tutorRequest.RequestCode);
-                dbCmd.Parameters.AddWithValue("@TutorRequestDate", Convert.ToDateTime(tutorRequest.Date));
-                dbCmd.Parameters.AddWithValue("@StartTime", tutorRequest.StartTime);
-                dbCmd.Parameters.AddWithValue("@EndTime", tutorRequest.EndTime);
+                dbCmd.Parameters.AddWithValue("@TutorRequestDate", tutorRequest.Date);
+                dbCmd.Parameters.AddWithValue("@StartTime", tutorRequest.StartTime.ToShortTimeString());
+                dbCmd.Parameters.AddWithValue("@EndTime", tutorRequest.EndTime.ToShortTimeString());
                 dbCmd.Parameters.AddWithValue("@ModuleCode", tutorRequest.ModuleCode);
                 dbCmd.Parameters.AddWithValue("@VenueCode", tutorRequest.VenueCode);
 
@@ -762,6 +762,43 @@ namespace DAL
             }
             catch { }
             return dt;
+        }
+
+
+        public int UpdateVenue(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_UpdateVenue", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@VenueCode", venue.VenueCode);
+                dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
+                dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
+                dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
+                dbCmd.Parameters.AddWithValue("@BuildingBlockID", venue.VenueBuildingBlock);
+                dbCmd.Parameters.AddWithValue("@BuildingID", venue.VenueBuilding);
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
         }
 
 
