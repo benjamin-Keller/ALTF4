@@ -17,7 +17,17 @@ namespace Info_IT.UserControls
 		private void UcEquipment_Load(object sender, EventArgs e)
 		{
 			ucEquipmentType1.Hide();
-		}
+
+            cmbEquipTypeCode.DataSource = bll.GetEquipmentType();
+            cmbEquipTypeCode.DisplayMember = "TypeDescription";
+            cmbEquipTypeCode.ValueMember = "EquipTypeCode";
+
+            cmbVenue.DataSource = bll.GetVenues();
+            cmbVenue.DisplayMember = "VenueDescription";
+            cmbVenue.ValueMember = "VenueCode";
+
+            dgvEquipment.DataSource = bll.GetEquipment();
+        }
 		private void CmbEquipTypeCode_SelectedIndexChanged(object sender, EventArgs e)
 		{
 
@@ -62,13 +72,36 @@ namespace Info_IT.UserControls
 		//Sub-Nav buttons
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
+            try { 
 
-		}
+                DAL.EquipmentClass equipmentClass = new DAL.EquipmentClass(txtDescription.Text, int.Parse(cmbVenue.SelectedValue.ToString()), int.Parse(cmbEquipTypeCode.SelectedValue.ToString()));
+
+                int x = bll.AddEquipment(equipmentClass);
+
+                if (x > 0)
+                {
+                    txtDescription.Clear();
+                    cmbVenue.ValueMember = "";
+                    cmbEquipTypeCode.ValueMember = "";
+                }
+                else
+                {
+                    MessageBox.Show("Please input valid data.");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Please input valid data.");
+            }
+
+            dgvEquipment.DataSource = bll.GetEquipment();
+        }
 
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
 		{
 
-		}
+            dgvEquipment.DataSource = bll.GetEquipment();
+        }
 
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{

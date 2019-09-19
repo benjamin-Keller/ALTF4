@@ -8,7 +8,7 @@ namespace DAL
 {
     public class InspectionDetailClass
     {
-        public int InspectionDetailCode { get; set; }
+        public static int InspectionDetailCode { get; set; }
         public int InspectionCode { get; set; }
         public int EquipmentCode { get; set; }
         public int StaffCode { get; set; }

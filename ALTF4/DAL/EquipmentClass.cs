@@ -8,7 +8,7 @@ namespace DAL
 {
     public class EquipmentClass
     {
-        public int EquipmentCode { get; set; }
+        public static int EquipmentCode { get; set; }
         public string EquipmentDescription { get; set; }
         public int VenueCode { get; set; }
         public int EquipTypeCode { get; set; }

@@ -23,6 +23,18 @@ namespace Info_IT.UserControls
 		private void UcNavInspection_Load(object sender, EventArgs e)
 		{
 			ucInspectionDetails1.Hide();
+
+            cmbVenueCode.DataSource = bll.GetVenues();
+
+            cmbVenueCode.DisplayMember = "VenueDescription";
+            cmbVenueCode.ValueMember = "VenueCode";
+
+            cmbStaffCode.DataSource = bll.GetStaff();
+
+            cmbStaffCode.DisplayMember = "FirstName";
+            cmbStaffCode.ValueMember = "StaffCode";
+
+            dgvInspection.DataSource = bll.GetInspection();
 		}
 
 		//Menu button (Manage)
@@ -62,8 +74,34 @@ namespace Info_IT.UserControls
 
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
+            try
+            {
 
-		}
+
+                //Error for input string not found
+                DAL.InspectionClass inspection = new DAL.InspectionClass(dateInspection.Text, txtTime.Text, txtComment.Text, int.Parse(cmbVenueCode.SelectedValue.ToString()), int.Parse(cmbStaffCode.SelectedValue.ToString()));
+                int x = bll.AddInspection(inspection);
+
+                if (x > 0)
+                {
+                    dateInspection.ResetText();
+                    txtTime.Clear();
+                    txtComment.Clear();
+                    cmbVenueCode.ValueMember = "";
+                    cmbStaffCode.ValueMember = "";
+                }
+                else
+                {
+                    MessageBox.Show("Please input valid data.");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Please input valid data.");
+            }
+
+            dgvInspection.DataSource = bll.GetInspection();
+        }
 
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
 		{
@@ -72,12 +110,13 @@ namespace Info_IT.UserControls
 
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
-
-			dgvInspection.BackgroundColor = Color.White;
+            dgvInspection.DataSource = bll.GetInspection();
+            dgvInspection.BackgroundColor = Color.White;
 		}
 
 		private void BtnViewInspectiondetails_Click(object sender, EventArgs e)
 		{
+
 			ucInspectionDetails1.Show();
 		}
 	}

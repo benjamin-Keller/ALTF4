@@ -22,12 +22,7 @@ namespace Info_IT.UserControls
 
 		private void UcTutorRequest_Load(object sender, EventArgs e)
 		{
-            //cmbModuleCode.DataSource = bll.();
-
-            //cmbBuilding.DisplayMember = "BuildingName";
-            //cmbBuilding.ValueMember = "BuildingID";
-
-            //dgvTutorRequest.DataSource = bll.GetTutorRequest();
+            dgvTutorRequest.DataSource = bll.GetTutorRequest();
 
             cmbRequestCode.DataSource = bll.GetRequests();
 

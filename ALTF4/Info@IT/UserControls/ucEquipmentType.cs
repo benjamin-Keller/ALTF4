@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace Info_IT.UserControls
 {
 	public partial class ucEquipmentType : UserControl
 	{
-		public ucEquipmentType()
+        BusinessLogicLayer bll = new BusinessLogicLayer();
+        public ucEquipmentType()
 		{
 			InitializeComponent();
 		}
@@ -61,8 +63,31 @@ namespace Info_IT.UserControls
 
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
+            try
+            {
 
-		}
+
+                //Error for input string not found
+                DAL.EquipmentTypeClass equipment = new DAL.EquipmentTypeClass(txtEquipmentType.Text);
+                int x = bll.AddEquipmentType(equipment);
+
+                if (x > 0)
+                {
+                    txtEquipmentType.Clear();
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Please input valid data.");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Please input valid data.");
+            }
+
+            dgvEquipmentDetails.DataSource = bll.GetEquipmentType();
+        }
 
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
 		{
@@ -71,7 +96,7 @@ namespace Info_IT.UserControls
 
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
-
-		}
+            dgvEquipmentDetails.DataSource = bll.GetEquipmentType();
+        }
 	}
 }

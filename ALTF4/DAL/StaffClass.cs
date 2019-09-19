@@ -8,7 +8,7 @@ namespace DAL
 {
     public class StaffClass
     {
-        public int StaffNumber { get; set; }
+        public static int StaffNumber { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string EmailAddress { get; set; }

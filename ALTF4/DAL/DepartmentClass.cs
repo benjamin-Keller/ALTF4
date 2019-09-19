@@ -8,7 +8,7 @@ namespace DAL
 {
     public class DepartmentClass
     {
-        public int DepartmentCode { get; set; }
+        public static int DepartmentCode { get; set; }
         public string DepartmentName { get; set; }
         public string Building { get; set; }
         public string ContactPerson { get; set; }

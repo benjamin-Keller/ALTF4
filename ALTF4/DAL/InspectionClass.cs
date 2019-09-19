@@ -8,7 +8,7 @@ namespace DAL
 {
     public class InspectionClass
     {
-        public int InspectionCode { get; set; }
+        public static int InspectionCode { get; set; }
         public string InspectionDate { get; set; }
         public string InspectionTime { get; set; }
         public string Comment { get; set; }

@@ -211,6 +211,29 @@ namespace DAL
             return dt;
         }
 
+        public DataTable GetInspection()
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+            dbCmd = new SqlCommand("dbo.sp_DisplayAllInspection", dbConn);
+            //dbCmd.CommandText = "sp_DisplayVenue";
+            //dbCmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return dt;
+        }
+
         public DataTable GetInspectionDetail()
         {
             try
@@ -241,7 +264,7 @@ namespace DAL
                 dbConn.Open();
             }
             catch { }
-            dbCmd = new SqlCommand("dbo.sp_DisplayAllRequests", dbConn);
+            dbCmd = new SqlCommand("dbo.sp_DisplayAllRequestsPending", dbConn);
             //dbCmd.CommandText = "sp_DisplayVenue";
             //dbCmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
@@ -333,7 +356,7 @@ namespace DAL
                 dbConn.Open();
             }
             catch { }
-            dbCmd = new SqlCommand("dbo.sp_DisplayAllTutorRequest", dbConn);
+            dbCmd = new SqlCommand("dbo.sp_DisplayRequestTutor", dbConn);
             //dbCmd.CommandText = "sp_DisplayVenue";
             //dbCmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
@@ -577,7 +600,7 @@ namespace DAL
                 dbCmd = new SqlCommand("dbo.sp_AddStaff", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
-                dbCmd.Parameters.AddWithValue("@StaffNumber", staff.StaffNumber);
+                dbCmd.Parameters.AddWithValue("@StaffNumber", StaffClass.StaffNumber);
                 dbCmd.Parameters.AddWithValue("@FirstName", staff.Name);
                 dbCmd.Parameters.AddWithValue("@LastName", staff.Surname);
                 dbCmd.Parameters.AddWithValue("@Email", staff.EmailAddress);
@@ -681,7 +704,7 @@ namespace DAL
 
                 dbCmd = new SqlCommand("dbo.sp_AddTutorRequest", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
-                dbCmd.Parameters.AddWithValue("@RequestCode", tutorRequest.RequestCode);
+                dbCmd.Parameters.AddWithValue("@RequestCode", TutorRequestClass.RequestCode);
                 dbCmd.Parameters.AddWithValue("@TutorRequestDate", tutorRequest.Date);
                 dbCmd.Parameters.AddWithValue("@StartTime", tutorRequest.StartTime.ToShortTimeString());
                 dbCmd.Parameters.AddWithValue("@EndTime", tutorRequest.EndTime.ToShortTimeString());
@@ -783,7 +806,7 @@ namespace DAL
                 dbCmd = new SqlCommand("dbo.sp_UpdateVenue", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
-                dbCmd.Parameters.AddWithValue("@VenueCode", venue.VenueCode);
+                dbCmd.Parameters.AddWithValue("@VenueCode", DAL.VenueClass.VenueCode);
                 dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
                 dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
                 dbCmd.Parameters.AddWithValue("@DoorNo", venue.VenueDoorNo);
@@ -802,6 +825,38 @@ namespace DAL
             }
             catch { }
             return x;
+        }
+
+        public DataTable SelectedForUpdateVenue(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+            
+            
+
+                dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateVenue", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@VenueCode", DAL.VenueClass.VenueCode);
+                SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                try
+                {
+                    dbConn.Close();
+                }
+                catch { }
+
+                return dt;
+            
+
+            
+            
         }
 
 

@@ -8,7 +8,7 @@ namespace DAL
 {
     public class RequestClass
     {
-        public int RequestCode { get; set; }
+        public static int RequestCode { get; set; }
         public string RequestDescription { get; set; }
         public int RequestStaffCode { get; set; }
         public int RequestStudentCode { get; set; }

@@ -28,6 +28,11 @@ namespace BLL
             return dal.UpdateVenue(venue);
         }
 
+        public DataTable SelectedForUpdateVenue(VenueClass VenueCode)
+        {
+            return dal.SelectedForUpdateVenue(VenueCode);
+        }
+
         public DataTable GetDepartment()
         {
             return dal.GetDepartment();
@@ -41,6 +46,11 @@ namespace BLL
         public DataTable GetEquipmentType()
         {
             return dal.GetEquipmentType();
+        }
+
+        public DataTable GetInspection()
+        {
+            return dal.GetInspection();
         }
 
         public DataTable GetInspectionDetail()

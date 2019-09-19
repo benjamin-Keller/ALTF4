@@ -8,13 +8,14 @@ namespace DAL
 {
     public class StudentClass
     {
-        public int StudentNumber { get; set; }
+        public static int StudentCode { get; set; }
+        public string StudentNumber { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string EmailAddress { get; set; }
 
 
-        public StudentClass(int studentNumber, string name, string surname, string emailAddress)
+        public StudentClass(string studentNumber, string name, string surname, string emailAddress)
         {
             StudentNumber = studentNumber;
             Name = name;

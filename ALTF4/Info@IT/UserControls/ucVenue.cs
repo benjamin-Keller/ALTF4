@@ -70,7 +70,7 @@ namespace Info_IT.UserControls
 
 
                 //Error for input string not found
-                DAL.VenueClass venue = new DAL.VenueClass(txtDescription.Text, int.Parse(txtCapacity.Text), int.Parse(txtDoorNo.Text), int.Parse(cmbBuildingBlock.SelectedValue.ToString()), int.Parse(cmbBuilding.SelectedIndex.ToString()));
+                DAL.VenueClass venue = new DAL.VenueClass(txtDescription.Text, int.Parse(txtCapacity.Text), int.Parse(txtDoorNo.Text), int.Parse(cmbBuildingBlock.SelectedValue.ToString()), int.Parse(cmbBuilding.SelectedValue.ToString()));
                 int x = bll.AddVenue(venue);
 
                 if (x > 0)
@@ -101,8 +101,9 @@ namespace Info_IT.UserControls
 
             try
             {
+                
                 //Error for input string not found
-                DAL.VenueClass venue = new DAL.VenueClass(dgvVenue.SelectedRows[0].Cells[0].Value.ToString(),txtDescription.Text, int.Parse(txtCapacity.Text), int.Parse(txtDoorNo.Text), int.Parse(cmbBuildingBlock.SelectedValue.ToString()), int.Parse(cmbBuilding.SelectedIndex.ToString()));
+                DAL.VenueClass venue = new DAL.VenueClass(DAL.VenueClass.VenueCode, txtDescription.Text, int.Parse(txtCapacity.Text), int.Parse(txtDoorNo.Text), int.Parse(cmbBuildingBlock.SelectedValue.ToString()), int.Parse(cmbBuilding.SelectedValue.ToString()));
                 int x = bll.UpdateVenue(venue);
 
                 if (x > 0)
@@ -136,12 +137,16 @@ namespace Info_IT.UserControls
 
         private void dgvVenue_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtDescription.Text = dgvVenue.SelectedRows[0].Cells[1].Value.ToString();
-            txtCapacity.Text = dgvVenue.SelectedRows[0].Cells[2].Value.ToString();
-            txtDoorNo.Text = dgvVenue.SelectedRows[0].Cells[3].Value.ToString();
+            DAL.VenueClass venueClass = new DAL.VenueClass(int.Parse(dgvVenue.SelectedRows[0].Cells[0].Value.ToString()));
             
-            cmbBuildingBlock.SelectedText = dgvVenue.SelectedRows[0].Cells[4].Value.ToString();
-            cmbBuilding.SelectedText = dgvVenue.SelectedRows[0].Cells[5].Value.ToString();
+            var values = bll.SelectedForUpdateVenue(venueClass);
+
+            txtDescription.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
+            txtCapacity.Text = values.Rows[0].Table.Rows[0].ItemArray[2].ToString();
+            txtDoorNo.Text = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
+
+            cmbBuildingBlock.SelectedIndex = int.Parse(values.Rows[0].Table.Rows[0].ItemArray[4].ToString());
+            cmbBuilding.SelectedIndex = int.Parse(values.Rows[0].Table.Rows[0].ItemArray[5].ToString());
 
 
         }

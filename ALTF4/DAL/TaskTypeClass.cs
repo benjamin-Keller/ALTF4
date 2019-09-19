@@ -8,6 +8,7 @@ namespace DAL
 {
     public class TaskTypeClass
     {
+        public static int TaskTypeCode { get; set; }
         public string Name { get; set; }
 
 

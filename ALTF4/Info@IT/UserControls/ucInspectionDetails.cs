@@ -7,19 +7,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace Info_IT.UserControls
 {
 	public partial class ucInspectionDetails : UserControl
 	{
+        BusinessLogicLayer bll = new BusinessLogicLayer();
 		public ucInspectionDetails()
 		{
 			InitializeComponent();
 		}
 		private void UcInspectionDetails_Load(object sender, EventArgs e)
 		{
-			
-		}
+            cmbEquipmentCode.DataSource = bll.GetEquipment();
+
+            cmbEquipmentCode.DisplayMember = "EquipmentDescription";
+            cmbEquipmentCode.ValueMember = "Equipmentcode";
+
+            cmbStaffCode.DataSource = bll.GetStaff();
+
+            cmbStaffCode.DisplayMember = "FirstName";
+            cmbStaffCode.ValueMember = "StaffCode";
+
+            cmbInspectionCode.DataSource = bll.GetInspection();
+
+            cmbInspectionCode.DisplayMember = "InspectionCode";
+            cmbInspectionCode.ValueMember = "InspectionCode";
+            
+            dgvInspectionDetails.DataSource = bll.GetInspectionDetail();
+        }
 
 		private void BtnCloseDetails_Click(object sender, EventArgs e)
 		{
@@ -64,8 +81,32 @@ namespace Info_IT.UserControls
 
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
+            try
+            {
+                //Error for input string not found
+                DAL.InspectionDetailClass inspection = new DAL.InspectionDetailClass(int.Parse(cmbInspectionCode.SelectedValue.ToString()), int.Parse(cmbEquipmentCode.SelectedValue.ToString()), int.Parse(cmbStaffCode.SelectedValue.ToString()), txtFaultComment.Text, cmbStatus.SelectedText.ToString());
+                int x = bll.AddInspectionDetail(inspection);
 
-		}
+                if (x > 0)
+                {
+                    txtFaultComment.Clear();
+                    cmbEquipmentCode.ValueMember = "";
+                    cmbInspectionCode.ValueMember = "";
+                    cmbStaffCode.ValueMember = "";
+                    cmbStatus.ValueMember = "";
+                }
+                else
+                {
+                    MessageBox.Show("Please input valid data.");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Please input valid data.");
+            }
+
+            dgvInspectionDetails.DataSource = bll.GetInspectionDetail();
+        }
 
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
 		{
