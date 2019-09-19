@@ -29,11 +29,13 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel3 = new System.Windows.Forms.Panel();
+			this.dgvEquipment = new Bunifu.Framework.UI.BunifuCustomDataGrid();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.pnlView = new System.Windows.Forms.Panel();
+			this.btnViewEquipmentTypes = new System.Windows.Forms.Button();
 			this.btnViewList = new System.Windows.Forms.Button();
 			this.btnView = new System.Windows.Forms.Button();
 			this.pnlManage = new System.Windows.Forms.Panel();
@@ -50,15 +52,13 @@
 			this.cmbVenue = new System.Windows.Forms.ComboBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.dgvEquipment = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-			this.btnViewEquipmentTypes = new System.Windows.Forms.Button();
 			this.ucEquipmentType1 = new Info_IT.UserControls.ucEquipmentType();
 			this.panel3.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvEquipment)).BeginInit();
 			this.panel1.SuspendLayout();
 			this.pnlView.SuspendLayout();
 			this.pnlManage.SuspendLayout();
 			this.groupBox1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvEquipment)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel3
@@ -68,6 +68,33 @@
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(782, 429);
 			this.panel3.TabIndex = 8;
+			// 
+			// dgvEquipment
+			// 
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvEquipment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			this.dgvEquipment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvEquipment.BackgroundColor = System.Drawing.SystemColors.Control;
+			this.dgvEquipment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.dgvEquipment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvEquipment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			this.dgvEquipment.ColumnHeadersHeight = 50;
+			this.dgvEquipment.DoubleBuffered = true;
+			this.dgvEquipment.EnableHeadersVisualStyles = false;
+			this.dgvEquipment.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.dgvEquipment.HeaderForeColor = System.Drawing.Color.White;
+			this.dgvEquipment.Location = new System.Drawing.Point(0, 0);
+			this.dgvEquipment.Name = "dgvEquipment";
+			this.dgvEquipment.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			this.dgvEquipment.Size = new System.Drawing.Size(782, 429);
+			this.dgvEquipment.TabIndex = 0;
 			// 
 			// panel1
 			// 
@@ -93,6 +120,21 @@
 			this.pnlView.Name = "pnlView";
 			this.pnlView.Size = new System.Drawing.Size(200, 53);
 			this.pnlView.TabIndex = 13;
+			// 
+			// btnViewEquipmentTypes
+			// 
+			this.btnViewEquipmentTypes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.btnViewEquipmentTypes.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnViewEquipmentTypes.FlatAppearance.BorderSize = 0;
+			this.btnViewEquipmentTypes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnViewEquipmentTypes.Font = new System.Drawing.Font("Segoe UI", 8.75F);
+			this.btnViewEquipmentTypes.Location = new System.Drawing.Point(0, 84);
+			this.btnViewEquipmentTypes.Name = "btnViewEquipmentTypes";
+			this.btnViewEquipmentTypes.Size = new System.Drawing.Size(200, 31);
+			this.btnViewEquipmentTypes.TabIndex = 7;
+			this.btnViewEquipmentTypes.Text = "View Equipment Types";
+			this.btnViewEquipmentTypes.UseVisualStyleBackColor = false;
+			this.btnViewEquipmentTypes.Click += new System.EventHandler(this.BtnViewEquipmentTypes_Click);
 			// 
 			// btnViewList
 			// 
@@ -273,48 +315,6 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Information";
 			// 
-			// dgvEquipment
-			// 
-			dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvEquipment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
-			this.dgvEquipment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.dgvEquipment.BackgroundColor = System.Drawing.SystemColors.Control;
-			this.dgvEquipment.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.dgvEquipment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvEquipment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-			this.dgvEquipment.ColumnHeadersHeight = 50;
-			this.dgvEquipment.DoubleBuffered = true;
-			this.dgvEquipment.EnableHeadersVisualStyles = false;
-			this.dgvEquipment.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.dgvEquipment.HeaderForeColor = System.Drawing.Color.White;
-			this.dgvEquipment.Location = new System.Drawing.Point(0, 0);
-			this.dgvEquipment.Name = "dgvEquipment";
-			this.dgvEquipment.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			this.dgvEquipment.Size = new System.Drawing.Size(782, 429);
-			this.dgvEquipment.TabIndex = 0;
-			// 
-			// btnViewEquipmentTypes
-			// 
-			this.btnViewEquipmentTypes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.btnViewEquipmentTypes.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnViewEquipmentTypes.FlatAppearance.BorderSize = 0;
-			this.btnViewEquipmentTypes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnViewEquipmentTypes.Font = new System.Drawing.Font("Segoe UI", 8.75F);
-			this.btnViewEquipmentTypes.Location = new System.Drawing.Point(0, 84);
-			this.btnViewEquipmentTypes.Name = "btnViewEquipmentTypes";
-			this.btnViewEquipmentTypes.Size = new System.Drawing.Size(200, 31);
-			this.btnViewEquipmentTypes.TabIndex = 7;
-			this.btnViewEquipmentTypes.Text = "View Equipment Types";
-			this.btnViewEquipmentTypes.UseVisualStyleBackColor = false;
-			this.btnViewEquipmentTypes.Click += new System.EventHandler(this.BtnViewEquipmentTypes_Click);
-			// 
 			// ucEquipmentType1
 			// 
 			this.ucEquipmentType1.Location = new System.Drawing.Point(0, 0);
@@ -334,12 +334,12 @@
 			this.Size = new System.Drawing.Size(1056, 562);
 			this.Load += new System.EventHandler(this.UcEquipment_Load);
 			this.panel3.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dgvEquipment)).EndInit();
 			this.panel1.ResumeLayout(false);
 			this.pnlView.ResumeLayout(false);
 			this.pnlManage.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvEquipment)).EndInit();
 			this.ResumeLayout(false);
 
 		}

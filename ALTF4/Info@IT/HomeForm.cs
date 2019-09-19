@@ -9,7 +9,7 @@ namespace Info_IT
 	public partial class Home : Form
 	{
 		public bool isLoggedIn;
-		public string role = "Admin";
+		public string role;
 		public bool firstUser;
 		public bool firstPass;
 
@@ -32,6 +32,8 @@ namespace Info_IT
 			pnlLogin.Hide();
 			btnNavHelp.Hide();
             lblDisplayName.Hide();
+			lblLoginError.Hide();
+			lblLoginErrorExtra.Hide();
 		}
 
 		public void LoginPanel()
@@ -76,7 +78,10 @@ namespace Info_IT
                     btnNavStudent.Show();
                     btnNavStaff.Show();
                     btnNavUser.Show();
-                    break;
+					btnReports.Show();
+
+					btnNavHelp.Show();
+					break;
 
                 case "ICT HelpDesk":
 					lblLoginText.Text = "Log In";
@@ -94,19 +99,22 @@ namespace Info_IT
                     btnNavStudent.Show();
                     btnNavStaff.Show();
                     btnNavUser.Show();
+					btnReports.Show();
 
-                    //btnNavHome.Hide();
-                    //btnNavEquipment.Hide();
-                    //btnNavVenue.Hide();
-                    //btnNavDepartment.Hide();
-                    //btnNavRequest.Hide();
-                    //btnNavTutorRequest.Hide();
-                    //btnNavInspection.Hide();
-                    //btnNavTaskType.Hide();
-                    //btnNavStudent.Hide();
-                    //btnNavStaff.Hide();
-                    //btnNavUser.Hide();
-                    break;
+					//btnNavHome.Hide();
+					//btnNavEquipment.Hide();
+					//btnNavVenue.Hide();
+					//btnNavDepartment.Hide();
+					//btnNavRequest.Hide();
+					//btnNavTutorRequest.Hide();
+					//btnNavInspection.Hide();
+					//btnNavTaskType.Hide();
+					//btnNavStudent.Hide();
+					//btnNavStaff.Hide();
+					//btnNavUser.Hide();
+
+					btnNavHelp.Show();
+					break;
 				case "Info@IT":
                     ////What can Info@It Staff see
 
@@ -122,10 +130,11 @@ namespace Info_IT
                     btnNavStudent.Show();
                     btnNavStaff.Show();
                     btnNavUser.Show();
+					btnReports.Show();
 
-                    //btnNavHome.Hide();
-                    //btnNavEquipment.Hide();
-                    btnNavVenue.Hide();
+					//btnNavHome.Hide();
+					//btnNavEquipment.Hide();
+					btnNavVenue.Hide();
 					btnNavDepartment.Hide();
 					//btnNavRequest.Hide();
 					//btnNavTutorRequest.Hide();
@@ -134,6 +143,8 @@ namespace Info_IT
 					//btnNavStudent.Hide();
 					btnNavStaff.Hide();
 					btnNavUser.Hide();
+
+					btnNavHelp.Show();
 					break;
 
 				case "Student Assistant":
@@ -151,10 +162,11 @@ namespace Info_IT
                     btnNavStudent.Show();
                     btnNavStaff.Show();
                     btnNavUser.Show();
+					btnReports.Show();
 
-                    //btnNavHome.Hide();
-                    //btnNavEquipment.Hide();
-                    btnNavVenue.Hide();
+					//btnNavHome.Hide();
+					//btnNavEquipment.Hide();
+					btnNavVenue.Hide();
 					btnNavDepartment.Hide();
 					//btnNavRequest.Hide();
 					//btnNavTutorRequest.Hide();
@@ -163,6 +175,8 @@ namespace Info_IT
 					btnNavStudent.Hide();
 					btnNavStaff.Hide();
 					btnNavUser.Hide();
+
+					btnNavHelp.Show();
 					break;
 				default:
 					////What can everyone else see
@@ -179,6 +193,9 @@ namespace Info_IT
 					btnNavStudent.Hide();
 					btnNavStaff.Hide();
 					btnNavUser.Hide();
+					btnReports.Hide();
+
+					btnNavHelp.Hide();
 					break;
 
 			}
@@ -195,7 +212,8 @@ namespace Info_IT
 
             if (x.Rows.Count == 0)
             {
-                MessageBox.Show("Incorrect Username and Password");
+				lblLoginError.Show();
+                //MessageBox.Show("Incorrect Username and Password");
             }
             else
             {
@@ -210,7 +228,9 @@ namespace Info_IT
                 catch
                 {
                     int i = x.Rows.Count;
-                    MessageBox.Show(i.ToString());
+
+					lblLoginErrorExtra.Text = i.ToString();
+                    //MessageBox.Show(i.ToString());
                 }
                 LoginPanel();
                 HideAll();
@@ -255,10 +275,12 @@ namespace Info_IT
 			btnNavStaff.BackColor = Color.FromArgb(0,100,200);
 			btnNavUser.BackColor = Color.FromArgb(0,100,200);
 			btnNavHelp.BackColor = Color.FromArgb(0, 100, 200);
+			btnReports.BackColor = Color.FromArgb(0, 100, 200);
 		}
 
 		private void HideAll()
 		{
+			//Panels
 			ucEquipment1.Hide();
 			ucHome1.Hide();
 			ucVenue1.Hide();
@@ -271,13 +293,17 @@ namespace Info_IT
 			ucStudent1.Hide();
 			ucStaff1.Hide();
 			ucUser1.Hide();
+			ucReport1.Hide();
+
+			//Errors
 			ucErrorFailedToAdd1.Hide();
 			ucErrorStaffNotFound1.Hide();
 			ucErrorStudentNotFound1.Hide();
 			ucErrorUserNotFound1.Hide();
 			ucErrorVenueNotFound1.Hide();
 
-			pnlLoginFields.Hide();	
+			//Misc
+			pnlLoginFields.Hide();
 		}
 		//Login bar
 		private void Login_Click(object sender, EventArgs e)
@@ -478,6 +504,17 @@ namespace Info_IT
 			ucUser1.Show();
 			this.Text = "User";
 			lblLocation.Text = "User";
+		}
+
+		private void BtnReports_Click(object sender, EventArgs e)
+		{
+			HideAll();
+			InactiveButtons();
+			btnReports.BackColor = Color.FromArgb(0, 150, 250);
+
+			ucReport1.Show();
+			this.Text = "Reports";
+			lblLocation.Text = "Reports";
 		}
 
 		private void Logo_Click(object sender, EventArgs e)

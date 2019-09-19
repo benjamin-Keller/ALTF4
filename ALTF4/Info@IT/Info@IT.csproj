@@ -126,6 +126,18 @@
     <Compile Include="HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Reports\ucReportEquipment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Reports\ucReportEquipment.Designer.cs">
+      <DependentUpon>ucReportEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Reports\ucReportVenue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Reports\ucReportVenue.Designer.cs">
+      <DependentUpon>ucReportVenue.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucDepartment.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -167,6 +179,12 @@
     </Compile>
     <Compile Include="UserControls\ucInspection.Designer.cs">
       <DependentUpon>ucInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucReport.Designer.cs">
+      <DependentUpon>ucReport.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucRequest.cs">
       <SubType>UserControl</SubType>
@@ -230,6 +248,12 @@
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Reports\ucReportEquipment.resx">
+      <DependentUpon>ucReportEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Reports\ucReportVenue.resx">
+      <DependentUpon>ucReportVenue.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucDepartment.resx">
       <DependentUpon>ucDepartment.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucInspection.resx">
       <DependentUpon>ucInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucReport.resx">
+      <DependentUpon>ucReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucRequest.resx">
       <DependentUpon>ucRequest.cs</DependentUpon>
