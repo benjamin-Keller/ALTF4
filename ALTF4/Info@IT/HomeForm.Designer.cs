@@ -151,7 +151,7 @@
 			// 
 			// btnReports
 			// 
-			this.btnReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
+			this.btnReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
 			this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnReports.FlatAppearance.BorderSize = 0;
 			this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -166,7 +166,7 @@
 			// 
 			// btnNavUser
 			// 
-			this.btnNavUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
+			this.btnNavUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
 			this.btnNavUser.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnNavUser.FlatAppearance.BorderSize = 0;
 			this.btnNavUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -181,7 +181,7 @@
 			// 
 			// btnNavStaff
 			// 
-			this.btnNavStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
+			this.btnNavStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
 			this.btnNavStaff.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnNavStaff.FlatAppearance.BorderSize = 0;
 			this.btnNavStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -196,7 +196,7 @@
 			// 
 			// btnNavStudent
 			// 
-			this.btnNavStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
+			this.btnNavStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
 			this.btnNavStudent.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnNavStudent.FlatAppearance.BorderSize = 0;
 			this.btnNavStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -211,7 +211,7 @@
 			// 
 			// btnNavTaskType
 			// 
-			this.btnNavTaskType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
+			this.btnNavTaskType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
 			this.btnNavTaskType.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnNavTaskType.FlatAppearance.BorderSize = 0;
 			this.btnNavTaskType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -226,7 +226,7 @@
 			// 
 			// btnNavInspection
 			// 
-			this.btnNavInspection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
+			this.btnNavInspection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
 			this.btnNavInspection.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnNavInspection.FlatAppearance.BorderSize = 0;
 			this.btnNavInspection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -241,7 +241,7 @@
 			// 
 			// btnNavTutorRequest
 			// 
-			this.btnNavTutorRequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
+			this.btnNavTutorRequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
 			this.btnNavTutorRequest.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnNavTutorRequest.FlatAppearance.BorderSize = 0;
 			this.btnNavTutorRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -256,7 +256,7 @@
 			// 
 			// btnNavRequest
 			// 
-			this.btnNavRequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
+			this.btnNavRequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
 			this.btnNavRequest.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnNavRequest.FlatAppearance.BorderSize = 0;
 			this.btnNavRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -271,7 +271,7 @@
 			// 
 			// btnNavDepartment
 			// 
-			this.btnNavDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
+			this.btnNavDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
 			this.btnNavDepartment.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnNavDepartment.FlatAppearance.BorderSize = 0;
 			this.btnNavDepartment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -286,7 +286,7 @@
 			// 
 			// btnNavVenue
 			// 
-			this.btnNavVenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
+			this.btnNavVenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
 			this.btnNavVenue.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnNavVenue.FlatAppearance.BorderSize = 0;
 			this.btnNavVenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -301,7 +301,7 @@
 			// 
 			// btnNavEquipment
 			// 
-			this.btnNavEquipment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
+			this.btnNavEquipment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
 			this.btnNavEquipment.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnNavEquipment.FlatAppearance.BorderSize = 0;
 			this.btnNavEquipment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -316,7 +316,7 @@
 			// 
 			// btnNavHome
 			// 
-			this.btnNavHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(250)))));
+			this.btnNavHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
 			this.btnNavHome.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnNavHome.FlatAppearance.BorderSize = 0;
 			this.btnNavHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -331,7 +331,7 @@
 			// 
 			// btnNavigation
 			// 
-			this.btnNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(250)))));
+			this.btnNavigation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
 			this.btnNavigation.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnNavigation.FlatAppearance.BorderSize = 0;
 			this.btnNavigation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -370,7 +370,7 @@
 			// 
 			// btnNavHelp
 			// 
-			this.btnNavHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(90)))), ((int)(((byte)(250)))));
+			this.btnNavHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
 			this.btnNavHelp.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.btnNavHelp.FlatAppearance.BorderSize = 0;
 			this.btnNavHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
