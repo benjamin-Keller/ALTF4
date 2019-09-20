@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Info_IT.UserControls.Reports
+namespace Info_IT.UserControls
 {
-	public partial class ucReportVenue : UserControl
+	public partial class ucReportStudent : UserControl
 	{
-		public ucReportVenue()
+		public ucReportStudent()
 		{
 			InitializeComponent();
-		}
-
-		private void UcReportVenue_Load(object sender, EventArgs e)
-		{
-
 		}
 	}
 }

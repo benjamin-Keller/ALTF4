@@ -126,11 +126,35 @@
     <Compile Include="HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Reports\ucReportDepartment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Reports\ucReportDepartment.Designer.cs">
+      <DependentUpon>ucReportDepartment.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Reports\ucReportEquipment.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\Reports\ucReportEquipment.Designer.cs">
       <DependentUpon>ucReportEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Reports\ucReportInspection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Reports\ucReportInspection.Designer.cs">
+      <DependentUpon>ucReportInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Reports\ucReportRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Reports\ucReportRequest.Designer.cs">
+      <DependentUpon>ucReportRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Reports\ucReportTutorRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Reports\ucReportTutorRequest.Designer.cs">
+      <DependentUpon>ucReportTutorRequest.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Reports\ucReportVenue.cs">
       <SubType>UserControl</SubType>
@@ -185,6 +209,18 @@
     </Compile>
     <Compile Include="UserControls\ucReport.Designer.cs">
       <DependentUpon>ucReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Reports\ucReportStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Reports\ucReportStaff.Designer.cs">
+      <DependentUpon>ucReportStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Reports\ucReportStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Reports\ucReportStudent.Designer.cs">
+      <DependentUpon>ucReportStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ucRequest.cs">
       <SubType>UserControl</SubType>
@@ -248,8 +284,23 @@
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Reports\ucReportDepartment.resx">
+      <DependentUpon>ucReportDepartment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Reports\ucReportEquipment.resx">
       <DependentUpon>ucReportEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Reports\ucReportInspection.resx">
+      <DependentUpon>ucReportInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Reports\ucReportRequest.resx">
+      <DependentUpon>ucReportRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Reports\ucReportStudent.resx">
+      <DependentUpon>ucReportStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Reports\ucReportTutorRequest.resx">
+      <DependentUpon>ucReportTutorRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Reports\ucReportVenue.resx">
       <DependentUpon>ucReportVenue.cs</DependentUpon>
@@ -277,6 +328,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucReport.resx">
       <DependentUpon>ucReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Reports\ucReportStaff.resx">
+      <DependentUpon>ucReportStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucRequest.resx">
       <DependentUpon>ucRequest.cs</DependentUpon>

@@ -46,8 +46,14 @@
 			this.pnlView = new System.Windows.Forms.Panel();
 			this.btnEquipmentReport = new System.Windows.Forms.Button();
 			this.panel3 = new System.Windows.Forms.Panel();
+			this.ucReportStaff1 = new Info_IT.UserControls.ucReportStaff();
+			this.ucReportInspection1 = new Info_IT.UserControls.Reports.ucReportInspection();
+			this.ucReportRequest1 = new Info_IT.UserControls.Reports.ucReportRequest();
+			this.ucReportTutorRequest1 = new Info_IT.UserControls.Reports.ucReportTutorRequest();
+			this.ucReportDepartment1 = new Info_IT.UserControls.Reports.ucReportDepartment();
 			this.ucReportVenue1 = new Info_IT.UserControls.Reports.ucReportVenue();
 			this.ucReportEquipment1 = new Info_IT.UserControls.Reports.ucReportEquipment();
+			this.ucReportStudent1 = new Info_IT.UserControls.ucReportStudent();
 			this.panel1.SuspendLayout();
 			this.panel9.SuspendLayout();
 			this.panel8.SuspendLayout();
@@ -104,6 +110,7 @@
 			this.btnStudentReport.Text = "Student";
 			this.btnStudentReport.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
 			this.btnStudentReport.UseVisualStyleBackColor = false;
+			this.btnStudentReport.Click += new System.EventHandler(this.BtnStudentReport_Click);
 			// 
 			// panel8
 			// 
@@ -132,6 +139,7 @@
 			this.btnStaffReport.Text = "Staff";
 			this.btnStaffReport.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
 			this.btnStaffReport.UseVisualStyleBackColor = false;
+			this.btnStaffReport.Click += new System.EventHandler(this.BtnStaffReport_Click);
 			// 
 			// panel7
 			// 
@@ -160,6 +168,7 @@
 			this.btnInspectionReport.Text = "Inspection";
 			this.btnInspectionReport.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
 			this.btnInspectionReport.UseVisualStyleBackColor = false;
+			this.btnInspectionReport.Click += new System.EventHandler(this.BtnInspectionReport_Click);
 			// 
 			// panel6
 			// 
@@ -188,6 +197,7 @@
 			this.btnTutorRequestsReport.Text = "Tutor Request";
 			this.btnTutorRequestsReport.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
 			this.btnTutorRequestsReport.UseVisualStyleBackColor = false;
+			this.btnTutorRequestsReport.Click += new System.EventHandler(this.BtnTutorRequestsReport_Click);
 			// 
 			// panel5
 			// 
@@ -216,6 +226,7 @@
 			this.btnRequestReport.Text = "Request";
 			this.btnRequestReport.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
 			this.btnRequestReport.UseVisualStyleBackColor = false;
+			this.btnRequestReport.Click += new System.EventHandler(this.BtnRequestReport_Click);
 			// 
 			// panel4
 			// 
@@ -244,6 +255,7 @@
 			this.btnDepartmentReport.Text = "Department";
 			this.btnDepartmentReport.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
 			this.btnDepartmentReport.UseVisualStyleBackColor = false;
+			this.btnDepartmentReport.Click += new System.EventHandler(this.BtnDepartmentReport_Click);
 			// 
 			// panel2
 			// 
@@ -305,6 +317,12 @@
 			// 
 			// panel3
 			// 
+			this.panel3.Controls.Add(this.ucReportStudent1);
+			this.panel3.Controls.Add(this.ucReportStaff1);
+			this.panel3.Controls.Add(this.ucReportInspection1);
+			this.panel3.Controls.Add(this.ucReportRequest1);
+			this.panel3.Controls.Add(this.ucReportTutorRequest1);
+			this.panel3.Controls.Add(this.ucReportDepartment1);
 			this.panel3.Controls.Add(this.ucReportVenue1);
 			this.panel3.Controls.Add(this.ucReportEquipment1);
 			this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -312,6 +330,41 @@
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(856, 562);
 			this.panel3.TabIndex = 22;
+			// 
+			// ucReportStaff1
+			// 
+			this.ucReportStaff1.Location = new System.Drawing.Point(0, 0);
+			this.ucReportStaff1.Name = "ucReportStaff1";
+			this.ucReportStaff1.Size = new System.Drawing.Size(856, 562);
+			this.ucReportStaff1.TabIndex = 6;
+			// 
+			// ucReportInspection1
+			// 
+			this.ucReportInspection1.Location = new System.Drawing.Point(0, 0);
+			this.ucReportInspection1.Name = "ucReportInspection1";
+			this.ucReportInspection1.Size = new System.Drawing.Size(856, 562);
+			this.ucReportInspection1.TabIndex = 5;
+			// 
+			// ucReportRequest1
+			// 
+			this.ucReportRequest1.Location = new System.Drawing.Point(0, 0);
+			this.ucReportRequest1.Name = "ucReportRequest1";
+			this.ucReportRequest1.Size = new System.Drawing.Size(856, 562);
+			this.ucReportRequest1.TabIndex = 4;
+			// 
+			// ucReportTutorRequest1
+			// 
+			this.ucReportTutorRequest1.Location = new System.Drawing.Point(0, 0);
+			this.ucReportTutorRequest1.Name = "ucReportTutorRequest1";
+			this.ucReportTutorRequest1.Size = new System.Drawing.Size(856, 562);
+			this.ucReportTutorRequest1.TabIndex = 3;
+			// 
+			// ucReportDepartment1
+			// 
+			this.ucReportDepartment1.Location = new System.Drawing.Point(0, 0);
+			this.ucReportDepartment1.Name = "ucReportDepartment1";
+			this.ucReportDepartment1.Size = new System.Drawing.Size(856, 562);
+			this.ucReportDepartment1.TabIndex = 2;
 			// 
 			// ucReportVenue1
 			// 
@@ -326,6 +379,13 @@
 			this.ucReportEquipment1.Name = "ucReportEquipment1";
 			this.ucReportEquipment1.Size = new System.Drawing.Size(856, 562);
 			this.ucReportEquipment1.TabIndex = 0;
+			// 
+			// ucReportStudent1
+			// 
+			this.ucReportStudent1.Location = new System.Drawing.Point(0, 0);
+			this.ucReportStudent1.Name = "ucReportStudent1";
+			this.ucReportStudent1.Size = new System.Drawing.Size(856, 562);
+			this.ucReportStudent1.TabIndex = 7;
 			// 
 			// ucReport
 			// 
@@ -371,5 +431,11 @@
 		private System.Windows.Forms.Panel panel3;
 		private Reports.ucReportEquipment ucReportEquipment1;
 		private Reports.ucReportVenue ucReportVenue1;
+		private Reports.ucReportDepartment ucReportDepartment1;
+		private Reports.ucReportTutorRequest ucReportTutorRequest1;
+		private Reports.ucReportRequest ucReportRequest1;
+		private Reports.ucReportInspection ucReportInspection1;
+		private ucReportStaff ucReportStaff1;
+		private ucReportStudent ucReportStudent1;
 	}
 }

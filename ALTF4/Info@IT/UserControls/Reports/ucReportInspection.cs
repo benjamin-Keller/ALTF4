@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Info_IT.UserControls.Reports
 {
-	public partial class ucReportVenue : UserControl
+	public partial class ucReportInspection : UserControl
 	{
-		public ucReportVenue()
+		public ucReportInspection()
 		{
 			InitializeComponent();
-		}
-
-		private void UcReportVenue_Load(object sender, EventArgs e)
-		{
-
 		}
 	}
 }
