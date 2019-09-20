@@ -27,5 +27,10 @@ namespace DAL
             VenueCode = venueCode;
             EquipTypeCode = equipTypeCode;
         }
+
+        public EquipmentClass(int code)
+        {
+            EquipmentCode = code;
+        }
     }
 }

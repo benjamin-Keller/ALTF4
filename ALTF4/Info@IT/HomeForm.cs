@@ -533,6 +533,22 @@ namespace Info_IT
 			}
 		}
 
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                BtnLogIn_Click(this, new EventArgs());
+                e.Handled = e.SuppressKeyPress = true;
+            }
+        }
 
-	}
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                BtnLogIn_Click(this, new EventArgs());
+                e.Handled = e.SuppressKeyPress = true;
+            }
+        }
+    }
 }

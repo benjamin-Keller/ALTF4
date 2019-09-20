@@ -78,8 +78,8 @@ namespace Info_IT.UserControls
                     txtDescription.Clear();
                     txtCapacity.Clear();
                     txtDoorNo.Clear();
-                    cmbBuildingBlock.ValueMember = "";
-                    cmbBuilding.ValueMember = "";
+                    cmbBuildingBlock.Text = "";
+                    cmbBuilding.Text = "";
                 }
                 else
                 {
@@ -111,8 +111,8 @@ namespace Info_IT.UserControls
                     txtDescription.Clear();
                     txtCapacity.Clear();
                     txtDoorNo.Clear();
-                    cmbBuildingBlock.ValueMember = "";
-                    cmbBuilding.ValueMember = "";
+                    cmbBuildingBlock.Text = "";
+                    cmbBuilding.Text = "";
                 }
                 else
                 {
@@ -145,8 +145,8 @@ namespace Info_IT.UserControls
             txtCapacity.Text = values.Rows[0].Table.Rows[0].ItemArray[2].ToString();
             txtDoorNo.Text = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
 
-            cmbBuildingBlock.SelectedIndex = int.Parse(values.Rows[0].Table.Rows[0].ItemArray[4].ToString());
-            cmbBuilding.SelectedIndex = int.Parse(values.Rows[0].Table.Rows[0].ItemArray[5].ToString());
+            cmbBuildingBlock.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[4];
+            cmbBuilding.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[5];
 
 
         }

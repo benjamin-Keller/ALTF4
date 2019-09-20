@@ -38,9 +38,29 @@ namespace BLL
             return dal.GetDepartment();
         }
 
+        public int UpdateDepartment(DepartmentClass dep)
+        {
+            return dal.UpdateDepartment(dep);
+        }
+
+        public DataTable SelectedForUpdateDepartment(DepartmentClass DepartmentCode)
+        {
+            return dal.SelectedForUpdateDepartment(DepartmentCode);
+        }
+
         public DataTable GetEquipment()
         {
             return dal.GetEquipment();
+        }
+
+        public int UpdateEquipment(EquipmentClass equipment)
+        {
+            return dal.UpdateEquipment(equipment);
+        }
+
+        public DataTable SelectedForUpdateEquipment(EquipmentClass EquipmentCode)
+        {
+            return dal.SelectedForUpdateEquipment(EquipmentCode);
         }
 
         public DataTable GetEquipmentType()

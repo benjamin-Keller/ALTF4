@@ -10,12 +10,12 @@ namespace DAL
     {
         public static int DepartmentCode { get; set; }
         public string DepartmentName { get; set; }
-        public string Building { get; set; }
+        public int Building { get; set; }
         public string ContactPerson { get; set; }
         public string ContactNumber { get; set; }
         public string Email { get; set; }
 
-        public DepartmentClass(string name, string building, string contactPerson, string contactNumber, string email)
+        public DepartmentClass(string name, int building, string contactPerson, string email, string contactNumber)
         {
             DepartmentName = name;
             Building = building;
@@ -24,7 +24,7 @@ namespace DAL
             Email = email;
         }
 
-        public DepartmentClass(int code, string name, string building, string contactPerson, string contactNumber, string email)
+        public DepartmentClass(int code, string name, int building, string contactPerson,string email, string contactNumber)
         {
             DepartmentCode = code;
             DepartmentName = name;
@@ -32,6 +32,11 @@ namespace DAL
             ContactPerson = contactPerson;
             ContactNumber = contactNumber;
             Email = email;
+        }
+
+        public DepartmentClass(int code)
+        {
+            DepartmentCode = code;
         }
     }
 }

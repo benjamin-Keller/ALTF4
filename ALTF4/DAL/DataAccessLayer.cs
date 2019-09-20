@@ -859,6 +859,130 @@ namespace DAL
             
         }
 
+        public int UpdateDepartment(DepartmentClass dep)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
 
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_UpdateDepart", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@DepartmentCode", DAL.DepartmentClass.DepartmentCode);
+                dbCmd.Parameters.AddWithValue("@DepartmentName", dep.DepartmentName);
+                dbCmd.Parameters.AddWithValue("@BuildingID", dep.Building);
+                dbCmd.Parameters.AddWithValue("@ContactPerson", dep.ContactPerson);
+                dbCmd.Parameters.AddWithValue("@Email", dep.Email);
+                dbCmd.Parameters.AddWithValue("@ContactNumber", dep.ContactNumber);
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public DataTable SelectedForUpdateDepartment(DepartmentClass dep)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+
+
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateDepartment", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@DepartmentCode", DAL.DepartmentClass.DepartmentCode);
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public int UpdateEquipment(EquipmentClass equipment)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_UpdateEquip", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@EquipmentCode", DAL.EquipmentClass.EquipmentCode);
+                dbCmd.Parameters.AddWithValue("@EquipmentDescription", equipment.EquipmentDescription);
+                dbCmd.Parameters.AddWithValue("@VenueCode", equipment.VenueCode);
+                dbCmd.Parameters.AddWithValue("@EquipTypeCode", equipment.EquipTypeCode);
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public DataTable SelectedForUpdateEquipment(EquipmentClass equipment)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+
+
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateEquipment", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@EquipmentCode", DAL.EquipmentClass.EquipmentCode);
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
     }
 }

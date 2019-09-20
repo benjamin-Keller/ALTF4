@@ -81,8 +81,8 @@ namespace Info_IT.UserControls
                 if (x > 0)
                 {
                     txtDescription.Clear();
-                    cmbVenue.ValueMember = "";
-                    cmbEquipTypeCode.ValueMember = "";
+                    cmbVenue.Text = "";
+                    cmbEquipTypeCode.Text = "";
                 }
                 else
                 {
@@ -101,6 +101,32 @@ namespace Info_IT.UserControls
 		{
 
             dgvEquipment.DataSource = bll.GetEquipment();
+            dgvEquipment.BackgroundColor = Color.White;
+
+            try
+            {
+
+                //Error for input string not found
+                DAL.EquipmentClass equipment = new DAL.EquipmentClass(DAL.EquipmentClass.EquipmentCode, txtDescription.Text, int.Parse(cmbVenue.SelectedValue.ToString()), int.Parse(cmbEquipTypeCode.SelectedValue.ToString()));
+                int x = bll.UpdateEquipment(equipment);
+
+                if (x > 0)
+                {
+                    txtDescription.Clear();
+                    cmbVenue.Text = "";
+                    cmbEquipTypeCode.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Please input valid data.");
+                }
+            }
+            catch (Exception b)
+            {
+                MessageBox.Show("Please input valid data.");
+            }
+
+            dgvEquipment.DataSource = bll.GetEquipment();
         }
 
 		private void BtnViewList_Click(object sender, EventArgs e)
@@ -113,5 +139,17 @@ namespace Info_IT.UserControls
 		{
 			ucEquipmentType1.Show();
 		}
-	}
+
+        private void dgvEquipment_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DAL.EquipmentClass equipmentClass = new DAL.EquipmentClass(int.Parse(dgvEquipment.SelectedRows[0].Cells[0].Value.ToString()));
+
+            var values = bll.SelectedForUpdateEquipment(equipmentClass);
+
+            txtDescription.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
+
+            cmbVenue.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2];
+            cmbEquipTypeCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[3];
+        }
+    }
 }
