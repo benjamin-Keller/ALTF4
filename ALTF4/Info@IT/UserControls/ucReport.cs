@@ -27,16 +27,18 @@ namespace Info_IT.UserControls
 			btnEquipmentReport.ForeColor = Color.Black;
 			btnVenueReport.BackColor = Color.FromName("ControlDark");
 			btnVenueReport.ForeColor = Color.Black;
-			ucReportDepartment1.BackColor = Color.FromName("ControlDark");
-			ucReportDepartment1.ForeColor = Color.Black;
-			ucReportRequest1.BackColor = Color.FromName("ControlDark");
-			ucReportRequest1.ForeColor = Color.Black;
-			ucReportTutorRequest1.BackColor = Color.FromName("ControlDark");
-			ucReportTutorRequest1.ForeColor = Color.Black;
-			ucReportInspection1.BackColor = Color.FromName("ControlDark");
-			ucReportInspection1.ForeColor = Color.Black;
-			ucReportStaff1.BackColor = Color.FromName("ControlDark");
-			ucReportStaff1.ForeColor = Color.Black;
+			btnDepartmentReport.BackColor = Color.FromName("ControlDark");
+			btnDepartmentReport.ForeColor = Color.Black;
+			btnRequestReport.BackColor = Color.FromName("ControlDark");
+			btnRequestReport.ForeColor = Color.Black;
+			btnTutorRequestsReport.BackColor = Color.FromName("ControlDark");
+			btnTutorRequestsReport.ForeColor = Color.Black;
+			btnInspectionReport.BackColor = Color.FromName("ControlDark");
+			btnInspectionReport.ForeColor = Color.Black;
+			btnStaffReport.BackColor = Color.FromName("ControlDark");
+			btnStaffReport.ForeColor = Color.Black;
+			btnStudentReport.BackColor = Color.FromName("ControlDark");
+			btnStudentReport.ForeColor = Color.Black;
 		}
 
 		private void HideAll()
@@ -48,6 +50,7 @@ namespace Info_IT.UserControls
 			ucReportTutorRequest1.Hide();
 			ucReportInspection1.Hide();
 			ucReportStaff1.Hide();
+			ucReportStudent1.Hide();
 		}
 
 		private void BtnEquipmentReport_Click(object sender, EventArgs e)
@@ -122,7 +125,12 @@ namespace Info_IT.UserControls
 
 		private void BtnStudentReport_Click(object sender, EventArgs e)
 		{
+			HideAll();
+			ucReportStudent1.Show();
 
+			InactiveButtons();
+			ucReportStudent1.BackColor = Color.FromName("ControlDarkDark");
+			ucReportStudent1.ForeColor = Color.White;
 		}
 	}
 }
