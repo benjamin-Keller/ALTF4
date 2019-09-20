@@ -16,5 +16,10 @@ namespace Info_IT.UserControls
 		{
 			InitializeComponent();
 		}
+
+		private void UcReportStaff_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

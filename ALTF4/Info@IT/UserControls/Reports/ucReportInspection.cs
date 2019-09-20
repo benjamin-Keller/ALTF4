@@ -16,5 +16,10 @@ namespace Info_IT.UserControls.Reports
 		{
 			InitializeComponent();
 		}
+
+		private void UcReportInspection_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

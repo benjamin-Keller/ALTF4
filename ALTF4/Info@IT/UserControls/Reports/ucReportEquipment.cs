@@ -17,11 +17,6 @@ namespace Info_IT.UserControls.Reports
 			InitializeComponent();
 		}
 
-		private void BtnCloseDetails_Click(object sender, EventArgs e)
-		{
-			this.Hide();
-		}
-
 		private void UcReportEquipment_Load(object sender, EventArgs e)
 		{
 
