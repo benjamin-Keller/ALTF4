@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Info_IT.UserControls.Reports
 {
-	public partial class ucReportVenue : UserControl
+	public partial class ucReportDepartment : UserControl
 	{
-		public ucReportVenue()
+		public ucReportDepartment()
 		{
 			InitializeComponent();
 		}
 
-		private void UcReportVenue_Load(object sender, EventArgs e)
+		private void UcReportDepartment_Load(object sender, EventArgs e)
 		{
 
 		}
