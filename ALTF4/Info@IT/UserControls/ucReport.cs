@@ -79,8 +79,8 @@ namespace Info_IT.UserControls
 			ucReportDepartment1.Show();
 
 			InactiveButtons();
-			ucReportDepartment1.BackColor = Color.FromName("ControlDarkDark");
-			ucReportDepartment1.ForeColor = Color.White;
+			btnDepartmentReport.BackColor = Color.FromName("ControlDarkDark");
+			btnDepartmentReport.ForeColor = Color.White;
 		}
 
 		private void BtnRequestReport_Click(object sender, EventArgs e)
@@ -89,8 +89,8 @@ namespace Info_IT.UserControls
 			ucReportRequest1.Show();
 
 			InactiveButtons();
-			ucReportRequest1.BackColor = Color.FromName("ControlDarkDark");
-			ucReportRequest1.ForeColor = Color.White;
+			btnRequestReport.BackColor = Color.FromName("ControlDarkDark");
+			btnRequestReport.ForeColor = Color.White;
 		}
 
 		private void BtnTutorRequestsReport_Click(object sender, EventArgs e)
@@ -99,8 +99,8 @@ namespace Info_IT.UserControls
 			ucReportTutorRequest1.Show();
 
 			InactiveButtons();
-			ucReportTutorRequest1.BackColor = Color.FromName("ControlDarkDark");
-			ucReportTutorRequest1.ForeColor = Color.White;
+			btnTutorRequestsReport.BackColor = Color.FromName("ControlDarkDark");
+			btnTutorRequestsReport.ForeColor = Color.White;
 		}
 
 		private void BtnInspectionReport_Click(object sender, EventArgs e)
@@ -109,8 +109,8 @@ namespace Info_IT.UserControls
 			ucReportInspection1.Show();
 
 			InactiveButtons();
-			ucReportInspection1.BackColor = Color.FromName("ControlDarkDark");
-			ucReportInspection1.ForeColor = Color.White;
+			btnInspectionReport.BackColor = Color.FromName("ControlDarkDark");
+			btnInspectionReport.ForeColor = Color.White;
 		}
 
 		private void BtnStaffReport_Click(object sender, EventArgs e)
@@ -119,8 +119,8 @@ namespace Info_IT.UserControls
 			ucReportStaff1.Show();
 
 			InactiveButtons();
-			ucReportStaff1.BackColor = Color.FromName("ControlDarkDark");
-			ucReportStaff1.ForeColor = Color.White;
+			btnStaffReport.BackColor = Color.FromName("ControlDarkDark");
+			btnStaffReport.ForeColor = Color.White;
 		}
 
 		private void BtnStudentReport_Click(object sender, EventArgs e)
@@ -129,8 +129,8 @@ namespace Info_IT.UserControls
 			ucReportStudent1.Show();
 
 			InactiveButtons();
-			ucReportStudent1.BackColor = Color.FromName("ControlDarkDark");
-			ucReportStudent1.ForeColor = Color.White;
+			btnStudentReport.BackColor = Color.FromName("ControlDarkDark");
+			btnStudentReport.ForeColor = Color.White;
 		}
 	}
 }
