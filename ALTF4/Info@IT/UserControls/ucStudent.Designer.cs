@@ -29,8 +29,8 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.label5 = new System.Windows.Forms.Label();
 			this.txtName = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
@@ -65,7 +65,7 @@
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
 			this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label5.Location = new System.Drawing.Point(583, 16);
+			this.label5.Location = new System.Drawing.Point(564, 17);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(99, 17);
 			this.label5.TabIndex = 8;
@@ -73,9 +73,9 @@
 			// 
 			// txtName
 			// 
-			this.txtName.Location = new System.Drawing.Point(200, 35);
+			this.txtName.Location = new System.Drawing.Point(199, 36);
 			this.txtName.Name = "txtName";
-			this.txtName.Size = new System.Drawing.Size(187, 23);
+			this.txtName.Size = new System.Drawing.Size(178, 23);
 			this.txtName.TabIndex = 3;
 			// 
 			// label1
@@ -83,7 +83,7 @@
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
 			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label1.Location = new System.Drawing.Point(197, 16);
+			this.label1.Location = new System.Drawing.Point(196, 17);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(48, 17);
 			this.label1.TabIndex = 0;
@@ -110,16 +110,16 @@
 			// 
 			// txtEmailAddress
 			// 
-			this.txtEmailAddress.Location = new System.Drawing.Point(586, 35);
+			this.txtEmailAddress.Location = new System.Drawing.Point(567, 36);
 			this.txtEmailAddress.Name = "txtEmailAddress";
-			this.txtEmailAddress.Size = new System.Drawing.Size(187, 23);
+			this.txtEmailAddress.Size = new System.Drawing.Size(178, 23);
 			this.txtEmailAddress.TabIndex = 10;
 			// 
 			// txtSurname
 			// 
-			this.txtSurname.Location = new System.Drawing.Point(393, 35);
+			this.txtSurname.Location = new System.Drawing.Point(383, 36);
 			this.txtSurname.Name = "txtSurname";
-			this.txtSurname.Size = new System.Drawing.Size(187, 23);
+			this.txtSurname.Size = new System.Drawing.Size(178, 23);
 			this.txtSurname.TabIndex = 9;
 			// 
 			// label3
@@ -127,7 +127,7 @@
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
 			this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label3.Location = new System.Drawing.Point(390, 16);
+			this.label3.Location = new System.Drawing.Point(380, 17);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(66, 17);
 			this.label3.TabIndex = 2;
@@ -136,20 +136,20 @@
 			// dgvStudent
 			// 
 			this.dgvStudent.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvStudent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvStudent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
 			this.dgvStudent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvStudent.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvStudent.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvStudent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvStudent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvStudent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
 			this.dgvStudent.ColumnHeadersHeight = 50;
 			this.dgvStudent.DoubleBuffered = true;
 			this.dgvStudent.EnableHeadersVisualStyles = false;
@@ -296,9 +296,9 @@
 			// 
 			// txtStudentNumber
 			// 
-			this.txtStudentNumber.Location = new System.Drawing.Point(7, 35);
+			this.txtStudentNumber.Location = new System.Drawing.Point(15, 36);
 			this.txtStudentNumber.Name = "txtStudentNumber";
-			this.txtStudentNumber.Size = new System.Drawing.Size(187, 23);
+			this.txtStudentNumber.Size = new System.Drawing.Size(178, 23);
 			this.txtStudentNumber.TabIndex = 12;
 			// 
 			// label2
@@ -306,7 +306,7 @@
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
 			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label2.Location = new System.Drawing.Point(4, 16);
+			this.label2.Location = new System.Drawing.Point(12, 17);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(115, 17);
 			this.label2.TabIndex = 11;
