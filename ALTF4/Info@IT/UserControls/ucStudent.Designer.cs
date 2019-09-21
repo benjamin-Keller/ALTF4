@@ -29,12 +29,14 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.label5 = new System.Windows.Forms.Label();
 			this.txtName = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.txtStudentNumber = new System.Windows.Forms.TextBox();
+			this.label2 = new System.Windows.Forms.Label();
 			this.txtEmailAddress = new System.Windows.Forms.TextBox();
 			this.txtSurname = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
@@ -50,8 +52,6 @@
 			this.tmrManage = new System.Windows.Forms.Timer(this.components);
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.tmrView = new System.Windows.Forms.Timer(this.components);
-			this.txtStudentNumber = new System.Windows.Forms.TextBox();
-			this.label2 = new System.Windows.Forms.Label();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
 			this.panel1.SuspendLayout();
@@ -108,6 +108,24 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Information";
 			// 
+			// txtStudentNumber
+			// 
+			this.txtStudentNumber.Location = new System.Drawing.Point(15, 36);
+			this.txtStudentNumber.Name = "txtStudentNumber";
+			this.txtStudentNumber.Size = new System.Drawing.Size(178, 23);
+			this.txtStudentNumber.TabIndex = 12;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label2.Location = new System.Drawing.Point(12, 17);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(115, 17);
+			this.label2.TabIndex = 11;
+			this.label2.Text = "Student Number:";
+			// 
 			// txtEmailAddress
 			// 
 			this.txtEmailAddress.Location = new System.Drawing.Point(567, 36);
@@ -136,20 +154,20 @@
 			// dgvStudent
 			// 
 			this.dgvStudent.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvStudent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvStudent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvStudent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvStudent.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvStudent.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvStudent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvStudent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvStudent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvStudent.ColumnHeadersHeight = 50;
 			this.dgvStudent.DoubleBuffered = true;
 			this.dgvStudent.EnableHeadersVisualStyles = false;
@@ -158,6 +176,7 @@
 			this.dgvStudent.Location = new System.Drawing.Point(0, -1);
 			this.dgvStudent.Name = "dgvStudent";
 			this.dgvStudent.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			this.dgvStudent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvStudent.Size = new System.Drawing.Size(782, 429);
 			this.dgvStudent.TabIndex = 1;
 			// 
@@ -293,24 +312,6 @@
 			// tmrView
 			// 
 			this.tmrView.Tick += new System.EventHandler(this.TmrView_Tick);
-			// 
-			// txtStudentNumber
-			// 
-			this.txtStudentNumber.Location = new System.Drawing.Point(15, 36);
-			this.txtStudentNumber.Name = "txtStudentNumber";
-			this.txtStudentNumber.Size = new System.Drawing.Size(178, 23);
-			this.txtStudentNumber.TabIndex = 12;
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label2.Location = new System.Drawing.Point(12, 17);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(115, 17);
-			this.label2.TabIndex = 11;
-			this.label2.Text = "Student Number:";
 			// 
 			// ucStudent
 			// 

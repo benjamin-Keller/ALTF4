@@ -44,6 +44,7 @@
 			this.pnlManage = new System.Windows.Forms.Panel();
 			this.txtEmailAddress = new System.Windows.Forms.TextBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.label8 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dgvUser = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.pnlView.SuspendLayout();
 			this.pnlManage.SuspendLayout();
 			this.groupBox1.SuspendLayout();
@@ -234,6 +234,14 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Information";
 			// 
+			// comboBox1
+			// 
+			this.comboBox1.FormattingEnabled = true;
+			this.comboBox1.Location = new System.Drawing.Point(401, 83);
+			this.comboBox1.Name = "comboBox1";
+			this.comboBox1.Size = new System.Drawing.Size(187, 23);
+			this.comboBox1.TabIndex = 2;
+			// 
 			// textBox1
 			// 
 			this.textBox1.Location = new System.Drawing.Point(594, 83);
@@ -395,16 +403,9 @@
 			this.dgvUser.Location = new System.Drawing.Point(0, -1);
 			this.dgvUser.Name = "dgvUser";
 			this.dgvUser.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvUser.Size = new System.Drawing.Size(796, 378);
 			this.dgvUser.TabIndex = 1;
-			// 
-			// comboBox1
-			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(401, 83);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(187, 23);
-			this.comboBox1.TabIndex = 2;
 			// 
 			// ucUser
 			// 

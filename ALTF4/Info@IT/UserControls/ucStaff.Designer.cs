@@ -44,20 +44,20 @@
 			this.tmrView = new System.Windows.Forms.Timer(this.components);
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.label1 = new System.Windows.Forms.Label();
-			this.txtStaffNumber = new System.Windows.Forms.TextBox();
-			this.txtName = new System.Windows.Forms.TextBox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.txtSurname = new System.Windows.Forms.TextBox();
-			this.label3 = new System.Windows.Forms.Label();
-			this.txtEmailAddress = new System.Windows.Forms.TextBox();
-			this.label4 = new System.Windows.Forms.Label();
-			this.txtContactNo = new System.Windows.Forms.TextBox();
-			this.label5 = new System.Windows.Forms.Label();
-			this.label6 = new System.Windows.Forms.Label();
-			this.cmbStaffType = new System.Windows.Forms.ComboBox();
 			this.cmbDepartmentCode = new System.Windows.Forms.ComboBox();
 			this.label7 = new System.Windows.Forms.Label();
+			this.cmbStaffType = new System.Windows.Forms.ComboBox();
+			this.label6 = new System.Windows.Forms.Label();
+			this.txtContactNo = new System.Windows.Forms.TextBox();
+			this.label5 = new System.Windows.Forms.Label();
+			this.txtEmailAddress = new System.Windows.Forms.TextBox();
+			this.label4 = new System.Windows.Forms.Label();
+			this.txtSurname = new System.Windows.Forms.TextBox();
+			this.label3 = new System.Windows.Forms.Label();
+			this.txtName = new System.Windows.Forms.TextBox();
+			this.label2 = new System.Windows.Forms.Label();
+			this.txtStaffNumber = new System.Windows.Forms.TextBox();
+			this.label1 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
 			this.panel1.SuspendLayout();
 			this.pnlView.SuspendLayout();
@@ -91,6 +91,7 @@
 			this.dgvStaff.Location = new System.Drawing.Point(0, -1);
 			this.dgvStaff.Name = "dgvStaff";
 			this.dgvStaff.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			this.dgvStaff.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvStaff.Size = new System.Drawing.Size(782, 388);
 			this.dgvStaff.TabIndex = 1;
 			// 
@@ -252,77 +253,43 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Information";
 			// 
-			// label1
+			// cmbDepartmentCode
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label1.Location = new System.Drawing.Point(12, 19);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(96, 17);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Staff Number:";
+			this.cmbDepartmentCode.FormattingEnabled = true;
+			this.cmbDepartmentCode.Location = new System.Drawing.Point(147, 77);
+			this.cmbDepartmentCode.Name = "cmbDepartmentCode";
+			this.cmbDepartmentCode.Size = new System.Drawing.Size(126, 23);
+			this.cmbDepartmentCode.TabIndex = 45;
 			// 
-			// txtStaffNumber
+			// label7
 			// 
-			this.txtStaffNumber.Location = new System.Drawing.Point(15, 36);
-			this.txtStaffNumber.Name = "txtStaffNumber";
-			this.txtStaffNumber.Size = new System.Drawing.Size(126, 23);
-			this.txtStaffNumber.TabIndex = 33;
+			this.label7.AutoSize = true;
+			this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label7.Location = new System.Drawing.Point(144, 60);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(121, 17);
+			this.label7.TabIndex = 44;
+			this.label7.Text = "Department Code:";
 			// 
-			// txtName
+			// cmbStaffType
 			// 
-			this.txtName.Location = new System.Drawing.Point(147, 36);
-			this.txtName.Name = "txtName";
-			this.txtName.Size = new System.Drawing.Size(126, 23);
-			this.txtName.TabIndex = 35;
+			this.cmbStaffType.FormattingEnabled = true;
+			this.cmbStaffType.Location = new System.Drawing.Point(15, 77);
+			this.cmbStaffType.Name = "cmbStaffType";
+			this.cmbStaffType.Size = new System.Drawing.Size(126, 23);
+			this.cmbStaffType.TabIndex = 43;
 			// 
-			// label2
+			// label6
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label2.Location = new System.Drawing.Point(144, 19);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(48, 17);
-			this.label2.TabIndex = 34;
-			this.label2.Text = "Name:";
-			// 
-			// txtSurname
-			// 
-			this.txtSurname.Location = new System.Drawing.Point(279, 36);
-			this.txtSurname.Name = "txtSurname";
-			this.txtSurname.Size = new System.Drawing.Size(126, 23);
-			this.txtSurname.TabIndex = 37;
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label3.Location = new System.Drawing.Point(276, 19);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(66, 17);
-			this.label3.TabIndex = 36;
-			this.label3.Text = "Surname:";
-			// 
-			// txtEmailAddress
-			// 
-			this.txtEmailAddress.Location = new System.Drawing.Point(411, 36);
-			this.txtEmailAddress.Name = "txtEmailAddress";
-			this.txtEmailAddress.Size = new System.Drawing.Size(126, 23);
-			this.txtEmailAddress.TabIndex = 39;
-			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label4.Location = new System.Drawing.Point(408, 19);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(99, 17);
-			this.label4.TabIndex = 38;
-			this.label4.Text = "Email Address;";
+			this.label6.AutoSize = true;
+			this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label6.Location = new System.Drawing.Point(12, 60);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(74, 17);
+			this.label6.TabIndex = 42;
+			this.label6.Text = "Staff Type:";
 			// 
 			// txtContactNo
 			// 
@@ -342,43 +309,77 @@
 			this.label5.TabIndex = 40;
 			this.label5.Text = "Contact Number:";
 			// 
-			// label6
+			// txtEmailAddress
 			// 
-			this.label6.AutoSize = true;
-			this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label6.Location = new System.Drawing.Point(12, 60);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(74, 17);
-			this.label6.TabIndex = 42;
-			this.label6.Text = "Staff Type:";
+			this.txtEmailAddress.Location = new System.Drawing.Point(411, 36);
+			this.txtEmailAddress.Name = "txtEmailAddress";
+			this.txtEmailAddress.Size = new System.Drawing.Size(126, 23);
+			this.txtEmailAddress.TabIndex = 39;
 			// 
-			// cmbStaffType
+			// label4
 			// 
-			this.cmbStaffType.FormattingEnabled = true;
-			this.cmbStaffType.Location = new System.Drawing.Point(15, 77);
-			this.cmbStaffType.Name = "cmbStaffType";
-			this.cmbStaffType.Size = new System.Drawing.Size(126, 23);
-			this.cmbStaffType.TabIndex = 43;
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label4.Location = new System.Drawing.Point(408, 19);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(99, 17);
+			this.label4.TabIndex = 38;
+			this.label4.Text = "Email Address;";
 			// 
-			// cmbDepartmentCode
+			// txtSurname
 			// 
-			this.cmbDepartmentCode.FormattingEnabled = true;
-			this.cmbDepartmentCode.Location = new System.Drawing.Point(147, 77);
-			this.cmbDepartmentCode.Name = "cmbDepartmentCode";
-			this.cmbDepartmentCode.Size = new System.Drawing.Size(126, 23);
-			this.cmbDepartmentCode.TabIndex = 45;
+			this.txtSurname.Location = new System.Drawing.Point(279, 36);
+			this.txtSurname.Name = "txtSurname";
+			this.txtSurname.Size = new System.Drawing.Size(126, 23);
+			this.txtSurname.TabIndex = 37;
 			// 
-			// label7
+			// label3
 			// 
-			this.label7.AutoSize = true;
-			this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label7.Location = new System.Drawing.Point(144, 60);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(121, 17);
-			this.label7.TabIndex = 44;
-			this.label7.Text = "Department Code:";
+			this.label3.AutoSize = true;
+			this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label3.Location = new System.Drawing.Point(276, 19);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(66, 17);
+			this.label3.TabIndex = 36;
+			this.label3.Text = "Surname:";
+			// 
+			// txtName
+			// 
+			this.txtName.Location = new System.Drawing.Point(147, 36);
+			this.txtName.Name = "txtName";
+			this.txtName.Size = new System.Drawing.Size(126, 23);
+			this.txtName.TabIndex = 35;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label2.Location = new System.Drawing.Point(144, 19);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(48, 17);
+			this.label2.TabIndex = 34;
+			this.label2.Text = "Name:";
+			// 
+			// txtStaffNumber
+			// 
+			this.txtStaffNumber.Location = new System.Drawing.Point(15, 36);
+			this.txtStaffNumber.Name = "txtStaffNumber";
+			this.txtStaffNumber.Size = new System.Drawing.Size(126, 23);
+			this.txtStaffNumber.TabIndex = 33;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label1.Location = new System.Drawing.Point(12, 19);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(96, 17);
+			this.label1.TabIndex = 0;
+			this.label1.Text = "Staff Number:";
 			// 
 			// ucStaff
 			// 
