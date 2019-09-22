@@ -190,9 +190,6 @@ namespace BLL
             return dal.SelectForUpdateStaff(staffed);
         }
         
-
-        
-
         public int AddStudent(StudentClass student)
         {
             return dal.AddStudent(student);

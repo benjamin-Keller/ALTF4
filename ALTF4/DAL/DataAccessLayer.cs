@@ -600,7 +600,7 @@ namespace DAL
                 dbCmd = new SqlCommand("dbo.sp_AddStaff", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
-                dbCmd.Parameters.AddWithValue("@StaffNumber", StaffClass.StaffNumber);
+                dbCmd.Parameters.AddWithValue("@StaffNumber",staff.StaffNumber);
                 dbCmd.Parameters.AddWithValue("@FirstName", staff.Name);
                 dbCmd.Parameters.AddWithValue("@LastName", staff.Surname);
                 dbCmd.Parameters.AddWithValue("@Email", staff.EmailAddress);
@@ -640,7 +640,7 @@ namespace DAL
 
 
                 dbCmd.Parameters.AddWithValue("@StaffCode", DAL.StaffClass.StaffCode);
-                dbCmd.Parameters.AddWithValue("@StaffNumber", StaffClass.StaffNumber);
+                dbCmd.Parameters.AddWithValue("@StaffNumber", staff.StaffNumber);
                 dbCmd.Parameters.AddWithValue("@FirstName", staff.Name);
                 dbCmd.Parameters.AddWithValue("@LastName", staff.Surname);
                 dbCmd.Parameters.AddWithValue("@Email", staff.EmailAddress);
