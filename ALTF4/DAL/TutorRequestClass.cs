@@ -25,5 +25,10 @@ namespace DAL
             VenueCode = venueCode;
 
         }
+
+        public TutorRequestClass (int requestCode)
+        {
+            RequestCode = requestCode;
+        }
     }
 }

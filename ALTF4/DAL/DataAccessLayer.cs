@@ -1230,6 +1230,7 @@ namespace DAL
 
             dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateTutorRequest", dbConn);
             dbCmd.CommandType = CommandType.StoredProcedure;
+
             dbCmd.Parameters.AddWithValue("@RequestCode", DAL.TutorRequestClass.RequestCode);
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
 
