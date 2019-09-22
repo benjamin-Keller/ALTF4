@@ -623,6 +623,76 @@ namespace DAL
             return x;
         }
 
+        public int UpdateStaff(StaffClass staff)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_UpdateStaff", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+
+                dbCmd.Parameters.AddWithValue("@StaffCode", DAL.StaffClass.StaffCode);
+                dbCmd.Parameters.AddWithValue("@StaffNumber", StaffClass.StaffNumber);
+                dbCmd.Parameters.AddWithValue("@FirstName", staff.Name);
+                dbCmd.Parameters.AddWithValue("@LastName", staff.Surname);
+                dbCmd.Parameters.AddWithValue("@Email", staff.EmailAddress);
+                dbCmd.Parameters.AddWithValue("@ContactNumber", staff.ContactNumber);
+                dbCmd.Parameters.AddWithValue("@StaffType", staff.StaffType);
+                dbCmd.Parameters.AddWithValue("@DepartmentCode", staff.DepartmentCode);
+
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public DataTable SelectForUpdateStaff(StaffClass staffed)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateStaff", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@StaffCode", DAL.StaffClass.StaffCode);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+
+        }
+
+
+
         public int AddStudent(StudentClass student)
         {
             try
@@ -657,6 +727,8 @@ namespace DAL
             catch { }
             return x;
         }
+
+        
 
         public int AddTaskType(TaskTypeClass taskType)
         {
@@ -704,6 +776,7 @@ namespace DAL
 
                 dbCmd = new SqlCommand("dbo.sp_AddTutorRequest", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
+
                 dbCmd.Parameters.AddWithValue("@RequestCode", TutorRequestClass.RequestCode);
                 dbCmd.Parameters.AddWithValue("@TutorRequestDate", tutorRequest.Date);
                 dbCmd.Parameters.AddWithValue("@StartTime", tutorRequest.StartTime.ToShortTimeString());
@@ -790,7 +863,67 @@ namespace DAL
 
         }
 
+        public int UpdateStudent(StudentClass studentClass)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+            int x;
 
+            try
+            {
+                dbCmd = new SqlCommand("dbo.sp_UpdateStudent", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@StudentCode", DAL.StudentClass.StudentCode);
+                dbCmd.Parameters.AddWithValue("@FirstName", studentClass.Name);
+                dbCmd.Parameters.AddWithValue("@LastName", studentClass.Surname);
+                dbCmd.Parameters.AddWithValue("@Email", studentClass.EmailAddress);
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public DataTable SelectedForUpdateStudent(StudentClass classes)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateStudent", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@StudentCode", DAL.StudentClass.StudentCode);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+
+
+        }
         public int UpdateVenue(VenueClass venue)
         {
             try
@@ -895,6 +1028,8 @@ namespace DAL
             return x;
         }
 
+        
+
         public DataTable SelectedForUpdateDepartment(DepartmentClass dep)
         {
             try
@@ -957,6 +1092,8 @@ namespace DAL
             return x;
         }
 
+       
+
         public DataTable SelectedForUpdateEquipment(EquipmentClass equipment)
         {
             try
@@ -964,9 +1101,6 @@ namespace DAL
                 dbConn.Open();
             }
             catch { }
-
-
-
             dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateEquipment", dbConn);
             dbCmd.CommandType = CommandType.StoredProcedure;
 
@@ -983,6 +1117,133 @@ namespace DAL
             catch { }
 
             return dt;
+        }
+
+        public int UpdateTaskType(TaskTypeClass taskType)
+        {
+
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+
+            try
+            {
+                dbCmd = new SqlCommand("dbo.sp_UpdateTaskType", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@TaskTypeCode", DAL.TaskTypeClass.TaskTypeCode);
+                dbCmd.Parameters.AddWithValue("@Name", taskType.Name);
+                x = dbCmd.ExecuteNonQuery();
+            }
+
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return x;
+
+        }
+
+        
+
+        public DataTable SelectedForUpdateTaskType(TaskTypeClass task)
+        {
+            try
+            {
+                dbConn.Open();
+
+            }
+            catch
+            {
+
+            }
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateTaskType", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@TaskTypeCode", DAL.TaskTypeClass.TaskTypeCode);
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+
+        }
+        public int UpdateTutorRequest(TutorRequestClass tutor)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+            int x;
+            try
+            {
+                dbCmd = new SqlCommand("dbo.sp_UpdateTutorRequest", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@RequestCode", DAL.TutorRequestClass.RequestCode);
+                dbCmd.Parameters.AddWithValue("@TutorRequestDate", tutor.Date);
+                dbCmd.Parameters.AddWithValue("@StartTime", tutor.StartTime);
+                dbCmd.Parameters.AddWithValue("@EndTime", tutor.EndTime);
+                dbCmd.Parameters.AddWithValue("@ModuleCode", tutor.ModuleCode);
+                dbCmd.Parameters.AddWithValue("@VenueCode", tutor.VenueCode);
+
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return x;
+        }
+        public DataTable SelectedForUpdateTutorRequest(TutorRequestClass request)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateTutorRequest", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd.Parameters.AddWithValue("@RequestCode", DAL.TutorRequestClass.RequestCode);
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+
         }
     }
 }

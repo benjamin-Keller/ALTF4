@@ -33,6 +33,11 @@ namespace BLL
             return dal.SelectedForUpdateVenue(VenueCode);
         }
 
+        public DataTable  SelectedForUpdateTaskType( TaskTypeClass taskTypeClass)
+        {
+            return dal.SelectedForUpdateTaskType(taskTypeClass);
+        }
+
         public DataTable GetDepartment()
         {
             return dal.GetDepartment();
@@ -43,6 +48,12 @@ namespace BLL
             return dal.UpdateDepartment(dep);
         }
 
+       
+
+        public int UpdateTaskType (TaskTypeClass tasky)
+        {
+            return dal.UpdateTaskType(tasky);
+        }
         public DataTable SelectedForUpdateDepartment(DepartmentClass DepartmentCode)
         {
             return dal.SelectedForUpdateDepartment(DepartmentCode);
@@ -93,6 +104,14 @@ namespace BLL
             return dal.GetStudent();
         }
 
+        public int UpdateStudent(StudentClass ST)
+        {
+            return dal.UpdateStudent(ST);
+        }
+        public DataTable SelectedForUpdateStudent(StudentClass CN)
+        {
+            return dal.SelectedForUpdateStudent(CN);
+        }
         public DataTable GetTasktype()
         {
             return dal.GetTasktype();
@@ -101,6 +120,15 @@ namespace BLL
         public DataTable GetTutorRequest()
         {
             return dal.GetTutorRequest();
+        }
+        public int UpdateTutorRequest(TutorRequestClass tutorRequestClass)
+        {
+            return dal.UpdateTutorRequest(tutorRequestClass);
+        }
+        
+        public DataTable SelectedForUpdateTutorRequest(TutorRequestClass requestClass)
+        {
+            return dal.SelectedForUpdateTutorRequest(requestClass);
         }
 
         public DataTable LoadCMBBuilding()
@@ -151,6 +179,19 @@ namespace BLL
         {
             return dal.AddStaff(staff);
         }
+
+        public int UpdateStaff(StaffClass CLASS)
+        {
+            return dal.UpdateStaff(CLASS);
+        }
+
+        public DataTable SelectForUpdateStaff(StaffClass staffed)
+        {
+            return dal.SelectForUpdateStaff(staffed);
+        }
+        
+
+        
 
         public int AddStudent(StudentClass student)
         {

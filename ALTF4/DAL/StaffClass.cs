@@ -8,6 +8,7 @@ namespace DAL
 {
     public class StaffClass
     {
+        public static int StaffCode { get; set; }
         public static int StaffNumber { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -25,6 +26,23 @@ namespace DAL
             ContactNumber = contactNumber;
             StaffType = staffType;
             DepartmentCode = departmentCode;
+        }
+
+        public StaffClass( int code , int staffNumber, string name, string surname, string emailAddress, int contactNumber, string staffType, int departmentCode)
+        {
+            StaffCode = code;
+            StaffNumber = staffNumber;
+            Name = name;
+            Surname = surname;
+            EmailAddress = emailAddress;
+            ContactNumber = contactNumber;
+            StaffType = staffType;
+            DepartmentCode = departmentCode;
+        }
+
+        public StaffClass ( int code)
+        {
+            StaffCode = code;
         }
     }
 }

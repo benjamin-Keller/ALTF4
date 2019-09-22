@@ -22,5 +22,19 @@ namespace DAL
             Surname = surname;
             EmailAddress = emailAddress;
         }
+
+        public StudentClass(int code, string studentNumber, string name, string surname, string emailAddress)
+        {
+            StudentCode = code;
+            StudentNumber = studentNumber;
+            Name = name;
+            Surname = surname;
+            EmailAddress = emailAddress;
+        }
+
+        public StudentClass( int code)
+        {
+            StudentCode = code;
+        }
     }
 }

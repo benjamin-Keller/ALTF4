@@ -111,8 +111,35 @@ namespace Info_IT.UserControls
 
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
 		{
+            dgvTutorRequest.DataSource = bll.GetTutorRequest();
+            dgvTutorRequest.BackgroundColor = Color.White;
 
-		}
+            try
+            {
+                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), Convert.ToDateTime(cmbStartTime.Text), Convert.ToDateTime(cmbEndTime.Text), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()));
+
+                int x = bll.UpdateTutorRequest(tutorRequest);
+
+                if (x > 0)
+                {
+                    cmbStartTime.ResetText();
+                    cmbEndTime.ResetText();
+                    cmbRequestCode.ResetText();
+                    cmbModuleCode.ResetText();
+                    cmbVenueCode.ResetText();
+                    dateRequest.ResetText();
+                }
+                else
+                {
+                    MessageBox.Show("Please input valid data.");
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Please Enter a valid Time.");
+            }
+            dgvTutorRequest.DataSource = bll.GetTutorRequest();
+        }
 
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
@@ -120,5 +147,15 @@ namespace Info_IT.UserControls
 			dgvTutorRequest.BackgroundColor = Color.White;
 
 		}
+
+        private void dgvTutorRequest_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            
+
+
+
+
+        }
 	}
 }

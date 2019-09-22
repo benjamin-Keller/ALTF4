@@ -16,5 +16,17 @@ namespace DAL
         {
             Name = name;
         }
+
+        public TaskTypeClass(int code , string name)
+        {
+            TaskTypeCode = code;
+            Name = name;
+        }
+
+        public TaskTypeClass(int code)
+        {
+            TaskTypeCode = code;
+        }
+
     }
 }

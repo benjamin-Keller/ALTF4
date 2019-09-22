@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BLL;
 using System.Windows.Forms;
 
 namespace Info_IT.UserControls
 {
-	public partial class ucTaskType : UserControl
+    public partial class ucTaskType : UserControl
 	{
+        BusinessLogicLayer bll = new BusinessLogicLayer();
 		public ucTaskType()
 		{
 			InitializeComponent();
@@ -59,17 +55,73 @@ namespace Info_IT.UserControls
 
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
+            try
+            {
 
-		}
+                DAL.TaskTypeClass task = new DAL.TaskTypeClass(DAL.TaskTypeClass.TaskTypeCode, txtName.Text);
+                int x = bll.AddTaskType(task);
+
+                if (x > 0)
+                {
+                    txtName.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Please input valid data.");
+                }
+
+
+            }
+            catch (Exception b)
+            {
+                MessageBox.Show("Please input valid data.");
+            }
+            dgvTaskType.DataSource = bll.GetTasktype();
+        }
 
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
 		{
+            dgvTaskType.DataSource = bll.GetTasktype();
+            dgvTaskType.BackgroundColor = Color.White;
 
-		}
+            try
+            {
 
-		private void BtnViewList_Click(object sender, EventArgs e)
+                DAL.TaskTypeClass task = new DAL.TaskTypeClass(DAL.TaskTypeClass.TaskTypeCode, txtName.Text);
+                int x = bll.UpdateTaskType(task);
+
+                if (x > 0)
+                {
+                    txtName.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Please input valid data.");
+                }
+
+
+            }
+            catch (Exception b)
+            {
+                MessageBox.Show("Please input valid data.");
+            }
+            dgvTaskType.DataSource = bll.GetTasktype();
+        }
+
+        private void BtnViewList_Click(object sender, EventArgs e)
 		{
+            dgvTaskType.DataSource = bll.GetTasktype();
+            dgvTaskType.BackgroundColor = Color.White;
 
-		}
-	}
+        }
+
+        private void dgvTaskType_CellCLick(object sender, DataGridViewCellEventArgs e)
+        {
+            DAL.TaskTypeClass taskType = new DAL.TaskTypeClass(int.Parse(dgvTaskType.SelectedRows[0].Cells[0].Value.ToString()));
+
+            var value = bll.SelectedForUpdateTaskType(taskType);
+
+            txtName.Text = value.Rows[0].Table.Rows[0].ItemArray[1].ToString();
+        }
+    }
 }
