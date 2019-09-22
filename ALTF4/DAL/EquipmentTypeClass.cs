@@ -21,5 +21,10 @@ namespace DAL
             EquipTypeCode = code;
             TypeDescription = desc;
         }
+
+        public EquipmentTypeClass(int code)
+        {
+            EquipTypeCode = code;
+        }
     }
 }

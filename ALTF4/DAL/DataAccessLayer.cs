@@ -1069,7 +1069,6 @@ namespace DAL
             int x;
             try
             {
-
                 dbCmd = new SqlCommand("dbo.sp_UpdateEquip", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
@@ -1245,6 +1244,252 @@ namespace DAL
 
             return dt;
 
+
+        }
+
+            public int UpdateEquipmentType(EquipmentTypeClass equipmentType)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+                dbCmd = new SqlCommand("dbo.sp_UpdateEquipType", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@EquipTypeCode", DAL.EquipmentTypeClass.EquipTypeCode);
+                dbCmd.Parameters.AddWithValue("@TypeDescription", equipmentType.TypeDescription);
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public DataTable SelectedForUpdateEquipmentType(EquipmentTypeClass equipmentType)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateEquipmentType", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@EquipTypeCode", DAL.EquipmentTypeClass.EquipTypeCode);
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public int UpdateInspection(InspectionClass inspection)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+                dbCmd = new SqlCommand("dbo.sp_UpdateInspection", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@InspectionCode", DAL.InspectionClass.InspectionCode);
+                dbCmd.Parameters.AddWithValue("@VenueCode", inspection.VenueCode);
+                dbCmd.Parameters.AddWithValue("@StaffCode", inspection.StaffCode);
+                dbCmd.Parameters.AddWithValue("@InspectionDate", inspection.InspectionDate);
+                dbCmd.Parameters.AddWithValue("@InspectionTime", inspection.InspectionTime);
+                dbCmd.Parameters.AddWithValue("@Comment", inspection.Comment);
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public DataTable SelectedForUpdateInspection(InspectionClass inspection)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateInspection", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@InspectionCode", DAL.InspectionClass.InspectionCode);
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public int UpdateInspectionDetail(InspectionDetailClass inspectionDetail)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_UpdateInspectionDetail", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@InspectionDetailCode", DAL.InspectionDetailClass.InspectionDetailCode);
+                dbCmd.Parameters.AddWithValue("@InspectinCode", inspectionDetail.InspectionCode);
+                dbCmd.Parameters.AddWithValue("@EquipmentCode", inspectionDetail.EquipmentCode);
+                dbCmd.Parameters.AddWithValue("@StaffCode", inspectionDetail.StaffCode);
+                dbCmd.Parameters.AddWithValue("@FaultComment", inspectionDetail.FaultComment);
+                dbCmd.Parameters.AddWithValue("@Status", inspectionDetail.InspectionStatus);
+
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public DataTable SelectedForUpdateInspectionDetail(InspectionDetailClass inspectionDetail)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateInspectionDetail", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@InspectionDetailCode", DAL.InspectionDetailClass.InspectionDetailCode);
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public int UpdateRequest(RequestClass request)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_UpdateRequest", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@RequestCode", DAL.RequestClass.RequestCode);
+                dbCmd.Parameters.AddWithValue("@RequestDescription", request.RequestDescription);
+                dbCmd.Parameters.AddWithValue("@StaffCode", request.RequestStaffCode);
+                dbCmd.Parameters.AddWithValue("@StudentCode", request.RequestStudentCode);
+                dbCmd.Parameters.AddWithValue("@TaskTypeCode", request.RequestTaskTypeCode);
+                dbCmd.Parameters.AddWithValue("@RequestDate", request.RequestDate);
+                dbCmd.Parameters.AddWithValue("@RequestTime", request.RequestTime);
+                dbCmd.Parameters.AddWithValue("@AssignedStaffCode", request.RequestAssignedStaffCode);
+                dbCmd.Parameters.AddWithValue("@RequestStatus", request.RequestStatus);
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public DataTable SelectedForUpdateRequest(RequestClass request)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateRequests", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@RequestCode", DAL.RequestClass.RequestCode) ;
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
         }
     }
 }

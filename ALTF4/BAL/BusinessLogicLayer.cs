@@ -79,9 +79,29 @@ namespace BLL
             return dal.GetEquipmentType();
         }
 
+        public int UpdateEquipmentType(EquipmentTypeClass equipmentType)
+        {
+            return dal.UpdateEquipmentType(equipmentType);
+        }
+
+        public DataTable SelectedForUpdateEquipmentType(EquipmentTypeClass EquipTypeCode)
+        {
+            return dal.SelectedForUpdateEquipmentType(EquipTypeCode);
+        }
+
         public DataTable GetInspection()
         {
             return dal.GetInspection();
+        }
+
+        public int UpdateInspection(InspectionClass inspection)
+        {
+            return dal.UpdateInspection(inspection);
+        }
+
+        public DataTable SelectedForUpdateInspection(InspectionClass InspectionCode)
+        {
+            return dal.SelectedForUpdateInspection(InspectionCode);
         }
 
         public DataTable GetInspectionDetail()
@@ -89,9 +109,29 @@ namespace BLL
             return dal.GetInspectionDetail();
         }
 
+        public int UpdateInspectionDetail(InspectionDetailClass inspectionDetail)
+        {
+            return dal.UpdateInspectionDetail(inspectionDetail);
+        }
+
+        public DataTable SelectedForUpdateInspectionDetail(InspectionDetailClass InspectionDetailCode)
+        {
+            return dal.SelectedForUpdateInspectionDetail(InspectionDetailCode);
+        }
+
         public DataTable GetRequests()
         {
             return dal.GetRequests();
+        }
+
+        public int UpdateRequest(RequestClass request)
+        {
+            return dal.UpdateRequest(request);
+        }
+
+        public DataTable SelectedForUpdateRequest(RequestClass RequestCode)
+        {
+            return dal.SelectedForUpdateRequest(RequestCode);
         }
 
         public DataTable GetStaff()

@@ -33,5 +33,10 @@ namespace DAL
             FaultComment = comment;
             InspectionStatus = status;
         }
+
+        public InspectionDetailClass(int code)
+        {
+            InspectionDetailCode = code;
+        }
     }
 }

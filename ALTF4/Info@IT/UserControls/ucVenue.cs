@@ -147,8 +147,6 @@ namespace Info_IT.UserControls
 
             cmbBuildingBlock.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[4];
             cmbBuilding.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[5];
-
-
         }
     }
 }

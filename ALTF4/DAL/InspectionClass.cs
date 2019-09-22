@@ -32,5 +32,9 @@ namespace DAL
             VenueCode = venueCode;
             StaffCode = staffCode;
         }
+        public InspectionClass(int code)
+        {
+            InspectionCode = code;
+        }
     }
 }
