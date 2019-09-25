@@ -137,16 +137,22 @@ namespace Info_IT.UserControls
 
         private void dgvVenue_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DAL.VenueClass venueClass = new DAL.VenueClass(int.Parse(dgvVenue.SelectedRows[0].Cells[0].Value.ToString()));
-            
-            var values = bll.SelectedForUpdateVenue(venueClass);
+            try
+            {
+                DAL.VenueClass venueClass = new DAL.VenueClass(int.Parse(dgvVenue.SelectedRows[0].Cells[0].Value.ToString()));
 
-            txtDescription.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
-            txtCapacity.Text = values.Rows[0].Table.Rows[0].ItemArray[2].ToString();
-            txtDoorNo.Text = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
+                var values = bll.SelectedForUpdateVenue(venueClass);
 
-            cmbBuildingBlock.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[4];
-            cmbBuilding.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[5];
+                txtDescription.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
+                txtCapacity.Text = values.Rows[0].Table.Rows[0].ItemArray[2].ToString();
+                txtDoorNo.Text = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
+
+                cmbBuildingBlock.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[4];
+                cmbBuilding.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[5];
+            }
+            catch
+            { }
+
         }
     }
 }

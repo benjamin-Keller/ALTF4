@@ -140,6 +140,7 @@ namespace Info_IT.UserControls
 
         private void dgvInspection_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
             DAL.InspectionClass inspectClass = new DAL.InspectionClass(int.Parse(dgvInspection.SelectedRows[0].Cells[0].Value.ToString()));
 
             var values = bll.SelectedForUpdateInspection(inspectClass);
