@@ -56,17 +56,10 @@
 			this.lblLoginErrorExtra = new System.Windows.Forms.Label();
 			this.lblLoginError = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
+			this.btnLogIn = new Bunifu.Framework.UI.BunifuThinButton2();
 			this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
 			this.txtUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
 			this.label2 = new System.Windows.Forms.Label();
-			this.doubleBitmapControl1 = new BunifuAnimatorNS.DoubleBitmapControl();
-			this.panel6 = new System.Windows.Forms.Panel();
-			this.lblDisplayName = new System.Windows.Forms.Label();
-			this.pnlLogin = new System.Windows.Forms.Panel();
-			this.lblLoginText = new System.Windows.Forms.Label();
-			this.lblLocation = new System.Windows.Forms.Label();
-			this.panel5 = new System.Windows.Forms.Panel();
-			this.btnLogIn = new Bunifu.Framework.UI.BunifuThinButton2();
 			this.ucReport1 = new Info_IT.UserControls.ucReport();
 			this.ucErrorFailedToAdd1 = new Info_IT.Errors.ucErrorFailedToAdd();
 			this.ucErrorUserNotFound1 = new Info_IT.Errors.ucErrorUserNotFound();
@@ -81,10 +74,17 @@
 			this.ucNavInspection1 = new Info_IT.UserControls.ucInspection();
 			this.ucTutorRequest1 = new Info_IT.UserControls.ucTutorRequest();
 			this.ucRequest1 = new Info_IT.UserControls.ucRequest();
+			this.doubleBitmapControl1 = new BunifuAnimatorNS.DoubleBitmapControl();
 			this.ucVenue1 = new Info_IT.UserControls.ucVenue();
 			this.ucHome1 = new Info_IT.UserControls.ucHome();
 			this.ucEquipment1 = new Info_IT.UserControls.UcEquipment();
 			this.ucDepartment1 = new Info_IT.UserControls.ucDepartment();
+			this.panel6 = new System.Windows.Forms.Panel();
+			this.lblDisplayName = new System.Windows.Forms.Label();
+			this.pnlLogin = new System.Windows.Forms.Panel();
+			this.lblLoginText = new System.Windows.Forms.Label();
+			this.lblLocation = new System.Windows.Forms.Label();
+			this.panel5 = new System.Windows.Forms.Panel();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.pnlNavigation.SuspendLayout();
@@ -462,6 +462,32 @@
 			this.label3.TabIndex = 8;
 			this.label3.Text = "FOR TESTING: Username: admin Password: admin";
 			// 
+			// btnLogIn
+			// 
+			this.btnLogIn.ActiveBorderThickness = 1;
+			this.btnLogIn.ActiveCornerRadius = 20;
+			this.btnLogIn.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnLogIn.ActiveForecolor = System.Drawing.Color.White;
+			this.btnLogIn.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnLogIn.BackColor = System.Drawing.SystemColors.Control;
+			this.btnLogIn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogIn.BackgroundImage")));
+			this.btnLogIn.ButtonText = "Log In";
+			this.btnLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnLogIn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnLogIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnLogIn.IdleBorderThickness = 1;
+			this.btnLogIn.IdleCornerRadius = 20;
+			this.btnLogIn.IdleFillColor = System.Drawing.Color.White;
+			this.btnLogIn.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnLogIn.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnLogIn.Location = new System.Drawing.Point(427, 333);
+			this.btnLogIn.Margin = new System.Windows.Forms.Padding(5);
+			this.btnLogIn.Name = "btnLogIn";
+			this.btnLogIn.Size = new System.Drawing.Size(181, 41);
+			this.btnLogIn.TabIndex = 7;
+			this.btnLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.btnLogIn.Click += new System.EventHandler(this.BtnLogIn_Click);
+			// 
 			// txtPassword
 			// 
 			this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -511,111 +537,6 @@
 			this.label2.Size = new System.Drawing.Size(119, 47);
 			this.label2.TabIndex = 4;
 			this.label2.Text = "Log In";
-			// 
-			// doubleBitmapControl1
-			// 
-			this.doubleBitmapControl1.Location = new System.Drawing.Point(252, 192);
-			this.doubleBitmapControl1.Name = "doubleBitmapControl1";
-			this.doubleBitmapControl1.Size = new System.Drawing.Size(75, 23);
-			this.doubleBitmapControl1.TabIndex = 5;
-			this.doubleBitmapControl1.Text = "doubleBitmapControl1";
-			this.doubleBitmapControl1.Visible = false;
-			// 
-			// panel6
-			// 
-			this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.panel6.Controls.Add(this.lblDisplayName);
-			this.panel6.Controls.Add(this.pnlLogin);
-			this.panel6.Controls.Add(this.lblLocation);
-			this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel6.Location = new System.Drawing.Point(0, 0);
-			this.panel6.Name = "panel6";
-			this.panel6.Size = new System.Drawing.Size(1056, 63);
-			this.panel6.TabIndex = 0;
-			// 
-			// lblDisplayName
-			// 
-			this.lblDisplayName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.lblDisplayName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDisplayName.ForeColor = System.Drawing.Color.White;
-			this.lblDisplayName.Location = new System.Drawing.Point(241, -2);
-			this.lblDisplayName.Name = "lblDisplayName";
-			this.lblDisplayName.Size = new System.Drawing.Size(604, 30);
-			this.lblDisplayName.TabIndex = 2;
-			this.lblDisplayName.Text = "Last, First(Role)";
-			this.lblDisplayName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			// 
-			// pnlLogin
-			// 
-			this.pnlLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.pnlLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.pnlLogin.Controls.Add(this.lblLoginText);
-			this.pnlLogin.Location = new System.Drawing.Point(861, 0);
-			this.pnlLogin.Name = "pnlLogin";
-			this.pnlLogin.Size = new System.Drawing.Size(195, 29);
-			this.pnlLogin.TabIndex = 1;
-			this.pnlLogin.Click += new System.EventHandler(this.Login_Click);
-			this.pnlLogin.MouseEnter += new System.EventHandler(this.PnlLogin_MouseEnter);
-			this.pnlLogin.MouseLeave += new System.EventHandler(this.PnlLogin_MouseLeave);
-			// 
-			// lblLoginText
-			// 
-			this.lblLoginText.AutoSize = true;
-			this.lblLoginText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblLoginText.ForeColor = System.Drawing.Color.White;
-			this.lblLoginText.Location = new System.Drawing.Point(50, -2);
-			this.lblLoginText.Name = "lblLoginText";
-			this.lblLoginText.Size = new System.Drawing.Size(114, 30);
-			this.lblLoginText.TabIndex = 0;
-			this.lblLoginText.Text = "Log In Text";
-			this.lblLoginText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.lblLoginText.Click += new System.EventHandler(this.Login_Click);
-			this.lblLoginText.MouseEnter += new System.EventHandler(this.LblLoginText_MouseEnter);
-			this.lblLoginText.MouseLeave += new System.EventHandler(this.LblLoginText_MouseLeave);
-			// 
-			// lblLocation
-			// 
-			this.lblLocation.AutoSize = true;
-			this.lblLocation.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblLocation.ForeColor = System.Drawing.Color.White;
-			this.lblLocation.Location = new System.Drawing.Point(6, 9);
-			this.lblLocation.Name = "lblLocation";
-			this.lblLocation.Size = new System.Drawing.Size(144, 45);
-			this.lblLocation.TabIndex = 0;
-			this.lblLocation.Text = "Location";
-			// 
-			// panel5
-			// 
-			this.panel5.Location = new System.Drawing.Point(200, 0);
-			this.panel5.Name = "panel5";
-			this.panel5.Size = new System.Drawing.Size(1056, 30);
-			this.panel5.TabIndex = 2;
-			// 
-			// btnLogIn
-			// 
-			this.btnLogIn.ActiveBorderThickness = 1;
-			this.btnLogIn.ActiveCornerRadius = 20;
-			this.btnLogIn.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.btnLogIn.ActiveForecolor = System.Drawing.Color.White;
-			this.btnLogIn.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.btnLogIn.BackColor = System.Drawing.SystemColors.Control;
-			this.btnLogIn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogIn.BackgroundImage")));
-			this.btnLogIn.ButtonText = "Log In";
-			this.btnLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnLogIn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnLogIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.btnLogIn.IdleBorderThickness = 1;
-			this.btnLogIn.IdleCornerRadius = 20;
-			this.btnLogIn.IdleFillColor = System.Drawing.Color.White;
-			this.btnLogIn.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.btnLogIn.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.btnLogIn.Location = new System.Drawing.Point(427, 333);
-			this.btnLogIn.Margin = new System.Windows.Forms.Padding(5);
-			this.btnLogIn.Name = "btnLogIn";
-			this.btnLogIn.Size = new System.Drawing.Size(181, 41);
-			this.btnLogIn.TabIndex = 7;
-			this.btnLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.btnLogIn.Click += new System.EventHandler(this.BtnLogIn_Click);
 			// 
 			// ucReport1
 			// 
@@ -716,6 +637,15 @@
 			this.ucRequest1.Size = new System.Drawing.Size(1056, 562);
 			this.ucRequest1.TabIndex = 6;
 			// 
+			// doubleBitmapControl1
+			// 
+			this.doubleBitmapControl1.Location = new System.Drawing.Point(252, 192);
+			this.doubleBitmapControl1.Name = "doubleBitmapControl1";
+			this.doubleBitmapControl1.Size = new System.Drawing.Size(75, 23);
+			this.doubleBitmapControl1.TabIndex = 5;
+			this.doubleBitmapControl1.Text = "doubleBitmapControl1";
+			this.doubleBitmapControl1.Visible = false;
+			// 
 			// ucVenue1
 			// 
 			this.ucVenue1.Location = new System.Drawing.Point(0, 58);
@@ -745,6 +675,76 @@
 			this.ucDepartment1.Name = "ucDepartment1";
 			this.ucDepartment1.Size = new System.Drawing.Size(1056, 562);
 			this.ucDepartment1.TabIndex = 1;
+			// 
+			// panel6
+			// 
+			this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.panel6.Controls.Add(this.lblDisplayName);
+			this.panel6.Controls.Add(this.pnlLogin);
+			this.panel6.Controls.Add(this.lblLocation);
+			this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel6.Location = new System.Drawing.Point(0, 0);
+			this.panel6.Name = "panel6";
+			this.panel6.Size = new System.Drawing.Size(1056, 63);
+			this.panel6.TabIndex = 0;
+			// 
+			// lblDisplayName
+			// 
+			this.lblDisplayName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.lblDisplayName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblDisplayName.ForeColor = System.Drawing.Color.White;
+			this.lblDisplayName.Location = new System.Drawing.Point(241, -2);
+			this.lblDisplayName.Name = "lblDisplayName";
+			this.lblDisplayName.Size = new System.Drawing.Size(604, 30);
+			this.lblDisplayName.TabIndex = 2;
+			this.lblDisplayName.Text = "Last, First(Role)";
+			this.lblDisplayName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// pnlLogin
+			// 
+			this.pnlLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.pnlLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.pnlLogin.Controls.Add(this.lblLoginText);
+			this.pnlLogin.Location = new System.Drawing.Point(861, 0);
+			this.pnlLogin.Name = "pnlLogin";
+			this.pnlLogin.Size = new System.Drawing.Size(195, 29);
+			this.pnlLogin.TabIndex = 1;
+			this.pnlLogin.Click += new System.EventHandler(this.Login_Click);
+			this.pnlLogin.MouseEnter += new System.EventHandler(this.PnlLogin_MouseEnter);
+			this.pnlLogin.MouseLeave += new System.EventHandler(this.PnlLogin_MouseLeave);
+			// 
+			// lblLoginText
+			// 
+			this.lblLoginText.AutoSize = true;
+			this.lblLoginText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblLoginText.ForeColor = System.Drawing.Color.White;
+			this.lblLoginText.Location = new System.Drawing.Point(50, -2);
+			this.lblLoginText.Name = "lblLoginText";
+			this.lblLoginText.Size = new System.Drawing.Size(114, 30);
+			this.lblLoginText.TabIndex = 0;
+			this.lblLoginText.Text = "Log In Text";
+			this.lblLoginText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.lblLoginText.Click += new System.EventHandler(this.Login_Click);
+			this.lblLoginText.MouseEnter += new System.EventHandler(this.LblLoginText_MouseEnter);
+			this.lblLoginText.MouseLeave += new System.EventHandler(this.LblLoginText_MouseLeave);
+			// 
+			// lblLocation
+			// 
+			this.lblLocation.AutoSize = true;
+			this.lblLocation.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblLocation.ForeColor = System.Drawing.Color.White;
+			this.lblLocation.Location = new System.Drawing.Point(6, 9);
+			this.lblLocation.Name = "lblLocation";
+			this.lblLocation.Size = new System.Drawing.Size(144, 45);
+			this.lblLocation.TabIndex = 0;
+			this.lblLocation.Text = "Location";
+			// 
+			// panel5
+			// 
+			this.panel5.Location = new System.Drawing.Point(200, 0);
+			this.panel5.Name = "panel5";
+			this.panel5.Size = new System.Drawing.Size(1056, 30);
+			this.panel5.TabIndex = 2;
 			// 
 			// Home
 			// 

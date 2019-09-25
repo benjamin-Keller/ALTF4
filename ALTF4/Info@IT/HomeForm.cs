@@ -272,19 +272,19 @@ namespace Info_IT
 
 		private void InactiveButtons()
 		{
-			btnNavDepartment.BackColor = Color.FromArgb(0,100,200);
-			btnNavEquipment.BackColor = Color.FromArgb(0,100,200);
-			btnNavHome.BackColor = Color.FromArgb(0,100,200);
-			btnNavInspection.BackColor = Color.FromArgb(0,100,200);
-			btnNavRequest.BackColor = Color.FromArgb(0,100,200);
-			btnNavTaskType.BackColor = Color.FromArgb(0,100,200);
-			btnNavTutorRequest.BackColor = Color.FromArgb(0,100,200);
-			btnNavVenue.BackColor = Color.FromArgb(0,100,200);
-			btnNavStudent.BackColor = Color.FromArgb(0,100,200);
-			btnNavStaff.BackColor = Color.FromArgb(0,100,200);
-			btnNavUser.BackColor = Color.FromArgb(0,100,200);
-			btnNavHelp.BackColor = Color.FromArgb(0, 100, 200);
-			btnReports.BackColor = Color.FromArgb(0, 100, 200);
+			btnNavDepartment.BackColor = Color.FromArgb(0,80,200);
+			btnNavEquipment.BackColor = Color.FromArgb(0,80,200);
+			btnNavHome.BackColor = Color.FromArgb(0,80,200);
+			btnNavInspection.BackColor = Color.FromArgb(0,80,200);
+			btnNavRequest.BackColor = Color.FromArgb(0,80,200);
+			btnNavTaskType.BackColor = Color.FromArgb(0,80,200);
+			btnNavTutorRequest.BackColor = Color.FromArgb(0,80,200);
+			btnNavVenue.BackColor = Color.FromArgb(0,80,200);
+			btnNavStudent.BackColor = Color.FromArgb(0,80,200);
+			btnNavStaff.BackColor = Color.FromArgb(0,80,200);
+			btnNavUser.BackColor = Color.FromArgb(0,80,200);
+			btnNavHelp.BackColor = Color.FromArgb(0, 80, 200);
+			btnReports.BackColor = Color.FromArgb(0, 80, 200);
 		}
 
 		private void HideAll()
