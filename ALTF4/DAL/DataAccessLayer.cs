@@ -745,7 +745,7 @@ namespace DAL
                 dbCmd = new SqlCommand("dbo.sp_AddTaskType", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
-                dbCmd.Parameters.AddWithValue("@VenueDescription", taskType.Name);
+                dbCmd.Parameters.AddWithValue("@TaskName", taskType.Name);
 
                 x = dbCmd.ExecuteNonQuery();
             }
