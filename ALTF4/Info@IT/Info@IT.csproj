@@ -391,6 +391,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="App_Data\icon.ico" />
     <Content Include="App_Data\info-IT_DB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -398,6 +399,7 @@
       <DependentUpon>info-IT_DB.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="favicon.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BAL\BLL.csproj">

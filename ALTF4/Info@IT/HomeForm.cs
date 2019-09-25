@@ -10,6 +10,8 @@ namespace Info_IT
 	{
 		public bool isLoggedIn;
 		public string role;
+		public string First;
+		public string Last;
 		public bool firstUser;
 		public bool firstPass;
 
@@ -34,6 +36,8 @@ namespace Info_IT
             lblDisplayName.Hide();
 			lblLoginError.Hide();
 			lblLoginErrorExtra.Hide();
+
+			ucHome1.Visible = false;
 		}
 
 		public void LoginPanel()
@@ -206,6 +210,7 @@ namespace Info_IT
 		private void BtnLogIn_Click(object sender, EventArgs e)
 		{
             DAL.LoginClass login = new DAL.LoginClass(txtUsername.Text, txtPassword.Text);
+			
             //DataGridView x = new DataGridView();
 
             var x = bll.GetLogin(login);
@@ -224,6 +229,9 @@ namespace Info_IT
                     role = a[6].ToString();
                     lblDisplayName.Text = a[3].ToString() + ", " + a[2].ToString() + "(" + a[6].ToString() + ")";
                     lblDisplayName.Show();
+
+					ucHome1.lblWelcome.Text = "Welcome " + a[2].ToString() + " " + a[3].ToString();
+					ucHome1.lblRole.Text = "You are currently role: " + a[6].ToString() + "!";
                 }
                 catch
                 {
@@ -235,8 +243,9 @@ namespace Info_IT
                 LoginPanel();
                 HideAll();
                 ucHome1.Show();
+				ucHome1.Visible = true;
 
-                this.Text = "Info@IT";
+				this.Text = "Info@IT";
                 lblLocation.Text = "Home";
 
                 pnlNavigation.Show();
@@ -377,6 +386,7 @@ namespace Info_IT
 			ucHome1.Show();
 			this.Text = "Info@IT";
 			lblLocation.Text = "Home";
+			ucHome1.Visible = true;
 		}
 
 		private void BtnNavEquipment_Click(object sender, EventArgs e)
@@ -550,5 +560,5 @@ namespace Info_IT
                 e.Handled = e.SuppressKeyPress = true;
             }
         }
-    }
+	}
 }
