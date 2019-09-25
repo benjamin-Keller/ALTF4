@@ -117,7 +117,7 @@ namespace Info_IT.UserControls
 
         private void BtnViewList_Click(object sender, EventArgs e)
 		{
-            dgvStudent.DataSource = bll.GetDepartment();
+            dgvStudent.DataSource = bll.GetStudent();
             dgvStudent.BackgroundColor = Color.White;
 
         }
