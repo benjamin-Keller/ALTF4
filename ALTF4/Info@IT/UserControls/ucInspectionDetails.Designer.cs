@@ -193,6 +193,8 @@
             // 
             // dgvInspectionDetails
             // 
+            this.dgvInspectionDetails.AllowUserToAddRows = false;
+            this.dgvInspectionDetails.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvInspectionDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInspectionDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;

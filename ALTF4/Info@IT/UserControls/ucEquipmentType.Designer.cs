@@ -216,6 +216,8 @@
             // 
             // dgvEquipmentDetails
             // 
+            this.dgvEquipmentDetails.AllowUserToAddRows = false;
+            this.dgvEquipmentDetails.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvEquipmentDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEquipmentDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;

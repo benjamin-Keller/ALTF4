@@ -68,14 +68,15 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.dgvTutorRequest);
-            this.panel3.Location = new System.Drawing.Point(312, 123);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(234, 100);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1043, 528);
+            this.panel3.Size = new System.Drawing.Size(782, 429);
             this.panel3.TabIndex = 18;
             // 
             // dgvTutorRequest
             // 
+            this.dgvTutorRequest.AllowUserToAddRows = false;
+            this.dgvTutorRequest.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvTutorRequest.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTutorRequest.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -96,11 +97,10 @@
             this.dgvTutorRequest.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
             this.dgvTutorRequest.HeaderForeColor = System.Drawing.Color.White;
             this.dgvTutorRequest.Location = new System.Drawing.Point(0, 0);
-            this.dgvTutorRequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvTutorRequest.Name = "dgvTutorRequest";
             this.dgvTutorRequest.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvTutorRequest.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTutorRequest.Size = new System.Drawing.Size(1043, 528);
+            this.dgvTutorRequest.Size = new System.Drawing.Size(782, 429);
             this.dgvTutorRequest.TabIndex = 0;
             // 
             // tmrView
@@ -114,9 +114,8 @@
             this.panel1.Controls.Add(this.pnlManage);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(267, 692);
+            this.panel1.Size = new System.Drawing.Size(200, 562);
             this.panel1.TabIndex = 16;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -126,12 +125,11 @@
             this.pnlView.Controls.Add(this.btnViewList);
             this.pnlView.Controls.Add(this.btnView);
             this.pnlView.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlView.Location = new System.Drawing.Point(0, 65);
-            this.pnlView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pnlView.MaximumSize = new System.Drawing.Size(267, 142);
-            this.pnlView.MinimumSize = new System.Drawing.Size(267, 65);
+            this.pnlView.Location = new System.Drawing.Point(0, 53);
+            this.pnlView.MaximumSize = new System.Drawing.Size(200, 115);
+            this.pnlView.MinimumSize = new System.Drawing.Size(200, 53);
             this.pnlView.Name = "pnlView";
-            this.pnlView.Size = new System.Drawing.Size(267, 65);
+            this.pnlView.Size = new System.Drawing.Size(200, 53);
             this.pnlView.TabIndex = 13;
             // 
             // btnViewList
@@ -141,10 +139,9 @@
             this.btnViewList.FlatAppearance.BorderSize = 0;
             this.btnViewList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewList.Font = new System.Drawing.Font("Segoe UI", 8.75F);
-            this.btnViewList.Location = new System.Drawing.Point(0, 65);
-            this.btnViewList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnViewList.Location = new System.Drawing.Point(0, 53);
             this.btnViewList.Name = "btnViewList";
-            this.btnViewList.Size = new System.Drawing.Size(267, 38);
+            this.btnViewList.Size = new System.Drawing.Size(200, 31);
             this.btnViewList.TabIndex = 6;
             this.btnViewList.Text = "List All Tutor Requests";
             this.btnViewList.UseVisualStyleBackColor = false;
@@ -158,10 +155,9 @@
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnView.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnView.Location = new System.Drawing.Point(0, 0);
-            this.btnView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnView.MinimumSize = new System.Drawing.Size(240, 65);
+            this.btnView.MinimumSize = new System.Drawing.Size(180, 53);
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(267, 65);
+            this.btnView.Size = new System.Drawing.Size(200, 53);
             this.btnView.TabIndex = 5;
             this.btnView.Text = "View";
             this.btnView.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -176,11 +172,10 @@
             this.pnlManage.Controls.Add(this.btnManage);
             this.pnlManage.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlManage.Location = new System.Drawing.Point(0, 0);
-            this.pnlManage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pnlManage.MaximumSize = new System.Drawing.Size(267, 140);
-            this.pnlManage.MinimumSize = new System.Drawing.Size(267, 65);
+            this.pnlManage.MaximumSize = new System.Drawing.Size(200, 114);
+            this.pnlManage.MinimumSize = new System.Drawing.Size(200, 53);
             this.pnlManage.Name = "pnlManage";
-            this.pnlManage.Size = new System.Drawing.Size(267, 65);
+            this.pnlManage.Size = new System.Drawing.Size(200, 53);
             this.pnlManage.TabIndex = 12;
             // 
             // btnManageUpdate
@@ -190,10 +185,9 @@
             this.btnManageUpdate.FlatAppearance.BorderSize = 0;
             this.btnManageUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageUpdate.Font = new System.Drawing.Font("Segoe UI", 8.75F);
-            this.btnManageUpdate.Location = new System.Drawing.Point(0, 103);
-            this.btnManageUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnManageUpdate.Location = new System.Drawing.Point(0, 84);
             this.btnManageUpdate.Name = "btnManageUpdate";
-            this.btnManageUpdate.Size = new System.Drawing.Size(267, 38);
+            this.btnManageUpdate.Size = new System.Drawing.Size(200, 31);
             this.btnManageUpdate.TabIndex = 7;
             this.btnManageUpdate.Text = "Update Selected Tutor Request";
             this.btnManageUpdate.UseVisualStyleBackColor = false;
@@ -206,10 +200,9 @@
             this.btnManageAdd.FlatAppearance.BorderSize = 0;
             this.btnManageAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageAdd.Font = new System.Drawing.Font("Segoe UI", 8.75F);
-            this.btnManageAdd.Location = new System.Drawing.Point(0, 65);
-            this.btnManageAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnManageAdd.Location = new System.Drawing.Point(0, 53);
             this.btnManageAdd.Name = "btnManageAdd";
-            this.btnManageAdd.Size = new System.Drawing.Size(267, 38);
+            this.btnManageAdd.Size = new System.Drawing.Size(200, 31);
             this.btnManageAdd.TabIndex = 6;
             this.btnManageAdd.Text = "Add Tutor Request";
             this.btnManageAdd.UseVisualStyleBackColor = false;
@@ -223,10 +216,9 @@
             this.btnManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManage.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnManage.Location = new System.Drawing.Point(0, 0);
-            this.btnManage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnManage.MinimumSize = new System.Drawing.Size(240, 65);
+            this.btnManage.MinimumSize = new System.Drawing.Size(180, 53);
             this.btnManage.Name = "btnManage";
-            this.btnManage.Size = new System.Drawing.Size(267, 65);
+            this.btnManage.Size = new System.Drawing.Size(200, 53);
             this.btnManage.TabIndex = 5;
             this.btnManage.Text = "Manage";
             this.btnManage.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -257,11 +249,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.groupBox1.Location = new System.Drawing.Point(312, 28);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(234, 23);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(1045, 87);
+            this.groupBox1.Size = new System.Drawing.Size(784, 71);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Information";
@@ -288,10 +278,9 @@
             "16:00",
             "16:30",
             "17:00"});
-            this.cmbEndTime.Location = new System.Drawing.Point(871, 41);
-            this.cmbEndTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEndTime.Location = new System.Drawing.Point(653, 33);
             this.cmbEndTime.Name = "cmbEndTime";
-            this.cmbEndTime.Size = new System.Drawing.Size(160, 28);
+            this.cmbEndTime.Size = new System.Drawing.Size(121, 23);
             this.cmbEndTime.TabIndex = 25;
             // 
             // cmbStartTime
@@ -316,10 +305,9 @@
             "15:30",
             "16:00",
             "16:30"});
-            this.cmbStartTime.Location = new System.Drawing.Point(708, 41);
-            this.cmbStartTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbStartTime.Location = new System.Drawing.Point(531, 33);
             this.cmbStartTime.Name = "cmbStartTime";
-            this.cmbStartTime.Size = new System.Drawing.Size(153, 28);
+            this.cmbStartTime.Size = new System.Drawing.Size(116, 23);
             this.cmbStartTime.TabIndex = 24;
             // 
             // label4
@@ -327,20 +315,18 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-            this.label4.Location = new System.Drawing.Point(704, 20);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(528, 16);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 23);
+            this.label4.Size = new System.Drawing.Size(76, 17);
             this.label4.TabIndex = 23;
             this.label4.Text = "Start Time:";
             // 
             // cmbRequestCode
             // 
             this.cmbRequestCode.FormattingEnabled = true;
-            this.cmbRequestCode.Location = new System.Drawing.Point(20, 41);
-            this.cmbRequestCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbRequestCode.Location = new System.Drawing.Point(15, 33);
             this.cmbRequestCode.Name = "cmbRequestCode";
-            this.cmbRequestCode.Size = new System.Drawing.Size(153, 28);
+            this.cmbRequestCode.Size = new System.Drawing.Size(116, 23);
             this.cmbRequestCode.TabIndex = 22;
             // 
             // label7
@@ -348,10 +334,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-            this.label7.Location = new System.Drawing.Point(871, 20);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(653, 16);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 23);
+            this.label7.Size = new System.Drawing.Size(70, 17);
             this.label7.TabIndex = 17;
             this.label7.Text = "End Time:";
             // 
@@ -359,28 +344,25 @@
             // 
             this.dateRequest.CustomFormat = "dd MMMM yyyy";
             this.dateRequest.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateRequest.Location = new System.Drawing.Point(183, 41);
-            this.dateRequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateRequest.Location = new System.Drawing.Point(137, 33);
             this.dateRequest.Name = "dateRequest";
-            this.dateRequest.Size = new System.Drawing.Size(191, 27);
+            this.dateRequest.Size = new System.Drawing.Size(144, 23);
             this.dateRequest.TabIndex = 16;
             // 
             // cmbVenueCode
             // 
             this.cmbVenueCode.FormattingEnabled = true;
-            this.cmbVenueCode.Location = new System.Drawing.Point(545, 41);
-            this.cmbVenueCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbVenueCode.Location = new System.Drawing.Point(409, 33);
             this.cmbVenueCode.Name = "cmbVenueCode";
-            this.cmbVenueCode.Size = new System.Drawing.Size(153, 28);
+            this.cmbVenueCode.Size = new System.Drawing.Size(116, 23);
             this.cmbVenueCode.TabIndex = 14;
             // 
             // cmbModuleCode
             // 
             this.cmbModuleCode.FormattingEnabled = true;
-            this.cmbModuleCode.Location = new System.Drawing.Point(383, 41);
-            this.cmbModuleCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbModuleCode.Location = new System.Drawing.Point(287, 33);
             this.cmbModuleCode.Name = "cmbModuleCode";
-            this.cmbModuleCode.Size = new System.Drawing.Size(153, 28);
+            this.cmbModuleCode.Size = new System.Drawing.Size(116, 23);
             this.cmbModuleCode.TabIndex = 7;
             // 
             // label6
@@ -388,10 +370,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-            this.label6.Location = new System.Drawing.Point(183, 20);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(137, 16);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 23);
+            this.label6.Size = new System.Drawing.Size(41, 17);
             this.label6.TabIndex = 11;
             this.label6.Text = "Date:";
             // 
@@ -400,10 +381,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-            this.label5.Location = new System.Drawing.Point(541, 20);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(406, 16);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 23);
+            this.label5.Size = new System.Drawing.Size(85, 17);
             this.label5.TabIndex = 8;
             this.label5.Text = "Venue Code:";
             // 
@@ -412,10 +392,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-            this.label3.Location = new System.Drawing.Point(379, 20);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(284, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 23);
+            this.label3.Size = new System.Drawing.Size(94, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Module Code:";
             // 
@@ -424,23 +403,21 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-            this.label1.Location = new System.Drawing.Point(16, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 23);
+            this.label1.Size = new System.Drawing.Size(96, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Request Code:";
             // 
             // ucTutorRequest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ucTutorRequest";
-            this.Size = new System.Drawing.Size(1408, 692);
+            this.Size = new System.Drawing.Size(1056, 562);
             this.Load += new System.EventHandler(this.UcTutorRequest_Load);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTutorRequest)).EndInit();

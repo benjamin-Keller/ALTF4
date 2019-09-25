@@ -212,6 +212,8 @@
             // 
             // dgvInspection
             // 
+            this.dgvInspection.AllowUserToAddRows = false;
+            this.dgvInspection.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvInspection.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInspection.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -234,6 +236,7 @@
             this.dgvInspection.Location = new System.Drawing.Point(0, 0);
             this.dgvInspection.Name = "dgvInspection";
             this.dgvInspection.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvInspection.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInspection.Size = new System.Drawing.Size(782, 390);
             this.dgvInspection.TabIndex = 0;
             this.dgvInspection.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInspection_CellClick);
