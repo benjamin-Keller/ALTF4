@@ -241,7 +241,7 @@ namespace DAL
                 dbConn.Open();
             }
             catch { }
-            dbCmd = new SqlCommand("dbo.sp_DisplayInspectionFaults", dbConn);
+            dbCmd = new SqlCommand("dbo.sp_DisplayAllInspectDetails", dbConn);
             //dbCmd.CommandText = "sp_DisplayVenue";
             //dbCmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
