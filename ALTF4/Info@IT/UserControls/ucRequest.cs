@@ -78,7 +78,7 @@ namespace Info_IT.UserControls
 
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
-            DAL.RequestClass request = new DAL.RequestClass(txtDescription.Text, int.Parse(cmbStaffCode.SelectedValue.ToString()), int.Parse(cmbStudentCode.SelectedValue.ToString()), int.Parse(cmbTaskTypeCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), Convert.ToDateTime(cmbTime.Text), int.Parse(cmbAssignedStaffCode.SelectedValue.ToString()), "Pending");
+            DAL.RequestClass request = new DAL.RequestClass(txtDescription.Text, int.Parse(cmbStaffCode.SelectedValue.ToString()), int.Parse(cmbStudentCode.SelectedValue.ToString()), int.Parse(cmbTaskTypeCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), cmbTime.SelectedItem.ToString(), int.Parse(cmbAssignedStaffCode.SelectedValue.ToString()), "Pending");
 
             int x = bll.AddRequest(request);
 
@@ -102,7 +102,7 @@ namespace Info_IT.UserControls
 
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
 		{
-            DAL.RequestClass request = new DAL.RequestClass(DAL.RequestClass.RequestCode, txtDescription.Text, int.Parse(cmbStaffCode.SelectedValue.ToString()), int.Parse(cmbStudentCode.SelectedValue.ToString()), int.Parse(cmbTaskTypeCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), Convert.ToDateTime(cmbTime.Text), int.Parse(cmbAssignedStaffCode.SelectedValue.ToString()), "Pending");
+            DAL.RequestClass request = new DAL.RequestClass(DAL.RequestClass.RequestCode, txtDescription.Text, int.Parse(cmbStaffCode.SelectedValue.ToString()), int.Parse(cmbStudentCode.SelectedValue.ToString()), int.Parse(cmbTaskTypeCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), cmbTime.SelectedText.ToString(), int.Parse(cmbAssignedStaffCode.SelectedValue.ToString()), "Pending");
 
             int x = bll.UpdateRequest(request);
 

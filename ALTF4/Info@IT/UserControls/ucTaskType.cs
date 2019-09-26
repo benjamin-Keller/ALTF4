@@ -15,8 +15,8 @@ namespace Info_IT.UserControls
 
 		private void UcTaskType_Load(object sender, EventArgs e)
 		{
-
-		}
+            dgvTaskType.DataSource = bll.GetTasktype();
+        }
 
 		//Menu button (Manage)
 		private void BtnManage_Click(object sender, EventArgs e)

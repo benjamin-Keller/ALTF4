@@ -241,7 +241,7 @@ namespace DAL
                 dbConn.Open();
             }
             catch { }
-            dbCmd = new SqlCommand("dbo.sp_DisplayInspectionFaults", dbConn);
+            dbCmd = new SqlCommand("dbo.sp_DisplayAllInspectDetailsPending", dbConn);
             //dbCmd.CommandText = "sp_DisplayVenue";
             //dbCmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
@@ -690,9 +690,7 @@ namespace DAL
             return dt;
 
         }
-
-
-
+        
         public int AddStudent(StudentClass student)
         {
             try
@@ -727,9 +725,7 @@ namespace DAL
             catch { }
             return x;
         }
-
         
-
         public int AddTaskType(TaskTypeClass taskType)
         {
             try
@@ -779,8 +775,8 @@ namespace DAL
 
                 dbCmd.Parameters.AddWithValue("@RequestCode", TutorRequestClass.RequestCode);
                 dbCmd.Parameters.AddWithValue("@TutorRequestDate", tutorRequest.Date);
-                dbCmd.Parameters.AddWithValue("@StartTime", tutorRequest.StartTime.ToShortTimeString());
-                dbCmd.Parameters.AddWithValue("@EndTime", tutorRequest.EndTime.ToShortTimeString());
+                dbCmd.Parameters.AddWithValue("@StartTime", tutorRequest.StartTime);
+                dbCmd.Parameters.AddWithValue("@EndTime", tutorRequest.EndTime);
                 dbCmd.Parameters.AddWithValue("@ModuleCode", tutorRequest.ModuleCode);
                 dbCmd.Parameters.AddWithValue("@VenueCode", tutorRequest.VenueCode);
 
@@ -1491,5 +1487,573 @@ namespace DAL
 
             return dt;
         }
+
+        public DataTable DisplayDepartByBuilding(DepartmentClass department)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_DisplayDepartByBuilding", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@BuildingID", department.Building);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayEquipmentByVenue(EquipmentClass equipment)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportEquipmentVenue", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@VenueCode", equipment.VenueCode);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayEquipmentByEquipmentType(EquipmentClass equipment)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportEquipmentEquipType", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@EquipTypeCode", equipment.EquipTypeCode);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayInspectionByDate(InspectionClass inspection)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportInspectionDate", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@InspectionDate", inspection.InspectionDate);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayInspectionByStaffCode(InspectionClass inspection)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportInspectionStaffCode", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@StaffCode", inspection.StaffCode);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayInspectionByVenue(InspectionClass inspection)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportInspectionVenue", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@VenueCode", inspection.VenueCode);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayRequestsByAssignedStaff(RequestClass request)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportRequestsAssignedStaff", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@AssignedStaffCode", request.RequestAssignedStaffCode);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayRequestsByDate(RequestClass request)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportRequestsDate", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@RequestDate", request.RequestDate);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayRequestsByStudentCode(RequestClass request)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportRequestsStudentCode", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@StudentCode", request.RequestStudentCode);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayRequestsByStaffCode(RequestClass request)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportRequestStaffCode", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@StaffCode", request.RequestStaffCode);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayRequestsByTime(RequestClass request)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportRequestsTime", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@RequestTime", request.RequestTime);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayRequestsByTaskType(RequestClass request)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportRequestTaskType", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@TaskTypeCode", request.RequestTaskTypeCode);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayStaffByDepartment(StaffClass staff)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportStaffDepartment", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@DepartmentCode", staff.DepartmentCode);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayStaffByStaffType(StaffClass staff)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportStaffStaffType", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@StaffType", staff.StaffType);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayTutorRequestByRequestDate(TutorRequestClass tutorRequest)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportTutorRequestDate", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@TutorRequestDate", tutorRequest.Date);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayTutorRequestByRequestEndTime(TutorRequestClass tutorRequest)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportTutorRequestEndTime", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@EndTime", tutorRequest.EndTime);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayTutorRequestByRequestModuleCode(TutorRequestClass tutorRequest)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportTutorRequestModuleCode", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@ModuleCode", tutorRequest.ModuleCode);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+        
+        public DataTable DisplayTutorRequestByRequestStartTime(TutorRequestClass tutorRequest)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportTutorRequestsStartTime", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@StartTime", tutorRequest.StartTime);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayTutorRequestByRequestVenue(TutorRequestClass tutorRequest)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportTutorRequestsVenue", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@VenueCode", tutorRequest.VenueCode);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayVenueByBuilding(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportVenueBuilding", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@BuildingID", venue.VenueBuilding);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayVenueByBuildingBlock(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportVenueBuildingBlock", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@BuildingBlockID", venue.VenueBuildingBlock);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
     }
 }

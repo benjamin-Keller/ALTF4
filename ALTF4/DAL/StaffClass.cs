@@ -17,7 +17,12 @@ namespace DAL
         public string StaffType { get; set; }
         public int DepartmentCode { get; set; }
 
-        
+
+        public StaffClass()
+        {
+
+        }
+
 
         public StaffClass( int code , int staffNumber, string name, string surname, string emailAddress, int contactNumber, string staffType, int departmentCode)
         {

@@ -12,6 +12,12 @@ namespace DAL
         public string Name { get; set; }
 
 
+        public TaskTypeClass()
+        {
+
+        }
+
+
         public TaskTypeClass(string name)
         {
             Name = name;

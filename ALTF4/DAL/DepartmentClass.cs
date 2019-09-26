@@ -15,6 +15,11 @@ namespace DAL
         public string ContactNumber { get; set; }
         public string Email { get; set; }
 
+        public DepartmentClass()
+        {
+            
+        }
+
         public DepartmentClass(string name, int building, string contactPerson, string email, string contactNumber)
         {
             DepartmentName = name;

@@ -20,8 +20,8 @@ namespace Info_IT.UserControls
 		}
 		private void UcStudent_Load(object sender, EventArgs e)
 		{
-
-		}
+            dgvStudent.DataSource = bll.GetStudent();
+        }
 
 		//Menu button (Manage)
 		private void BtnManage_Click(object sender, EventArgs e)

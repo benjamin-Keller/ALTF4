@@ -15,6 +15,11 @@ namespace DAL
         public string EmailAddress { get; set; }
 
 
+        public StudentClass()
+        {
+
+        }
+
         public StudentClass(string studentNumber, string name, string surname, string emailAddress)
         {
             StudentNumber = studentNumber;
