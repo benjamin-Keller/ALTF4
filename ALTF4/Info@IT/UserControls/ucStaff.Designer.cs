@@ -68,6 +68,7 @@
             // 
             // dgvStaff
             // 
+            this.dgvStaff.AllowUserToAddRows = false;
             this.dgvStaff.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvStaff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -275,10 +276,6 @@
             // cmbStaffType
             // 
             this.cmbStaffType.FormattingEnabled = true;
-            this.cmbStaffType.Items.AddRange(new object[] {
-            "Info@IT",
-            "Student Assistant",
-            "ICT HelpDesk"});
             this.cmbStaffType.Location = new System.Drawing.Point(15, 77);
             this.cmbStaffType.Name = "cmbStaffType";
             this.cmbStaffType.Size = new System.Drawing.Size(126, 23);
