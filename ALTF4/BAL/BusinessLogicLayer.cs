@@ -225,9 +225,9 @@ namespace BLL
             return dal.UpdateStaff(CLASS);
         }
 
-        public DataTable SelectForUpdateStaff(StaffClass staffed)
+        public DataTable SelectForUpdateStaffExUser(StaffClass staffed)
         {
-            return dal.SelectForUpdateStaff(staffed);
+            return dal.SelectForUpdateStaffExUser(staffed);
         }
         
         public int AddStudent(StudentClass student)

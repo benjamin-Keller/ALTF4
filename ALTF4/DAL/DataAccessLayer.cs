@@ -600,6 +600,7 @@ namespace DAL
                 dbCmd = new SqlCommand("dbo.sp_AddStaff", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
+                dbCmd.Parameters.AddWithValue("@StaffCode", DAL.StaffClass.StaffCode);
                 dbCmd.Parameters.AddWithValue("@StaffNumber",staff.StaffNumber);
                 dbCmd.Parameters.AddWithValue("@FirstName", staff.Name);
                 dbCmd.Parameters.AddWithValue("@LastName", staff.Surname);
@@ -663,7 +664,7 @@ namespace DAL
             return x;
         }
 
-        public DataTable SelectForUpdateStaff(StaffClass staffed)
+        public DataTable SelectForUpdateStaffExUser(StaffClass staffed)
         {
             try
             {
@@ -671,7 +672,7 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateStaff", dbConn);
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateStaffExUser", dbConn);
             dbCmd.CommandType = CommandType.StoredProcedure;
 
             dbCmd.Parameters.AddWithValue("@StaffCode", DAL.StaffClass.StaffCode);
@@ -741,7 +742,7 @@ namespace DAL
                 dbCmd = new SqlCommand("dbo.sp_AddTaskType", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
-                dbCmd.Parameters.AddWithValue("@VenueDescription", taskType.Name);
+                dbCmd.Parameters.AddWithValue("@TaskName", taskType.Name);
 
                 x = dbCmd.ExecuteNonQuery();
             }
@@ -1131,7 +1132,7 @@ namespace DAL
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
                 dbCmd.Parameters.AddWithValue("@TaskTypeCode", DAL.TaskTypeClass.TaskTypeCode);
-                dbCmd.Parameters.AddWithValue("@Name", taskType.Name);
+                dbCmd.Parameters.AddWithValue("@TaskTypeName", taskType.Name);
                 x = dbCmd.ExecuteNonQuery();
             }
 

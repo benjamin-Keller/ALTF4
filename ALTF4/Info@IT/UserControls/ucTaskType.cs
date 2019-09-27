@@ -115,7 +115,7 @@ namespace Info_IT.UserControls
 
         }
 
-        private void dgvTaskType_CellCLick(object sender, DataGridViewCellEventArgs e)
+        private void dgvTaskType_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DAL.TaskTypeClass taskType = new DAL.TaskTypeClass(int.Parse(dgvTaskType.SelectedRows[0].Cells[0].Value.ToString()));
 

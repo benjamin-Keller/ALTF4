@@ -145,11 +145,11 @@ namespace Info_IT.UserControls
 
         }
 
-        private void dgvStaff_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvStaffExUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DAL.StaffClass staffClass = new DAL.StaffClass(int.Parse(dgvStaff.SelectedRows[0].Cells[0].Value.ToString()));
 
-            var values = bll.SelectForUpdateStaff(staffClass);
+            var values = bll.SelectForUpdateStaffExUser(staffClass);
 
             txtStaffNumber.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
             txtName.Text = values.Rows[0].Table.Rows[0].ItemArray[2].ToString();
@@ -160,15 +160,7 @@ namespace Info_IT.UserControls
             cmbStaffType.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[6].ToString();
             cmbDepartmentCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[7].ToString();
 
-
-
-
-
         }
-
-
-
-
     }
 
 

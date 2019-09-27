@@ -75,7 +75,7 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(265, 44);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(236, 27);
             this.txtName.TabIndex = 3;
@@ -105,9 +105,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.groupBox1.Location = new System.Drawing.Point(312, 28);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1043, 87);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
@@ -116,7 +116,7 @@
             // txtStudentNumber
             // 
             this.txtStudentNumber.Location = new System.Drawing.Point(20, 44);
-            this.txtStudentNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStudentNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtStudentNumber.Name = "txtStudentNumber";
             this.txtStudentNumber.Size = new System.Drawing.Size(236, 27);
             this.txtStudentNumber.TabIndex = 12;
@@ -136,7 +136,7 @@
             // txtEmailAddress
             // 
             this.txtEmailAddress.Location = new System.Drawing.Point(756, 44);
-            this.txtEmailAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmailAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmailAddress.Name = "txtEmailAddress";
             this.txtEmailAddress.Size = new System.Drawing.Size(236, 27);
             this.txtEmailAddress.TabIndex = 10;
@@ -144,7 +144,7 @@
             // txtSurname
             // 
             this.txtSurname.Location = new System.Drawing.Point(511, 44);
-            this.txtSurname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(4);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(236, 27);
             this.txtSurname.TabIndex = 9;
@@ -185,12 +185,13 @@
             this.dgvStudent.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
             this.dgvStudent.HeaderForeColor = System.Drawing.Color.White;
             this.dgvStudent.Location = new System.Drawing.Point(0, -1);
-            this.dgvStudent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvStudent.Margin = new System.Windows.Forms.Padding(4);
             this.dgvStudent.Name = "dgvStudent";
             this.dgvStudent.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvStudent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStudent.Size = new System.Drawing.Size(1043, 528);
             this.dgvStudent.TabIndex = 1;
+            this.dgvStudent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudent_CellClick);
             // 
             // panel1
             // 
@@ -199,7 +200,7 @@
             this.panel1.Controls.Add(this.pnlManage);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(267, 692);
             this.panel1.TabIndex = 15;
@@ -212,7 +213,7 @@
             this.pnlView.Controls.Add(this.btnView);
             this.pnlView.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlView.Location = new System.Drawing.Point(0, 65);
-            this.pnlView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlView.Margin = new System.Windows.Forms.Padding(4);
             this.pnlView.MaximumSize = new System.Drawing.Size(267, 142);
             this.pnlView.MinimumSize = new System.Drawing.Size(267, 65);
             this.pnlView.Name = "pnlView";
@@ -227,7 +228,7 @@
             this.btnViewList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewList.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.btnViewList.Location = new System.Drawing.Point(0, 65);
-            this.btnViewList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnViewList.Margin = new System.Windows.Forms.Padding(4);
             this.btnViewList.Name = "btnViewList";
             this.btnViewList.Size = new System.Drawing.Size(267, 38);
             this.btnViewList.TabIndex = 6;
@@ -243,7 +244,7 @@
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnView.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnView.Location = new System.Drawing.Point(0, 0);
-            this.btnView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnView.Margin = new System.Windows.Forms.Padding(4);
             this.btnView.MinimumSize = new System.Drawing.Size(240, 65);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(267, 65);
@@ -261,7 +262,7 @@
             this.pnlManage.Controls.Add(this.btnManage);
             this.pnlManage.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlManage.Location = new System.Drawing.Point(0, 0);
-            this.pnlManage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlManage.Margin = new System.Windows.Forms.Padding(4);
             this.pnlManage.MaximumSize = new System.Drawing.Size(267, 140);
             this.pnlManage.MinimumSize = new System.Drawing.Size(267, 65);
             this.pnlManage.Name = "pnlManage";
@@ -276,7 +277,7 @@
             this.btnManageUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageUpdate.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.btnManageUpdate.Location = new System.Drawing.Point(0, 103);
-            this.btnManageUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnManageUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnManageUpdate.Name = "btnManageUpdate";
             this.btnManageUpdate.Size = new System.Drawing.Size(267, 38);
             this.btnManageUpdate.TabIndex = 7;
@@ -292,7 +293,7 @@
             this.btnManageAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManageAdd.Font = new System.Drawing.Font("Segoe UI", 8.75F);
             this.btnManageAdd.Location = new System.Drawing.Point(0, 65);
-            this.btnManageAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnManageAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnManageAdd.Name = "btnManageAdd";
             this.btnManageAdd.Size = new System.Drawing.Size(267, 38);
             this.btnManageAdd.TabIndex = 6;
@@ -308,7 +309,7 @@
             this.btnManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnManage.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnManage.Location = new System.Drawing.Point(0, 0);
-            this.btnManage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnManage.Margin = new System.Windows.Forms.Padding(4);
             this.btnManage.MinimumSize = new System.Drawing.Size(240, 65);
             this.btnManage.Name = "btnManage";
             this.btnManage.Size = new System.Drawing.Size(267, 65);
@@ -326,7 +327,7 @@
             // 
             this.panel3.Controls.Add(this.dgvStudent);
             this.panel3.Location = new System.Drawing.Point(312, 123);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1043, 524);
             this.panel3.TabIndex = 14;
@@ -342,7 +343,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucStudent";
             this.Size = new System.Drawing.Size(1408, 692);
             this.Load += new System.EventHandler(this.UcStudent_Load);
