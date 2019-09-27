@@ -276,6 +276,10 @@
             // cmbStaffType
             // 
             this.cmbStaffType.FormattingEnabled = true;
+            this.cmbStaffType.Items.AddRange(new object[] {
+            "ICT HelpDesk",
+            "Info@IT",
+            "Student Assistant"});
             this.cmbStaffType.Location = new System.Drawing.Point(15, 77);
             this.cmbStaffType.Name = "cmbStaffType";
             this.cmbStaffType.Size = new System.Drawing.Size(126, 23);
