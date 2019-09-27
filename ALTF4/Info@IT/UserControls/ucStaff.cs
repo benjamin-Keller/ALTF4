@@ -21,8 +21,13 @@ namespace Info_IT.UserControls
 
 		private void UcStaff_Load(object sender, EventArgs e)
 		{
+            dgvStaff.DataSource = bll.GetStaff();
 
-		}
+            cmbDepartmentCode.DataSource = bll.GetDepartment();
+
+            cmbDepartmentCode.DisplayMember = "DepartmentName";
+            cmbDepartmentCode.ValueMember = "DepartmentCode";
+        }
 
 		//Menu button (Manage)
 		private void BtnManage_Click(object sender, EventArgs e)

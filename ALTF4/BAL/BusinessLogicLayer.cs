@@ -259,5 +259,111 @@ namespace BLL
         {
             return dal.GetLogin(login);
         }
+
+        public DataTable Report_DislayDepartmentByBuilding(DepartmentClass department)
+        {
+            return dal.DisplayDepartByBuilding(department);
+        }
+
+        public DataTable Report_DisplayEquipmentByEquipmentType(EquipmentClass equipment)
+        {
+            return dal.DisplayEquipmentByEquipmentType(equipment);
+        }
+
+        public DataTable Report_DisplayEquipmentByVenue(EquipmentClass equipment)
+        {
+            return dal.DisplayEquipmentByVenue(equipment);
+        }
+
+        public DataTable Report_DisplayInspectionByDate(InspectionClass inspection)
+        {
+            return dal.DisplayInspectionByDate(inspection);
+        }
+
+        public DataTable Report_DisplayInspectionByStaffCode(InspectionClass inspection)
+        {
+            return dal.DisplayInspectionByStaffCode(inspection);
+        }
+
+        public DataTable Report_DisplayInspectionByVenue(InspectionClass inspection)
+        {
+            return dal.DisplayInspectionByVenue(inspection);
+        }
+
+        public DataTable Report_DisplayRequestsByAssignedStaff(RequestClass request)
+        {
+            return dal.DisplayRequestsByAssignedStaff(request);
+        }
+
+        public DataTable Report_DisplayRequestsByDate(RequestClass request)
+        {
+            return dal.DisplayRequestsByDate(request);
+        }
+
+        public DataTable Report_DisplayRequestsByStaffCode(RequestClass request)
+        {
+            return dal.DisplayRequestsByStaffCode(request);
+        }
+
+        public DataTable Report_DisplayRequestsByStudentCode(RequestClass request)
+        {
+            return dal.DisplayRequestsByStudentCode(request);
+        }
+
+        public DataTable Report_DisplayRequestsByTaskType(RequestClass request)
+        {
+            return dal.DisplayRequestsByTaskType(request);
+        }
+
+        public DataTable Report_DisplayRequestsByTime(RequestClass request)
+        {
+            return dal.DisplayRequestsByTime(request);
+        }
+
+        public DataTable Report_DisplayStaffByDepartment(StaffClass staff)
+        {
+            return dal.DisplayStaffByDepartment(staff);
+        }
+
+        public DataTable Report_DisplayStaffByStaffType(StaffClass staff)
+        {
+            return dal.DisplayStaffByStaffType(staff);
+        }
+
+        public DataTable Report_DisplayTutorRequestByRequestDate(TutorRequestClass tutorRequest)
+        {
+            return dal.DisplayTutorRequestByRequestDate(tutorRequest);
+        }
+
+        public DataTable Report_DisplayTutorRequestByRequestEndTime(TutorRequestClass tutorRequest)
+        {
+            return dal.DisplayTutorRequestByRequestEndTime(tutorRequest);
+        }
+
+        public DataTable Report_DisplayTutorRequestByRequestModuleCode(TutorRequestClass tutorRequest)
+        {
+            return dal.DisplayTutorRequestByRequestModuleCode(tutorRequest);
+        }
+
+        public DataTable Report_DisplayTutorRequestByRequestStartTime(TutorRequestClass tutorRequest)
+        {
+            return dal.DisplayTutorRequestByRequestStartTime(tutorRequest);
+        }
+
+        public DataTable Report_DisplayTutorRequestByRequestVenue(TutorRequestClass tutorRequest)
+        {
+            return dal.DisplayTutorRequestByRequestVenue(tutorRequest);
+        }
+
+        public DataTable Report_DisplayVenueByBuilding(VenueClass venue)
+        {
+            return dal.DisplayVenueByBuilding(venue);
+        }
+
+        public DataTable Report_DisplayVenueByBuildingBlock(VenueClass venue)
+        {
+            return dal.DisplayVenueByBuildingBlock(venue);
+        }
+        
     }
 }

@@ -80,7 +80,7 @@ namespace Info_IT.UserControls
 		{
             try
             {
-                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), Convert.ToDateTime(cmbStartTime.Text), Convert.ToDateTime(cmbEndTime.Text), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()));
+                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), cmbStartTime.SelectedItem.ToString(), cmbEndTime.SelectedItem.ToString(), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()));
 
                 int x = bll.AddTutorRequest(tutorRequest);
 
@@ -117,7 +117,7 @@ namespace Info_IT.UserControls
 
             try
             {
-                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), Convert.ToDateTime(cmbStartTime.Text), Convert.ToDateTime(cmbEndTime.Text), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()));
+                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), cmbStartTime.SelectedItem.ToString(), cmbEndTime.SelectedItem.ToString(), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()));
 
                 int x = bll.UpdateTutorRequest(tutorRequest);
 

@@ -73,7 +73,7 @@ namespace Info_IT.UserControls
 
 
                 //Error for input string not found
-                DAL.InspectionClass inspection = new DAL.InspectionClass(dateInspection.Text, txtTime.Text, txtComment.Text, int.Parse(cmbVenueCode.SelectedValue.ToString()), int.Parse(cmbStaffCode.SelectedValue.ToString()));
+                DAL.InspectionClass inspection = new DAL.InspectionClass(Convert.ToDateTime(dateInspection.Text), txtTime.Text, txtComment.Text, int.Parse(cmbVenueCode.SelectedValue.ToString()), int.Parse(cmbStaffCode.SelectedValue.ToString()));
                 int x = bll.AddInspection(inspection);
 
                 if (x > 0)
@@ -103,7 +103,7 @@ namespace Info_IT.UserControls
             {
 
                 //Error for input string not found
-                DAL.InspectionClass inspection = new DAL.InspectionClass(DAL.InspectionClass.InspectionCode, dateInspection.Text, txtTime.Text, txtComment.Text, int.Parse(cmbVenueCode.SelectedValue.ToString()), int.Parse(cmbStaffCode.SelectedValue.ToString()));
+                DAL.InspectionClass inspection = new DAL.InspectionClass(DAL.InspectionClass.InspectionCode, Convert.ToDateTime(dateInspection.Text), txtTime.Text, txtComment.Text, int.Parse(cmbVenueCode.SelectedValue.ToString()), int.Parse(cmbStaffCode.SelectedValue.ToString()));
                 int x = bll.UpdateInspection(inspection);
 
                 if (x > 0)

@@ -10,12 +10,17 @@ namespace DAL
     {
         public static int RequestCode { get; set; }
         public DateTime Date { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
+        public string StartTime { get; set; }
+        public string EndTime { get; set; }
         public int ModuleCode { get; set; }
         public int VenueCode { get; set; }
 
-        public TutorRequestClass(int requestCode, DateTime date, DateTime startTime, DateTime endTime, int moduleCode, int venueCode)
+        public TutorRequestClass()
+        {
+
+        }
+
+        public TutorRequestClass(int requestCode, DateTime date, string startTime, string endTime, int moduleCode, int venueCode)
         {
             RequestCode = requestCode;
             Date = date;
