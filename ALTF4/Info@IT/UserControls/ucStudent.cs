@@ -131,11 +131,16 @@ namespace Info_IT.UserControls
             txtStudentNumber.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
             txtName.Text = values.Rows[0].Table.Rows[0].ItemArray[2].ToString();
             txtSurname.Text = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
-            txtEmailAddress.Text = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
+            txtEmailAddress.Text = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
 
 
 
 
         }
-	}
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
 }
