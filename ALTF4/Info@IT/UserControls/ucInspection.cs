@@ -152,5 +152,10 @@ namespace Info_IT.UserControls
             cmbVenueCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[1];
             cmbStaffCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2];
         }
+
+        private void ucInspectionDetails1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -707,9 +707,10 @@ namespace DAL
                 dbCmd = new SqlCommand("dbo.sp_AddStudent", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
+                dbCmd.Parameters.AddWithValue("@StudentCode", DAL.StudentClass.StudentCode);
                 dbCmd.Parameters.AddWithValue("@StudentNumber", student.StudentNumber);
-                dbCmd.Parameters.AddWithValue("@Name", student.Name);
-                dbCmd.Parameters.AddWithValue("@Surname", student.Surname);
+                dbCmd.Parameters.AddWithValue("@FirstName", student.Name);
+                dbCmd.Parameters.AddWithValue("@LastName", student.Surname);
                 dbCmd.Parameters.AddWithValue("@Email", student.EmailAddress);
 
                 x = dbCmd.ExecuteNonQuery();
@@ -875,6 +876,7 @@ namespace DAL
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
                 dbCmd.Parameters.AddWithValue("@StudentCode", DAL.StudentClass.StudentCode);
+                dbCmd.Parameters.AddWithValue("@StudentNumber", studentClass.StudentNumber);
                 dbCmd.Parameters.AddWithValue("@FirstName", studentClass.Name);
                 dbCmd.Parameters.AddWithValue("@LastName", studentClass.Surname);
                 dbCmd.Parameters.AddWithValue("@Email", studentClass.EmailAddress);

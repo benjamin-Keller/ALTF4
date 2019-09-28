@@ -87,12 +87,12 @@ namespace Info_IT.UserControls
 
         private void BtnManageUpdate_Click(object sender, EventArgs e)
 		{
-            dgvStudent.DataSource = bll.GetDepartment();
+            dgvStudent.DataSource = bll.GetStudent();
             dgvStudent.BackgroundColor = Color.White;
 
             try
             {
-                DAL.StudentClass studentClass = new DAL.StudentClass(txtStudentNumber.Text, txtName.Text, txtSurname.Text, txtEmailAddress.Text);
+                DAL.StudentClass studentClass = new DAL.StudentClass(DAL.StudentClass.StudentCode, txtStudentNumber.Text, txtName.Text, txtSurname.Text, txtEmailAddress.Text);
                 int x = bll.UpdateStudent(studentClass);
 
                 if(x > 0)
