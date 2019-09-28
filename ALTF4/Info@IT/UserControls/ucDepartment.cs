@@ -122,7 +122,7 @@ namespace Info_IT.UserControls
 
         private void dgvDepartment_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DAL.DepartmentClass depClass = new DAL.DepartmentClass(int.Parse(dgvDepartment.SelectedRows[0].Cells[0].Value.ToString()));
+			DAL.DepartmentClass depClass = new DAL.DepartmentClass(int.Parse(dgvDepartment.SelectedRows[0].Cells[0].Value.ToString()));
 
             var values = bll.SelectedForUpdateDepartment(depClass);
 

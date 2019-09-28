@@ -52,6 +52,8 @@
 			// 
 			// dgvVenueReport
 			// 
+			this.dgvVenueReport.AllowUserToAddRows = false;
+			this.dgvVenueReport.AllowUserToDeleteRows = false;
 			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.dgvVenueReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvVenueReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -110,6 +112,7 @@
 			this.cmbBuildingBlock.Name = "cmbBuildingBlock";
 			this.cmbBuildingBlock.Size = new System.Drawing.Size(144, 23);
 			this.cmbBuildingBlock.TabIndex = 10;
+			this.cmbBuildingBlock.SelectedIndexChanged += new System.EventHandler(this.cmbBuildingBlock_SelectedIndexChanged);
 			// 
 			// label4
 			// 
@@ -129,6 +132,7 @@
 			this.cmbBuilding.Name = "cmbBuilding";
 			this.cmbBuilding.Size = new System.Drawing.Size(144, 23);
 			this.cmbBuilding.TabIndex = 4;
+			this.cmbBuilding.SelectedIndexChanged += new System.EventHandler(this.cmbBuilding_SelectedIndexChanged);
 			// 
 			// ucReportVenue
 			// 

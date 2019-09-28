@@ -60,6 +60,7 @@
 			this.cmbBuilding.Name = "cmbBuilding";
 			this.cmbBuilding.Size = new System.Drawing.Size(125, 23);
 			this.cmbBuilding.TabIndex = 7;
+			this.cmbBuilding.SelectedIndexChanged += new System.EventHandler(this.cmbBuilding_SelectedIndexChanged);
 			// 
 			// label3
 			// 
@@ -82,6 +83,8 @@
 			// 
 			// dgvDepartmentReport
 			// 
+			this.dgvDepartmentReport.AllowUserToAddRows = false;
+			this.dgvDepartmentReport.AllowUserToDeleteRows = false;
 			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.dgvDepartmentReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvDepartmentReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;

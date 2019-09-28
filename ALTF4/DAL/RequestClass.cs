@@ -14,11 +14,16 @@ namespace DAL
         public int RequestStudentCode { get; set; }
         public int RequestTaskTypeCode { get; set; }
         public DateTime RequestDate { get; set; }
-        public DateTime RequestTime { get; set; }
+        public string RequestTime { get; set; }
         public int RequestAssignedStaffCode { get; set; }
         public string RequestStatus { get; set; }
 
-        public RequestClass(string description, int staffCode, int studentCode, int taskTypeCode, DateTime date, DateTime time, int assignedStaffCode, string status)
+        public RequestClass()
+        {
+
+        }
+
+        public RequestClass(string description, int staffCode, int studentCode, int taskTypeCode, DateTime date, string time, int assignedStaffCode, string status)
         {
             RequestDescription = description;
             RequestStaffCode = staffCode;
@@ -28,9 +33,24 @@ namespace DAL
             RequestTime = time;
             RequestAssignedStaffCode = assignedStaffCode;
             RequestStatus = status;
+        }
 
+        public RequestClass(int code, string description, int staffCode, int studentCode, int taskTypeCode, DateTime date, string time, int assignedStaffCode, string status)
+        {
+            RequestCode = code;
+            RequestDescription = description;
+            RequestStaffCode = staffCode;
+            RequestStudentCode = studentCode;
+            RequestTaskTypeCode = taskTypeCode;
+            RequestDate = date;
+            RequestTime = time;
+            RequestAssignedStaffCode = assignedStaffCode;
+            RequestStatus = status;
+        }
 
-
+        public RequestClass(int code)
+        {
+            RequestCode = code;
         }
     }
 }

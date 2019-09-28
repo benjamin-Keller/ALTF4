@@ -13,6 +13,11 @@ namespace DAL
         public int VenueCode { get; set; }
         public int EquipTypeCode { get; set; }
 
+        public EquipmentClass()
+        {
+
+        }
+
         public EquipmentClass(string desc, int venueCode, int equipTypeCode)
         {
             EquipmentDescription = desc;

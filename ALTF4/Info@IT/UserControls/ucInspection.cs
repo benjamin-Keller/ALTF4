@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 
@@ -79,7 +73,7 @@ namespace Info_IT.UserControls
 
 
                 //Error for input string not found
-                DAL.InspectionClass inspection = new DAL.InspectionClass(dateInspection.Text, txtTime.Text, txtComment.Text, int.Parse(cmbVenueCode.SelectedValue.ToString()), int.Parse(cmbStaffCode.SelectedValue.ToString()));
+                DAL.InspectionClass inspection = new DAL.InspectionClass(Convert.ToDateTime(dateInspection.Text), txtTime.Text, txtComment.Text, int.Parse(cmbVenueCode.SelectedValue.ToString()), int.Parse(cmbStaffCode.SelectedValue.ToString()));
                 int x = bll.AddInspection(inspection);
 
                 if (x > 0)
@@ -105,10 +99,35 @@ namespace Info_IT.UserControls
 
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
 		{
+            try
+            {
 
-		}
+                //Error for input string not found
+                DAL.InspectionClass inspection = new DAL.InspectionClass(DAL.InspectionClass.InspectionCode, Convert.ToDateTime(dateInspection.Text), txtTime.Text, txtComment.Text, int.Parse(cmbVenueCode.SelectedValue.ToString()), int.Parse(cmbStaffCode.SelectedValue.ToString()));
+                int x = bll.UpdateInspection(inspection);
 
-		private void BtnViewList_Click(object sender, EventArgs e)
+                if (x > 0)
+                {
+                    dateInspection.ResetText();
+                    txtTime.Clear();
+                    txtComment.Clear();
+                    cmbVenueCode.ValueMember = "";
+                    cmbStaffCode.ValueMember = "";
+                }
+                else
+                {
+                    MessageBox.Show("Please input valid data.");
+                }
+            }
+            catch (Exception b)
+            {
+                MessageBox.Show("Please input valid data.");
+            }
+
+            dgvInspection.DataSource = bll.GetInspection();
+        }
+
+        private void BtnViewList_Click(object sender, EventArgs e)
 		{
             dgvInspection.DataSource = bll.GetInspection();
             dgvInspection.BackgroundColor = Color.White;
@@ -116,8 +135,27 @@ namespace Info_IT.UserControls
 
 		private void BtnViewInspectiondetails_Click(object sender, EventArgs e)
 		{
-
 			ucInspectionDetails1.Show();
 		}
-	}
+
+        private void dgvInspection_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            DAL.InspectionClass inspectClass = new DAL.InspectionClass(int.Parse(dgvInspection.SelectedRows[0].Cells[0].Value.ToString()));
+
+            var values = bll.SelectedForUpdateInspection(inspectClass);
+
+            dateInspection.Text = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
+            txtTime.Text = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
+            txtComment.Text = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
+
+            cmbVenueCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[1];
+            cmbStaffCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2];
+        }
+
+        private void ucInspectionDetails1_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

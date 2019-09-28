@@ -15,6 +15,11 @@ namespace DAL
         public string FaultComment { get; set; }
         public string InspectionStatus { get; set; }
 
+        public InspectionDetailClass()
+        {
+
+        }
+
         public InspectionDetailClass(int inspectionCode, int equipmentCode, int staffCode, string comment, string status)
         {
             InspectionCode = inspectionCode;
@@ -32,6 +37,11 @@ namespace DAL
             StaffCode = staffCode;
             FaultComment = comment;
             InspectionStatus = status;
+        }
+
+        public InspectionDetailClass(int code)
+        {
+            InspectionDetailCode = code;
         }
     }
 }

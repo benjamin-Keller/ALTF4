@@ -28,8 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dgvRequestReport = new Bunifu.Framework.UI.BunifuCustomDataGrid();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -60,20 +60,22 @@
 			// 
 			// dgvRequestReport
 			// 
-			dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvRequestReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+			this.dgvRequestReport.AllowUserToAddRows = false;
+			this.dgvRequestReport.AllowUserToDeleteRows = false;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvRequestReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvRequestReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvRequestReport.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvRequestReport.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvRequestReport.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvRequestReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvRequestReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvRequestReport.ColumnHeadersHeight = 50;
 			this.dgvRequestReport.DoubleBuffered = true;
 			this.dgvRequestReport.EnableHeadersVisualStyles = false;
@@ -112,28 +114,29 @@
 			// 
 			this.cmbTime.FormattingEnabled = true;
 			this.cmbTime.Items.AddRange(new object[] {
-            "08:00",
-            "08:30",
-            "09:00",
-            "09:30",
-            "10:00",
-            "10:30",
-            "11:00",
-            "11:30",
-            "12:00",
-            "12:30",
-            "13:00",
-            "13:30",
-            "14:00",
-            "14:30",
-            "15:00",
-            "15:30",
-            "16:00",
-            "16:30"});
+            "08:00:00",
+            "08:30:00",
+            "09:00:00",
+            "09:30:00",
+            "10:00:00",
+            "10:30:00",
+            "11:00:00",
+            "11:30:00",
+            "12:00:00",
+            "12:30:00",
+            "13:00:00",
+            "13:30:00",
+            "14:00:00",
+            "14:30:00",
+            "15:00:00",
+            "15:30:00",
+            "16:00:00",
+            "16:30:00"});
 			this.cmbTime.Location = new System.Drawing.Point(531, 32);
 			this.cmbTime.Name = "cmbTime";
 			this.cmbTime.Size = new System.Drawing.Size(90, 23);
 			this.cmbTime.TabIndex = 25;
+			this.cmbTime.SelectedIndexChanged += new System.EventHandler(this.cmbTime_SelectedIndexChanged);
 			// 
 			// cmbAssignedStaffCode
 			// 
@@ -142,6 +145,7 @@
 			this.cmbAssignedStaffCode.Name = "cmbAssignedStaffCode";
 			this.cmbAssignedStaffCode.Size = new System.Drawing.Size(149, 23);
 			this.cmbAssignedStaffCode.TabIndex = 21;
+			this.cmbAssignedStaffCode.SelectedIndexChanged += new System.EventHandler(this.cmbAssignedStaffCode_SelectedIndexChanged);
 			// 
 			// label8
 			// 
@@ -173,6 +177,7 @@
 			this.dateRequest.Name = "dateRequest";
 			this.dateRequest.Size = new System.Drawing.Size(144, 23);
 			this.dateRequest.TabIndex = 16;
+			this.dateRequest.ValueChanged += new System.EventHandler(this.dateRequest_ValueChanged);
 			// 
 			// cmbTaskTypeCode
 			// 
@@ -181,6 +186,7 @@
 			this.cmbTaskTypeCode.Name = "cmbTaskTypeCode";
 			this.cmbTaskTypeCode.Size = new System.Drawing.Size(116, 23);
 			this.cmbTaskTypeCode.TabIndex = 15;
+			this.cmbTaskTypeCode.SelectedIndexChanged += new System.EventHandler(this.cmbTaskTypeCode_SelectedIndexChanged);
 			// 
 			// cmbStudentCode
 			// 
@@ -189,6 +195,7 @@
 			this.cmbStudentCode.Name = "cmbStudentCode";
 			this.cmbStudentCode.Size = new System.Drawing.Size(116, 23);
 			this.cmbStudentCode.TabIndex = 14;
+			this.cmbStudentCode.SelectedIndexChanged += new System.EventHandler(this.cmbStudentCode_SelectedIndexChanged);
 			// 
 			// cmbStaffCode
 			// 
@@ -197,6 +204,7 @@
 			this.cmbStaffCode.Name = "cmbStaffCode";
 			this.cmbStaffCode.Size = new System.Drawing.Size(116, 23);
 			this.cmbStaffCode.TabIndex = 7;
+			this.cmbStaffCode.SelectedIndexChanged += new System.EventHandler(this.cmbStaffCode_SelectedIndexChanged);
 			// 
 			// label6
 			// 

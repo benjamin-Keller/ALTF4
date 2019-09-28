@@ -28,8 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dgvTutorRequestReport = new Bunifu.Framework.UI.BunifuCustomDataGrid();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -60,20 +60,22 @@
 			// 
 			// dgvTutorRequestReport
 			// 
-			dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvTutorRequestReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+			this.dgvTutorRequestReport.AllowUserToAddRows = false;
+			this.dgvTutorRequestReport.AllowUserToDeleteRows = false;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvTutorRequestReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvTutorRequestReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvTutorRequestReport.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvTutorRequestReport.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvTutorRequestReport.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvTutorRequestReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvTutorRequestReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvTutorRequestReport.ColumnHeadersHeight = 50;
 			this.dgvTutorRequestReport.DoubleBuffered = true;
 			this.dgvTutorRequestReport.EnableHeadersVisualStyles = false;
@@ -134,6 +136,7 @@
 			this.cmbEndTime.Name = "cmbEndTime";
 			this.cmbEndTime.Size = new System.Drawing.Size(121, 23);
 			this.cmbEndTime.TabIndex = 37;
+			this.cmbEndTime.SelectedIndexChanged += new System.EventHandler(this.cmbEndTime_SelectedIndexChanged);
 			// 
 			// cmbStartTime
 			// 
@@ -161,6 +164,7 @@
 			this.cmbStartTime.Name = "cmbStartTime";
 			this.cmbStartTime.Size = new System.Drawing.Size(116, 23);
 			this.cmbStartTime.TabIndex = 36;
+			this.cmbStartTime.SelectedIndexChanged += new System.EventHandler(this.cmbStartTime_SelectedIndexChanged);
 			// 
 			// label4
 			// 
@@ -180,6 +184,7 @@
 			this.cmbRequestCode.Name = "cmbRequestCode";
 			this.cmbRequestCode.Size = new System.Drawing.Size(116, 23);
 			this.cmbRequestCode.TabIndex = 34;
+			this.cmbRequestCode.SelectedIndexChanged += new System.EventHandler(this.cmbRequestCode_SelectedIndexChanged);
 			// 
 			// label7
 			// 
@@ -200,6 +205,7 @@
 			this.dateRequest.Name = "dateRequest";
 			this.dateRequest.Size = new System.Drawing.Size(144, 23);
 			this.dateRequest.TabIndex = 32;
+			this.dateRequest.ValueChanged += new System.EventHandler(this.dateRequest_ValueChanged);
 			// 
 			// cmbVenueCode
 			// 
@@ -208,6 +214,7 @@
 			this.cmbVenueCode.Name = "cmbVenueCode";
 			this.cmbVenueCode.Size = new System.Drawing.Size(116, 23);
 			this.cmbVenueCode.TabIndex = 31;
+			this.cmbVenueCode.SelectedIndexChanged += new System.EventHandler(this.cmbVenueCode_SelectedIndexChanged);
 			// 
 			// cmbModuleCode
 			// 
@@ -216,6 +223,7 @@
 			this.cmbModuleCode.Name = "cmbModuleCode";
 			this.cmbModuleCode.Size = new System.Drawing.Size(116, 23);
 			this.cmbModuleCode.TabIndex = 28;
+			this.cmbModuleCode.SelectedIndexChanged += new System.EventHandler(this.cmbModuleCode_SelectedIndexChanged);
 			// 
 			// label6
 			// 

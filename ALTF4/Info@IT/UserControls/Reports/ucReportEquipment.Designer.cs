@@ -28,8 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dgvEquipmentReport = new Bunifu.Framework.UI.BunifuCustomDataGrid();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -52,20 +52,22 @@
 			// 
 			// dgvEquipmentReport
 			// 
-			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvEquipmentReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+			this.dgvEquipmentReport.AllowUserToAddRows = false;
+			this.dgvEquipmentReport.AllowUserToDeleteRows = false;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvEquipmentReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvEquipmentReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvEquipmentReport.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvEquipmentReport.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvEquipmentReport.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvEquipmentReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvEquipmentReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvEquipmentReport.ColumnHeadersHeight = 50;
 			this.dgvEquipmentReport.DoubleBuffered = true;
 			this.dgvEquipmentReport.EnableHeadersVisualStyles = false;
@@ -110,6 +112,7 @@
 			this.cmbVenue.Name = "cmbVenue";
 			this.cmbVenue.Size = new System.Drawing.Size(144, 23);
 			this.cmbVenue.TabIndex = 5;
+			this.cmbVenue.SelectedIndexChanged += new System.EventHandler(this.cmbVenue_SelectedIndexChanged);
 			// 
 			// cmbEquipType
 			// 
@@ -118,6 +121,7 @@
 			this.cmbEquipType.Name = "cmbEquipType";
 			this.cmbEquipType.Size = new System.Drawing.Size(144, 23);
 			this.cmbEquipType.TabIndex = 4;
+			this.cmbEquipType.SelectedIndexChanged += new System.EventHandler(this.cmbEquipType_SelectedIndexChanged);
 			// 
 			// label3
 			// 

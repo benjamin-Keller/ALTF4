@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 
@@ -91,12 +85,42 @@ namespace Info_IT.UserControls
 
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
 		{
+            try
+            {
+                //Error for input string not found
+                DAL.EquipmentTypeClass equipment = new DAL.EquipmentTypeClass(DAL.EquipmentTypeClass.EquipTypeCode, txtEquipmentType.Text);
+                int x = bll.UpdateEquipmentType(equipment);
 
+                if (x > 0)
+                {
+                    txtEquipmentType.Clear();                   
+                }
+                else
+                {
+                    MessageBox.Show("Please input valid data.");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Please input valid data.");
+            }
+
+            dgvEquipmentDetails.DataSource = bll.GetEquipmentType();
 		}
 
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
             dgvEquipmentDetails.DataSource = bll.GetEquipmentType();
+            dgvEquipmentDetails.BackgroundColor = Color.White;
         }
-	}
+
+        private void dgvEquipmentDetails_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DAL.EquipmentTypeClass equipmentTypeClass = new DAL.EquipmentTypeClass(int.Parse(dgvEquipmentDetails.SelectedRows[0].Cells[0].Value.ToString()));
+
+            var values = bll.SelectedForUpdateEquipmentType(equipmentTypeClass);
+
+            txtEquipmentType.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
+        }
+    }
 }

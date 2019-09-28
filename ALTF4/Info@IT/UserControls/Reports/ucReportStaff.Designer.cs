@@ -52,6 +52,8 @@
 			// 
 			// dgvStaffReport
 			// 
+			this.dgvStaffReport.AllowUserToAddRows = false;
+			this.dgvStaffReport.AllowUserToDeleteRows = false;
 			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.dgvStaffReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvStaffReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -99,6 +101,7 @@
 			this.cmbDepartmentCode.Name = "cmbDepartmentCode";
 			this.cmbDepartmentCode.Size = new System.Drawing.Size(126, 23);
 			this.cmbDepartmentCode.TabIndex = 49;
+			this.cmbDepartmentCode.SelectedIndexChanged += new System.EventHandler(this.cmbDepartmentCode_SelectedIndexChanged);
 			// 
 			// label7
 			// 
@@ -114,10 +117,15 @@
 			// cmbStaffType
 			// 
 			this.cmbStaffType.FormattingEnabled = true;
+			this.cmbStaffType.Items.AddRange(new object[] {
+            "Info@IT",
+            "Student Assistant",
+            "ICT HelpDesk"});
 			this.cmbStaffType.Location = new System.Drawing.Point(17, 35);
 			this.cmbStaffType.Name = "cmbStaffType";
 			this.cmbStaffType.Size = new System.Drawing.Size(126, 23);
 			this.cmbStaffType.TabIndex = 47;
+			this.cmbStaffType.SelectedIndexChanged += new System.EventHandler(this.cmbStaffType_SelectedIndexChanged);
 			// 
 			// label6
 			// 

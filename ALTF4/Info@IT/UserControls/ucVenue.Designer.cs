@@ -197,6 +197,7 @@
             // 
             // dgvVenue
             // 
+            this.dgvVenue.AllowUserToAddRows = false;
             this.dgvVenue.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvVenue.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -220,6 +221,7 @@
             this.dgvVenue.Location = new System.Drawing.Point(0, -1);
             this.dgvVenue.Name = "dgvVenue";
             this.dgvVenue.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvVenue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVenue.Size = new System.Drawing.Size(782, 429);
             this.dgvVenue.TabIndex = 1;
             this.dgvVenue.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVenue_CellClick);

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 
@@ -84,7 +78,7 @@ namespace Info_IT.UserControls
 
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
-            DAL.RequestClass request = new DAL.RequestClass(txtDescription.Text, int.Parse(cmbStaffCode.SelectedValue.ToString()), int.Parse(cmbStudentCode.SelectedValue.ToString()), int.Parse(cmbTaskTypeCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), Convert.ToDateTime(cmbTime.Text), int.Parse(cmbAssignedStaffCode.SelectedValue.ToString()), "Pending");
+            DAL.RequestClass request = new DAL.RequestClass(txtDescription.Text, int.Parse(cmbStaffCode.SelectedValue.ToString()), int.Parse(cmbStudentCode.SelectedValue.ToString()), int.Parse(cmbTaskTypeCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), cmbTime.SelectedItem.ToString(), int.Parse(cmbAssignedStaffCode.SelectedValue.ToString()), "Pending");
 
             int x = bll.AddRequest(request);
 
@@ -108,6 +102,30 @@ namespace Info_IT.UserControls
 
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
 		{
+            DAL.RequestClass request = new DAL.RequestClass(DAL.RequestClass.RequestCode, txtDescription.Text, int.Parse(cmbStaffCode.SelectedValue.ToString()), int.Parse(cmbStudentCode.SelectedValue.ToString()), int.Parse(cmbTaskTypeCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), cmbTime.SelectedText.ToString(), int.Parse(cmbAssignedStaffCode.SelectedValue.ToString()), "Pending");
+
+            int x = bll.UpdateRequest(request);
+
+            if (x > 0)
+            {
+                txtDescription.Clear();
+                cmbTime.ResetText();
+                cmbStaffCode.ResetText();
+                cmbStudentCode.ResetText();
+                cmbTaskTypeCode.ResetText();
+                cmbAssignedStaffCode.ResetText();
+                dateRequest.ResetText();
+            }
+            else
+            {
+                MessageBox.Show("Please input valid data.");
+            }
+
+            dgvRequest.DataSource = bll.GetRequests();
+        }
+
+		private void BtnManageDelete_Click(object sender, EventArgs e)
+		{
 
 		}
 
@@ -122,5 +140,23 @@ namespace Info_IT.UserControls
         {
 
         }
-    }
+
+        private void dgvRequest_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DAL.RequestClass requestClass = new DAL.RequestClass(int.Parse(dgvRequest.SelectedRows[0].Cells[0].Value.ToString()));
+
+            var values = bll.SelectedForUpdateRequest(requestClass);
+
+            txtDescription.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
+            dateRequest.Text = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
+
+            cmbStaffCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2];
+            cmbStudentCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[3];
+            cmbTaskTypeCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[4];
+            cmbTime.Text = values.Rows[0].Table.Rows[0].ItemArray[6].ToString();
+            cmbAssignedStaffCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[7];
+        }
+
+
+	}
 }

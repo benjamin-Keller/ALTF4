@@ -54,6 +54,8 @@
 			// 
 			// dgvInspectionReport
 			// 
+			this.dgvInspectionReport.AllowUserToAddRows = false;
+			this.dgvInspectionReport.AllowUserToDeleteRows = false;
 			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.dgvInspectionReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvInspectionReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -103,6 +105,7 @@
 			this.cmbStaffCode.Name = "cmbStaffCode";
 			this.cmbStaffCode.Size = new System.Drawing.Size(116, 23);
 			this.cmbStaffCode.TabIndex = 35;
+			this.cmbStaffCode.SelectedIndexChanged += new System.EventHandler(this.cmbStaffCode_SelectedIndexChanged);
 			// 
 			// label4
 			// 
@@ -122,6 +125,7 @@
 			this.cmbVenueCode.Name = "cmbVenueCode";
 			this.cmbVenueCode.Size = new System.Drawing.Size(116, 23);
 			this.cmbVenueCode.TabIndex = 33;
+			this.cmbVenueCode.SelectedIndexChanged += new System.EventHandler(this.cmbVenueCode_SelectedIndexChanged);
 			// 
 			// label5
 			// 
@@ -142,6 +146,7 @@
 			this.dateInspection.Name = "dateInspection";
 			this.dateInspection.Size = new System.Drawing.Size(144, 23);
 			this.dateInspection.TabIndex = 31;
+			this.dateInspection.ValueChanged += new System.EventHandler(this.dateInspection_ValueChanged);
 			// 
 			// label1
 			// 
