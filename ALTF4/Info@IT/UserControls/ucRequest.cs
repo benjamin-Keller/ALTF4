@@ -124,6 +124,11 @@ namespace Info_IT.UserControls
             dgvRequest.DataSource = bll.GetRequests();
         }
 
+		private void BtnManageDelete_Click(object sender, EventArgs e)
+		{
+
+		}
+
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
 			dgvRequest.DataSource = bll.GetRequests();
@@ -151,5 +156,7 @@ namespace Info_IT.UserControls
             cmbTime.Text = values.Rows[0].Table.Rows[0].ItemArray[6].ToString();
             cmbAssignedStaffCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[7];
         }
-    }
+
+
+	}
 }

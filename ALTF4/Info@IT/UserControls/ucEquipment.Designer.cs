@@ -29,8 +29,8 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dgvEquipment = new Bunifu.Framework.UI.BunifuCustomDataGrid();
 			this.panel1 = new System.Windows.Forms.Panel();
@@ -53,6 +53,7 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.ucEquipmentType1 = new Info_IT.UserControls.ucEquipmentType();
+			this.btnManageDelete = new System.Windows.Forms.Button();
 			this.panel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvEquipment)).BeginInit();
 			this.panel1.SuspendLayout();
@@ -73,20 +74,20 @@
 			// 
 			this.dgvEquipment.AllowUserToAddRows = false;
 			this.dgvEquipment.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvEquipment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvEquipment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
 			this.dgvEquipment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvEquipment.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvEquipment.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvEquipment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvEquipment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvEquipment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
 			this.dgvEquipment.ColumnHeadersHeight = 50;
 			this.dgvEquipment.DoubleBuffered = true;
 			this.dgvEquipment.EnableHeadersVisualStyles = false;
@@ -175,12 +176,13 @@
 			// pnlManage
 			// 
 			this.pnlManage.BackColor = System.Drawing.SystemColors.ControlDark;
+			this.pnlManage.Controls.Add(this.btnManageDelete);
 			this.pnlManage.Controls.Add(this.btnManageUpdate);
 			this.pnlManage.Controls.Add(this.btnManageAdd);
 			this.pnlManage.Controls.Add(this.btnManage);
 			this.pnlManage.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlManage.Location = new System.Drawing.Point(0, 0);
-			this.pnlManage.MaximumSize = new System.Drawing.Size(200, 114);
+			this.pnlManage.MaximumSize = new System.Drawing.Size(200, 148);
 			this.pnlManage.MinimumSize = new System.Drawing.Size(200, 53);
 			this.pnlManage.Name = "pnlManage";
 			this.pnlManage.Size = new System.Drawing.Size(200, 53);
@@ -326,6 +328,21 @@
 			this.ucEquipmentType1.Size = new System.Drawing.Size(1056, 562);
 			this.ucEquipmentType1.TabIndex = 1;
 			// 
+			// btnManageDelete
+			// 
+			this.btnManageDelete.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.btnManageDelete.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnManageDelete.FlatAppearance.BorderSize = 0;
+			this.btnManageDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnManageDelete.Font = new System.Drawing.Font("Segoe UI", 8.75F);
+			this.btnManageDelete.Location = new System.Drawing.Point(0, 115);
+			this.btnManageDelete.Name = "btnManageDelete";
+			this.btnManageDelete.Size = new System.Drawing.Size(200, 31);
+			this.btnManageDelete.TabIndex = 8;
+			this.btnManageDelete.Text = "Delete Selected Equipment";
+			this.btnManageDelete.UseVisualStyleBackColor = false;
+			this.btnManageDelete.Click += new System.EventHandler(this.BtnManageDelete_Click);
+			// 
 			// UcEquipment
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -372,5 +389,6 @@
 		private Bunifu.Framework.UI.BunifuCustomDataGrid dgvEquipment;
 		private System.Windows.Forms.Button btnViewEquipmentTypes;
 		private ucEquipmentType ucEquipmentType1;
+		private System.Windows.Forms.Button btnManageDelete;
 	}
 }

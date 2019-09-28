@@ -128,7 +128,10 @@ namespace Info_IT.UserControls
 
             dgvEquipment.DataSource = bll.GetEquipment();
         }
+		private void BtnManageDelete_Click(object sender, EventArgs e)
+		{
 
+		}
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
 			dgvEquipment.DataSource = bll.GetEquipment();
@@ -151,5 +154,7 @@ namespace Info_IT.UserControls
             cmbVenue.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2];
             cmbEquipTypeCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[3];
         }
-    }
+
+
+	}
 }
