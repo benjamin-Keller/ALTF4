@@ -1,0 +1,6 @@
+CREATE PROCEDURE sp_DisplayAllDepart
+AS
+BEGIN
+SELECT * FROM tblDepartment
+END
+GO

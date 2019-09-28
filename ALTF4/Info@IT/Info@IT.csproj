@@ -24,9 +24,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -48,9 +49,36 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>07E887E58B71197606CCAE0E6126BA7021E0E5C9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Info%40IT_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>App_Data\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,115 +90,268 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Department.cs">
+    <Compile Include="Errors\ucErrorFailedToAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Errors\ucErrorFailedToAdd.Designer.cs">
+      <DependentUpon>ucErrorFailedToAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Errors\ucErrorStaffNotFound.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Errors\ucErrorStaffNotFound.Designer.cs">
+      <DependentUpon>ucErrorStaffNotFound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Errors\ucErrorStudentNotFound.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Errors\ucErrorStudentNotFound.Designer.cs">
+      <DependentUpon>ucErrorStudentNotFound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Errors\ucErrorUserNotFound.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Errors\ucErrorUserNotFound.Designer.cs">
+      <DependentUpon>ucErrorUserNotFound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Errors\ucErrorVenueNotFound.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Errors\ucErrorVenueNotFound.Designer.cs">
+      <DependentUpon>ucErrorVenueNotFound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Department.Designer.cs">
-      <DependentUpon>Department.cs</DependentUpon>
+    <Compile Include="HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Equipment.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\Reports\ucReportDepartment.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Equipment.Designer.cs">
-      <DependentUpon>Equipment.cs</DependentUpon>
+    <Compile Include="UserControls\Reports\ucReportDepartment.Designer.cs">
+      <DependentUpon>ucReportDepartment.cs</DependentUpon>
     </Compile>
-    <Compile Include="EquipmentType.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\Reports\ucReportEquipment.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EquipmentType.Designer.cs">
-      <DependentUpon>EquipmentType.cs</DependentUpon>
+    <Compile Include="UserControls\Reports\ucReportEquipment.Designer.cs">
+      <DependentUpon>ucReportEquipment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\Reports\ucReportInspection.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="UserControls\Reports\ucReportInspection.Designer.cs">
+      <DependentUpon>ucReportInspection.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inspection.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\Reports\ucReportRequest.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Inspection.Designer.cs">
-      <DependentUpon>Inspection.cs</DependentUpon>
+    <Compile Include="UserControls\Reports\ucReportRequest.Designer.cs">
+      <DependentUpon>ucReportRequest.cs</DependentUpon>
     </Compile>
-    <Compile Include="InspectionDetail.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\Reports\ucReportTutorRequest.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="InspectionDetail.Designer.cs">
-      <DependentUpon>InspectionDetail.cs</DependentUpon>
+    <Compile Include="UserControls\Reports\ucReportTutorRequest.Designer.cs">
+      <DependentUpon>ucReportTutorRequest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Request.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\Reports\ucReportVenue.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Request.Designer.cs">
-      <DependentUpon>Request.cs</DependentUpon>
+    <Compile Include="UserControls\Reports\ucReportVenue.Designer.cs">
+      <DependentUpon>ucReportVenue.cs</DependentUpon>
     </Compile>
-    <Compile Include="Staff.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\ucDepartment.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Staff.Designer.cs">
-      <DependentUpon>Staff.cs</DependentUpon>
+    <Compile Include="UserControls\ucDepartment.Designer.cs">
+      <DependentUpon>ucDepartment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Student.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\ucEquipment.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Student.Designer.cs">
-      <DependentUpon>Student.cs</DependentUpon>
+    <Compile Include="UserControls\ucEquipment.Designer.cs">
+      <DependentUpon>ucEquipment.cs</DependentUpon>
     </Compile>
-    <Compile Include="TaskType.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\ucEquipmentType.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TaskType.Designer.cs">
-      <DependentUpon>TaskType.cs</DependentUpon>
+    <Compile Include="UserControls\ucEquipmentType.Designer.cs">
+      <DependentUpon>ucEquipmentType.cs</DependentUpon>
     </Compile>
-    <Compile Include="TutorRequest.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\ucHelp.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TutorRequest.Designer.cs">
-      <DependentUpon>TutorRequest.cs</DependentUpon>
+    <Compile Include="UserControls\ucHelp.Designer.cs">
+      <DependentUpon>ucHelp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Venue.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\ucHome.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Venue.Designer.cs">
-      <DependentUpon>Venue.cs</DependentUpon>
+    <Compile Include="UserControls\ucHome.Designer.cs">
+      <DependentUpon>ucHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucInspectionDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucInspectionDetails.Designer.cs">
+      <DependentUpon>ucInspectionDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucInspection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucInspection.Designer.cs">
+      <DependentUpon>ucInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucReport.Designer.cs">
+      <DependentUpon>ucReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Reports\ucReportStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Reports\ucReportStaff.Designer.cs">
+      <DependentUpon>ucReportStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Reports\ucReportStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Reports\ucReportStudent.Designer.cs">
+      <DependentUpon>ucReportStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucRequest.Designer.cs">
+      <DependentUpon>ucRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucStaff.Designer.cs">
+      <DependentUpon>ucStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucStudent.Designer.cs">
+      <DependentUpon>ucStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTaskType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTaskType.Designer.cs">
+      <DependentUpon>ucTaskType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucTutorRequest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucTutorRequest.Designer.cs">
+      <DependentUpon>ucTutorRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucUser.Designer.cs">
+      <DependentUpon>ucUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucVenue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucVenue.Designer.cs">
+      <DependentUpon>ucVenue.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Department.resx">
-      <DependentUpon>Department.cs</DependentUpon>
+    <EmbeddedResource Include="Errors\ucErrorFailedToAdd.resx">
+      <DependentUpon>ucErrorFailedToAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Equipment.resx">
-      <DependentUpon>Equipment.cs</DependentUpon>
+    <EmbeddedResource Include="Errors\ucErrorStaffNotFound.resx">
+      <DependentUpon>ucErrorStaffNotFound.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EquipmentType.resx">
-      <DependentUpon>EquipmentType.cs</DependentUpon>
+    <EmbeddedResource Include="Errors\ucErrorStudentNotFound.resx">
+      <DependentUpon>ucErrorStudentNotFound.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="Errors\ucErrorUserNotFound.resx">
+      <DependentUpon>ucErrorUserNotFound.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inspection.resx">
-      <DependentUpon>Inspection.cs</DependentUpon>
+    <EmbeddedResource Include="Errors\ucErrorVenueNotFound.resx">
+      <DependentUpon>ucErrorVenueNotFound.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InspectionDetail.resx">
-      <DependentUpon>InspectionDetail.cs</DependentUpon>
+    <EmbeddedResource Include="HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Request.resx">
-      <DependentUpon>Request.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\Reports\ucReportDepartment.resx">
+      <DependentUpon>ucReportDepartment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Staff.resx">
-      <DependentUpon>Staff.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\Reports\ucReportEquipment.resx">
+      <DependentUpon>ucReportEquipment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Student.resx">
-      <DependentUpon>Student.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\Reports\ucReportInspection.resx">
+      <DependentUpon>ucReportInspection.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TaskType.resx">
-      <DependentUpon>TaskType.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\Reports\ucReportRequest.resx">
+      <DependentUpon>ucReportRequest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TutorRequest.resx">
-      <DependentUpon>TutorRequest.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\Reports\ucReportStudent.resx">
+      <DependentUpon>ucReportStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Venue.resx">
-      <DependentUpon>Venue.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\Reports\ucReportTutorRequest.resx">
+      <DependentUpon>ucReportTutorRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Reports\ucReportVenue.resx">
+      <DependentUpon>ucReportVenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucDepartment.resx">
+      <DependentUpon>ucDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucEquipment.resx">
+      <DependentUpon>ucEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucEquipmentType.resx">
+      <DependentUpon>ucEquipmentType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucHelp.resx">
+      <DependentUpon>ucHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucHome.resx">
+      <DependentUpon>ucHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucInspectionDetails.resx">
+      <DependentUpon>ucInspectionDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucInspection.resx">
+      <DependentUpon>ucInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucReport.resx">
+      <DependentUpon>ucReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Reports\ucReportStaff.resx">
+      <DependentUpon>ucReportStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucRequest.resx">
+      <DependentUpon>ucRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucStaff.resx">
+      <DependentUpon>ucStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucStudent.resx">
+      <DependentUpon>ucStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTaskType.resx">
+      <DependentUpon>ucTaskType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucTutorRequest.resx">
+      <DependentUpon>ucTutorRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucUser.resx">
+      <DependentUpon>ucUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucVenue.resx">
+      <DependentUpon>ucVenue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -182,6 +363,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -207,8 +389,27 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <None Include="App_Data\icon.ico" />
+    <Content Include="App_Data\info-IT_DB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\info-IT_DB_log.ldf">
+      <DependentUpon>info-IT_DB.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="favicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BAL\BLL.csproj">
+      <Project>{e6983741-f046-462d-84d7-3f63765a3719}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{d80514af-0352-47cc-a679-c409c08076ca}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
