@@ -38,6 +38,7 @@ namespace Info_IT
 			lblLoginErrorExtra.Hide();
 
 			ucHome1.Visible = false;
+
 		}
 
 		public void LoginPanel()
@@ -81,7 +82,7 @@ namespace Info_IT
                     btnNavTaskType.Show();
                     btnNavStudent.Show();
                     btnNavStaff.Show();
-                    btnNavUser.Show();
+                    //btnNavUser.Show();
 					btnReports.Show();
 
 					btnNavHelp.Show();
@@ -102,7 +103,7 @@ namespace Info_IT
                     btnNavTaskType.Show();
                     btnNavStudent.Show();
                     btnNavStaff.Show();
-                    btnNavUser.Show();
+                    //btnNavUser.Show();
 					btnReports.Show();
 
 					//btnNavHome.Hide();
@@ -133,7 +134,7 @@ namespace Info_IT
                     btnNavTaskType.Show();
                     btnNavStudent.Show();
                     btnNavStaff.Show();
-                    btnNavUser.Show();
+                    //btnNavUser.Show();
 					btnReports.Show();
 
 					//btnNavHome.Hide();
@@ -165,7 +166,7 @@ namespace Info_IT
                     btnNavTaskType.Show();
                     btnNavStudent.Show();
                     btnNavStaff.Show();
-                    btnNavUser.Show();
+                    //btnNavUser.Show();
 					btnReports.Show();
 
 					//btnNavHome.Hide();

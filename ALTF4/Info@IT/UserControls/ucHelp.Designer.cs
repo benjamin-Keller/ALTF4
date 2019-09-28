@@ -30,6 +30,8 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucHelp));
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.label8 = new System.Windows.Forms.Label();
+			this.label9 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
 			this.label5 = new System.Windows.Forms.Label();
@@ -40,14 +42,18 @@
 			this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
-			this.label8 = new System.Windows.Forms.Label();
-			this.label9 = new System.Windows.Forms.Label();
+			this.label10 = new System.Windows.Forms.Label();
+			this.label11 = new System.Windows.Forms.Label();
+			this.bunifuSeparator4 = new Bunifu.Framework.UI.BunifuSeparator();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel1
 			// 
 			this.panel1.AutoScroll = true;
+			this.panel1.Controls.Add(this.label10);
+			this.panel1.Controls.Add(this.label11);
+			this.panel1.Controls.Add(this.bunifuSeparator4);
 			this.panel1.Controls.Add(this.label8);
 			this.panel1.Controls.Add(this.label9);
 			this.panel1.Controls.Add(this.label7);
@@ -62,9 +68,31 @@
 			this.panel1.Controls.Add(this.label2);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
+			this.panel1.MinimumSize = new System.Drawing.Size(1056, 562);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(1056, 562);
 			this.panel1.TabIndex = 15;
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label8.Location = new System.Drawing.Point(3, 458);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(314, 105);
+			this.label8.TabIndex = 26;
+			this.label8.Text = "Staff can be added by:\r\n1) Clicking on Staff  in the Navigation Menu.\r\n2) Typing " +
+    "in Staff details.\r\n3) Open up Manage in the sub menu.\r\n4) Click on Add Staff.";
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label9.Location = new System.Drawing.Point(3, 437);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(111, 21);
+			this.label9.TabIndex = 25;
+			this.label9.Text = "Adding Staff:";
 			// 
 			// label7
 			// 
@@ -177,32 +205,45 @@
 			this.label2.TabIndex = 15;
 			this.label2.Text = "Navigation:";
 			// 
-			// label8
+			// label10
 			// 
-			this.label8.AutoSize = true;
-			this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label8.Location = new System.Drawing.Point(3, 457);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(333, 84);
-			this.label8.TabIndex = 26;
-			this.label8.Text = "Reports can be viewed by:\r\n1) Clicking on Reports in the Navigation Menu.\r\n2) Cli" +
-    "cking a type of Report.\r\n3) Filter to desired Report.";
+			this.label10.AutoSize = true;
+			this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label10.Location = new System.Drawing.Point(3, 616);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(333, 147);
+			this.label10.TabIndex = 29;
+			this.label10.Text = "Reports can be viewed by:\r\n1) Clicking on Reports in the Navigation Menu.\r\n2) Cli" +
+    "cking a type of Report.\r\n3) Filter to desired Report.\r\n\r\n\r\n\r\n";
 			// 
-			// label9
+			// label11
 			// 
-			this.label9.AutoSize = true;
-			this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label9.Location = new System.Drawing.Point(3, 436);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(139, 21);
-			this.label9.TabIndex = 25;
-			this.label9.Text = "Viewing Reports:";
+			this.label11.AutoSize = true;
+			this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label11.Location = new System.Drawing.Point(3, 595);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(139, 21);
+			this.label11.TabIndex = 28;
+			this.label11.Text = "Viewing Reports:";
+			// 
+			// bunifuSeparator4
+			// 
+			this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
+			this.bunifuSeparator4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+			this.bunifuSeparator4.LineThickness = 1;
+			this.bunifuSeparator4.Location = new System.Drawing.Point(7, 562);
+			this.bunifuSeparator4.Name = "bunifuSeparator4";
+			this.bunifuSeparator4.Size = new System.Drawing.Size(528, 35);
+			this.bunifuSeparator4.TabIndex = 27;
+			this.bunifuSeparator4.Transparency = 255;
+			this.bunifuSeparator4.Vertical = false;
 			// 
 			// ucHelp
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.Controls.Add(this.panel1);
+			this.MinimumSize = new System.Drawing.Size(1056, 562);
 			this.Name = "ucHelp";
 			this.Size = new System.Drawing.Size(1056, 562);
 			this.panel1.ResumeLayout(false);
@@ -226,5 +267,8 @@
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.Label label11;
+		private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator4;
 	}
 }
