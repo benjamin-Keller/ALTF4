@@ -15,7 +15,7 @@ namespace Info_IT.UserControls
 
 		private void UcHome_Load(object sender, EventArgs e)
 		{
-			
+
 		}
 	}
 }

@@ -1,7 +1,7 @@
 ﻿using BLL;
 using System;
-using System.Windows.Forms;
 using System.Drawing;
+using System.Windows.Forms;
 
 
 namespace Info_IT.UserControls
@@ -18,16 +18,16 @@ namespace Info_IT.UserControls
 		{
 			ucEquipmentType1.Hide();
 
-            cmbEquipTypeCode.DataSource = bll.GetEquipmentType();
-            cmbEquipTypeCode.DisplayMember = "TypeDescription";
-            cmbEquipTypeCode.ValueMember = "EquipTypeCode";
+			cmbEquipTypeCode.DataSource = bll.GetEquipmentType();
+			cmbEquipTypeCode.DisplayMember = "TypeDescription";
+			cmbEquipTypeCode.ValueMember = "EquipTypeCode";
 
-            cmbVenue.DataSource = bll.GetVenues();
-            cmbVenue.DisplayMember = "VenueDescription";
-            cmbVenue.ValueMember = "VenueCode";
+			cmbVenue.DataSource = bll.GetVenues();
+			cmbVenue.DisplayMember = "VenueDescription";
+			cmbVenue.ValueMember = "VenueCode";
 
-            dgvEquipment.DataSource = bll.GetEquipment();
-        }
+			dgvEquipment.DataSource = bll.GetEquipment();
+		}
 		private void CmbEquipTypeCode_SelectedIndexChanged(object sender, EventArgs e)
 		{
 
@@ -72,62 +72,63 @@ namespace Info_IT.UserControls
 		//Sub-Nav buttons
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
-            try { 
+			try
+			{
 
-                DAL.EquipmentClass equipmentClass = new DAL.EquipmentClass(txtDescription.Text, int.Parse(cmbVenue.SelectedValue.ToString()), int.Parse(cmbEquipTypeCode.SelectedValue.ToString()));
+				DAL.EquipmentClass equipmentClass = new DAL.EquipmentClass(txtDescription.Text, int.Parse(cmbVenue.SelectedValue.ToString()), int.Parse(cmbEquipTypeCode.SelectedValue.ToString()));
 
-                int x = bll.AddEquipment(equipmentClass);
+				int x = bll.AddEquipment(equipmentClass);
 
-                if (x > 0)
-                {
-                    txtDescription.Clear();
-                    cmbVenue.Text = "";
-                    cmbEquipTypeCode.Text = "";
-                }
-                else
-                {
-                    MessageBox.Show("Please input valid data.");
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Please input valid data.");
-            }
+				if (x > 0)
+				{
+					txtDescription.Clear();
+					cmbVenue.Text = "";
+					cmbEquipTypeCode.Text = "";
+				}
+				else
+				{
+					MessageBox.Show("Please input valid data.");
+				}
+			}
+			catch
+			{
+				MessageBox.Show("Please input valid data.");
+			}
 
-            dgvEquipment.DataSource = bll.GetEquipment();
-        }
+			dgvEquipment.DataSource = bll.GetEquipment();
+		}
 
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
 		{
 
-            dgvEquipment.DataSource = bll.GetEquipment();
-            dgvEquipment.BackgroundColor = Color.White;
+			dgvEquipment.DataSource = bll.GetEquipment();
+			dgvEquipment.BackgroundColor = Color.White;
 
-            try
-            {
+			try
+			{
 
-                //Error for input string not found
-                DAL.EquipmentClass equipment = new DAL.EquipmentClass(DAL.EquipmentClass.EquipmentCode, txtDescription.Text, int.Parse(cmbVenue.SelectedValue.ToString()), int.Parse(cmbEquipTypeCode.SelectedValue.ToString()));
-                int x = bll.UpdateEquipment(equipment);
+				//Error for input string not found
+				DAL.EquipmentClass equipment = new DAL.EquipmentClass(DAL.EquipmentClass.EquipmentCode, txtDescription.Text, int.Parse(cmbVenue.SelectedValue.ToString()), int.Parse(cmbEquipTypeCode.SelectedValue.ToString()));
+				int x = bll.UpdateEquipment(equipment);
 
-                if (x > 0)
-                {
-                    txtDescription.Clear();
-                    cmbVenue.Text = "";
-                    cmbEquipTypeCode.Text = "";
-                }
-                else
-                {
-                    MessageBox.Show("Please input valid data.");
-                }
-            }
-            catch (Exception b)
-            {
-                MessageBox.Show("Please input valid data.");
-            }
+				if (x > 0)
+				{
+					txtDescription.Clear();
+					cmbVenue.Text = "";
+					cmbEquipTypeCode.Text = "";
+				}
+				else
+				{
+					MessageBox.Show("Please input valid data.");
+				}
+			}
+			catch (Exception b)
+			{
+				MessageBox.Show("Please input valid data.");
+			}
 
-            dgvEquipment.DataSource = bll.GetEquipment();
-        }
+			dgvEquipment.DataSource = bll.GetEquipment();
+		}
 		private void BtnManageDelete_Click(object sender, EventArgs e)
 		{
 
@@ -143,24 +144,24 @@ namespace Info_IT.UserControls
 			ucEquipmentType1.Show();
 		}
 
-        private void dgvEquipment_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                DAL.EquipmentClass equipmentClass = new DAL.EquipmentClass(int.Parse(dgvEquipment.SelectedRows[0].Cells[0].Value.ToString()));
+		private void dgvEquipment_CellClick(object sender, DataGridViewCellEventArgs e)
+		{
+			try
+			{
+				DAL.EquipmentClass equipmentClass = new DAL.EquipmentClass(int.Parse(dgvEquipment.SelectedRows[0].Cells[0].Value.ToString()));
 
-                var values = bll.SelectedForUpdateEquipment(equipmentClass);
+				var values = bll.SelectedForUpdateEquipment(equipmentClass);
 
-                txtDescription.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
+				txtDescription.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
 
-                cmbVenue.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2];
-                cmbEquipTypeCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[3];
-            }
-            catch (Exception b)
-            {
+				cmbVenue.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2];
+				cmbEquipTypeCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[3];
+			}
+			catch (Exception b)
+			{
 
-            }
-        }
+			}
+		}
 
 
 	}

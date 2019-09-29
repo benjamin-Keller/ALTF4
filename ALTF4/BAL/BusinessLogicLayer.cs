@@ -1,369 +1,363 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DAL;
 using System.Data;
-using System.Data.SqlClient;
-using DAL;
 
 
 namespace BLL
 {
-    public class BusinessLogicLayer
-    {
-        DataAccessLayer dal = new DataAccessLayer();
-        public DataTable GetVenues()
-        {
-            return dal.GetVenues();
-        }
+	public class BusinessLogicLayer
+	{
+		DataAccessLayer dal = new DataAccessLayer();
+		public DataTable GetVenues()
+		{
+			return dal.GetVenues();
+		}
 
-        public int AddVenue(VenueClass venue)
-        {
-            return dal.AddVenue(venue);
-        }
+		public int AddVenue(VenueClass venue)
+		{
+			return dal.AddVenue(venue);
+		}
 
-        public int UpdateVenue(VenueClass venue)
-        {
-            return dal.UpdateVenue(venue);
-        }
+		public int UpdateVenue(VenueClass venue)
+		{
+			return dal.UpdateVenue(venue);
+		}
 
-        public DataTable SelectedForUpdateVenue(VenueClass VenueCode)
-        {
-            return dal.SelectedForUpdateVenue(VenueCode);
-        }
+		public DataTable SelectedForUpdateVenue(VenueClass VenueCode)
+		{
+			return dal.SelectedForUpdateVenue(VenueCode);
+		}
 
-        public DataTable  SelectedForUpdateTaskType( TaskTypeClass taskTypeClass)
-        {
-            return dal.SelectedForUpdateTaskType(taskTypeClass);
-        }
+		public DataTable SelectedForUpdateTaskType(TaskTypeClass taskTypeClass)
+		{
+			return dal.SelectedForUpdateTaskType(taskTypeClass);
+		}
 
-        public DataTable GetDepartment()
-        {
-            return dal.GetDepartment();
-        }
+		public DataTable GetDepartment()
+		{
+			return dal.GetDepartment();
+		}
 
-        public int UpdateDepartment(DepartmentClass dep)
-        {
-            return dal.UpdateDepartment(dep);
-        }
+		public int UpdateDepartment(DepartmentClass dep)
+		{
+			return dal.UpdateDepartment(dep);
+		}
 
-       
 
-        public int UpdateTaskType (TaskTypeClass tasky)
-        {
-            return dal.UpdateTaskType(tasky);
-        }
-        public DataTable SelectedForUpdateDepartment(DepartmentClass DepartmentCode)
-        {
-            return dal.SelectedForUpdateDepartment(DepartmentCode);
-        }
 
-        public DataTable GetEquipment()
-        {
-            return dal.GetEquipment();
-        }
+		public int UpdateTaskType(TaskTypeClass tasky)
+		{
+			return dal.UpdateTaskType(tasky);
+		}
+		public DataTable SelectedForUpdateDepartment(DepartmentClass DepartmentCode)
+		{
+			return dal.SelectedForUpdateDepartment(DepartmentCode);
+		}
 
-        public int UpdateEquipment(EquipmentClass equipment)
-        {
-            return dal.UpdateEquipment(equipment);
-        }
+		public DataTable GetEquipment()
+		{
+			return dal.GetEquipment();
+		}
 
-        public DataTable SelectedForUpdateEquipment(EquipmentClass EquipmentCode)
-        {
-            return dal.SelectedForUpdateEquipment(EquipmentCode);
-        }
+		public int UpdateEquipment(EquipmentClass equipment)
+		{
+			return dal.UpdateEquipment(equipment);
+		}
 
-        public DataTable GetEquipmentType()
-        {
-            return dal.GetEquipmentType();
-        }
+		public DataTable SelectedForUpdateEquipment(EquipmentClass EquipmentCode)
+		{
+			return dal.SelectedForUpdateEquipment(EquipmentCode);
+		}
 
-        public int UpdateEquipmentType(EquipmentTypeClass equipmentType)
-        {
-            return dal.UpdateEquipmentType(equipmentType);
-        }
+		public DataTable GetEquipmentType()
+		{
+			return dal.GetEquipmentType();
+		}
 
-        public DataTable SelectedForUpdateEquipmentType(EquipmentTypeClass EquipTypeCode)
-        {
-            return dal.SelectedForUpdateEquipmentType(EquipTypeCode);
-        }
+		public int UpdateEquipmentType(EquipmentTypeClass equipmentType)
+		{
+			return dal.UpdateEquipmentType(equipmentType);
+		}
 
-        public DataTable GetInspection()
-        {
-            return dal.GetInspection();
-        }
+		public DataTable SelectedForUpdateEquipmentType(EquipmentTypeClass EquipTypeCode)
+		{
+			return dal.SelectedForUpdateEquipmentType(EquipTypeCode);
+		}
 
-        public int UpdateInspection(InspectionClass inspection)
-        {
-            return dal.UpdateInspection(inspection);
-        }
+		public DataTable GetInspection()
+		{
+			return dal.GetInspection();
+		}
 
-        public DataTable SelectedForUpdateInspection(InspectionClass InspectionCode)
-        {
-            return dal.SelectedForUpdateInspection(InspectionCode);
-        }
+		public int UpdateInspection(InspectionClass inspection)
+		{
+			return dal.UpdateInspection(inspection);
+		}
 
-        public DataTable GetInspectionDetail()
-        {
-            return dal.GetInspectionDetail();
-        }
+		public DataTable SelectedForUpdateInspection(InspectionClass InspectionCode)
+		{
+			return dal.SelectedForUpdateInspection(InspectionCode);
+		}
 
-        public int UpdateInspectionDetail(InspectionDetailClass inspectionDetail)
-        {
-            return dal.UpdateInspectionDetail(inspectionDetail);
-        }
+		public DataTable GetInspectionDetail()
+		{
+			return dal.GetInspectionDetail();
+		}
 
-        public DataTable SelectedForUpdateInspectionDetail(InspectionDetailClass InspectionDetailCode)
-        {
-            return dal.SelectedForUpdateInspectionDetail(InspectionDetailCode);
-        }
+		public int UpdateInspectionDetail(InspectionDetailClass inspectionDetail)
+		{
+			return dal.UpdateInspectionDetail(inspectionDetail);
+		}
 
-        public DataTable GetRequests()
-        {
-            return dal.GetRequests();
-        }
+		public DataTable SelectedForUpdateInspectionDetail(InspectionDetailClass InspectionDetailCode)
+		{
+			return dal.SelectedForUpdateInspectionDetail(InspectionDetailCode);
+		}
 
-        public int UpdateRequest(RequestClass request)
-        {
-            return dal.UpdateRequest(request);
-        }
+		public DataTable GetRequests()
+		{
+			return dal.GetRequests();
+		}
 
-        public DataTable SelectedForUpdateRequest(RequestClass RequestCode)
-        {
-            return dal.SelectedForUpdateRequest(RequestCode);
-        }
+		public int UpdateRequest(RequestClass request)
+		{
+			return dal.UpdateRequest(request);
+		}
 
-        public DataTable GetStaff()
-        {
-            return dal.GetStaff();
-        }
+		public DataTable SelectedForUpdateRequest(RequestClass RequestCode)
+		{
+			return dal.SelectedForUpdateRequest(RequestCode);
+		}
 
-        public DataTable GetStudent()
-        {
-            return dal.GetStudent();
-        }
+		public DataTable GetStaff()
+		{
+			return dal.GetStaff();
+		}
 
-        public int UpdateStudent(StudentClass ST)
-        {
-            return dal.UpdateStudent(ST);
-        }
-        public DataTable SelectedForUpdateStudent(StudentClass CN)
-        {
-            return dal.SelectedForUpdateStudent(CN);
-        }
-        public DataTable GetTasktype()
-        {
-            return dal.GetTasktype();
-        }
+		public DataTable GetStudent()
+		{
+			return dal.GetStudent();
+		}
 
-        public DataTable GetTutorRequest()
-        {
-            return dal.GetTutorRequest();
-        }
-        public int UpdateTutorRequest(TutorRequestClass tutorRequestClass)
-        {
-            return dal.UpdateTutorRequest(tutorRequestClass);
-        }
-        
-        public DataTable SelectedForUpdateTutorRequest(TutorRequestClass requestClass)
-        {
-            return dal.SelectedForUpdateTutorRequest(requestClass);
-        }
+		public int UpdateStudent(StudentClass ST)
+		{
+			return dal.UpdateStudent(ST);
+		}
+		public DataTable SelectedForUpdateStudent(StudentClass CN)
+		{
+			return dal.SelectedForUpdateStudent(CN);
+		}
+		public DataTable GetTasktype()
+		{
+			return dal.GetTasktype();
+		}
 
-        public DataTable LoadCMBBuilding()
-        {
-            //string[] val = { "232"};
-            //DataTable dt = dal.PopulateCmbBuilding();
-            //dt.Rows.Add(val);
-            //return dt;
-            return dal.PopulateCmbBuilding();
-        }
+		public DataTable GetTutorRequest()
+		{
+			return dal.GetTutorRequest();
+		}
+		public int UpdateTutorRequest(TutorRequestClass tutorRequestClass)
+		{
+			return dal.UpdateTutorRequest(tutorRequestClass);
+		}
 
-        public DataTable LoadCMBBuildingBlock()
-        {
-            return dal.PopulateCmbBuildingBlock();
-        }
-        public DataTable LoadCMBModels()
-        {
-            return dal.PopulateCmbModels();
-        }
-        
+		public DataTable SelectedForUpdateTutorRequest(TutorRequestClass requestClass)
+		{
+			return dal.SelectedForUpdateTutorRequest(requestClass);
+		}
 
-        public int AddDepartment(DepartmentClass department)
-        {
-            return dal.AddDepartment(department);
-        }
+		public DataTable LoadCMBBuilding()
+		{
+			//string[] val = { "232"};
+			//DataTable dt = dal.PopulateCmbBuilding();
+			//dt.Rows.Add(val);
+			//return dt;
+			return dal.PopulateCmbBuilding();
+		}
 
-        public int AddEquipment(EquipmentClass equipment)
-        {
-            return dal.AddEquipment(equipment);
-        }
+		public DataTable LoadCMBBuildingBlock()
+		{
+			return dal.PopulateCmbBuildingBlock();
+		}
+		public DataTable LoadCMBModels()
+		{
+			return dal.PopulateCmbModels();
+		}
 
-        public int AddEquipmentType(EquipmentTypeClass equipmentType)
-        {
-            return dal.AddEquipmentType(equipmentType);
-        }
 
-        public int AddInspection(InspectionClass inspection)
-        {
-            return dal.AddInspection(inspection);
-        }
+		public int AddDepartment(DepartmentClass department)
+		{
+			return dal.AddDepartment(department);
+		}
 
-        public int AddInspectionDetail(InspectionDetailClass inspectionDetail)
-        {
-            return dal.AddInspectionDetail(inspectionDetail);
-        }
+		public int AddEquipment(EquipmentClass equipment)
+		{
+			return dal.AddEquipment(equipment);
+		}
 
-        public int AddStaff(StaffClass staff)
-        {
-            return dal.AddStaff(staff);
-        }
+		public int AddEquipmentType(EquipmentTypeClass equipmentType)
+		{
+			return dal.AddEquipmentType(equipmentType);
+		}
 
-        public int UpdateStaff(StaffClass CLASS)
-        {
-            return dal.UpdateStaff(CLASS);
-        }
+		public int AddInspection(InspectionClass inspection)
+		{
+			return dal.AddInspection(inspection);
+		}
 
-        public DataTable SelectForUpdateStaffExUser(StaffClass staffed)
-        {
-            return dal.SelectForUpdateStaffExUser(staffed);
-        }
-        
-        public int AddStudent(StudentClass student)
-        {
-            return dal.AddStudent(student);
-        }
+		public int AddInspectionDetail(InspectionDetailClass inspectionDetail)
+		{
+			return dal.AddInspectionDetail(inspectionDetail);
+		}
 
-        public int AddTaskType(TaskTypeClass taskType)
-        {
-            return dal.AddTaskType(taskType);
-        }
+		public int AddStaff(StaffClass staff)
+		{
+			return dal.AddStaff(staff);
+		}
 
-        public int AddRequest(RequestClass request)
-        {
-            return dal.AddRequest(request);
-        }
+		public int UpdateStaff(StaffClass CLASS)
+		{
+			return dal.UpdateStaff(CLASS);
+		}
 
-        public int AddTutorRequest(TutorRequestClass tutorRequest)
-        {
-            return dal.AddTutorRequest(tutorRequest);
-        }
+		public DataTable SelectForUpdateStaffExUser(StaffClass staffed)
+		{
+			return dal.SelectForUpdateStaffExUser(staffed);
+		}
 
-        //public int AddUser(UsersClass user)
-        //{
-        //    return dal.AddUser(user);
-        //}
+		public int AddStudent(StudentClass student)
+		{
+			return dal.AddStudent(student);
+		}
 
-        public DataTable GetLogin(LoginClass login)
-        {
-            return dal.GetLogin(login);
-        }
+		public int AddTaskType(TaskTypeClass taskType)
+		{
+			return dal.AddTaskType(taskType);
+		}
 
-        public DataTable Report_DislayDepartmentByBuilding(DepartmentClass department)
-        {
-            return dal.DisplayDepartByBuilding(department);
-        }
+		public int AddRequest(RequestClass request)
+		{
+			return dal.AddRequest(request);
+		}
 
-        public DataTable Report_DisplayEquipmentByEquipmentType(EquipmentClass equipment)
-        {
-            return dal.DisplayEquipmentByEquipmentType(equipment);
-        }
+		public int AddTutorRequest(TutorRequestClass tutorRequest)
+		{
+			return dal.AddTutorRequest(tutorRequest);
+		}
 
-        public DataTable Report_DisplayEquipmentByVenue(EquipmentClass equipment)
-        {
-            return dal.DisplayEquipmentByVenue(equipment);
-        }
+		//public int AddUser(UsersClass user)
+		//{
+		//    return dal.AddUser(user);
+		//}
 
-        public DataTable Report_DisplayInspectionByDate(InspectionClass inspection)
-        {
-            return dal.DisplayInspectionByDate(inspection);
-        }
+		public DataTable GetLogin(LoginClass login)
+		{
+			return dal.GetLogin(login);
+		}
 
-        public DataTable Report_DisplayInspectionByStaffCode(InspectionClass inspection)
-        {
-            return dal.DisplayInspectionByStaffCode(inspection);
-        }
+		public DataTable Report_DislayDepartmentByBuilding(DepartmentClass department)
+		{
+			return dal.DisplayDepartByBuilding(department);
+		}
 
-        public DataTable Report_DisplayInspectionByVenue(InspectionClass inspection)
-        {
-            return dal.DisplayInspectionByVenue(inspection);
-        }
+		public DataTable Report_DisplayEquipmentByEquipmentType(EquipmentClass equipment)
+		{
+			return dal.DisplayEquipmentByEquipmentType(equipment);
+		}
 
-        public DataTable Report_DisplayRequestsByAssignedStaff(RequestClass request)
-        {
-            return dal.DisplayRequestsByAssignedStaff(request);
-        }
+		public DataTable Report_DisplayEquipmentByVenue(EquipmentClass equipment)
+		{
+			return dal.DisplayEquipmentByVenue(equipment);
+		}
 
-        public DataTable Report_DisplayRequestsByDate(RequestClass request)
-        {
-            return dal.DisplayRequestsByDate(request);
-        }
+		public DataTable Report_DisplayInspectionByDate(InspectionClass inspection)
+		{
+			return dal.DisplayInspectionByDate(inspection);
+		}
 
-        public DataTable Report_DisplayRequestsByStaffCode(RequestClass request)
-        {
-            return dal.DisplayRequestsByStaffCode(request);
-        }
+		public DataTable Report_DisplayInspectionByStaffCode(InspectionClass inspection)
+		{
+			return dal.DisplayInspectionByStaffCode(inspection);
+		}
 
-        public DataTable Report_DisplayRequestsByStudentCode(RequestClass request)
-        {
-            return dal.DisplayRequestsByStudentCode(request);
-        }
+		public DataTable Report_DisplayInspectionByVenue(InspectionClass inspection)
+		{
+			return dal.DisplayInspectionByVenue(inspection);
+		}
 
-        public DataTable Report_DisplayRequestsByTaskType(RequestClass request)
-        {
-            return dal.DisplayRequestsByTaskType(request);
-        }
+		public DataTable Report_DisplayRequestsByAssignedStaff(RequestClass request)
+		{
+			return dal.DisplayRequestsByAssignedStaff(request);
+		}
 
-        public DataTable Report_DisplayRequestsByTime(RequestClass request)
-        {
-            return dal.DisplayRequestsByTime(request);
-        }
+		public DataTable Report_DisplayRequestsByDate(RequestClass request)
+		{
+			return dal.DisplayRequestsByDate(request);
+		}
 
-        public DataTable Report_DisplayStaffByDepartment(StaffClass staff)
-        {
-            return dal.DisplayStaffByDepartment(staff);
-        }
+		public DataTable Report_DisplayRequestsByStaffCode(RequestClass request)
+		{
+			return dal.DisplayRequestsByStaffCode(request);
+		}
 
-        public DataTable Report_DisplayStaffByStaffType(StaffClass staff)
-        {
-            return dal.DisplayStaffByStaffType(staff);
-        }
+		public DataTable Report_DisplayRequestsByStudentCode(RequestClass request)
+		{
+			return dal.DisplayRequestsByStudentCode(request);
+		}
 
-        public DataTable Report_DisplayTutorRequestByRequestDate(TutorRequestClass tutorRequest)
-        {
-            return dal.DisplayTutorRequestByRequestDate(tutorRequest);
-        }
+		public DataTable Report_DisplayRequestsByTaskType(RequestClass request)
+		{
+			return dal.DisplayRequestsByTaskType(request);
+		}
 
-        public DataTable Report_DisplayTutorRequestByRequestEndTime(TutorRequestClass tutorRequest)
-        {
-            return dal.DisplayTutorRequestByRequestEndTime(tutorRequest);
-        }
+		public DataTable Report_DisplayRequestsByTime(RequestClass request)
+		{
+			return dal.DisplayRequestsByTime(request);
+		}
 
-        public DataTable Report_DisplayTutorRequestByRequestModuleCode(TutorRequestClass tutorRequest)
-        {
-            return dal.DisplayTutorRequestByRequestModuleCode(tutorRequest);
-        }
+		public DataTable Report_DisplayStaffByDepartment(StaffClass staff)
+		{
+			return dal.DisplayStaffByDepartment(staff);
+		}
 
-        public DataTable Report_DisplayTutorRequestByRequestStartTime(TutorRequestClass tutorRequest)
-        {
-            return dal.DisplayTutorRequestByRequestStartTime(tutorRequest);
-        }
+		public DataTable Report_DisplayStaffByStaffType(StaffClass staff)
+		{
+			return dal.DisplayStaffByStaffType(staff);
+		}
 
-        public DataTable Report_DisplayTutorRequestByRequestVenue(TutorRequestClass tutorRequest)
-        {
-            return dal.DisplayTutorRequestByRequestVenue(tutorRequest);
-        }
+		public DataTable Report_DisplayTutorRequestByRequestDate(TutorRequestClass tutorRequest)
+		{
+			return dal.DisplayTutorRequestByRequestDate(tutorRequest);
+		}
 
-        public DataTable Report_DisplayVenueByBuilding(VenueClass venue)
-        {
-            return dal.DisplayVenueByBuilding(venue);
-        }
+		public DataTable Report_DisplayTutorRequestByRequestEndTime(TutorRequestClass tutorRequest)
+		{
+			return dal.DisplayTutorRequestByRequestEndTime(tutorRequest);
+		}
 
-        public DataTable Report_DisplayVenueByBuildingBlock(VenueClass venue)
-        {
-            return dal.DisplayVenueByBuildingBlock(venue);
-        }
-        
-    }
+		public DataTable Report_DisplayTutorRequestByRequestModuleCode(TutorRequestClass tutorRequest)
+		{
+			return dal.DisplayTutorRequestByRequestModuleCode(tutorRequest);
+		}
+
+		public DataTable Report_DisplayTutorRequestByRequestStartTime(TutorRequestClass tutorRequest)
+		{
+			return dal.DisplayTutorRequestByRequestStartTime(tutorRequest);
+		}
+
+		public DataTable Report_DisplayTutorRequestByRequestVenue(TutorRequestClass tutorRequest)
+		{
+			return dal.DisplayTutorRequestByRequestVenue(tutorRequest);
+		}
+
+		public DataTable Report_DisplayVenueByBuilding(VenueClass venue)
+		{
+			return dal.DisplayVenueByBuilding(venue);
+		}
+
+		public DataTable Report_DisplayVenueByBuildingBlock(VenueClass venue)
+		{
+			return dal.DisplayVenueByBuildingBlock(venue);
+		}
+
+	}
 }
