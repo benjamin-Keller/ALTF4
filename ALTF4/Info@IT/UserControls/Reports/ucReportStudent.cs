@@ -1,28 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BLL;
+using System;
 using System.Windows.Forms;
-using BLL;
 
 namespace Info_IT.UserControls
 {
 	public partial class ucReportStudent : UserControl
 	{
-        BusinessLogicLayer bll = new BusinessLogicLayer();
+		BusinessLogicLayer bll = new BusinessLogicLayer();
 
-        public ucReportStudent()
+		public ucReportStudent()
 		{
 			InitializeComponent();
 		}
 
 		private void UcReportStudent_Load(object sender, EventArgs e)
 		{
-            dgvStudentReport.DataSource = bll.GetStudent();
-        }
+			dgvStudentReport.DataSource = bll.GetStudent();
+		}
 	}
 }

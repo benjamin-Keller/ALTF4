@@ -1,38 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DAL
+﻿namespace DAL
 {
-    public class TaskTypeClass
-    {
-        public static int TaskTypeCode { get; set; }
-        public string Name { get; set; }
+	public class TaskTypeClass
+	{
+		public static int TaskTypeCode { get; set; }
+		public string Name { get; set; }
 
 
-        public TaskTypeClass()
-        {
+		public TaskTypeClass()
+		{
 
-        }
+		}
 
 
-        public TaskTypeClass(string name)
-        {
-            Name = name;
-        }
+		public TaskTypeClass(string name)
+		{
+			Name = name;
+		}
 
-        public TaskTypeClass(int code , string name)
-        {
-            TaskTypeCode = code;
-            Name = name;
-        }
+		public TaskTypeClass(int code, string name)
+		{
+			TaskTypeCode = code;
+			Name = name;
+		}
 
-        public TaskTypeClass(int code)
-        {
-            TaskTypeCode = code;
-        }
+		public TaskTypeClass(int code)
+		{
+			TaskTypeCode = code;
+		}
 
-    }
+	}
 }

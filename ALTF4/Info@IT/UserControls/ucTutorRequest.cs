@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using BLL;
+using System;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL;
 
 namespace Info_IT.UserControls
 {
@@ -22,24 +16,24 @@ namespace Info_IT.UserControls
 
 		private void UcTutorRequest_Load(object sender, EventArgs e)
 		{
-            dgvTutorRequest.DataSource = bll.GetTutorRequest();
+			dgvTutorRequest.DataSource = bll.GetTutorRequest();
 
-            cmbRequestCode.DataSource = bll.GetRequests();
+			cmbRequestCode.DataSource = bll.GetRequests();
 
-            cmbRequestCode.ValueMember = "RequestCode";
-            cmbRequestCode.DisplayMember = "RequestCode";
+			cmbRequestCode.ValueMember = "RequestCode";
+			cmbRequestCode.DisplayMember = "RequestCode";
 
-            cmbVenueCode.DataSource = bll.GetVenues();
+			cmbVenueCode.DataSource = bll.GetVenues();
 
-            cmbVenueCode.DisplayMember = "VenueDescription";
-            cmbVenueCode.ValueMember = "VenueCode";
+			cmbVenueCode.DisplayMember = "VenueDescription";
+			cmbVenueCode.ValueMember = "VenueCode";
 
-            cmbModuleCode.DataSource = bll.LoadCMBModels();
+			cmbModuleCode.DataSource = bll.LoadCMBModels();
 
-            cmbModuleCode.DisplayMember = "ModuleDescription";
-            cmbModuleCode.ValueMember = "ModuleCode";
+			cmbModuleCode.DisplayMember = "ModuleDescription";
+			cmbModuleCode.ValueMember = "ModuleCode";
 
-        }
+		}
 
 		//Menu button (Manage)
 		private void BtnManage_Click(object sender, EventArgs e)
@@ -58,7 +52,7 @@ namespace Info_IT.UserControls
 			tmrManage.Stop();
 		}
 
-		
+
 		private void TmrView_Tick(object sender, EventArgs e)
 		{
 			pnlManage.Height = pnlManage.MinimumSize.Height;
@@ -67,71 +61,71 @@ namespace Info_IT.UserControls
 
 		private void BtnManageAdd_Click(object sender, EventArgs e)
 		{
-            try
-            {
-                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), cmbStartTime.SelectedItem.ToString(), cmbEndTime.SelectedItem.ToString(), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()));
+			try
+			{
+				DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), cmbStartTime.SelectedItem.ToString(), cmbEndTime.SelectedItem.ToString(), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()));
 
-                int x = bll.AddTutorRequest(tutorRequest);
+				int x = bll.AddTutorRequest(tutorRequest);
 
-                if (x > 0)
-                {
-                    cmbRequestCode.Text = " ";
-                    dateRequest.Text = " ";
-                    cmbStartTime.Text = " ";
-                    cmbEndTime.Text = " ";
-                    cmbRequestCode.Text = " ";
-                    cmbModuleCode.Text = " ";
-                    cmbVenueCode.Text = " ";
-                }
-                else
-                {
-                    MessageBox.Show("Please input valid data.");
-                }
-            }
-            catch(Exception error)
-            {
-                MessageBox.Show("Please Enter a valid Time.");
-            }
+				if (x > 0)
+				{
+					cmbRequestCode.Text = " ";
+					dateRequest.Text = " ";
+					cmbStartTime.Text = " ";
+					cmbEndTime.Text = " ";
+					cmbRequestCode.Text = " ";
+					cmbModuleCode.Text = " ";
+					cmbVenueCode.Text = " ";
+				}
+				else
+				{
+					MessageBox.Show("Please input valid data.");
+				}
+			}
+			catch (Exception error)
+			{
+				MessageBox.Show("Please Enter a valid Time.");
+			}
 
-            
 
-            dgvTutorRequest.DataSource = bll.GetTutorRequest();
 
-        }
+			dgvTutorRequest.DataSource = bll.GetTutorRequest();
+
+		}
 
 		private void BtnManageUpdate_Click(object sender, EventArgs e)
 		{
-            dgvTutorRequest.DataSource = bll.GetTutorRequest();
-            dgvTutorRequest.BackgroundColor = Color.White;
+			dgvTutorRequest.DataSource = bll.GetTutorRequest();
+			dgvTutorRequest.BackgroundColor = Color.White;
 
-            try
-            {
-                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), cmbStartTime.SelectedItem.ToString(), cmbEndTime.SelectedItem.ToString(), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()));
+			try
+			{
+				DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), cmbStartTime.SelectedItem.ToString(), cmbEndTime.SelectedItem.ToString(), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()));
 
-                int x = bll.UpdateTutorRequest(tutorRequest);
+				int x = bll.UpdateTutorRequest(tutorRequest);
 
-                if (x > 0)
-                {
-                    cmbRequestCode.Text = " ";
-                    dateRequest.Text = " ";
-                    cmbStartTime.Text = " ";
-                    cmbEndTime.Text = " ";
-                    cmbRequestCode.Text = " ";
-                    cmbModuleCode.Text = " ";
-                    cmbVenueCode.Text = " ";
-                   
-                }
-                else
-                {
-                    MessageBox.Show("Please input valid data.");
-                }
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show("Please Enter a valid Time.");
-            }
-            dgvTutorRequest.DataSource = bll.GetTutorRequest();
-        }
+				if (x > 0)
+				{
+					cmbRequestCode.Text = " ";
+					dateRequest.Text = " ";
+					cmbStartTime.Text = " ";
+					cmbEndTime.Text = " ";
+					cmbRequestCode.Text = " ";
+					cmbModuleCode.Text = " ";
+					cmbVenueCode.Text = " ";
+
+				}
+				else
+				{
+					MessageBox.Show("Please input valid data.");
+				}
+			}
+			catch (Exception error)
+			{
+				MessageBox.Show("Please Enter a valid Time.");
+			}
+			dgvTutorRequest.DataSource = bll.GetTutorRequest();
+		}
 
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
@@ -140,31 +134,31 @@ namespace Info_IT.UserControls
 
 		}
 
-        private void dgvTutorRequest_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                DAL.TutorRequestClass request = new DAL.TutorRequestClass(int.Parse(dgvTutorRequest.SelectedRows[0].Cells[0].Value.ToString()));
+		private void dgvTutorRequest_CellClick(object sender, DataGridViewCellEventArgs e)
+		{
+			try
+			{
+				DAL.TutorRequestClass request = new DAL.TutorRequestClass(int.Parse(dgvTutorRequest.SelectedRows[0].Cells[0].Value.ToString()));
 
-                var values = bll.SelectedForUpdateTutorRequest(request);
+				var values = bll.SelectedForUpdateTutorRequest(request);
 
-                dateRequest.Value = Convert.ToDateTime(values.Rows[0].Table.Rows[0].ItemArray[2].ToString());
-                cmbModuleCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[5];
-                cmbVenueCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[6];
-                cmbStartTime.SelectedText = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
-                cmbEndTime.SelectedText = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
-            }
-            catch(Exception b)
-            {
+				dateRequest.Value = Convert.ToDateTime(values.Rows[0].Table.Rows[0].ItemArray[2].ToString());
+				cmbModuleCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[5];
+				cmbVenueCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[6];
+				cmbStartTime.SelectedText = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
+				cmbEndTime.SelectedText = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
+			}
+			catch (Exception b)
+			{
 
-            }
+			}
 
 
-        }
+		}
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
+		private void panel1_Paint(object sender, PaintEventArgs e)
+		{
 
-        }
-    }
+		}
+	}
 }

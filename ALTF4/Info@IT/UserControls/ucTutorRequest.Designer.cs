@@ -54,6 +54,8 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
+			this.cmbStatus = new System.Windows.Forms.ComboBox();
+			this.label2 = new System.Windows.Forms.Label();
 			this.panel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvTutorRequest)).BeginInit();
 			this.panel1.SuspendLayout();
@@ -186,6 +188,8 @@
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.cmbStatus);
+			this.groupBox1.Controls.Add(this.label2);
 			this.groupBox1.Controls.Add(this.cmbEndTime);
 			this.groupBox1.Controls.Add(this.cmbStartTime);
 			this.groupBox1.Controls.Add(this.label4);
@@ -229,9 +233,9 @@
             "16:00",
             "16:30",
             "17:00"});
-			this.cmbEndTime.Location = new System.Drawing.Point(653, 33);
+			this.cmbEndTime.Location = new System.Drawing.Point(610, 33);
 			this.cmbEndTime.Name = "cmbEndTime";
-			this.cmbEndTime.Size = new System.Drawing.Size(121, 23);
+			this.cmbEndTime.Size = new System.Drawing.Size(70, 23);
 			this.cmbEndTime.TabIndex = 25;
 			// 
 			// cmbStartTime
@@ -258,7 +262,7 @@
             "16:30"});
 			this.cmbStartTime.Location = new System.Drawing.Point(531, 33);
 			this.cmbStartTime.Name = "cmbStartTime";
-			this.cmbStartTime.Size = new System.Drawing.Size(116, 23);
+			this.cmbStartTime.Size = new System.Drawing.Size(73, 23);
 			this.cmbStartTime.TabIndex = 24;
 			// 
 			// label4
@@ -285,7 +289,7 @@
 			this.label7.AutoSize = true;
 			this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
 			this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label7.Location = new System.Drawing.Point(653, 16);
+			this.label7.Location = new System.Drawing.Point(610, 16);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(70, 17);
 			this.label7.TabIndex = 17;
@@ -360,6 +364,44 @@
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Request Code:";
 			// 
+			// cmbStatus
+			// 
+			this.cmbStatus.FormattingEnabled = true;
+			this.cmbStatus.Items.AddRange(new object[] {
+            "08:30",
+            "09:00",
+            "09:30",
+            "10:00",
+            "10:30",
+            "11:00",
+            "11:30",
+            "12:00",
+            "12:30",
+            "13:00",
+            "13:30",
+            "14:00",
+            "14:30",
+            "15:00",
+            "15:30",
+            "16:00",
+            "16:30",
+            "17:00"});
+			this.cmbStatus.Location = new System.Drawing.Point(686, 33);
+			this.cmbStatus.Name = "cmbStatus";
+			this.cmbStatus.Size = new System.Drawing.Size(70, 23);
+			this.cmbStatus.TabIndex = 27;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label2.Location = new System.Drawing.Point(686, 16);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(50, 17);
+			this.label2.TabIndex = 26;
+			this.label2.Text = "Status:";
+			// 
 			// ucTutorRequest
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,5 +447,7 @@
 		private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbEndTime;
         private System.Windows.Forms.ComboBox cmbStartTime;
-    }
+		private System.Windows.Forms.ComboBox cmbStatus;
+		private System.Windows.Forms.Label label2;
+	}
 }
