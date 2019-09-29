@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
 
 namespace DAL
 {
-
-	public class DataAccessLayer
+    
+    public class DataAccessLayer
     {
        SqlConnection dbConn = new SqlConnection(@"Server=tcp:altf4-projects.database.windows.net,1433;Initial Catalog=Info@IT;Persist Security Info=False;User ID=altf4_F4_Admin;Password=WeaDee26;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         
@@ -2060,109 +2064,6 @@ namespace DAL
 
             return dt;
         }
-		public DataTable DisplayInspectionDetailsByEquip(InspectionDetailClass inspectionDetail)
-		{
-			try
-			{
-				dbConn.Open();
-			}
-			catch { }
 
-			dbCmd = new SqlCommand("dbo.sp_ReportInspectionDetailEquipCode", dbConn);
-			dbCmd.CommandType = CommandType.StoredProcedure;
-
-			dbCmd.Parameters.AddWithValue("@EquipmentCode", inspectionDetail.EquipmentCode);
-
-			SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
-
-			DataTable dt = new DataTable();
-			sda.Fill(dt);
-
-			try
-			{
-				dbConn.Close();
-			}
-			catch { }
-
-			return dt;
-		}
-		public DataTable DisplayInspectionDetailsByInspectCode(InspectionDetailClass inspectionDetail)
-		{
-			try
-			{
-				dbConn.Open();
-			}
-			catch { }
-
-			dbCmd = new SqlCommand("dbo.sp_ReportInspectionDetailInspectCode", dbConn);
-			dbCmd.CommandType = CommandType.StoredProcedure;
-
-			dbCmd.Parameters.AddWithValue("@InspectionCode", inspectionDetail.InspectionCode);
-
-			SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
-
-			DataTable dt = new DataTable();
-			sda.Fill(dt);
-
-			try
-			{
-				dbConn.Close();
-			}
-			catch { }
-
-			return dt;
-		}
-		public DataTable DisplayInspectionDetailsByStatus(InspectionDetailClass inspectionDetail)
-		{
-			try
-			{
-				dbConn.Open();
-			}
-			catch { }
-
-			dbCmd = new SqlCommand("dbo.sp_ReportInspectionDetailInspectStatus", dbConn);
-			dbCmd.CommandType = CommandType.StoredProcedure;
-
-			dbCmd.Parameters.AddWithValue("@InspectionStatus", inspectionDetail.InspectionStatus);
-
-			SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
-
-			DataTable dt = new DataTable();
-			sda.Fill(dt);
-
-			try
-			{
-				dbConn.Close();
-			}
-			catch { }
-
-			return dt;
-		}
-		public DataTable DisplayInspectionDetailsByStaffCode(InspectionDetailClass inspectionDetail)
-		{
-			try
-			{
-				dbConn.Open();
-			}
-			catch { }
-
-			dbCmd = new SqlCommand("dbo.sp_ReportInspectionDetailStaffCode", dbConn);
-			dbCmd.CommandType = CommandType.StoredProcedure;
-
-			dbCmd.Parameters.AddWithValue("@StaffCode", inspectionDetail.StaffCode);
-
-			SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
-
-			DataTable dt = new DataTable();
-			sda.Fill(dt);
-
-			try
-			{
-				dbConn.Close();
-			}
-			catch { }
-
-			return dt;
-		}
-	}
+    }
 }
