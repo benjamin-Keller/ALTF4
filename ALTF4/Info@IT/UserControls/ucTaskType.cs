@@ -117,11 +117,18 @@ namespace Info_IT.UserControls
 
         private void dgvTaskType_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DAL.TaskTypeClass taskType = new DAL.TaskTypeClass(int.Parse(dgvTaskType.SelectedRows[0].Cells[0].Value.ToString()));
+            try
+            {
+                DAL.TaskTypeClass taskType = new DAL.TaskTypeClass(int.Parse(dgvTaskType.SelectedRows[0].Cells[0].Value.ToString()));
 
-            var value = bll.SelectedForUpdateTaskType(taskType);
+                var value = bll.SelectedForUpdateTaskType(taskType);
 
-            txtName.Text = value.Rows[0].Table.Rows[0].ItemArray[1].ToString();
+                txtName.Text = value.Rows[0].Table.Rows[0].ItemArray[1].ToString();
+            }
+            catch (Exception b)
+            {
+
+            }
         }
     }
 }

@@ -30,6 +30,7 @@ namespace Info_IT.UserControls
 
             cmbStaffType.DisplayMember = "StaffType";
             cmbStaffType.ValueMember = "StaffCode";
+                 
         }
 
 		//Menu button (Manage)
@@ -150,18 +151,26 @@ namespace Info_IT.UserControls
 
         private void dgvStaffExUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DAL.StaffClass staffClass = new DAL.StaffClass(int.Parse(dgvStaff.SelectedRows[0].Cells[0].Value.ToString()));
+            try
+            {
+                DAL.StaffClass staffClass = new DAL.StaffClass(int.Parse(dgvStaff.SelectedRows[0].Cells[0].Value.ToString()));
 
-            var values = bll.SelectForUpdateStaffExUser(staffClass);
+                var values = bll.SelectForUpdateStaffExUser(staffClass);
 
-            txtStaffNumber.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
-            txtName.Text = values.Rows[0].Table.Rows[0].ItemArray[2].ToString();
-            txtSurname.Text = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
-            txtEmailAddress.Text = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
-            txtContactNo.Text = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
+                txtStaffNumber.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
+                txtName.Text = values.Rows[0].Table.Rows[0].ItemArray[2].ToString();
+                txtSurname.Text = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
+                txtEmailAddress.Text = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
+                txtContactNo.Text = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
 
-            cmbStaffType.Text = values.Rows[0].Table.Rows[0].ItemArray[6].ToString();
-            cmbDepartmentCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[7].ToString();
+                cmbStaffType.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[6];
+                cmbDepartmentCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[7];
+            }
+            catch (Exception b)
+            {
+
+            }
+           
 
         }
     }

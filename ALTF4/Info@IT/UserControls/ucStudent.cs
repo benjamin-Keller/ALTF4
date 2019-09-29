@@ -130,14 +130,21 @@ namespace Info_IT.UserControls
 
         private void dgvStudent_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DAL.StudentClass studclass = new DAL.StudentClass(int.Parse(dgvStudent.SelectedRows[0].Cells[0].Value.ToString()));
+            try
+            {
+                DAL.StudentClass studclass = new DAL.StudentClass(int.Parse(dgvStudent.SelectedRows[0].Cells[0].Value.ToString()));
 
-            var values = bll.SelectedForUpdateStudent(studclass);
+                var values = bll.SelectedForUpdateStudent(studclass);
 
-            txtStudentNumber.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
-            txtName.Text = values.Rows[0].Table.Rows[0].ItemArray[2].ToString();
-            txtSurname.Text = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
-            txtEmailAddress.Text = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
+                txtStudentNumber.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
+                txtName.Text = values.Rows[0].Table.Rows[0].ItemArray[2].ToString();
+                txtSurname.Text = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
+                txtEmailAddress.Text = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
+            }
+            catch (Exception b)
+            {
+
+            }
 
         }
     }
