@@ -243,9 +243,9 @@
 			this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
 			this.label5.Location = new System.Drawing.Point(404, 15);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(85, 17);
+			this.label5.Size = new System.Drawing.Size(50, 17);
 			this.label5.TabIndex = 29;
-			this.label5.Text = "Venue Code:";
+			this.label5.Text = "Venue:";
 			// 
 			// label3
 			// 
@@ -265,9 +265,9 @@
 			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
 			this.label1.Location = new System.Drawing.Point(10, 15);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(96, 17);
+			this.label1.Size = new System.Drawing.Size(61, 17);
 			this.label1.TabIndex = 26;
-			this.label1.Text = "Request Code:";
+			this.label1.Text = "Request:";
 			// 
 			// ucReportTutorRequest
 			// 

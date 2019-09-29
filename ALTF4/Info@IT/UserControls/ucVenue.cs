@@ -41,24 +41,12 @@ namespace Info_IT.UserControls
 		private void TmrManage_Tick(object sender, EventArgs e)
 		{
 			pnlManage.Height = pnlManage.MaximumSize.Height;
-			pnlView.Height = pnlView.MinimumSize.Height;
 
 			tmrManage.Stop();
 		}
 
-		//Menu button (View)
-		private void BtnView_Click(object sender, EventArgs e)
-		{
-			tmrView.Start();
-			if (!(pnlView.Height == pnlView.MinimumSize.Height))
-			{
-				pnlView.Height = pnlView.MinimumSize.Height;
-				tmrView.Enabled = false;
-			}
-		}
 		private void TmrView_Tick(object sender, EventArgs e)
 		{
-			pnlView.Height = pnlView.MaximumSize.Height;
 			pnlManage.Height = pnlManage.MinimumSize.Height;
 			tmrView.Stop();
 		}

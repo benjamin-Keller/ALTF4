@@ -110,9 +110,9 @@
 			this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
 			this.label7.Location = new System.Drawing.Point(146, 18);
 			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(121, 17);
+			this.label7.Size = new System.Drawing.Size(86, 17);
 			this.label7.TabIndex = 48;
-			this.label7.Text = "Department Code:";
+			this.label7.Text = "Department:";
 			// 
 			// cmbStaffType
 			// 
