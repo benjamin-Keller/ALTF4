@@ -1,6 +1,6 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Windows.Forms;
-using BLL;
 
 namespace Info_IT.UserControls.Reports
 {
