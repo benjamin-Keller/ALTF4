@@ -601,7 +601,7 @@ namespace DAL
                 dbCmd = new SqlCommand("dbo.sp_AddStaff", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
-                dbCmd.Parameters.AddWithValue("@StaffCode", DAL.StaffClass.StaffCode);
+                
                 dbCmd.Parameters.AddWithValue("@StaffNumber",staff.StaffNumber);
                 dbCmd.Parameters.AddWithValue("@FirstName", staff.Name);
                 dbCmd.Parameters.AddWithValue("@LastName", staff.Surname);
@@ -609,6 +609,9 @@ namespace DAL
                 dbCmd.Parameters.AddWithValue("@ContactNumber", staff.ContactNumber);
                 dbCmd.Parameters.AddWithValue("@StaffType", staff.StaffType);
                 dbCmd.Parameters.AddWithValue("@DepartmentCode", staff.DepartmentCode);
+                dbCmd.Parameters.AddWithValue("@Username", staff.Username);
+                dbCmd.Parameters.AddWithValue("@Password", staff.Password);
+                dbCmd.Parameters.AddWithValue("@ActiveStatus", staff.ActiveStatus);
 
                 x = dbCmd.ExecuteNonQuery();
             }
@@ -649,6 +652,9 @@ namespace DAL
                 dbCmd.Parameters.AddWithValue("@ContactNumber", staff.ContactNumber);
                 dbCmd.Parameters.AddWithValue("@StaffType", staff.StaffType);
                 dbCmd.Parameters.AddWithValue("@DepartmentCode", staff.DepartmentCode);
+                dbCmd.Parameters.AddWithValue("@Username", staff.Username);
+                dbCmd.Parameters.AddWithValue("@Password", staff.Password);
+                dbCmd.Parameters.AddWithValue("@ActiveStatus", staff.ActiveStatus);
 
                 x = dbCmd.ExecuteNonQuery();
             }
