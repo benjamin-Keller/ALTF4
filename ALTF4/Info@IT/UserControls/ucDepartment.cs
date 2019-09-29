@@ -122,19 +122,25 @@ namespace Info_IT.UserControls
 
         private void dgvDepartment_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-			DAL.DepartmentClass depClass = new DAL.DepartmentClass(int.Parse(dgvDepartment.SelectedRows[0].Cells[0].Value.ToString()));
+            try
+            {
+                DAL.DepartmentClass depClass = new DAL.DepartmentClass(int.Parse(dgvDepartment.SelectedRows[0].Cells[0].Value.ToString()));
 
-            var values = bll.SelectedForUpdateDepartment(depClass);
+                var values = bll.SelectedForUpdateDepartment(depClass);
 
-            txtName.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
-            txtContactPerson.Text = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
-            txtEmailAddress.Text = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
-            txtContactNo.Text = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
-            
-            cmbBuilding.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2];
+                txtName.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
+                txtContactPerson.Text = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
+                txtEmailAddress.Text = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
+                txtContactNo.Text = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
+
+                cmbBuilding.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2];
+            }
+            catch (Exception b)
+            {
+
+            }
         }
-
-        private void ucDepartment_Load(object sender, EventArgs e)
+            private void ucDepartment_Load(object sender, EventArgs e)
         {
             cmbBuilding.DataSource = bll.LoadCMBBuilding();
 

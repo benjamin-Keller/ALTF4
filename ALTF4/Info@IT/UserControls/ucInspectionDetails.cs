@@ -141,17 +141,24 @@ namespace Info_IT.UserControls
         }
 
         private void dgvinspectionDetails_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DAL.InspectionDetailClass inspectionDetailClass = new DAL.InspectionDetailClass(int.Parse(dgvInspectionDetails. SelectedRows[0].Cells[0].Value.ToString()));
+        {  
+            try
+            {
+                DAL.InspectionDetailClass inspectionDetailClass = new DAL.InspectionDetailClass(int.Parse(dgvInspectionDetails.SelectedRows[0].Cells[0].Value.ToString()));
 
-            var values = bll.SelectedForUpdateInspectionDetail(inspectionDetailClass);
+                var values = bll.SelectedForUpdateInspectionDetail(inspectionDetailClass);
 
-            txtFaultComment.Text = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
+                txtFaultComment.Text = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
 
-            cmbInspectionCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[1];
-            cmbEquipmentCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2];
-            cmbStaffCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[3];
-            cmbStatus.Text = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
+                cmbInspectionCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[1];
+                cmbEquipmentCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2];
+                cmbStaffCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[3];
+                cmbStatus.Text = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
+            }
+            catch (Exception b)
+            {
+
+            }
         }
     }
 }
