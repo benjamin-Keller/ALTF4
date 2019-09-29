@@ -55,6 +55,8 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.txtStaffNumber = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
+			this.cmbStatus = new System.Windows.Forms.ComboBox();
+			this.label8 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
 			this.panel1.SuspendLayout();
 			this.pnlManage.SuspendLayout();
@@ -182,6 +184,8 @@
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.cmbStatus);
+			this.groupBox1.Controls.Add(this.label8);
 			this.groupBox1.Controls.Add(this.cmbDepartmentCode);
 			this.groupBox1.Controls.Add(this.label7);
 			this.groupBox1.Controls.Add(this.cmbStaffType);
@@ -220,9 +224,9 @@
 			this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
 			this.label7.Location = new System.Drawing.Point(144, 60);
 			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(121, 17);
+			this.label7.Size = new System.Drawing.Size(86, 17);
 			this.label7.TabIndex = 44;
-			this.label7.Text = "Department Code:";
+			this.label7.Text = "Department:";
 			// 
 			// cmbStaffType
 			// 
@@ -333,6 +337,25 @@
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Staff Number:";
 			// 
+			// cmbStatus
+			// 
+			this.cmbStatus.FormattingEnabled = true;
+			this.cmbStatus.Location = new System.Drawing.Point(279, 77);
+			this.cmbStatus.Name = "cmbStatus";
+			this.cmbStatus.Size = new System.Drawing.Size(126, 23);
+			this.cmbStatus.TabIndex = 47;
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label8.Location = new System.Drawing.Point(276, 60);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(50, 17);
+			this.label8.TabIndex = 46;
+			this.label8.Text = "Status:";
+			// 
 			// ucStaff
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,5 +401,7 @@
 		private System.Windows.Forms.ComboBox cmbStaffType;
 		private System.Windows.Forms.ComboBox cmbDepartmentCode;
 		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.ComboBox cmbStatus;
+		private System.Windows.Forms.Label label8;
 	}
 }

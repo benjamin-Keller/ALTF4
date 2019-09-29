@@ -42,8 +42,6 @@
 			this.txtEmailAddress = new System.Windows.Forms.TextBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.label8 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.cmbGender = new System.Windows.Forms.ComboBox();
 			this.label6 = new System.Windows.Forms.Label();
@@ -57,6 +55,8 @@
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dgvUser = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+			this.cmbStatus = new System.Windows.Forms.ComboBox();
+			this.label8 = new System.Windows.Forms.Label();
 			this.pnlManage.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			this.panel1.SuspendLayout();
@@ -160,9 +160,9 @@
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Controls.Add(this.comboBox1);
-			this.groupBox1.Controls.Add(this.textBox1);
+			this.groupBox1.Controls.Add(this.cmbStatus);
 			this.groupBox1.Controls.Add(this.label8);
+			this.groupBox1.Controls.Add(this.comboBox1);
 			this.groupBox1.Controls.Add(this.label7);
 			this.groupBox1.Controls.Add(this.cmbGender);
 			this.groupBox1.Controls.Add(this.label6);
@@ -196,24 +196,6 @@
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.Size = new System.Drawing.Size(187, 23);
 			this.comboBox1.TabIndex = 2;
-			// 
-			// textBox1
-			// 
-			this.textBox1.Location = new System.Drawing.Point(594, 83);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(187, 23);
-			this.textBox1.TabIndex = 20;
-			// 
-			// label8
-			// 
-			this.label8.AutoSize = true;
-			this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label8.Location = new System.Drawing.Point(591, 64);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(86, 17);
-			this.label8.TabIndex = 19;
-			this.label8.Text = "SNS Number";
 			// 
 			// label7
 			// 
@@ -361,6 +343,29 @@
 			this.dgvUser.Size = new System.Drawing.Size(796, 378);
 			this.dgvUser.TabIndex = 1;
 			// 
+			// cmbStatus
+			// 
+			this.cmbStatus.FormattingEnabled = true;
+			this.cmbStatus.Items.AddRange(new object[] {
+            "ICT HelpDesk",
+            "Info@IT",
+            "Student Assistant"});
+			this.cmbStatus.Location = new System.Drawing.Point(594, 83);
+			this.cmbStatus.Name = "cmbStatus";
+			this.cmbStatus.Size = new System.Drawing.Size(187, 23);
+			this.cmbStatus.TabIndex = 18;
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label8.Location = new System.Drawing.Point(591, 64);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(50, 17);
+			this.label8.TabIndex = 19;
+			this.label8.Text = "Status:";
+			// 
 			// ucUser
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -403,10 +408,10 @@
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.ComboBox cmbGender;
 		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Panel panel3;
 		private Bunifu.Framework.UI.BunifuCustomDataGrid dgvUser;
 		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.ComboBox cmbStatus;
+		private System.Windows.Forms.Label label8;
 	}
 }

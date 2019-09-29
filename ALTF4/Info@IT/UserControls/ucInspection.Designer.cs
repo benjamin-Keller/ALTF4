@@ -29,8 +29,8 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.bunifuFormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
 			this.tmrView = new System.Windows.Forms.Timer(this.components);
 			this.tmrManage = new System.Windows.Forms.Timer(this.components);
@@ -197,20 +197,20 @@
 			// 
 			this.dgvInspection.AllowUserToAddRows = false;
 			this.dgvInspection.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvInspection.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvInspection.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvInspection.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvInspection.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvInspection.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvInspection.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvInspection.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvInspection.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvInspection.ColumnHeadersHeight = 50;
 			this.dgvInspection.DoubleBuffered = true;
 			this.dgvInspection.EnableHeadersVisualStyles = false;
@@ -293,9 +293,9 @@
 			this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
 			this.label4.Location = new System.Drawing.Point(409, 18);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(76, 17);
+			this.label4.Size = new System.Drawing.Size(97, 17);
 			this.label4.TabIndex = 28;
-			this.label4.Text = "Staff Code:";
+			this.label4.Text = "Staff Member:";
 			// 
 			// cmbVenueCode
 			// 
@@ -312,9 +312,9 @@
 			this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
 			this.label5.Location = new System.Drawing.Point(284, 18);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(85, 17);
+			this.label5.Size = new System.Drawing.Size(50, 17);
 			this.label5.TabIndex = 26;
-			this.label5.Text = "Venue Code:";
+			this.label5.Text = "Venue:";
 			// 
 			// dateInspection
 			// 
@@ -350,7 +350,7 @@
 			// ucInspectionDetails1
 			// 
 			this.ucInspectionDetails1.Location = new System.Drawing.Point(0, 0);
-			this.ucInspectionDetails1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.ucInspectionDetails1.Margin = new System.Windows.Forms.Padding(4);
 			this.ucInspectionDetails1.Name = "ucInspectionDetails1";
 			this.ucInspectionDetails1.Size = new System.Drawing.Size(1056, 562);
 			this.ucInspectionDetails1.TabIndex = 14;

@@ -230,9 +230,9 @@
 			this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
 			this.label5.Location = new System.Drawing.Point(339, 16);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(55, 17);
+			this.label5.Size = new System.Drawing.Size(98, 17);
 			this.label5.TabIndex = 8;
-			this.label5.Text = "Door #:";
+			this.label5.Text = "Door Number:";
 			// 
 			// txtCapacity
 			// 
