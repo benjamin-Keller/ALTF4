@@ -38,6 +38,7 @@ namespace Info_IT
 			lblLoginErrorExtra.Hide();
 
 			ucHome1.Visible = false;
+			btnNavUser.Hide();
 
 		}
 
@@ -69,42 +70,15 @@ namespace Info_IT
 			{
 				case "Admin":
 					lblLoginText.Text = "Log out";
-                    ////What can Admin see
+					////What can Admin see
+					ShowAll();
 
-                    btnNavHome.Show();
-                    btnNavEquipment.Show();
-                    btnNavVenue.Show();
-                    btnNavDepartment.Show();
-                    btnNavDepartment.Show();
-                    btnNavRequest.Show();
-                    btnNavTutorRequest.Show();
-                    btnNavInspection.Show();
-                    btnNavTaskType.Show();
-                    btnNavStudent.Show();
-                    btnNavStaff.Show();
-                    //btnNavUser.Show();
-					btnReports.Show();
-
-					btnNavHelp.Show();
 					break;
 
                 case "ICT HelpDesk":
 					lblLoginText.Text = "Log In";
-                    ////What can Staff see
-
-                    btnNavHome.Show();
-                    btnNavEquipment.Show();
-                    btnNavVenue.Show();
-                    btnNavDepartment.Show();
-                    btnNavDepartment.Show();
-                    btnNavRequest.Show();
-                    btnNavTutorRequest.Show();
-                    btnNavInspection.Show();
-                    btnNavTaskType.Show();
-                    btnNavStudent.Show();
-                    btnNavStaff.Show();
-                    //btnNavUser.Show();
-					btnReports.Show();
+					////What can Staff see
+					ShowAll();
 
 					//btnNavHome.Hide();
 					//btnNavEquipment.Hide();
@@ -118,24 +92,10 @@ namespace Info_IT
 					//btnNavStaff.Hide();
 					//btnNavUser.Hide();
 
-					btnNavHelp.Show();
 					break;
 				case "Info@IT":
-                    ////What can Info@It Staff see
-
-                    btnNavHome.Show();
-                    btnNavEquipment.Show();
-                    btnNavVenue.Show();
-                    btnNavDepartment.Show();
-                    btnNavDepartment.Show();
-                    btnNavRequest.Show();
-                    btnNavTutorRequest.Show();
-                    btnNavInspection.Show();
-                    btnNavTaskType.Show();
-                    btnNavStudent.Show();
-                    btnNavStaff.Show();
-                    //btnNavUser.Show();
-					btnReports.Show();
+					////What can Info@It Staff see
+					ShowAll();
 
 					//btnNavHome.Hide();
 					//btnNavEquipment.Hide();
@@ -148,26 +108,12 @@ namespace Info_IT
 					//btnNavStudent.Hide();
 					btnNavStaff.Hide();
 					btnNavUser.Hide();
-
-					btnNavHelp.Show();
+					
 					break;
 
 				case "Student Assistant":
-                    ////What can SI see
-
-                    btnNavHome.Show();
-                    btnNavEquipment.Show();
-                    btnNavVenue.Show();
-                    btnNavDepartment.Show();
-                    btnNavDepartment.Show();
-                    btnNavRequest.Show();
-                    btnNavTutorRequest.Show();
-                    btnNavInspection.Show();
-                    btnNavTaskType.Show();
-                    btnNavStudent.Show();
-                    btnNavStaff.Show();
-                    //btnNavUser.Show();
-					btnReports.Show();
+					////What can SI see
+					ShowAll();
 
 					//btnNavHome.Hide();
 					//btnNavEquipment.Hide();
@@ -181,7 +127,6 @@ namespace Info_IT
 					btnNavStaff.Hide();
 					btnNavUser.Hide();
 
-					btnNavHelp.Show();
 					break;
 				default:
 					////What can everyone else see
@@ -199,8 +144,8 @@ namespace Info_IT
 					btnNavStaff.Hide();
 					btnNavUser.Hide();
 					btnReports.Hide();
-
 					btnNavHelp.Hide();
+
 					break;
 
 			}
@@ -270,7 +215,6 @@ namespace Info_IT
 
         }
 
-
 		private void InactiveButtons()
 		{
 			btnNavDepartment.BackColor = Color.FromArgb(0,80,200);
@@ -315,6 +259,25 @@ namespace Info_IT
 			//Misc
 			pnlLoginFields.Hide();
 		}
+
+		private void ShowAll()
+		{
+			//Buttons
+			btnNavHome.Show();
+			btnNavEquipment.Show();
+			btnNavVenue.Show();
+			btnNavDepartment.Show();
+			btnNavDepartment.Show();
+			btnNavRequest.Show();
+			btnNavTutorRequest.Show();
+			btnNavInspection.Show();
+			btnNavTaskType.Show();
+			btnNavStudent.Show();
+			btnNavStaff.Show();
+			btnReports.Show();
+			btnNavHelp.Show();
+		}
+		
 		//Login bar
 		private void Login_Click(object sender, EventArgs e)
 		{
