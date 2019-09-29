@@ -601,7 +601,7 @@ namespace DAL
                 dbCmd = new SqlCommand("dbo.sp_AddStaff", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
-                dbCmd.Parameters.AddWithValue("@StaffCode", DAL.StaffClass.StaffCode);
+                //dbCmd.Parameters.AddWithValue("@StaffCode", DAL.StaffClass.StaffCode);
                 dbCmd.Parameters.AddWithValue("@StaffNumber",staff.StaffNumber);
                 dbCmd.Parameters.AddWithValue("@FirstName", staff.Name);
                 dbCmd.Parameters.AddWithValue("@LastName", staff.Surname);
@@ -609,6 +609,9 @@ namespace DAL
                 dbCmd.Parameters.AddWithValue("@ContactNumber", staff.ContactNumber);
                 dbCmd.Parameters.AddWithValue("@StaffType", staff.StaffType);
                 dbCmd.Parameters.AddWithValue("@DepartmentCode", staff.DepartmentCode);
+                dbCmd.Parameters.AddWithValue("@Username", staff.UserName);
+                dbCmd.Parameters.AddWithValue("@StaffPassword", staff.Password);
+                dbCmd.Parameters.AddWithValue("@ActiveStatus", staff.ActiveStatus);
 
                 x = dbCmd.ExecuteNonQuery();
             }
@@ -2044,6 +2047,111 @@ namespace DAL
             dbCmd.CommandType = CommandType.StoredProcedure;
 
             dbCmd.Parameters.AddWithValue("@BuildingBlockID", venue.VenueBuildingBlock);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayInspectionDetailsByEquip(InspectionDetailClass inspectionDetail)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportInspectionDetailEquipCode", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@EquipmentCode", inspectionDetail.EquipmentCode);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+        public DataTable DisplayInspectionDetailsByInspectCode(InspectionDetailClass inspectionDetail)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportInspectionDetailInspectCode", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@InspectionCode", inspectionDetail.InspectionCode);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+        public DataTable DisplayInspectionDetailsByStatus(InspectionDetailClass inspectionDetail)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportInspectionDetailInspectStatus", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@InspectionStatus", inspectionDetail.InspectionStatus);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+        public DataTable DisplayInspectionDetailsByStaffCode(InspectionDetailClass inspectionDetail)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportInspectionDetailStaffCode", dbConn);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@StaffCode", inspectionDetail.StaffCode);
 
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
 

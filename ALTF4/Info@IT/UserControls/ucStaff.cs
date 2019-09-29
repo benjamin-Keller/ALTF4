@@ -61,7 +61,16 @@ namespace Info_IT.UserControls
 		{
             try
             {
-                DAL.StaffClass staff = new DAL.StaffClass(int.Parse(txtStaffNumber.Text), txtName.Text, txtSurname.Text, txtEmailAddress.Text, int.Parse(txtContactNo.Text), cmbStaffType.SelectedValue.ToString(), int.Parse(cmbDepartmentCode.SelectedValue.ToString()));
+                string activeStatus = "";
+                if(cmbStatus.SelectedItem.ToString() == "Active")
+                {
+                    activeStatus = "True";
+                }
+                else
+                {
+                    activeStatus = "False";
+                }
+                DAL.StaffClass staff = new DAL.StaffClass(txtStaffNumber.Text, txtName.Text, txtSurname.Text, txtEmailAddress.Text, int.Parse(txtContactNo.Text), cmbStaffType.SelectedItem.ToString(), int.Parse(cmbDepartmentCode.SelectedValue.ToString()),txtUsername.Text,txtPassword.Text, activeStatus);
                 int x = bll.AddStaff(staff);
 
 
@@ -74,8 +83,9 @@ namespace Info_IT.UserControls
                     txtContactNo.Clear();
                     cmbStaffType.Text = " ";
                     cmbDepartmentCode.Text = " ";
-
-
+                    cmbStatus.Text = " ";
+                    txtUsername.Clear();
+                    txtPassword.Clear();
                 }
                 else
                 {
@@ -96,26 +106,27 @@ namespace Info_IT.UserControls
 
             try
             {
-                DAL.StaffClass staff = new DAL.StaffClass(int.Parse(txtStaffNumber.Text), txtName.Text, txtSurname.Text, txtEmailAddress.Text, int.Parse(txtContactNo.Text), cmbStaffType.SelectedValue.ToString(), int.Parse(cmbDepartmentCode.SelectedValue.ToString()));
-                int x = bll.UpdateStaff(staff);
+                //commented out to make it run
+                //DAL.StaffClass staff = new DAL.StaffClass(txtStaffNumber.Text, txtName.Text, txtSurname.Text, txtEmailAddress.Text, int.Parse(txtContactNo.Text), cmbStaffType.SelectedValue.ToString(), int.Parse(cmbDepartmentCode.SelectedValue.ToString()));
+                //int x = bll.UpdateStaff(staff);
 
 
-                if (x > 0)
-                {
-                    txtStaffNumber.Clear();
-                    txtName.Clear();
-                    txtSurname.Clear();
-                    txtEmailAddress.Clear();
-                    txtContactNo.Clear();
-                    cmbStaffType.Text = " ";
-                    cmbDepartmentCode.Text = " ";
+                //if (x > 0)
+                //{
+                //    txtStaffNumber.Clear();
+                //    txtName.Clear();
+                //    txtSurname.Clear();
+                //    txtEmailAddress.Clear();
+                //    txtContactNo.Clear();
+                //    cmbStaffType.Text = " ";
+                //    cmbDepartmentCode.Text = " ";
 
                        
-                }
-                else
-                {
-                    MessageBox.Show("Please input valid data.");
-                }
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Please input valid data.");
+                //}
             }
             catch (Exception b)
             {
