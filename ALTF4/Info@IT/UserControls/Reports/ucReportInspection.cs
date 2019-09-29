@@ -26,11 +26,13 @@ namespace Info_IT.UserControls.Reports
 
             cmbVenueCode.DisplayMember = "VenueDescription";
             cmbVenueCode.ValueMember = "VenueCode";
+            cmbVenueCode.Text = "";
 
             cmbStaffCode.DataSource = bll.GetStaff();
 
             cmbStaffCode.DisplayMember = "FirstName";
             cmbStaffCode.ValueMember = "StaffCode";
+            cmbStaffCode.Text = "";
 
             dgvInspectionReport.DataSource = bll.GetInspection();
         }

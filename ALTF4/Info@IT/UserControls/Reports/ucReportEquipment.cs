@@ -26,10 +26,12 @@ namespace Info_IT.UserControls.Reports
             cmbEquipType.DataSource = bll.GetEquipmentType();
             cmbEquipType.DisplayMember = "TypeDescription";
             cmbEquipType.ValueMember = "EquipTypeCode";
+            cmbEquipType.Text = "";
 
             cmbVenue.DataSource = bll.GetVenues();
             cmbVenue.DisplayMember = "VenueDescription";
             cmbVenue.ValueMember = "VenueCode";
+            cmbVenue.Text = "";
         }
 
         private void cmbEquipType_SelectedIndexChanged(object sender, EventArgs e)

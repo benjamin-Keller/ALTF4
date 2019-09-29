@@ -26,11 +26,13 @@ namespace Info_IT.UserControls.Reports
 
             cmbBuilding.DisplayMember = "BuildingName";
             cmbBuilding.ValueMember = "BuildingID";
+            cmbBuilding.Text = "";
 
             cmbBuildingBlock.DataSource = bll.LoadCMBBuildingBlock();
 
             cmbBuildingBlock.DisplayMember = "BuildingBlock";
             cmbBuildingBlock.ValueMember = "BuildingBlockID";
+            cmbBuildingBlock.Text = "";
 
             dgvVenueReport.DataSource = bll.GetVenues();
         }

@@ -30,21 +30,25 @@ namespace Info_IT.UserControls.Reports
 
             cmbTaskTypeCode.DisplayMember = "TaskName";
             cmbTaskTypeCode.ValueMember = "taskTypeCode";
+            cmbTaskTypeCode.Text = "";
 
             cmbAssignedStaffCode.DataSource = bll.GetStaff();
 
             cmbAssignedStaffCode.DisplayMember = "FirstName";
             cmbAssignedStaffCode.ValueMember = "StaffCode";
+            cmbAssignedStaffCode.Text = "";
 
             cmbStaffCode.DataSource = bll.GetStaff();
 
             cmbStaffCode.DisplayMember = "FirstName";
             cmbStaffCode.ValueMember = "StaffCode";
+            cmbStaffCode.Text = "";
 
             cmbStudentCode.DataSource = bll.GetStudent();
 
             cmbStudentCode.DisplayMember = "FirstName";
             cmbStudentCode.ValueMember = "StudentCode";
+            cmbStudentCode.Text = "";
 
         }
 
