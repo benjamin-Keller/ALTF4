@@ -27,6 +27,9 @@ namespace Info_IT.UserControls
 
             cmbDepartmentCode.DisplayMember = "DepartmentName";
             cmbDepartmentCode.ValueMember = "DepartmentCode";
+
+            cmbStaffType.DisplayMember = "StaffType";
+            cmbStaffType.ValueMember = "StaffCode";
         }
 
 		//Menu button (Manage)
@@ -157,7 +160,7 @@ namespace Info_IT.UserControls
             txtEmailAddress.Text = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
             txtContactNo.Text = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
 
-            cmbStaffType.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[6].ToString();
+            cmbStaffType.Text = values.Rows[0].Table.Rows[0].ItemArray[6].ToString();
             cmbDepartmentCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[7].ToString();
 
         }
