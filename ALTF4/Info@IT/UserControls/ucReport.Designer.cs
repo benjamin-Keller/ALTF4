@@ -31,8 +31,10 @@
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panel9 = new System.Windows.Forms.Panel();
 			this.btnStudentReport = new System.Windows.Forms.Button();
-			this.panel8 = new System.Windows.Forms.Panel();
+			this.panel10 = new System.Windows.Forms.Panel();
 			this.btnStaffReport = new System.Windows.Forms.Button();
+			this.panel8 = new System.Windows.Forms.Panel();
+			this.btnInspectionDetailsReport = new System.Windows.Forms.Button();
 			this.panel7 = new System.Windows.Forms.Panel();
 			this.btnInspectionReport = new System.Windows.Forms.Button();
 			this.panel6 = new System.Windows.Forms.Panel();
@@ -46,6 +48,8 @@
 			this.pnlView = new System.Windows.Forms.Panel();
 			this.btnEquipmentReport = new System.Windows.Forms.Button();
 			this.panel3 = new System.Windows.Forms.Panel();
+			this.ucReportInspectionDetails1 = new Info_IT.UserControls.Reports.ucReportInspectionDetails();
+			this.ucReportStudent1 = new Info_IT.UserControls.ucReportStudent();
 			this.ucReportStaff1 = new Info_IT.UserControls.ucReportStaff();
 			this.ucReportInspection1 = new Info_IT.UserControls.Reports.ucReportInspection();
 			this.ucReportRequest1 = new Info_IT.UserControls.Reports.ucReportRequest();
@@ -53,9 +57,9 @@
 			this.ucReportDepartment1 = new Info_IT.UserControls.Reports.ucReportDepartment();
 			this.ucReportVenue1 = new Info_IT.UserControls.Reports.ucReportVenue();
 			this.ucReportEquipment1 = new Info_IT.UserControls.Reports.ucReportEquipment();
-			this.ucReportStudent1 = new Info_IT.UserControls.ucReportStudent();
 			this.panel1.SuspendLayout();
 			this.panel9.SuspendLayout();
+			this.panel10.SuspendLayout();
 			this.panel8.SuspendLayout();
 			this.panel7.SuspendLayout();
 			this.panel6.SuspendLayout();
@@ -70,6 +74,7 @@
 			// 
 			this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
 			this.panel1.Controls.Add(this.panel9);
+			this.panel1.Controls.Add(this.panel10);
 			this.panel1.Controls.Add(this.panel8);
 			this.panel1.Controls.Add(this.panel7);
 			this.panel1.Controls.Add(this.panel6);
@@ -88,12 +93,12 @@
 			this.panel9.BackColor = System.Drawing.SystemColors.ControlDark;
 			this.panel9.Controls.Add(this.btnStudentReport);
 			this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel9.Location = new System.Drawing.Point(0, 371);
+			this.panel9.Location = new System.Drawing.Point(0, 424);
 			this.panel9.MaximumSize = new System.Drawing.Size(200, 225);
 			this.panel9.MinimumSize = new System.Drawing.Size(200, 53);
 			this.panel9.Name = "panel9";
 			this.panel9.Size = new System.Drawing.Size(200, 53);
-			this.panel9.TabIndex = 20;
+			this.panel9.TabIndex = 24;
 			// 
 			// btnStudentReport
 			// 
@@ -112,17 +117,17 @@
 			this.btnStudentReport.UseVisualStyleBackColor = false;
 			this.btnStudentReport.Click += new System.EventHandler(this.BtnStudentReport_Click);
 			// 
-			// panel8
+			// panel10
 			// 
-			this.panel8.BackColor = System.Drawing.SystemColors.ControlDark;
-			this.panel8.Controls.Add(this.btnStaffReport);
-			this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel8.Location = new System.Drawing.Point(0, 318);
-			this.panel8.MaximumSize = new System.Drawing.Size(200, 225);
-			this.panel8.MinimumSize = new System.Drawing.Size(200, 53);
-			this.panel8.Name = "panel8";
-			this.panel8.Size = new System.Drawing.Size(200, 53);
-			this.panel8.TabIndex = 19;
+			this.panel10.BackColor = System.Drawing.SystemColors.ControlDark;
+			this.panel10.Controls.Add(this.btnStaffReport);
+			this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel10.Location = new System.Drawing.Point(0, 371);
+			this.panel10.MaximumSize = new System.Drawing.Size(200, 225);
+			this.panel10.MinimumSize = new System.Drawing.Size(200, 53);
+			this.panel10.Name = "panel10";
+			this.panel10.Size = new System.Drawing.Size(200, 53);
+			this.panel10.TabIndex = 23;
 			// 
 			// btnStaffReport
 			// 
@@ -140,6 +145,32 @@
 			this.btnStaffReport.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
 			this.btnStaffReport.UseVisualStyleBackColor = false;
 			this.btnStaffReport.Click += new System.EventHandler(this.BtnStaffReport_Click);
+			// 
+			// panel8
+			// 
+			this.panel8.Controls.Add(this.btnInspectionDetailsReport);
+			this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel8.Location = new System.Drawing.Point(0, 318);
+			this.panel8.Name = "panel8";
+			this.panel8.Size = new System.Drawing.Size(200, 53);
+			this.panel8.TabIndex = 19;
+			// 
+			// btnInspectionDetailsReport
+			// 
+			this.btnInspectionDetailsReport.BackColor = System.Drawing.SystemColors.ControlDark;
+			this.btnInspectionDetailsReport.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnInspectionDetailsReport.FlatAppearance.BorderSize = 0;
+			this.btnInspectionDetailsReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnInspectionDetailsReport.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.btnInspectionDetailsReport.Location = new System.Drawing.Point(0, 0);
+			this.btnInspectionDetailsReport.MinimumSize = new System.Drawing.Size(180, 53);
+			this.btnInspectionDetailsReport.Name = "btnInspectionDetailsReport";
+			this.btnInspectionDetailsReport.Size = new System.Drawing.Size(200, 53);
+			this.btnInspectionDetailsReport.TabIndex = 6;
+			this.btnInspectionDetailsReport.Text = "Inspection Details";
+			this.btnInspectionDetailsReport.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+			this.btnInspectionDetailsReport.UseVisualStyleBackColor = false;
+			this.btnInspectionDetailsReport.Click += new System.EventHandler(this.BtnInspectionDetailsReport_Click);
 			// 
 			// panel7
 			// 
@@ -317,6 +348,7 @@
 			// 
 			// panel3
 			// 
+			this.panel3.Controls.Add(this.ucReportInspectionDetails1);
 			this.panel3.Controls.Add(this.ucReportStudent1);
 			this.panel3.Controls.Add(this.ucReportStaff1);
 			this.panel3.Controls.Add(this.ucReportInspection1);
@@ -330,6 +362,20 @@
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(856, 562);
 			this.panel3.TabIndex = 22;
+			// 
+			// ucReportInspectionDetails1
+			// 
+			this.ucReportInspectionDetails1.Location = new System.Drawing.Point(0, 0);
+			this.ucReportInspectionDetails1.Name = "ucReportInspectionDetails1";
+			this.ucReportInspectionDetails1.Size = new System.Drawing.Size(856, 562);
+			this.ucReportInspectionDetails1.TabIndex = 8;
+			// 
+			// ucReportStudent1
+			// 
+			this.ucReportStudent1.Location = new System.Drawing.Point(0, 0);
+			this.ucReportStudent1.Name = "ucReportStudent1";
+			this.ucReportStudent1.Size = new System.Drawing.Size(856, 562);
+			this.ucReportStudent1.TabIndex = 7;
 			// 
 			// ucReportStaff1
 			// 
@@ -380,13 +426,6 @@
 			this.ucReportEquipment1.Size = new System.Drawing.Size(856, 562);
 			this.ucReportEquipment1.TabIndex = 0;
 			// 
-			// ucReportStudent1
-			// 
-			this.ucReportStudent1.Location = new System.Drawing.Point(0, 0);
-			this.ucReportStudent1.Name = "ucReportStudent1";
-			this.ucReportStudent1.Size = new System.Drawing.Size(856, 562);
-			this.ucReportStudent1.TabIndex = 7;
-			// 
 			// ucReport
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -398,6 +437,7 @@
 			this.Load += new System.EventHandler(this.UcReport_Load);
 			this.panel1.ResumeLayout(false);
 			this.panel9.ResumeLayout(false);
+			this.panel10.ResumeLayout(false);
 			this.panel8.ResumeLayout(false);
 			this.panel7.ResumeLayout(false);
 			this.panel6.ResumeLayout(false);
@@ -414,8 +454,6 @@
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Panel pnlView;
 		private System.Windows.Forms.Button btnEquipmentReport;
-		private System.Windows.Forms.Panel panel8;
-		private System.Windows.Forms.Button btnStaffReport;
 		private System.Windows.Forms.Panel panel7;
 		private System.Windows.Forms.Button btnInspectionReport;
 		private System.Windows.Forms.Panel panel6;
@@ -426,8 +464,6 @@
 		private System.Windows.Forms.Button btnDepartmentReport;
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.Button btnVenueReport;
-		private System.Windows.Forms.Panel panel9;
-		private System.Windows.Forms.Button btnStudentReport;
 		private System.Windows.Forms.Panel panel3;
 		private Reports.ucReportEquipment ucReportEquipment1;
 		private Reports.ucReportVenue ucReportVenue1;
@@ -437,5 +473,12 @@
 		private Reports.ucReportInspection ucReportInspection1;
 		private ucReportStaff ucReportStaff1;
 		private ucReportStudent ucReportStudent1;
+		private System.Windows.Forms.Panel panel9;
+		private System.Windows.Forms.Button btnStudentReport;
+		private System.Windows.Forms.Panel panel10;
+		private System.Windows.Forms.Button btnStaffReport;
+		private System.Windows.Forms.Panel panel8;
+		private Reports.ucReportInspectionDetails ucReportInspectionDetails1;
+		private System.Windows.Forms.Button btnInspectionDetailsReport;
 	}
 }

@@ -144,6 +144,12 @@
     <Compile Include="UserControls\Reports\ucReportInspection.Designer.cs">
       <DependentUpon>ucReportInspection.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Reports\ucReportInspectionDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Reports\ucReportInspectionDetails.Designer.cs">
+      <DependentUpon>ucReportInspectionDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Reports\ucReportRequest.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -292,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Reports\ucReportInspection.resx">
       <DependentUpon>ucReportInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Reports\ucReportInspectionDetails.resx">
+      <DependentUpon>ucReportInspectionDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Reports\ucReportRequest.resx">
       <DependentUpon>ucReportRequest.cs</DependentUpon>

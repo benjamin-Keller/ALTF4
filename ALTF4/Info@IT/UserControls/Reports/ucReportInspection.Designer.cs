@@ -28,8 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dgvInspectionReport = new Bunifu.Framework.UI.BunifuCustomDataGrid();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -56,20 +56,20 @@
 			// 
 			this.dgvInspectionReport.AllowUserToAddRows = false;
 			this.dgvInspectionReport.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvInspectionReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvInspectionReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
 			this.dgvInspectionReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvInspectionReport.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvInspectionReport.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvInspectionReport.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvInspectionReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvInspectionReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
 			this.dgvInspectionReport.ColumnHeadersHeight = 50;
 			this.dgvInspectionReport.DoubleBuffered = true;
 			this.dgvInspectionReport.EnableHeadersVisualStyles = false;
@@ -114,9 +114,9 @@
 			this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
 			this.label4.Location = new System.Drawing.Point(289, 16);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(76, 17);
+			this.label4.Size = new System.Drawing.Size(42, 17);
 			this.label4.TabIndex = 34;
-			this.label4.Text = "Staff Code:";
+			this.label4.Text = "Staff:";
 			// 
 			// cmbVenueCode
 			// 
@@ -134,9 +134,9 @@
 			this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
 			this.label5.Location = new System.Drawing.Point(164, 16);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(85, 17);
+			this.label5.Size = new System.Drawing.Size(50, 17);
 			this.label5.TabIndex = 32;
-			this.label5.Text = "Venue Code:";
+			this.label5.Text = "Venue:";
 			// 
 			// dateInspection
 			// 

@@ -29,12 +29,9 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.pnlView = new System.Windows.Forms.Panel();
-			this.btnViewList = new System.Windows.Forms.Button();
-			this.btnView = new System.Windows.Forms.Button();
 			this.pnlManage = new System.Windows.Forms.Panel();
 			this.btnManageUpdate = new System.Windows.Forms.Button();
 			this.btnManageAdd = new System.Windows.Forms.Button();
@@ -55,7 +52,6 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
-			this.pnlView.SuspendLayout();
 			this.pnlManage.SuspendLayout();
 			this.panel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvDepartment)).BeginInit();
@@ -65,58 +61,12 @@
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-			this.panel1.Controls.Add(this.pnlView);
 			this.panel1.Controls.Add(this.pnlManage);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(200, 562);
 			this.panel1.TabIndex = 15;
-			// 
-			// pnlView
-			// 
-			this.pnlView.BackColor = System.Drawing.SystemColors.ControlDark;
-			this.pnlView.Controls.Add(this.btnViewList);
-			this.pnlView.Controls.Add(this.btnView);
-			this.pnlView.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlView.Location = new System.Drawing.Point(0, 53);
-			this.pnlView.MaximumSize = new System.Drawing.Size(200, 115);
-			this.pnlView.MinimumSize = new System.Drawing.Size(200, 53);
-			this.pnlView.Name = "pnlView";
-			this.pnlView.Size = new System.Drawing.Size(200, 53);
-			this.pnlView.TabIndex = 13;
-			// 
-			// btnViewList
-			// 
-			this.btnViewList.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.btnViewList.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnViewList.FlatAppearance.BorderSize = 0;
-			this.btnViewList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnViewList.Font = new System.Drawing.Font("Segoe UI", 8.75F);
-			this.btnViewList.Location = new System.Drawing.Point(0, 53);
-			this.btnViewList.Name = "btnViewList";
-			this.btnViewList.Size = new System.Drawing.Size(200, 31);
-			this.btnViewList.TabIndex = 6;
-			this.btnViewList.Text = "List All Departments";
-			this.btnViewList.UseVisualStyleBackColor = false;
-			this.btnViewList.Click += new System.EventHandler(this.BtnViewList_Click);
-			// 
-			// btnView
-			// 
-			this.btnView.BackColor = System.Drawing.SystemColors.ControlDark;
-			this.btnView.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnView.FlatAppearance.BorderSize = 0;
-			this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnView.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.btnView.Location = new System.Drawing.Point(0, 0);
-			this.btnView.MinimumSize = new System.Drawing.Size(180, 53);
-			this.btnView.Name = "btnView";
-			this.btnView.Size = new System.Drawing.Size(200, 53);
-			this.btnView.TabIndex = 5;
-			this.btnView.Text = "View";
-			this.btnView.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-			this.btnView.UseVisualStyleBackColor = false;
-			this.btnView.Click += new System.EventHandler(this.BtnView_Click);
 			// 
 			// pnlManage
 			// 
@@ -191,20 +141,20 @@
 			// 
 			this.dgvDepartment.AllowUserToAddRows = false;
 			this.dgvDepartment.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvDepartment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvDepartment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
 			this.dgvDepartment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvDepartment.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvDepartment.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvDepartment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvDepartment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvDepartment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
 			this.dgvDepartment.ColumnHeadersHeight = 50;
 			this.dgvDepartment.DoubleBuffered = true;
 			this.dgvDepartment.EnableHeadersVisualStyles = false;
@@ -349,7 +299,6 @@
 			this.Size = new System.Drawing.Size(1056, 562);
 			this.Load += new System.EventHandler(this.ucDepartment_Load);
 			this.panel1.ResumeLayout(false);
-			this.pnlView.ResumeLayout(false);
 			this.pnlManage.ResumeLayout(false);
 			this.panel3.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgvDepartment)).EndInit();
@@ -361,9 +310,6 @@
 
 		#endregion
 		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.Panel pnlView;
-		private System.Windows.Forms.Button btnViewList;
-		private System.Windows.Forms.Button btnView;
 		private System.Windows.Forms.Panel pnlManage;
 		private System.Windows.Forms.Button btnManageUpdate;
 		private System.Windows.Forms.Button btnManageAdd;

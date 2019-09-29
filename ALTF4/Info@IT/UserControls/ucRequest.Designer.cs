@@ -29,17 +29,15 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.bunifuFormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
 			this.tmrManage = new System.Windows.Forms.Timer(this.components);
 			this.btnManageUpdate = new System.Windows.Forms.Button();
 			this.btnManageAdd = new System.Windows.Forms.Button();
 			this.btnManage = new System.Windows.Forms.Button();
 			this.pnlManage = new System.Windows.Forms.Panel();
-			this.btnViewList = new System.Windows.Forms.Button();
-			this.btnView = new System.Windows.Forms.Button();
-			this.pnlView = new System.Windows.Forms.Panel();
+			this.btnManageDelete = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.tmrView = new System.Windows.Forms.Timer(this.components);
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -59,9 +57,7 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dgvRequest = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-			this.btnManageDelete = new System.Windows.Forms.Button();
 			this.pnlManage.SuspendLayout();
-			this.pnlView.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -138,55 +134,24 @@
 			this.pnlManage.Size = new System.Drawing.Size(200, 53);
 			this.pnlManage.TabIndex = 12;
 			// 
-			// btnViewList
+			// btnManageDelete
 			// 
-			this.btnViewList.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.btnViewList.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnViewList.FlatAppearance.BorderSize = 0;
-			this.btnViewList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnViewList.Font = new System.Drawing.Font("Segoe UI", 8.75F);
-			this.btnViewList.Location = new System.Drawing.Point(0, 53);
-			this.btnViewList.Name = "btnViewList";
-			this.btnViewList.Size = new System.Drawing.Size(200, 31);
-			this.btnViewList.TabIndex = 6;
-			this.btnViewList.Text = "List All Request";
-			this.btnViewList.UseVisualStyleBackColor = false;
-			this.btnViewList.Click += new System.EventHandler(this.BtnViewList_Click);
-			// 
-			// btnView
-			// 
-			this.btnView.BackColor = System.Drawing.SystemColors.ControlDark;
-			this.btnView.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnView.FlatAppearance.BorderSize = 0;
-			this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnView.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.btnView.Location = new System.Drawing.Point(0, 0);
-			this.btnView.MinimumSize = new System.Drawing.Size(180, 53);
-			this.btnView.Name = "btnView";
-			this.btnView.Size = new System.Drawing.Size(200, 53);
-			this.btnView.TabIndex = 5;
-			this.btnView.Text = "View";
-			this.btnView.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-			this.btnView.UseVisualStyleBackColor = false;
-			this.btnView.Click += new System.EventHandler(this.BtnView_Click);
-			// 
-			// pnlView
-			// 
-			this.pnlView.BackColor = System.Drawing.SystemColors.ControlDark;
-			this.pnlView.Controls.Add(this.btnViewList);
-			this.pnlView.Controls.Add(this.btnView);
-			this.pnlView.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlView.Location = new System.Drawing.Point(0, 53);
-			this.pnlView.MaximumSize = new System.Drawing.Size(200, 115);
-			this.pnlView.MinimumSize = new System.Drawing.Size(200, 53);
-			this.pnlView.Name = "pnlView";
-			this.pnlView.Size = new System.Drawing.Size(200, 53);
-			this.pnlView.TabIndex = 13;
+			this.btnManageDelete.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.btnManageDelete.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnManageDelete.FlatAppearance.BorderSize = 0;
+			this.btnManageDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnManageDelete.Font = new System.Drawing.Font("Segoe UI", 8.75F);
+			this.btnManageDelete.Location = new System.Drawing.Point(0, 115);
+			this.btnManageDelete.Name = "btnManageDelete";
+			this.btnManageDelete.Size = new System.Drawing.Size(200, 31);
+			this.btnManageDelete.TabIndex = 8;
+			this.btnManageDelete.Text = "Delete Selected Request";
+			this.btnManageDelete.UseVisualStyleBackColor = false;
+			this.btnManageDelete.Click += new System.EventHandler(this.BtnManageDelete_Click);
 			// 
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-			this.panel1.Controls.Add(this.pnlView);
 			this.panel1.Controls.Add(this.pnlManage);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -388,20 +353,20 @@
 			// 
 			this.dgvRequest.AllowUserToAddRows = false;
 			this.dgvRequest.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvRequest.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvRequest.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
 			this.dgvRequest.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvRequest.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvRequest.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvRequest.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvRequest.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvRequest.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
 			this.dgvRequest.ColumnHeadersHeight = 50;
 			this.dgvRequest.DoubleBuffered = true;
 			this.dgvRequest.EnableHeadersVisualStyles = false;
@@ -415,21 +380,6 @@
 			this.dgvRequest.TabIndex = 0;
 			this.dgvRequest.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRequest_CellClick);
 			// 
-			// btnManageDelete
-			// 
-			this.btnManageDelete.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.btnManageDelete.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnManageDelete.FlatAppearance.BorderSize = 0;
-			this.btnManageDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnManageDelete.Font = new System.Drawing.Font("Segoe UI", 8.75F);
-			this.btnManageDelete.Location = new System.Drawing.Point(0, 115);
-			this.btnManageDelete.Name = "btnManageDelete";
-			this.btnManageDelete.Size = new System.Drawing.Size(200, 31);
-			this.btnManageDelete.TabIndex = 8;
-			this.btnManageDelete.Text = "Delete Selected Request";
-			this.btnManageDelete.UseVisualStyleBackColor = false;
-			this.btnManageDelete.Click += new System.EventHandler(this.BtnManageDelete_Click);
-			// 
 			// ucRequest
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -441,7 +391,6 @@
 			this.Size = new System.Drawing.Size(1056, 562);
 			this.Load += new System.EventHandler(this.UcRequest_Load);
 			this.pnlManage.ResumeLayout(false);
-			this.pnlView.ResumeLayout(false);
 			this.panel1.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
@@ -459,9 +408,6 @@
 		private System.Windows.Forms.Button btnManageAdd;
 		private System.Windows.Forms.Button btnManage;
 		private System.Windows.Forms.Panel pnlManage;
-		private System.Windows.Forms.Button btnViewList;
-		private System.Windows.Forms.Button btnView;
-		private System.Windows.Forms.Panel pnlView;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Timer tmrView;
 		private System.Windows.Forms.GroupBox groupBox1;

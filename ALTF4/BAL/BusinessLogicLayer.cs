@@ -364,6 +364,26 @@ namespace BLL
         {
             return dal.DisplayVenueByBuildingBlock(venue);
         }
-        
+
+        public DataTable Report_DisplayInspectionDetailsByEquip(InspectionDetailClass inspectionDetail)
+        {
+            return dal.DisplayInspectionDetailsByEquip(inspectionDetail);
+        }
+
+        public DataTable Report_DisplayInspectionDetailsByInspectCode(InspectionDetailClass inspectionDetail)
+        {
+            return dal.DisplayInspectionDetailsByInspectCode(inspectionDetail);
+        }
+
+        public DataTable Report_DisplayInspectionDetailsByStaffCode(InspectionDetailClass inspectionDetail)
+        {
+            return dal.DisplayInspectionDetailsByStaffCode(inspectionDetail);
+        }
+
+        public DataTable Report_DisplayInspectionDetailsByStatus(InspectionDetailClass inspectionDetail)
+        {
+            return dal.DisplayInspectionDetailsByStatus(inspectionDetail);
+        }
+
     }
 }

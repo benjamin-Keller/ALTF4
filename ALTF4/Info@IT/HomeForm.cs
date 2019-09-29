@@ -1,8 +1,7 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
-using BLL;
-using System.Data;
 
 namespace Info_IT
 {
@@ -15,9 +14,9 @@ namespace Info_IT
 		public bool firstUser;
 		public bool firstPass;
 
-        BusinessLogicLayer bll = new BusinessLogicLayer();
+		BusinessLogicLayer bll = new BusinessLogicLayer();
 
-        public Home()
+		public Home()
 		{
 			InitializeComponent();
 		}
@@ -26,31 +25,33 @@ namespace Info_IT
 			HideAll();
 			LoginPanel();
 
-            //Focus label instead of txtUsername
-            this.ActiveControl = label2;
+			//Focus label instead of txtUsername
+			this.ActiveControl = label2;
 
 			//Hidden when first launching
 			pnlNavigation.Hide();
 			pnlLogin.Hide();
 			btnNavHelp.Hide();
-            lblDisplayName.Hide();
+			lblDisplayName.Hide();
 			lblLoginError.Hide();
 			lblLoginErrorExtra.Hide();
 
 			ucHome1.Visible = false;
+			btnNavUser.Hide();
 
 		}
 
 		public void LoginPanel()
 		{
 			pnlLoginFields.Visible = true;
-            pnlLoginFields.Focus();
+			pnlLoginFields.Focus();
 
 			this.Text = "Login";
 			lblLocation.Text = "Login";
 
 			//This is like an If Else statement for isLoggedIn
-			switch (isLoggedIn) {
+			switch (isLoggedIn)
+			{
 				case true:
 					lblLoginText.Text = "Log out";
 					isLoggedIn = false;
@@ -60,8 +61,8 @@ namespace Info_IT
 				case false:
 					lblLoginText.Text = "Log In";
 					pnlLogin.Show();
-                    lblDisplayName.Hide();
-                    break;
+					lblDisplayName.Hide();
+					break;
 			}
 
 			//This is like an If Else statement for getting the Role
@@ -69,42 +70,15 @@ namespace Info_IT
 			{
 				case "Admin":
 					lblLoginText.Text = "Log out";
-                    ////What can Admin see
+					////What can Admin see
+					ShowAll();
 
-                    btnNavHome.Show();
-                    btnNavEquipment.Show();
-                    btnNavVenue.Show();
-                    btnNavDepartment.Show();
-                    btnNavDepartment.Show();
-                    btnNavRequest.Show();
-                    btnNavTutorRequest.Show();
-                    btnNavInspection.Show();
-                    btnNavTaskType.Show();
-                    btnNavStudent.Show();
-                    btnNavStaff.Show();
-                    //btnNavUser.Show();
-					btnReports.Show();
-
-					btnNavHelp.Show();
 					break;
 
-                case "ICT HelpDesk":
+				case "ICT HelpDesk":
 					lblLoginText.Text = "Log In";
-                    ////What can Staff see
-
-                    btnNavHome.Show();
-                    btnNavEquipment.Show();
-                    btnNavVenue.Show();
-                    btnNavDepartment.Show();
-                    btnNavDepartment.Show();
-                    btnNavRequest.Show();
-                    btnNavTutorRequest.Show();
-                    btnNavInspection.Show();
-                    btnNavTaskType.Show();
-                    btnNavStudent.Show();
-                    btnNavStaff.Show();
-                    //btnNavUser.Show();
-					btnReports.Show();
+					////What can Staff see
+					ShowAll();
 
 					//btnNavHome.Hide();
 					//btnNavEquipment.Hide();
@@ -118,24 +92,10 @@ namespace Info_IT
 					//btnNavStaff.Hide();
 					//btnNavUser.Hide();
 
-					btnNavHelp.Show();
 					break;
 				case "Info@IT":
-                    ////What can Info@It Staff see
-
-                    btnNavHome.Show();
-                    btnNavEquipment.Show();
-                    btnNavVenue.Show();
-                    btnNavDepartment.Show();
-                    btnNavDepartment.Show();
-                    btnNavRequest.Show();
-                    btnNavTutorRequest.Show();
-                    btnNavInspection.Show();
-                    btnNavTaskType.Show();
-                    btnNavStudent.Show();
-                    btnNavStaff.Show();
-                    //btnNavUser.Show();
-					btnReports.Show();
+					////What can Info@It Staff see
+					ShowAll();
 
 					//btnNavHome.Hide();
 					//btnNavEquipment.Hide();
@@ -149,25 +109,11 @@ namespace Info_IT
 					btnNavStaff.Hide();
 					btnNavUser.Hide();
 
-					btnNavHelp.Show();
 					break;
 
 				case "Student Assistant":
-                    ////What can SI see
-
-                    btnNavHome.Show();
-                    btnNavEquipment.Show();
-                    btnNavVenue.Show();
-                    btnNavDepartment.Show();
-                    btnNavDepartment.Show();
-                    btnNavRequest.Show();
-                    btnNavTutorRequest.Show();
-                    btnNavInspection.Show();
-                    btnNavTaskType.Show();
-                    btnNavStudent.Show();
-                    btnNavStaff.Show();
-                    //btnNavUser.Show();
-					btnReports.Show();
+					////What can SI see
+					ShowAll();
 
 					//btnNavHome.Hide();
 					//btnNavEquipment.Hide();
@@ -181,7 +127,6 @@ namespace Info_IT
 					btnNavStaff.Hide();
 					btnNavUser.Hide();
 
-					btnNavHelp.Show();
 					break;
 				default:
 					////What can everyone else see
@@ -199,8 +144,8 @@ namespace Info_IT
 					btnNavStaff.Hide();
 					btnNavUser.Hide();
 					btnReports.Hide();
-
 					btnNavHelp.Hide();
+
 					break;
 
 			}
@@ -210,80 +155,79 @@ namespace Info_IT
 
 		private void BtnLogIn_Click(object sender, EventArgs e)
 		{
-            DAL.LoginClass login = new DAL.LoginClass(txtUsername.Text, txtPassword.Text);
-			
-            //DataGridView x = new DataGridView();
+			DAL.LoginClass login = new DAL.LoginClass(txtUsername.Text, txtPassword.Text);
 
-            var x = bll.GetLogin(login);
+			//DataGridView x = new DataGridView();
 
-            if (x.Rows.Count == 0)
-            {
+			var x = bll.GetLogin(login);
+
+			if (x.Rows.Count == 0)
+			{
 				lblLoginError.Show();
-                //MessageBox.Show("Incorrect Username and Password");
-            }
-            else
-            {
-                isLoggedIn = true;
-                try
-                {
-                    var a = x.Rows[0].Table.Rows[0].ItemArray;
-                    role = a[6].ToString();
-                    lblDisplayName.Text = a[3].ToString() + ", " + a[2].ToString() + "(" + a[6].ToString() + ")";
-                    lblDisplayName.Show();
+				//MessageBox.Show("Incorrect Username and Password");
+			}
+			else
+			{
+				isLoggedIn = true;
+				try
+				{
+					var a = x.Rows[0].Table.Rows[0].ItemArray;
+					role = a[6].ToString();
+					lblDisplayName.Text = a[3].ToString() + ", " + a[2].ToString() + "(" + a[6].ToString() + ")";
+					lblDisplayName.Show();
 
 					ucHome1.lblWelcome.Text = "Welcome " + a[2].ToString() + " " + a[3].ToString();
 					ucHome1.lblRole.Text = "You are currently role: " + a[6].ToString() + "!";
-                }
-                catch
-                {
-                    int i = x.Rows.Count;
+				}
+				catch
+				{
+					int i = x.Rows.Count;
 
 					lblLoginErrorExtra.Text = i.ToString();
-                    //MessageBox.Show(i.ToString());
-                }
-                LoginPanel();
-                HideAll();
-                ucHome1.Show();
+					//MessageBox.Show(i.ToString());
+				}
+				LoginPanel();
+				HideAll();
+				ucHome1.Show();
 				ucHome1.Visible = true;
 
 				this.Text = "Info@IT";
-                lblLocation.Text = "Home";
+				lblLocation.Text = "Home";
 
-                pnlNavigation.Show();
+				pnlNavigation.Show();
 
-                txtUsername.Text = "";
-                txtPassword.Text = "";
-            }
+				txtUsername.Text = "";
+				txtPassword.Text = "";
+			}
 
 
 
-            //isLoggedIn = true;
-            //LoginPanel();
-            //HideAll();
-            //ucHome1.Show();
+			//isLoggedIn = true;
+			//LoginPanel();
+			//HideAll();
+			//ucHome1.Show();
 
-            //this.Text = "Info@IT";
-            //lblLocation.Text = "Home";
+			//this.Text = "Info@IT";
+			//lblLocation.Text = "Home";
 
-            //pnlNavigation.Show();
-            //btnNavHelp.Show();
+			//pnlNavigation.Show();
+			//btnNavHelp.Show();
 
-        }
-
+		}
 
 		private void InactiveButtons()
 		{
-			btnNavDepartment.BackColor = Color.FromArgb(0,80,200);
-			btnNavEquipment.BackColor = Color.FromArgb(0,80,200);
-			btnNavHome.BackColor = Color.FromArgb(0,80,200);
-			btnNavInspection.BackColor = Color.FromArgb(0,80,200);
-			btnNavRequest.BackColor = Color.FromArgb(0,80,200);
-			btnNavTaskType.BackColor = Color.FromArgb(0,80,200);
-			btnNavTutorRequest.BackColor = Color.FromArgb(0,80,200);
-			btnNavVenue.BackColor = Color.FromArgb(0,80,200);
-			btnNavStudent.BackColor = Color.FromArgb(0,80,200);
-			btnNavStaff.BackColor = Color.FromArgb(0,80,200);
-			btnNavUser.BackColor = Color.FromArgb(0,80,200);
+			btnNavDepartment.BackColor = Color.FromArgb(0, 80, 200);
+			btnNavEquipment.BackColor = Color.FromArgb(0, 80, 200);
+			btnNavHome.BackColor = Color.FromArgb(0, 80, 200);
+			btnNavInspection.BackColor = Color.FromArgb(0, 80, 200);
+			btnNavRequest.BackColor = Color.FromArgb(0, 80, 200);
+			btnNavTaskType.BackColor = Color.FromArgb(0, 80, 200);
+			btnNavTutorRequest.BackColor = Color.FromArgb(0, 80, 200);
+			btnNavVenue.BackColor = Color.FromArgb(0, 80, 200);
+			btnNavStudent.BackColor = Color.FromArgb(0, 80, 200);
+			btnNavStaff.BackColor = Color.FromArgb(0, 80, 200);
+			btnNavUser.BackColor = Color.FromArgb(0, 80, 200);
 			btnNavHelp.BackColor = Color.FromArgb(0, 80, 200);
 			btnReports.BackColor = Color.FromArgb(0, 80, 200);
 		}
@@ -315,6 +259,25 @@ namespace Info_IT
 			//Misc
 			pnlLoginFields.Hide();
 		}
+
+		private void ShowAll()
+		{
+			//Buttons
+			btnNavHome.Show();
+			btnNavEquipment.Show();
+			btnNavVenue.Show();
+			btnNavDepartment.Show();
+			btnNavDepartment.Show();
+			btnNavRequest.Show();
+			btnNavTutorRequest.Show();
+			btnNavInspection.Show();
+			btnNavTaskType.Show();
+			btnNavStudent.Show();
+			btnNavStaff.Show();
+			btnReports.Show();
+			btnNavHelp.Show();
+		}
+
 		//Login bar
 		private void Login_Click(object sender, EventArgs e)
 		{
@@ -472,17 +435,17 @@ namespace Info_IT
 
 		private void BtnHelp_Click(object sender, EventArgs e)
 		{
-            //Making sure you cannot click it during log on
-            if (pnlLoginFields.Visible == false)
-            {
-                HideAll();
-                InactiveButtons();
-                btnNavHelp.BackColor = Color.FromArgb(0, 150, 250);
+			//Making sure you cannot click it during log on
+			if (pnlLoginFields.Visible == false)
+			{
+				HideAll();
+				InactiveButtons();
+				btnNavHelp.BackColor = Color.FromArgb(0, 150, 250);
 
-                ucHelp1.Show();
-                this.Text = "Help";
-                lblLocation.Text = "Help";
-            }
+				ucHelp1.Show();
+				this.Text = "Help";
+				lblLocation.Text = "Help";
+			}
 		}
 
 		private void BtnStudent_Click(object sender, EventArgs e)
@@ -530,10 +493,10 @@ namespace Info_IT
 
 		private void Logo_Click(object sender, EventArgs e)
 		{
-            //Making sure you cannot click it during log on
-            //if (!isLoggedIn) 
-            if (pnlLoginFields.Visible == false)
-            {
+			//Making sure you cannot click it during log on
+			//if (!isLoggedIn) 
+			if (pnlLoginFields.Visible == false)
+			{
 				HideAll();
 				InactiveButtons();
 				btnNavHome.BackColor = Color.FromArgb(0, 150, 250);
@@ -544,22 +507,22 @@ namespace Info_IT
 			}
 		}
 
-        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                BtnLogIn_Click(this, new EventArgs());
-                e.Handled = e.SuppressKeyPress = true;
-            }
-        }
+		private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Enter)
+			{
+				BtnLogIn_Click(this, new EventArgs());
+				e.Handled = e.SuppressKeyPress = true;
+			}
+		}
 
-        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                BtnLogIn_Click(this, new EventArgs());
-                e.Handled = e.SuppressKeyPress = true;
-            }
-        }
+		private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Enter)
+			{
+				BtnLogIn_Click(this, new EventArgs());
+				e.Handled = e.SuppressKeyPress = true;
+			}
+		}
 	}
 }
