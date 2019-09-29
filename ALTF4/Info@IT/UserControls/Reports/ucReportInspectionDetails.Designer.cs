@@ -33,6 +33,8 @@
 			this.dgvInspectionReport = new Bunifu.Framework.UI.BunifuCustomDataGrid();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.cmbStatus = new System.Windows.Forms.ComboBox();
+			this.label5 = new System.Windows.Forms.Label();
 			this.cmbVenue = new System.Windows.Forms.ComboBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.cmbEquipmentCode = new System.Windows.Forms.ComboBox();
@@ -41,8 +43,6 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.cmbStaffCode = new System.Windows.Forms.ComboBox();
 			this.label4 = new System.Windows.Forms.Label();
-			this.cmbStatus = new System.Windows.Forms.ComboBox();
-			this.label5 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dgvInspectionReport)).BeginInit();
 			this.panel3.SuspendLayout();
 			this.groupBox1.SuspendLayout();
@@ -105,6 +105,30 @@
 			this.groupBox1.TabIndex = 30;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Filter By";
+			// 
+			// cmbStatus
+			// 
+			this.cmbStatus.FormattingEnabled = true;
+			this.cmbStatus.Items.AddRange(new object[] {
+            "Pending",
+            "In-Progress",
+            "Completed",
+            "Cancelled"});
+			this.cmbStatus.Location = new System.Drawing.Point(503, 36);
+			this.cmbStatus.Name = "cmbStatus";
+			this.cmbStatus.Size = new System.Drawing.Size(116, 23);
+			this.cmbStatus.TabIndex = 39;
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label5.Location = new System.Drawing.Point(503, 19);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(50, 17);
+			this.label5.TabIndex = 38;
+			this.label5.Text = "Status:";
 			// 
 			// cmbVenue
 			// 
@@ -187,30 +211,6 @@
 			this.label4.TabIndex = 28;
 			this.label4.Text = "Staff Member:";
 			// 
-			// cmbStatus
-			// 
-			this.cmbStatus.FormattingEnabled = true;
-			this.cmbStatus.Items.AddRange(new object[] {
-            "Pending",
-            "In-Progress",
-            "Completed",
-            "Cancelled"});
-			this.cmbStatus.Location = new System.Drawing.Point(503, 36);
-			this.cmbStatus.Name = "cmbStatus";
-			this.cmbStatus.Size = new System.Drawing.Size(116, 23);
-			this.cmbStatus.TabIndex = 39;
-			// 
-			// label5
-			// 
-			this.label5.AutoSize = true;
-			this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label5.Location = new System.Drawing.Point(503, 19);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(50, 17);
-			this.label5.TabIndex = 38;
-			this.label5.Text = "Status:";
-			// 
 			// ucReportInspectionDetails
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,6 +219,7 @@
 			this.Controls.Add(this.panel3);
 			this.Name = "ucReportInspectionDetails";
 			this.Size = new System.Drawing.Size(856, 562);
+			this.Load += new System.EventHandler(this.UcReportInspectionDetails_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvInspectionReport)).EndInit();
 			this.panel3.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);
