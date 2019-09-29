@@ -28,6 +28,7 @@ namespace Info_IT.UserControls
             cmbDepartmentCode.DisplayMember = "DepartmentName";
             cmbDepartmentCode.ValueMember = "DepartmentCode";
 
+            cmbStaffType.DataSource = bll.GetStaff();
             cmbStaffType.DisplayMember = "StaffType";
             cmbStaffType.ValueMember = "StaffCode";
                  
@@ -70,7 +71,7 @@ namespace Info_IT.UserControls
                 {
                     activeStatus = "False";
                 }
-                DAL.StaffClass staff = new DAL.StaffClass(txtStaffNumber.Text, txtName.Text, txtSurname.Text, txtEmailAddress.Text, int.Parse(txtContactNo.Text), cmbStaffType.SelectedItem.ToString(), int.Parse(cmbDepartmentCode.SelectedValue.ToString()),txtUsername.Text,txtPassword.Text, activeStatus);
+                DAL.StaffClass staff = new DAL.StaffClass(int.Parse(txtStaffNumber.Text), txtName.Text, txtSurname.Text, txtEmailAddress.Text, int.Parse(txtContactNo.Text), cmbStaffType.SelectedItem.ToString(), int.Parse(cmbDepartmentCode.SelectedValue.ToString()),txtUsername.Text,txtPassword.Text, activeStatus);
                 int x = bll.AddStaff(staff);
 
 
@@ -165,10 +166,13 @@ namespace Info_IT.UserControls
 
                 cmbStaffType.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[6];
                 cmbDepartmentCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[7];
+                cmbStatus.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[11];
+                txtUsername.Text = values.Rows[0].Table.Rows[0].ItemArray[8].ToString();
+                txtPassword.Text = values.Rows[0].Table.Rows[0].ItemArray[9].ToString();
             }
             catch (Exception b)
             {
-
+                MessageBox.Show("Please input valid data.");
             }
            
 
