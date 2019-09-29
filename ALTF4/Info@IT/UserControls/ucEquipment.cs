@@ -145,14 +145,21 @@ namespace Info_IT.UserControls
 
         private void dgvEquipment_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DAL.EquipmentClass equipmentClass = new DAL.EquipmentClass(int.Parse(dgvEquipment.SelectedRows[0].Cells[0].Value.ToString()));
+            try
+            {
+                DAL.EquipmentClass equipmentClass = new DAL.EquipmentClass(int.Parse(dgvEquipment.SelectedRows[0].Cells[0].Value.ToString()));
 
-            var values = bll.SelectedForUpdateEquipment(equipmentClass);
+                var values = bll.SelectedForUpdateEquipment(equipmentClass);
 
-            txtDescription.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
+                txtDescription.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
 
-            cmbVenue.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2];
-            cmbEquipTypeCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[3];
+                cmbVenue.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2];
+                cmbEquipTypeCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[3];
+            }
+            catch (Exception b)
+            {
+
+            }
         }
 
 

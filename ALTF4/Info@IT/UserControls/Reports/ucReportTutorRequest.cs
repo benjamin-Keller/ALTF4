@@ -27,11 +27,13 @@ namespace Info_IT.UserControls.Reports
 
             cmbVenueCode.DisplayMember = "VenueDescription";
             cmbVenueCode.ValueMember = "VenueCode";
+            cmbVenueCode.Text = "";
 
             cmbModuleCode.DataSource = bll.LoadCMBModels();
 
             cmbModuleCode.DisplayMember = "ModuleDescription";
             cmbModuleCode.ValueMember = "ModuleCode";
+            cmbModuleCode.Text = "";
         }
 
         private void cmbRequestCode_SelectedIndexChanged(object sender, EventArgs e)

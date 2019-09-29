@@ -25,6 +25,7 @@ namespace Info_IT.UserControls.Reports
 
             cmbBuilding.DisplayMember = "BuildingName";
             cmbBuilding.ValueMember = "BuildingID";
+            cmbBuilding.Text = "";
 
             dgvDepartmentReport.DataSource = bll.GetDepartment();
 		}

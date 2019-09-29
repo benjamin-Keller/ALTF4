@@ -27,6 +27,7 @@ namespace Info_IT.UserControls
 
             cmbDepartmentCode.DisplayMember = "DepartmentName";
             cmbDepartmentCode.ValueMember = "DepartmentCode";
+            cmbDepartmentCode.Text = "";
         }
 
         private void cmbStaffType_SelectedIndexChanged(object sender, EventArgs e)

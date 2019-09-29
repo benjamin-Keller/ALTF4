@@ -115,12 +115,19 @@ namespace Info_IT.UserControls
         }
 
         private void dgvEquipmentDetails_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DAL.EquipmentTypeClass equipmentTypeClass = new DAL.EquipmentTypeClass(int.Parse(dgvEquipmentDetails.SelectedRows[0].Cells[0].Value.ToString()));
+        { 
+            try
+            {
+                DAL.EquipmentTypeClass equipmentTypeClass = new DAL.EquipmentTypeClass(int.Parse(dgvEquipmentDetails.SelectedRows[0].Cells[0].Value.ToString()));
 
-            var values = bll.SelectedForUpdateEquipmentType(equipmentTypeClass);
+                var values = bll.SelectedForUpdateEquipmentType(equipmentTypeClass);
 
-            txtEquipmentType.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
+                txtEquipmentType.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
+            }
+            catch (Exception b)
+            {
+
+            }
         }
     }
 }
