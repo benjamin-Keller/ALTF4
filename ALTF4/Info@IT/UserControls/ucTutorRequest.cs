@@ -153,16 +153,22 @@ namespace Info_IT.UserControls
 
         private void dgvTutorRequest_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DAL.TutorRequestClass request = new DAL.TutorRequestClass(int.Parse(dgvTutorRequest.SelectedRows[0].Cells[0].Value.ToString()));
+            try
+            {
+                DAL.TutorRequestClass request = new DAL.TutorRequestClass(int.Parse(dgvTutorRequest.SelectedRows[0].Cells[0].Value.ToString()));
 
-            var values = bll.SelectedForUpdateTutorRequest(request);
+                var values = bll.SelectedForUpdateTutorRequest(request);
 
-            dateRequest.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
-            cmbModuleCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2];
-            cmbVenueCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[3];
-            cmbStartTime.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[4];
-            cmbEndTime.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[5];
+                dateRequest.Value = Convert.ToDateTime(values.Rows[0].Table.Rows[0].ItemArray[2].ToString());
+                cmbModuleCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[5];
+                cmbVenueCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[6];
+                cmbStartTime.SelectedText = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
+                cmbEndTime.SelectedText = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
+            }
+            catch(Exception b)
+            {
 
+            }
 
 
         }
