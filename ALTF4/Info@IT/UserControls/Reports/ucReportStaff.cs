@@ -32,7 +32,9 @@ namespace Info_IT.UserControls
 
 				dgvStaffReport.DataSource = bll.Report_DisplayStaffByStaffType(staff);
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 
 			}
@@ -47,7 +49,9 @@ namespace Info_IT.UserControls
 
 				dgvStaffReport.DataSource = bll.Report_DisplayStaffByDepartment(staff);
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 
 			}

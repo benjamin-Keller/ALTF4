@@ -93,7 +93,9 @@ namespace Info_IT.UserControls
 					MessageBox.Show("Please input valid data.");
 				}
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 				MessageBox.Show("Please input valid data.");
 			}
@@ -124,7 +126,9 @@ namespace Info_IT.UserControls
 
 				cmbBuilding.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2];
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 
 			}

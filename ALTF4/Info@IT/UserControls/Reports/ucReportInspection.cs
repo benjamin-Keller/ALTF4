@@ -39,7 +39,9 @@ namespace Info_IT.UserControls.Reports
 
 				dgvInspectionReport.DataSource = bll.Report_DisplayInspectionByDate(inspection);
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 
 			}
@@ -54,7 +56,9 @@ namespace Info_IT.UserControls.Reports
 
 				dgvInspectionReport.DataSource = bll.Report_DisplayInspectionByVenue(inspection);
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 
 			}
@@ -69,7 +73,9 @@ namespace Info_IT.UserControls.Reports
 
 				dgvInspectionReport.DataSource = bll.Report_DisplayInspectionByStaffCode(inspection);
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 
 			}

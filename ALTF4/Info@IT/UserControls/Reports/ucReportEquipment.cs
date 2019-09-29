@@ -36,7 +36,9 @@ namespace Info_IT.UserControls.Reports
 
 				dgvEquipmentReport.DataSource = bll.Report_DisplayEquipmentByEquipmentType(equipment);
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 
 			}
@@ -51,7 +53,9 @@ namespace Info_IT.UserControls.Reports
 
 				dgvEquipmentReport.DataSource = bll.Report_DisplayEquipmentByVenue(equipment);
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 
 			}

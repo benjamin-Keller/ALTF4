@@ -43,7 +43,9 @@ namespace Info_IT.UserControls.Reports
 
 				dgvTutorRequestReport.DataSource = bll.Report_DisplayTutorRequestByRequestDate(tutor);
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 
 			}
@@ -58,7 +60,9 @@ namespace Info_IT.UserControls.Reports
 
 				dgvTutorRequestReport.DataSource = bll.Report_DisplayTutorRequestByRequestModuleCode(tutor);
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 
 			}
@@ -73,7 +77,9 @@ namespace Info_IT.UserControls.Reports
 
 				dgvTutorRequestReport.DataSource = bll.Report_DisplayTutorRequestByRequestVenue(tutor);
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 
 			}
@@ -88,7 +94,9 @@ namespace Info_IT.UserControls.Reports
 
 				dgvTutorRequestReport.DataSource = bll.Report_DisplayTutorRequestByRequestStartTime(tutor);
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 
 			}
@@ -103,7 +111,9 @@ namespace Info_IT.UserControls.Reports
 
 				dgvTutorRequestReport.DataSource = bll.Report_DisplayTutorRequestByRequestEndTime(tutor);
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 
 			}

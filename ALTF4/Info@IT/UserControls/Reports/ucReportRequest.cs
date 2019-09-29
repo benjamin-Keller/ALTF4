@@ -54,7 +54,9 @@ namespace Info_IT.UserControls.Reports
 
 				dgvRequestReport.DataSource = bll.Report_DisplayRequestsByStaffCode(request);
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 
 			}
@@ -69,7 +71,9 @@ namespace Info_IT.UserControls.Reports
 
 				dgvRequestReport.DataSource = bll.Report_DisplayRequestsByStudentCode(request);
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 
 			}
@@ -84,7 +88,9 @@ namespace Info_IT.UserControls.Reports
 
 				dgvRequestReport.DataSource = bll.Report_DisplayRequestsByTaskType(request);
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 
 			}
@@ -99,7 +105,9 @@ namespace Info_IT.UserControls.Reports
 
 				dgvRequestReport.DataSource = bll.Report_DisplayRequestsByDate(request);
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 
 			}
@@ -114,7 +122,9 @@ namespace Info_IT.UserControls.Reports
 
 				dgvRequestReport.DataSource = bll.Report_DisplayRequestsByTime(request);
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 
 			}
@@ -129,7 +139,9 @@ namespace Info_IT.UserControls.Reports
 
 				dgvRequestReport.DataSource = bll.Report_DisplayRequestsByAssignedStaff(request);
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 
 			}

@@ -143,7 +143,9 @@ namespace Info_IT.UserControls
 				cmbStaffCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[3];
 				cmbStatus.Text = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
 			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
 			{
 
 			}
