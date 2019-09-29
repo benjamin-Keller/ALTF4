@@ -45,6 +45,8 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
+			this.cmbStatus = new System.Windows.Forms.ComboBox();
+			this.label1 = new System.Windows.Forms.Label();
 			this.panel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvRequestReport)).BeginInit();
 			this.groupBox1.SuspendLayout();
@@ -53,9 +55,9 @@
 			// panel3
 			// 
 			this.panel3.Controls.Add(this.dgvRequestReport);
-			this.panel3.Location = new System.Drawing.Point(32, 105);
+			this.panel3.Location = new System.Drawing.Point(32, 145);
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(782, 429);
+			this.panel3.Size = new System.Drawing.Size(782, 389);
 			this.panel3.TabIndex = 23;
 			// 
 			// dgvRequestReport
@@ -84,11 +86,13 @@
 			this.dgvRequestReport.Location = new System.Drawing.Point(0, 0);
 			this.dgvRequestReport.Name = "dgvRequestReport";
 			this.dgvRequestReport.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			this.dgvRequestReport.Size = new System.Drawing.Size(782, 429);
+			this.dgvRequestReport.Size = new System.Drawing.Size(782, 389);
 			this.dgvRequestReport.TabIndex = 0;
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.cmbStatus);
+			this.groupBox1.Controls.Add(this.label1);
 			this.groupBox1.Controls.Add(this.cmbTime);
 			this.groupBox1.Controls.Add(this.cmbAssignedStaffCode);
 			this.groupBox1.Controls.Add(this.label8);
@@ -105,7 +109,7 @@
 			this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
 			this.groupBox1.Location = new System.Drawing.Point(32, 28);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(782, 71);
+			this.groupBox1.Size = new System.Drawing.Size(782, 111);
 			this.groupBox1.TabIndex = 24;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Filter By";
@@ -154,9 +158,9 @@
 			this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
 			this.label8.Location = new System.Drawing.Point(624, 12);
 			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(144, 17);
+			this.label8.Size = new System.Drawing.Size(102, 17);
 			this.label8.TabIndex = 20;
-			this.label8.Text = "Staff (Assigned Staff):";
+			this.label8.Text = "Assigned Staff:";
 			// 
 			// label7
 			// 
@@ -250,6 +254,25 @@
 			this.label3.TabIndex = 2;
 			this.label3.Text = "Staff:";
 			// 
+			// cmbStatus
+			// 
+			this.cmbStatus.FormattingEnabled = true;
+			this.cmbStatus.Location = new System.Drawing.Point(15, 73);
+			this.cmbStatus.Name = "cmbStatus";
+			this.cmbStatus.Size = new System.Drawing.Size(116, 23);
+			this.cmbStatus.TabIndex = 27;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label1.Location = new System.Drawing.Point(12, 56);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(50, 17);
+			this.label1.TabIndex = 26;
+			this.label1.Text = "Status:";
+			// 
 			// ucReportRequest
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -283,5 +306,7 @@
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.ComboBox cmbStatus;
+		private System.Windows.Forms.Label label1;
 	}
 }
