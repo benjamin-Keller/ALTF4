@@ -29,8 +29,8 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.tmrView = new System.Windows.Forms.Timer(this.components);
 			this.tmrManage = new System.Windows.Forms.Timer(this.components);
 			this.btnManageUpdate = new System.Windows.Forms.Button();
@@ -41,6 +41,8 @@
 			this.pnlManage = new System.Windows.Forms.Panel();
 			this.txtEmailAddress = new System.Windows.Forms.TextBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.cmbStatus = new System.Windows.Forms.ComboBox();
+			this.label8 = new System.Windows.Forms.Label();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.label7 = new System.Windows.Forms.Label();
 			this.cmbGender = new System.Windows.Forms.ComboBox();
@@ -55,8 +57,7 @@
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dgvUser = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-			this.cmbStatus = new System.Windows.Forms.ComboBox();
-			this.label8 = new System.Windows.Forms.Label();
+			this.btnExportToExcel = new System.Windows.Forms.Button();
 			this.pnlManage.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			this.panel1.SuspendLayout();
@@ -140,12 +141,13 @@
 			// pnlManage
 			// 
 			this.pnlManage.BackColor = System.Drawing.SystemColors.ControlDark;
+			this.pnlManage.Controls.Add(this.btnExportToExcel);
 			this.pnlManage.Controls.Add(this.btnManageUpdate);
 			this.pnlManage.Controls.Add(this.btnManageAdd);
 			this.pnlManage.Controls.Add(this.btnManage);
 			this.pnlManage.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlManage.Location = new System.Drawing.Point(0, 0);
-			this.pnlManage.MaximumSize = new System.Drawing.Size(200, 114);
+			this.pnlManage.MaximumSize = new System.Drawing.Size(200, 148);
 			this.pnlManage.MinimumSize = new System.Drawing.Size(200, 53);
 			this.pnlManage.Name = "pnlManage";
 			this.pnlManage.Size = new System.Drawing.Size(200, 53);
@@ -184,6 +186,29 @@
 			this.groupBox1.TabIndex = 19;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Information";
+			// 
+			// cmbStatus
+			// 
+			this.cmbStatus.FormattingEnabled = true;
+			this.cmbStatus.Items.AddRange(new object[] {
+            "ICT HelpDesk",
+            "Info@IT",
+            "Student Assistant"});
+			this.cmbStatus.Location = new System.Drawing.Point(594, 83);
+			this.cmbStatus.Name = "cmbStatus";
+			this.cmbStatus.Size = new System.Drawing.Size(187, 23);
+			this.cmbStatus.TabIndex = 18;
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label8.Location = new System.Drawing.Point(591, 64);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(50, 17);
+			this.label8.TabIndex = 19;
+			this.label8.Text = "Status:";
 			// 
 			// comboBox1
 			// 
@@ -317,20 +342,20 @@
 			// dgvUser
 			// 
 			this.dgvUser.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
 			this.dgvUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvUser.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvUser.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
 			this.dgvUser.ColumnHeadersHeight = 50;
 			this.dgvUser.DoubleBuffered = true;
 			this.dgvUser.EnableHeadersVisualStyles = false;
@@ -343,28 +368,20 @@
 			this.dgvUser.Size = new System.Drawing.Size(796, 378);
 			this.dgvUser.TabIndex = 1;
 			// 
-			// cmbStatus
+			// btnExportToExcel
 			// 
-			this.cmbStatus.FormattingEnabled = true;
-			this.cmbStatus.Items.AddRange(new object[] {
-            "ICT HelpDesk",
-            "Info@IT",
-            "Student Assistant"});
-			this.cmbStatus.Location = new System.Drawing.Point(594, 83);
-			this.cmbStatus.Name = "cmbStatus";
-			this.cmbStatus.Size = new System.Drawing.Size(187, 23);
-			this.cmbStatus.TabIndex = 18;
-			// 
-			// label8
-			// 
-			this.label8.AutoSize = true;
-			this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label8.Location = new System.Drawing.Point(591, 64);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(50, 17);
-			this.label8.TabIndex = 19;
-			this.label8.Text = "Status:";
+			this.btnExportToExcel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.btnExportToExcel.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnExportToExcel.FlatAppearance.BorderSize = 0;
+			this.btnExportToExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnExportToExcel.Font = new System.Drawing.Font("Segoe UI", 8.75F);
+			this.btnExportToExcel.Location = new System.Drawing.Point(0, 115);
+			this.btnExportToExcel.Name = "btnExportToExcel";
+			this.btnExportToExcel.Size = new System.Drawing.Size(200, 31);
+			this.btnExportToExcel.TabIndex = 8;
+			this.btnExportToExcel.Text = "Export to Excel";
+			this.btnExportToExcel.UseVisualStyleBackColor = false;
+			this.btnExportToExcel.Click += new System.EventHandler(this.BtnExportToExcel_Click);
 			// 
 			// ucUser
 			// 
@@ -413,5 +430,6 @@
 		private System.Windows.Forms.ComboBox comboBox1;
 		private System.Windows.Forms.ComboBox cmbStatus;
 		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.Button btnExportToExcel;
 	}
 }
