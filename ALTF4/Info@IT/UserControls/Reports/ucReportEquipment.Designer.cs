@@ -28,8 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dgvEquipmentReport = new Bunifu.Framework.UI.BunifuCustomDataGrid();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -37,6 +37,7 @@
 			this.cmbVenue = new System.Windows.Forms.ComboBox();
 			this.cmbEquipType = new System.Windows.Forms.ComboBox();
 			this.label3 = new System.Windows.Forms.Label();
+			this.btnRemoveFilter = new System.Windows.Forms.Button();
 			this.panel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvEquipmentReport)).BeginInit();
 			this.groupBox1.SuspendLayout();
@@ -54,20 +55,20 @@
 			// 
 			this.dgvEquipmentReport.AllowUserToAddRows = false;
 			this.dgvEquipmentReport.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvEquipmentReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvEquipmentReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
 			this.dgvEquipmentReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvEquipmentReport.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvEquipmentReport.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvEquipmentReport.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvEquipmentReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvEquipmentReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
 			this.dgvEquipmentReport.ColumnHeadersHeight = 50;
 			this.dgvEquipmentReport.DoubleBuffered = true;
 			this.dgvEquipmentReport.EnableHeadersVisualStyles = false;
@@ -81,6 +82,7 @@
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.btnRemoveFilter);
 			this.groupBox1.Controls.Add(this.label4);
 			this.groupBox1.Controls.Add(this.cmbVenue);
 			this.groupBox1.Controls.Add(this.cmbEquipType);
@@ -134,6 +136,19 @@
 			this.label3.TabIndex = 2;
 			this.label3.Text = "Venue:";
 			// 
+			// btnRemoveFilter
+			// 
+			this.btnRemoveFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnRemoveFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnRemoveFilter.ForeColor = System.Drawing.Color.White;
+			this.btnRemoveFilter.Location = new System.Drawing.Point(687, 35);
+			this.btnRemoveFilter.Name = "btnRemoveFilter";
+			this.btnRemoveFilter.Size = new System.Drawing.Size(91, 23);
+			this.btnRemoveFilter.TabIndex = 13;
+			this.btnRemoveFilter.Text = "Remove Filter";
+			this.btnRemoveFilter.UseVisualStyleBackColor = false;
+			this.btnRemoveFilter.Click += new System.EventHandler(this.BtnRemoveFilter_Click);
+			// 
 			// ucReportEquipment
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,5 +174,6 @@
 		private System.Windows.Forms.ComboBox cmbVenue;
 		private System.Windows.Forms.ComboBox cmbEquipType;
 		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Button btnRemoveFilter;
 	}
 }

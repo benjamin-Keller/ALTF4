@@ -33,6 +33,9 @@
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dgvTutorRequestReport = new Bunifu.Framework.UI.BunifuCustomDataGrid();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.btnRemoveFilter = new System.Windows.Forms.Button();
+			this.cmbStatus = new System.Windows.Forms.ComboBox();
+			this.label2 = new System.Windows.Forms.Label();
 			this.cmbEndTime = new System.Windows.Forms.ComboBox();
 			this.cmbStartTime = new System.Windows.Forms.ComboBox();
 			this.label4 = new System.Windows.Forms.Label();
@@ -43,8 +46,6 @@
 			this.label6 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.cmbStatus = new System.Windows.Forms.ComboBox();
 			this.panel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvTutorRequestReport)).BeginInit();
 			this.groupBox1.SuspendLayout();
@@ -89,6 +90,7 @@
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.btnRemoveFilter);
 			this.groupBox1.Controls.Add(this.cmbStatus);
 			this.groupBox1.Controls.Add(this.label2);
 			this.groupBox1.Controls.Add(this.cmbEndTime);
@@ -109,6 +111,38 @@
 			this.groupBox1.TabIndex = 26;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Filter By";
+			// 
+			// btnRemoveFilter
+			// 
+			this.btnRemoveFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnRemoveFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnRemoveFilter.ForeColor = System.Drawing.Color.White;
+			this.btnRemoveFilter.Location = new System.Drawing.Point(685, 31);
+			this.btnRemoveFilter.Name = "btnRemoveFilter";
+			this.btnRemoveFilter.Size = new System.Drawing.Size(91, 23);
+			this.btnRemoveFilter.TabIndex = 40;
+			this.btnRemoveFilter.Text = "Remove Filter";
+			this.btnRemoveFilter.UseVisualStyleBackColor = false;
+			this.btnRemoveFilter.Click += new System.EventHandler(this.BtnRemoveFilter_Click);
+			// 
+			// cmbStatus
+			// 
+			this.cmbStatus.FormattingEnabled = true;
+			this.cmbStatus.Location = new System.Drawing.Point(555, 32);
+			this.cmbStatus.Name = "cmbStatus";
+			this.cmbStatus.Size = new System.Drawing.Size(116, 23);
+			this.cmbStatus.TabIndex = 39;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label2.Location = new System.Drawing.Point(555, 15);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(50, 17);
+			this.label2.TabIndex = 38;
+			this.label2.Text = "Status:";
 			// 
 			// cmbEndTime
 			// 
@@ -249,25 +283,6 @@
 			this.label3.TabIndex = 27;
 			this.label3.Text = "Module Code:";
 			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			this.label2.Location = new System.Drawing.Point(555, 15);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(50, 17);
-			this.label2.TabIndex = 38;
-			this.label2.Text = "Status:";
-			// 
-			// cmbStatus
-			// 
-			this.cmbStatus.FormattingEnabled = true;
-			this.cmbStatus.Location = new System.Drawing.Point(555, 32);
-			this.cmbStatus.Name = "cmbStatus";
-			this.cmbStatus.Size = new System.Drawing.Size(116, 23);
-			this.cmbStatus.TabIndex = 39;
-			// 
 			// ucReportTutorRequest
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,5 +317,6 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.ComboBox cmbStatus;
+		private System.Windows.Forms.Button btnRemoveFilter;
 	}
 }

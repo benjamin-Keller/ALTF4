@@ -14,7 +14,7 @@ namespace Info_IT.UserControls.Reports
 
 		private void UcReportEquipment_Load(object sender, EventArgs e)
 		{
-			dgvEquipmentReport.DataSource = bll.GetEquipment();
+			
 
 			cmbEquipType.DataSource = bll.GetEquipmentType();
 			cmbEquipType.DisplayMember = "TypeDescription";
@@ -25,7 +25,9 @@ namespace Info_IT.UserControls.Reports
 			cmbVenue.DisplayMember = "VenueDescription";
 			cmbVenue.ValueMember = "VenueCode";
 			cmbVenue.Text = "";
-		}
+
+            dgvEquipmentReport.DataSource = bll.GetEquipment();
+        }
 
 		private void cmbEquipType_SelectedIndexChanged(object sender, EventArgs e)
 		{
@@ -59,6 +61,11 @@ namespace Info_IT.UserControls.Reports
 			{
 
 			}
+		}
+
+		private void BtnRemoveFilter_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
