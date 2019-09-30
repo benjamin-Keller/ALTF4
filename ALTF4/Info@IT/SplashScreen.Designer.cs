@@ -54,6 +54,7 @@
 			this.metroProgressSpinner1.Size = new System.Drawing.Size(40, 40);
 			this.metroProgressSpinner1.TabIndex = 2;
 			this.metroProgressSpinner1.UseSelectable = true;
+			this.metroProgressSpinner1.UseWaitCursor = true;
 			// 
 			// timerClose
 			// 
@@ -85,6 +86,7 @@
 			this.Resizable = false;
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
+			this.UseWaitCursor = true;
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
