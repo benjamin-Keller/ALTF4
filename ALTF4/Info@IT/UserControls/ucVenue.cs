@@ -120,8 +120,34 @@ namespace Info_IT.UserControls
 
 		private void BtnManageDelete_Click(object sender, EventArgs e)
 		{
+            try
+            {
+                //Error for input string not found
+                DAL.VenueClass venue = new DAL.VenueClass(DAL.VenueClass.VenueCode);
+                int x = bll.DeleteVenue(venue);
 
-		}
+                if (x > 0)
+                {
+                    txtDescription.Clear();
+                    txtCapacity.Clear();
+                    txtDoorNo.Clear();
+                    cmbBuildingBlock.Text = "";
+                    cmbBuilding.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Please input valid data.");
+                }
+
+                dgvVenue.DataSource = bll.GetVenues();
+            }
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
+            catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
+            {
+                MessageBox.Show("Please input valid data.");
+            }
+        }
 
 		private void dgvVenue_CellClick(object sender, DataGridViewCellEventArgs e)
 		{

@@ -17,7 +17,7 @@ namespace Info_IT.UserControls.Reports
 		{
 			dateRequest.Value = DateTime.Now;
 
-			dgvRequestReport.DataSource = bll.GetRequests();
+			
 
 			cmbTaskTypeCode.DataSource = bll.GetTasktype();
 
@@ -43,16 +43,23 @@ namespace Info_IT.UserControls.Reports
 			cmbStudentCode.ValueMember = "StudentCode";
 			cmbStudentCode.Text = "";
 
-		}
+            dgvRequestReport.DataSource = bll.GetRequests();
+
+        }
 
 		private void cmbStaffCode_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			try
 			{
-				DAL.RequestClass request = new DAL.RequestClass();
-				request.RequestStaffCode = int.Parse(cmbStaffCode.SelectedValue.ToString());
+                if (cmbStaffCode.ValueMember != "")
+                {
+                    DAL.RequestClass request = new DAL.RequestClass
+                    {
+                        RequestStaffCode = int.Parse(cmbStaffCode.SelectedValue.ToString())
+                    };
 
-				dgvRequestReport.DataSource = bll.Report_DisplayRequestsByStaffCode(request);
+                    dgvRequestReport.DataSource = bll.Report_DisplayRequestsByStaffCode(request);
+                }
 			}
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
@@ -66,10 +73,15 @@ namespace Info_IT.UserControls.Reports
 		{
 			try
 			{
-				DAL.RequestClass request = new DAL.RequestClass();
-				request.RequestStudentCode = int.Parse(cmbStudentCode.SelectedValue.ToString());
+                if (cmbStudentCode.ValueMember != "")
+                {
+                    DAL.RequestClass request = new DAL.RequestClass
+                    {
+                        RequestStudentCode = int.Parse(cmbStudentCode.SelectedValue.ToString())
+                    };
 
-				dgvRequestReport.DataSource = bll.Report_DisplayRequestsByStudentCode(request);
+                    dgvRequestReport.DataSource = bll.Report_DisplayRequestsByStudentCode(request);
+                }
 			}
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
@@ -83,10 +95,15 @@ namespace Info_IT.UserControls.Reports
 		{
 			try
 			{
-				DAL.RequestClass request = new DAL.RequestClass();
-				request.RequestTaskTypeCode = int.Parse(cmbTaskTypeCode.SelectedValue.ToString());
+                if (cmbTaskTypeCode.ValueMember != "")
+                {
+                    DAL.RequestClass request = new DAL.RequestClass
+                    {
+                        RequestTaskTypeCode = int.Parse(cmbTaskTypeCode.SelectedValue.ToString())
+                    };
 
-				dgvRequestReport.DataSource = bll.Report_DisplayRequestsByTaskType(request);
+                    dgvRequestReport.DataSource = bll.Report_DisplayRequestsByTaskType(request);
+                }
 			}
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
@@ -100,10 +117,12 @@ namespace Info_IT.UserControls.Reports
 		{
 			try
 			{
-				DAL.RequestClass request = new DAL.RequestClass();
-				request.RequestDate = Convert.ToDateTime(dateRequest.Text);
+                DAL.RequestClass request = new DAL.RequestClass
+                {
+                    RequestDate = Convert.ToDateTime(dateRequest.Text)
+                };
 
-				dgvRequestReport.DataSource = bll.Report_DisplayRequestsByDate(request);
+                dgvRequestReport.DataSource = bll.Report_DisplayRequestsByDate(request);
 			}
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
@@ -117,10 +136,15 @@ namespace Info_IT.UserControls.Reports
 		{
 			try
 			{
-				DAL.RequestClass request = new DAL.RequestClass();
-				request.RequestTime = cmbTime.SelectedItem.ToString();
+                if (cmbTime.SelectedText != "")
+                {
+                    DAL.RequestClass request = new DAL.RequestClass
+                    {
+                        RequestTime = cmbTime.SelectedItem.ToString()
+                    };
 
-				dgvRequestReport.DataSource = bll.Report_DisplayRequestsByTime(request);
+                    dgvRequestReport.DataSource = bll.Report_DisplayRequestsByTime(request);
+                }
 			}
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
@@ -134,10 +158,15 @@ namespace Info_IT.UserControls.Reports
 		{
 			try
 			{
-				DAL.RequestClass request = new DAL.RequestClass();
-				request.RequestAssignedStaffCode = int.Parse(cmbAssignedStaffCode.SelectedValue.ToString());
+                if (cmbAssignedStaffCode.ValueMember != "")
+                {
+                    DAL.RequestClass request = new DAL.RequestClass
+                    {
+                        RequestAssignedStaffCode = int.Parse(cmbAssignedStaffCode.SelectedValue.ToString())
+                    };
 
-				dgvRequestReport.DataSource = bll.Report_DisplayRequestsByAssignedStaff(request);
+                    dgvRequestReport.DataSource = bll.Report_DisplayRequestsByAssignedStaff(request);
+                }
 			}
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
@@ -151,10 +180,15 @@ namespace Info_IT.UserControls.Reports
         {
             try
             {
-                DAL.RequestClass request = new DAL.RequestClass();
-                request.RequestStatus = cmbStatus.SelectedItem.ToString();
+                if (cmbStatus.SelectedText != "")
+                {
+                    DAL.RequestClass request = new DAL.RequestClass
+                    {
+                        RequestStatus = cmbStatus.SelectedItem.ToString()
+                    };
 
-                dgvRequestReport.DataSource = bll.Report_DisplayRequestsByStatus(request);
+                    dgvRequestReport.DataSource = bll.Report_DisplayRequestsByStatus(request);
+                }
             }
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
             catch (Exception b)
@@ -166,7 +200,8 @@ namespace Info_IT.UserControls.Reports
 
 		private void BtnRemoveFilter_Click(object sender, EventArgs e)
 		{
-
-		}
-	}
+            dgvRequestReport.DataSource = bll.GetRequests();
+        }
+        
+    }
 }

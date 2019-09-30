@@ -34,10 +34,15 @@ namespace Info_IT.UserControls.Reports
 		{
 			try
 			{
-				DAL.VenueClass venueClass = new DAL.VenueClass();
-				venueClass.VenueBuildingBlock = int.Parse(cmbBuildingBlock.SelectedValue.ToString());
+                if (cmbBuildingBlock.ValueMember != "")
+                {
+                    DAL.VenueClass venueClass = new DAL.VenueClass
+                    {
+                        VenueBuildingBlock = int.Parse(cmbBuildingBlock.SelectedValue.ToString())
+                    };
 
-				dgvVenueReport.DataSource = bll.Report_DisplayVenueByBuildingBlock(venueClass);
+                    dgvVenueReport.DataSource = bll.Report_DisplayVenueByBuildingBlock(venueClass);
+                }
 			}
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
@@ -49,12 +54,17 @@ namespace Info_IT.UserControls.Reports
 
 		private void cmbBuilding_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			try
+		try
 			{
-				DAL.VenueClass venueClass = new DAL.VenueClass();
-				venueClass.VenueBuilding = int.Parse(cmbBuilding.SelectedValue.ToString());
+                if (cmbBuilding.ValueMember != "")
+                {
+                    DAL.VenueClass venueClass = new DAL.VenueClass
+                    {
+                        VenueBuilding = int.Parse(cmbBuilding.SelectedValue.ToString())
+                    };
 
-				dgvVenueReport.DataSource = bll.Report_DisplayVenueByBuilding(venueClass);
+                    dgvVenueReport.DataSource = bll.Report_DisplayVenueByBuilding(venueClass);
+                }
 			}
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
@@ -63,5 +73,10 @@ namespace Info_IT.UserControls.Reports
 
 			}
 		}
+
+		private void BtnRemoveFilter_Click(object sender, EventArgs e)
+		{
+            dgvVenueReport.DataSource = bll.GetVenues();
+        }
 	}
 }

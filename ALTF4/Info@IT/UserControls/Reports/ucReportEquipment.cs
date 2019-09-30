@@ -33,10 +33,12 @@ namespace Info_IT.UserControls.Reports
 		{
 			try
 			{
-				DAL.EquipmentClass equipment = new DAL.EquipmentClass();
-				equipment.EquipTypeCode = int.Parse(cmbEquipType.SelectedValue.ToString());
+                DAL.EquipmentClass equipment = new DAL.EquipmentClass
+                {
+                    EquipTypeCode = int.Parse(cmbEquipType.SelectedValue.ToString())
+                };
 
-				dgvEquipmentReport.DataSource = bll.Report_DisplayEquipmentByEquipmentType(equipment);
+                dgvEquipmentReport.DataSource = bll.Report_DisplayEquipmentByEquipmentType(equipment);
 			}
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
@@ -50,10 +52,12 @@ namespace Info_IT.UserControls.Reports
 		{
 			try
 			{
-				DAL.EquipmentClass equipment = new DAL.EquipmentClass();
-				equipment.VenueCode = int.Parse(cmbVenue.SelectedValue.ToString());
+                DAL.EquipmentClass equipment = new DAL.EquipmentClass
+                {
+                    VenueCode = int.Parse(cmbVenue.SelectedValue.ToString())
+                };
 
-				dgvEquipmentReport.DataSource = bll.Report_DisplayEquipmentByVenue(equipment);
+                dgvEquipmentReport.DataSource = bll.Report_DisplayEquipmentByVenue(equipment);
 			}
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
@@ -65,7 +69,7 @@ namespace Info_IT.UserControls.Reports
 
 		private void BtnRemoveFilter_Click(object sender, EventArgs e)
 		{
-
-		}
+            dgvEquipmentReport.DataSource = bll.GetEquipment();
+        }
 	}
 }

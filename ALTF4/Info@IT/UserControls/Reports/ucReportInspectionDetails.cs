@@ -42,10 +42,15 @@ namespace Info_IT.UserControls.Reports
         {
             try
             {
-                DAL.InspectionDetailClass inspectionDetail = new DAL.InspectionDetailClass();
-                inspectionDetail.InspectionCode = int.Parse(cmbInspectionCode.SelectedValue.ToString());
+                if (cmbInspectionCode.ValueMember != "")
+                {
+                    DAL.InspectionDetailClass inspectionDetail = new DAL.InspectionDetailClass
+                    {
+                        InspectionCode = int.Parse(cmbInspectionCode.SelectedValue.ToString())
+                    };
 
-                dgvInspectionReport.DataSource = bll.Report_DisplayInspectionDetailsByInspectCode(inspectionDetail);
+                    dgvInspectionReport.DataSource = bll.Report_DisplayInspectionDetailsByInspectCode(inspectionDetail);
+                }
             }
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
             catch (Exception b)
@@ -59,10 +64,15 @@ namespace Info_IT.UserControls.Reports
         {
             try
             {
-                DAL.InspectionDetailClass inspectionDetail = new DAL.InspectionDetailClass();
-                inspectionDetail.EquipmentCode = int.Parse(cmbEquipmentCode.SelectedValue.ToString());
+                if (cmbEquipmentCode.ValueMember != "")
+                {
+                    DAL.InspectionDetailClass inspectionDetail = new DAL.InspectionDetailClass
+                    {
+                        EquipmentCode = int.Parse(cmbEquipmentCode.SelectedValue.ToString())
+                    };
 
-                dgvInspectionReport.DataSource = bll.Report_DisplayInspectionDetailsByEquip(inspectionDetail);
+                    dgvInspectionReport.DataSource = bll.Report_DisplayInspectionDetailsByEquip(inspectionDetail);
+                }
             }
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
             catch (Exception b)
@@ -76,10 +86,15 @@ namespace Info_IT.UserControls.Reports
         {
             try
             {
-                DAL.InspectionDetailClass inspectionDetail = new DAL.InspectionDetailClass();
-                inspectionDetail.StaffCode = int.Parse(cmbStaffCode.SelectedValue.ToString());
+                if (cmbStaffCode.ValueMember != "")
+                {
+                    DAL.InspectionDetailClass inspectionDetail = new DAL.InspectionDetailClass
+                    {
+                        StaffCode = int.Parse(cmbStaffCode.SelectedValue.ToString())
+                    };
 
-                dgvInspectionReport.DataSource = bll.Report_DisplayInspectionDetailsByStaffCode(inspectionDetail);
+                    dgvInspectionReport.DataSource = bll.Report_DisplayInspectionDetailsByStaffCode(inspectionDetail);
+                }
             }
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
             catch (Exception b)
@@ -93,10 +108,15 @@ namespace Info_IT.UserControls.Reports
         {
             try
             {
-                DAL.InspectionClass inspection = new DAL.InspectionClass();
-                inspection.VenueCode = int.Parse(cmbVenue.SelectedValue.ToString());
+                if (cmbVenue.ValueMember != "")
+                {
+                    DAL.InspectionClass inspection = new DAL.InspectionClass
+                    {
+                        VenueCode = int.Parse(cmbVenue.SelectedValue.ToString())
+                    };
 
-                dgvInspectionReport.DataSource = bll.Report_DisplayInspectionDetailsByVenue(inspection);
+                    dgvInspectionReport.DataSource = bll.Report_DisplayInspectionDetailsByVenue(inspection);
+                }
             }
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
             catch (Exception b)
@@ -110,10 +130,15 @@ namespace Info_IT.UserControls.Reports
         {
             try
             {
-                DAL.InspectionDetailClass inspectionDetail = new DAL.InspectionDetailClass();
-                inspectionDetail.InspectionStatus = cmbStatus.SelectedItem.ToString();
+                if (cmbStatus.ValueMember != "")
+                {
+                    DAL.InspectionDetailClass inspectionDetail = new DAL.InspectionDetailClass
+                    {
+                        InspectionStatus = cmbStatus.SelectedItem.ToString()
+                    };
 
-                dgvInspectionReport.DataSource = bll.Report_DisplayInspectionDetailsByStatus(inspectionDetail);
+                    dgvInspectionReport.DataSource = bll.Report_DisplayInspectionDetailsByStatus(inspectionDetail);
+                }
             }
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
             catch (Exception b)
@@ -125,7 +150,7 @@ namespace Info_IT.UserControls.Reports
 
 		private void BtnRemoveFilter_Click(object sender, EventArgs e)
 		{
-
-		}
+            dgvInspectionReport.DataSource = bll.GetInspectionDetail();
+        }
 	}
 }
