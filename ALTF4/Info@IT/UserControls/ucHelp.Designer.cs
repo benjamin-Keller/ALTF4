@@ -248,7 +248,7 @@
 			// 
 			this.label12.AutoSize = true;
 			this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label12.Location = new System.Drawing.Point(3, 759);
+			this.label12.Location = new System.Drawing.Point(3, 757);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(364, 189);
 			this.label12.TabIndex = 32;
@@ -258,7 +258,7 @@
 			// 
 			this.label13.AutoSize = true;
 			this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label13.Location = new System.Drawing.Point(3, 738);
+			this.label13.Location = new System.Drawing.Point(3, 736);
 			this.label13.Name = "label13";
 			this.label13.Size = new System.Drawing.Size(129, 21);
 			this.label13.TabIndex = 31;
@@ -269,7 +269,7 @@
 			this.bunifuSeparator5.BackColor = System.Drawing.Color.Transparent;
 			this.bunifuSeparator5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
 			this.bunifuSeparator5.LineThickness = 1;
-			this.bunifuSeparator5.Location = new System.Drawing.Point(7, 705);
+			this.bunifuSeparator5.Location = new System.Drawing.Point(7, 704);
 			this.bunifuSeparator5.Name = "bunifuSeparator5";
 			this.bunifuSeparator5.Size = new System.Drawing.Size(528, 35);
 			this.bunifuSeparator5.TabIndex = 30;
