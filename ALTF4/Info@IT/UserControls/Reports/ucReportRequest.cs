@@ -146,5 +146,22 @@ namespace Info_IT.UserControls.Reports
 
 			}
 		}
-	}
+
+        private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                DAL.RequestClass request = new DAL.RequestClass();
+                request.RequestStatus = cmbStatus.SelectedItem.ToString();
+
+                dgvRequestReport.DataSource = bll.Report_DisplayRequestsByTime(request);
+            }
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
+            catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
+            {
+
+            }
+        }
+    }
 }

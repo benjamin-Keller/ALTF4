@@ -679,7 +679,7 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateStaffExUser", dbConn);
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateAllStaff", dbConn);
             dbCmd.CommandType = CommandType.StoredProcedure;
 
             dbCmd.Parameters.AddWithValue("@StaffCode", DAL.StaffClass.StaffCode);
@@ -2142,6 +2142,7 @@ namespace DAL
 
 			return dt;
 		}
+
 		public DataTable DisplayInspectionDetailsByStaffCode(InspectionDetailClass inspectionDetail)
 		{
 			try
@@ -2169,5 +2170,168 @@ namespace DAL
 			return dt;
 		}
 
-	}
+        public DataTable DisplayInspectionDetailsByVenue(InspectionClass inspection)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            
+                dbCmd = new SqlCommand("dbo.sp_ReportInspectionDetailByVenue", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@VenueCode", inspection.VenueCode);
+
+                SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+                DataTable dt = new DataTable();
+            try
+            {
+                sda.Fill(dt);
+            }
+            catch(Exception e)
+            {
+
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public int DeleteEquipment(EquipmentClass equipment)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_DeleteEquip", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@EquipmentCode", DAL.EquipmentClass.EquipmentCode);
+                
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public int DeleteVenue(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_DeleteVenue", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@VenueCode", DAL.VenueClass.VenueCode);
+
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public int DeleteRequest(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_DeleteRequest", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@RequestCode", DAL.RequestClass.RequestCode);
+
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public int DeleteStaff(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_DeleteStaff", dbConn);
+                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd.Parameters.AddWithValue("@StaffCode", DAL.StaffClass.StaffCode);
+
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+    }
 }

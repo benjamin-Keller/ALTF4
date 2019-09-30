@@ -17,7 +17,7 @@ namespace Info_IT.UserControls
 			cmbEquipmentCode.DataSource = bll.GetEquipment();
 
 			cmbEquipmentCode.DisplayMember = "EquipmentDescription";
-			cmbEquipmentCode.ValueMember = "Equipmentcode";
+			cmbEquipmentCode.ValueMember = "EquipmentCode";
 
 			cmbStaffCode.DataSource = bll.GetStaff();
 
@@ -66,7 +66,7 @@ namespace Info_IT.UserControls
 			try
 			{
 				//Error for input string not found
-				DAL.InspectionDetailClass inspection = new DAL.InspectionDetailClass(int.Parse(cmbInspectionCode.SelectedValue.ToString()), int.Parse(cmbEquipmentCode.SelectedValue.ToString()), int.Parse(cmbStaffCode.SelectedValue.ToString()), txtFaultComment.Text, cmbStatus.SelectedText.ToString());
+				DAL.InspectionDetailClass inspection = new DAL.InspectionDetailClass(int.Parse(cmbInspectionCode.SelectedValue.ToString()), int.Parse(cmbEquipmentCode.SelectedValue.ToString()), int.Parse(cmbStaffCode.SelectedValue.ToString()), txtFaultComment.Text, cmbStatus.SelectedItem.ToString());
 				int x = bll.AddInspectionDetail(inspection);
 
 				if (x > 0)

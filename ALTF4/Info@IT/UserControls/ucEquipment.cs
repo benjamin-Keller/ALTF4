@@ -131,10 +131,34 @@ namespace Info_IT.UserControls
 
 			dgvEquipment.DataSource = bll.GetEquipment();
 		}
+
 		private void BtnManageDelete_Click(object sender, EventArgs e)
 		{
+            try
+            {
+                //Error for input string not found
+                DAL.EquipmentClass equipment = new DAL.EquipmentClass(DAL.EquipmentClass.EquipmentCode);
+                int x = bll.UpdateEquipment(equipment);
 
-		}
+                if (x > 0)
+                {
+                    txtDescription.Clear();
+                    cmbVenue.Text = "";
+                    cmbEquipTypeCode.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Please input valid data.");
+                }
+            }
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
+            catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
+            {
+                MessageBox.Show("Please input valid data.");
+            }
+        }
+
 		private void BtnViewList_Click(object sender, EventArgs e)
 		{
 			dgvEquipment.DataSource = bll.GetEquipment();

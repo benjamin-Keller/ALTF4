@@ -71,7 +71,7 @@ namespace Info_IT.UserControls
                 {
                     activeStatus = "False";
                 }
-                DAL.StaffClass staff = new DAL.StaffClass(int.Parse(txtStaffNumber.Text), txtName.Text, txtSurname.Text, txtEmailAddress.Text, int.Parse(txtContactNo.Text), cmbStaffType.SelectedItem.ToString(), int.Parse(cmbDepartmentCode.SelectedValue.ToString()),txtUsername.Text,txtPassword.Text, activeStatus);
+                DAL.StaffClass staff = new DAL.StaffClass(txtStaffNumber.Text, txtName.Text, txtSurname.Text, txtEmailAddress.Text, int.Parse(txtContactNo.Text), cmbStaffType.SelectedItem.ToString(), int.Parse(cmbDepartmentCode.SelectedValue.ToString()),txtUsername.Text,txtPassword.Text, activeStatus);
                 int x = bll.AddStaff(staff);
 
 
@@ -109,27 +109,35 @@ namespace Info_IT.UserControls
 
             try
             {
-                //commented out to make it run
-                //DAL.StaffClass staff = new DAL.StaffClass(txtStaffNumber.Text, txtName.Text, txtSurname.Text, txtEmailAddress.Text, int.Parse(txtContactNo.Text), cmbStaffType.SelectedValue.ToString(), int.Parse(cmbDepartmentCode.SelectedValue.ToString()));
-                //int x = bll.UpdateStaff(staff);
+                string activeStatus = "";
+                if (cmbStatus.SelectedItem.ToString() == "Active")
+                {
+                    activeStatus = "True";
+                }
+                else
+                {
+                    activeStatus = "False";
+                }
+                DAL.StaffClass staff = new DAL.StaffClass(txtStaffNumber.Text, txtName.Text, txtSurname.Text, txtEmailAddress.Text, int.Parse(txtContactNo.Text), cmbStaffType.SelectedValue.ToString(), int.Parse(cmbDepartmentCode.SelectedValue.ToString()), txtUsername.Text, txtPassword.Text, activeStatus);
+                int x = bll.UpdateStaff(staff);
 
 
-                //if (x > 0)
-                //{
-                //    txtStaffNumber.Clear();
-                //    txtName.Clear();
-                //    txtSurname.Clear();
-                //    txtEmailAddress.Clear();
-                //    txtContactNo.Clear();
-                //    cmbStaffType.Text = " ";
-                //    cmbDepartmentCode.Text = " ";
+                if (x > 0)
+                {
+                    txtStaffNumber.Clear();
+                    txtName.Clear();
+                    txtSurname.Clear();
+                    txtEmailAddress.Clear();
+                    txtContactNo.Clear();
+                    cmbStaffType.Text = " ";
+                    cmbDepartmentCode.Text = " ";
 
-                       
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Please input valid data.");
-                //}
+
+                }
+                else
+                {
+                    MessageBox.Show("Please input valid data.");
+                }
             }
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
             catch (Exception b)
@@ -168,9 +176,16 @@ namespace Info_IT.UserControls
                 txtEmailAddress.Text = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
                 txtContactNo.Text = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
 
-                cmbStaffType.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[6];
+                cmbStaffType.SelectedItem = values.Rows[0].Table.Rows[0].ItemArray[6].ToString();
                 cmbDepartmentCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[7];
-                cmbStatus.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[11];
+                if (values.Rows[0].Table.Rows[0].ItemArray[10].ToString() == "True")
+                {
+                    cmbStatus.SelectedItem = "Active";
+                }
+                else
+                {
+                    cmbStatus.SelectedItem = "Inactive";
+                }
                 txtUsername.Text = values.Rows[0].Table.Rows[0].ItemArray[8].ToString();
                 txtPassword.Text = values.Rows[0].Table.Rows[0].ItemArray[9].ToString();
             }
@@ -178,7 +193,7 @@ namespace Info_IT.UserControls
             catch (Exception b)
 #pragma warning restore CS0168 // The variable 'b' is declared but never used
             {
-                MessageBox.Show("Please input valid data.");
+                MessageBox.Show(b.Message);
             }
            
 

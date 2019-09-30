@@ -17,7 +17,7 @@ namespace Info_IT.UserControls.Reports
             cmbEquipmentCode.DataSource = bll.GetEquipment();
 
             cmbEquipmentCode.DisplayMember = "EquipmentDescription";
-            cmbEquipmentCode.ValueMember = "Equipmentcode";
+            cmbEquipmentCode.ValueMember = "EquipmentCode";
 
             cmbStaffCode.DataSource = bll.GetStaff();
 
@@ -33,7 +33,7 @@ namespace Info_IT.UserControls.Reports
 
             cmbVenue.DisplayMember = "VenueDescription";
             cmbVenue.ValueMember = "VenueCode";
-            cmbVenue.Text = "";
+            //cmbVenue.Text = "";
 
             dgvInspectionReport.DataSource = bll.GetInspectionDetail();
         }
@@ -93,10 +93,10 @@ namespace Info_IT.UserControls.Reports
         {
             try
             {
-                DAL.InspectionDetailClass inspectionDetail = new DAL.InspectionDetailClass();
-                inspectionDetail.InspectionCode = int.Parse(cmbInspectionCode.SelectedValue.ToString());
+                DAL.InspectionClass inspection = new DAL.InspectionClass();
+                inspection.VenueCode = int.Parse(cmbVenue.SelectedValue.ToString());
 
-                //dgvInspectionReport.DataSource = bll.re(inspectionDetail);
+                dgvInspectionReport.DataSource = bll.Report_DisplayInspectionDetailsByVenue(inspection);
             }
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
             catch (Exception b)
