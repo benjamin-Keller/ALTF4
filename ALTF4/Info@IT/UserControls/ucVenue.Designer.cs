@@ -29,13 +29,14 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.tmrView = new System.Windows.Forms.Timer(this.components);
 			this.btnManageUpdate = new System.Windows.Forms.Button();
 			this.btnManageAdd = new System.Windows.Forms.Button();
 			this.btnManage = new System.Windows.Forms.Button();
 			this.pnlManage = new System.Windows.Forms.Panel();
+			this.btnManageDelete = new System.Windows.Forms.Button();
 			this.tmrManage = new System.Windows.Forms.Timer(this.components);
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
@@ -51,7 +52,7 @@
 			this.txtDescription = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.btnManageDelete = new System.Windows.Forms.Button();
+			this.btnExportToExcel = new System.Windows.Forms.Button();
 			this.pnlManage.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -113,17 +114,33 @@
 			// pnlManage
 			// 
 			this.pnlManage.BackColor = System.Drawing.SystemColors.ControlDark;
+			this.pnlManage.Controls.Add(this.btnExportToExcel);
 			this.pnlManage.Controls.Add(this.btnManageDelete);
 			this.pnlManage.Controls.Add(this.btnManageUpdate);
 			this.pnlManage.Controls.Add(this.btnManageAdd);
 			this.pnlManage.Controls.Add(this.btnManage);
 			this.pnlManage.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlManage.Location = new System.Drawing.Point(0, 0);
-			this.pnlManage.MaximumSize = new System.Drawing.Size(200, 148);
+			this.pnlManage.MaximumSize = new System.Drawing.Size(200, 179);
 			this.pnlManage.MinimumSize = new System.Drawing.Size(200, 53);
 			this.pnlManage.Name = "pnlManage";
 			this.pnlManage.Size = new System.Drawing.Size(200, 53);
 			this.pnlManage.TabIndex = 12;
+			// 
+			// btnManageDelete
+			// 
+			this.btnManageDelete.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.btnManageDelete.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnManageDelete.FlatAppearance.BorderSize = 0;
+			this.btnManageDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnManageDelete.Font = new System.Drawing.Font("Segoe UI", 8.75F);
+			this.btnManageDelete.Location = new System.Drawing.Point(0, 115);
+			this.btnManageDelete.Name = "btnManageDelete";
+			this.btnManageDelete.Size = new System.Drawing.Size(200, 31);
+			this.btnManageDelete.TabIndex = 8;
+			this.btnManageDelete.Text = "Delete Selected Venue";
+			this.btnManageDelete.UseVisualStyleBackColor = false;
+			this.btnManageDelete.Click += new System.EventHandler(this.BtnManageDelete_Click);
 			// 
 			// tmrManage
 			// 
@@ -151,20 +168,20 @@
 			// 
 			this.dgvVenue.AllowUserToAddRows = false;
 			this.dgvVenue.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvVenue.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvVenue.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
 			this.dgvVenue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvVenue.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvVenue.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvVenue.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvVenue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvVenue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
 			this.dgvVenue.ColumnHeadersHeight = 50;
 			this.dgvVenue.DoubleBuffered = true;
 			this.dgvVenue.EnableHeadersVisualStyles = false;
@@ -291,20 +308,20 @@
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Description:";
 			// 
-			// btnManageDelete
+			// btnExportToExcel
 			// 
-			this.btnManageDelete.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.btnManageDelete.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnManageDelete.FlatAppearance.BorderSize = 0;
-			this.btnManageDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnManageDelete.Font = new System.Drawing.Font("Segoe UI", 8.75F);
-			this.btnManageDelete.Location = new System.Drawing.Point(0, 115);
-			this.btnManageDelete.Name = "btnManageDelete";
-			this.btnManageDelete.Size = new System.Drawing.Size(200, 31);
-			this.btnManageDelete.TabIndex = 8;
-			this.btnManageDelete.Text = "Delete Selected Venue";
-			this.btnManageDelete.UseVisualStyleBackColor = false;
-			this.btnManageDelete.Click += new System.EventHandler(this.BtnManageDelete_Click);
+			this.btnExportToExcel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.btnExportToExcel.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnExportToExcel.FlatAppearance.BorderSize = 0;
+			this.btnExportToExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnExportToExcel.Font = new System.Drawing.Font("Segoe UI", 8.75F);
+			this.btnExportToExcel.Location = new System.Drawing.Point(0, 146);
+			this.btnExportToExcel.Name = "btnExportToExcel";
+			this.btnExportToExcel.Size = new System.Drawing.Size(200, 31);
+			this.btnExportToExcel.TabIndex = 9;
+			this.btnExportToExcel.Text = "Export to Excel";
+			this.btnExportToExcel.UseVisualStyleBackColor = false;
+			this.btnExportToExcel.Click += new System.EventHandler(this.BtnExportToExcel_Click);
 			// 
 			// ucVenue
 			// 
@@ -349,5 +366,6 @@
 		private System.Windows.Forms.Label label1;
 		private Bunifu.Framework.UI.BunifuCustomDataGrid dgvVenue;
 		private System.Windows.Forms.Button btnManageDelete;
+		private System.Windows.Forms.Button btnExportToExcel;
 	}
 }

@@ -29,8 +29,8 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.dgvStaff = new Bunifu.Framework.UI.BunifuCustomDataGrid();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.pnlManage = new System.Windows.Forms.Panel();
@@ -61,6 +61,7 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.txtStaffNumber = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
+			this.btnExportToExcel = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
 			this.panel1.SuspendLayout();
 			this.pnlManage.SuspendLayout();
@@ -72,20 +73,20 @@
 			// 
 			this.dgvStaff.AllowUserToAddRows = false;
 			this.dgvStaff.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvStaff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvStaff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
 			this.dgvStaff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvStaff.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvStaff.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvStaff.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
 			this.dgvStaff.ColumnHeadersHeight = 50;
 			this.dgvStaff.DoubleBuffered = true;
 			this.dgvStaff.EnableHeadersVisualStyles = false;
@@ -113,12 +114,13 @@
 			// pnlManage
 			// 
 			this.pnlManage.BackColor = System.Drawing.SystemColors.ControlDark;
+			this.pnlManage.Controls.Add(this.btnExportToExcel);
 			this.pnlManage.Controls.Add(this.btnManageUpdate);
 			this.pnlManage.Controls.Add(this.btnManageAdd);
 			this.pnlManage.Controls.Add(this.btnManage);
 			this.pnlManage.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlManage.Location = new System.Drawing.Point(0, 0);
-			this.pnlManage.MaximumSize = new System.Drawing.Size(200, 114);
+			this.pnlManage.MaximumSize = new System.Drawing.Size(200, 148);
 			this.pnlManage.MinimumSize = new System.Drawing.Size(200, 53);
 			this.pnlManage.Name = "pnlManage";
 			this.pnlManage.Size = new System.Drawing.Size(200, 53);
@@ -408,6 +410,21 @@
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Staff Number:";
 			// 
+			// btnExportToExcel
+			// 
+			this.btnExportToExcel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.btnExportToExcel.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnExportToExcel.FlatAppearance.BorderSize = 0;
+			this.btnExportToExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnExportToExcel.Font = new System.Drawing.Font("Segoe UI", 8.75F);
+			this.btnExportToExcel.Location = new System.Drawing.Point(0, 115);
+			this.btnExportToExcel.Name = "btnExportToExcel";
+			this.btnExportToExcel.Size = new System.Drawing.Size(200, 31);
+			this.btnExportToExcel.TabIndex = 8;
+			this.btnExportToExcel.Text = "Export to Excel";
+			this.btnExportToExcel.UseVisualStyleBackColor = false;
+			this.btnExportToExcel.Click += new System.EventHandler(this.BtnExportToExcel_Click);
+			// 
 			// ucStaff
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -459,5 +476,6 @@
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.TextBox txtUsername;
 		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.Button btnExportToExcel;
 	}
 }

@@ -52,6 +52,7 @@
 			this.btnManage = new System.Windows.Forms.Button();
 			this.tmrView = new System.Windows.Forms.Timer(this.components);
 			this.tmrManage = new System.Windows.Forms.Timer(this.components);
+			this.btnExportToExcel = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
 			this.panel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvInspectionDetails)).BeginInit();
@@ -269,12 +270,13 @@
 			// pnlManage
 			// 
 			this.pnlManage.BackColor = System.Drawing.SystemColors.ControlDark;
+			this.pnlManage.Controls.Add(this.btnExportToExcel);
 			this.pnlManage.Controls.Add(this.btnManageUpdate);
 			this.pnlManage.Controls.Add(this.btnManageAdd);
 			this.pnlManage.Controls.Add(this.btnManage);
 			this.pnlManage.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlManage.Location = new System.Drawing.Point(0, 0);
-			this.pnlManage.MaximumSize = new System.Drawing.Size(200, 114);
+			this.pnlManage.MaximumSize = new System.Drawing.Size(200, 148);
 			this.pnlManage.MinimumSize = new System.Drawing.Size(200, 53);
 			this.pnlManage.Name = "pnlManage";
 			this.pnlManage.Size = new System.Drawing.Size(200, 53);
@@ -335,6 +337,21 @@
 			// 
 			this.tmrManage.Tick += new System.EventHandler(this.TmrManage_Tick);
 			// 
+			// btnExportToExcel
+			// 
+			this.btnExportToExcel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.btnExportToExcel.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnExportToExcel.FlatAppearance.BorderSize = 0;
+			this.btnExportToExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnExportToExcel.Font = new System.Drawing.Font("Segoe UI", 8.75F);
+			this.btnExportToExcel.Location = new System.Drawing.Point(0, 115);
+			this.btnExportToExcel.Name = "btnExportToExcel";
+			this.btnExportToExcel.Size = new System.Drawing.Size(200, 31);
+			this.btnExportToExcel.TabIndex = 8;
+			this.btnExportToExcel.Text = "Export to Excel";
+			this.btnExportToExcel.UseVisualStyleBackColor = false;
+			this.btnExportToExcel.Click += new System.EventHandler(this.BtnExportToExcel_Click);
+			// 
 			// ucInspectionDetails
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,5 +396,6 @@
 		private System.Windows.Forms.Button btnManage;
 		private System.Windows.Forms.Timer tmrView;
 		private System.Windows.Forms.Timer tmrManage;
+		private System.Windows.Forms.Button btnExportToExcel;
 	}
 }
