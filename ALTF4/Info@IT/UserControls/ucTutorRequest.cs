@@ -174,7 +174,7 @@ namespace Info_IT.UserControls
 		{
 			SaveFileDialog sfd = new SaveFileDialog();
 			sfd.Filter = "Excel Documents (*.xls)|*.xls";
-			sfd.FileName = "Inventory_Adjustment_Export.xls";
+			sfd.FileName = "TutorRequest_Export.xls";
 			if (sfd.ShowDialog() == DialogResult.OK)
 			{
 				// Copy DataGridView results to clipboard
