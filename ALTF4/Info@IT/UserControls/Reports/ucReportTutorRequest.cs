@@ -154,7 +154,24 @@ namespace Info_IT.UserControls.Reports
 
         private void cmbStatus_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            try
+            {
+                if (cmbStatus.SelectedText != "")
+                {
+                    DAL.TutorRequestClass tutor = new DAL.TutorRequestClass
+                    {
+                        Status = cmbStatus.SelectedItem.ToString()
+                    };
 
+                    dgvTutorRequestReport.DataSource = bll.Report_DisplayTutorRequestByStatus(tutor);
+                }
+            }
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
+            catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
+            {
+
+            }
         }
     }
 }

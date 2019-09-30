@@ -824,6 +824,7 @@ namespace DAL
                 dbCmd.Parameters.AddWithValue("@EndTime", tutorRequest.EndTime);
                 dbCmd.Parameters.AddWithValue("@ModuleCode", tutorRequest.ModuleCode);
                 dbCmd.Parameters.AddWithValue("@VenueCode", tutorRequest.VenueCode);
+                dbCmd.Parameters.AddWithValue("@Status", tutorRequest.Status);
 
                 x = dbCmd.ExecuteNonQuery();
             }
@@ -1269,6 +1270,7 @@ namespace DAL
                 dbCmd.Parameters.AddWithValue("@EndTime", tutor.EndTime);
                 dbCmd.Parameters.AddWithValue("@ModuleCode", tutor.ModuleCode);
                 dbCmd.Parameters.AddWithValue("@VenueCode", tutor.VenueCode);
+                dbCmd.Parameters.AddWithValue("@Status", tutor.Status);
 
                 x = dbCmd.ExecuteNonQuery();
             }
@@ -2241,6 +2243,7 @@ namespace DAL
 
 			return dt;
 		}
+
 		public DataTable DisplayInspectionDetailsByInspectCode(InspectionDetailClass inspectionDetail)
 		{
 			try
@@ -2269,6 +2272,7 @@ namespace DAL
 
 			return dt;
 		}
+
 		public DataTable DisplayInspectionDetailsByStatus(InspectionDetailClass inspectionDetail)
 		{
 			try
@@ -2431,6 +2435,34 @@ namespace DAL
             catch { }
             return x;
         }
-        
+
+        public DataTable DisplayTutorRequestByRequestStatus(TutorRequestClass tutorRequest)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportTutorRequestByStatus", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            dbCmd.Parameters.AddWithValue("@ActiveStatus", tutorRequest.Status);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
     }
 }

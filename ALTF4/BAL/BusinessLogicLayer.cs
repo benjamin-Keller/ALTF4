@@ -389,6 +389,11 @@ namespace BLL
             return dal.DisplayInspectionDetailsByVenue(inspection);
         }
 
+        public DataTable Report_DisplayTutorRequestByStatus(TutorRequestClass tutorRequest)
+        {
+            return dal.DisplayTutorRequestByRequestStatus(tutorRequest);
+        }
+
         public int DeleteEquip(EquipmentClass equipment)
         {
             return dal.DeleteEquipment(equipment);

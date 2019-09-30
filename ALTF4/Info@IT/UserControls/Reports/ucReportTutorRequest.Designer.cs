@@ -128,6 +128,11 @@
             // cmbStatus
             // 
             this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Items.AddRange(new object[] {
+            "Pending",
+            "In Progress",
+            "Completed",
+            "Cancelled"});
             this.cmbStatus.Location = new System.Drawing.Point(555, 32);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(116, 23);

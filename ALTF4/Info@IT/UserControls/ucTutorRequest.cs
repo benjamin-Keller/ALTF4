@@ -63,19 +63,20 @@ namespace Info_IT.UserControls
 		{
 			try
 			{
-				DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), cmbStartTime.SelectedItem.ToString(), cmbEndTime.SelectedItem.ToString(), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()));
+				DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), cmbStartTime.SelectedItem.ToString(), cmbEndTime.SelectedItem.ToString(), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()), cmbStatus.SelectedItem.ToString());
 
 				int x = bll.AddTutorRequest(tutorRequest);
 
 				if (x > 0)
 				{
 					cmbRequestCode.Text = " ";
-					dateRequest.Text = " ";
+					dateRequest.ResetText();
 					cmbStartTime.Text = " ";
 					cmbEndTime.Text = " ";
 					cmbRequestCode.Text = " ";
 					cmbModuleCode.Text = " ";
 					cmbVenueCode.Text = " ";
+                    cmbStatus.Text = "";
 				}
 				else
 				{
@@ -102,7 +103,7 @@ namespace Info_IT.UserControls
 
 			try
 			{
-				DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), cmbStartTime.SelectedItem.ToString(), cmbEndTime.SelectedItem.ToString(), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()));
+				DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), cmbStartTime.SelectedItem.ToString(), cmbEndTime.SelectedItem.ToString(), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()), cmbStatus.SelectedItem.ToString());
 
 				int x = bll.UpdateTutorRequest(tutorRequest);
 
@@ -115,8 +116,8 @@ namespace Info_IT.UserControls
 					cmbRequestCode.Text = " ";
 					cmbModuleCode.Text = " ";
 					cmbVenueCode.Text = " ";
-
-				}
+                    cmbStatus.Text = "";
+                }
 				else
 				{
 					MessageBox.Show("Please input valid data.");
@@ -146,12 +147,14 @@ namespace Info_IT.UserControls
 
 				var values = bll.SelectedForUpdateTutorRequest(request);
 
-				dateRequest.Value = Convert.ToDateTime(values.Rows[0].Table.Rows[0].ItemArray[2].ToString());
+                cmbRequestCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[1];
+                dateRequest.Value = Convert.ToDateTime(values.Rows[0].Table.Rows[0].ItemArray[2].ToString());
 				cmbModuleCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[5];
 				cmbVenueCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[6];
 				cmbStartTime.SelectedText = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
 				cmbEndTime.SelectedText = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
-			}
+                cmbStatus.SelectedItem = values.Rows[0].Table.Rows[0].ItemArray[7].ToString();
+            }
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
 #pragma warning restore CS0168 // The variable 'b' is declared but never used
