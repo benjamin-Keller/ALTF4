@@ -18,7 +18,7 @@ namespace Info_IT
         {
             InitializeComponent();
 
-            timerClose.Interval = 16070;
+            timerClose.Interval = 21500;
             timerClose.Tick += new EventHandler(timerClose_Tick);
             timerClose.Start();
         }

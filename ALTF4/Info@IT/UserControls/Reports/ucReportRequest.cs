@@ -201,7 +201,13 @@ namespace Info_IT.UserControls.Reports
 		private void BtnRemoveFilter_Click(object sender, EventArgs e)
 		{
             dgvRequestReport.DataSource = bll.GetRequests();
-        }
+			cmbAssignedStaffCode.SelectedText = "";
+			cmbStaffCode.SelectedText = "";
+			cmbStatus.SelectedText = "";
+			cmbStudentCode.SelectedText = "";
+			cmbTaskTypeCode.SelectedText = "";
+			cmbTime.SelectedText = "";
+		}
         
     }
 }

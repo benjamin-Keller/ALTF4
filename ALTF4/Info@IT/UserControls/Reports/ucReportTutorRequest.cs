@@ -145,7 +145,12 @@ namespace Info_IT.UserControls.Reports
 		private void BtnRemoveFilter_Click(object sender, EventArgs e)
 		{
             dgvTutorRequestReport.DataSource = bll.GetTutorRequest();
-        }
+			cmbEndTime.SelectedText = "";
+			cmbModuleCode.SelectedText = "";
+			cmbStartTime.SelectedText = "";
+			cmbStatus.SelectedText = "";
+			cmbVenueCode.SelectedText = "";
+		}
 
         private void cmbStatus_SelectionChangeCommitted(object sender, EventArgs e)
         {

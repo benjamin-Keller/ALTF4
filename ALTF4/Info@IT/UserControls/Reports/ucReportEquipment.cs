@@ -70,6 +70,8 @@ namespace Info_IT.UserControls.Reports
 		private void BtnRemoveFilter_Click(object sender, EventArgs e)
 		{
             dgvEquipmentReport.DataSource = bll.GetEquipment();
+			cmbEquipType.SelectedText = "";
+			cmbVenue.SelectedText = "";
         }
 	}
 }

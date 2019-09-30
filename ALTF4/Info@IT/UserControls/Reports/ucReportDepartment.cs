@@ -45,6 +45,7 @@ namespace Info_IT.UserControls.Reports
 		private void BtnRemoveFilter_Click(object sender, EventArgs e)
 		{
             dgvDepartmentReport.DataSource = bll.GetDepartment();
-        }
+			cmbBuilding.SelectedText = "";
+		}
 	}
 }

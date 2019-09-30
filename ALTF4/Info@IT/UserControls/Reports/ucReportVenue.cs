@@ -77,6 +77,8 @@ namespace Info_IT.UserControls.Reports
 		private void BtnRemoveFilter_Click(object sender, EventArgs e)
 		{
             dgvVenueReport.DataSource = bll.GetVenues();
-        }
+			cmbBuilding.SelectedText = "";
+			cmbBuildingBlock.SelectedText = "";
+		}
 	}
 }
