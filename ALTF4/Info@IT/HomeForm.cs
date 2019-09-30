@@ -1,6 +1,7 @@
 ﻿using BLL;
 using System;
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Info_IT
@@ -16,12 +17,27 @@ namespace Info_IT
 
 		BusinessLogicLayer bll = new BusinessLogicLayer();
 
-		public Home()
+        public Home()
+        {
+            //Thread t = new Thread(new ThreadStart(Loading));
+            //t.Start();
+            InitializeComponent();
+            //for (int i = 0; i <= 1000; i++)
+            //{
+            //    Thread.Sleep(10);
+            //}
+            //t.Abort();
+        }
+        //void Loading()
+        //{
+        //    SplashScreen splash = new SplashScreen();
+        //    Application.Run(splash);
+        //}
+
+        private void Template_Load(object sender, EventArgs e)
 		{
-			InitializeComponent();
-		}
-		private void Template_Load(object sender, EventArgs e)
-		{
+            
+
 			HideAll();
 			LoginPanel();
 
