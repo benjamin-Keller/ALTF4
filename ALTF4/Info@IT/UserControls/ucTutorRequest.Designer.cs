@@ -29,8 +29,8 @@
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvTutorRequest = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.tmrView = new System.Windows.Forms.Timer(this.components);
@@ -75,20 +75,20 @@
             // 
             this.dgvTutorRequest.AllowUserToAddRows = false;
             this.dgvTutorRequest.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvTutorRequest.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvTutorRequest.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTutorRequest.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTutorRequest.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvTutorRequest.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTutorRequest.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTutorRequest.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTutorRequest.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvTutorRequest.ColumnHeadersHeight = 50;
             this.dgvTutorRequest.DoubleBuffered = true;
             this.dgvTutorRequest.EnableHeadersVisualStyles = false;
@@ -239,24 +239,24 @@
             // 
             this.cmbEndTime.FormattingEnabled = true;
             this.cmbEndTime.Items.AddRange(new object[] {
-            "08:30",
-            "09:00",
-            "09:30",
-            "10:00",
-            "10:30",
-            "11:00",
-            "11:30",
-            "12:00",
-            "12:30",
-            "13:00",
-            "13:30",
-            "14:00",
-            "14:30",
-            "15:00",
-            "15:30",
-            "16:00",
-            "16:30",
-            "17:00"});
+            "08:30:00",
+            "09:00:00",
+            "09:30:00",
+            "10:00:00",
+            "10:30:00",
+            "11:00:00",
+            "11:30:00",
+            "12:00:00",
+            "12:30:00",
+            "13:00:00",
+            "13:30:00",
+            "14:00:00",
+            "14:30:00",
+            "15:00:00",
+            "15:30:00",
+            "16:00:00",
+            "16:30:00",
+            "17:00:00"});
             this.cmbEndTime.Location = new System.Drawing.Point(610, 33);
             this.cmbEndTime.Name = "cmbEndTime";
             this.cmbEndTime.Size = new System.Drawing.Size(70, 23);
@@ -266,24 +266,24 @@
             // 
             this.cmbStartTime.FormattingEnabled = true;
             this.cmbStartTime.Items.AddRange(new object[] {
-            "08:00",
-            "08:30",
-            "09:00",
-            "09:30",
-            "10:00",
-            "10:30",
-            "11:00",
-            "11:30",
-            "12:00",
-            "12:30",
-            "13:00",
-            "13:30",
-            "14:00",
-            "14:30",
-            "15:00",
-            "15:30",
-            "16:00",
-            "16:30"});
+            "08:00:00",
+            "08:30:00",
+            "09:00:00",
+            "09:30:00",
+            "10:00:00",
+            "10:30:00",
+            "11:00:00",
+            "11:30:00",
+            "12:00:00",
+            "12:30:00",
+            "13:00:00",
+            "13:30:00",
+            "14:00:00",
+            "14:30:00",
+            "15:00:00",
+            "15:30:00",
+            "16:00:00",
+            "16:30:00"});
             this.cmbStartTime.Location = new System.Drawing.Point(531, 33);
             this.cmbStartTime.Name = "cmbStartTime";
             this.cmbStartTime.Size = new System.Drawing.Size(73, 23);

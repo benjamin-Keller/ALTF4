@@ -1249,6 +1249,7 @@ namespace DAL
             return dt;
 
         }
+
         public int UpdateTutorRequest(TutorRequestClass tutor)
         {
             try
@@ -1264,6 +1265,7 @@ namespace DAL
                     CommandType = CommandType.StoredProcedure
                 };
 
+                dbCmd.Parameters.AddWithValue("@TutorRequestCode", DAL.TutorRequestClass.TutorRequestCode);
                 dbCmd.Parameters.AddWithValue("@RequestCode", DAL.TutorRequestClass.RequestCode);
                 dbCmd.Parameters.AddWithValue("@TutorRequestDate", tutor.Date);
                 dbCmd.Parameters.AddWithValue("@StartTime", tutor.StartTime);
@@ -1286,6 +1288,7 @@ namespace DAL
 
             return x;
         }
+
         public DataTable SelectedForUpdateTutorRequest(TutorRequestClass request)
         {
             try
@@ -1300,7 +1303,7 @@ namespace DAL
                 CommandType = CommandType.StoredProcedure
             };
 
-            dbCmd.Parameters.AddWithValue("@TutorRequestCode", DAL.TutorRequestClass.RequestCode);
+            dbCmd.Parameters.AddWithValue("@TutorRequestCode", DAL.TutorRequestClass.TutorRequestCode);
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
 
             DataTable dt = new DataTable();

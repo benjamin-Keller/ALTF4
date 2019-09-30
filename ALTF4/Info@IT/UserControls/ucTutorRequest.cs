@@ -109,13 +109,13 @@ namespace Info_IT.UserControls
 
 				if (x > 0)
 				{
-					cmbRequestCode.Text = " ";
-					dateRequest.Text = " ";
-					cmbStartTime.Text = " ";
-					cmbEndTime.Text = " ";
-					cmbRequestCode.Text = " ";
-					cmbModuleCode.Text = " ";
-					cmbVenueCode.Text = " ";
+					cmbRequestCode.Text = "";
+					dateRequest.ResetText();
+					cmbStartTime.Text = "";
+					cmbEndTime.Text = "";
+					cmbRequestCode.Text = "";
+					cmbModuleCode.Text = "";
+					cmbVenueCode.Text = "";
                     cmbStatus.Text = "";
                 }
 				else
@@ -151,8 +151,8 @@ namespace Info_IT.UserControls
                 dateRequest.Value = Convert.ToDateTime(values.Rows[0].Table.Rows[0].ItemArray[2].ToString());
 				cmbModuleCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[5];
 				cmbVenueCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[6];
-				cmbStartTime.SelectedText = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
-				cmbEndTime.SelectedText = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
+				cmbStartTime.SelectedItem = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
+				cmbEndTime.SelectedItem = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
                 cmbStatus.SelectedItem = values.Rows[0].Table.Rows[0].ItemArray[7].ToString();
             }
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
