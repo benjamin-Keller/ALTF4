@@ -29,14 +29,15 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.bunifuFormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
 			this.tmrManage = new System.Windows.Forms.Timer(this.components);
 			this.btnManageUpdate = new System.Windows.Forms.Button();
 			this.btnManageAdd = new System.Windows.Forms.Button();
 			this.btnManage = new System.Windows.Forms.Button();
 			this.pnlManage = new System.Windows.Forms.Panel();
+			this.btnExportToExcel = new System.Windows.Forms.Button();
 			this.btnManageDelete = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.tmrView = new System.Windows.Forms.Timer(this.components);
@@ -57,7 +58,8 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dgvRequest = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-			this.btnExportToExcel = new System.Windows.Forms.Button();
+			this.cmbStatus = new System.Windows.Forms.ComboBox();
+			this.label2 = new System.Windows.Forms.Label();
 			this.pnlManage.SuspendLayout();
 			this.panel1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
@@ -136,6 +138,21 @@
 			this.pnlManage.Size = new System.Drawing.Size(200, 53);
 			this.pnlManage.TabIndex = 12;
 			// 
+			// btnExportToExcel
+			// 
+			this.btnExportToExcel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.btnExportToExcel.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnExportToExcel.FlatAppearance.BorderSize = 0;
+			this.btnExportToExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnExportToExcel.Font = new System.Drawing.Font("Segoe UI", 8.75F);
+			this.btnExportToExcel.Location = new System.Drawing.Point(0, 146);
+			this.btnExportToExcel.Name = "btnExportToExcel";
+			this.btnExportToExcel.Size = new System.Drawing.Size(200, 31);
+			this.btnExportToExcel.TabIndex = 9;
+			this.btnExportToExcel.Text = "Export to Excel";
+			this.btnExportToExcel.UseVisualStyleBackColor = false;
+			this.btnExportToExcel.Click += new System.EventHandler(this.BtnExportToExcel_Click);
+			// 
 			// btnManageDelete
 			// 
 			this.btnManageDelete.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -167,6 +184,8 @@
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.cmbStatus);
+			this.groupBox1.Controls.Add(this.label2);
 			this.groupBox1.Controls.Add(this.cmbTime);
 			this.groupBox1.Controls.Add(this.cmbAssignedStaffCode);
 			this.groupBox1.Controls.Add(this.label8);
@@ -212,7 +231,7 @@
             "15:30:00",
             "16:00:00",
             "16:30:00"});
-            this.cmbTime.Location = new System.Drawing.Point(15, 77);
+			this.cmbTime.Location = new System.Drawing.Point(15, 77);
 			this.cmbTime.Name = "cmbTime";
 			this.cmbTime.Size = new System.Drawing.Size(116, 23);
 			this.cmbTime.TabIndex = 25;
@@ -355,20 +374,20 @@
 			// 
 			this.dgvRequest.AllowUserToAddRows = false;
 			this.dgvRequest.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvRequest.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvRequest.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvRequest.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvRequest.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvRequest.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvRequest.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvRequest.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvRequest.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvRequest.ColumnHeadersHeight = 50;
 			this.dgvRequest.DoubleBuffered = true;
 			this.dgvRequest.EnableHeadersVisualStyles = false;
@@ -382,20 +401,24 @@
 			this.dgvRequest.TabIndex = 0;
 			this.dgvRequest.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRequest_CellClick);
 			// 
-			// btnExportToExcel
+			// cmbStatus
 			// 
-			this.btnExportToExcel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.btnExportToExcel.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnExportToExcel.FlatAppearance.BorderSize = 0;
-			this.btnExportToExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnExportToExcel.Font = new System.Drawing.Font("Segoe UI", 8.75F);
-			this.btnExportToExcel.Location = new System.Drawing.Point(0, 146);
-			this.btnExportToExcel.Name = "btnExportToExcel";
-			this.btnExportToExcel.Size = new System.Drawing.Size(200, 31);
-			this.btnExportToExcel.TabIndex = 9;
-			this.btnExportToExcel.Text = "Export to Excel";
-			this.btnExportToExcel.UseVisualStyleBackColor = false;
-			this.btnExportToExcel.Click += new System.EventHandler(this.BtnExportToExcel_Click);
+			this.cmbStatus.FormattingEnabled = true;
+			this.cmbStatus.Location = new System.Drawing.Point(305, 77);
+			this.cmbStatus.Name = "cmbStatus";
+			this.cmbStatus.Size = new System.Drawing.Size(116, 23);
+			this.cmbStatus.TabIndex = 27;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.label2.Location = new System.Drawing.Point(302, 60);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(50, 17);
+			this.label2.TabIndex = 26;
+			this.label2.Text = "Status:";
 			// 
 			// ucRequest
 			// 
@@ -446,5 +469,7 @@
         private System.Windows.Forms.ComboBox cmbTime;
 		private System.Windows.Forms.Button btnManageDelete;
 		private System.Windows.Forms.Button btnExportToExcel;
+		private System.Windows.Forms.ComboBox cmbStatus;
+		private System.Windows.Forms.Label label2;
 	}
 }
