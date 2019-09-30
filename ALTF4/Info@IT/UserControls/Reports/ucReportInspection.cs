@@ -90,9 +90,9 @@ namespace Info_IT.UserControls.Reports
 		private void BtnRemoveFilter_Click(object sender, EventArgs e)
 		{
             dgvInspectionReport.DataSource = bll.GetInspection();
-			cmbVenueCode.SelectedText = "";
-			cmbStaffCode.SelectedText = "";
-			
+			cmbVenueCode.Text = "";
+			cmbStaffCode.Text = "";
+
 		}
 	}
 }

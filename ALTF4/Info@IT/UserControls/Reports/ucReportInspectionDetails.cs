@@ -151,11 +151,11 @@ namespace Info_IT.UserControls.Reports
 		private void BtnRemoveFilter_Click(object sender, EventArgs e)
 		{
             dgvInspectionReport.DataSource = bll.GetInspectionDetail();
-			cmbEquipmentCode.SelectedText = "";
-			cmbInspectionCode.SelectedText = "";
-			cmbStaffCode.SelectedText = "";
-			cmbStatus.SelectedText = "";
-			cmbVenue.SelectedText = "";
+			cmbEquipmentCode.Text = "";
+			cmbInspectionCode.Text = "";
+			cmbStaffCode.Text = "";
+			cmbStatus.Text = "";
+			cmbVenue.Text = "";
 		}
 	}
 }

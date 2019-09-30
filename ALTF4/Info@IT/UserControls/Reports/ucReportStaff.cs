@@ -70,8 +70,8 @@ namespace Info_IT.UserControls
 		private void BtnRemoveFilter_Click(object sender, EventArgs e)
 		{
             dgvStaffReport.DataSource = bll.GetStaff();
-			cmbDepartmentCode.SelectedText = "";
-			cmbStaffType.SelectedText = "";
+			cmbDepartmentCode.Text = "";
+			cmbStaffType.Text = "";
 		}
 	}
 }
