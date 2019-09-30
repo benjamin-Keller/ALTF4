@@ -16,7 +16,7 @@ namespace DAL
         SqlConnection dbConn = new SqlConnection(@"Server=tcp:altf4-projects.database.windows.net,1433;Initial Catalog=Info@IT;Persist Security Info=False;User ID=altf4_F4_Admin;Password=WeaDee26;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
         //Uncomment this to use a Local DB
-        //SqlConnection dbConn = new SqlConnection(@"Data Source = .\SQLEXPRESS; Initial Catalog=C:\USERS\ZHERO\SOURCE\REPOS\ZHERO42\ALTF4\ALTF4\DAL\APP_DATA\INFO@IT.MDF; Integrated Security = True;");
+        //SqlConnection dbConn = new SqlConnection(@"Data Source = .\SQLEXPRESS; Initial Catalog=Info@IT; Integrated Security = True;");
 
         //SqlConnection dbConn = new SqlConnection(@"Data Source = (LocalDB)\SQLEXPRESS; AttachDbFilename=|DataDirectory|\App_Data\Info@IT.mdf; Integrated Security = True");
 
