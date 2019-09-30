@@ -27,10 +27,15 @@ namespace Info_IT.UserControls
 		{
 			try
 			{
-				DAL.StaffClass staff = new DAL.StaffClass();
-				staff.StaffType = cmbStaffType.SelectedItem.ToString();
+                if (cmbStaffType.SelectedText != "")
+                {
+                    DAL.StaffClass staff = new DAL.StaffClass
+                    {
+                        StaffType = cmbStaffType.SelectedItem.ToString()
+                    };
 
-				dgvStaffReport.DataSource = bll.Report_DisplayStaffByStaffType(staff);
+                    dgvStaffReport.DataSource = bll.Report_DisplayStaffByStaffType(staff);
+                }
 			}
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
@@ -44,10 +49,15 @@ namespace Info_IT.UserControls
 		{
 			try
 			{
-				DAL.StaffClass staff = new DAL.StaffClass();
-				staff.DepartmentCode = int.Parse(cmbDepartmentCode.SelectedValue.ToString());
+                if (cmbDepartmentCode.ValueMember != "")
+                {
+                    DAL.StaffClass staff = new DAL.StaffClass
+                    {
+                        DepartmentCode = int.Parse(cmbDepartmentCode.SelectedValue.ToString())
+                    };
 
-				dgvStaffReport.DataSource = bll.Report_DisplayStaffByDepartment(staff);
+                    dgvStaffReport.DataSource = bll.Report_DisplayStaffByDepartment(staff);
+                }
 			}
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
@@ -59,7 +69,7 @@ namespace Info_IT.UserControls
 
 		private void BtnRemoveFilter_Click(object sender, EventArgs e)
 		{
-
-		}
+            dgvStaffReport.DataSource = bll.GetStaff();
+        }
 	}
 }
