@@ -12,6 +12,7 @@ namespace DAL
     
     public class DataAccessLayer
     {
+
        SqlConnection dbConn = new SqlConnection(@"Server=tcp:altf4-projects.database.windows.net,1433;Initial Catalog=Info@IT;Persist Security Info=False;User ID=altf4_F4_Admin;Password=WeaDee26;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         
 		//Local DataBase
@@ -2244,7 +2245,7 @@ namespace DAL
             try
             {
 
-                dbCmd = new SqlCommand("dbo.sp_DeleteEquip", dbConn);
+                dbCmd = new SqlCommand("dbo.sp_SoftDeleteEquipment", dbConn);
                 dbCmd.CommandType = CommandType.StoredProcedure;
 
                 dbCmd.Parameters.AddWithValue("@EquipmentCode", DAL.EquipmentClass.EquipmentCode);
