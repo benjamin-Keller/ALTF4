@@ -314,6 +314,11 @@ namespace BLL
             return dal.DisplayRequestsByTime(request);
         }
 
+        public DataTable Report_DisplayRequestsByStatus(RequestClass request)
+        {
+            return dal.DisplayRequestsByStatus(request);
+        }
+
         public DataTable Report_DisplayStaffByDepartment(StaffClass staff)
         {
             return dal.DisplayStaffByDepartment(staff);
@@ -394,10 +399,5 @@ namespace BLL
             return dal.DeleteEquipment(equipment);
         }
         
-        public int DeleteStaff(EquipmentClass equipment)
-        {
-            return dal.DeleteEquipment(equipment);
-        }
-
     }
 }

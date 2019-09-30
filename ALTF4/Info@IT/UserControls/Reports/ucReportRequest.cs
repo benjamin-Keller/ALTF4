@@ -154,7 +154,7 @@ namespace Info_IT.UserControls.Reports
                 DAL.RequestClass request = new DAL.RequestClass();
                 request.RequestStatus = cmbStatus.SelectedItem.ToString();
 
-                dgvRequestReport.DataSource = bll.Report_DisplayRequestsByTime(request);
+                dgvRequestReport.DataSource = bll.Report_DisplayRequestsByStatus(request);
             }
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
             catch (Exception b)
