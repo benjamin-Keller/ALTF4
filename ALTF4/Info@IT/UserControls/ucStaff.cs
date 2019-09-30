@@ -28,9 +28,9 @@ namespace Info_IT.UserControls
             cmbDepartmentCode.DisplayMember = "DepartmentName";
             cmbDepartmentCode.ValueMember = "DepartmentCode";
 
-            cmbStaffType.DataSource = bll.GetStaff();
-            cmbStaffType.DisplayMember = "StaffType";
-            cmbStaffType.ValueMember = "StaffCode";
+            //cmbStaffType.DataSource = bll.GetStaff();
+            //cmbStaffType.DisplayMember = "StaffType";
+            //cmbStaffType.ValueMember = "StaffCode";
                  
         }
 
