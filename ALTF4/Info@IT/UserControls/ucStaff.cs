@@ -118,7 +118,7 @@ namespace Info_IT.UserControls
                 {
                     activeStatus = "False";
                 }
-                DAL.StaffClass staff = new DAL.StaffClass(txtStaffNumber.Text, txtName.Text, txtSurname.Text, txtEmailAddress.Text, int.Parse(txtContactNo.Text), cmbStaffType.SelectedValue.ToString(), int.Parse(cmbDepartmentCode.SelectedValue.ToString()), txtUsername.Text, txtPassword.Text, activeStatus);
+                DAL.StaffClass staff = new DAL.StaffClass(txtStaffNumber.Text, txtName.Text, txtSurname.Text, txtEmailAddress.Text, int.Parse(txtContactNo.Text), cmbStaffType.SelectedItem.ToString(), int.Parse(cmbDepartmentCode.SelectedValue.ToString()), txtUsername.Text, txtPassword.Text, activeStatus);
                 int x = bll.UpdateStaff(staff);
 
 
