@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Data can be exported to MS Excel by:
+1) Clicking on desired area in the Navigation Menu.
+2) Open up Manage in the sub menu.
+3) Click on Export to Excel
+4) Save spreadsheet in desired location.
+
+
+
+
+</value>
+  </data>
   <data name="label4.Text" xml:space="preserve">
     <value>To Navigate through the Info@IT HelpDesk System:
 1) Select where you want to go in the Navigation.

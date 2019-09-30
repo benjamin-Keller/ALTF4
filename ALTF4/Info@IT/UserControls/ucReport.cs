@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Info_IT.UserControls
@@ -35,6 +29,8 @@ namespace Info_IT.UserControls
 			btnTutorRequestsReport.ForeColor = Color.Black;
 			btnInspectionReport.BackColor = Color.FromName("ControlDark");
 			btnInspectionReport.ForeColor = Color.Black;
+			btnInspectionDetailsReport.BackColor = Color.FromName("ControlDark");
+			btnInspectionDetailsReport.ForeColor = Color.Black;
 			btnStaffReport.BackColor = Color.FromName("ControlDark");
 			btnStaffReport.ForeColor = Color.Black;
 			btnStudentReport.BackColor = Color.FromName("ControlDark");
@@ -49,6 +45,7 @@ namespace Info_IT.UserControls
 			ucReportRequest1.Hide();
 			ucReportTutorRequest1.Hide();
 			ucReportInspection1.Hide();
+			ucReportInspectionDetails1.Hide();
 			ucReportStaff1.Hide();
 			ucReportStudent1.Hide();
 		}
@@ -112,6 +109,15 @@ namespace Info_IT.UserControls
 			btnInspectionReport.BackColor = Color.FromName("ControlDarkDark");
 			btnInspectionReport.ForeColor = Color.White;
 		}
+		private void BtnInspectionDetailsReport_Click(object sender, EventArgs e)
+		{
+			HideAll();
+			ucReportInspectionDetails1.Show();
+
+			InactiveButtons();
+			btnInspectionDetailsReport.BackColor = Color.FromName("ControlDarkDark");
+			btnInspectionDetailsReport.ForeColor = Color.White;
+		}
 
 		private void BtnStaffReport_Click(object sender, EventArgs e)
 		{
@@ -132,5 +138,7 @@ namespace Info_IT.UserControls
 			btnStudentReport.BackColor = Color.FromName("ControlDarkDark");
 			btnStudentReport.ForeColor = Color.White;
 		}
+
+
 	}
 }

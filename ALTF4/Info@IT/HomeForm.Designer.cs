@@ -60,13 +60,6 @@
 			this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
 			this.txtUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
 			this.label2 = new System.Windows.Forms.Label();
-			this.doubleBitmapControl1 = new BunifuAnimatorNS.DoubleBitmapControl();
-			this.panel6 = new System.Windows.Forms.Panel();
-			this.lblDisplayName = new System.Windows.Forms.Label();
-			this.pnlLogin = new System.Windows.Forms.Panel();
-			this.lblLoginText = new System.Windows.Forms.Label();
-			this.lblLocation = new System.Windows.Forms.Label();
-			this.panel5 = new System.Windows.Forms.Panel();
 			this.ucReport1 = new Info_IT.UserControls.ucReport();
 			this.ucErrorFailedToAdd1 = new Info_IT.Errors.ucErrorFailedToAdd();
 			this.ucErrorUserNotFound1 = new Info_IT.Errors.ucErrorUserNotFound();
@@ -81,10 +74,17 @@
 			this.ucNavInspection1 = new Info_IT.UserControls.ucInspection();
 			this.ucTutorRequest1 = new Info_IT.UserControls.ucTutorRequest();
 			this.ucRequest1 = new Info_IT.UserControls.ucRequest();
+			this.doubleBitmapControl1 = new BunifuAnimatorNS.DoubleBitmapControl();
 			this.ucVenue1 = new Info_IT.UserControls.ucVenue();
 			this.ucHome1 = new Info_IT.UserControls.ucHome();
 			this.ucEquipment1 = new Info_IT.UserControls.UcEquipment();
 			this.ucDepartment1 = new Info_IT.UserControls.ucDepartment();
+			this.panel6 = new System.Windows.Forms.Panel();
+			this.lblDisplayName = new System.Windows.Forms.Label();
+			this.pnlLogin = new System.Windows.Forms.Panel();
+			this.lblLoginText = new System.Windows.Forms.Label();
+			this.lblLocation = new System.Windows.Forms.Label();
+			this.panel5 = new System.Windows.Forms.Panel();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.pnlNavigation.SuspendLayout();
@@ -538,6 +538,106 @@
 			this.label2.TabIndex = 4;
 			this.label2.Text = "Log In";
 			// 
+			// ucReport1
+			// 
+			this.ucReport1.Location = new System.Drawing.Point(0, 58);
+			this.ucReport1.Name = "ucReport1";
+			this.ucReport1.Size = new System.Drawing.Size(1056, 562);
+			this.ucReport1.TabIndex = 18;
+			// 
+			// ucErrorFailedToAdd1
+			// 
+			this.ucErrorFailedToAdd1._Data = null;
+			this.ucErrorFailedToAdd1.Location = new System.Drawing.Point(0, 58);
+			this.ucErrorFailedToAdd1.Name = "ucErrorFailedToAdd1";
+			this.ucErrorFailedToAdd1.Size = new System.Drawing.Size(1056, 562);
+			this.ucErrorFailedToAdd1.TabIndex = 17;
+			// 
+			// ucErrorUserNotFound1
+			// 
+			this.ucErrorUserNotFound1.Location = new System.Drawing.Point(0, 58);
+			this.ucErrorUserNotFound1.Name = "ucErrorUserNotFound1";
+			this.ucErrorUserNotFound1.Size = new System.Drawing.Size(1056, 562);
+			this.ucErrorUserNotFound1.TabIndex = 16;
+			// 
+			// ucErrorStaffNotFound1
+			// 
+			this.ucErrorStaffNotFound1.Location = new System.Drawing.Point(0, 58);
+			this.ucErrorStaffNotFound1.Name = "ucErrorStaffNotFound1";
+			this.ucErrorStaffNotFound1.Size = new System.Drawing.Size(1056, 562);
+			this.ucErrorStaffNotFound1.TabIndex = 15;
+			// 
+			// ucErrorVenueNotFound1
+			// 
+			this.ucErrorVenueNotFound1.Location = new System.Drawing.Point(0, 57);
+			this.ucErrorVenueNotFound1.Name = "ucErrorVenueNotFound1";
+			this.ucErrorVenueNotFound1.Size = new System.Drawing.Size(1056, 562);
+			this.ucErrorVenueNotFound1.TabIndex = 14;
+			// 
+			// ucErrorStudentNotFound1
+			// 
+			this.ucErrorStudentNotFound1.Location = new System.Drawing.Point(0, 57);
+			this.ucErrorStudentNotFound1.Name = "ucErrorStudentNotFound1";
+			this.ucErrorStudentNotFound1.Size = new System.Drawing.Size(1056, 562);
+			this.ucErrorStudentNotFound1.TabIndex = 13;
+			// 
+			// ucUser1
+			// 
+			this.ucUser1.Location = new System.Drawing.Point(0, 58);
+			this.ucUser1.Name = "ucUser1";
+			this.ucUser1.Size = new System.Drawing.Size(1056, 562);
+			this.ucUser1.TabIndex = 0;
+			// 
+			// ucStudent1
+			// 
+			this.ucStudent1.Location = new System.Drawing.Point(0, 58);
+			this.ucStudent1.Name = "ucStudent1";
+			this.ucStudent1.Size = new System.Drawing.Size(1056, 562);
+			this.ucStudent1.TabIndex = 12;
+			// 
+			// ucStaff1
+			// 
+			this.ucStaff1.Location = new System.Drawing.Point(0, 58);
+			this.ucStaff1.Name = "ucStaff1";
+			this.ucStaff1.Size = new System.Drawing.Size(1056, 562);
+			this.ucStaff1.TabIndex = 11;
+			// 
+			// ucHelp1
+			// 
+			this.ucHelp1.Location = new System.Drawing.Point(0, 58);
+			this.ucHelp1.MinimumSize = new System.Drawing.Size(1056, 562);
+			this.ucHelp1.Name = "ucHelp1";
+			this.ucHelp1.Size = new System.Drawing.Size(1056, 562);
+			this.ucHelp1.TabIndex = 10;
+			// 
+			// ucTaskType1
+			// 
+			this.ucTaskType1.Location = new System.Drawing.Point(0, 58);
+			this.ucTaskType1.Name = "ucTaskType1";
+			this.ucTaskType1.Size = new System.Drawing.Size(1056, 562);
+			this.ucTaskType1.TabIndex = 9;
+			// 
+			// ucNavInspection1
+			// 
+			this.ucNavInspection1.Location = new System.Drawing.Point(0, 58);
+			this.ucNavInspection1.Name = "ucNavInspection1";
+			this.ucNavInspection1.Size = new System.Drawing.Size(1056, 562);
+			this.ucNavInspection1.TabIndex = 8;
+			// 
+			// ucTutorRequest1
+			// 
+			this.ucTutorRequest1.Location = new System.Drawing.Point(0, 58);
+			this.ucTutorRequest1.Name = "ucTutorRequest1";
+			this.ucTutorRequest1.Size = new System.Drawing.Size(1056, 562);
+			this.ucTutorRequest1.TabIndex = 7;
+			// 
+			// ucRequest1
+			// 
+			this.ucRequest1.Location = new System.Drawing.Point(0, 58);
+			this.ucRequest1.Name = "ucRequest1";
+			this.ucRequest1.Size = new System.Drawing.Size(1056, 562);
+			this.ucRequest1.TabIndex = 6;
+			// 
 			// doubleBitmapControl1
 			// 
 			this.doubleBitmapControl1.Location = new System.Drawing.Point(252, 192);
@@ -546,6 +646,36 @@
 			this.doubleBitmapControl1.TabIndex = 5;
 			this.doubleBitmapControl1.Text = "doubleBitmapControl1";
 			this.doubleBitmapControl1.Visible = false;
+			// 
+			// ucVenue1
+			// 
+			this.ucVenue1.Location = new System.Drawing.Point(0, 58);
+			this.ucVenue1.Name = "ucVenue1";
+			this.ucVenue1.Size = new System.Drawing.Size(1056, 562);
+			this.ucVenue1.TabIndex = 4;
+			// 
+			// ucHome1
+			// 
+			this.ucHome1.FirstName = null;
+			this.ucHome1.LastName = null;
+			this.ucHome1.Location = new System.Drawing.Point(0, 58);
+			this.ucHome1.Name = "ucHome1";
+			this.ucHome1.Size = new System.Drawing.Size(1056, 562);
+			this.ucHome1.TabIndex = 3;
+			// 
+			// ucEquipment1
+			// 
+			this.ucEquipment1.Location = new System.Drawing.Point(0, 58);
+			this.ucEquipment1.Name = "ucEquipment1";
+			this.ucEquipment1.Size = new System.Drawing.Size(1056, 562);
+			this.ucEquipment1.TabIndex = 2;
+			// 
+			// ucDepartment1
+			// 
+			this.ucDepartment1.Location = new System.Drawing.Point(0, 58);
+			this.ucDepartment1.Name = "ucDepartment1";
+			this.ucDepartment1.Size = new System.Drawing.Size(1056, 562);
+			this.ucDepartment1.TabIndex = 1;
 			// 
 			// panel6
 			// 
@@ -616,135 +746,6 @@
 			this.panel5.Name = "panel5";
 			this.panel5.Size = new System.Drawing.Size(1056, 30);
 			this.panel5.TabIndex = 2;
-			// 
-			// ucReport1
-			// 
-			this.ucReport1.Location = new System.Drawing.Point(0, 58);
-			this.ucReport1.Name = "ucReport1";
-			this.ucReport1.Size = new System.Drawing.Size(1056, 562);
-			this.ucReport1.TabIndex = 18;
-			// 
-			// ucErrorFailedToAdd1
-			// 
-			this.ucErrorFailedToAdd1._Data = null;
-			this.ucErrorFailedToAdd1.Location = new System.Drawing.Point(0, 58);
-			this.ucErrorFailedToAdd1.Name = "ucErrorFailedToAdd1";
-			this.ucErrorFailedToAdd1.Size = new System.Drawing.Size(1056, 562);
-			this.ucErrorFailedToAdd1.TabIndex = 17;
-			// 
-			// ucErrorUserNotFound1
-			// 
-			this.ucErrorUserNotFound1.Location = new System.Drawing.Point(0, 58);
-			this.ucErrorUserNotFound1.Name = "ucErrorUserNotFound1";
-			this.ucErrorUserNotFound1.Size = new System.Drawing.Size(1056, 562);
-			this.ucErrorUserNotFound1.TabIndex = 16;
-			// 
-			// ucErrorStaffNotFound1
-			// 
-			this.ucErrorStaffNotFound1.Location = new System.Drawing.Point(0, 58);
-			this.ucErrorStaffNotFound1.Name = "ucErrorStaffNotFound1";
-			this.ucErrorStaffNotFound1.Size = new System.Drawing.Size(1056, 562);
-			this.ucErrorStaffNotFound1.TabIndex = 15;
-			// 
-			// ucErrorVenueNotFound1
-			// 
-			this.ucErrorVenueNotFound1.Location = new System.Drawing.Point(0, 57);
-			this.ucErrorVenueNotFound1.Name = "ucErrorVenueNotFound1";
-			this.ucErrorVenueNotFound1.Size = new System.Drawing.Size(1056, 562);
-			this.ucErrorVenueNotFound1.TabIndex = 14;
-			// 
-			// ucErrorStudentNotFound1
-			// 
-			this.ucErrorStudentNotFound1.Location = new System.Drawing.Point(0, 57);
-			this.ucErrorStudentNotFound1.Name = "ucErrorStudentNotFound1";
-			this.ucErrorStudentNotFound1.Size = new System.Drawing.Size(1056, 562);
-			this.ucErrorStudentNotFound1.TabIndex = 13;
-			// 
-			// ucUser1
-			// 
-			this.ucUser1.Location = new System.Drawing.Point(0, 58);
-			this.ucUser1.Name = "ucUser1";
-			this.ucUser1.Size = new System.Drawing.Size(1056, 562);
-			this.ucUser1.TabIndex = 0;
-			// 
-			// ucStudent1
-			// 
-			this.ucStudent1.Location = new System.Drawing.Point(0, 58);
-			this.ucStudent1.Name = "ucStudent1";
-			this.ucStudent1.Size = new System.Drawing.Size(1056, 562);
-			this.ucStudent1.TabIndex = 12;
-			// 
-			// ucStaff1
-			// 
-			this.ucStaff1.Location = new System.Drawing.Point(0, 58);
-			this.ucStaff1.Name = "ucStaff1";
-			this.ucStaff1.Size = new System.Drawing.Size(1056, 562);
-			this.ucStaff1.TabIndex = 11;
-			// 
-			// ucHelp1
-			// 
-			this.ucHelp1.Location = new System.Drawing.Point(0, 58);
-			this.ucHelp1.Name = "ucHelp1";
-			this.ucHelp1.Size = new System.Drawing.Size(1056, 562);
-			this.ucHelp1.TabIndex = 10;
-			// 
-			// ucTaskType1
-			// 
-			this.ucTaskType1.Location = new System.Drawing.Point(0, 58);
-			this.ucTaskType1.Name = "ucTaskType1";
-			this.ucTaskType1.Size = new System.Drawing.Size(1056, 562);
-			this.ucTaskType1.TabIndex = 9;
-			// 
-			// ucNavInspection1
-			// 
-			this.ucNavInspection1.Location = new System.Drawing.Point(0, 58);
-			this.ucNavInspection1.Name = "ucNavInspection1";
-			this.ucNavInspection1.Size = new System.Drawing.Size(1056, 562);
-			this.ucNavInspection1.TabIndex = 8;
-			// 
-			// ucTutorRequest1
-			// 
-			this.ucTutorRequest1.Location = new System.Drawing.Point(0, 58);
-			this.ucTutorRequest1.Name = "ucTutorRequest1";
-			this.ucTutorRequest1.Size = new System.Drawing.Size(1056, 562);
-			this.ucTutorRequest1.TabIndex = 7;
-			// 
-			// ucRequest1
-			// 
-			this.ucRequest1.Location = new System.Drawing.Point(0, 58);
-			this.ucRequest1.Name = "ucRequest1";
-			this.ucRequest1.Size = new System.Drawing.Size(1056, 562);
-			this.ucRequest1.TabIndex = 6;
-			// 
-			// ucVenue1
-			// 
-			this.ucVenue1.Location = new System.Drawing.Point(0, 58);
-			this.ucVenue1.Name = "ucVenue1";
-			this.ucVenue1.Size = new System.Drawing.Size(1056, 562);
-			this.ucVenue1.TabIndex = 4;
-			// 
-			// ucHome1
-			// 
-			this.ucHome1.FirstName = null;
-			this.ucHome1.LastName = null;
-			this.ucHome1.Location = new System.Drawing.Point(0, 58);
-			this.ucHome1.Name = "ucHome1";
-			this.ucHome1.Size = new System.Drawing.Size(1056, 562);
-			this.ucHome1.TabIndex = 3;
-			// 
-			// ucEquipment1
-			// 
-			this.ucEquipment1.Location = new System.Drawing.Point(0, 58);
-			this.ucEquipment1.Name = "ucEquipment1";
-			this.ucEquipment1.Size = new System.Drawing.Size(1056, 562);
-			this.ucEquipment1.TabIndex = 2;
-			// 
-			// ucDepartment1
-			// 
-			this.ucDepartment1.Location = new System.Drawing.Point(0, 58);
-			this.ucDepartment1.Name = "ucDepartment1";
-			this.ucDepartment1.Size = new System.Drawing.Size(1056, 562);
-			this.ucDepartment1.TabIndex = 1;
 			// 
 			// Home
 			// 

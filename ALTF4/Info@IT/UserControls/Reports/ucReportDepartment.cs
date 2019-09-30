@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BLL;
+using System;
 using System.Windows.Forms;
-using BLL;
 
 namespace Info_IT.UserControls.Reports
 {
 	public partial class ucReportDepartment : UserControl
 	{
-        BusinessLogicLayer bll = new BusinessLogicLayer();
+		BusinessLogicLayer bll = new BusinessLogicLayer();
 		public ucReportDepartment()
 		{
 			InitializeComponent();
@@ -21,27 +14,38 @@ namespace Info_IT.UserControls.Reports
 
 		private void UcReportDepartment_Load(object sender, EventArgs e)
 		{
-            cmbBuilding.DataSource = bll.LoadCMBBuilding();
+			cmbBuilding.DataSource = bll.LoadCMBBuilding();
 
-            cmbBuilding.DisplayMember = "BuildingName";
-            cmbBuilding.ValueMember = "BuildingID";
+			cmbBuilding.DisplayMember = "BuildingName";
+			cmbBuilding.ValueMember = "BuildingID";
+			cmbBuilding.Text = "";
 
-            dgvDepartmentReport.DataSource = bll.GetDepartment();
+			dgvDepartmentReport.DataSource = bll.GetDepartment();
 		}
 
-        private void cmbBuilding_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                DAL.DepartmentClass department = new DAL.DepartmentClass();
-                department.Building = int.Parse(cmbBuilding.SelectedValue.ToString());
+		private void cmbBuilding_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			try
+			{
+                DAL.DepartmentClass department = new DAL.DepartmentClass
+                {
+                    Building = int.Parse(cmbBuilding.SelectedValue.ToString())
+                };
 
                 dgvDepartmentReport.DataSource = bll.Report_DislayDepartmentByBuilding(department);
-            }
-            catch(Exception b)
-            {
+			}
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
+			catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
+			{
 
-            }
-        }
-    }
+			}
+		}
+
+		private void BtnRemoveFilter_Click(object sender, EventArgs e)
+		{
+            dgvDepartmentReport.DataSource = bll.GetDepartment();
+			cmbBuilding.Text = "";
+		}
+	}
 }

@@ -9,14 +9,16 @@ namespace DAL
     public class StaffClass
     {
         public static int StaffCode { get; set; }
-        public  int StaffNumber { get; set; }
+        public  string StaffNumber { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string EmailAddress { get; set; }
         public int ContactNumber { get; set; }
         public string StaffType { get; set; }
         public int DepartmentCode { get; set; }
-
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string ActiveStatus { get; set; }
 
         public StaffClass()
         {
@@ -24,7 +26,7 @@ namespace DAL
         }
 
 
-        public StaffClass( int code , int staffNumber, string name, string surname, string emailAddress, int contactNumber, string staffType, int departmentCode)
+        public StaffClass( int code , string staffNumber, string name, string surname, string emailAddress, int contactNumber, string staffType, int departmentCode, string username, string password, string activestatus)
         {
             StaffCode = code;
             StaffNumber = staffNumber;
@@ -34,9 +36,12 @@ namespace DAL
             ContactNumber = contactNumber;
             StaffType = staffType;
             DepartmentCode = departmentCode;
+            Username = username;
+            Password = password;
+            ActiveStatus = activestatus;
         }
 
-        public StaffClass(int staffNumber, string name, string surname, string emailAddress, int contactNumber, string staffType, int departmentCode)
+        public StaffClass(string staffNumber, string name, string surname, string emailAddress, int contactNumber, string staffType, int departmentCode, string username, string password, string activestatus)
         {
             StaffNumber = staffNumber;
             Name = name;
@@ -45,6 +50,9 @@ namespace DAL
             ContactNumber = contactNumber;
             StaffType = staffType;
             DepartmentCode = departmentCode;
+            Username = username;
+            Password = password;
+            ActiveStatus = activestatus;
         }
         public StaffClass ( int code)
         {

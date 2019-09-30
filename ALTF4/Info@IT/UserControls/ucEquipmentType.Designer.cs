@@ -29,16 +29,14 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.tmrManage = new System.Windows.Forms.Timer(this.components);
 			this.btnManageUpdate = new System.Windows.Forms.Button();
 			this.btnManageAdd = new System.Windows.Forms.Button();
 			this.btnManage = new System.Windows.Forms.Button();
 			this.pnlManage = new System.Windows.Forms.Panel();
-			this.btnViewList = new System.Windows.Forms.Button();
-			this.btnView = new System.Windows.Forms.Button();
-			this.pnlView = new System.Windows.Forms.Panel();
+			this.btnExportToExcel = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.btnCloseDetails = new Bunifu.Framework.UI.BunifuFlatButton();
 			this.dgvEquipmentDetails = new Bunifu.Framework.UI.BunifuCustomDataGrid();
@@ -48,7 +46,6 @@
 			this.tmrView = new System.Windows.Forms.Timer(this.components);
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.pnlManage.SuspendLayout();
-			this.pnlView.SuspendLayout();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvEquipmentDetails)).BeginInit();
 			this.groupBox1.SuspendLayout();
@@ -109,66 +106,36 @@
 			// pnlManage
 			// 
 			this.pnlManage.BackColor = System.Drawing.SystemColors.ControlDark;
+			this.pnlManage.Controls.Add(this.btnExportToExcel);
 			this.pnlManage.Controls.Add(this.btnManageUpdate);
 			this.pnlManage.Controls.Add(this.btnManageAdd);
 			this.pnlManage.Controls.Add(this.btnManage);
 			this.pnlManage.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlManage.Location = new System.Drawing.Point(0, 0);
-			this.pnlManage.MaximumSize = new System.Drawing.Size(200, 114);
+			this.pnlManage.MaximumSize = new System.Drawing.Size(200, 148);
 			this.pnlManage.MinimumSize = new System.Drawing.Size(200, 53);
 			this.pnlManage.Name = "pnlManage";
 			this.pnlManage.Size = new System.Drawing.Size(200, 53);
 			this.pnlManage.TabIndex = 12;
 			// 
-			// btnViewList
+			// btnExportToExcel
 			// 
-			this.btnViewList.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.btnViewList.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnViewList.FlatAppearance.BorderSize = 0;
-			this.btnViewList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnViewList.Font = new System.Drawing.Font("Segoe UI", 8.75F);
-			this.btnViewList.Location = new System.Drawing.Point(0, 53);
-			this.btnViewList.Name = "btnViewList";
-			this.btnViewList.Size = new System.Drawing.Size(200, 31);
-			this.btnViewList.TabIndex = 6;
-			this.btnViewList.Text = "List All Equipment Types";
-			this.btnViewList.UseVisualStyleBackColor = false;
-			this.btnViewList.Click += new System.EventHandler(this.BtnViewList_Click);
-			// 
-			// btnView
-			// 
-			this.btnView.BackColor = System.Drawing.SystemColors.ControlDark;
-			this.btnView.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnView.FlatAppearance.BorderSize = 0;
-			this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnView.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.btnView.Location = new System.Drawing.Point(0, 0);
-			this.btnView.MinimumSize = new System.Drawing.Size(180, 53);
-			this.btnView.Name = "btnView";
-			this.btnView.Size = new System.Drawing.Size(200, 53);
-			this.btnView.TabIndex = 5;
-			this.btnView.Text = "View";
-			this.btnView.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-			this.btnView.UseVisualStyleBackColor = false;
-			this.btnView.Click += new System.EventHandler(this.BtnView_Click);
-			// 
-			// pnlView
-			// 
-			this.pnlView.BackColor = System.Drawing.SystemColors.ControlDark;
-			this.pnlView.Controls.Add(this.btnViewList);
-			this.pnlView.Controls.Add(this.btnView);
-			this.pnlView.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlView.Location = new System.Drawing.Point(0, 53);
-			this.pnlView.MaximumSize = new System.Drawing.Size(200, 115);
-			this.pnlView.MinimumSize = new System.Drawing.Size(200, 53);
-			this.pnlView.Name = "pnlView";
-			this.pnlView.Size = new System.Drawing.Size(200, 53);
-			this.pnlView.TabIndex = 13;
+			this.btnExportToExcel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.btnExportToExcel.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnExportToExcel.FlatAppearance.BorderSize = 0;
+			this.btnExportToExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnExportToExcel.Font = new System.Drawing.Font("Segoe UI", 8.75F);
+			this.btnExportToExcel.Location = new System.Drawing.Point(0, 115);
+			this.btnExportToExcel.Name = "btnExportToExcel";
+			this.btnExportToExcel.Size = new System.Drawing.Size(200, 31);
+			this.btnExportToExcel.TabIndex = 8;
+			this.btnExportToExcel.Text = "Export to Excel";
+			this.btnExportToExcel.UseVisualStyleBackColor = false;
+			this.btnExportToExcel.Click += new System.EventHandler(this.BtnExportToExcel_Click);
 			// 
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-			this.panel1.Controls.Add(this.pnlView);
 			this.panel1.Controls.Add(this.pnlManage);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -218,20 +185,20 @@
 			// 
 			this.dgvEquipmentDetails.AllowUserToAddRows = false;
 			this.dgvEquipmentDetails.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvEquipmentDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvEquipmentDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvEquipmentDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvEquipmentDetails.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvEquipmentDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvEquipmentDetails.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvEquipmentDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvEquipmentDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvEquipmentDetails.ColumnHeadersHeight = 50;
 			this.dgvEquipmentDetails.DoubleBuffered = true;
 			this.dgvEquipmentDetails.EnableHeadersVisualStyles = false;
@@ -300,7 +267,6 @@
 			this.Size = new System.Drawing.Size(1056, 562);
 			this.Load += new System.EventHandler(this.BtnViewList_Click);
 			this.pnlManage.ResumeLayout(false);
-			this.pnlView.ResumeLayout(false);
 			this.panel1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgvEquipmentDetails)).EndInit();
 			this.groupBox1.ResumeLayout(false);
@@ -317,9 +283,6 @@
 		private System.Windows.Forms.Button btnManageAdd;
 		private System.Windows.Forms.Button btnManage;
 		private System.Windows.Forms.Panel pnlManage;
-		private System.Windows.Forms.Button btnViewList;
-		private System.Windows.Forms.Button btnView;
-		private System.Windows.Forms.Panel pnlView;
 		private System.Windows.Forms.Panel panel1;
 		private Bunifu.Framework.UI.BunifuFlatButton btnCloseDetails;
 		private Bunifu.Framework.UI.BunifuCustomDataGrid dgvEquipmentDetails;
@@ -328,5 +291,6 @@
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox txtEquipmentType;
+		private System.Windows.Forms.Button btnExportToExcel;
 	}
 }

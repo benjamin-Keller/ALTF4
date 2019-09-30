@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DAL;
 using System.Data;
-using System.Data.SqlClient;
-using DAL;
 
 
 namespace BLL
 {
-    public class BusinessLogicLayer
+	public class BusinessLogicLayer
     {
         DataAccessLayer dal = new DataAccessLayer();
         public DataTable GetVenues()
@@ -320,6 +314,11 @@ namespace BLL
             return dal.DisplayRequestsByTime(request);
         }
 
+        public DataTable Report_DisplayRequestsByStatus(RequestClass request)
+        {
+            return dal.DisplayRequestsByStatus(request);
+        }
+
         public DataTable Report_DisplayStaffByDepartment(StaffClass staff)
         {
             return dal.DisplayStaffByDepartment(staff);
@@ -363,6 +362,46 @@ namespace BLL
         public DataTable Report_DisplayVenueByBuildingBlock(VenueClass venue)
         {
             return dal.DisplayVenueByBuildingBlock(venue);
+        }
+
+        public DataTable Report_DisplayInspectionDetailsByEquip(InspectionDetailClass inspectionDetail)
+        {
+            return dal.DisplayInspectionDetailsByEquip(inspectionDetail);
+        }
+
+        public DataTable Report_DisplayInspectionDetailsByInspectCode(InspectionDetailClass inspectionDetail)
+        {
+            return dal.DisplayInspectionDetailsByInspectCode(inspectionDetail);
+        }
+
+        public DataTable Report_DisplayInspectionDetailsByStaffCode(InspectionDetailClass inspectionDetail)
+        {
+            return dal.DisplayInspectionDetailsByStaffCode(inspectionDetail);
+        }
+
+        public DataTable Report_DisplayInspectionDetailsByStatus(InspectionDetailClass inspectionDetail)
+        {
+            return dal.DisplayInspectionDetailsByStatus(inspectionDetail);
+        }
+
+        public DataTable Report_DisplayInspectionDetailsByVenue(InspectionClass inspection)
+        {
+            return dal.DisplayInspectionDetailsByVenue(inspection);
+        }
+
+        public DataTable Report_DisplayTutorRequestByStatus(TutorRequestClass tutorRequest)
+        {
+            return dal.DisplayTutorRequestByRequestStatus(tutorRequest);
+        }
+
+        public int DeleteEquip(EquipmentClass equipment)
+        {
+            return dal.DeleteEquipment(equipment);
+        }
+
+        public int DeleteVenue(VenueClass venue)
+        {
+            return dal.DeleteVenue(venue);
         }
         
     }

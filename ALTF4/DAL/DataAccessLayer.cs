@@ -12,9 +12,14 @@ namespace DAL
     
     public class DataAccessLayer
     {
+        //This Connection String Connects to the Online Azure Server we are running for this program, no attaching needed
         SqlConnection dbConn = new SqlConnection(@"Server=tcp:altf4-projects.database.windows.net,1433;Initial Catalog=Info@IT;Persist Security Info=False;User ID=altf4_F4_Admin;Password=WeaDee26;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-        //For Ben (so I can connect to the database for now)
-		//SqlConnection dbConn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\zhero\source\repos\zhero42\ALTF4\ALTF4\Info@IT\App_Data\info-IT_DB.mdf;Integrated Security=True");
+
+        //Uncomment this to use a Local DB
+        //SqlConnection dbConn = new SqlConnection(@"Data Source = .\SQLEXPRESS; Initial Catalog=Info@IT; Integrated Security = True;");
+
+        //SqlConnection dbConn = new SqlConnection(@"Data Source = (LocalDB)\SQLEXPRESS; AttachDbFilename=|DataDirectory|\App_Data\Info@IT.mdf; Integrated Security = True");
+
         SqlCommand dbCmd;
         
         public DataTable GetVenues()
@@ -51,9 +56,11 @@ namespace DAL
             int x;
             try
             {
-                
-                dbCmd = new SqlCommand("dbo.sp_AddVenue", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+
+                dbCmd = new SqlCommand("dbo.sp_AddVenue", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
                 dbCmd.Parameters.AddWithValue("@Capacity", venue.VenueCapacity);
@@ -172,13 +179,22 @@ namespace DAL
                 dbConn.Open();
             }
             catch { }
+            
             dbCmd = new SqlCommand("dbo.sp_DisplayEquip", dbConn);
             //dbCmd.CommandText = "sp_DisplayVenue";
             //dbCmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
 
             DataTable dt = new DataTable();
-            sda.Fill(dt);
+
+            try
+            {
+                sda.Fill(dt);
+            }
+            catch(Exception e)
+            {
+
+            }
 
             try
             {
@@ -356,7 +372,7 @@ namespace DAL
                 dbConn.Open();
             }
             catch { }
-            dbCmd = new SqlCommand("dbo.sp_DisplayRequestTutor", dbConn);
+            dbCmd = new SqlCommand("dbo.sp_DisplayAllTutorRequestPending", dbConn);
             //dbCmd.CommandText = "sp_DisplayVenue";
             //dbCmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
@@ -384,8 +400,10 @@ namespace DAL
             try
             {
 
-                dbCmd = new SqlCommand("dbo.sp_AddDepart", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_AddDepart", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 dbCmd.Parameters.AddWithValue("@DepartmentName", department.DepartmentName);
                 dbCmd.Parameters.AddWithValue("@BuildingID", department.Building);
@@ -420,8 +438,10 @@ namespace DAL
             try
             {
 
-                dbCmd = new SqlCommand("dbo.sp_AddEquip", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_AddEquip", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 dbCmd.Parameters.AddWithValue("@EquipmentDescription", equipment.EquipmentDescription);
                 dbCmd.Parameters.AddWithValue("@EquipTypeCode", equipment.EquipTypeCode);
@@ -454,8 +474,10 @@ namespace DAL
             try
             {
 
-                dbCmd = new SqlCommand("dbo.sp_AddEquipType", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_AddEquipType", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 dbCmd.Parameters.AddWithValue("@TypeDescription", equipmentType.TypeDescription);
 
@@ -486,8 +508,10 @@ namespace DAL
             try
             {
 
-                dbCmd = new SqlCommand("dbo.sp_AddInspection", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_AddInspection", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 dbCmd.Parameters.AddWithValue("@VenueCode", inspection.VenueCode);
                 dbCmd.Parameters.AddWithValue("@StaffCode", inspection.StaffCode);
@@ -522,8 +546,10 @@ namespace DAL
             try
             {
 
-                dbCmd = new SqlCommand("dbo.sp_AddInspectionDetail", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_AddInspectionDetail", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 dbCmd.Parameters.AddWithValue("@InspectionCode", inspectionDetail.InspectionCode);
                 dbCmd.Parameters.AddWithValue("@EquipmentCode", inspectionDetail.EquipmentCode);
@@ -558,8 +584,10 @@ namespace DAL
             try
             {
 
-                dbCmd = new SqlCommand("dbo.sp_AddRequest", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_AddRequest", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 dbCmd.Parameters.AddWithValue("@RequestDescription", request.RequestDescription);
                 dbCmd.Parameters.AddWithValue("@StaffCode", request.RequestStaffCode);
@@ -597,10 +625,12 @@ namespace DAL
             try
             {
 
-                dbCmd = new SqlCommand("dbo.sp_AddStaff", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_AddStaff", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
-                dbCmd.Parameters.AddWithValue("@StaffCode", DAL.StaffClass.StaffCode);
+
                 dbCmd.Parameters.AddWithValue("@StaffNumber",staff.StaffNumber);
                 dbCmd.Parameters.AddWithValue("@FirstName", staff.Name);
                 dbCmd.Parameters.AddWithValue("@LastName", staff.Surname);
@@ -608,6 +638,9 @@ namespace DAL
                 dbCmd.Parameters.AddWithValue("@ContactNumber", staff.ContactNumber);
                 dbCmd.Parameters.AddWithValue("@StaffType", staff.StaffType);
                 dbCmd.Parameters.AddWithValue("@DepartmentCode", staff.DepartmentCode);
+                dbCmd.Parameters.AddWithValue("@Username", staff.Username);
+                dbCmd.Parameters.AddWithValue("@Password", staff.Password);
+                dbCmd.Parameters.AddWithValue("@ActiveStatus", staff.ActiveStatus);
 
                 x = dbCmd.ExecuteNonQuery();
             }
@@ -636,8 +669,10 @@ namespace DAL
             try
             {
 
-                dbCmd = new SqlCommand("dbo.sp_UpdateStaff", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_UpdateStaff", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
 
                 dbCmd.Parameters.AddWithValue("@StaffCode", DAL.StaffClass.StaffCode);
@@ -648,6 +683,9 @@ namespace DAL
                 dbCmd.Parameters.AddWithValue("@ContactNumber", staff.ContactNumber);
                 dbCmd.Parameters.AddWithValue("@StaffType", staff.StaffType);
                 dbCmd.Parameters.AddWithValue("@DepartmentCode", staff.DepartmentCode);
+                dbCmd.Parameters.AddWithValue("@Username", staff.Username);
+                dbCmd.Parameters.AddWithValue("@Password", staff.Password);
+                dbCmd.Parameters.AddWithValue("@ActiveStatus", staff.ActiveStatus);
 
                 x = dbCmd.ExecuteNonQuery();
             }
@@ -672,8 +710,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateStaffExUser", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateAllStaff", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@StaffCode", DAL.StaffClass.StaffCode);
 
@@ -704,8 +744,10 @@ namespace DAL
             try
             {
 
-                dbCmd = new SqlCommand("dbo.sp_AddStudent", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_AddStudent", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 dbCmd.Parameters.AddWithValue("@StudentCode", DAL.StudentClass.StudentCode);
                 dbCmd.Parameters.AddWithValue("@StudentNumber", student.StudentNumber);
@@ -740,8 +782,10 @@ namespace DAL
             try
             {
 
-                dbCmd = new SqlCommand("dbo.sp_AddTaskType", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_AddTaskType", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 dbCmd.Parameters.AddWithValue("@TaskName", taskType.Name);
 
@@ -772,8 +816,10 @@ namespace DAL
             try
             {
 
-                dbCmd = new SqlCommand("dbo.sp_AddTutorRequest", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_AddTutorRequest", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 dbCmd.Parameters.AddWithValue("@RequestCode", TutorRequestClass.RequestCode);
                 dbCmd.Parameters.AddWithValue("@TutorRequestDate", tutorRequest.Date);
@@ -781,6 +827,7 @@ namespace DAL
                 dbCmd.Parameters.AddWithValue("@EndTime", tutorRequest.EndTime);
                 dbCmd.Parameters.AddWithValue("@ModuleCode", tutorRequest.ModuleCode);
                 dbCmd.Parameters.AddWithValue("@VenueCode", tutorRequest.VenueCode);
+                dbCmd.Parameters.AddWithValue("@Status", tutorRequest.Status);
 
                 x = dbCmd.ExecuteNonQuery();
             }
@@ -839,9 +886,11 @@ namespace DAL
                 dbConn.Open();
             }
             catch { }
-            
-            dbCmd = new SqlCommand("dbo.sp_Login", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd = new SqlCommand("dbo.sp_Login", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@Username", login.Username);
             dbCmd.Parameters.AddWithValue("@StaffPassword", login.Password);
@@ -872,8 +921,10 @@ namespace DAL
 
             try
             {
-                dbCmd = new SqlCommand("dbo.sp_UpdateStudent", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_UpdateStudent", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 dbCmd.Parameters.AddWithValue("@StudentCode", DAL.StudentClass.StudentCode);
                 dbCmd.Parameters.AddWithValue("@StudentNumber", studentClass.StudentNumber);
@@ -903,8 +954,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateStudent", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateStudent", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@StudentCode", DAL.StudentClass.StudentCode);
 
@@ -935,8 +988,10 @@ namespace DAL
             try
             {
 
-                dbCmd = new SqlCommand("dbo.sp_UpdateVenue", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_UpdateVenue", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 dbCmd.Parameters.AddWithValue("@VenueCode", DAL.VenueClass.VenueCode);
                 dbCmd.Parameters.AddWithValue("@VenueDescription", venue.VenueDescription);
@@ -966,13 +1021,15 @@ namespace DAL
                 dbConn.Open();
             }
             catch { }
-            
-            
 
-                dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateVenue", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
 
-                dbCmd.Parameters.AddWithValue("@VenueCode", DAL.VenueClass.VenueCode);
+
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateVenue", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            dbCmd.Parameters.AddWithValue("@VenueCode", DAL.VenueClass.VenueCode);
                 SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
 
                 DataTable dt = new DataTable();
@@ -1003,8 +1060,10 @@ namespace DAL
             try
             {
 
-                dbCmd = new SqlCommand("dbo.sp_UpdateDepart", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_UpdateDepart", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 dbCmd.Parameters.AddWithValue("@DepartmentCode", DAL.DepartmentClass.DepartmentCode);
                 dbCmd.Parameters.AddWithValue("@DepartmentName", dep.DepartmentName);
@@ -1039,8 +1098,10 @@ namespace DAL
 
 
 
-            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateDepartment", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateDepartment", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@DepartmentCode", DAL.DepartmentClass.DepartmentCode);
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
@@ -1068,8 +1129,10 @@ namespace DAL
             int x;
             try
             {
-                dbCmd = new SqlCommand("dbo.sp_UpdateEquip", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_UpdateEquip", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 dbCmd.Parameters.AddWithValue("@EquipmentCode", DAL.EquipmentClass.EquipmentCode);
                 dbCmd.Parameters.AddWithValue("@EquipmentDescription", equipment.EquipmentDescription);
@@ -1099,8 +1162,10 @@ namespace DAL
                 dbConn.Open();
             }
             catch { }
-            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateEquipment", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateEquipment", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@EquipmentCode", DAL.EquipmentClass.EquipmentCode);
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
@@ -1130,8 +1195,10 @@ namespace DAL
 
             try
             {
-                dbCmd = new SqlCommand("dbo.sp_UpdateTaskType", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_UpdateTaskType", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 dbCmd.Parameters.AddWithValue("@TaskTypeCode", DAL.TaskTypeClass.TaskTypeCode);
                 dbCmd.Parameters.AddWithValue("@TaskTypeName", taskType.Name);
@@ -1166,8 +1233,10 @@ namespace DAL
             {
 
             }
-            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateTaskType", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateTaskType", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@TaskTypeCode", DAL.TaskTypeClass.TaskTypeCode);
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
@@ -1183,6 +1252,7 @@ namespace DAL
             return dt;
 
         }
+
         public int UpdateTutorRequest(TutorRequestClass tutor)
         {
             try
@@ -1193,15 +1263,19 @@ namespace DAL
             int x;
             try
             {
-                dbCmd = new SqlCommand("dbo.sp_UpdateTutorRequest", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_UpdateTutorRequest", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
+                dbCmd.Parameters.AddWithValue("@TutorRequestCode", DAL.TutorRequestClass.TutorRequestCode);
                 dbCmd.Parameters.AddWithValue("@RequestCode", DAL.TutorRequestClass.RequestCode);
                 dbCmd.Parameters.AddWithValue("@TutorRequestDate", tutor.Date);
                 dbCmd.Parameters.AddWithValue("@StartTime", tutor.StartTime);
                 dbCmd.Parameters.AddWithValue("@EndTime", tutor.EndTime);
                 dbCmd.Parameters.AddWithValue("@ModuleCode", tutor.ModuleCode);
                 dbCmd.Parameters.AddWithValue("@VenueCode", tutor.VenueCode);
+                dbCmd.Parameters.AddWithValue("@Status", tutor.Status);
 
                 x = dbCmd.ExecuteNonQuery();
             }
@@ -1217,6 +1291,7 @@ namespace DAL
 
             return x;
         }
+
         public DataTable SelectedForUpdateTutorRequest(TutorRequestClass request)
         {
             try
@@ -1226,10 +1301,12 @@ namespace DAL
             catch { }
 
 
-            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateTutorRequest", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateTutorRequest", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
-            dbCmd.Parameters.AddWithValue("@RequestCode", DAL.TutorRequestClass.RequestCode);
+            dbCmd.Parameters.AddWithValue("@TutorRequestCode", DAL.TutorRequestClass.TutorRequestCode);
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
 
             DataTable dt = new DataTable();
@@ -1257,8 +1334,10 @@ namespace DAL
             int x;
             try
             {
-                dbCmd = new SqlCommand("dbo.sp_UpdateEquipType", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_UpdateEquipType", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 dbCmd.Parameters.AddWithValue("@EquipTypeCode", DAL.EquipmentTypeClass.EquipTypeCode);
                 dbCmd.Parameters.AddWithValue("@TypeDescription", equipmentType.TypeDescription);
@@ -1284,8 +1363,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateEquipmentType", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateEquipmentType", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@EquipTypeCode", DAL.EquipmentTypeClass.EquipTypeCode);
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
@@ -1313,8 +1394,10 @@ namespace DAL
             int x;
             try
             {
-                dbCmd = new SqlCommand("dbo.sp_UpdateInspection", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_UpdateInspection", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 dbCmd.Parameters.AddWithValue("@InspectionCode", DAL.InspectionClass.InspectionCode);
                 dbCmd.Parameters.AddWithValue("@VenueCode", inspection.VenueCode);
@@ -1345,8 +1428,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateInspection", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateInspection", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@InspectionCode", DAL.InspectionClass.InspectionCode);
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
@@ -1375,8 +1460,10 @@ namespace DAL
             try
             {
 
-                dbCmd = new SqlCommand("dbo.sp_UpdateInspectionDetail", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_UpdateInspectionDetail", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 dbCmd.Parameters.AddWithValue("@InspectionDetailCode", DAL.InspectionDetailClass.InspectionDetailCode);
                 dbCmd.Parameters.AddWithValue("@InspectinCode", inspectionDetail.InspectionCode);
@@ -1408,8 +1495,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateInspectionDetail", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateInspectionDetail", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@InspectionDetailCode", DAL.InspectionDetailClass.InspectionDetailCode);
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
@@ -1438,8 +1527,10 @@ namespace DAL
             try
             {
 
-                dbCmd = new SqlCommand("dbo.sp_UpdateRequest", dbConn);
-                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd = new SqlCommand("dbo.sp_UpdateRequest", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
                 dbCmd.Parameters.AddWithValue("@RequestCode", DAL.RequestClass.RequestCode);
                 dbCmd.Parameters.AddWithValue("@RequestDescription", request.RequestDescription);
@@ -1473,8 +1564,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateRequests", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_SelectedForUpdateRequests", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@RequestCode", DAL.RequestClass.RequestCode) ;
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
@@ -1499,8 +1592,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_DisplayDepartByBuilding", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_DisplayDepartByBuilding", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@BuildingID", department.Building);
 
@@ -1526,8 +1621,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_ReportEquipmentVenue", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_ReportEquipmentVenue", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@VenueCode", equipment.VenueCode);
 
@@ -1553,8 +1650,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_ReportEquipmentEquipType", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_ReportEquipmentEquipType", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@EquipTypeCode", equipment.EquipTypeCode);
 
@@ -1580,8 +1679,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_ReportInspectionDate", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_ReportInspectionDate", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@InspectionDate", inspection.InspectionDate);
 
@@ -1607,8 +1708,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_ReportInspectionStaffCode", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_ReportInspectionStaffCode", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@StaffCode", inspection.StaffCode);
 
@@ -1634,8 +1737,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_ReportInspectionVenue", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_ReportInspectionVenue", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@VenueCode", inspection.VenueCode);
 
@@ -1661,8 +1766,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_ReportRequestsAssignedStaff", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_ReportRequestsAssignedStaff", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@AssignedStaffCode", request.RequestAssignedStaffCode);
 
@@ -1688,8 +1795,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_ReportRequestsDate", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_ReportRequestsDate", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@RequestDate", request.RequestDate);
 
@@ -1715,8 +1824,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_ReportRequestsStudentCode", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_ReportRequestsStudentCode", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@StudentCode", request.RequestStudentCode);
 
@@ -1742,8 +1853,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_ReportRequestStaffCode", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_ReportRequestStaffCode", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@StaffCode", request.RequestStaffCode);
 
@@ -1769,8 +1882,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_ReportRequestsTime", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_ReportRequestsTime", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@RequestTime", request.RequestTime);
 
@@ -1796,10 +1911,41 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_ReportRequestTaskType", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_ReportRequestTaskType", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@TaskTypeCode", request.RequestTaskTypeCode);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public DataTable DisplayRequestsByStatus(RequestClass request)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportRequestsByRequestStatus", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            dbCmd.Parameters.AddWithValue("@RequestStatus", request.RequestStatus);
 
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
 
@@ -1823,8 +1969,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_ReportStaffDepartment", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_ReportStaffDepartment", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@DepartmentCode", staff.DepartmentCode);
 
@@ -1850,8 +1998,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_ReportStaffStaffType", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_ReportStaffStaffType", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@StaffType", staff.StaffType);
 
@@ -1877,8 +2027,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_ReportTutorRequestDate", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_ReportTutorRequestDate", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@TutorRequestDate", tutorRequest.Date);
 
@@ -1904,8 +2056,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_ReportTutorRequestEndTime", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_ReportTutorRequestEndTime", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@EndTime", tutorRequest.EndTime);
 
@@ -1931,8 +2085,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_ReportTutorRequestModuleCode", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_ReportTutorRequestModuleCode", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@ModuleCode", tutorRequest.ModuleCode);
 
@@ -1958,8 +2114,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_ReportTutorRequestsStartTime", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_ReportTutorRequestsStartTime", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@StartTime", tutorRequest.StartTime);
 
@@ -1985,8 +2143,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_ReportTutorRequestsVenue", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_ReportTutorRequestsVenue", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@VenueCode", tutorRequest.VenueCode);
 
@@ -2012,8 +2172,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_ReportVenueBuilding", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_ReportVenueBuilding", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@BuildingID", venue.VenueBuilding);
 
@@ -2039,8 +2201,10 @@ namespace DAL
             }
             catch { }
 
-            dbCmd = new SqlCommand("dbo.sp_ReportVenueBuildingBlock", dbConn);
-            dbCmd.CommandType = CommandType.StoredProcedure;
+            dbCmd = new SqlCommand("dbo.sp_ReportVenueBuildingBlock", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
 
             dbCmd.Parameters.AddWithValue("@BuildingBlockID", venue.VenueBuildingBlock);
 
@@ -2057,6 +2221,254 @@ namespace DAL
 
             return dt;
         }
+		public DataTable DisplayInspectionDetailsByEquip(InspectionDetailClass inspectionDetail)
+		{
+			try
+			{
+				dbConn.Open();
+			}
+			catch { }
 
+            dbCmd = new SqlCommand("dbo.sp_ReportInspectionDetailEquipCode", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            dbCmd.Parameters.AddWithValue("@EquipmentCode", inspectionDetail.EquipmentCode);
+
+			SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+			DataTable dt = new DataTable();
+			sda.Fill(dt);
+
+			try
+			{
+				dbConn.Close();
+			}
+			catch { }
+
+			return dt;
+		}
+
+		public DataTable DisplayInspectionDetailsByInspectCode(InspectionDetailClass inspectionDetail)
+		{
+			try
+			{
+				dbConn.Open();
+			}
+			catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportInspectionDetailInspectCode", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            dbCmd.Parameters.AddWithValue("@InspectionCode", inspectionDetail.InspectionCode);
+
+			SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+			DataTable dt = new DataTable();
+			sda.Fill(dt);
+
+			try
+			{
+				dbConn.Close();
+			}
+			catch { }
+
+			return dt;
+		}
+
+		public DataTable DisplayInspectionDetailsByStatus(InspectionDetailClass inspectionDetail)
+		{
+			try
+			{
+				dbConn.Open();
+			}
+			catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportInspectionDetailInspectStatus", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            dbCmd.Parameters.AddWithValue("@InspectionStatus", inspectionDetail.InspectionStatus);
+
+			SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+			DataTable dt = new DataTable();
+			sda.Fill(dt);
+
+			try
+			{
+				dbConn.Close();
+			}
+			catch { }
+
+			return dt;
+		}
+
+		public DataTable DisplayInspectionDetailsByStaffCode(InspectionDetailClass inspectionDetail)
+		{
+			try
+			{
+				dbConn.Open();
+			}
+			catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportInspectionDetailStaffCode", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            dbCmd.Parameters.AddWithValue("@StaffCode", inspectionDetail.StaffCode);
+
+			SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+			DataTable dt = new DataTable();
+			sda.Fill(dt);
+
+			try
+			{
+				dbConn.Close();
+			}
+			catch { }
+
+			return dt;
+		}
+
+        public DataTable DisplayInspectionDetailsByVenue(InspectionClass inspection)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+
+            dbCmd = new SqlCommand("dbo.sp_ReportInspectionDetailByVenue", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            dbCmd.Parameters.AddWithValue("@VenueCode", inspection.VenueCode);
+
+                SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+                DataTable dt = new DataTable();
+            try
+            {
+                sda.Fill(dt);
+            }
+            catch(Exception e)
+            {
+
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
+
+        public int DeleteEquipment(EquipmentClass equipment)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.sp_SoftDeleteEquipment", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                dbCmd.Parameters.AddWithValue("@EquipmentCode", DAL.EquipmentClass.EquipmentCode);
+                
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public int DeleteVenue(VenueClass venue)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            int x;
+            try
+            {
+
+                dbCmd = new SqlCommand("dbo.SoftDeleteVenue", dbConn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                dbCmd.Parameters.AddWithValue("@VenueCode", DAL.VenueClass.VenueCode);
+
+                x = dbCmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+            return x;
+        }
+
+        public DataTable DisplayTutorRequestByRequestStatus(TutorRequestClass tutorRequest)
+        {
+            try
+            {
+                dbConn.Open();
+            }
+            catch { }
+
+            dbCmd = new SqlCommand("dbo.sp_ReportTutorRequestByStatus", dbConn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            dbCmd.Parameters.AddWithValue("@ActiveStatus", tutorRequest.Status);
+
+            SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            try
+            {
+                dbConn.Close();
+            }
+            catch { }
+
+            return dt;
+        }
     }
 }
