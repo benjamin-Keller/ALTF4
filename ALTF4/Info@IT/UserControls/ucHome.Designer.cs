@@ -33,8 +33,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblWelcome = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.lblRole = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -49,7 +51,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(144, -6);
+            this.label1.Location = new System.Drawing.Point(144, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(780, 54);
             this.label1.TabIndex = 0;
@@ -75,7 +77,7 @@
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1056, 52);
+            this.panel2.Size = new System.Drawing.Size(1056, 63);
             this.panel2.TabIndex = 5;
             // 
             // panel1
@@ -99,21 +101,6 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
-            // lblWelcome
-            // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblWelcome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.ForeColor = System.Drawing.Color.Black;
-            this.lblWelcome.Location = new System.Drawing.Point(0, 52);
-            this.lblWelcome.MinimumSize = new System.Drawing.Size(1056, 60);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(1056, 60);
-            this.lblWelcome.TabIndex = 1;
-            this.lblWelcome.Text = "Welcome back text";
-            this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -129,6 +116,49 @@
             this.label2.Text = "If you get lost, visit our Help section in the side menu!";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(0, 63);
+            this.label4.MinimumSize = new System.Drawing.Size(1056, 60);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(1056, 60);
+            this.label4.TabIndex = 14;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 24F);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(0, 123);
+            this.label5.MinimumSize = new System.Drawing.Size(1056, 55);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(1056, 55);
+            this.label5.TabIndex = 15;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblWelcome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.ForeColor = System.Drawing.Color.Black;
+            this.lblWelcome.Location = new System.Drawing.Point(0, 178);
+            this.lblWelcome.MinimumSize = new System.Drawing.Size(1056, 60);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(1056, 60);
+            this.lblWelcome.TabIndex = 16;
+            this.lblWelcome.Text = "Welcome back text";
+            this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lblRole
             // 
             this.lblRole.AutoSize = true;
@@ -136,11 +166,11 @@
             this.lblRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblRole.Font = new System.Drawing.Font("Segoe UI", 24F);
             this.lblRole.ForeColor = System.Drawing.Color.Black;
-            this.lblRole.Location = new System.Drawing.Point(0, 112);
+            this.lblRole.Location = new System.Drawing.Point(0, 238);
             this.lblRole.MinimumSize = new System.Drawing.Size(1056, 55);
             this.lblRole.Name = "lblRole";
             this.lblRole.Size = new System.Drawing.Size(1056, 55);
-            this.lblRole.TabIndex = 13;
+            this.lblRole.TabIndex = 17;
             this.lblRole.Text = "You are role text";
             this.lblRole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -149,8 +179,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblRole);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblWelcome);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "ucHome";
@@ -172,9 +204,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.Panel panel1;
-		public System.Windows.Forms.Label lblWelcome;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.Label label2;
-		public System.Windows.Forms.Label lblRole;
-	}
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label lblWelcome;
+        public System.Windows.Forms.Label lblRole;
+    }
 }
