@@ -39,6 +39,7 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.dateInspection = new System.Windows.Forms.DateTimePicker();
 			this.label1 = new System.Windows.Forms.Label();
+			this.btnRemoveFilter = new System.Windows.Forms.Button();
 			this.panel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvInspectionReport)).BeginInit();
 			this.groupBox1.SuspendLayout();
@@ -83,6 +84,7 @@
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.btnRemoveFilter);
 			this.groupBox1.Controls.Add(this.cmbStaffCode);
 			this.groupBox1.Controls.Add(this.label4);
 			this.groupBox1.Controls.Add(this.cmbVenueCode);
@@ -159,6 +161,19 @@
 			this.label1.TabIndex = 30;
 			this.label1.Text = "Date:";
 			// 
+			// btnRemoveFilter
+			// 
+			this.btnRemoveFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnRemoveFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnRemoveFilter.ForeColor = System.Drawing.Color.White;
+			this.btnRemoveFilter.Location = new System.Drawing.Point(685, 33);
+			this.btnRemoveFilter.Name = "btnRemoveFilter";
+			this.btnRemoveFilter.Size = new System.Drawing.Size(91, 23);
+			this.btnRemoveFilter.TabIndex = 36;
+			this.btnRemoveFilter.Text = "Remove Filter";
+			this.btnRemoveFilter.UseVisualStyleBackColor = false;
+			this.btnRemoveFilter.Click += new System.EventHandler(this.BtnRemoveFilter_Click);
+			// 
 			// ucReportInspection
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,5 +202,6 @@
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.DateTimePicker dateInspection;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Button btnRemoveFilter;
 	}
 }

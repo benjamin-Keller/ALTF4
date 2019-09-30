@@ -33,6 +33,7 @@
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dgvVenueReport = new Bunifu.Framework.UI.BunifuCustomDataGrid();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.btnRemoveFilter = new System.Windows.Forms.Button();
 			this.label6 = new System.Windows.Forms.Label();
 			this.cmbBuildingBlock = new System.Windows.Forms.ComboBox();
 			this.label4 = new System.Windows.Forms.Label();
@@ -81,6 +82,7 @@
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.btnRemoveFilter);
 			this.groupBox1.Controls.Add(this.label6);
 			this.groupBox1.Controls.Add(this.cmbBuildingBlock);
 			this.groupBox1.Controls.Add(this.label4);
@@ -93,6 +95,19 @@
 			this.groupBox1.TabIndex = 21;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Filter By";
+			// 
+			// btnRemoveFilter
+			// 
+			this.btnRemoveFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnRemoveFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnRemoveFilter.ForeColor = System.Drawing.Color.White;
+			this.btnRemoveFilter.Location = new System.Drawing.Point(685, 35);
+			this.btnRemoveFilter.Name = "btnRemoveFilter";
+			this.btnRemoveFilter.Size = new System.Drawing.Size(91, 23);
+			this.btnRemoveFilter.TabIndex = 12;
+			this.btnRemoveFilter.Text = "Remove Filter";
+			this.btnRemoveFilter.UseVisualStyleBackColor = false;
+			this.btnRemoveFilter.Click += new System.EventHandler(this.BtnRemoveFilter_Click);
 			// 
 			// label6
 			// 
@@ -160,5 +175,6 @@
 		private System.Windows.Forms.ComboBox cmbBuildingBlock;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.ComboBox cmbBuilding;
+		private System.Windows.Forms.Button btnRemoveFilter;
 	}
 }

@@ -56,5 +56,10 @@ namespace Info_IT.UserControls
 
 			}
 		}
+
+		private void BtnRemoveFilter_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

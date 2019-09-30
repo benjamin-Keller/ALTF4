@@ -80,5 +80,10 @@ namespace Info_IT.UserControls.Reports
 
 			}
 		}
+
+		private void BtnRemoveFilter_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
