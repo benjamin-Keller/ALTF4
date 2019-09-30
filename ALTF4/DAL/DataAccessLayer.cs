@@ -183,6 +183,7 @@ namespace DAL
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
 
             DataTable dt = new DataTable();
+
             try
             {
                 sda.Fill(dt);
