@@ -12,11 +12,14 @@ namespace DAL
     
     public class DataAccessLayer
     {
+        //This Connection String Connects to the Online Azure Server we are running for this program, no attaching needed
+        SqlConnection dbConn = new SqlConnection(@"Server=tcp:altf4-projects.database.windows.net,1433;Initial Catalog=Info@IT;Persist Security Info=False;User ID=altf4_F4_Admin;Password=WeaDee26;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
-       SqlConnection dbConn = new SqlConnection(@"Server=tcp:altf4-projects.database.windows.net,1433;Initial Catalog=Info@IT;Persist Security Info=False;User ID=altf4_F4_Admin;Password=WeaDee26;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-        
-		//Local DataBase
-		//SqlConnection dbConn = new SqlConnection(@"Data Source = (LocalDB)\SQLEXPRESS; AttachDbFilename=|DataDirectory|\App_Data\Info@IT.mdf; Integrated Security = True");
+        //Uncomment this to use a Local DB
+        //SqlConnection dbConn = new SqlConnection(@"Data Source = .\SQLEXPRESS; Initial Catalog=Info@IT; Integrated Security = True;");
+
+        //SqlConnection dbConn = new SqlConnection(@"Data Source = (LocalDB)\SQLEXPRESS; AttachDbFilename=|DataDirectory|\App_Data\Info@IT.mdf; Integrated Security = True");
+
         SqlCommand dbCmd;
         
         public DataTable GetVenues()
@@ -369,7 +372,7 @@ namespace DAL
                 dbConn.Open();
             }
             catch { }
-            dbCmd = new SqlCommand("dbo.sp_DisplayRequestTutor", dbConn);
+            dbCmd = new SqlCommand("dbo.sp_DisplayAllTutorRequestPending", dbConn);
             //dbCmd.CommandText = "sp_DisplayVenue";
             //dbCmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);

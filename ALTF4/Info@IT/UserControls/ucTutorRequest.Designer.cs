@@ -241,25 +241,25 @@
 			// 
 			this.cmbEndTime.FormattingEnabled = true;
 			this.cmbEndTime.Items.AddRange(new object[] {
-            "08:30",
-            "09:00",
-            "09:30",
-            "10:00",
-            "10:30",
-            "11:00",
-            "11:30",
-            "12:00",
-            "12:30",
-            "13:00",
-            "13:30",
-            "14:00",
-            "14:30",
-            "15:00",
-            "15:30",
-            "16:00",
-            "16:30",
-            "17:00"});
-			this.cmbEndTime.Location = new System.Drawing.Point(610, 33);
+            "08:00:00",
+            "08:30:00",
+            "09:00:00",
+            "09:30:00",
+            "10:00:00",
+            "10:30:00",
+            "11:00:00",
+            "11:30:00",
+            "12:00:00",
+            "12:30:00",
+            "13:00:00",
+            "13:30:00",
+            "14:00:00",
+            "14:30:00",
+            "15:00:00",
+            "15:30:00",
+            "16:00:00",
+            "16:30:00"});
+            this.cmbEndTime.Location = new System.Drawing.Point(610, 33);
 			this.cmbEndTime.Name = "cmbEndTime";
 			this.cmbEndTime.Size = new System.Drawing.Size(70, 23);
 			this.cmbEndTime.TabIndex = 25;
@@ -268,25 +268,25 @@
 			// 
 			this.cmbStartTime.FormattingEnabled = true;
 			this.cmbStartTime.Items.AddRange(new object[] {
-            "08:00",
-            "08:30",
-            "09:00",
-            "09:30",
-            "10:00",
-            "10:30",
-            "11:00",
-            "11:30",
-            "12:00",
-            "12:30",
-            "13:00",
-            "13:30",
-            "14:00",
-            "14:30",
-            "15:00",
-            "15:30",
-            "16:00",
-            "16:30"});
-			this.cmbStartTime.Location = new System.Drawing.Point(531, 33);
+            "08:00:00",
+            "08:30:00",
+            "09:00:00",
+            "09:30:00",
+            "10:00:00",
+            "10:30:00",
+            "11:00:00",
+            "11:30:00",
+            "12:00:00",
+            "12:30:00",
+            "13:00:00",
+            "13:30:00",
+            "14:00:00",
+            "14:30:00",
+            "15:00:00",
+            "15:30:00",
+            "16:00:00",
+            "16:30:00"});
+            this.cmbStartTime.Location = new System.Drawing.Point(531, 33);
 			this.cmbStartTime.Name = "cmbStartTime";
 			this.cmbStartTime.Size = new System.Drawing.Size(73, 23);
 			this.cmbStartTime.TabIndex = 24;
