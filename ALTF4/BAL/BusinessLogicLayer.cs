@@ -394,9 +394,9 @@ namespace BLL
             return dal.DeleteEquipment(equipment);
         }
 
-        public int DeleteVenue(EquipmentClass equipment)
+        public int DeleteVenue(VenueClass venue)
         {
-            return dal.DeleteEquipment(equipment);
+            return dal.DeleteVenue(venue);
         }
         
     }

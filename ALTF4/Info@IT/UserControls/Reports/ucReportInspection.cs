@@ -34,10 +34,12 @@ namespace Info_IT.UserControls.Reports
 		{
 			try
 			{
-				DAL.InspectionClass inspection = new DAL.InspectionClass();
-				inspection.InspectionDate = Convert.ToDateTime(dateInspection.Text);
+                DAL.InspectionClass inspection = new DAL.InspectionClass
+                {
+                    InspectionDate = Convert.ToDateTime(dateInspection.Text)
+                };
 
-				dgvInspectionReport.DataSource = bll.Report_DisplayInspectionByDate(inspection);
+                dgvInspectionReport.DataSource = bll.Report_DisplayInspectionByDate(inspection);
 			}
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
@@ -51,10 +53,12 @@ namespace Info_IT.UserControls.Reports
 		{
 			try
 			{
-				DAL.InspectionClass inspection = new DAL.InspectionClass();
-				inspection.VenueCode = int.Parse(cmbVenueCode.SelectedValue.ToString());
+                DAL.InspectionClass inspection = new DAL.InspectionClass
+                {
+                    VenueCode = int.Parse(cmbVenueCode.SelectedValue.ToString())
+                };
 
-				dgvInspectionReport.DataSource = bll.Report_DisplayInspectionByVenue(inspection);
+                dgvInspectionReport.DataSource = bll.Report_DisplayInspectionByVenue(inspection);
 			}
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
@@ -68,10 +72,12 @@ namespace Info_IT.UserControls.Reports
 		{
 			try
 			{
-				DAL.InspectionClass inspection = new DAL.InspectionClass();
-				inspection.StaffCode = int.Parse(cmbStaffCode.SelectedValue.ToString());
+                DAL.InspectionClass inspection = new DAL.InspectionClass
+                {
+                    StaffCode = int.Parse(cmbStaffCode.SelectedValue.ToString())
+                };
 
-				dgvInspectionReport.DataSource = bll.Report_DisplayInspectionByStaffCode(inspection);
+                dgvInspectionReport.DataSource = bll.Report_DisplayInspectionByStaffCode(inspection);
 			}
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
 			catch (Exception b)
@@ -83,7 +89,7 @@ namespace Info_IT.UserControls.Reports
 
 		private void BtnRemoveFilter_Click(object sender, EventArgs e)
 		{
-
-		}
+            dgvInspectionReport.DataSource = bll.GetInspection();
+        }
 	}
 }

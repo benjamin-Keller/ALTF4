@@ -138,7 +138,7 @@ namespace Info_IT.UserControls
             {
                 //Error for input string not found
                 DAL.EquipmentClass equipment = new DAL.EquipmentClass(DAL.EquipmentClass.EquipmentCode);
-                int x = bll.UpdateEquipment(equipment);
+                int x = bll.DeleteEquip(equipment);
 
                 if (x > 0)
                 {
@@ -150,6 +150,8 @@ namespace Info_IT.UserControls
                 {
                     MessageBox.Show("Please input valid data.");
                 }
+
+                dgvEquipment.DataSource = bll.GetEquipment();
             }
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
             catch (Exception b)
