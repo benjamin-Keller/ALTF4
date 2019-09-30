@@ -36,7 +36,7 @@ namespace Info_IT
 
         private void Template_Load(object sender, EventArgs e)
 		{
-            
+			this.TopMost = true;
 
 			HideAll();
 			LoginPanel();
@@ -54,6 +54,7 @@ namespace Info_IT
 
 			ucHome1.Visible = false;
 			btnNavUser.Hide();
+			this.TopMost = false;
 
 		}
 
