@@ -28,8 +28,8 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.dgvVenueReport = new Bunifu.Framework.UI.BunifuCustomDataGrid();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -55,20 +55,20 @@
 			// 
 			this.dgvVenueReport.AllowUserToAddRows = false;
 			this.dgvVenueReport.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.dgvVenueReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.dgvVenueReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
 			this.dgvVenueReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvVenueReport.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dgvVenueReport.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvVenueReport.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
-			dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvVenueReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvVenueReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
 			this.dgvVenueReport.ColumnHeadersHeight = 50;
 			this.dgvVenueReport.DoubleBuffered = true;
 			this.dgvVenueReport.EnableHeadersVisualStyles = false;
@@ -98,17 +98,15 @@
 			// 
 			// btnRemoveFilter
 			// 
-			this.btnRemoveFilter.BackColor = System.Drawing.Color.White;
-			this.btnRemoveFilter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnRemoveFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
 			this.btnRemoveFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnRemoveFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+			this.btnRemoveFilter.ForeColor = System.Drawing.Color.White;
 			this.btnRemoveFilter.Location = new System.Drawing.Point(685, 35);
 			this.btnRemoveFilter.Name = "btnRemoveFilter";
 			this.btnRemoveFilter.Size = new System.Drawing.Size(91, 23);
 			this.btnRemoveFilter.TabIndex = 12;
 			this.btnRemoveFilter.Text = "Remove Filter";
 			this.btnRemoveFilter.UseVisualStyleBackColor = false;
-			this.btnRemoveFilter.Click += new System.EventHandler(this.BtnRemoveFilter_Click);
 			// 
 			// label6
 			// 
