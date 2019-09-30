@@ -118,10 +118,8 @@ namespace Info_IT.UserControls
 
 		}
 
-		private void BtnViewList_Click(object sender, EventArgs e)
+		private void BtnManageDelete_Click(object sender, EventArgs e)
 		{
-			dgvVenue.DataSource = bll.GetVenues();
-			dgvVenue.BackgroundColor = Color.White;
 
 		}
 
@@ -144,5 +142,7 @@ namespace Info_IT.UserControls
 			{ }
 
 		}
+
+
 	}
 }
