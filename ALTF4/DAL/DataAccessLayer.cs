@@ -369,7 +369,7 @@ namespace DAL
                 dbConn.Open();
             }
             catch { }
-            dbCmd = new SqlCommand("dbo.sp_DisplayRequestTutor", dbConn);
+            dbCmd = new SqlCommand("dbo.sp_DisplayAllTutorRequestPending", dbConn);
             //dbCmd.CommandText = "sp_DisplayVenue";
             //dbCmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter sda = new SqlDataAdapter(dbCmd);
