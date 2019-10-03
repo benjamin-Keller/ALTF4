@@ -426,7 +426,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Data\icon.ico" />
-    <None Include="favicon.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BAL\BLL.csproj">
