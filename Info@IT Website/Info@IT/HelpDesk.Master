@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="HelpDesk.master.cs" Inherits="Info_IT.HelpDesk" %>
+<%@ Register TagPrefix="UserControl" TagName="AccountMenu" Src="AccountMenu.ascx" %>
+
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+        <title>Info@IT HelpDesk System</title>
+        <asp:ContentPlaceHolder ID="head" runat="server">
+			
+        </asp:ContentPlaceHolder>
+        <style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
+        div.page
+        {
+            float: left;
+            width: 100%;
+            background:#ffc;
+        }
+        div#main
+        {
+            float: left;
+            clear: both;
+            width: 100%;
+            position: relative;
+        }
+        div#page-left
+        {
+            float: left;
+            width: 15%;
+            background:orange;
+        }
+        
+        div#page-middle
+        {
+            float: left;
+            margin: 0 auto;
+            width: 85%;
+            background:blue;
+        }
+		div#page-top
+        {
+            background: #0064c8;
+        }
+		div#page-bottom
+        {
+            position: absolute;
+			bottom: 0px;
+			left: 100%;
+        }
+    </style>
+    </head>
+    <body>
+		
+   <UserControl:AccountMenu runat="server" ID="AccountMenu" />
+        <div id="content" style="background-color:#f5e29d; width:461px; margin: -10px 0 -10px 0; padding:10px 0 10px 0;">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+		
+        <div class="page">
+            <div id="main">
+                <form id="form1" runat="server">
+                <div id="page-left">
+                   <asp:ContentPlaceHolder ID="leftContent" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                <div id="page-middle">
+                    <asp:ContentPlaceHolder ID="middleContent" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                <div id="page-right">
+                 <asp:ContentPlaceHolder ID="BodytContent" runat="server"></asp:ContentPlaceHolder>
+                </div>
+				<div id="page-Footert">
+					<p>Made by ALT+F4</p>
+                </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    </html>
