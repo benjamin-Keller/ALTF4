@@ -1,6 +1,4 @@
-﻿
-</html>
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HelpDesk.master.cs" Inherits="Info_IT.HelpDesk" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HelpDesk.master.cs" Inherits="Info_IT.HelpDesk" %>
 
 <!DOCTYPE html>
 
