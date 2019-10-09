@@ -6,7 +6,7 @@
 
 <html>
 <head runat="server">
-	<title></title>
+	<title>Info@IT HelpDesk Web-System</title>
 
 	<style>
 		body {
@@ -16,23 +16,24 @@
 
 		.content {
 			font-family: 'Segoe UI';
-			width:100%;
-			height: 100%;
+			width: 100%;
+			height: calc(100% - 0px);
 			border-spacing: 0;
+			overflow-y: auto;
+
 		}
 
 		.contentHeader {
 			width: 800px;
-			height: 80px;
+			height: 60px;
 			background-color: #0064c8;
-			text-align: center;
 			
 		}
 
 		.contentMenu {
 			height: 95%;
 			background-color: #0064c8;
-			width: 100px;
+			width: 76px;
 		}
 
 		.contentMain {
@@ -45,38 +46,74 @@
 			background-color: #0064c8;
 			text-align: center;
 		}
+
+		.centerText {
+			 text-align: Left;
+			 vertical-align: middle;
+			 width: 100%;
+		}
+		
+		#Logo {
+			float: left;
+			display: block;
+		}
+		#Logo.At {
+			width: 149px;
+			height: 149px;
+		}
+		
+		/*Full height without scroll*/
+		content-scroll-wrap {
+    position: relative;
+    height: 100%;
+}
+#content-scroll {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    overflow: auto;
+}
 	</style>
 </head>
 <body>
 	<form id="form1" runat="server">
-		<table class="content">
-			<tr>
-				<td colspan="2" class="contentHeader">
-					<h1>
-						Website Header
+		<div id="content-scroll-wrap">
+			<div id="content-scroll">
+				<table class="content">
+					<tr>
+						<td colspan="2" class="contentHeader">
+					
+							<div id="Logo">
+								<img src="Images/@.png" class="At" />
+							</div>
+							<div id="centerText">
+								<p>
+									Info@IT HelpDesk Web-System
+								</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="contentMenu">
+							<h3>Menu
 
-					</h1>
-				</td>
-			</tr>
-			<tr>
-				<td class="contentMenu">
-					<h3>Menu
-
-					</h3>
-				</td>
-				<td class="contentMain">
-					<h2>Content
-					</h2>
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2" class="contentFooter">
-					<b>
-						Website Footer
-					</b>
-				</td>
-			</tr>
-		</table>
+							</h3>
+						</td>
+						<td class="contentMain">
+							<h2>Content
+							</h2>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="contentFooter">
+							<b>
+								Website Footer
+							</b>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
 	</form>
 </body>
 </html>
