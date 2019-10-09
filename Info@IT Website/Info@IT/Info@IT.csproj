@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\CSS\Master.css" />
     <Content Include="Images\%40.png" />
     <Content Include="Default.aspx" />
     <Content Include="Web.config" />
@@ -99,7 +100,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>

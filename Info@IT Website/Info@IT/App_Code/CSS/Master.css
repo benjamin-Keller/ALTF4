@@ -1,0 +1,66 @@
+﻿body {
+	margin: 0;
+	padding: 0;
+}
+
+.content {
+	font-family: 'Segoe UI';
+	width: 100%;
+	height: calc(100% - 0px);
+	border-spacing: 0;
+	overflow-y: auto;
+}
+
+.contentHeader {
+	width: 800px;
+	height: 60px;
+	background-color: #0064c8;
+}
+
+.contentMenu {
+	height: 95%;
+	background-color: #0064c8;
+	width: 76px;
+}
+
+.contentMain {
+	height: 500px;
+	background-color: white;
+	width: 650px;
+}
+
+.contentFooter {
+	background-color: #0064c8;
+	text-align: center;
+}
+
+.centerText {
+	text-align: Left;
+	vertical-align: middle;
+	width: 100%;
+}
+
+#Logo {
+	float: left;
+	display: block;
+}
+
+	#Logo.At {
+		width: 149px;
+		height: 149px;
+	}
+
+/*Full height without scroll*/
+content-scroll-wrap {
+	position: relative;
+	height: 100%;
+}
+
+#content-scroll {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: auto;
+}

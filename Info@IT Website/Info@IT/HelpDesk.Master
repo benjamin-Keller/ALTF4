@@ -7,7 +7,8 @@
 <html>
 <head runat="server">
 	<title>Info@IT HelpDesk Web-System</title>
-
+	<%--This is the CSS external code i have, it aint working--%>
+	<%--<link href="App_Code/CSS/Master.css" rel="stylesheet" />--%>
 	<style>
 		body {
 			margin: 0;
@@ -64,15 +65,15 @@
 		
 		/*Full height without scroll*/
 		content-scroll-wrap {
-    position: relative;
-    height: 100%;
-}
-#content-scroll {
-    position: absolute;
-    top: 0; bottom: 0;
-    left: 0; right: 0;
-    overflow: auto;
-}
+			position: relative;
+			height: 100%;
+		}
+		#content-scroll {
+			position: absolute;
+			top: 0; bottom: 0;
+			left: 0; right: 0;
+			overflow: auto;
+		}
 	</style>
 </head>
 <body>
