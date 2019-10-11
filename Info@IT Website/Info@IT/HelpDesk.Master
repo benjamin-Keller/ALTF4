@@ -6,8 +6,8 @@
 <head runat="server">
 	<title>Info@IT HelpDesk Web-System</title>
 	<%--This is the CSS external code i have, it aint working--%>
-	<%--<link href="App_Code/CSS/Master.css" rel="stylesheet" />--%>
-	<style>
+	<link href="App_Code/CSS/Master.css" rel="stylesheet" />
+	<%--<style>
 		body {
 			margin: 0;
 			padding: 0;
@@ -89,7 +89,7 @@
 		}
 		
 		
-	</style>
+	</style>--%>
 </head>
 <body>
 	<form id="form1" runat="server">

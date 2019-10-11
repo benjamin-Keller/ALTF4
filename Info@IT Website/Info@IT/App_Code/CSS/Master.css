@@ -21,6 +21,7 @@
 	height: 95%;
 	background-color: #0064c8;
 	width: 76px;
+	vertical-align: top;
 }
 
 .contentMain {
@@ -63,4 +64,20 @@ content-scroll-wrap {
 	left: 0;
 	right: 0;
 	overflow: auto;
+}
+
+.menu {
+	font-family: 'Segoe UI';
+	text-decoration: none;
+	color: white;
+}
+
+	.menu:before {
+		text-decoration: none;
+		color: white;
+	}
+
+.menuButton {
+	width: 205px;
+	border-bottom: 1pt solid black;
 }
