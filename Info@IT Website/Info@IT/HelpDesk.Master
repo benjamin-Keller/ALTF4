@@ -33,6 +33,7 @@
 			height: 95%;
 			background-color: #0064c8;
 			width: 76px;
+			vertical-align: top;
 		}
 
 		.contentMain {
@@ -72,6 +73,22 @@
 			left: 0; right: 0;
 			overflow: auto;
 		}
+		.menu {
+			font-family: 'Segoe UI';
+			text-decoration: none;
+			color: white;
+		}
+		.menu:before {
+			text-decoration: none;
+			color: white;
+		}
+		.menuButton {
+			width: 205px;
+			border-bottom: 1pt solid black;
+
+		}
+		
+		
 	</style>
 </head>
 <body>
@@ -83,7 +100,7 @@
 						<td colspan="2" class="contentHeader">
 					
 							<div id="Logo">
-								<img src="Images/@.png" class="At" />
+								<a href="Default.aspx"><img src="Images/@.png" class="At" /></a>
 							</div>
 							<div id="centerText">
 								<p>
@@ -94,9 +111,13 @@
 					</tr>
 					<tr>
 						<td class="contentMenu">
-							<h3>Menu
-
-							</h3>
+							<table class="menu" style="text-align: center">
+								<tr id="menuButton">
+									<td class="menuButton">
+										<a href="Default.aspx" style="text-align: center; vertical-align: middle">Home</a>
+									</td>
+								</tr>
+							</table>
 						</td>
 						<td class="contentMain">
 							<h2>Content
