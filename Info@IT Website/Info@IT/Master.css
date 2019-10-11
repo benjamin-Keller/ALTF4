@@ -3,6 +3,11 @@
 	padding: 0;
 }
 
+a {
+	color: white;
+	text-decoration: none;
+} 
+
 .content {
 	font-family: 'Segoe UI';
 	width: 100%;
@@ -68,18 +73,50 @@ content-scroll-wrap {
 
 .menu {
 	font-family: 'Segoe UI';
-	text-decoration: none;
-	color: white;
+	/*text-decoration: none;*/
+	/*color: white;*/
+	/*text-align: center;*/
+	/*width:100%;*/
+	border: 1px;
 }
 
-	.menu:before {
-		text-decoration: none;
-		color: white;
-	}
-
 .menuButton {
-	width: 205px;
+	display: block;
+	width: 100%;
+	/*width: 205px;*/
 	border-bottom: 1pt solid black;
 	text-align: center;
-	vertical-align: middle
+	vertical-align: middle;
+}
+
+/*Link buttons*/
+menuLink:link, menuLink:visited {
+	background-color: #f44336;
+	color: white;
+	padding: 14px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+}
+
+menuLink:hover, menuLink:active {
+	background-color: red;
+}
+
+
+
+table.coolTable td {
+	background-color: purple;
+	color: green;
+}
+
+	table.coolTable td:hover {
+		background-color: green;
+		color: green;
+	}
+
+td a {
+	display: block;
+	width: 100%;
 }

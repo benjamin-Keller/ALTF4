@@ -11,7 +11,7 @@ namespace Info_IT
 {
 
 
-	public partial class WebForm1
+	public partial class Equipment
 	{
 	}
 }

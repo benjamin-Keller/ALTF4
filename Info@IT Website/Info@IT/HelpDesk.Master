@@ -3,100 +3,17 @@
 
 <html>
 <head runat="server">
-	
 
-	<%--<style>
-		body {
-			margin: 0;
-			padding: 0;
-		}
+	<title><asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder></title>
 
-		.content {
-			font-family: 'Segoe UI';
-			width: 100%;
-			height: calc(100% - 0px);
-			border-spacing: 0;
-			overflow-y: auto;
-
-		}
-
-		.contentHeader {
-			width: 800px;
-			height: 60px;
-			background-color: #0064c8;
-			
-		}
-
-		.contentMenu {
-			height: 95%;
-			background-color: #0064c8;
-			width: 76px;
-			vertical-align: top;
-		}
-
-		.contentMain {
-			height: 500px;
-			background-color: white;
-			width: 650px;
-		}
-
-		.contentFooter {
-			background-color: #0064c8;
-			text-align: center;
-		}
-
-		.centerText {
-			 text-align: Left;
-			 vertical-align: middle;
-			 width: 100%;
-		}
-		
-		#Logo {
-			float: left;
-			display: block;
-		}
-		#Logo.At {
-			width: 149px;
-			height: 149px;
-		}
-		
-		/*Full height without scroll*/
-		content-scroll-wrap {
-			position: relative;
-			height: 100%;
-		}
-		#content-scroll {
-			position: absolute;
-			top: 0; bottom: 0;
-			left: 0; right: 0;
-			overflow: auto;
-		}
-		.menu {
-			font-family: 'Segoe UI';
-			text-decoration: none;
-			color: white;
-		}
-		.menu:before {
-			text-decoration: none;
-			color: white;
-		}
-		.menuButton {
-			width: 205px;
-			border-bottom: 1pt solid black;
-			text-align: center; vertical-align: middle
-		}
-		
-		
-		</style>--%>
 		<asp:ContentPlaceHolder ID="head" runat="server">
 			<link href="Master.css" rel="stylesheet" />
-			<title>Info@IT HelpDesk Web-System</title>
         </asp:ContentPlaceHolder>
 </head>
 <body>
 	<form id="form1" runat="server">
 		<div id="content-scroll-wrap">
-			<div id="content-scroll">
+			<div id="content-scroll" style="table-layout: auto; border-spacing: 50px;">
 				<table class="content">
 					<tr>
 						<td colspan="2" class="contentHeader">
@@ -116,22 +33,30 @@
 						<td class="contentMenu">
 							<!-- Side navigation -->
 
-							<table class="menu" style="text-align: center">
-								<tr class="menuSelect">
-									<td class="menuButton">
-										<a href="Default.aspx" >Home</a>
+							<table class="menu">
+								<tr>
+									<td class="menuButton" style="table-layout: auto; border-spacing: 50px">
+										<a class="menuLink" href="Default.aspx" >Home</a>
 									</td>
 								</tr>
-								<tr class="menuSelect">
+								<tr>
 									<td class="menuButton">
-										<a href="WebForm1.aspx">Webform</a>
+										<a class="menuLink" href="Venue.aspx">Venue</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="menuButton">
+										<a class="menuLink" href="Equipment.aspx">Equipment</a>
 									</td>
 								</tr>
 							</table>
 
-							
-							
-
+							<table class="coolTable">
+								<tr>
+								   <td onClick="document.location.href='Default.aspx'">      
+										<a href='#child' class="parent1">Parent1</a>
+								   </td>
+							</table>
 							
 						</td>
 						<td class="contentMain">
