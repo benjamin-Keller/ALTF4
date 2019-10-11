@@ -9,6 +9,11 @@
 		<asp:ContentPlaceHolder ID="head" runat="server">
 			<link href="Master.css" rel="stylesheet" />
         </asp:ContentPlaceHolder>
+	<style type="text/css">
+		.auto-style1 {
+			width: 365%;
+		}
+	</style>
 </head>
 <body>
 	<form id="form1" runat="server">
@@ -21,11 +26,11 @@
 							<div id="Logo">
 								<a href="Default.aspx"><img src="Images/@.png" class="At" /></a>
 							</div>
-							<div id="centerText" style="text-align:center">
-								<p>
+							<div class="centerText">
+								<h1 class="title">
 									Info@IT HelpDesk Web-System
 									
-								</p>
+								</h1>
 							</div>
 						</td>
 					</tr>
@@ -54,7 +59,7 @@
 							<table class="coolTable">
 								<tr>
 								   <td onClick="document.location.href='Default.aspx'">      
-										<a href='#child' class="parent1">Parent1</a>
+										<a href='Default.aspx' class="auto-style1">Parent1</a>
 								   </td>
 							</table>
 							
@@ -66,7 +71,7 @@
 					<tr>
 						<td colspan="2" class="contentFooter">
 							<b>
-								Website Footer
+								Made by ALTF4
 							</b>
 						</td>
 					</tr>

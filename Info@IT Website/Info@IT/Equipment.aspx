@@ -9,5 +9,5 @@
 
 <%-- Body --%>
 <asp:Content runat="server" ID="Content" ContentPlaceHolderID="BodyContent">
-	<h1>Equipment.aspx</h1>
+	<h2>Equipment.aspx</h2>
 </asp:Content>

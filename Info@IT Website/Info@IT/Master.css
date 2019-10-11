@@ -6,7 +6,12 @@
 a {
 	color: white;
 	text-decoration: none;
-} 
+}
+
+h1 {
+	color: white;
+	font-size: 60px;
+}
 
 .content {
 	font-family: 'Segoe UI';
@@ -20,6 +25,10 @@ a {
 	width: 800px;
 	height: 60px;
 	background-color: #0064c8;
+}
+.title {
+	
+	font-family: 'Segoe UI';
 }
 
 .contentMenu {
@@ -37,13 +46,15 @@ a {
 
 .contentFooter {
 	background-color: #0064c8;
-	text-align: center;
+	text-align: right;
+	padding-right: 25px;
 }
 
 .centerText {
-	text-align: Left;
+	text-align: center;
 	vertical-align: middle;
 	width: 100%;
+	
 }
 
 #Logo {
@@ -111,10 +122,10 @@ table.coolTable td {
 	color: green;
 }
 
-	table.coolTable td:hover {
-		background-color: green;
-		color: green;
-	}
+table.coolTable td:hover {
+	background-color: green;
+	color: green;
+}
 
 td a {
 	display: block;
