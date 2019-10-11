@@ -7,12 +7,11 @@
 	<title><asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder></title>
 
 		<asp:ContentPlaceHolder ID="head" runat="server">
-			<link href="Master.css" rel="stylesheet" />
+			<link href="css/Master.css" rel="stylesheet" />
+			 
         </asp:ContentPlaceHolder>
 	<style type="text/css">
-		.auto-style1 {
-			width: 365%;
-		}
+		
 	</style>
 </head>
 <body>
@@ -35,34 +34,13 @@
 						</td>
 					</tr>
 					<tr>
-						<td class="contentMenu">
+						<td class="menu">
 							<!-- Side navigation -->
-
-							<table class="menu">
-								<tr>
-									<td class="menuButton" style="table-layout: auto; border-spacing: 50px">
-										<a class="menuLink" href="Default.aspx" >Home</a>
-									</td>
-								</tr>
-								<tr>
-									<td class="menuButton">
-										<a class="menuLink" href="Venue.aspx">Venue</a>
-									</td>
-								</tr>
-								<tr>
-									<td class="menuButton">
-										<a class="menuLink" href="Equipment.aspx">Equipment</a>
-									</td>
-								</tr>
-							</table>
-
-							<table class="coolTable">
-								<tr>
-								   <td onClick="document.location.href='Default.aspx'">      
-										<a href='Default.aspx' class="auto-style1">Parent1</a>
-								   </td>
-							</table>
-							
+							<ul class="sidebar">
+							  <li><a href="Default.aspx">Home</a></li>
+							  <li><a href="Equipment.aspx">Equipment</a></li>
+							  <li><a href="Venue.aspx">Venue</a></li>
+							</ul>
 						</td>
 						<td class="contentMain">
 							<asp:ContentPlaceHolder runat="server" ID="BodyContent"></asp:ContentPlaceHolder>

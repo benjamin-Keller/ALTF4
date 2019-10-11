@@ -64,10 +64,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\CSS\w3.css" />
     <Content Include="Equipment.aspx" />
-    <Content Include="Master.css" />
+    <Content Include="css\Master.css" />
     <Content Include="Images\%40.png" />
     <Content Include="Default.aspx" />
+    <Content Include="css\materialize.css" />
+    <Content Include="css\materialize.min.css" />
     <Content Include="Venue.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -113,7 +116,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Code\CSS\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>

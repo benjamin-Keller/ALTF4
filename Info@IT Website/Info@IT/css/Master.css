@@ -34,7 +34,7 @@ h1 {
 .contentMenu {
 	height: 95%;
 	background-color: #0064c8;
-	width: 76px;
+	width: 50px;
 	vertical-align: top;
 }
 
@@ -62,10 +62,10 @@ h1 {
 	display: block;
 }
 
-	#Logo.At {
-		width: 149px;
-		height: 149px;
-	}
+#Logo.At {
+	width: 149px;
+	height: 149px;
+}
 
 /*Full height without scroll*/
 content-scroll-wrap {
@@ -82,52 +82,32 @@ content-scroll-wrap {
 	overflow: auto;
 }
 
+
 .menu {
-	font-family: 'Segoe UI';
-	/*text-decoration: none;*/
-	/*color: white;*/
-	/*text-align: center;*/
-	/*width:100%;*/
-	border: 1px;
+	height: 95%;
+	background-color: #0064c8;
+	width: 5%;
+	vertical-align: top;
 }
 
-.menuButton {
+.sidebar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	background-color: #0064c8;
+}
+
+.sidebar li a {
 	display: block;
-	width: 100%;
-	/*width: 205px;*/
-	border-bottom: 1pt solid black;
-	text-align: center;
-	vertical-align: middle;
-}
-
-/*Link buttons*/
-menuLink:link, menuLink:visited {
-	background-color: #f44336;
 	color: white;
-	padding: 14px 25px;
-	text-align: center;
+	padding: 8px 16px;
 	text-decoration: none;
-	display: inline-block;
-	width: 100%;
+	text-align:center;
 }
 
-menuLink:hover, menuLink:active {
-	background-color: red;
-}
-
-
-
-table.coolTable td {
-	background-color: purple;
-	color: green;
-}
-
-table.coolTable td:hover {
-	background-color: green;
-	color: green;
-}
-
-td a {
-	display: block;
-	width: 100%;
+/* Change the link color on hover */
+.sidebar li a:hover {
+	background-color: #0071c8;
+	color: white;
 }

@@ -4,7 +4,7 @@
 
 <%-- Head --%>
 <asp:Content runat="server" ID="Head" ContentPlaceHolderID="head">
-	<link href="Master.css" rel="stylesheet" />
+	<link href="css/Master.css" rel="stylesheet" />
 </asp:Content>
 
 <%-- Body --%>
