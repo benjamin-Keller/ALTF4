@@ -1,13 +1,11 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HelpDesk.master.cs" Inherits="Info_IT.HelpDesk" %>
-
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
 	<title>Info@IT HelpDesk Web-System</title>
-	<%--This is the CSS external code i have, it aint working--%>
-	<link href="App_Code/CSS/Master.css" rel="stylesheet" />
-	<%--<style>
+
+	<style>
 		body {
 			margin: 0;
 			padding: 0;
@@ -85,11 +83,31 @@
 		.menuButton {
 			width: 205px;
 			border-bottom: 1pt solid black;
-
+			text-align: center; vertical-align: middle
 		}
 		
-		
-	</style>--%>
+		/*Side bar */
+		.vertical-menu {
+		  width: 200px; /* Set a width if you like */
+		}
+
+		.vertical-menu a {
+		  background-color: #eee; /* Grey background color */
+		  color: black; /* Black text color */
+		  display: block; /* Make the links appear below each other */
+		  padding: 12px; /* Add some padding */
+		  text-decoration: none; /* Remove underline from links */
+		}
+
+		.vertical-menu a:hover {
+		  background-color: #ccc; /* Dark grey background on mouse-over */
+		}
+
+		.vertical-menu a.active {
+		  background-color: #4CAF50; /* Add a green color to the "active/current" link */
+		  color: white;
+		}
+		</style>
 </head>
 <body>
 	<form id="form1" runat="server">
@@ -105,19 +123,32 @@
 							<div id="centerText" style="text-align:center">
 								<p>
 									Info@IT HelpDesk Web-System
+									
 								</p>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td class="contentMenu">
+							<!-- Side navigation -->
+
 							<table class="menu" style="text-align: center">
-								<tr id="menuButton">
+								<tr class="menuSelect">
 									<td class="menuButton">
-										<a href="Default.aspx" style="text-align: center; vertical-align: middle">Home</a>
+										<a href="Default.aspx" >Home</a>
+									</td>
+								</tr>
+								<tr class="menuSelect">
+									<td class="menuButton">
+										<a href="WebForm1.aspx" >Webform</a>
 									</td>
 								</tr>
 							</table>
+
+							
+							
+
+							
 						</td>
 						<td class="contentMain">
 							<h2>Content
