@@ -85,7 +85,7 @@
 							<div id="Logo">
 								<img src="Images/@.png" class="At" />
 							</div>
-							<div id="centerText">
+							<div id="centerText" style="text-align:center">
 								<p>
 									Info@IT HelpDesk Web-System
 								</p>
