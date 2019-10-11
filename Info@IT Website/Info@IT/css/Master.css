@@ -1,6 +1,7 @@
 ﻿body {
 	margin: 0;
 	padding: 0;
+	height:100%;
 }
 
 a {
@@ -39,7 +40,8 @@ h1 {
 }
 
 .contentMain {
-	height: 500px;
+	/*height: 500px;*/
+	min-height: 100%;
 	background-color: white;
 	width: 650px;
 }
@@ -89,7 +91,12 @@ content-scroll-wrap {
 	width: 5%;
 	vertical-align: top;
 }
+.menuReport {
+	background-color: grey;
+	background-repeat: repeat-y;
+}
 
+/* Master Page side menu */
 .sidebar {
 	list-style-type: none;
 	margin: 0;
@@ -111,4 +118,69 @@ content-scroll-wrap {
 .sidebar li a:hover {
 	background-color: #0071c8;
 	color: white;
+}
+
+/* Report side menu */
+.sidebarReport {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	background-color: grey;
+	font-size: 18px;
+	
+}
+
+	.sidebarReport li a {
+		display: block;
+		color: white;
+		padding: 8px 16px;
+		text-decoration: none;
+		text-align: center;
+	}
+
+		/* Change the link color on hover */
+		.sidebarReport li a:hover {
+			background-color: #939393;
+			color: white;
+		}
+
+.contentWrapper {
+	position: relative;
+	top: -25px;
+	left: -3px;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+
+}
+.centerPH {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-height: 100%;
+	height: 100%;
+	overflow:unset;
+}
+.centerPHReport {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-height: 100%;
+}
+
+.contentWrapperReport {
+	position: relative;
+	top: 24px;
+	left: 2px;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+}
+
+.ReportBlank {
+	float: left;
+	min-height: 100%;
+	width: 200px;
+	background-color: grey
 }

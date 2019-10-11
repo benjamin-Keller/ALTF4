@@ -10,9 +10,7 @@
 			<link href="css/Master.css" rel="stylesheet" />
 			 
         </asp:ContentPlaceHolder>
-	<style type="text/css">
-		
-	</style>
+
 </head>
 <body>
 	<form id="form1" runat="server">
@@ -51,7 +49,12 @@
 							</ul>
 						</td>
 						<td class="contentMain">
-							<asp:ContentPlaceHolder runat="server" ID="BodyContent"></asp:ContentPlaceHolder>
+							
+							<div class="contentWrapper" style="height: 100%;">
+								<div class="centerPH">
+									<asp:ContentPlaceHolder runat="server" ID="BodyContent"></asp:ContentPlaceHolder>
+								</div>
+							</div>
 						</td>
 					</tr>
 					<tr>
