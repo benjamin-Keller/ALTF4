@@ -89,6 +89,7 @@
 		
 		</style>--%>
 		<asp:ContentPlaceHolder ID="head" runat="server">
+			<link href="Master.css" rel="stylesheet" />
 			<title>Info@IT HelpDesk Web-System</title>
         </asp:ContentPlaceHolder>
 </head>
