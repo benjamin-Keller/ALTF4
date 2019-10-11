@@ -96,6 +96,7 @@ content-scroll-wrap {
 	padding: 0;
 	width: 200px;
 	background-color: #0064c8;
+	font-size: 18px;
 }
 
 .sidebar li a {
