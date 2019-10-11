@@ -151,8 +151,7 @@
 							
 						</td>
 						<td class="contentMain">
-							<h2>Content
-							</h2>
+							<asp:ContentPlaceHolder runat="server" ID="BodyContent"></asp:ContentPlaceHolder>
 						</td>
 					</tr>
 					<tr>
