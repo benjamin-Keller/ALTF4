@@ -23,7 +23,7 @@
 						<td colspan="2" class="contentHeader">
 					
 							<div id="Logo">
-								<a href="Default.aspx"><img src="Images/@.png" class="At" /></a>
+								<a href="Default.aspx"><img src="../Images/@.png" class="At" /></a>
 							</div>
 							<div class="centerText">
 								<h1 class="title">
@@ -40,6 +40,14 @@
 							  <li><a href="Default.aspx">Home</a></li>
 							  <li><a href="Equipment.aspx">Equipment</a></li>
 							  <li><a href="Venue.aspx">Venue</a></li>
+							  <li><a href="Department.aspx">Department</a></li>
+							  <li><a href="Request.aspx">Request</a></li>
+							  <li><a href="TutorRequest.aspx">Tutor Request</a></li>
+							  <li><a href="Inspection.aspx">Inspection</a></li>
+							  <li><a href="TaskType.aspx">Task Type</a></li>
+							  <li><a href="Student.aspx">Student</a></li>
+							  <li><a href="Staff.aspx">Staff</a></li>
+							  <li><a href="Reports.aspx">Reports</a></li>
 							</ul>
 						</td>
 						<td class="contentMain">

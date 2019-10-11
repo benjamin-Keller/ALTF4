@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Info_IT
+namespace Info_IT.Pages
 {
-	public partial class Venue : System.Web.UI.Page
+	public partial class TutorRequest : System.Web.UI.Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{

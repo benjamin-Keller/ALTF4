@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HelpDesk.Master" AutoEventWireup="true" CodeBehind="Venue.aspx.cs" Inherits="Info_IT.Venue" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HelpDesk.Master" AutoEventWireup="true" CodeBehind="Venue.aspx.cs" Inherits="Info_IT.Pages.Venue" %>
 <%-- Title --%>
 <asp:Content runat="server" ID="Title" ContentPlaceHolderID="title">Venue | Info@IT HelpDesk Web-System</asp:Content>
 
 <%-- Head --%>
 <asp:Content runat="server" ID="Head" ContentPlaceHolderID="head">
-	<link href="css/Master.css" rel="stylesheet" />
+	<link href="../css/Master.css" rel="stylesheet" />
 </asp:Content>
 
 <%-- Body --%>

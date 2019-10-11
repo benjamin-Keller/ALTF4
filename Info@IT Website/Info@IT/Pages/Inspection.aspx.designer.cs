@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Info_IT
+namespace Info_IT.Pages
 {
 
 
-	public partial class Default
+	public partial class Inspection
 	{
 	}
 }

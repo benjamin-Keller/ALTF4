@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Info_IT
+namespace Info_IT.Pages
 {
 
 

@@ -64,31 +64,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\CSS\w3.css" />
-    <Content Include="Equipment.aspx" />
     <Content Include="css\Master.css" />
     <Content Include="Images\%40.png" />
-    <Content Include="Default.aspx" />
     <Content Include="css\materialize.css" />
     <Content Include="css\materialize.min.css" />
-    <Content Include="Venue.aspx" />
+    <Content Include="Pages\Default.aspx" />
+    <Content Include="Pages\Department.aspx" />
+    <Content Include="Pages\Equipment.aspx" />
+    <Content Include="Pages\Inspection.aspx" />
+    <Content Include="Pages\Reports.aspx" />
+    <Content Include="Pages\Request.aspx" />
+    <Content Include="Pages\Staff.aspx" />
+    <Content Include="Pages\Student.aspx" />
+    <Content Include="Pages\TaskType.aspx" />
+    <Content Include="Pages\TutorRequest.aspx" />
+    <Content Include="Pages\Venue.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Equipment.aspx.cs">
-      <DependentUpon>Equipment.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Equipment.aspx.designer.cs">
-      <DependentUpon>Equipment.aspx</DependentUpon>
-    </Compile>
     <Compile Include="HelpDesk.Master.cs">
       <DependentUpon>HelpDesk.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -96,14 +89,84 @@
     <Compile Include="HelpDesk.Master.designer.cs">
       <DependentUpon>HelpDesk.Master</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Venue.aspx.cs">
+    <Compile Include="Pages\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Department.aspx.cs">
+      <DependentUpon>Department.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Department.aspx.designer.cs">
+      <DependentUpon>Department.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Equipment.aspx.cs">
+      <DependentUpon>Equipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Equipment.aspx.designer.cs">
+      <DependentUpon>Equipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Inspection.aspx.cs">
+      <DependentUpon>Inspection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Inspection.aspx.designer.cs">
+      <DependentUpon>Inspection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Request.aspx.cs">
+      <DependentUpon>Request.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Request.aspx.designer.cs">
+      <DependentUpon>Request.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Staff.aspx.cs">
+      <DependentUpon>Staff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Staff.aspx.designer.cs">
+      <DependentUpon>Staff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Student.aspx.cs">
+      <DependentUpon>Student.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Student.aspx.designer.cs">
+      <DependentUpon>Student.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TaskType.aspx.cs">
+      <DependentUpon>TaskType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TaskType.aspx.designer.cs">
+      <DependentUpon>TaskType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TutorRequest.aspx.cs">
+      <DependentUpon>TutorRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TutorRequest.aspx.designer.cs">
+      <DependentUpon>TutorRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Venue.aspx.cs">
       <DependentUpon>Venue.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Venue.aspx.designer.cs">
+    <Compile Include="Pages\Venue.aspx.designer.cs">
       <DependentUpon>Venue.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="HelpDesk.Master" />
@@ -116,6 +179,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
