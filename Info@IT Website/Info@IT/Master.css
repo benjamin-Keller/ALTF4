@@ -80,4 +80,6 @@ content-scroll-wrap {
 .menuButton {
 	width: 205px;
 	border-bottom: 1pt solid black;
+	text-align: center;
+	vertical-align: middle
 }

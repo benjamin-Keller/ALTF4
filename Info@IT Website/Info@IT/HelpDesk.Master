@@ -3,9 +3,9 @@
 
 <html>
 <head runat="server">
-	<title>Info@IT HelpDesk Web-System</title>
+	
 
-	<style>
+	<%--<style>
 		body {
 			margin: 0;
 			padding: 0;
@@ -86,28 +86,11 @@
 			text-align: center; vertical-align: middle
 		}
 		
-		/*Side bar */
-		.vertical-menu {
-		  width: 200px; /* Set a width if you like */
-		}
-
-		.vertical-menu a {
-		  background-color: #eee; /* Grey background color */
-		  color: black; /* Black text color */
-		  display: block; /* Make the links appear below each other */
-		  padding: 12px; /* Add some padding */
-		  text-decoration: none; /* Remove underline from links */
-		}
-
-		.vertical-menu a:hover {
-		  background-color: #ccc; /* Dark grey background on mouse-over */
-		}
-
-		.vertical-menu a.active {
-		  background-color: #4CAF50; /* Add a green color to the "active/current" link */
-		  color: white;
-		}
-		</style>
+		
+		</style>--%>
+		<asp:ContentPlaceHolder ID="head" runat="server">
+			<title>Info@IT HelpDesk Web-System</title>
+        </asp:ContentPlaceHolder>
 </head>
 <body>
 	<form id="form1" runat="server">
@@ -140,7 +123,7 @@
 								</tr>
 								<tr class="menuSelect">
 									<td class="menuButton">
-										<a href="WebForm1.aspx" >Webform</a>
+										<a href="WebForm1.aspx">Webform</a>
 									</td>
 								</tr>
 							</table>
