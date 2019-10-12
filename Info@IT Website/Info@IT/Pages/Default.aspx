@@ -9,5 +9,6 @@
 
 <%-- Body --%>
 <asp:Content runat="server" ID="Content" ContentPlaceHolderID="BodyContent">
+	<!-- You program in here -->
 	<h2>Default.aspx</h2>
 </asp:Content>

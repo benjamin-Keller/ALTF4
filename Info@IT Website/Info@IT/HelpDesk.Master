@@ -52,6 +52,7 @@
 							
 							<div class="contentWrapper" style="height: 100%;">
 								<div class="centerPH">
+									<!-- Here is where your code goes FROM the other pages -->
 									<asp:ContentPlaceHolder runat="server" ID="BodyContent"></asp:ContentPlaceHolder>
 								</div>
 							</div>
