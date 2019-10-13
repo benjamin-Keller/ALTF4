@@ -9,5 +9,34 @@
 
 <%-- Body --%>
 <asp:Content runat="server" ID="Content" ContentPlaceHolderID="BodyContent">
-	<h2>Department.aspx</h2>
+	<%--<h2>Department.aspx</h2>--%>
+
+    <div class="contentWrapperReport">
+			<div class=>
+				<!-- Filling in blank space -->
+	    <div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey">
+				<div>
+					<%--<ul class="sidebarReport">
+						<li><a href="Default.aspx">Manage</a></li>
+					</ul>--%>
+                    <p><asp:Button runat="server" ID="Manage" Text="Manage" class="manage"/></p>
+				</div>
+            
+        </div>
+                <div style="min-height: 100%; width:1500px; padding-top:10px; padding-bottom: 2px; background-color: white">
+                    <label style="position:absolute; left:220px">Name:</label>
+                    <label style="position:absolute; left:420px">Building:</label>
+                    <label style="position:absolute; left:550px">Contact Person:</label>
+                    <label style="position:absolute; left:750px">Contact Number:</label>
+                    <label style="position:absolute; left:950px">Email Address:</label><br />
+
+                    <asp:TextBox runat="server" ID="txtName" style="position:absolute; left:220px"/>
+                    <asp:DropDownList runat="server" ID="cmbBuilding"  style="position:absolute; left:420px"/>
+                    <asp:TextBox runat="server" ID="txtContactPerson"  style="position:absolute; left:550px"/>
+                    <asp:TextBox runat="server" ID="txtContactNo"  style="position:absolute; left:750px"/>
+                    <asp:TextBox runat="server" ID="txtEmailAddress"  style="position:absolute; left:950px"/>
+                </div>
+			</div>
+        
+    </div>
 </asp:Content>
