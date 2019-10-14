@@ -66,8 +66,6 @@
   <ItemGroup>
     <Content Include="css\Master.css" />
     <Content Include="Images\%40.png" />
-    <Content Include="css\materialize.css" />
-    <Content Include="css\materialize.min.css" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="Pages\Department.aspx" />
     <Content Include="Pages\Equipment.aspx" />
