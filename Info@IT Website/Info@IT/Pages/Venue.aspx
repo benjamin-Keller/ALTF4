@@ -5,23 +5,28 @@
 <%-- Head --%>
 <asp:Content runat="server" ID="Head" ContentPlaceHolderID="head">
 	<link href="../css/Master.css" rel="stylesheet" />
+	<script src="../Script/Scripts.js"></script>
 </asp:Content>
 
 <%-- Body --%>
 <asp:Content runat="server" ID="Content" ContentPlaceHolderID="BodyContent">
-	<h2 style="width: 1px; height: 7px">Venue.aspx</h2>
      
         <div class="contentWrapperReport">
 			<div>
-				<!-- Filling in blank space -->
-				<div style="position:absolute; min-height: 100%; width: 239px; left: 0px; padding-bottom: 2px; background-color: grey; top: -47px; height: 103px;">
-					<div onclick="location.href='Default.aspx;" style="background-color: black; height: 52px; padding-top: 1px">
-						<%--<ul class="sidebarReport">
-							<li><a href="Default.aspx">Manage</a></li>
-						</ul>--%>
-						<p class="manage" style="padding-top:10px">Manage</p>
-	  </div>
+				<!-- Side Nav -->
+				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey">
+					<div onclick="openFlatButtonVenue()" class="manage_Style">
+						<p class="manage" style="padding-top: 0px">Manage</p>
+					</div>
+                    <div onclick="btnManageAdd" id="addButtonVenue" class="manageAdd" >
+						<p class="manage" style="padding-top: 0px">Add Venue</p>
+					</div>
+                    <div id="updateButtonVenue" class="manageAdd_Style">
+						<p class="manage" style="padding-top: 0px">Update Venue</p>
+					</div>
 				</div>
+
+				<!-- Content -->
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
 
                <div style="position:relative; top:0px; height: 2px; width:66%; background-color: blue; left: 30px;">
@@ -39,7 +44,7 @@
                      <asp:DropDownList ID ="cmbBuilding" runat ="server" style="position:absolute; left:1089px; width: 113px; height: 25px; top: -1px;"/>
                </div>
                     <div style="position:relative; top:-2147483648%; height: 50%; background-color: darkgrey; left: 1px;">
-			   </div>
+					</div>
                 </div>
                 </div>
         </div>

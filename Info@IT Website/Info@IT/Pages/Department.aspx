@@ -14,23 +14,21 @@
 
     <div class="contentWrapperReport">
 			<div>
-				<!-- Filling in blank space -->
+				<!-- Side Nav -->
 				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey">
-					<div onclick="openFlatButtonDepartment()" style="background-color: black; height: 52px; padding-top: 1px">
-						<%--<ul class="sidebarReport">
-							<li><a href="Default.aspx">Manage</a></li>
-						</ul>--%>
+					<div onclick="openFlatButtonDepartment()" class="manage_Style">
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
-                    <div id="addButtonDepartment" style="background-color: black; height: 52px; padding-top: 1px; display: none">
-						
+                    <div onclick="btnManageAdd" id="addButtonDepartment" class="manageAdd" >
 						<p class="manage" style="padding-top: 0px">Add Department</p>
 					</div>
-                    <div id="updateButtonDepartment" style="background-color: black; height: 52px; padding-top: 1px; display: none">
+                    <div id="updateButtonDepartment" class="manageAdd_Style">
 						
 						<p class="manage" style="padding-top: 0px">Update Department</p>
 					</div>
 				</div>
+
+				<!-- Content -->
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
 
 					<div style="position:relative; top:0; height: 50%; width:100%; background-color: blue;">

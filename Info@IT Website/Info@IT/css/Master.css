@@ -186,9 +186,56 @@ content-scroll-wrap {
 }
 
 .manage {
-    display: block;
-    color: white;
-    padding: 8px 16px;
-    text-decoration: none;
-    text-align: center;
+	display: block;
+	color: white;
+	padding: 8px 16px;
+	text-decoration: none;
+	text-align: center;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.manage_Style {
+	background-color: #696969;
+	color: black;
+	height: 52px;
+	padding-top: 1px;
+	cursor: pointer;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.manageAdd {
+	background-color: #585858;
+	height: 52px;
+	padding-top: 1px;
+	display: none;
+	cursor: pointer;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.manageAdd_Style {
+	background-color: #585858;
+	height: 52px;
+	padding-top: 1px;
+	display: none;
+	cursor: pointer;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
