@@ -34,7 +34,7 @@
 						<label style="position:absolute; left:420px">Building:</label>
 						<label style="position:absolute; left:550px; width:126px; top: 0px;">Contact Person:</label>
 						<label style="position:absolute; left:750px; top: 0px; width: 124px;">Contact Number:</label>
-						<label style="position:absolute; left:950px">Email Address:</label><br />
+						<label style="position:absolute; left:950px; top: 0px; width: 127px;">Email Address:</label><br />
 
 						<asp:TextBox runat="server" ID="txtName" style="position:absolute; left:220px"/>
 						<asp:DropDownList runat="server" ID="cmbBuilding"  style="position:absolute; left:415px; width: 110px; height: 22px"/>
