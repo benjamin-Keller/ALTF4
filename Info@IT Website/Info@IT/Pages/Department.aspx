@@ -48,7 +48,8 @@
 					</div>
 
 					<div style="position:relative; top:50%; height: 50%; background-color: darkgrey">
-						<asp:DataGrid runat="server" ID="dgDepartment" style="width:50%; height:50%; vertical-align:middle;"/>
+						<asp:DataGrid runat="server" ID="dgDepartment" style="width:50%; height:50%; vertical-align:middle;" OnLoad="dgDepartment_Load1" OnSelectedIndexChanged="dgDepartment_SelectedIndexChanged">
+                            </asp:DataGrid>
 					</div>
 
                 </div>
