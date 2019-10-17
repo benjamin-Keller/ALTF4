@@ -29,6 +29,20 @@
 				<!-- Content -->
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
 
+                    <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
+
+					<div style="position:relative; top:0; height: 50%; width:100%; background-color: blue;">
+						<label style="position:absolute; left:220px; top: 0px; width: 128px;">Student Number:</label>
+						<label style="position:absolute; left:420px">Name:</label>
+						<label style="position:absolute; left:620px">Surname:</label>
+						<label style="position:absolute; left:820px; top: 0px; width: 162px;">Email Address:</label><br />
+
+						<asp:TextBox runat="server" ID="txtStudentNumber" style="position:absolute; left:220px"/>
+						<asp:TextBox runat="server" ID="txtName" style="position:absolute; left:420px"/>
+						<asp:TextBox runat="server" ID="txtSurname"  style="position:absolute; left:620px"/>
+						<asp:TextBox runat="server" ID="txtEmailAddress"  style="position:absolute; left:820px; top: 23px; width: 162px;"/>
+					</div>
+
 					<!-- DataGrid -->
 					<div style="position:relative; top:50px; left: 220px; height: 50%; background-color: darkgrey">
 						<asp:DataGrid runat="server" ID="dgStudent" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgStudent_Load1" OnSelectedIndexChanged="dgStudent_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True">
