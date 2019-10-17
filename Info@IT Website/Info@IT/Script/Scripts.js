@@ -1,4 +1,5 @@
-﻿function openFlatButtonDepartment() {
+﻿/* Department */
+function openFlatButtonDepartment() {
 
     if (document.getElementById("addButtonDepartment").style.display == "none") {
         document.getElementById("updateButtonDepartment").style.display = "block";
@@ -6,10 +7,12 @@
     }
     else {
         document.getElementById("updateButtonDepartment").style.display = "none";
-        document.getElementById("addButtonDepartment").style.display = "none";
+		document.getElementById("addButtonDepartment").style.display = "none";
     }
 }
 
+
+/* Equipment */
 function openFlatButtonEquipment() {
 
     if (document.getElementById("addButtonEquipment").style.display == "none") {
@@ -22,6 +25,7 @@ function openFlatButtonEquipment() {
     }
 }
 
+/* Venue */
 function openFlatButtonVenue() {
 
     if (document.getElementById("addButtonVenue").style.display == "none") {
@@ -34,6 +38,7 @@ function openFlatButtonVenue() {
     }
 }
 
+/* Request */
 function openFlatButtonRequest() {
 
     if (document.getElementById("addButtonRequest").style.display == "none") {
@@ -46,6 +51,7 @@ function openFlatButtonRequest() {
     }
 }
 
+/* Tutor Request */
 function openFlatButtonTutorRequest() {
 
     if (document.getElementById("addButtonTutorRequest").style.display == "none") {
@@ -58,6 +64,7 @@ function openFlatButtonTutorRequest() {
     }
 }
 
+/* Inspection */
 function openFlatButtonInspection() {
     if (document.getElementById("addButtonInspection").style.display == "none") {
         document.getElementById("updateButtonInspection").style.display = "block";
@@ -69,6 +76,7 @@ function openFlatButtonInspection() {
     }
 }
 
+/* Task Type */
 function openFlatButtonTaskType() {
 
     if (document.getElementById("addButtonTaskType").style.display == "none") {
@@ -81,6 +89,7 @@ function openFlatButtonTaskType() {
     }
 }
 
+/* Student */
 function openFlatButtonStudent() {
 
     if (document.getElementById("addButtonStudent").style.display == "none") {
@@ -93,6 +102,7 @@ function openFlatButtonStudent() {
     }
 }
 
+/* Staff */
 function openFlatButtonStaff() {
 
     if (document.getElementById("addButtonStaff").style.display == "none") {
