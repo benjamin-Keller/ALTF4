@@ -239,3 +239,17 @@ content-scroll-wrap {
 	-ms-user-select: none;
 	user-select: none;
 }
+
+.homeHeader {
+	position: absolute;
+	top: 10px;
+	left: 650px;
+	text-align: center;
+	font-family: 'Segoe UI';
+	font-weight: bolder;
+
+}
+
+.home{
+	vertical-align: central;
+}

@@ -10,5 +10,8 @@
 <%-- Body --%>
 <asp:Content runat="server" ID="Content" ContentPlaceHolderID="BodyContent">
 	<!-- You program in here -->
-	<h2>Default.aspx</h2>
+	<div class="centerText">
+		<h2 class="title">Default.aspx</h2>
+
+	</div>
 </asp:Content>
