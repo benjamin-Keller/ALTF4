@@ -5,6 +5,7 @@
 <%-- Head --%>
 <asp:Content runat="server" ID="Head" ContentPlaceHolderID="head">
 	<link href="../css/Master.css" rel="stylesheet" />
+    <script type="text/javascript" src="../Script/Scripts.js"></script>
 </asp:Content>
 
 <%-- Body --%>
@@ -15,11 +16,15 @@
 			<div>
 				<!-- Filling in blank space -->
 				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey">
-					<div onclick="location.href='Default.aspx;" style="background-color: black; height: 52px; padding-top: 1px">
+					<div onclick="openFlatButtonDepartment()" style="background-color: black; height: 52px; padding-top: 1px">
 						<%--<ul class="sidebarReport">
 							<li><a href="Default.aspx">Manage</a></li>
 						</ul>--%>
 						<p class="manage" style="padding-top: 0px">Manage</p>
+					</div>
+                    <div id="addButtonDepartment" style="background-color: black; height: 52px; padding-top: 1px; display: none">
+						
+						<p class="manage" style="padding-top: 0px">Add Department</p>
 					</div>
 				</div>
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
