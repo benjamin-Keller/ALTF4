@@ -43,8 +43,8 @@
                      <asp:DropDownList ID="cmbBuildingBlocks" runat="server"  style="position:absolute; left:949px; width: 110px; height: 25px; top: 2px;"/>
                      <asp:DropDownList ID ="cmbBuilding" runat ="server" style="position:absolute; left:1089px; width: 113px; height: 25px; top: -1px;"/>
                </div>
-                    <div style="position:relative; top:-2147483648%; height: 50%; background-color: darkgrey; left: 1px;">
-					</div>
+                    <%--<div style="position:relative; top:-2147483648%; height: 50%; background-color: darkgrey; left: 1px;">
+					</div>--%>
                 </div>
                 </div>
         </div>
