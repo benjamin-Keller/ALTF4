@@ -29,6 +29,16 @@
 				<!-- Content -->
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
 
+					<div style="position:relative; top:0; height: 50%; width:100%; background-color: blue;">
+						<label style="position:absolute; left:220px; top: 0px; width: 128px;">Equipment Type:</label>
+                        
+						<asp:TextBox runat="server" ID="txtDescription" style="position:absolute; left:220px; top: 24px;"/>
+					</div>
+
+                    <div style="position:relative; top:50px; left: 210px; height: 50%; background-color: darkgrey">
+						<asp:DataGrid runat="server" ID="dgEquipment" style="width:50%; height:50%; vertical-align:middle;"/>
+					</div>
+
 					
 					<!-- DataGrid -->
 					<div style="position:relative; top:50px; left: 220px; height: 50%; background-color: darkgrey">

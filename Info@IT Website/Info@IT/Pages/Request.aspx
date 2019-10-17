@@ -29,7 +29,26 @@
 				<!-- Content -->
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
 
-					
+					<div style="position:relative; top:0; height: 50%; width:100%; background-color: blue;">
+						<label style="position:absolute; left:220px">Description:</label>
+						<label style="position:absolute; left:520px">Staff:</label>
+						<label style="position:absolute; left:820px">Student:</label>
+						<label style="position:absolute; left:1120px; width:192px">Task Type:</label>
+                        <label style="position:absolute; left:1120px; top: 72px;">Date:</label>
+                        <label style="position:absolute; left:220px; top: 72px;">Time:</label>
+                        <label style="position:absolute; left:520px; width:192px; top: 72px;">Staff (Assigned Staff):</label>
+                        <label style="position:absolute; left:820px; top: 72px;">Status:</label><br />
+                        
+						<asp:TextBox runat="server" ID="txtDescription" style="position:absolute; width:192px; left:220px"/>
+						<asp:DropDownList runat="server" ID="cmbStaff" style="position:absolute; width:192px; left:520px"/>
+						<asp:DropDownList runat="server" ID="cmbStudentCode"  style="position:absolute; width:192px; left:820px"/>
+						<asp:DropDownList runat="server" ID="cmbTaskTypeCode"  style="position:absolute; width:192px; left:1120px"/>
+                        <asp:Calendar runat="server" ID="dateRequest" style="position:absolute; left:1120px; top: 96px;"/>
+						<asp:DropDownList runat="server" ID="cmbTime" style="position:absolute; left:220px; width:192px; top: 96px;"/>
+						<asp:DropDownList runat="server" ID="cmbAssignedStaffCode"  style="position:absolute; width:192px; left:520px; top: 96px;"/>
+						<asp:DropDownList runat="server" ID="cmbStatus"  style="position:absolute; left:820px; width:192px; top: 96px;"/>
+					</div>
+
 					<!-- DataGrid -->
 					<div style="position:relative; top:50px; left: 220px; height: 50%; background-color: darkgrey">
 						<asp:DataGrid runat="server" ID="dgRequest" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgRequest_Load1" OnSelectedIndexChanged="dgRequest_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" PageSize="15">
