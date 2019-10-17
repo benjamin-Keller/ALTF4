@@ -30,10 +30,10 @@
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
 
 					<div style="position:relative; top:0; height: 50%; width:100%; background-color: blue;">
-						<label style="position:absolute; left:220px">Name:</label>
+						<label style="position:absolute; left:220px; width:auto">Name:</label>
 						<label style="position:absolute; left:420px">Building:</label>
-						<label style="position:absolute; left:550px">Contact Person:</label>
-						<label style="position:absolute; left:750px">Contact Number:</label>
+						<label style="position:absolute; left:550px; width:126px; top: 0px;">Contact Person:</label>
+						<label style="position:absolute; left:750px; top: 0px; width: 124px;">Contact Number:</label>
 						<label style="position:absolute; left:950px">Email Address:</label><br />
 
 						<asp:TextBox runat="server" ID="txtName" style="position:absolute; left:220px"/>
