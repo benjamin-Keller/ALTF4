@@ -14,7 +14,7 @@
         <div class="contentWrapperReport">
 			<div>
 				<!-- Filling in blank space -->
-				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey">
+				<div style="position:absolute; min-height: 100%; width: 239px; left: 0px; padding-bottom: 2px; background-color: grey; top: -47px; height: 103px;">
 					<div onclick="location.href='Default.aspx;" style="background-color: black; height: 52px; padding-top: 1px">
 						<%--<ul class="sidebarReport">
 							<li><a href="Default.aspx">Manage</a></li>
@@ -24,7 +24,7 @@
 				</div>
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
 
-               <div style="position:relative; top:1px; height: 2px; width:66%; background-color: blue; left: 28px;">
+               <div style="position:relative; top:0px; height: 2px; width:66%; background-color: blue; left: 30px;">
                     <label style="position:absolute; left:341px; top: -28px;">Description:</label>
                     <label style="position:absolute; left:557px; top: -32px; height: 29px; width: 76px;">Capacity:</label>
                     <label style="position:absolute; left:756px; top: -48px; width: 100px; height: 42px;">Door Number:</label>
@@ -38,7 +38,7 @@
                      <asp:DropDownList ID="cmbBuildingBlocks" runat="server"  style="position:absolute; left:949px; width: 110px; height: 25px; top: 2px;"/>
                      <asp:DropDownList ID ="cmbBuilding" runat ="server" style="position:absolute; left:1089px; width: 113px; height: 25px; top: -1px;"/>
                </div>
-                    <div style="position:relative; top:50%; height: 50%; background-color: darkgrey">
+                    <div style="position:relative; top:-2147483648%; height: 50%; background-color: darkgrey; left: 1px;">
 			   </div>
                 </div>
                 </div>
