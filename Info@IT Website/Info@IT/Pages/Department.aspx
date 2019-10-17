@@ -26,6 +26,10 @@
 						
 						<p class="manage" style="padding-top: 0px">Add Department</p>
 					</div>
+                    <div id="updateButtonDepartment" style="background-color: black; height: 52px; padding-top: 1px; display: none">
+						
+						<p class="manage" style="padding-top: 0px">Update Department</p>
+					</div>
 				</div>
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
 
