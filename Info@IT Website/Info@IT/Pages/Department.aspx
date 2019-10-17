@@ -45,7 +45,8 @@
 						<asp:TextBox runat="server" ID="txtEmailAddress"  style="position:absolute; left:950px"/>
 					</div>
 
-					<div style="position:relative; top:50px; left: 210px; height: 50%; background-color: darkgrey">
+					<!-- DataGrid -->
+					<div style="position:relative; top:50px; left: 220px; height: 50%; background-color: darkgrey">
 						<asp:DataGrid runat="server" ID="dgDepartment" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgDepartment_Load1" OnSelectedIndexChanged="dgDepartment_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" PageSize="15">
 							<AlternatingItemStyle BackColor="White" ForeColor="#284775" />
 							<EditItemStyle BackColor="#999999" />

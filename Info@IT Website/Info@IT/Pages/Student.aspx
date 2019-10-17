@@ -29,7 +29,17 @@
 				<!-- Content -->
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
 
-					
+					<!-- DataGrid -->
+					<div style="position:relative; top:50px; left: 220px; height: 50%; background-color: darkgrey">
+						<asp:DataGrid runat="server" ID="dgStudent" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgStudent_Load1" OnSelectedIndexChanged="dgStudent_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" PageSize="15">
+							<AlternatingItemStyle BackColor="White" ForeColor="#284775" />
+							<EditItemStyle BackColor="#999999" />
+							<FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+							<HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+							<ItemStyle BackColor="#F7F6F3" ForeColor="#333333" />
+							<PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" Mode="NumericPages" />
+							<SelectedItemStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
+						</asp:DataGrid>
                 </div>
 			</div>
     </div>
