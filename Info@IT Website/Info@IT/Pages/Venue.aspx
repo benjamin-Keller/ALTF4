@@ -24,19 +24,19 @@
 				</div>
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
 
-               <div style="position:relative; top:-142px; height: 50%; width:100%; background-color: blue; left: 3px;">
-                    <label style="position:absolute; left:341px; top: -33px;">Description:</label>
-                    <label style="position:absolute; left:558px; top: -38px;">Capacity:</label>
-                    <label style="position:absolute; left:751px; top: -60px; width: 109px;">Door Number:</label>
-                    <label style="position:absolute; left:952px; top: -68px; height: 53px;">Building Block:</label>
-                    <label style="position:absolute; left:1078px; top: -39px; width: 106px;">Building:</label>
+               <div style="position:relative; top:1px; height: 2px; width:66%; background-color: blue; left: 28px;">
+                    <label style="position:absolute; left:341px; top: -28px;">Description:</label>
+                    <label style="position:absolute; left:557px; top: -32px; height: 29px; width: 76px;">Capacity:</label>
+                    <label style="position:absolute; left:756px; top: -48px; width: 100px; height: 42px;">Door Number:</label>
+                    <label style="position:absolute; left:952px; top: -48px; height: 36px; width: 101px;">Building Block:</label>
+                    <label style="position:absolute; left:1087px; top: -39px; width: 106px;">Building:</label>
 
        
                      <asp:TextBox runat="server" ID="txtDescription" Width="161px" style="position:absolute; left:338px; top: 4px;" /> 
-                     <asp:TextBox runat="server" ID="txtCapacity" style="position:absolute; left:550px"/>
-                     <asp:TextBox runat="server" ID="txtDoorNumber" style="position:absolute; left:750px"/> 
-                     <asp:DropDownList ID="cmbBuildingBlocks" runat="server"  style="position:absolute; left:949px; width: 110px; height: 19px; top: 0px;"/>
-                     <asp:DropDownList ID ="cmbBuilding" runat ="server" style="position:absolute; left:1083px; width: 110px; height: 14px; top: -2px;"/>
+                     <asp:TextBox runat="server" ID="txtCapacity" style="position:absolute; left:551px; top: 5px;"/>
+                     <asp:TextBox runat="server" ID="txtDoorNumber" style="position:absolute; left:749px; top: 5px;"/> 
+                     <asp:DropDownList ID="cmbBuildingBlocks" runat="server"  style="position:absolute; left:949px; width: 110px; height: 25px; top: 2px;"/>
+                     <asp:DropDownList ID ="cmbBuilding" runat ="server" style="position:absolute; left:1089px; width: 113px; height: 25px; top: -1px;"/>
                </div>
                     <div style="position:relative; top:50%; height: 50%; background-color: darkgrey">
 			   </div>
