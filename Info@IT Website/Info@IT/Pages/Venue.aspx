@@ -14,7 +14,7 @@
    <div class="contentWrapperReport">
 	<div>
 				<!-- Side Nav -->
-				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey; top: -55px;">
+				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey; ">
 					<div onclick="openFlatButtonVenue()" class="manage_Style">
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
@@ -30,23 +30,23 @@
            <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
 
                <div style="position:relative; top:0; height: 50%; width:100%;">
-                    <label style ="position:absolute; left:220px; width:auto; top: -29px;">Description</label>
-                    <label style =" position:absolute; left:420px; top:-29px ; width:124px">Capacity</label>
-                    <label style =" position:absolute; left :560px; top:-29px ; width:126px">DoorNumber</label>
-                    <label style =" position:absolute; left :750px; top: -29px;">BuildingBlocks</label>
-                    <label style =" position:absolute; left :910px; top: -29px;">Building</label>
+                    <label style ="position:absolute; left:220px; width:auto; top: 0px;">Description</label>
+                    <label style =" position:absolute; left:420px; top:0px ; width:124px">Capacity</label>
+                    <label style =" position:absolute; left :560px; top:0px ; width:126px">DoorNumber</label>
+                    <label style =" position:absolute; left :750px; top: 0px;">BuildingBlocks</label>
+                    <label style =" position:absolute; left :910px; top: 0px;">Building</label>
        
-                     <asp:TextBox runat="server" ID="txtDescription"  style="position:absolute; left:220px; top: 4px;" /> 
-                     <asp:TextBox runat="server" ID="txtCapacity" style="position:absolute; left:415px; top: 4px; width: 119px;"/>
-                     <asp:TextBox runat="server" ID="txtDoorNumber" style="position:absolute; left:559px; top: 4px; width: 167px;"/> 
-                     <asp:DropDownList ID="cmbBuildingBlocks" runat="server"  style="position:absolute; left:750px; width: 110px; height: 25px; top: 4px;"/>
-                     <asp:DropDownList ID ="cmbBuilding" runat ="server" style="position:absolute; left:910px; width: 113px; height: 25px; top: 4px;"/>
+                     <asp:TextBox runat="server" ID="txtDescription"  style="position:absolute; left:220px; top: 20px;" /> 
+                     <asp:TextBox runat="server" ID="txtCapacity" style="position:absolute; left:415px; top: 20px; width: 119px;"/>
+                     <asp:TextBox runat="server" ID="txtDoorNumber" style="position:absolute; left:559px; top: 20px; width: 167px;"/> 
+                     <asp:DropDownList ID="cmbBuildingBlocks" runat="server"  style="position:absolute; left:750px; width: 110px; height: 25px; top: 20px;"/>
+                     <asp:DropDownList ID ="cmbBuilding" runat ="server" style="position:absolute; left:910px; width: 113px; height: 25px; top: 20px;"/>
                </div>
                     <%--<div style="position:relative; top:-2147483648%; height: 50%; background-color: darkgrey; left: 1px;">
 					</div>--%>
 
 					<!-- DataGrid -->
-					<div style="position:relative; top:50px; left: 220px; height: 50%; background-color: darkgrey">
+					<div style="position:relative; top:65px; left: 220px; height: 50%; background-color: darkgrey">
 						<asp:DataGrid runat="server" ID="dgVenue" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgVenue_Load1" OnSelectedIndexChanged="dgVenue_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" OnPageIndexChanged="dgVenue_PageIndexChanged">
 							<AlternatingItemStyle BackColor="White" ForeColor="#284775" />
 							<EditItemStyle BackColor="#999999" />
