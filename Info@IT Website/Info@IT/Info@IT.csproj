@@ -69,7 +69,9 @@
     <Content Include="Pages\Default.aspx" />
     <Content Include="Pages\Department.aspx" />
     <Content Include="Pages\Equipment.aspx" />
+    <Content Include="Pages\EquipmentDetails.aspx" />
     <Content Include="Pages\Inspection.aspx" />
+    <Content Include="Pages\InspectionDetails.aspx" />
     <Content Include="Pages\Reports.aspx" />
     <Content Include="Pages\Request.aspx" />
     <Content Include="Pages\Staff.aspx" />
@@ -109,12 +111,26 @@
     <Compile Include="Pages\Equipment.aspx.designer.cs">
       <DependentUpon>Equipment.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\EquipmentDetails.aspx.cs">
+      <DependentUpon>EquipmentDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EquipmentDetails.aspx.designer.cs">
+      <DependentUpon>EquipmentDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Inspection.aspx.cs">
       <DependentUpon>Inspection.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Inspection.aspx.designer.cs">
       <DependentUpon>Inspection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InspectionDetails.aspx.cs">
+      <DependentUpon>InspectionDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\InspectionDetails.aspx.designer.cs">
+      <DependentUpon>InspectionDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Reports.aspx.cs">
       <DependentUpon>Reports.aspx</DependentUpon>
