@@ -28,10 +28,15 @@
 
 				<!-- Content -->
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
+                    <div style="position:relative; top:0; height: 50%; width:100%;">
+						<label style="position:absolute; left:220px; width:56px; top:0px">Name:</label>
+
+                        <asp:TextBox runat="server" ID="txtName" style="position:absolute; left:219px ; height:22px; top: 22px;"/>
+                    </div>
 
 					
 					<!-- DataGrid -->
-					<div style="position:relative; top:50px; left: 220px; height: 50%; background-color: darkgrey">
+					<div style="position:relative; top:62px; left: 220px; height: 50%; background-color: darkgrey">
 						<asp:DataGrid runat="server" ID="dgTaskType" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgTaskType_Load1" OnSelectedIndexChanged="dgTaskType_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True">
 							<AlternatingItemStyle BackColor="White" ForeColor="#284775" />
 							<EditItemStyle BackColor="#999999" />
@@ -44,4 +49,5 @@
                 </div>
 			</div>
     </div>
+</div>
 </asp:Content>
