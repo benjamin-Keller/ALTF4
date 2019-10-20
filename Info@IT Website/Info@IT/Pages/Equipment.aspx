@@ -35,10 +35,7 @@
 						<asp:TextBox runat="server" ID="txtDescription" style="position:absolute; left:220px; top: 24px;"/>
 					</div>
 
-                    <div style="position:relative; top:50px; left: 210px; height: 50%; background-color: darkgrey">
-						<asp:DataGrid runat="server" ID="dgEquipment" style="width:50%; height:50%; vertical-align:middle;"/>
-					</div>
-
+                  
 					
 					<!-- DataGrid -->
 					<div style="position:relative; top:50px; left: 220px; height: 50%; background-color: darkgrey">

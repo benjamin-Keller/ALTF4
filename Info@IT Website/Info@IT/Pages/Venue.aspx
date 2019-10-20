@@ -30,11 +30,11 @@
            <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
 
                <div style="position:relative; top:0; height: 50%; width:100%;">
-                    <label style ="position:absolute; left:220px; width:auto; top: 0px;">Description</label>
-                    <label style =" position:absolute; left:420px; top:0px ; width:124px">Capacity</label>
-                    <label style =" position:absolute; left :560px; top:0px ; width:126px">DoorNumber</label>
-                    <label style =" position:absolute; left :750px; top: 0px;">BuildingBlocks</label>
-                    <label style =" position:absolute; left :910px; top: 0px;">Building</label>
+                    <label style = "position:absolute; left:220px; width:auto; top: 0px;">Description</label>
+                    <label style = "position:absolute; left:420px; top:0px; width:124px">Capacity</label>
+                    <label style = "position:absolute; left :560px; top:0px; width:126px">DoorNumber</label>
+                    <label style = "position:absolute; left :750px; top: 0px;">BuildingBlocks</label>
+                    <label style = "position:absolute; left :910px; top: 0px;">Building</label>
        
                      <asp:TextBox runat="server" ID="txtDescription"  style="position:absolute; left:220px; top: 20px;" /> 
                      <asp:TextBox runat="server" ID="txtCapacity" style="position:absolute; left:415px; top: 20px; width: 119px;"/>
