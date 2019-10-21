@@ -29,7 +29,7 @@
 				<!-- Content -->
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
 
-					<div style="position:relative; top:0; height: 50%; width:100%; background-color: blue;">
+					<div style="position:relative; top:0; height: 50%; width:100%;">
 						<label style="position:absolute; left:220px">Description:</label>
 						<label style="position:absolute; left:520px">Staff:</label>
 						<label style="position:absolute; left:820px">Student:</label>
@@ -63,4 +63,5 @@
                 </div>
 			</div>
     </div>
+        </div>
 </asp:Content>

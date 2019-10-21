@@ -25,6 +25,19 @@ function openFlatButtonEquipment() {
     }
 }
 
+/* Equipment */
+function openFlatButtonEquipment() {
+
+    if (document.getElementById("addButtonEquipmentType").style.display == "none") {
+        document.getElementById("updateButtonEquipmentType").style.display = "block";
+        document.getElementById("addButtonEquipmentType").style.display = "block";
+    }
+    else {
+        document.getElementById("updateButtonEquipmentType").style.display = "none";
+        document.getElementById("addButtonEquipmentType").style.display = "none";
+    }
+}
+
 /* Venue */
 function openFlatButtonVenue() {
 

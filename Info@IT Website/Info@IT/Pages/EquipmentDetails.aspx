@@ -17,10 +17,10 @@
 					<div onclick="openFlatButtonEquipment()" class="manage_Style">
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
-                    <div onclick="btnManageAdd" id="addButtonEquipment" class="manageAdd" >
+                    <div onclick="btnManageAdd" id="addButtonEquipmentType" class="manageAdd" >
 						<p class="manage" style="padding-top: 0px">Add Type</p>
 					</div>
-                    <div id="updateButtonEquipment" class="manageAdd_Style">
+                    <div id="updateButtonEquipmentType" class="manageAdd_Style">
 						
 						<p class="manage" style="padding-top: 0px">Update Type</p>
 					</div>
