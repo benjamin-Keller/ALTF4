@@ -127,3 +127,25 @@ function openFlatButtonStaff() {
         document.getElementById("addButtonStaff").style.display = "none";
     }
 }
+
+function reportVenue() {
+
+    if (document.getElementById("reportVenue").style.display == "none") {
+        document.getElementById("reportVenue").style.display = "block";
+    }
+    else {
+        document.getElementById("reportVenue").style.display = "none";
+        document.getElementById("reportDepartment").style.display = "none";
+    }
+}
+
+function reportDepartment() {
+
+    if (document.getElementById("reportDepartment").style.display == "none") {
+        document.getElementById("reportDepartment").style.display = "block";
+        document.getElementById("reportVenue").style.display = "none";
+    }
+    else {
+        document.getElementById("reportDepartment").style.display = "none";
+    }
+}
