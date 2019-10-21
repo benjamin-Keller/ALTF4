@@ -29,10 +29,14 @@
 				<!-- Content -->
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
 
-					<div style="position:relative; top:0; height: 50%; width:100%; background-color: blue;">
-						<label style="position:absolute; left:220px; top: 0px; width: 128px;">Equipment Type:</label>
-                        
-						<asp:TextBox runat="server" ID="txtDescription" style="position:absolute; left:220px; top: 24px;"/>
+					<div style="position:relative; top:0; height: 50%; width:100%;">
+                        <label style="position:absolute; left:220px; top: 0px; width: 128px;">Description:</label>
+                        <label style="position:absolute; left:420px; top: 0px; width: 128px;">Venue:</label>
+                        <label style="position:absolute; left:620px; top: 0px; width: 128px;">Equipment Type:</label>
+                          
+						<asp:TextBox runat="server" ID="txtDescription" style="position:absolute; left:220px; top: 24px; width: 128px;"/>
+                        <asp:DropDownList runat="server" ID="cmbVenue" style="position:absolute; left:420px; top: 24px; width: 128px;"/>
+                        <asp:DropDownList runat="server" ID="cmbEquipType" style="position:absolute; left:620px; top: 24px; width: 128px;"/>
 					</div>
 
                   

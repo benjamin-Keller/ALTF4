@@ -36,7 +36,7 @@
 						<label style="position:absolute; left:1120px; width:192px">Task Type:</label>
                         <label style="position:absolute; left:1120px; top: 72px;">Date:</label>
                         <label style="position:absolute; left:220px; top: 72px;">Time:</label>
-                        <label style="position:absolute; left:520px; width:192px; top: 72px;">Staff (Assigned Staff):</label>
+                        <label style="position:absolute; left:520px; width:192px; top: 72px;">Assigned Staff:</label>
                         <label style="position:absolute; left:820px; top: 72px;">Status:</label><br />
                         
 						<asp:TextBox runat="server" ID="txtDescription" style="position:absolute; width:192px; left:220px"/>
@@ -50,7 +50,7 @@
 					</div>
 
 					<!-- DataGrid -->
-					<div style="position:relative; top:50px; left: 220px; height: 50%; background-color: darkgrey">
+					<div style="position:relative; top:300px; left: 220px; height: 50%; background-color: darkgrey">
 						<asp:DataGrid runat="server" ID="dgRequest" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgRequest_Load1" OnSelectedIndexChanged="dgRequest_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True">
 							<AlternatingItemStyle BackColor="White" ForeColor="#284775" />
 							<EditItemStyle BackColor="#999999" />
