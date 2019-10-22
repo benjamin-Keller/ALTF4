@@ -13,20 +13,36 @@ function openFlatButtonDepartment() {
 
 
 /* Equipment */
+	/* Manage */
 function openFlatButtonEquipment() {
 
     if (document.getElementById("addButtonEquipment").style.display == "none") {
         document.getElementById("updateButtonEquipment").style.display = "block";
-        document.getElementById("addButtonEquipment").style.display = "block";
+		document.getElementById("addButtonEquipment").style.display = "block";
+
+		document.getElementById("viewButtonEquipment").style.display = "none";
     }
     else {
         document.getElementById("updateButtonEquipment").style.display = "none";
         document.getElementById("addButtonEquipment").style.display = "none";
     }
 }
+	/* View */
+function openFlatButtonEquipmentView() {
 
-/* Equipment */
-function openFlatButtonEquipment() {
+	if (document.getElementById("viewButtonEquipment").style.display == "none") {
+		document.getElementById("viewButtonEquipment").style.display = "block";
+
+		document.getElementById("updateButtonEquipment").style.display = "none";
+		document.getElementById("addButtonEquipment").style.display = "none";
+	}
+	else {
+		document.getElementById("viewButtonEquipment").style.display = "none";
+	}
+}
+
+/* Equipment Type */
+function openFlatButtonEquipmentType() {
 
     if (document.getElementById("addButtonEquipmentType").style.display == "none") {
         document.getElementById("updateButtonEquipmentType").style.display = "block";
