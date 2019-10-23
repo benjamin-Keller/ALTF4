@@ -147,21 +147,404 @@ function openFlatButtonStaff() {
 function reportVenue() {
 
     if (document.getElementById("reportVenue").style.display == "none") {
+
         document.getElementById("reportVenue").style.display = "block";
+
+        try {
+            document.getElementById("reportStudent").style.display = "none";
+        }
+        catch{ }
+        try {
+        document.getElementById("reportStaff").style.display = "none";
+        }
+        catch{ }
+        try {
+        document.getElementById("reportRequest").style.display = "none";
+        }
+        catch{ }
+        try {
+        document.getElementById("reportInspectionDetails").style.display = "none";
+        }
+        catch{ }
+
+        try {
+            document.getElementById("reportInspection").style.display = "none";
+        }
+        catch{ }
+
+        try {
+        document.getElementById("reportEquipment").style.display = "none";
+        }
+        catch{ }
+        try {
+        document.getElementById("reportDepartment").style.display = "none";
+        }
+        catch{ }
+        try {
+        document.getElementById("reportTutorRequest").style.display = "none";
+        }
+        catch{ }
     }
     else {
         document.getElementById("reportVenue").style.display = "none";
-        document.getElementById("reportDepartment").style.display = "none";
     }
 }
 
 function reportDepartment() {
 
     if (document.getElementById("reportDepartment").style.display == "none") {
+
         document.getElementById("reportDepartment").style.display = "block";
-        document.getElementById("reportVenue").style.display = "none";
+
+        try {
+            document.getElementById("reportStudent").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportStaff").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportRequest").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportInspectionDetails").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportInspection").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportEquipment").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportTutorRequest").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportVenue").style.display = "none";
+        }
+        catch{ }
+
     }
     else {
         document.getElementById("reportDepartment").style.display = "none";
     }
 }
+
+function reportEquipment() {
+
+    if (document.getElementById("reportEquipment").style.display == "none") {
+        document.getElementById("reportEquipment").style.display = "block";
+
+        try {
+            document.getElementById("reportStudent").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportStaff").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportRequest").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportInspectionDetails").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportInspection").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportDepartment").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportTutorRequest").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportVenue").style.display = "none";
+        }
+        catch{ }
+    }
+    else {
+        document.getElementById("reportEquipment").style.display = "none";
+    }
+}
+
+function reportInspection() {
+
+    if (document.getElementById("reportInspection").style.display == "none") {
+        document.getElementById("reportInspection").style.display = "block";
+
+        try {
+            document.getElementById("reportStudent").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportStaff").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportRequest").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportInspectionDetails").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportEquipment").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportDepartment").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportTutorRequest").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportVenue").style.display = "none";
+        }
+        catch{ }
+
+    }
+    else {
+        document.getElementById("reportInspection").style.display = "none";
+    }
+}
+
+function reportInspectionDetails() {
+
+    if (document.getElementById("reportInspectionDetails").style.display == "none") {
+        document.getElementById("reportInspectionDetails").style.display = "block";
+
+        try {
+            document.getElementById("reportStudent").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportStaff").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportRequest").style.display = "none";
+        }
+        catch{ }
+
+        try {
+            document.getElementById("reportInspection").style.display = "none";
+        }
+        catch{ }
+
+        try {
+            document.getElementById("reportEquipment").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportDepartment").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportTutorRequest").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportVenue").style.display = "none";
+        }
+        catch{ }
+    }
+    else {
+        document.getElementById("reportInspectionDetails").style.display = "none";
+    }
+}
+
+function reportRequest() {
+
+    if (document.getElementById("reportRequest").style.display == "none") {
+        document.getElementById("reportRequest").style.display = "block";
+
+        try {
+            document.getElementById("reportStudent").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportStaff").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportInspectionDetails").style.display = "none";
+        }
+        catch{ }
+
+        try {
+            document.getElementById("reportInspection").style.display = "none";
+        }
+        catch{ }
+
+        try {
+            document.getElementById("reportEquipment").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportDepartment").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportTutorRequest").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportVenue").style.display = "none";
+        }
+        catch{ }
+    }
+    else {
+        document.getElementById("reportRequest").style.display = "none";
+    }
+}
+
+function reportStaff() {
+
+    if (document.getElementById("reportStaff").style.display == "none") {
+        document.getElementById("reportStaff").style.display = "block";
+
+        try {
+            document.getElementById("reportStudent").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportRequest").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportInspectionDetails").style.display = "none";
+        }
+        catch{ }
+
+        try {
+            document.getElementById("reportInspection").style.display = "none";
+        }
+        catch{ }
+
+        try {
+            document.getElementById("reportEquipment").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportDepartment").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportTutorRequest").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportVenue").style.display = "none";
+        }
+        catch{ }
+    }
+    else {
+        document.getElementById("reportStaff").style.display = "none";
+    }
+}
+
+function reportStudent() {
+
+    if (document.getElementById("reportStudent").style.display == "none") {
+        document.getElementById("reportStudent").style.display = "block";
+        
+        try {
+            document.getElementById("reportStaff").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportRequest").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportInspectionDetails").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportInspection").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportEquipment").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportDepartment").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportTutorRequest").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportVenue").style.display = "none";
+        }
+        catch{ }
+    }
+    else {
+        document.getElementById("reportStudent").style.display = "none";
+    }
+}
+
+function reportTutorRequest() {
+
+    if (document.getElementById("reportTutorRequest").style.display == "none") {
+
+        document.getElementById("reportTutorRequest").style.display = "block";
+
+        try {
+            document.getElementById("reportStudent").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportStaff").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportRequest").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportInspectionDetails").style.display = "none";
+        }
+        catch{ }
+
+        try {
+            document.getElementById("reportInspection").style.display = "none";
+        }
+        catch{ }
+
+        try {
+            document.getElementById("reportEquipment").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportDepartment").style.display = "none";
+        }
+        catch{ }
+        try {
+            document.getElementById("reportVenue").style.display = "none";
+        }
+        catch{ }
+    }
+    else {
+
+        document.getElementById("reportTutorRequest").style.display = "none";
+    }
+}
+
+

@@ -18,6 +18,20 @@ namespace Info_IT.Pages
 
             dgDepartment.DataSource = bll.GetDepartment();
             dgVenue.DataBind();
+
+            dgEquipment.DataSource = bll.GetEquipment();
+            dgVenue.DataBind();
+
+            dgRequest.DataSource = bll.GetRequests();
+            dgVenue.DataBind();
+
+            dgStudent.DataSource = bll.GetStudent();
+            dgVenue.DataBind();
+
+            dgTutorRequest.DataSource = bll.GetTutorRequest();
+            dgVenue.DataBind();
+            
+
         }
 	}
 }
