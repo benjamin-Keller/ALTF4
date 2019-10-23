@@ -27,7 +27,26 @@ namespace Info_IT.Pages
 
         protected void dgDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try
+            {
 
+                DAL.DepartmentClass depClass = new DAL.DepartmentClass(int.Parse(dgDepartment.SelectedItem.Cells[1].Text.ToString()));
+
+                var values = bll.SelectedForUpdateDepartment(depClass);
+
+                txtName.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
+                txtContactPerson.Text = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
+                txtEmailAddress.Text = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
+                txtContactNo.Text = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
+
+                cmbBuilding.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2].ToString();
+            }
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
+            catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
+            {
+
+            }
         }
 
         protected void dgDepartment_Load1(object sender, EventArgs e)
@@ -105,26 +124,7 @@ namespace Info_IT.Pages
 
         protected void dgDepartment_SelectedIndexChanged1(object sender, EventArgs e)
         {
-            try
-            {
-                
-                DAL.DepartmentClass depClass = new DAL.DepartmentClass(int.Parse(dgDepartment.SelectedItem.Cells[0].Text.ToString()));
-
-                var values = bll.SelectedForUpdateDepartment(depClass);
-
-                txtName.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
-                txtContactPerson.Text = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
-                txtEmailAddress.Text = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
-                txtContactNo.Text = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
-
-                cmbBuilding.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2].ToString();
-            }
-#pragma warning disable CS0168 // The variable 'b' is declared but never used
-            catch (Exception b)
-#pragma warning restore CS0168 // The variable 'b' is declared but never used
-            {
-
-            }
+            
         }
 
         protected void dgDepartment_EditCommand(object source, DataGridCommandEventArgs e)
