@@ -43,7 +43,9 @@
 						<asp:DropDownList runat="server" ID="cmbStaff" style="position:absolute; width:192px; left:520px"/>
 						<asp:DropDownList runat="server" ID="cmbStudentCode"  style="position:absolute; width:192px; left:820px"/>
 						<asp:DropDownList runat="server" ID="cmbTaskTypeCode"  style="position:absolute; width:192px; left:1120px"/>
-                        <asp:Calendar runat="server" ID="dateRequest" style="position:absolute; left:1120px; top: 96px;"/>
+						<asp:Calendar runat="server" ID="dateRequest" style="position:absolute; left:1120px; top: 96px;"/>
+
+
 						<asp:DropDownList runat="server" ID="cmbTime" style="position:absolute; left:220px; width:192px; top: 96px;"/>
 						<asp:DropDownList runat="server" ID="cmbAssignedStaffCode"  style="position:absolute; width:192px; left:520px; top: 96px;"/>
 						<asp:DropDownList runat="server" ID="cmbStatus"  style="position:absolute; left:820px; width:192px; top: 96px;"/>
