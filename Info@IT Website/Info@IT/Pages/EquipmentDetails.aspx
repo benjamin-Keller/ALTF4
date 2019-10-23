@@ -41,6 +41,9 @@
 					<div style="position:relative; top:50px; left: 220px; height: 50%; background-color: darkgrey">
 						<asp:DataGrid runat="server" ID="dgEquipmentType" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgEquipmentType_Load1" OnSelectedIndexChanged="dgEquipmentType_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True">
 							<AlternatingItemStyle BackColor="White" ForeColor="#284775" />
+							<Columns>
+								<asp:ButtonColumn CommandName="Select" Text="Select"></asp:ButtonColumn>
+							</Columns>
 							<EditItemStyle BackColor="#999999" />
 							<FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
 							<HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

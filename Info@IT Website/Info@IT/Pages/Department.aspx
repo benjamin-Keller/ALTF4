@@ -51,6 +51,7 @@
 							<AlternatingItemStyle BackColor="White" ForeColor="#284775" />
 							<Columns>
 								<asp:ButtonColumn CommandName="Select" Text="Select"></asp:ButtonColumn>
+								<asp:ButtonColumn CommandName="Select" Text="Select"></asp:ButtonColumn>
 							</Columns>
 							<EditItemStyle BackColor="#999999" />
 							<FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

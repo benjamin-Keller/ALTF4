@@ -4,7 +4,7 @@
 
 <%-- Head --%>
 <asp:Content runat="server" ID="Head" ContentPlaceHolderID="head">
-    <link href="../css/Master.css" rel="stylesheet" />
+	<link href="../css/Master.css" rel="stylesheet" />
 	<script src="../Script/Scripts.js"></script>
 </asp:Content>
 
@@ -49,6 +49,9 @@
 					<div style="position:relative; top:65px; left: 220px; height: 50%; background-color: darkgrey">
 						<asp:DataGrid runat="server" ID="dgVenue" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgVenue_Load1" OnSelectedIndexChanged="dgVenue_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" OnPageIndexChanged="dgVenue_PageIndexChanged">
 							<AlternatingItemStyle BackColor="White" ForeColor="#284775" />
+							<Columns>
+								<asp:ButtonColumn CommandName="Select" Text="Select"></asp:ButtonColumn>
+							</Columns>
 							<EditItemStyle BackColor="#999999" />
 							<FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
 							<HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
