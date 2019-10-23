@@ -15,7 +15,7 @@ namespace Info_IT.Pages
 		{
             dgVenue.DataSource = bll.GetVenues();
             dgVenue.DataBind();
-
+            
             dgDepartment.DataSource = bll.GetDepartment();
             dgDepartment.DataBind();
 
@@ -30,8 +30,30 @@ namespace Info_IT.Pages
 
             dgTutorRequest.DataSource = bll.GetTutorRequest();
             dgTutorRequest.DataBind();
-            
 
+            cmbBuilding.DataSource = bll.LoadCMBBuilding();
+
+            cmbBuilding.DataTextField = "BuildingName";
+            cmbBuilding.DataValueField = "BuildingID";
+            cmbBuilding.DataBind();
+            
+            //cmbVenue.DataSource = bll.GetVenues();
+            //cmbVenue.DataTextField = "VenueDescription";
+            //cmbVenue.DataValueField = "VenueCode";
+            //cmbVenue.DataBind();
+
+            //cmbVenueCode.DataSource = bll.GetVenues();
+
+            //cmbVenueCode.DataTextField = "VenueDescription";
+            //cmbVenueCode.DataValueField = "VenueCode";
+            //cmbVenueCode.DataBind();
+
+            //cmbAssignedStaffCode.DataSource = bll.GetStaff();
+
+            //cmbAssignedStaffCode.DataTextField = "FirstName";
+            //cmbAssignedStaffCode.DataValueField = "StaffCode";
+            //cmbAssignedStaffCode.DataBind();
+            
         }
 	}
 }
