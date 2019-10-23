@@ -14,7 +14,7 @@
 		<div class="contentWrapperReport">
 			<div class="centerPHReport">
 				<!-- Filling in blank space -->
-	            <div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey" >
+	            <div style="position:absolute; min-height: 100%; width: 200px; left: 0px; top:0; padding-bottom: 2px; background-color: grey" >
 				    <div style="height: 100%; " class="sidebarReport">
 					
                         <div onclick="reportEquipment()" class="manage_Style">
@@ -65,12 +65,15 @@
 						    <label style="position:absolute; left:220px; top: 0px; width: 128px;">Student Number:</label>
 						    <label style="position:absolute; left:420px">Name:</label>
 						    <label style="position:absolute; left:620px">Surname:</label>
-						    <label style="position:absolute; left:820px; top: 0px; width: 162px;">Email Address:</label><br />
+						    <label style="position:absolute; left:820px; top: 0px; width: 162px;">Email Address:</label>
+                            
+                            <br />
 
 						    <asp:TextBox runat="server" ID="txtStudentNumber" style="position:absolute; left:220px"/>
 						    <asp:TextBox runat="server" ID="TextBox3" style="position:absolute; left:420px"/>
 						    <asp:TextBox runat="server" ID="txtSurname"  style="position:absolute; left:620px"/>
 						    <asp:TextBox runat="server" ID="TextBox4"  style="position:absolute; left:820px; top: 23px; width: 162px;"/>
+                            <br />
 					    </div>
 
 					    <!-- DataGrid -->
@@ -148,7 +151,7 @@
 
 					    <!-- DataGrid -->
 					    <div style="position:relative; top:300px; left: 220px; height: 50%; background-color: darkgrey">
-						    <asp:DataGrid runat="server" ID="dgRequest" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgRequest_Load1" OnSelectedIndexChanged="dgRequest_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True">
+						    <asp:DataGrid runat="server" ID="dgRequest" style="width:100%; height:50%; vertical-align:middle;" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True">
 							    <AlternatingItemStyle BackColor="White" ForeColor="#284775" />
 							    <EditItemStyle BackColor="#999999" />
 							    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -196,13 +199,14 @@
                             <label style = "position:absolute; left :750px; top: 0px;">BuildingBlocks</label>
                             <label style = "position:absolute; left :910px; top: 0px;">Building</label>
        
-                                <asp:TextBox runat="server" ID="txtDescription"  style="position:absolute; left:220px; top: 20px;" /> 
-                                <asp:TextBox runat="server" ID="txtCapacity" style="position:absolute; left:415px; top: 20px; width: 119px;"/>
-                                <asp:TextBox runat="server" ID="txtDoorNumber" style="position:absolute; left:559px; top: 20px; width: 167px;"/> 
-                                <asp:DropDownList ID="cmbBuildingBlocks" runat="server"  style="position:absolute; left:750px; width: 110px; height: 25px; top: 20px;"/>
-                                <asp:DropDownList ID ="cmbBuilding" runat ="server" style="position:absolute; left:910px; width: 113px; height: 25px; top: 20px;"/>
+                            <asp:TextBox runat="server" ID="txtDescription"  style="position:absolute; left:220px; top: 20px;" /> 
+                            <asp:TextBox runat="server" ID="txtCapacity" style="position:absolute; left:415px; top: 20px; width: 119px;"/>
+                            <asp:TextBox runat="server" ID="txtDoorNumber" style="position:absolute; left:559px; top: 20px; width: 167px;"/> 
+                            <asp:DropDownList ID="cmbBuildingBlocks" runat="server"  style="position:absolute; left:750px; width: 110px; height: 25px; top: 20px;"/>
+                            <asp:DropDownList ID ="cmbBuilding" runat ="server" style="position:absolute; left:910px; width: 113px; height: 25px; top: 20px;"/>
+                            
                         </div>
-
+                        <br />
 					    <!-- DataGrid -->
 					    <div style="position:relative; top:35px; left: 225px; height: 50%; background-color: darkgrey">
 						    <asp:DataGrid runat="server" ID="dgVenue" style="width:100%; height:50%; vertical-align:middle;" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" >

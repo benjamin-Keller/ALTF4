@@ -17,19 +17,19 @@ namespace Info_IT.Pages
             dgVenue.DataBind();
 
             dgDepartment.DataSource = bll.GetDepartment();
-            dgVenue.DataBind();
+            dgDepartment.DataBind();
 
             dgEquipment.DataSource = bll.GetEquipment();
-            dgVenue.DataBind();
+            dgEquipment.DataBind();
 
             dgRequest.DataSource = bll.GetRequests();
-            dgVenue.DataBind();
+            dgRequest.DataBind();
 
             dgStudent.DataSource = bll.GetStudent();
-            dgVenue.DataBind();
+            dgStudent.DataBind();
 
             dgTutorRequest.DataSource = bll.GetTutorRequest();
-            dgVenue.DataBind();
+            dgTutorRequest.DataBind();
             
 
         }
