@@ -18,11 +18,12 @@
 					<div onclick="openFlatButtonVenue()" class="manage_Style">
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
-                    <div onclick="btnManageAdd" id="addButtonVenue" class="manageAdd" >
-						<p class="manage" style="padding-top: 0px">Add Venue</p>
-					</div>
+                    <div id="addButtonVenue" class="manageAdd">
+                        <asp:button runat="server" class="manage" style="padding-top: 0px" OnClick="btnManageAdd"  Text="Add Venue"></asp:button>
+                    </div>
                     <div id="updateButtonVenue" class="manageAdd_Style">
-						<p class="manage" style="padding-top: 0px">Update Venue</p>
+						<asp:button runat="server" class="manage" style="padding-top: 0px" OnClick="btnManageUpdate" Text="Update Venue" ></asp:button>
+					</div>
 					</div>
 				</div>
 

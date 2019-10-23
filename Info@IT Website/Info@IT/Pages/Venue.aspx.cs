@@ -63,5 +63,64 @@ namespace Info_IT.Pages
 		{
 
 		}
-	}
+
+        protected void btnManageAdd(object sender, EventArgs e)
+        {
+            try
+            {
+                //Error for input string not found
+                DAL.VenueClass venue = new DAL.VenueClass(txtDescription.Text, int.Parse(txtCapacity.Text), int.Parse(txtDoorNumber.Text), int.Parse(cmbBuildingBlocks.SelectedValue.ToString()), int.Parse(cmbBuilding.SelectedValue.ToString()));
+                int x = bll.AddVenue(venue);
+
+                if (x > 0)
+                {
+                    txtDescription.Text = "";
+                    txtCapacity.Text = "";
+                    txtDoorNumber.Text = "";
+                    cmbBuildingBlocks.Text = "";
+                    cmbBuilding.Text = "";
+                }
+                else
+                {
+                }
+            }
+            catch
+            {
+            }
+
+            dgVenue.DataSource = bll.GetVenues();
+            dgVenue.DataBind();
+        }
+
+        protected void btnManageUpdate(object sender, EventArgs e)
+        {
+            try
+            {
+
+                //Error for input string not found
+                DAL.VenueClass venue = new DAL.VenueClass(DAL.VenueClass.VenueCode, txtDescription.Text, int.Parse(txtCapacity.Text), int.Parse(txtDoorNumber.Text), int.Parse(cmbBuildingBlocks.SelectedValue.ToString()), int.Parse(cmbBuilding.SelectedValue.ToString()));
+                int x = bll.UpdateVenue(venue);
+
+                if (x > 0)
+                {
+                    txtDescription.Text = "";
+                    txtCapacity.Text = "";
+                    txtDoorNumber.Text = "";
+                    cmbBuildingBlocks.Text = "";
+                    cmbBuilding.Text = "";
+                }
+                else
+                {
+                }
+            }
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
+            catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
+            {
+            }
+
+            dgVenue.DataSource = bll.GetVenues();
+            dgVenue.DataBind();
+        }
+    }
 }
