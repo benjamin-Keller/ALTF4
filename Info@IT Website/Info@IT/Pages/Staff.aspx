@@ -26,37 +26,37 @@
 					</div>
 				</div>
 
+
 				<!-- Content -->
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px;">
+                    
                     <div style="position:relative; top:0; height: 50%; width:100%;">
-						<label style="position:absolute; left:220px; top:0;">Staff Number:</label>
-						<label style="position:absolute; left:370px;">First Name:</label>
-						<label style="position:absolute; left:520px;">Last Name:</label>
-						<label style="position:absolute; left:670px;">Email Address:</label>
-						<label style="position:absolute; left:820px;">Contact Number:</label>
-                        
-                        
-                        <br />
+						
+                        <label style="position:absolute; left:220px; width:192px;">Staff Number:</label>
+						<label style="position:absolute; left:420px; width:192px;">First Name:</label>
+						<label style="position:absolute; left:620px; width:192px;">Last Name:</label>
+						<label style="position:absolute; left:820px; width:192px;">Email Address:</label>
+						<label style="position:absolute; left:1020px; width:192px;">Contact Number:</label><br />
 
-						<asp:TextBox runat="server" ID="txtStaffNo" style="position:absolute; left:220px;"/>
-						<asp:TextBox runat="server" ID="txtFirstName"  style="position:absolute; left:370px; height: 22px;"/>
-						<asp:TextBox runat="server" ID="txtLastName"  style="position:absolute; left:520px;"/>
-						<asp:TextBox runat="server" ID="txtEmail"  style="position:absolute; left:670px;" />
-						<asp:TextBox runat="server" ID="txtContactNumber"  style="position:absolute; left:820px;"/>
-
-                        <br />
-                        <label style="position:absolute; left:220px;">Staff Type:</label>
-                        <label style="position:absolute; left:370px;">Department Code:</label>
-                        <label style="position:absolute; left:520px; ">Username:</label>
-                        <label style="position:absolute; left:670px; ">Password:</label>
-                        <label style="position:absolute; left:820px; ">Active Status:</label>
-                        <br />
-                        <asp:DropDownList runat="server" ID="cmbStaffType" style="position:absolute;left:220px;width:110px;height:22px"/>
-                        <asp:DropDownList  runat="server" ID="cmbDepartmentCode" style="position:absolute;left:370px;width:110px;height:22px"/>
-                        <asp:textbox runat="server" ID="txtUsername" style="position:absolute; left:520px;"/>
-                        <asp:textbox runat="server" ID="txtPassword" style="position:absolute; left:670px;"/>
-                        <asp:dropdownList runat="server" ID="cmbActiveStatus" style="position:absolute; left:820px;width:110px;height:22px"/>
-					</div>
+						<asp:TextBox runat="server" ID="txtStaffNo" style="position:absolute; left:220px; width:160px;"/>
+						<asp:TextBox runat="server" ID="txtFirstName"  style="position:absolute; left:420px; width:160px;"/>
+						<asp:TextBox runat="server" ID="txtLastName"  style="position:absolute; left:620px; width:160px;"/>
+						<asp:TextBox runat="server" ID="txtEmail"  style="position:absolute; left:820px; width:160px;" />
+						<asp:TextBox runat="server" ID="txtContactNumber"  style="position:absolute; left:1020px; width:160px;"/><br />
+                        
+                        <label style="position:absolute; left:220px; width:192px;">Staff Type:</label>
+                        <label style="position:absolute; left:420px; width:192px;">Department Code:</label>
+                        <label style="position:absolute; left:620px; width:192px;">Username:</label>
+                        <label style="position:absolute; left:820px; width:192px;">Password:</label>
+                        <label style="position:absolute; left:1020px; width:192px;">Active Status:</label><br />
+                        
+                        <asp:DropDownList runat="server" ID="cmbStaffType" style="position:absolute; left:220px; width:164px; height:21px"/>
+                        <asp:DropDownList  runat="server" ID="cmbDepartmentCode" style="position:absolute; left:420px; width:164px; height:21px"/>
+                        <asp:TextBox runat="server" ID="txtUsername" style="position:absolute; left:620px; width:160px;"/>
+                        <asp:TextBox runat="server" ID="txtPassword" style="position:absolute; left:820px; width:160px;"/>
+                        <asp:DropDownList runat="server" ID="cmbActiveStatus" style="position:absolute; left:1020px; width:164px; height:21px"/>
+					
+                    </div>
 					
 					<!-- DataGrid -->
 					<div style="position:relative; top:50px; left: 220px; height: 50%; background-color: darkgrey">
@@ -69,7 +69,9 @@
 							<PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" Mode="NumericPages" />
 							<SelectedItemStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
 						</asp:DataGrid>
-                </div>
-			</div>
+            
+                    </div>
+			    </div>
+            </div>
     </div>
 </asp:Content>
