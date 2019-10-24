@@ -13,94 +13,31 @@ namespace Info_IT.Pages {
     public partial class Reports {
         
         /// <summary>
-        /// txtStaffNo control.
+        /// cmbStaffTypeStaff control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtStaffNo;
+        protected global::System.Web.UI.WebControls.DropDownList cmbStaffTypeStaff;
         
         /// <summary>
-        /// txtFirstName control.
+        /// cmbDepartmentCodeStaff control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFirstName;
+        protected global::System.Web.UI.WebControls.DropDownList cmbDepartmentCodeStaff;
         
         /// <summary>
-        /// txtLastName control.
+        /// cmbActiveStatusStaff control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLastName;
-        
-        /// <summary>
-        /// txtEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
-        
-        /// <summary>
-        /// txtContactNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContactNumber;
-        
-        /// <summary>
-        /// cmbStaffType control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbStaffType;
-        
-        /// <summary>
-        /// cmbDepartmentCode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbDepartmentCode;
-        
-        /// <summary>
-        /// txtUsername control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsername;
-        
-        /// <summary>
-        /// txtPassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
-        
-        /// <summary>
-        /// cmbActiveStatus control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbActiveStatus;
+        protected global::System.Web.UI.WebControls.DropDownList cmbActiveStatusStaff;
         
         /// <summary>
         /// dgStaff control.
@@ -112,42 +49,6 @@ namespace Info_IT.Pages {
         protected global::System.Web.UI.WebControls.DataGrid dgStaff;
         
         /// <summary>
-        /// txtStudentNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtStudentNumber;
-        
-        /// <summary>
-        /// TextBox3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
-        
-        /// <summary>
-        /// txtSurname control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSurname;
-        
-        /// <summary>
-        /// TextBox4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
-        
-        /// <summary>
         /// dgStudent control.
         /// </summary>
         /// <remarks>
@@ -157,58 +58,121 @@ namespace Info_IT.Pages {
         protected global::System.Web.UI.WebControls.DataGrid dgStudent;
         
         /// <summary>
-        /// cmbRequestCode control.
+        /// cmbVenueInspection control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbRequestCode;
+        protected global::System.Web.UI.WebControls.DropDownList cmbVenueInspection;
         
         /// <summary>
-        /// cmbRequestDescription control.
+        /// cmbStaffCodeInspection control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbRequestDescription;
+        protected global::System.Web.UI.WebControls.DropDownList cmbStaffCodeInspection;
         
         /// <summary>
-        /// DropDownList2 control.
+        /// calInspectDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.Calendar calInspectDate;
         
         /// <summary>
-        /// cmbModuleCode control.
+        /// dgInspection control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbModuleCode;
+        protected global::System.Web.UI.WebControls.DataGrid dgInspection;
         
         /// <summary>
-        /// cmbVenueCode control.
+        /// cmbInspectionCodeInspectionDetails control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbVenueCode;
+        protected global::System.Web.UI.WebControls.DropDownList cmbInspectionCodeInspectionDetails;
         
         /// <summary>
-        /// DropDownList3 control.
+        /// cmbEquipmentInspectionDetails control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
+        protected global::System.Web.UI.WebControls.DropDownList cmbEquipmentInspectionDetails;
+        
+        /// <summary>
+        /// cmbStaffMemberInspectionDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList cmbStaffMemberInspectionDetails;
+        
+        /// <summary>
+        /// cmbStatusInspectionDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList cmbStatusInspectionDetails;
+        
+        /// <summary>
+        /// dgInspectionDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataGrid dgInspectionDetails;
+        
+        /// <summary>
+        /// dateTutorRequest control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar dateTutorRequest;
+        
+        /// <summary>
+        /// cmbModuleCodeTutorRequest control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList cmbModuleCodeTutorRequest;
+        
+        /// <summary>
+        /// cmbVenueCodeTutorRequest control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList cmbVenueCodeTutorRequest;
+        
+        /// <summary>
+        /// cmbStatusTutorRequest control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList cmbStatusTutorRequest;
         
         /// <summary>
         /// dgTutorRequest control.
@@ -220,40 +184,31 @@ namespace Info_IT.Pages {
         protected global::System.Web.UI.WebControls.DataGrid dgTutorRequest;
         
         /// <summary>
-        /// TextBox2 control.
+        /// cmbStaffRequest control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.DropDownList cmbStaffRequest;
         
         /// <summary>
-        /// cmbStaff control.
+        /// cmbStudentCodeRequest control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbStaff;
+        protected global::System.Web.UI.WebControls.DropDownList cmbStudentCodeRequest;
         
         /// <summary>
-        /// cmbStudentCode control.
+        /// cmbTaskTypeCodeRequest control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbStudentCode;
-        
-        /// <summary>
-        /// cmbTaskTypeCode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbTaskTypeCode;
+        protected global::System.Web.UI.WebControls.DropDownList cmbTaskTypeCodeRequest;
         
         /// <summary>
         /// dateRequest control.
@@ -265,31 +220,31 @@ namespace Info_IT.Pages {
         protected global::System.Web.UI.WebControls.Calendar dateRequest;
         
         /// <summary>
-        /// cmbTime control.
+        /// cmbTimeRequest control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbTime;
+        protected global::System.Web.UI.WebControls.DropDownList cmbTimeRequest;
         
         /// <summary>
-        /// cmbAssignedStaffCode control.
+        /// cmbAssignedStaffCodeRequest control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbAssignedStaffCode;
+        protected global::System.Web.UI.WebControls.DropDownList cmbAssignedStaffCodeRequest;
         
         /// <summary>
-        /// cmbStatus control.
+        /// cmbStatusRequest control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbStatus;
+        protected global::System.Web.UI.WebControls.DropDownList cmbStatusRequest;
         
         /// <summary>
         /// dgRequest control.
@@ -301,31 +256,22 @@ namespace Info_IT.Pages {
         protected global::System.Web.UI.WebControls.DataGrid dgRequest;
         
         /// <summary>
-        /// TextBox1 control.
+        /// cmbVenueEquipment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.DropDownList cmbVenueEquipment;
         
         /// <summary>
-        /// cmbVenue control.
+        /// cmbEquipTypeEquipment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbVenue;
-        
-        /// <summary>
-        /// cmbEquipType control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbEquipType;
+        protected global::System.Web.UI.WebControls.DropDownList cmbEquipTypeEquipment;
         
         /// <summary>
         /// dgEquipment control.
@@ -337,49 +283,22 @@ namespace Info_IT.Pages {
         protected global::System.Web.UI.WebControls.DataGrid dgEquipment;
         
         /// <summary>
-        /// txtDescription control.
+        /// cmbBuildingBlocksVenue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDescription;
+        protected global::System.Web.UI.WebControls.DropDownList cmbBuildingBlocksVenue;
         
         /// <summary>
-        /// txtCapacity control.
+        /// cmbBuildingVenue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCapacity;
-        
-        /// <summary>
-        /// txtDoorNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDoorNumber;
-        
-        /// <summary>
-        /// cmbBuildingBlocks control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbBuildingBlocks;
-        
-        /// <summary>
-        /// cmbBuilding control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbBuilding;
+        protected global::System.Web.UI.WebControls.DropDownList cmbBuildingVenue;
         
         /// <summary>
         /// dgVenue control.
@@ -391,49 +310,22 @@ namespace Info_IT.Pages {
         protected global::System.Web.UI.WebControls.DataGrid dgVenue;
         
         /// <summary>
-        /// txtName control.
+        /// department control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
-        
+        protected global::System.Web.UI.UpdatePanel department;
+
         /// <summary>
-        /// DropDownList1 control.
+        /// cmbBuildingDepartment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
-        
-        /// <summary>
-        /// txtContactPerson control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContactPerson;
-        
-        /// <summary>
-        /// txtContactNo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContactNo;
-        
-        /// <summary>
-        /// txtEmailAddress control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmailAddress;
+        protected global::System.Web.UI.WebControls.DropDownList cmbBuildingDepartment;
         
         /// <summary>
         /// dgDepartment control.
