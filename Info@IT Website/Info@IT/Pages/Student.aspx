@@ -13,16 +13,16 @@
 	<div class="contentWrapperReport">
 			<div>
 				<!-- Side Nav -->
-				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey">
-					<div onclick="openFlatButtonStudent()" class="manage_Style">
+				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey; ">
+					<div onclick="openFlatButtonVenue()" class="manage_Style">
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
-                    <div onclick="btnManageAdd" id="addButtonStudent" class="manageAdd" >
-						<p class="manage" style="padding-top: 0px">Add Student</p>
-					</div>
+                    <div id="addButtonStudent" class="manageAdd">
+                        <asp:button runat="server" class="manage" style="padding-top: 0px" OnClick="btnManageAdd"  Text="Add Student"></asp:button>
+                    </div>
                     <div id="updateButtonStudent" class="manageAdd_Style">
-						
-						<p class="manage" style="padding-top: 0px">Update Student</p>
+						<asp:button runat="server" class="manage" style="padding-top: 0px" OnClick="btnManageUpdate" Text="Update Student" ></asp:button>
+					</div>
 					</div>
 				</div>
 
@@ -61,6 +61,4 @@
 			</div>
     </div>
 </div>
-
-        </div>
 </asp:Content>

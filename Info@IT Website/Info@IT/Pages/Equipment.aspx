@@ -13,27 +13,17 @@
 	<div class="contentWrapperReport">
 			<div>
 				<!-- Side Nav -->
-
-				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey">
-					<!-- Manage button -->
-						<div onclick="openFlatButtonEquipment()" class="manage_Style">
-							<p class="manage" style="padding-top: 0px">Manage</p>
-						</div>
-						<div onclick="btnManageAdd" id="addButtonEquipment" class="manageAdd" >
-							<p class="manage" style="padding-top: 0px">Add Equipment</p>
-						</div>
-						<div id="updateButtonEquipment" class="manageAdd_Style">
-						
-							<p class="manage" style="padding-top: 0px">Update Equipment</p>
-						</div>
-					<!-- View button -->
-						<div onclick="openFlatButtonEquipmentView()" class="manage_Style">
-							<p class="manage" style="padding-top: 0px">View</p>
-						</div>
-						<div onclick="btnViewAdd" id="viewButtonEquipment" class="manageAdd" >
-							<p class="manage" style="padding-top: 0px">View Equipment Type</p>
-						</div>
-						
+				
+                <div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey; ">
+					<div onclick="openFlatButtonEquipment()" class="manage_Style">
+						<p class="manage" style="padding-top: 0px">Manage</p>
+					</div>
+                    <div id="addButtonEquipment" class="manageAdd">
+                        <asp:button runat="server" class="manage" style="padding-top: 0px" OnClick="btnManageAdd"  Text="Add Equipment"></asp:button>
+                    </div>
+                    <div id="updateButtonEquipment" class="manageAdd_Style">
+						<asp:button runat="server" class="manage" style="padding-top: 0px" OnClick="btnManageUpdate" Text="Update Equipment" ></asp:button>
+					</div>
 				</div>
 
 				<!-- Content -->
@@ -67,6 +57,6 @@
 						</asp:DataGrid>
 					</div>
                 </div>
+                </div>
 			</div>
-    </div>
 </asp:Content>
