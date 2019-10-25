@@ -86,7 +86,7 @@ namespace Info_IT.Pages
 
         }
 
-        private void BtnManageUpdate_Click(object sender, EventArgs e)
+        protected void BtnManageUpdate_Click(object sender, EventArgs e)
         {
             try
             {

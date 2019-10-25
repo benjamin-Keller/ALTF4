@@ -14,6 +14,8 @@
 		<div class="contentWrapperReport">
 			<div class="centerPHReport">
 				<!-- Filling in blank space -->
+                
+						<asp:ScriptManager runat="server" EnablePartialRendering="true"></asp:ScriptManager>
 	            <div style="position:absolute; min-height: 100%; width: 200px; left: 0px; top:0; padding-bottom: 2px; background-color: grey" >
 				    <div style="height: 100%;" class="sidebarReport">
 					
@@ -60,14 +62,16 @@
                 <%--Begining of right side--%>
 
                     <div id="reportStaff" style="display:none;">220 400 580 760 940 1100
+                        <asp:UpdatePanel runat="server" ID="UpdatePanel7">
+                            <ContentTemplate>
 						<div style="position:relative; top:0px; height: 50%; width:100%;">
 							<label style="position:absolute; left:220px; width:150px;">Staff Type:</label>
 							<label style="position:absolute; left:400px; width:150px;">Department Code:</label>
-							<label style="position:absolute; left:580px; width:150px;">Active Status:</label><br />
+                            
+                            <br />
                         
-							<asp:DropDownList runat="server" ID="cmbStaffTypeStaff" style="position:absolute; left:220px; width:150px; height:21px"/>
-							<asp:DropDownList  runat="server" ID="cmbDepartmentCodeStaff" style="position:absolute; left:400px; width:150px; height:21px"/>
-							<asp:DropDownList runat="server" ID="cmbActiveStatusStaff" style="position:absolute; left:580px; width:150px; height:21px"/>
+							<asp:DropDownList runat="server" ID="cmbStaffTypeStaff" AutoPostBack="True" OnSelectedIndexChanged="cmbStaffTypeStaff_SelectedIndexChanged" style="position:absolute; left:220px; width:150px; height:21px"/>
+							<asp:DropDownList  runat="server" ID="cmbDepartmentCodeStaff" AutoPostBack="True"  OnSelectedIndexChanged="cmbDepartmentCodeStaff_SelectedIndexChanged" style="position:absolute; left:400px; width:150px; height:21px"/>
                         </div>
 
 					    <!-- DataGrid -->
@@ -82,6 +86,9 @@
 							    <SelectedItemStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
 						    </asp:DataGrid>
                         </div>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+
                     </div>
 
                     <div id="reportStudent" style="display:none">
@@ -101,15 +108,16 @@
                     </div>
                 
                     <div id="reportInspection" style="display:none">
-
+                        <asp:UpdatePanel runat="server" ID="UpdatePanel6">
+                            <ContentTemplate>
                         <div style="position:relative; top:0; height: 50%; width:100%;">
 						    <label style="position:absolute; left:220px;width:100px" >Venue:</label>
 						    <label style="position:absolute; left:400px;width:150px">Staff Code:</label>
-                            <label style="position:absolute; left:580px;width:150px">Inspection Date:</label><br />
+                            <label style="position:absolute; left:800px;width:150px">Inspection Date:</label><br />
 
-						    <asp:DropDownList runat="server" ID="cmbVenueInspection" style="position:absolute;left:220px;width:110px;height:22px"/>
-						    <asp:DropDownList runat="server" ID="cmbStaffCodeInspection"  style="position:absolute;left:400px; width: 110px; height: 22px;"/>
-                            <asp:Calendar runat="server" ID="calInspectDate" selectionmode="DayWeekMonth" style="position:absolute; left:580px;"/>
+						    <asp:DropDownList runat="server" ID="cmbVenueInspection"  AutoPostBack="True" OnSelectedIndexChanged="cmbVenueInspection_SelectedIndexChanged" style="position:absolute;left:220px;width:110px;height:22px"/>
+						    <asp:DropDownList runat="server" ID="cmbStaffCodeInspection"  AutoPostBack="True" OnSelectedIndexChanged="cmbStaffCodeInspection_SelectedIndexChanged" style="position:absolute;left:400px; width: 110px; height: 22px;"/>
+                            <asp:Calendar runat="server" ID="calInspectDate" AutoPostBack="True" OnSelectionChanged="calInspectDate_SelectionChanged" selectionmode="DayWeekMonth" style="position:absolute; left:800px;"/>
 					    </div>
 					
 					    <!-- DataGrid -->
@@ -124,21 +132,22 @@
 							    <SelectedItemStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
 						    </asp:DataGrid>
 					    </div>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
 
                     </div>
 
                     <div id="reportInspectionDetails" style="display:none">
-
+                        <asp:UpdatePanel runat="server" ID="UpdatePanel5">
+                            <ContentTemplate>
                         <div style="position:relative; top:0; height: 50%; width:100%;">
 						<label style="position:absolute; left:220px; width:192px">Inspection Code:</label>
 						<label style="position:absolute; left:400px; width:192px">Equipment Code:</label>
 						<label style="position:absolute; left:580px; width:192px">Staff Member:</label>
-                        <label style="position:absolute; left:760px; width:192px">Status:</label>
                         
-						<asp:DropDownList runat="server" ID="cmbInspectionCodeInspectionDetails" style="position:absolute; width:128px; height: 21px; left:220px; top: 24px"/>
-						<asp:DropDownList runat="server" ID="cmbEquipmentInspectionDetails" style="position:absolute; width:128px; height: 21px; left:400px; top: 24px"/>
-						<asp:DropDownList runat="server" ID="cmbStaffMemberInspectionDetails"  style="position:absolute; width:128px; height: 21px; left:580px; top: 24px"/>
-                        <asp:DropDownList runat="server" ID="cmbStatusInspectionDetails" style="position:absolute; width:128px; height: 21px; left:760px; top: 24px"/>
+						<asp:DropDownList runat="server" ID="cmbInspectionCodeInspectionDetails" AutoPostBack="True" OnSelectedIndexChanged="cmbInspectionCodeInspectionDetails_SelectedIndexChanged" style="position:absolute; width:128px; height: 21px; left:220px; top: 24px"/>
+						<asp:DropDownList runat="server" ID="cmbEquipmentInspectionDetails" AutoPostBack="True" OnSelectedIndexChanged="cmbEquipmentInspectionDetails_SelectedIndexChanged" style="position:absolute; width:128px; height: 21px; left:400px; top: 24px"/>
+						<asp:DropDownList runat="server" ID="cmbStaffMemberInspectionDetails" AutoPostBack="True"  OnSelectedIndexChanged="cmbStaffMemberInspectionDetails_SelectedIndexChanged" style="position:absolute; width:128px; height: 21px; left:580px; top: 24px"/>
 					</div>
 
 					<!-- DataGrid -->
@@ -153,25 +162,24 @@
 							<SelectedItemStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
 						</asp:DataGrid>
                     </div>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
 			    </div>
 
                     </div>
                 
                     <div id="reportTutorRequest" style="display:none">
-                        
+                        <asp:UpdatePanel runat="server" ID="UpdatePanel4">
+                            <ContentTemplate>
                         <div style ="position:relative ; top:10px ; height: 50% ; width:100%;">
 						    <label style="position:absolute; left:220px; width:150px; top: 0px;">Date:</label>
-						    <label style="position:absolute; left:480px; top: 0px; width: 150px;">Module Descriptions:</label>
-						    <label style="position:absolute; left:660px; top: 0px; width: 150px;">Venue Description:</label>
-                            <label style="position:absolute; left:840px; top: 0px; width: 150px;">Status:</label>
+						    <label style="position:absolute; left:480px; top: 0px; width: 150px;">Venue Description:</label>
                             
                             <br />
 							
-                            <asp:Calendar runat="server" ID="dateTutorRequest" selectionmode="DayWeekMonth" style="position:absolute; left:220px;"/>
-                            <asp:DropDownList runat="server" ID="cmbModuleCodeTutorRequest"  style="position:absolute; left:480px; width: 150px; height: 22px"/>
-                            <asp:DropDownList runat="server" ID="cmbVenueCodeTutorRequest"  style="position:absolute; left:660px; width: 150px; height: 22px"/>
-                            <asp:DropDownList runat="server" ID="cmbStatusTutorRequest"  style="position:absolute; left:840px; width: 150px; height: 22px"/>
-                        </div>
+                            <asp:Calendar runat="server" ID="dateTutorRequest" AutoPostBack="True" selectionmode="DayWeekMonth" OnSelectionChanged="dateTutorRequest_SelectionChanged" style="position:absolute; left:220px;"/>
+                            <asp:DropDownList runat="server" ID="cmbVenueCodeTutorRequest" AutoPostBack="True" OnSelectedIndexChanged="cmbVenueCodeTutorRequest_SelectedIndexChanged"  style="position:absolute; left:480px; width: 150px; height: 22px"/>
+                            </div>
 
 					    <!-- DataGrid -->
 					    <div style="position:relative; top:240px; left: 220px; background-color: darkgrey; height: 50%">
@@ -185,10 +193,13 @@
 							    <SelectedItemStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
 						    </asp:DataGrid>
                         </div>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
                     </div>
                 
                     <div id="reportRequest" style="display:none">
-                        
+                        <asp:UpdatePanel runat="server" ID="UpdatePanel3">
+                            <ContentTemplate>
 					    <div style="position:relative; top:10px; height: 50%; width:100%;">
 						    <label style="position:absolute; left:220px">Staff:</label>
 						    <label style="position:absolute; left:400px">Student:</label>
@@ -196,18 +207,16 @@
                             <label style="position:absolute; left:750px;">Date:</label>
                             <label style="position:absolute; left:220px; top: 72px;">Time:</label>
                             <label style="position:absolute; left:400px; top: 72px;">Assigned Staff:</label>
-                            <label style="position:absolute; left:580px; top: 72px;">Status:</label>
                             
                             <br />
                         
-						    <asp:DropDownList runat="server" ID="cmbStaffRequest" style="position:absolute; width:150px; left:220px"/>
-						    <asp:DropDownList runat="server" ID="cmbStudentCodeRequest"  style="position:absolute; width:150px; left:400px"/>
-						    <asp:DropDownList runat="server" ID="cmbTaskTypeCodeRequest"  style="position:absolute; width:150px; left:580px"/>
-                            <asp:Calendar runat="server" ID="dateRequest" style="position:absolute; left:750px;"/>
-						    <asp:DropDownList runat="server" ID="cmbTimeRequest" style="position:absolute; left:220px; width:150px; top: 96px;"/>
-						    <asp:DropDownList runat="server" ID="cmbAssignedStaffCodeRequest"  style="position:absolute; width:150px; left:400px; top: 96px;"/>
-						    <asp:DropDownList runat="server" ID="cmbStatusRequest"  style="position:absolute; left:580px; width:150px; top: 96px;"/>
-					    </div>
+						    <asp:DropDownList runat="server" ID="cmbStaffRequest" AutoPostBack="True"  OnSelectedIndexChanged="cmbStaffRequest_SelectedIndexChanged" style="position:absolute; width:150px; left:220px"/>
+						    <asp:DropDownList runat="server" ID="cmbStudentCodeRequest" AutoPostBack="True"  OnSelectedIndexChanged="cmbStudentCodeRequest_SelectedIndexChanged" style="position:absolute; width:150px; left:400px"/>
+						    <asp:DropDownList runat="server" ID="cmbTaskTypeCodeRequest" AutoPostBack="True"  OnSelectedIndexChanged="cmbTaskTypeCodeRequest_SelectedIndexChanged" style="position:absolute; width:150px; left:580px"/>
+                            <asp:Calendar runat="server" ID="dateRequest" AutoPostBack="True" OnSelectionChanged="dateRequest_SelectionChanged" style="position:absolute; left:750px;"/>
+						    <asp:DropDownList runat="server" ID="cmbTimeRequest"  AutoPostBack="True" OnSelectedIndexChanged="cmbTimeRequest_SelectedIndexChanged" style="position:absolute; left:220px; width:150px; top: 96px;"/>
+						    <asp:DropDownList runat="server" ID="cmbAssignedStaffCodeRequest"  AutoPostBack="True" OnSelectedIndexChanged="cmbAssignedStaffCodeRequest_SelectedIndexChanged" style="position:absolute; width:150px; left:400px; top: 96px;"/>
+						</div>
 
 					    <!-- DataGrid -->
 					    <div style="position:relative; top:220px; left: 220px; height: 50%; background-color: darkgrey">
@@ -221,16 +230,20 @@
 							    <SelectedItemStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
 						    </asp:DataGrid>
                         </div>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+
                     </div>
                 
                     <div id="reportEquipment"  style="display:none">
-
+                        <asp:UpdatePanel runat="server" ID="UpdatePanel2">
+                            <ContentTemplate>
                         <div style="position:relative; top:10px; height: 50%; width:100%;">
                             <label style="position:absolute; left:220px; top: 0px; width: 150px;">Venue:</label>
                             <label style="position:absolute; left:400px; top: 0px; width: 150px;">Equipment Type:</label>
                           
-                            <asp:DropDownList runat="server" ID="cmbVenueEquipment" style="position:absolute; left:220px; top: 24px; width: 150px;"/>
-                            <asp:DropDownList runat="server" ID="cmbEquipTypeEquipment" style="position:absolute; left:400px; top: 24px; width: 150px;"/>
+                            <asp:DropDownList runat="server" ID="cmbVenueEquipment"  OnSelectedIndexChanged="cmbVenueEquipment_SelectedIndexChanged" AutoPostBack="True" style="position:absolute; left:220px; top: 24px; width: 150px;"/>
+                            <asp:DropDownList runat="server" ID="cmbEquipTypeEquipment"  OnSelectedIndexChanged="cmbEquipTypeEquipment_SelectedIndexChanged" AutoPostBack="True" style="position:absolute; left:400px; top: 24px; width: 150px;"/>
 					    </div>
 						<br />
 					    <!-- DataGrid -->
@@ -245,17 +258,19 @@
 							    <SelectedItemStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
 						    </asp:DataGrid>
 					    </div>
-
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
                     </div>
 
                     <div id="reportVenue" style="display:none">
-
+                        <asp:UpdatePanel runat="server" ID="UpdatePanel1">
+                            <ContentTemplate>
                         <div style="position:relative; float:right; top:10px; height: 50%; width:100%;">
                             <label style = "position:absolute; left :220px; top: 0px;">BuildingBlocks</label>
                             <label style = "position:absolute; left :400px; top: 0px;">Building</label>
        
                             <asp:DropDownList ID="cmbBuildingBlocksVenue" runat="server" OnSelectedIndexChanged="cmbBuildingBlocksVenue_SelectedIndexChanged" AutoPostBack="true" style="position:absolute; left:220px; width: 110px; height: 25px; top: 20px;"/>
-                            <asp:DropDownList ID ="cmbBuildingVenue" runat ="server" style="position:absolute; left:400px; width: 113px; height: 25px; top: 20px;"/>
+                            <asp:DropDownList ID ="cmbBuildingVenue" runat ="server"  OnSelectedIndexChanged="cmbBuildingVenue_SelectedIndexChanged"  AutoPostBack="True" style="position:absolute; left:400px; width: 113px; height: 25px; top: 20px;"/>
                             
                         </div>
                         <br />
@@ -271,11 +286,12 @@
 							    <SelectedItemStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
 						    </asp:DataGrid>
 					    </div>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
 
                     </div>
 
                     <div id="reportDepartment" style="display:none">
-						<asp:ScriptManager runat="server" EnablePartialRendering="true"></asp:ScriptManager>
                         <asp:UpdatePanel runat="server" ID="department">
                             <ContentTemplate>
 					            <div style="position:relative; top:10px; height: 50%; width:100%;">
