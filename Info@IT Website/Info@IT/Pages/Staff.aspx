@@ -50,11 +50,18 @@
                         <label style="position:absolute; left:820px; width:192px;">Password:</label>
                         <label style="position:absolute; left:1020px; width:192px;">Active Status:</label><br />
                         
-                        <asp:DropDownList runat="server" ID="cmbStaffType" style="position:absolute; left:220px; width:164px; height:21px"/>
+                        <asp:DropDownList runat="server" ID="cmbStaffType" style="position:absolute; left:220px; width:164px; height:21px">
+                        <asp:ListItem>ICT</asp:ListItem>
+                        <asp:ListItem>Info@IT</asp:ListItem>
+                        <asp:ListItem>Student Assisstant</asp:ListItem>
+                            </asp:DropDownList>
                         <asp:DropDownList  runat="server" ID="cmbDepartmentCode" style="position:absolute; left:420px; width:164px; height:21px"/>
                         <asp:TextBox runat="server" ID="txtUsername" style="position:absolute; left:620px; width:160px;"/>
                         <asp:TextBox runat="server" ID="txtPassword" style="position:absolute; left:820px; width:160px;"/>
-                        <asp:DropDownList runat="server" ID="cmbActiveStatus" style="position:absolute; left:1020px; width:164px; height:21px"/>
+                        <asp:DropDownList runat="server" ID="cmbActiveStatus" style="position:absolute; left:1020px; width:164px; height:21px">
+                            <asp:ListItem>True</asp:ListItem>
+                            <asp:ListItem>False</asp:ListItem>
+                        </asp:DropDownList>
 					
                     </div>
 					
