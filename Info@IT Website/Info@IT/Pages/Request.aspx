@@ -13,16 +13,16 @@
 	<div class="contentWrapperReport">
 			<div>
 				<!-- Side Nav -->
-				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey">
-					<div onclick="openFlatButtonRequest()" class="manage_Style">
+				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey; ">
+					<div onclick="openFlatButtonVenue()" class="manage_Style">
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
-                    <div onclick="btnManageAdd" id="addButtonRequest" class="manageAdd" >
-						<p class="manage" style="padding-top: 0px">Add Request</p>
-					</div>
+                    <div id="addButtonRequest" class="manageAdd">
+                        <asp:button runat="server" class="manage" style="padding-top: 0px" OnClick="btnManageAdd"  Text="Add Request"></asp:button>
+                    </div>
                     <div id="updateButtonRequest" class="manageAdd_Style">
-						
-						<p class="manage" style="padding-top: 0px">Update Request</p>
+						<asp:button runat="server" class="manage" style="padding-top: 0px" OnClick="btnManageUpdate" Text="Update Request" ></asp:button>
+					</div>
 					</div>
 				</div>
 
@@ -45,10 +45,33 @@
 						<asp:DropDownList runat="server" ID="cmbTaskTypeCode"  style="position:absolute; width:192px; left:1120px"/>
 						<asp:Calendar runat="server" ID="dateRequest" style="position:absolute; left:1120px; top: 96px;"/>
 
-
-						<asp:DropDownList runat="server" ID="cmbTime" style="position:absolute; left:220px; width:192px; top: 96px;"/>
+						<asp:DropDownList runat="server" ID="cmbTime" style="position:absolute; left:220px; width:192px; top: 96px;">
+                            <asp:ListItem>08:00:00</asp:ListItem>
+                            <asp:ListItem>08:30:00</asp:ListItem>
+                            <asp:ListItem>09:00:00</asp:ListItem>
+                            <asp:ListItem>09:30:00</asp:ListItem>
+                            <asp:ListItem>10:00:00</asp:ListItem>
+                            <asp:ListItem>10:30:00</asp:ListItem>
+                            <asp:ListItem>11:00:00</asp:ListItem>
+                            <asp:ListItem>11:30:00</asp:ListItem>
+                            <asp:ListItem>12:00:00</asp:ListItem>
+                            <asp:ListItem>12:30:00</asp:ListItem>
+                            <asp:ListItem>13:00:00</asp:ListItem>
+                            <asp:ListItem>13:30:00</asp:ListItem>
+                            <asp:ListItem>14:00:00</asp:ListItem>
+                            <asp:ListItem>14:30:00</asp:ListItem>
+                            <asp:ListItem>15:00:00</asp:ListItem>
+                            <asp:ListItem>15:30:00</asp:ListItem>
+                            <asp:ListItem>16:00:00</asp:ListItem>
+                            <asp:ListItem>16:30:00</asp:ListItem>
+                        </asp:DropDownList>
 						<asp:DropDownList runat="server" ID="cmbAssignedStaffCode"  style="position:absolute; width:192px; left:520px; top: 96px;"/>
-						<asp:DropDownList runat="server" ID="cmbStatus"  style="position:absolute; left:820px; width:192px; top: 96px;"/>
+						<asp:DropDownList runat="server" ID="cmbStatus"  style="position:absolute; left:820px; width:192px; top: 96px;">
+                            <asp:ListItem>Pending</asp:ListItem>
+                            <asp:ListItem>In Progress</asp:ListItem>
+                            <asp:ListItem>Completed</asp:ListItem>
+                            <asp:ListItem>Cancelled</asp:ListItem>
+                        </asp:DropDownList>
 					</div>
 
 					<!-- DataGrid -->
