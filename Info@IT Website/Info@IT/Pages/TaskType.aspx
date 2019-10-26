@@ -17,13 +17,12 @@
 					<div onclick="openFlatButtonTaskType()" class="manage_Style">
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
-                    <div onclick="btnManageAdd" id="addButtonTaskType" class="manageAdd" >
-						<asp:button runat="server" class="manage" style="padding-top: 0px" OnClick="btnManageAdd"  Text="Add Request"></asp:button>
+                    <div  id="addButtonTaskType" class="manageAdd" >
+						<asp:button runat="server" class="manage" style="padding-top:0px" OnClick ="btnManageAdd" Text="Add TaskType"></asp:button>
 					</div>
                     <div id="updateButtonTaskType" class="manageAdd_Style">
 						
-						<asp:button runat="server" class="manage" style="padding-top: 0px" OnClick="btnManageUpdate" Text="Update Request" ></asp:button>
-						
+						<p class="manage" style="padding-top: 0px">Update Task Type</p>
 					</div>
 				</div>
 

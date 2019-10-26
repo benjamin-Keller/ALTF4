@@ -28,7 +28,7 @@ namespace Info_IT.Pages
                 var values = bll.SelectedForUpdateTutorRequest(request);
 
                 cmbRequestCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
-                dateRequest.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2].ToString();
+               
                 cmbModuleCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
                 cmbVenueCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[6].ToString();
                 cmbStartTime.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
@@ -45,19 +45,26 @@ namespace Info_IT.Pages
 
 		protected void dgTutorRequest_Load1(object sender, EventArgs e)
 		{
+            dateRequest.SelectedDate = DateTime.Now;
+
             cmbRequestCode.DataSource = bll.GetRequests();
-            cmbRequestCode.DataTextField = "RequestCode";
-            cmbRequestCode.DataValueField = "RequestCode";
+            cmbRequestCode.DataTextField = "Request Description";
+            cmbRequestCode.DataValueField = "Request Code";
+            cmbRequestCode.DataBind();
             
 
             cmbVenueCode.DataSource = bll.GetVenues();
-            cmbVenueCode.DataTextField = "VenueDescription";
-            cmbVenueCode.DataValueField = "VenueCode";
+            cmbVenueCode.DataTextField = "Venue";
+            cmbVenueCode.DataValueField = "Venue Code";
+            cmbVenueCode.DataBind();
+            
            
 
             cmbModuleCode.DataSource = bll.LoadCMBModels();
             cmbModuleCode.DataTextField = "ModuleDescription";
             cmbModuleCode.DataValueField = "ModuleCode";
+            cmbModuleCode.DataBind();
+           
            
 
             dgTutorRequest.DataSource = bll.GetTutorRequest();
@@ -73,14 +80,14 @@ namespace Info_IT.Pages
         {
             try
             {
-                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), cmbStartTime.SelectedItem.ToString(), cmbEndTime.SelectedItem.ToString(), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()), cmbStatus.SelectedItem.ToString());
+                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.SelectedDate), cmbStartTime.SelectedItem.ToString(), cmbEndTime.SelectedItem.ToString(), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()), cmbStatus.SelectedItem.ToString());
 
                 int x = bll.AddTutorRequest(tutorRequest);
 
                 if (x > 0)
                 {
                     cmbRequestCode.Text = " ";
-                    dateRequest.Text = " ";
+                    dateRequest.SelectedDate = DateTime.Today;
                     cmbStartTime.Text = " ";
                     cmbEndTime.Text = " ";
                     cmbRequestCode.Text = " ";
@@ -110,14 +117,14 @@ namespace Info_IT.Pages
         {
             try
             {
-                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), cmbStartTime.SelectedItem.ToString(), cmbEndTime.SelectedItem.ToString(), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()), cmbStatus.SelectedItem.ToString());
+                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.SelectedDate), cmbStartTime.SelectedItem.ToString(), cmbEndTime.SelectedItem.ToString(), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()), cmbStatus.SelectedItem.ToString());
 
                 int x = bll.UpdateTutorRequest(tutorRequest);
 
                 if (x > 0)
                 {
                     cmbRequestCode.Text = " ";
-                    dateRequest.Text = " ";
+                    dateRequest.SelectedDate = DateTime.Today;
                     cmbStartTime.Text = " ";
                     cmbEndTime.Text = " ";
                     cmbRequestCode.Text = " ";

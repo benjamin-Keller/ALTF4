@@ -17,12 +17,12 @@
 					<div onclick="openFlatButtonTutorRequest()" class="manage_Style">
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
-                    <div onclick="btnManageAdd" id="addButtonTutorRequest" class="manageAdd" >
-						<p class="manage" style="padding-top: 0px">Add Tutor Request</p>
+                    <div  id="addButtonTutorRequest" class="manageAdd" >
+						<asp:button runat="server" class="manage" style="padding-top:0px" OnClick ="btnManageAdd" Text="Add Tutor Request"></asp:button>
 					</div>
                     <div id="updateButtonTutorRequest" class="manageAdd_Style">
 						
-						<p class="manage" style="padding-top: 0px">Update Tutor Request</p>
+						<asp:button runat="server" class="manage"   style="padding-top:0px" OnClick="btnManageUpdate" Text="Update Tutor Request"></asp:button>
 					</div>
 	         </div>
 
@@ -40,7 +40,7 @@
 
 
                         <asp:DropDownList runat="server" ID="cmbRequestCode"  style="position:absolute; left:220px; width: 110px; height: 22px"/>
-                        <asp:DropDownList runat="server" ID="dateRequest"  style="position:absolute; left:950px; width: 110px; height: 22px"/>
+                        <asp:Calendar runat="server" ID="dateRequest" style="position:absolute; left:950px; top: 25px;"/>
                         <asp:DropDownList runat="server" ID="cmbModuleCode"  style="position:absolute; left:550px; width: 130px; height: 22px"/>
                         <asp:DropDownList runat="server" ID="cmbVenueCode"  style="position:absolute; left:750px; width: 124px; height: 22px"/>
                         <asp:DropDownList runat="server" ID ="cmbStartTime" style="position:absolute; left:220px;top: 75px; width: 124px; height: 22px">
@@ -93,7 +93,7 @@
 
 					
 					<!-- DataGrid -->
-					<div style="position:relative; top:150px; left: 220px; background-color: darkgrey; height: 50%">
+					<div style="position:relative; top:230px; left: 220px; background-color: darkgrey; height: 50%">
 						<asp:DataGrid runat="server" ID="dgTutorRequest" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgTutorRequest_Load1" OnSelectedIndexChanged="dgTutorRequest_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" OnPageIndexChanged="dgTutorRequest_PageIndexChanged">
 							<AlternatingItemStyle BackColor="White" ForeColor="#284775" />
 							<Columns>

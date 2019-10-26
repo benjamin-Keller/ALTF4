@@ -69,7 +69,7 @@ namespace Info_IT.Pages
             dgTaskType.DataSource = bll.GetTasktype();
             dgTaskType.DataBind();
         }
-        private void BtnManageUpdate_Click(object sender, EventArgs e)
+        private void btnManageUpdate (object sender, EventArgs e)
         {
             try
             {
