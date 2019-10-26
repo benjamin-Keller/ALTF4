@@ -13,13 +13,13 @@ namespace Info_IT.Pages {
     public partial class TutorRequest {
         
         /// <summary>
-        /// cmbRequestDescription control.
+        /// cmbRequestCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbRequestDescription;
+        protected global::System.Web.UI.WebControls.DropDownList cmbRequestCode;
         
         /// <summary>
         /// dateRequest control.
@@ -47,6 +47,24 @@ namespace Info_IT.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList cmbVenueCode;
+        
+        /// <summary>
+        /// cmbStartTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList cmbStartTime;
+        
+        /// <summary>
+        /// cmbEndTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList cmbEndTime;
         
         /// <summary>
         /// cmbStatus control.

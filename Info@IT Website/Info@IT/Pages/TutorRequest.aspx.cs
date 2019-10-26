@@ -27,11 +27,12 @@ namespace Info_IT.Pages
 
                 var values = bll.SelectedForUpdateTutorRequest(request);
 
-                cmbRequestDescription.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
+                cmbRequestCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
                 dateRequest.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2].ToString();
                 cmbModuleCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
                 cmbVenueCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[6].ToString();
-
+                cmbStartTime.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
+                cmbEndTime.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
                 cmbStatus.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[7].ToString();
             }
 #pragma warning disable CS0168 // The variable 'b' is declared but never used
@@ -44,20 +45,20 @@ namespace Info_IT.Pages
 
 		protected void dgTutorRequest_Load1(object sender, EventArgs e)
 		{
-            cmbRequestDescription.DataSource = bll.GetRequests();
-            cmbRequestDescription.DataTextField = "RequestCode";
-            cmbRequestDescription.DataValueField = "RequestCode";
-            cmbRequestDescription.DataBind();
+            cmbRequestCode.DataSource = bll.GetRequests();
+            cmbRequestCode.DataTextField = "RequestCode";
+            cmbRequestCode.DataValueField = "RequestCode";
+            
 
             cmbVenueCode.DataSource = bll.GetVenues();
             cmbVenueCode.DataTextField = "VenueDescription";
             cmbVenueCode.DataValueField = "VenueCode";
-            cmbVenueCode.DataBind();
+           
 
             cmbModuleCode.DataSource = bll.LoadCMBModels();
             cmbModuleCode.DataTextField = "ModuleDescription";
             cmbModuleCode.DataValueField = "ModuleCode";
-            cmbModuleCode.DataBind();
+           
 
             dgTutorRequest.DataSource = bll.GetTutorRequest();
 			dgTutorRequest.DataBind();
@@ -72,14 +73,17 @@ namespace Info_IT.Pages
         {
             try
             {
-                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(cmbRequestDescription.SelectedValue.ToString(), Convert.ToDateTime(dateRequest.Text), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()), cmbStatus.SelectedItem.ToString());
+                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), cmbStartTime.SelectedItem.ToString(), cmbEndTime.SelectedItem.ToString(), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()), cmbStatus.SelectedItem.ToString());
 
                 int x = bll.AddTutorRequest(tutorRequest);
 
                 if (x > 0)
                 {
-                    cmbRequestDescription.Text = "";
-                    dateRequest.Text = "";
+                    cmbRequestCode.Text = " ";
+                    dateRequest.Text = " ";
+                    cmbStartTime.Text = " ";
+                    cmbEndTime.Text = " ";
+                    cmbRequestCode.Text = " ";
                     cmbModuleCode.Text = " ";
                     cmbVenueCode.Text = " ";
                     cmbStatus.Text = "";
@@ -106,16 +110,19 @@ namespace Info_IT.Pages
         {
             try
             {
-                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(cmbRequestDescription.SelectedValue.ToString(), Convert.ToDateTime(dateRequest.Text), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()), cmbStatus.SelectedItem.ToString());
+                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.Text), cmbStartTime.SelectedItem.ToString(), cmbEndTime.SelectedItem.ToString(), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()), cmbStatus.SelectedItem.ToString());
 
                 int x = bll.UpdateTutorRequest(tutorRequest);
 
                 if (x > 0)
                 {
-                    cmbRequestDescription.Text = "";
+                    cmbRequestCode.Text = " ";
                     dateRequest.Text = " ";
-                    cmbModuleCode.Text = "";
-                    cmbVenueCode.Text = "";
+                    cmbStartTime.Text = " ";
+                    cmbEndTime.Text = " ";
+                    cmbRequestCode.Text = " ";
+                    cmbModuleCode.Text = " ";
+                    cmbVenueCode.Text = " ";
                     cmbStatus.Text = "";
                 }
                 else
