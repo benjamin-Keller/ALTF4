@@ -20,7 +20,7 @@ namespace Info_IT.Pages
         {
             try
             {
-                DAL.InspectionClass inspectClass = new DAL.InspectionClass(int.Parse(dgInspection.SelectedItem.Cells[0].Text.ToString()));
+                DAL.InspectionClass inspectClass = new DAL.InspectionClass(int.Parse(dgInspection.SelectedItem.Cells[1].Text.ToString()));
 
                 var values = bll.SelectedForUpdateInspection(inspectClass);
 
@@ -56,7 +56,7 @@ namespace Info_IT.Pages
             dgInspection.DataBind();
         }
 
-        protected void BtnManageAdd(object sender, EventArgs e)
+        protected void btnManageAdd(object sender, EventArgs e)
         {
             try
             {
@@ -88,7 +88,7 @@ namespace Info_IT.Pages
             dgInspection.DataBind();
         }
 
-        protected void BtnManageUpdate_Click(object sender, EventArgs e)
+        protected void btnManageUpdate(object sender, EventArgs e)
         {
             try
             {

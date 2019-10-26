@@ -13,16 +13,15 @@
 	<div class="contentWrapperReport">
 			<div>
 				<!-- Side Nav -->
-				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey">
+				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey; ">
 					<div onclick="openFlatButtonInspection()" class="manage_Style">
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
-                    <div onclick="btnManageAdd" id="addButtonInspection" class="manageAdd" >
-						<p class="manage" style="padding-top: 0px">Add Inspection</p>
-					</div>
+                    <div id="addButtonInspection" class="manageAdd">
+                        <asp:button runat="server" class="manage" style="padding-top: 0px" OnClick="btnManageAdd"  Text="Add Inspection"></asp:button>
+                    </div>
                     <div id="updateButtonInspection" class="manageAdd_Style">
-						
-						<p class="manage" style="padding-top: 0px">Update Inspection</p>
+						<asp:button runat="server" class="manage" style="padding-top: 0px" OnClick="btnManageUpdate" Text="Update Inspection" ></asp:button>
 					</div>
 				</div>
 
@@ -36,7 +35,6 @@
 						<label style="position:absolute; left:620px; width:192px">Inspection Time:</label>
 						<label style="position:absolute; left:820px; width:192px">Comment:</label><br/>
                         
-
 						<asp:DropDownList runat="server" ID="cmbVenue" style="position:absolute; left:220px;width:164px;"/>
 						<asp:DropDownList runat="server" ID="cmbStaffCode"  style="position:absolute; left:420px; width: 164px;"/>
 						<asp:TextBox runat="server" ID="txtInspectTime"  style="position:absolute; left:620px;width:164px"/>
