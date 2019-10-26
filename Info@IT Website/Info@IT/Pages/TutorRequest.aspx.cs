@@ -21,12 +21,45 @@ namespace Info_IT.Pages
 
 		protected void dgTutorRequest_SelectedIndexChanged(object sender, EventArgs e)
 		{
+            try
+            {
+                DAL.TutorRequestClass request = new DAL.TutorRequestClass(int.Parse(dgTutorRequest.SelectedItem.Cells[1].Text.ToString()));
 
-		}
+                var values = bll.SelectedForUpdateTutorRequest(request);
+
+                cmbRequestDescription.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
+                dateRequest.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2].ToString();
+                cmbModuleCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
+                cmbVenueCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[6].ToString();
+
+                cmbStatus.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[7].ToString();
+            }
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
+            catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
+            {
+
+            }
+        }
 
 		protected void dgTutorRequest_Load1(object sender, EventArgs e)
 		{
-			dgTutorRequest.DataSource = bll.GetTutorRequest();
+            cmbRequestDescription.DataSource = bll.GetRequests();
+            cmbRequestDescription.DataTextField = "RequestCode";
+            cmbRequestDescription.DataValueField = "RequestCode";
+            cmbRequestDescription.DataBind();
+
+            cmbVenueCode.DataSource = bll.GetVenues();
+            cmbVenueCode.DataTextField = "VenueDescription";
+            cmbVenueCode.DataValueField = "VenueCode";
+            cmbVenueCode.DataBind();
+
+            cmbModuleCode.DataSource = bll.LoadCMBModels();
+            cmbModuleCode.DataTextField = "ModuleDescription";
+            cmbModuleCode.DataValueField = "ModuleCode";
+            cmbModuleCode.DataBind();
+
+            dgTutorRequest.DataSource = bll.GetTutorRequest();
 			dgTutorRequest.DataBind();
 		}
 
@@ -34,5 +67,70 @@ namespace Info_IT.Pages
 		{
 
 		}
-	}
+
+        protected void btnManageAdd(object sender, EventArgs e)
+        {
+            try
+            {
+                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(cmbRequestDescription.SelectedValue.ToString(), Convert.ToDateTime(dateRequest.Text), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()), cmbStatus.SelectedItem.ToString());
+
+                int x = bll.AddTutorRequest(tutorRequest);
+
+                if (x > 0)
+                {
+                    cmbRequestDescription.Text = "";
+                    dateRequest.Text = "";
+                    cmbModuleCode.Text = " ";
+                    cmbVenueCode.Text = " ";
+                    cmbStatus.Text = "";
+                }
+                else
+                {
+
+                }
+            }
+#pragma warning disable CS0168 // The variable 'error' is declared but never used
+            catch (Exception error)
+#pragma warning restore CS0168 // The variable 'error' is declared but never used
+            {
+
+            }
+
+
+
+            dgTutorRequest.DataSource = bll.GetTutorRequest();
+            dgTutorRequest.DataBind();
+
+        }
+        protected void btnManageUpdate(object sender, EventArgs e)
+        {
+            try
+            {
+                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(cmbRequestDescription.SelectedValue.ToString(), Convert.ToDateTime(dateRequest.Text), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()), cmbStatus.SelectedItem.ToString());
+
+                int x = bll.UpdateTutorRequest(tutorRequest);
+
+                if (x > 0)
+                {
+                    cmbRequestDescription.Text = "";
+                    dateRequest.Text = " ";
+                    cmbModuleCode.Text = "";
+                    cmbVenueCode.Text = "";
+                    cmbStatus.Text = "";
+                }
+                else
+                {
+
+                }
+            }
+#pragma warning disable CS0168 // The variable 'error' is declared but never used
+            catch (Exception error)
+#pragma warning restore CS0168 // The variable 'error' is declared but never used
+            {
+
+            }
+            dgTutorRequest.DataSource = bll.GetTutorRequest();
+            dgTutorRequest.DataBind();
+        }
+    }
 }

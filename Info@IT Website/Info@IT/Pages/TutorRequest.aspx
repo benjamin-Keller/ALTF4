@@ -30,24 +30,28 @@
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
                     <div style ="position:relative ; top:0 ; height: 50% ; width:100%;">
                         
-						<label style="position:absolute; left:220px; width:auto">RequestCode:</label>
-						<label style="position:absolute; left:400px">Description:</label>
-						<label style="position:absolute; left:550px; width:126px; top: 0px;">Date:</label>
-						<label style="position:absolute; left:695px; top: 0px; width: 124px;">ModuleDescriptions:</label>
-						<label style="position:absolute; left:890px; top: 0px; width: 127px;">VenueDescription:</label>
-                        <label style="position:absolute; left:1050px; top: 0px; width: 130px;">Status:</label><br />
+						<label style="position:absolute; left:220px">Description:</label>
+						<label style="position:absolute; left:1120px; width:126px; top: 0px;">Date:</label>
+						<label style="position:absolute; left:400px; top: 0px; width: 124px;">ModuleDescriptions:</label>
+						<label style="position:absolute; left:550px; top: 0px; width: 127px;">VenueDescription:</label>
+                        <label style="position:absolute; left:710px; top: 0px; width: 130px;">Status:</label><br />
 
-                        <asp:DropDownList runat="server" ID="cmbRequestCode"  style="position:absolute; left:220px; width: 110px; height: 22px"/>
-                        <asp:DropDownList runat="server" ID="cmbRequestDescription"  style="position:absolute; left:400px; width: 110px; height: 22px"/>
-                        <asp:DropDownList runat="server" ID="dateRequest"  style="position:absolute; left:550px; width: 110px; height: 22px"/>
-                        <asp:DropDownList runat="server" ID="cmbModuleCode"  style="position:absolute; left:695px; width: 130px; height: 22px"/>
-                        <asp:DropDownList runat="server" ID="cmbVenueCode"  style="position:absolute; left:890px; width: 124px; height: 22px"/>
-                        <asp:DropDownList runat="server" ID="cmbStatus"  style="position:absolute; left:1050px; width: 110px; height: 22px"/>
+
+                        <asp:DropDownList runat="server" ID="cmbRequestDescription"  style="position:absolute; left:200px; width: 110px; height: 22px"/>
+                        <asp:DropDownList runat="server" ID="dateRequest"  style="position:absolute; left:400px; width: 110px; height: 22px"/>
+                        <asp:DropDownList runat="server" ID="cmbModuleCode"  style="position:absolute; left:550px; width: 130px; height: 22px"/>
+                        <asp:DropDownList runat="server" ID="cmbVenueCode"  style="position:absolute; left:695px; width: 124px; height: 22px"/>
+                        <asp:DropDownList runat="server" ID="cmbStatus"  style="position:absolute; left:710px; width: 110px; height: 22px">
+                            <asp:ListItem>Pending</asp:ListItem>
+                            <asp:ListItem>In Progress</asp:ListItem>
+                            <asp:ListItem>Completed</asp:ListItem>
+                            <asp:ListItem>Cancelled</asp:ListItem>
+                        </asp:DropDownList>
                     </div>
 
 					
 					<!-- DataGrid -->
-					<div style="position:relative; top:50px; left: 220px; background-color: darkgrey; height: 50%">
+					<div style="position:relative; top:300px; left: 220px; background-color: darkgrey; height: 50%">
 						<asp:DataGrid runat="server" ID="dgTutorRequest" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgTutorRequest_Load1" OnSelectedIndexChanged="dgTutorRequest_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" OnPageIndexChanged="dgTutorRequest_PageIndexChanged">
 							<AlternatingItemStyle BackColor="White" ForeColor="#284775" />
 							<Columns>

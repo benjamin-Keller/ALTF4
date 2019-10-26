@@ -18,13 +18,84 @@ namespace Info_IT.Pages
 
 		protected void dgTaskType_SelectedIndexChanged(object sender, EventArgs e)
 		{
+            try
+            {
+                DAL.TaskTypeClass taskType = new DAL.TaskTypeClass(int.Parse(dgTaskType.SelectedItem.Cells[1].Text.ToString()));
 
-		}
+                var value = bll.SelectedForUpdateTaskType(taskType);
+
+                txtName.Text = value.Rows[0].Table.Rows[0].ItemArray[1].ToString();
+            }
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
+            catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
+            {
+
+            }
+
+
+        }
 
 		protected void dgTaskType_Load1(object sender, EventArgs e)
 		{
 			dgTaskType.DataSource = bll.GetTasktype();
 			dgTaskType.DataBind();
 		}
-	}
+        protected void btnManageAdd(object sender, EventArgs e)
+        {
+            try
+            {
+
+                DAL.TaskTypeClass task = new DAL.TaskTypeClass(txtName.Text);
+                int x = bll.AddTaskType(task);
+
+                if (x > 0)
+                {
+                    txtName.Text = " ";
+                }
+                else
+                {
+
+                }
+
+
+            }
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
+            catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
+            {
+
+            }
+            dgTaskType.DataSource = bll.GetTasktype();
+            dgTaskType.DataBind();
+        }
+        private void BtnManageUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                DAL.TaskTypeClass task = new DAL.TaskTypeClass(txtName.Text);
+                int x = bll.UpdateTaskType(task);
+
+                if (x > 0)
+                {
+                    txtName.Text = " ";
+                }
+                else
+                {
+
+                }
+
+
+            }
+#pragma warning disable CS0168 // The variable 'b' is declared but never used
+            catch (Exception b)
+#pragma warning restore CS0168 // The variable 'b' is declared but never used
+            {
+
+            }
+            dgTaskType.DataSource = bll.GetTasktype();
+            dgTaskType.DataBind();
+        }
+    }
 }
