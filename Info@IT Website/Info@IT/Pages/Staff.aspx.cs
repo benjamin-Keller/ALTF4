@@ -20,7 +20,7 @@ namespace Info_IT.Pages
         {
             try
             {
-                DAL.StaffClass staffClass = new DAL.StaffClass(int.Parse(dgStaff.SelectedItem.Cells[0].Text.ToString()));
+                DAL.StaffClass staffClass = new DAL.StaffClass(int.Parse(dgStaff.SelectedItem.Cells[1].Text.ToString()));
 
                 var values = bll.SelectForUpdateStaffExUser(staffClass);
 
@@ -57,7 +57,7 @@ namespace Info_IT.Pages
             dgStaff.DataBind();
         }
 
-        protected void BtnManageAdd(object sender, EventArgs e)
+        protected void btnManageAdd(object sender, EventArgs e)
         {
             try
             {
@@ -93,7 +93,7 @@ namespace Info_IT.Pages
 
 
 
-        protected void BtnManageUpdate(object sender, EventArgs e)
+        protected void btnManageUpdate(object sender, EventArgs e)
         {
 
             try

@@ -38,8 +38,6 @@
                         <asp:DropDownList runat="server" ID="cmbVenue" style="position:absolute; left:420px; top: 24px; width: 128px;"/>
                         <asp:DropDownList runat="server" ID="cmbEquipType" style="position:absolute; left:620px; top: 24px; width: 128px;"/>
 					</div>
-
-                  
 					
 					<!-- DataGrid -->
 					<div style="position:relative; top:50px; left: 220px; height: 50%; background-color: darkgrey">

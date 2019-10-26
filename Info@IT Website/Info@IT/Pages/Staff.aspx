@@ -13,16 +13,15 @@
 	<div class="contentWrapperReport">
 			<div>
 				<!-- Side Nav -->
-				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey">
+				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey; ">
 					<div onclick="openFlatButtonStaff()" class="manage_Style">
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
-                    <div onclick="btnManageAdd" id="addButtonStaff" class="manageAdd" >
-						<p class="manage" style="padding-top: 0px">Add Staff</p>
-					</div>
+                    <div id="addButtonStaff" class="manageAdd">
+                        <asp:button runat="server" class="manage" style="padding-top: 0px" OnClick="btnManageAdd"  Text="Add Staff"></asp:button>
+                    </div>
                     <div id="updateButtonStaff" class="manageAdd_Style">
-						
-						<p class="manage" style="padding-top: 0px">Update Staff</p>
+						<asp:button runat="server" class="manage" style="padding-top: 0px" OnClick="btnManageUpdate" Text="Update Staff" ></asp:button>
 					</div>
 				</div>
 
@@ -51,10 +50,10 @@
                         <label style="position:absolute; left:1020px; width:192px;">Active Status:</label><br />
                         
                         <asp:DropDownList runat="server" ID="cmbStaffType" style="position:absolute; left:220px; width:164px; height:21px">
-                        <asp:ListItem>ICT</asp:ListItem>
-                        <asp:ListItem>Info@IT</asp:ListItem>
-                        <asp:ListItem>Student Assisstant</asp:ListItem>
-                            </asp:DropDownList>
+                            <asp:ListItem>ICT</asp:ListItem>
+                            <asp:ListItem>Info@IT</asp:ListItem>
+                            <asp:ListItem>Student Assistant</asp:ListItem>
+                        </asp:DropDownList>
                         <asp:DropDownList  runat="server" ID="cmbDepartmentCode" style="position:absolute; left:420px; width:164px; height:21px"/>
                         <asp:TextBox runat="server" ID="txtUsername" style="position:absolute; left:620px; width:160px;"/>
                         <asp:TextBox runat="server" ID="txtPassword" style="position:absolute; left:820px; width:160px;"/>

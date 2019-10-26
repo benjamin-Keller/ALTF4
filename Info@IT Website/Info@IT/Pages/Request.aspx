@@ -14,7 +14,7 @@
 			<div>
 				<!-- Side Nav -->
 				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey; ">
-					<div onclick="openFlatButtonVenue()" class="manage_Style">
+					<div onclick="openFlatButtonRequest()" class="manage_Style">
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
                     <div id="addButtonRequest" class="manageAdd">
