@@ -70,14 +70,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\Master.css" />
+    <Content Include="HelpDesk.Master" />
     <Content Include="Images\%40.png" />
+    <Content Include="Login.aspx" />
     <Content Include="Pages\Default.aspx" />
     <Content Include="Pages\Department.aspx" />
     <Content Include="Pages\Equipment.aspx" />
     <Content Include="Pages\EquipmentDetails.aspx" />
     <Content Include="Pages\Inspection.aspx" />
     <Content Include="Pages\InspectionDetails.aspx" />
-    <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\Reports.aspx" />
     <Content Include="Pages\Request.aspx" />
     <Content Include="Pages\Staff.aspx" />
@@ -95,6 +96,13 @@
     </Compile>
     <Compile Include="HelpDesk.Master.designer.cs">
       <DependentUpon>HelpDesk.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -137,13 +145,6 @@
     </Compile>
     <Compile Include="Pages\InspectionDetails.aspx.designer.cs">
       <DependentUpon>InspectionDetails.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Reports.aspx.cs">
       <DependentUpon>Reports.aspx</DependentUpon>
@@ -197,7 +198,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HelpDesk.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

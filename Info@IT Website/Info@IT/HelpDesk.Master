@@ -29,22 +29,26 @@
 									
 								</h1>
 							</div>
+                            <div style="position:absolute; right:100px; top:70px; text-align:center">
+								<asp:Label runat="server" ID="lblRole" Text="Role" Font-Size="Larger" Font-Bold="true" style="color:white" /><br />
+                                <asp:Button runat="server" ID="btnLogOut" Text="Log Out" Font-Size="X-Large" Font-Bold="true" OnClick="btnLogOut_Click" />
+							</div>
 						</td>
 					</tr>
 					<tr>
 						<td class="menu">
 							<!-- Side navigation -->
 							<ul class="sidebar">
-							  <li><a href="Default.aspx">Home</a></li>
+							  <li ><a href="Default.aspx">Home</a></li>
 							  <li><a href="Equipment.aspx">Equipment</a></li>
-							  <li><a href="Venue.aspx">Venue</a></li>
-							  <li><a href="Department.aspx">Department</a></li>
+                              <li id="venue" runat="server"><a href="Venue.aspx">Venue</a></li>
+							  <li id="department" runat="server"><a href="Department.aspx">Department</a></li>
 							  <li><a href="Request.aspx">Request</a></li>
 							  <li><a href="TutorRequest.aspx">Tutor Request</a></li>
 							  <li><a href="Inspection.aspx">Inspection</a></li>
-							  <li><a href="TaskType.aspx">Task Type</a></li>
-							  <li><a href="Student.aspx">Student</a></li>
-							  <li><a href="Staff.aspx">Staff</a></li>
+							  <li id="tasktype" runat="server"><a href="TaskType.aspx">Task Type</a></li>
+							  <li id="student" runat="server"><a href="Student.aspx">Student</a></li>
+							  <li id="staff" runat="server"><a href="Staff.aspx">Staff</a></li>
 							  <li><a href="Reports.aspx">Reports</a></li>
 							</ul>
 						</td>
