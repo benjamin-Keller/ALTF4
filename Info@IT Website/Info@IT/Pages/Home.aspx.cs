@@ -9,9 +9,12 @@ namespace Info_IT.Pages
 {
 	public partial class Default : System.Web.UI.Page
 	{
-		protected void Page_Load(object sender, EventArgs e)
-		{
+        string role;
 
+        protected void Page_Load(object sender, EventArgs e)
+		{
+            role = Session["Role"].ToString();
+            lblRole.Text = "Your Current Role: " + role;
 		}
 	}
 }
