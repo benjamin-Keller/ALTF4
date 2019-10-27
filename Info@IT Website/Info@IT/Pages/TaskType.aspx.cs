@@ -46,7 +46,7 @@ namespace Info_IT.Pages
             try
             {
 
-                DAL.TaskTypeClass task = new DAL.TaskTypeClass(txtName.Text);
+                DAL.TaskTypeClass task = new DAL.TaskTypeClass(DAL.TaskTypeClass.TaskTypeCode, txtName.Text);
                 int x = bll.AddTaskType(task);
 
                 if (x > 0)
@@ -69,12 +69,12 @@ namespace Info_IT.Pages
             dgTaskType.DataSource = bll.GetTasktype();
             dgTaskType.DataBind();
         }
-        private void btnManageUpdate (object sender, EventArgs e)
+        protected void btnManageUpdate (object sender, EventArgs e)
         {
             try
             {
 
-                DAL.TaskTypeClass task = new DAL.TaskTypeClass(txtName.Text);
+                DAL.TaskTypeClass task = new DAL.TaskTypeClass(DAL.TaskTypeClass.TaskTypeCode,txtName.Text);
                 int x = bll.UpdateTaskType(task);
 
                 if (x > 0)

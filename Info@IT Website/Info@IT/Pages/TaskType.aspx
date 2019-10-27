@@ -18,11 +18,11 @@
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
                     <div  id="addButtonTaskType" class="manageAdd" >
-						<asp:button runat="server" class="manage" style="padding-top:0px" OnClick ="btnManageAdd" Text="Add TaskType"></asp:button>
-					</div>
-                    <div id="updateButtonTaskType" class="manageAdd_Style">
 						
-						<p class="manage" style="padding-top: 0px">Update Task Type</p>
+                        <asp:button runat="server" class="manage" style="padding-top:0px; width: 200px;background-color:grey" OnClick="btnManageAdd" Text="Add TaskType"></asp:button>
+					</div>
+                    <div id="updateButtonTaskType" class="manageAdd_Style">		
+						<asp:button runat="server" class="manage" style="padding-top:0px; width: 200px;background-color:grey" OnClick="btnManageUpdate" Text="Update TaskType"></asp:button>
 					</div>
 				</div>
 
