@@ -43,6 +43,10 @@
 						<asp:TextBox runat="server" ID="txtEmailAddress"  style="position:absolute; left:820px; top: 23px; width: 162px;"/>
 					</div>
 
+                        <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
+			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
+				   <ContentTemplate>
+
 					<!-- DataGrid -->
 					<div style="position:relative; top:50px; left: 220px; height: 50%; background-color: darkgrey">
 						<asp:DataGrid runat="server" ID="dgStudent" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgStudent_Load1" OnSelectedIndexChanged="dgStudent_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True">
@@ -58,6 +62,8 @@
 							<SelectedItemStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
 						</asp:DataGrid>
                 </div>
+                       </ContentTemplate>
+				   </asp:UpdatePanel>
 			</div>
     </div>
 </div>

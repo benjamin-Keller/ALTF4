@@ -74,6 +74,10 @@
                         </asp:DropDownList>
 					</div>
 
+                    <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
+			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
+				   <ContentTemplate>
+
 					<!-- DataGrid -->
 					<div style="position:relative; top:300px; left: 220px; height: 50%; background-color: darkgrey">
 						<asp:DataGrid runat="server" ID="dgRequest" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgRequest_Load1" OnSelectedIndexChanged="dgRequest_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True">
@@ -89,7 +93,9 @@
 							<SelectedItemStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
 						</asp:DataGrid>
                 </div>
-			</div>
+                       </ContentTemplate>
+				   </asp:UpdatePanel>
+			</div>    
     </div>
-        </div>
+        <%--</div>--%>
 </asp:Content>
