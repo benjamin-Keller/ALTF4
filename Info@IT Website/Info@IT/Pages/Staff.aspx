@@ -64,6 +64,10 @@
 					
                     </div>
 					
+                    <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
+			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
+				   <ContentTemplate>
+
 					<!-- DataGrid -->
 					<div style="position:relative; top:50px; left: 220px; height: 50%; background-color: darkgrey">
 						<asp:DataGrid runat="server" ID="dgStaff" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgStaff_Load1" OnSelectedIndexChanged="dgStaff_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True">
@@ -80,6 +84,8 @@
 						</asp:DataGrid>
             
                     </div>
+                       </ContentTemplate>
+				   </asp:UpdatePanel>
 			    </div>
             </div>
     </div>

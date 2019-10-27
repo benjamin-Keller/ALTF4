@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Info_IT.Pages
-{
-
-
-    public partial class Staff
-    {
-
+namespace Info_IT.Pages {
+    
+    
+    public partial class Staff {
+        
         /// <summary>
         /// txtStaffNo control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace Info_IT.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtStaffNo;
-
+        
         /// <summary>
         /// txtFirstName control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace Info_IT.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFirstName;
-
+        
         /// <summary>
         /// txtLastName control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace Info_IT.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLastName;
-
+        
         /// <summary>
         /// txtEmail control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace Info_IT.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
-
+        
         /// <summary>
         /// txtContactNumber control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace Info_IT.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtContactNumber;
-
+        
         /// <summary>
         /// cmbStaffType control.
         /// </summary>
@@ -67,7 +65,7 @@ namespace Info_IT.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList cmbStaffType;
-
+        
         /// <summary>
         /// cmbDepartmentCode control.
         /// </summary>
@@ -76,7 +74,7 @@ namespace Info_IT.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList cmbDepartmentCode;
-
+        
         /// <summary>
         /// txtUsername control.
         /// </summary>
@@ -85,7 +83,7 @@ namespace Info_IT.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtUsername;
-
+        
         /// <summary>
         /// txtPassword control.
         /// </summary>
@@ -94,7 +92,7 @@ namespace Info_IT.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
-
+        
         /// <summary>
         /// cmbActiveStatus control.
         /// </summary>
@@ -103,7 +101,25 @@ namespace Info_IT.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList cmbActiveStatus;
-
+        
+        /// <summary>
+        /// script control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager script;
+        
+        /// <summary>
+        /// updateDG control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel updateDG;
+        
         /// <summary>
         /// dgStaff control.
         /// </summary>

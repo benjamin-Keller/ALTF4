@@ -35,7 +35,9 @@
 						<asp:TextBox runat="server" ID="txtDescription" style="position:absolute; left:220px; top: 24px;"/>
 					</div>
 
-                  
+                  <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
+			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
+				   <ContentTemplate>
 					
 					<!-- DataGrid -->
 					<div style="position:relative; top:50px; left: 220px; height: 50%; background-color: darkgrey">
@@ -52,6 +54,8 @@
 							<SelectedItemStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
 						</asp:DataGrid>
 					</div>
+                        </ContentTemplate>
+				   </asp:UpdatePanel>
                 </div>
 			</div>
     </div>
