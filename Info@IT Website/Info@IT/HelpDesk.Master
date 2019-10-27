@@ -24,14 +24,11 @@
 								<a href="Home.aspx"><img src="../Images/@.png" class="At" /></a>
 							</div>
 							<div class="centerText">
-								<h1 class="title">
-									Info@IT HelpDesk Web-System
-									
-								</h1>
+								<h1 class="title" style="position:absolute; top:50px; left: calc(100vw - 50% - 200px)">Info@IT HelpDesk Web-System</h1>
 							</div>
                             <div style="position:absolute; right:100px; top:70px; text-align:center">
-								<asp:Label runat="server" ID="lblRole" Text="Role" Font-Size="Larger" Font-Bold="true" style="color:white" /><br />
-                                <asp:Button runat="server" ID="btnLogOut" Text="Log Out" Font-Size="X-Large" Font-Bold="true" OnClick="btnLogOut_Click" />
+								<asp:Label runat="server" ID="lblRole" Text="Role" Font-Size="Larger" Font-Bold="true" style="color:white; margin-right: 25px" />
+                                <asp:Button runat="server" ID="btnLogOut" Text="Log Out" Font-Size="X-Large" Font-Bold="true" OnClick="btnLogOut_Click" class="btn btn-primary" />
 							</div>
 						</td>
 					</tr>

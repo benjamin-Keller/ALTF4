@@ -28,7 +28,7 @@
 					</tr>
 					<tr>
 						<td class="menu" style="background-color: white">
-                            <div style="font-size:xx-large; position:relative; top:100px; left:calc((100vw/2 - 200px)">
+                            <div style="font-size:xx-large; position:relative; top:100px; ">
 								<div class="modal" tabindex="-1" role="dialog">
 								  <div class="modal-dialog" role="document">
 									<div class="modal-content">
@@ -39,8 +39,8 @@
 									</div>
 								  </div>
 								</div>
-
-								<div class="panel panel-default " style="width:400px;">
+							
+								<div class="panel panel-primary " style="width:400px; position: relative; left: 50%; margin-left: -200px;">
 								  <div class="panel-heading"><asp:Label Font-Size="XX-Large" Font-Bold="true" runat="server" Text="Login:" /></div>
 								  <div class="panel-body"><div class="input-group">
 								  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -48,17 +48,12 @@
 								</div>
 								<div class="input-group">
 								  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-								  <asp:TextBox runat="server" id="txtPassword" type="text" class="form-control" name="password" placeholder="Password" Width="300px" AutoCompleteType="none" />
+								  <asp:TextBox runat="server" id="txtPassword" type="password" class="form-control" name="password" placeholder="Password" Width="300px" AutoCompleteType="none" />
 								</div>
                                 <asp:Button Font-Size="Large" runat="server" ID="btnSubmit" Text="Login" OnClick="btnSubmit_Click" CssClass="btn btn-primary" /><br />
                                 <asp:Label ForeColor="Red" runat="server" ID="lblError" Text ="Incorrect Username and Password." Visible="false" Font-Size="Medium" /></div>
 								</div>
-
-								 <div class="form-group">
-
-									<br />
-									
-                                </div>
+								
 								
 							
                             </div>

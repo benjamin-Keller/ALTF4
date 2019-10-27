@@ -30,7 +30,7 @@ h1 {
 .title {
 	font-family: 'Segoe UI';
 	color: white;
-
+	vertical-align: middle;
 }
 
 .contentMenu {
