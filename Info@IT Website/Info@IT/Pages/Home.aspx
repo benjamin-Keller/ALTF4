@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HelpDesk.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Info_IT.Pages.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HelpDesk.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Info_IT.Pages.Default" %>
 <%-- Title --%>
 <asp:Content runat="server" ID="Title" ContentPlaceHolderID="title">Default | Info@IT HelpDesk Web-System</asp:Content>
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Info_IT.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Info_IT.Login" %>
 
 <!DOCTYPE html>
 
@@ -36,6 +36,7 @@
                                 <asp:TextBox Font-Size="X-Large" TextMode="Password" runat ="server" ID="txtPassword" /> <br />
                                 <asp:Button Font-Size="X-Large" runat="server" ID="btnSubmit" Text="Submit" OnClick="btnSubmit_Click" /><br />
                                 <asp:Label ForeColor="Red" runat="server" ID="lblError" Text ="Incorrect Username and Password." Visible="false" />
+							
                             </div>
 						</td>
 						<%--<td class="contentMain">
@@ -48,6 +49,9 @@
 								</div>
 							</div>
 						</td>--%>
+					</tr>
+					<tr>
+						<asp:Login runat="server"></asp:Login>
 					</tr>
 					<tr>
 						<td colspan="2" class="contentFooter">

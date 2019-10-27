@@ -54,7 +54,7 @@ namespace Info_IT
 
         protected void btnLogOut_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/Login.aspx");
+            Response.Redirect("/Default.aspx");
         }
 
     }

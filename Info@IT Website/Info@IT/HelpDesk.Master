@@ -21,7 +21,7 @@
 						<td colspan="2" class="contentHeader">
 					
 							<div id="Logo">
-								<a href="Default.aspx"><img src="../Images/@.png" class="At" /></a>
+								<a href="Home.aspx"><img src="../Images/@.png" class="At" /></a>
 							</div>
 							<div class="centerText">
 								<h1 class="title">
@@ -39,7 +39,7 @@
 						<td class="menu">
 							<!-- Side navigation -->
 							<ul class="sidebar">
-							  <li ><a href="Default.aspx">Home</a></li>
+							  <li ><a href="Home.aspx">Home</a></li>
 							  <li><a href="Equipment.aspx">Equipment</a></li>
                               <li id="venue" runat="server"><a href="Venue.aspx">Venue</a></li>
 							  <li id="department" runat="server"><a href="Department.aspx">Department</a></li>

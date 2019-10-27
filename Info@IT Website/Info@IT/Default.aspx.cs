@@ -38,7 +38,7 @@ namespace Info_IT
                 {
                 }
 
-                Response.Redirect("Pages/Default.aspx");
+                Response.Redirect("Pages/Home.aspx");
             }
         }
     }

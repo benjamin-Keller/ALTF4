@@ -72,8 +72,8 @@
     <Content Include="css\Master.css" />
     <Content Include="HelpDesk.Master" />
     <Content Include="Images\%40.png" />
-    <Content Include="Login.aspx" />
-    <Content Include="Pages\Default.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Pages\Home.aspx" />
     <Content Include="Pages\Department.aspx" />
     <Content Include="Pages\Equipment.aspx" />
     <Content Include="Pages\EquipmentDetails.aspx" />
@@ -97,19 +97,19 @@
     <Compile Include="HelpDesk.Master.designer.cs">
       <DependentUpon>HelpDesk.Master</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Default.aspx.cs">
+    <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Default.aspx.designer.cs">
+    <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Department.aspx.cs">
       <DependentUpon>Department.aspx</DependentUpon>
