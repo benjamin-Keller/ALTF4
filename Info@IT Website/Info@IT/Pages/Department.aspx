@@ -14,8 +14,8 @@
 <%-- Body --%>
 <asp:Content runat="server" ID="Content" ContentPlaceHolderID="BodyContent">
 	<%--<h2>Department.aspx</h2>--%>
-    <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />  
-<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />  
+    <%--<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />  
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" /> --%> 
 
     <div class="contentWrapperReport">
 			<div>
