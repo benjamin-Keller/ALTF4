@@ -26,15 +26,19 @@
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
                     <div id="addButtonDepartment" class="manageAdd">
-                        <asp:button runat="server" class="manage" style="padding-top: 0px; width: 200px;background-color: grey" OnClick="btnManageAdd"  Text="Add Department"></asp:button>
+                        <asp:button runat="server" class="manage" style="padding-top: 0px; width: 200px;height:inherit;background-color: #696969;border:none" OnClick="btnManageAdd"  Text="Add Department"></asp:button>
                     </div>
                     <div id="updateButtonDepartment" class="manageAdd_Style">
-						<asp:button runat="server" class="manage" style="padding-top: 0px; width: 200px;background-color: grey" OnClick="BtnManageUpdate_Click" Text="Update Department" ></asp:button>
+						<asp:button runat="server" class="manage" style="padding-top: 0px; width: 200px;height:inherit;background-color: #696969;border:none" OnClick="BtnManageUpdate_Click" Text="Update Department" ></asp:button>
 					</div>
 				</div>
 
 				<!-- Content -->
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
+                     <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
+			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
+				   <ContentTemplate>
+
                     <div style="background-color:red;color:white; display:none" id="lblError"><label>Error try again</label></div>
 					<div style="position:relative; top:0; height: 50%; width:100%;">
 						<label style="position:absolute; left:220px; width:auto">Name:</label>
@@ -50,9 +54,7 @@
 						<asp:TextBox runat="server" ID="txtEmailAddress"  style="position:absolute; left:950px"/>
 					</div>
 
-                    <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
-			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
-				   <ContentTemplate>
+                   
 
 					<!-- DataGrid -->
 					<div style="position:relative; top:50px; left: 220px; height: 50%; background-color: darkgrey">

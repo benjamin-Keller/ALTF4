@@ -19,10 +19,10 @@
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
                     <div id="addButtonEquipment" class="manageAdd">
-                        <asp:button runat="server" class="manage" style="padding-top: 0px" OnClick="btnManageAdd"  Text="Add Equipment"></asp:button>
+                        <asp:button runat="server" class="manage" style="padding-top: 0px;height:inherit;background-color: #696969;border:none" OnClick="btnManageAdd"  Text="Add Equipment"></asp:button>
                     </div>
                     <div id="updateButtonEquipment" class="manageAdd_Style">
-						<asp:button runat="server" class="manage" style="padding-top: 0px" OnClick="btnManageUpdate" Text="Update Equipment" ></asp:button>
+						<asp:button runat="server" class="manage" style="padding-top: 0px;height:inherit;background-color: #696969;border:none" OnClick="btnManageUpdate" Text="Update Equipment" ></asp:button>
 					</div>
 				</div>
 
