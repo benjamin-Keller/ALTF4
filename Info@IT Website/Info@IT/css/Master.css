@@ -23,9 +23,10 @@ h1 {
 }
 
 .contentHeader {
-	width: 800px;
-	height: 60px;
-	background-color: #0064c8;
+    width: 800px;
+    height: 60px;
+    background-color: #0064c8;
+    color: white;
 }
 .title {
 	font-family: 'Segoe UI';

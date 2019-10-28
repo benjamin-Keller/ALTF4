@@ -8,7 +8,9 @@
 
 		<asp:ContentPlaceHolder ID="head" runat="server">
 			<link href="css/Master.css" rel="stylesheet" />
-			 
+			 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+	         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         </asp:ContentPlaceHolder>
 
 </head>
@@ -24,7 +26,7 @@
 								<a href="Home.aspx"><img src="../Images/@.png" class="At" /></a>
 							</div>
 							<div class="centerText">
-								<h1 class="title" style="position:absolute; top:50px; left: calc(100vw - 50% - 200px)">Info@IT HelpDesk Web-System</h1>
+								<h1 class="">Info@IT HelpDesk Web-System</h1>
 							</div>
                             <div style="position:absolute; right:100px; top:70px; text-align:center">
 								<asp:Label runat="server" ID="lblRole" Text="Role" Font-Size="Larger" Font-Bold="true" style="color:white; margin-right: 25px" />
