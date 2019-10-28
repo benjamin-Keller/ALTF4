@@ -89,7 +89,7 @@
 
 					<!-- DataGrid -->
 					<div style="position:relative; top:300px; left: 220px; height: 50%; background-color: darkgrey">
-						<asp:DataGrid runat="server" ID="dgRequest" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgRequest_Load1" OnSelectedIndexChanged="dgRequest_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowCustomPaging="true" PageSize="6">
+						<asp:DataGrid runat="server" ID="dgRequest" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgRequest_Load1" OnSelectedIndexChanged="dgRequest_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowCustomPaging="true" PageSize="10">
 							<AlternatingItemStyle BackColor="White" ForeColor="#284775" />
 							<Columns>
 								<asp:ButtonColumn CommandName="Select" Text="Select"></asp:ButtonColumn>

@@ -51,7 +51,7 @@
                    
 
 					<!-- DataGrid -->
-					<div style="position:relative; top:300px; left: 220px; height: 50%; background-color: darkgrey">
+					<div style="position:relative; top:80px; left: 220px; height: 50%; background-color: darkgrey">
                         <asp:DataGrid runat="server" ID="dgInspectionDetails" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgInspectionDetails_Load1" OnSelectedIndexChanged="dgInspectionDetails_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True">
 							<AlternatingItemStyle BackColor="White" ForeColor="#284775" />
                             <Columns>

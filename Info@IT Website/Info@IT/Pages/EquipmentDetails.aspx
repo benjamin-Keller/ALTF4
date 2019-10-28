@@ -1,4 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HelpDesk.Master" AutoEventWireup="true" CodeBehind="EquipmentDetails.aspx.cs" Inherits="Info_IT.Pages.EquipmentDetails" %>
+
+
 <%-- Title --%>
 <asp:Content runat="server" ID="Title" ContentPlaceHolderID="title">Equipment Type | Info@IT HelpDesk Web-System</asp:Content>
 
@@ -24,7 +26,6 @@
 						<p class="manage" style="padding-top: 0px">Add Type</p>
 					</div>
                     <div id="updateButtonEquipmentType" class="manageAdd_Style">
-						
 						<p class="manage" style="padding-top: 0px">Update Type</p>
 					</div>
 				</div>

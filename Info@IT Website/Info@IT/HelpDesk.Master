@@ -40,11 +40,13 @@
 							<ul class="sidebar">
 							  <li ><a href="Home.aspx">Home</a></li>
 							  <li><a href="Equipment.aspx">Equipment</a></li>
+							  <li><a href="EquipmentDetails.aspx">Equipment Details</a></li>
                               <li id="venue" runat="server"><a href="Venue.aspx">Venue</a></li>
 							  <li id="department" runat="server"><a href="Department.aspx">Department</a></li>
 							  <li><a href="Request.aspx">Request</a></li>
 							  <li><a href="TutorRequest.aspx">Tutor Request</a></li>
 							  <li><a href="Inspection.aspx">Inspection</a></li>
+							  <li><a href="InspectionDetails.aspx">Inspection Details</a></li>
 							  <li id="tasktype" runat="server"><a href="TaskType.aspx">Task Type</a></li>
 							  <li id="student" runat="server"><a href="Student.aspx">Student</a></li>
 							  <li id="staff" runat="server"><a href="Staff.aspx">Staff</a></li>
