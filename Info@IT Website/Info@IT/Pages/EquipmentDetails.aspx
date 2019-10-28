@@ -22,11 +22,11 @@
 					<div onclick="openFlatButtonEquipmentType()" class="manage_Style">
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
-                    <div onclick="btnManageAdd" id="addButtonEquipmentType" class="manageAdd" >
-						<p class="manage" style="padding-top: 0px">Add Type</p>
-					</div>
+                    <div id="addButtonEquipmentType" class="manageAdd">
+                        <asp:button runat="server" class="manage" style="padding-top: 0px; width: 200px;height:inherit;background-color: #696969;border:none" OnClick="btnManageAdd"  Text="Add Equipment Type"></asp:button>
+                    </div>
                     <div id="updateButtonEquipmentType" class="manageAdd_Style">
-						<p class="manage" style="padding-top: 0px">Update Type</p>
+						<asp:button runat="server" class="manage" style="padding-top: 0px; width: 200px;height:inherit;background-color: #696969;border:none" OnClick="btnManageUpdate" Text="Update Equipment Type" ></asp:button>
 					</div>
 				</div>
 
