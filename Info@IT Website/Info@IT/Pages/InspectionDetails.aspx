@@ -6,6 +6,9 @@
 <asp:Content runat="server" ID="Head" ContentPlaceHolderID="head">
 	<link href="../css/Master.css" rel="stylesheet" />
 	<script src="../Script/Scripts.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+	         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </asp:Content>
 
 <%-- Body --%>
@@ -49,7 +52,7 @@
 
 					<!-- DataGrid -->
 					<div style="position:relative; top:300px; left: 220px; height: 50%; background-color: darkgrey">
-                        <%--<asp:DataGrid runat="server" ID="dgInspectionDetails" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgInspectionDetails_Load1" OnSelectedIndexChanged="dgInspectionDetails_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True">
+                        <asp:DataGrid runat="server" ID="dgInspectionDetails" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgInspectionDetails_Load1" OnSelectedIndexChanged="dgInspectionDetails_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True">
 							<AlternatingItemStyle BackColor="White" ForeColor="#284775" />
                             <Columns>
 								<asp:ButtonColumn CommandName="Select" Text="Select"></asp:ButtonColumn>
@@ -60,7 +63,7 @@
 							<ItemStyle BackColor="#F7F6F3" ForeColor="#333333" />
 							<PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" Mode="NumericPages" />
 							<SelectedItemStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
-						</asp:DataGrid>--%>
+						</asp:DataGrid>
                     </div>
                        </ContentTemplate>
 				   </asp:UpdatePanel>

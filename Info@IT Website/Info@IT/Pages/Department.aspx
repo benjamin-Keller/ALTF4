@@ -5,9 +5,10 @@
 <%-- Head --%>
 <asp:Content runat="server" ID="Head" ContentPlaceHolderID="head">
 	<link href="../css/Master.css" rel="stylesheet" />
-    <script type="text/javascript" src="../Script/Scripts.js">
-        
-    </script>
+    <script src="../Script/Scripts.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+	         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     
     
 </asp:Content>
