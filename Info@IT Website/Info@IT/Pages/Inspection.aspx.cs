@@ -27,7 +27,8 @@ namespace Info_IT.Pages
 
                 txtInspectTime.Text = values.Rows[0].Table.Rows[0].ItemArray[4].ToString();
                 txtComment.Text = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
-
+                calInspectDate.SelectedDate = DateTime.Parse(values.Rows[0].Table.Rows[0].ItemArray[3].ToString());
+                calInspectDate.VisibleDate = DateTime.Parse(values.Rows[0].Table.Rows[0].ItemArray[3].ToString());
                 cmbVenue.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
                 cmbStaffCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2].ToString();
             }

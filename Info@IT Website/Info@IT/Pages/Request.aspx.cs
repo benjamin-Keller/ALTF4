@@ -78,7 +78,8 @@ namespace Info_IT.Pages
                 var values = bll.SelectedForUpdateRequest(requestClass);
 
                 txtDescription.Text = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
-                //dateRequest.SelectedDate = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
+                dateRequest.SelectedDate = DateTime.Parse(values.Rows[0].Table.Rows[0].ItemArray[5].ToString());
+                dateRequest.VisibleDate = DateTime.Parse(values.Rows[0].Table.Rows[0].ItemArray[5].ToString());
 
                 cmbStaff.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2].ToString();
                 cmbStudentCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
