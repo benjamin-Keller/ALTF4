@@ -28,12 +28,8 @@
                     <div id="updateButtonEquipment" class="manageAdd_Style">
 						<asp:button runat="server" class="manage" style="padding-top: 0px; width: 200px;height:inherit;background-color: #696969;border:none" OnClick="btnManageUpdate" Text="Update Equipment" ></asp:button>
 					</div>
-					<div onclick="openFlatButtonEquipmentView()" class="manage_Style">
-						<p class="manage" style="padding-top: 0px">View</p>
-					</div>
-                    <div id="viewButtonEquipment" class="manageAdd">
-                        <asp:button runat="server" class="manage" style="padding-top: 0px; width: 200px;height:inherit;background-color: #696969;border:none" OnClick=""  Text="View Equipment Details"></asp:button>
-                    </div>
+					
+                    
                     
 				</div>
 
