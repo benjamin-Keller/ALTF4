@@ -30,17 +30,17 @@
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
 
 					<div style="position:relative; top:0; height: 50%; width:100%;">
-						<label style="position:absolute; left:220px; width:192px">Inspection Code:</label>
-						<label style="position:absolute; left:370px; width:192px">Equipment Code:</label>
-						<label style="position:absolute; left:520px; width:192px">Staff Member:</label>
-						<label style="position:absolute; left:670px; width:192px">Fault Comment:</label>
-                        <label style="position:absolute; left:820px; width:192px">Status:</label>
+						<label style="position:absolute; left:220px; width:150px">Inspection Code:</label>
+						<label style="position:absolute; left:400px; width:150px">Equipment Code:</label>
+						<label style="position:absolute; left:580px; width:150px">Staff Member:</label>
+						<label style="position:absolute; left:760px; width:150px">Fault Comment:</label>
+                        <label style="position:absolute; left:940px; width:150px">Status:</label>
                         
-						<asp:DropDownList runat="server" ID="cmbInspectionCode" style="position:absolute; width:128px; height: 21px; left:220px; top: 24px"/>
-						<asp:DropDownList runat="server" ID="cmbEquipment" style="position:absolute; width:128px; height: 21px; left:370px; top: 24px"/>
-						<asp:DropDownList runat="server" ID="cmbStaffMember"  style="position:absolute; width:128px; height: 21px; left:520px; top: 24px"/>
-						<asp:TextBox runat="server" ID="txtFaultComment"  style="position:absolute; width:128px; left:670px; top: 24px"/>
-                        <asp:DropDownList runat="server" ID="cmbStatus" style="position:absolute; width:128px; height: 21px; left:820px; top: 24px"/>
+						<asp:DropDownList runat="server" ID="cmbInspectionCode" style="position:absolute; width:150px; height: 21px; left:220px; top: 24px"/>
+						<asp:DropDownList runat="server" ID="cmbEquipment" style="position:absolute; width:150px; height: 21px; left:400px; top: 24px"/>
+						<asp:DropDownList runat="server" ID="cmbStaffMember"  style="position:absolute; width:150px; height: 21px; left:580px; top: 24px"/>
+						<asp:TextBox runat="server" ID="txtFaultComment"  style="position:absolute; width:150px; left:760px; top: 24px"/>
+                        <asp:DropDownList runat="server" ID="cmbStatus" style="position:absolute; width:150px; height: 21px; left:940px; top: 24px"/>
 					</div>
 
                     <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>

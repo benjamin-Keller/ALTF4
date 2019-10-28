@@ -29,9 +29,11 @@
 				<!-- Content -->
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
                     <div style="position:relative; top:0; height: 50%; width:100%;">
-						<label style="position:absolute; left:220px; width:56px; top:0px">Name:</label>
+						<label style="position:absolute; left:220px;">Name:</label>
 
-                        <asp:TextBox runat="server" ID="txtName" style="position:absolute; left:219px ; height:22px; top: 22px;"/>
+                        <br />
+
+                        <asp:TextBox runat="server" ID="txtName" style="position:absolute; left:220px;"/>
                     </div>
 
 					<asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>

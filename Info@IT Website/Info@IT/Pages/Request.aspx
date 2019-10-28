@@ -31,21 +31,27 @@
 
 					<div style="position:relative; top:0; height: 50%; width:100%;">
 						<label style="position:absolute; left:220px">Description:</label>
-						<label style="position:absolute; left:520px">Staff:</label>
-						<label style="position:absolute; left:820px">Student:</label>
-						<label style="position:absolute; left:1120px; width:192px">Task Type:</label>
-                        <label style="position:absolute; left:1120px; top: 72px;">Date:</label>
-                        <label style="position:absolute; left:220px; top: 72px;">Time:</label>
-                        <label style="position:absolute; left:520px; width:192px; top: 72px;">Assigned Staff:</label>
-                        <label style="position:absolute; left:820px; top: 72px;">Status:</label><br />
+						<label style="position:absolute; left:400px">Staff:</label>
+						<label style="position:absolute; left:580px">Student:</label>
+						<label style="position:absolute; left:760px; width:150px">Task Type:</label>       
                         
-						<asp:TextBox runat="server" ID="txtDescription" style="position:absolute; width:192px; left:220px"/>
-						<asp:DropDownList runat="server" ID="cmbStaff" style="position:absolute; width:192px; left:520px"/>
-						<asp:DropDownList runat="server" ID="cmbStudentCode"  style="position:absolute; width:192px; left:820px"/>
-						<asp:DropDownList runat="server" ID="cmbTaskTypeCode"  style="position:absolute; width:192px; left:1120px"/>
-						<asp:Calendar runat="server" ID="dateRequest" style="position:absolute; left:1120px; top: 96px;"/>
+                        <br />
 
-						<asp:DropDownList runat="server" ID="cmbTime" style="position:absolute; left:220px; width:192px; top: 96px;">
+                        <asp:TextBox runat="server" ID="txtDescription" style="position:absolute; width:150px; left:220px"/>
+						<asp:DropDownList runat="server" ID="cmbStaff" style="position:absolute; width:150px; left:400px"/>
+						<asp:DropDownList runat="server" ID="cmbStudentCode"  style="position:absolute; width:150px; left:580px"/>
+						<asp:DropDownList runat="server" ID="cmbTaskTypeCode"  style="position:absolute; width:150px; left:760px"/>
+
+                        <br /><br />
+
+                        <label style="position:absolute; left:220px;">Time:</label>
+                        <label style="position:absolute; left:400px; width:150px;">Assigned Staff:</label>
+                        <label style="position:absolute; left:580px;">Status:</label>
+                        <label style="position:absolute; left:760px;">Date:</label>
+
+                        <br />
+                        
+						<asp:DropDownList runat="server" ID="cmbTime" style="position:absolute; left:220px; width:150px;">
                             <asp:ListItem>08:00:00</asp:ListItem>
                             <asp:ListItem>08:30:00</asp:ListItem>
                             <asp:ListItem>09:00:00</asp:ListItem>
@@ -65,13 +71,14 @@
                             <asp:ListItem>16:00:00</asp:ListItem>
                             <asp:ListItem>16:30:00</asp:ListItem>
                         </asp:DropDownList>
-						<asp:DropDownList runat="server" ID="cmbAssignedStaffCode"  style="position:absolute; width:192px; left:520px; top: 96px;"/>
-						<asp:DropDownList runat="server" ID="cmbStatus"  style="position:absolute; left:820px; width:192px; top: 96px;">
+						<asp:DropDownList runat="server" ID="cmbAssignedStaffCode"  style="position:absolute; left:400px; width:150px;"/>
+						<asp:DropDownList runat="server" ID="cmbStatus"  style="position:absolute; left:580px; width:150px;">
                             <asp:ListItem>Pending</asp:ListItem>
                             <asp:ListItem>In Progress</asp:ListItem>
                             <asp:ListItem>Completed</asp:ListItem>
                             <asp:ListItem>Cancelled</asp:ListItem>
                         </asp:DropDownList>
+                        <asp:Calendar runat="server" ID="dateRequest" style="position:absolute; left:760px;"/>
 					</div>
 
                     <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
@@ -97,5 +104,4 @@
 				   </asp:UpdatePanel>
 			</div>    
     </div>
-        <%--</div>--%>
 </asp:Content>

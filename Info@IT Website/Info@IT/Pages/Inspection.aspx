@@ -30,17 +30,17 @@
 
                     <div style="position:relative; top:0; height: 50%; width:100%;">
 
-						<label style="position:absolute; left:220px;width:192px" >Venue:</label>
-						<label style="position:absolute; left:420px; width:192px">Staff Code:</label>
-						<label style="position:absolute; left:620px; width:192px">Inspection Time:</label>
-						<label style="position:absolute; left:820px; width:192px">Comment:</label><br/>
+						<label style="position:absolute; left:220px; width:150px" >Venue:</label>
+						<label style="position:absolute; left:400px; width:150px">Staff Code:</label>
+						<label style="position:absolute; left:580px; width:150px">Inspection Time:</label>
+						<label style="position:absolute; left:760px; width:150px">Comment:</label><br/>
                         
-						<asp:DropDownList runat="server" ID="cmbVenue" style="position:absolute; left:220px;width:164px;"/>
-						<asp:DropDownList runat="server" ID="cmbStaffCode"  style="position:absolute; left:420px; width: 164px;"/>
-						<asp:TextBox runat="server" ID="txtInspectTime"  style="position:absolute; left:620px;width:164px"/>
-						<asp:TextBox runat="server" ID="txtComment"  style="position:absolute; left:820px; width: 164px;"/><br/>
+						<asp:DropDownList runat="server" ID="cmbVenue" style="position:absolute; left:220px;width:150px;"/>
+						<asp:DropDownList runat="server" ID="cmbStaffCode"  style="position:absolute; left:400px; width: 150px;"/>
+						<asp:TextBox runat="server" ID="txtInspectTime"  style="position:absolute; left:580px;width:150px"/>
+						<asp:TextBox runat="server" ID="txtComment"  style="position:absolute; left:760px; width: 150px;"/><br/>
 
-                        <label style="position:absolute; left:220px; width:192px">Inspection Date:</label><br/>
+                        <label style="position:absolute; left:220px; width:150px">Inspection Date:</label><br/>
                         <asp:Calendar runat="server" ID="calInspectDate" selectionmode="DayWeekMonth" style="position:absolute; left:220px;"/><br/>
 					</div>
 					

@@ -30,20 +30,27 @@
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
                     <div style ="position:relative ; top:0 ; height: 50% ; width:100%;">
                         
-						<label style="position:absolute; left:220px">Description:</label>
-						<label style="position:absolute; left:950px; width:126px; top: 0px;">Date:</label>
-						<label style="position:absolute; left:550px; top: 0px; width: 124px;">ModuleDescriptions:</label>
-						<label style="position:absolute; left:750px; top: 0px; width: 127px;">VenueDescription:</label>
-                        <label style="position:absolute; left:220px; top: 55px; width: 127px;">Start Time:</label>
-                        <label style="position:absolute; left:400px; top: 55px; width: 127px;">End Time:</label>
-                        <label style="position:absolute; left:400px; top: 0px; width: 130px;">Status:</label><br />
+						<label style="position:absolute; left:220px;">Description:</label>
+						<label style="position:absolute; left:400px; top: 0px; width: 150px;">Module Description:</label>
+						<label style="position:absolute; left:580px; top: 0px; width: 150px;">Venue Description:</label>
+                        <label style="position:absolute; left:760px;">Date:</label>
 
+                        <br />
 
-                        <asp:DropDownList runat="server" ID="cmbRequestCode"  style="position:absolute; left:220px; width: 110px; height: 22px"/>
-                        <asp:Calendar runat="server" ID="dateRequest" style="position:absolute; left:950px; top: 25px;"/>
-                        <asp:DropDownList runat="server" ID="cmbModuleCode"  style="position:absolute; left:550px; width: 130px; height: 22px"/>
-                        <asp:DropDownList runat="server" ID="cmbVenueCode"  style="position:absolute; left:750px; width: 124px; height: 22px"/>
-                        <asp:DropDownList runat="server" ID ="cmbStartTime" style="position:absolute; left:220px;top: 75px; width: 124px; height: 22px">
+                        <asp:DropDownList runat="server" ID="cmbRequestCode"  style="position:absolute; left:220px; width: 150px; height: 21px"/>
+                        <asp:DropDownList runat="server" ID="cmbModuleCode"  style="position:absolute; left:400px; width: 150px; height: 21px"/>
+                        <asp:DropDownList runat="server" ID="cmbVenueCode"  style="position:absolute; left:580px; width: 150px; height: 21px"/>
+                        <asp:Calendar runat="server" ID="dateTutorRequest" style="position:absolute; left:760px;"/>
+
+                        <br /><br />
+
+                        <label style="position:absolute; left:220px; width: 150px;">Start Time:</label>
+                        <label style="position:absolute; left:400px; width: 150px;">End Time:</label>
+                        <label style="position:absolute; left:580px; width: 150px;">Status:</label>
+                        
+                        <br />
+
+                        <asp:DropDownList runat="server" ID ="cmbStartTime" style="position:absolute; left:220px; width: 150px; height: 21px">
                             <asp:ListItem>08:00:00</asp:ListItem>
                             <asp:ListItem>08:30:00</asp:ListItem>
                             <asp:ListItem>09:00:00</asp:ListItem>
@@ -63,7 +70,7 @@
                             <asp:ListItem>16:00:00</asp:ListItem>
                             <asp:ListItem>16:30:00</asp:ListItem>
                         </asp:DropDownList>
-                        <asp:DropDownList runat ="server" ID="cmbEndTime" style="position:absolute; left:400px; top: 75px; width: 124px; height: 22px">
+                        <asp:DropDownList runat ="server" ID="cmbEndTime" style="position:absolute; left:400px; width: 150px; height: 21px">
                             <asp:ListItem>08:00:00</asp:ListItem>
                             <asp:ListItem>08:30:00</asp:ListItem>
                             <asp:ListItem>09:00:00</asp:ListItem>
@@ -83,7 +90,7 @@
                             <asp:ListItem>16:00:00</asp:ListItem>
                             <asp:ListItem>16:30:00</asp:ListItem>
                         </asp:DropDownList>
-                        <asp:DropDownList runat="server" ID="cmbStatus"  style="position:absolute; left:400px; width: 110px; height: 22px">
+                        <asp:DropDownList runat="server" ID="cmbStatus"  style="position:absolute; left:580px; width: 150px; height: 21px">
                             <asp:ListItem>Pending</asp:ListItem>
                             <asp:ListItem>In Progress</asp:ListItem>
                             <asp:ListItem>Completed</asp:ListItem>

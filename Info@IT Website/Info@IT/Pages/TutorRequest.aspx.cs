@@ -45,7 +45,7 @@ namespace Info_IT.Pages
 
 		protected void dgTutorRequest_Load1(object sender, EventArgs e)
 		{
-            dateRequest.SelectedDate = DateTime.Now;
+            dateTutorRequest.SelectedDate = DateTime.Now;
 
             cmbRequestCode.DataSource = bll.GetRequests();
             cmbRequestCode.DataTextField = "Request Description";
@@ -80,14 +80,14 @@ namespace Info_IT.Pages
         {
             try
             {
-                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.SelectedDate), cmbStartTime.SelectedItem.ToString(), cmbEndTime.SelectedItem.ToString(), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()), cmbStatus.SelectedItem.ToString());
+                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateTutorRequest.SelectedDate), cmbStartTime.SelectedItem.ToString(), cmbEndTime.SelectedItem.ToString(), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()), cmbStatus.SelectedItem.ToString());
 
                 int x = bll.AddTutorRequest(tutorRequest);
 
                 if (x > 0)
                 {
                     cmbRequestCode.Text = " ";
-                    dateRequest.SelectedDate = DateTime.Today;
+                    dateTutorRequest.SelectedDate = DateTime.Today;
                     cmbStartTime.Text = " ";
                     cmbEndTime.Text = " ";
                     cmbRequestCode.Text = " ";
@@ -117,14 +117,14 @@ namespace Info_IT.Pages
         {
             try
             {
-                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateRequest.SelectedDate), cmbStartTime.SelectedItem.ToString(), cmbEndTime.SelectedItem.ToString(), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()), cmbStatus.SelectedItem.ToString());
+                DAL.TutorRequestClass tutorRequest = new DAL.TutorRequestClass(int.Parse(cmbRequestCode.SelectedValue.ToString()), Convert.ToDateTime(dateTutorRequest.SelectedDate), cmbStartTime.SelectedItem.ToString(), cmbEndTime.SelectedItem.ToString(), int.Parse(cmbModuleCode.SelectedValue.ToString()), int.Parse(cmbVenueCode.SelectedValue.ToString()), cmbStatus.SelectedItem.ToString());
 
                 int x = bll.UpdateTutorRequest(tutorRequest);
 
                 if (x > 0)
                 {
                     cmbRequestCode.Text = " ";
-                    dateRequest.SelectedDate = DateTime.Today;
+                    dateTutorRequest.SelectedDate = DateTime.Today;
                     cmbStartTime.Text = " ";
                     cmbEndTime.Text = " ";
                     cmbRequestCode.Text = " ";
