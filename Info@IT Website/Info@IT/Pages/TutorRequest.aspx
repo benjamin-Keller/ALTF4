@@ -45,7 +45,7 @@
                         <asp:DropDownList runat="server" ID="cmbRequestCode"  style="position:absolute; left:220px; width: 150px; height: 21px"/>
                         <asp:DropDownList runat="server" ID="cmbModuleCode"  style="position:absolute; left:400px; width: 150px; height: 21px"/>
                         <asp:DropDownList runat="server" ID="cmbVenueCode"  style="position:absolute; left:580px; width: 150px; height: 21px"/>
-                        <asp:Calendar runat="server" ID="dateTutorRequest" style="position:absolute; left:760px;"/>
+                        <asp:Calendar runat="server" ID="dateTutorRequest" selectionmode="DayWeekMonth" style="position:absolute; left:760px;"/>
 
                         <br /><br />
 

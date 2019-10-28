@@ -17,15 +17,14 @@
 			<div>
 				<!-- Side Nav -->
 				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey">
-					<div onclick="openFlatButtonRequest()" class="manage_Style">
+					<div onclick="openFlatButtonInspectionDetails()" class="manage_Style">
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
-                    <div onclick="btnManageAdd" id="addButtonInspectionDetails" class="manageAdd" >
-						<p class="manage" style="padding-top: 0px">Add Inspection Details</p>
-					</div>
+                    <div id="addButtonInspectionDetails" class="manageAdd">
+                        <asp:button runat="server" class="manage" style="padding-top: 0px; width: 200px;height:inherit;background-color: #696969;border:none" OnClick="btnManageAdd"  Text="Add Inspection Details"></asp:button>
+                    </div>
                     <div id="updateButtonInspectionDetails" class="manageAdd_Style">
-						
-						<p class="manage" style="padding-top: 0px">Update Inspection Details</p>
+						<asp:button runat="server" class="manage" style="padding-top: 0px; width: 200px;height:inherit;background-color: #696969;border:none" OnClick="btnManageUpdate" Text="Update Inspection Details" ></asp:button>
 					</div>
 				</div>
 
@@ -40,12 +39,19 @@
 						<label style="position:absolute; left:580px; width:150px">Staff Member:</label>
 						<label style="position:absolute; left:760px; width:150px">Fault Comment:</label>
                         <label style="position:absolute; left:940px; width:150px">Status:</label>
+
+                        <br />
                         
-						<asp:DropDownList runat="server" ID="cmbInspectionCode" style="position:absolute; width:150px; height: 21px; left:220px; top: 24px"/>
-						<asp:DropDownList runat="server" ID="cmbEquipment" style="position:absolute; width:150px; height: 21px; left:400px; top: 24px"/>
-						<asp:DropDownList runat="server" ID="cmbStaffMember"  style="position:absolute; width:150px; height: 21px; left:580px; top: 24px"/>
-						<asp:TextBox runat="server" ID="txtFaultComment"  style="position:absolute; width:150px; left:760px; top: 24px"/>
-                        <asp:DropDownList runat="server" ID="cmbStatus" style="position:absolute; width:150px; height: 21px; left:940px; top: 24px"/>
+						<asp:DropDownList runat="server" ID="cmbInspectionCode" style="position:absolute; width:150px; height: 21px; left:220px;"/>
+						<asp:DropDownList runat="server" ID="cmbEquipment" style="position:absolute; width:150px; height: 21px; left:400px;"/>
+						<asp:DropDownList runat="server" ID="cmbStaffMember"  style="position:absolute; width:150px; height: 21px; left:580px;"/>
+						<asp:TextBox runat="server" ID="txtFaultComment"  style="position:absolute; width:150px; height: 21px; left:760px;"/>
+                        <asp:DropDownList runat="server" ID="cmbStatus" style="position:absolute; width:150px; height: 21px; left:940px;">
+                            <asp:ListItem>Pending</asp:ListItem>
+                            <asp:ListItem>In Progress</asp:ListItem>
+                            <asp:ListItem>Completed</asp:ListItem>
+                            <asp:ListItem>Cancelled</asp:ListItem>
+                        </asp:DropDownList>
 					</div>
 
                    

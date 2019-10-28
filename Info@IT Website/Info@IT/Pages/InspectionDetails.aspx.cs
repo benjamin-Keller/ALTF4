@@ -53,7 +53,7 @@ namespace Info_IT.Pages
                 cmbInspectionCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
                 cmbEquipment.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[2].ToString();
                 cmbStaffMember.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
-                cmbStatus.Text = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
+                cmbStatus.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
             }
             catch (Exception b)
             {
@@ -61,7 +61,7 @@ namespace Info_IT.Pages
             }
         }
 
-        protected void BtnManageUpdate(object sender, EventArgs e)
+        protected void btnManageUpdate(object sender, EventArgs e)
         {
             dgInspectionDetails.DataSource = bll.GetInspectionDetail();
 
@@ -91,7 +91,7 @@ namespace Info_IT.Pages
             dgInspectionDetails.DataBind();
         }
 
-        protected void BtnManageAdd(object sender, EventArgs e)
+        protected void btnManageAdd(object sender, EventArgs e)
         {
             try
             {

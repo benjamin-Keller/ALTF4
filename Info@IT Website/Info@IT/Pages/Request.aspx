@@ -83,7 +83,7 @@
                             <asp:ListItem>Completed</asp:ListItem>
                             <asp:ListItem>Cancelled</asp:ListItem>
                         </asp:DropDownList>
-                        <asp:Calendar runat="server" ID="dateRequest" style="position:absolute; left:760px;"/>
+                        <asp:Calendar runat="server" ID="dateRequest" selectionmode="DayWeekMonth" style="position:absolute; left:760px;"/>
 					</div>
 
 

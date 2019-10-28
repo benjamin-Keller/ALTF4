@@ -28,7 +28,8 @@ namespace Info_IT.Pages
                 var values = bll.SelectedForUpdateTutorRequest(request);
 
                 cmbRequestCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[1].ToString();
-               
+                dateTutorRequest.SelectedDate = DateTime.Parse(values.Rows[0].Table.Rows[0].ItemArray[2].ToString());
+                dateTutorRequest.VisibleDate = DateTime.Parse(values.Rows[0].Table.Rows[0].ItemArray[2].ToString());
                 cmbModuleCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[5].ToString();
                 cmbVenueCode.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[6].ToString();
                 cmbStartTime.SelectedValue = values.Rows[0].Table.Rows[0].ItemArray[3].ToString();
