@@ -105,15 +105,15 @@ function openFlatButtonInspection() {
     }
 }
 
-/* Inspection */
+/* Inspection Details */
 function openFlatButtonInspectionDetails() {
-    if (document.getElementById("addButtonInspectionDetails").style.display == "none") {
-        document.getElementById("updateButtonInspectionDetails").style.display = "block";
-        document.getElementById("addButtonInspectionDetails").style.display = "block";
+	if (document.getElementById("addButtonInspectionDetails").style.display == "none") {
+		document.getElementById("updateButtonInspectionDetails").style.display = "block";
+		document.getElementById("addButtonInspectionDetails").style.display = "block";
     }
     else {
-        document.getElementById("updateButtonInspectionDetails").style.display = "none";
-        document.getElementById("addButtonInspectionDetails").style.display = "none";
+		document.getElementById("updateButtonInspectionDetails").style.display = "none";
+		document.getElementById("addButtonInspectionDetails").style.display = "none";
     }
 }
 
