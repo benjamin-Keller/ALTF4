@@ -13,17 +13,18 @@
 	<div class="contentWrapperReport">
 			<div>
 				<!-- Side Nav -->
-				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey; ">
+				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey">
 					<div onclick="openFlatButtonInspection()" class="manage_Style">
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
                     <div id="addButtonInspection" class="manageAdd">
-                        <asp:button runat="server" class="manage" style="padding-top: 0px;height:inherit;background-color: #696969;border:none" OnClick="btnManageAdd"  Text="Add Inspection"></asp:button>
+                        <asp:button runat="server" class="manage" style="padding-top: 0px; width: 200px;height:inherit;background-color: #696969;border:none" OnClick="btnManageAdd"  Text="Add Inspection"></asp:button>
                     </div>
                     <div id="updateButtonInspection" class="manageAdd_Style">
-						<asp:button runat="server" class="manage" style="padding-top: 0px;height:inherit;background-color: #696969;border:none" OnClick="btnManageUpdate" Text="Update Inspection" ></asp:button>
+						<asp:button runat="server" class="manage" style="padding-top: 0px; width: 200px;height:inherit;background-color: #696969;border:none" OnClick="btnManageUpdate" Text="Update Inspection" ></asp:button>
 					</div>
 				</div>
+
 
 				<!-- Content -->
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px;">

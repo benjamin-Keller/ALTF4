@@ -13,16 +13,15 @@
 	<div class="contentWrapperReport">
 			<div>
 				<!-- Side Nav -->
-				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey; ">
+				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey">
 					<div onclick="openFlatButtonRequest()" class="manage_Style">
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
                     <div id="addButtonRequest" class="manageAdd">
-                        <asp:button runat="server" class="manage" style="padding-top: 0px;height:inherit;background-color: #696969;border:none" OnClick="btnManageAdd"  Text="Add Request"></asp:button>
+                        <asp:button runat="server" class="manage" style="padding-top: 0px; width: 200px;height:inherit;background-color: #696969;border:none" OnClick="btnManageAdd"  Text="Add Request"></asp:button>
                     </div>
                     <div id="updateButtonRequest" class="manageAdd_Style">
-						<asp:button runat="server" class="manage" style="padding-top: 0px;height:inherit;background-color: #696969;border:none" OnClick="btnManageUpdate" Text="Update Request" ></asp:button>
-					</div>
+						<asp:button runat="server" class="manage" style="padding-top: 0px; width: 200px;height:inherit;background-color: #696969;border:none" OnClick="btnManageUpdate" Text="Update Request" ></asp:button>
 					</div>
 				</div>
 
@@ -87,7 +86,7 @@
 
 					<!-- DataGrid -->
 					<div style="position:relative; top:300px; left: 220px; height: 50%; background-color: darkgrey">
-						<asp:DataGrid runat="server" ID="dgRequest" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgRequest_Load1" OnSelectedIndexChanged="dgRequest_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True">
+						<asp:DataGrid runat="server" ID="dgRequest" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgRequest_Load1" OnSelectedIndexChanged="dgRequest_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowCustomPaging="true" PageSize="6">
 							<AlternatingItemStyle BackColor="White" ForeColor="#284775" />
 							<Columns>
 								<asp:ButtonColumn CommandName="Select" Text="Select"></asp:ButtonColumn>

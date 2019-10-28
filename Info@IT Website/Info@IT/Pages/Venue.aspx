@@ -6,24 +6,24 @@
 <asp:Content runat="server" ID="Head" ContentPlaceHolderID="head">
 	<link href="../css/Master.css" rel="stylesheet" />
 	<script src="../Script/Scripts.js"></script>
+	
 </asp:Content>
 
 <%-- Body --%>
 <asp:Content runat="server" ID="Content" ContentPlaceHolderID="BodyContent">
      
    <div class="contentWrapperReport">
-	<div>
+	   <div>
 				<!-- Side Nav -->
-				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey; ">
+				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey">
 					<div onclick="openFlatButtonVenue()" class="manage_Style">
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
                     <div id="addButtonVenue" class="manageAdd">
-                        <asp:button runat="server" class="manage" style="padding-top: 0px;height:inherit;background-color: #696969;border:none" OnClick="btnManageAdd"  Text="Add Venue"></asp:button>
+                        <asp:button runat="server" class="manage" style="padding-top: 0px; width: 200px;height:inherit;background-color: #696969;border:none" OnClick="btnManageAdd"  Text="Add Venue"></asp:button>
                     </div>
                     <div id="updateButtonVenue" class="manageAdd_Style">
-						<asp:button runat="server" class="manage" style="padding-top: 0px;height:inherit;background-color: #696969;border:none" OnClick="btnManageUpdate" Text="Update Venue" ></asp:button>
-					</div>
+						<asp:button runat="server" class="manage" style="padding-top: 0px; width: 200px;height:inherit;background-color: #696969;border:none" OnClick="btnManageUpdate" Text="Update Venue" ></asp:button>
 					</div>
 				</div>
 
@@ -69,6 +69,7 @@
 					   </ContentTemplate>
 				   </asp:UpdatePanel>
                 </div>
+		   </div>
 			</div>
       		   
 

@@ -17,14 +17,13 @@
 					<div onclick="openFlatButtonTutorRequest()" class="manage_Style">
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
-                    <div  id="addButtonTutorRequest" class="manageAdd" >
-						<asp:button runat="server" class="manage" style="padding-top:0px;height:inherit;background-color: #696969;border:none" OnClick ="btnManageAdd" Text="Add Tutor Request"></asp:button>
-					</div>
+                    <div id="addButtonTutorRequest" class="manageAdd">
+                        <asp:button runat="server" class="manage" style="padding-top: 0px; width: 200px;height:inherit;background-color: #696969;border:none;" OnClick="btnManageAdd"  Text="Add Tutor Request"></asp:button>
+                    </div>
                     <div id="updateButtonTutorRequest" class="manageAdd_Style">
-						
-						<asp:button runat="server" class="manage"   style="padding-top:0px;height:inherit;background-color: #696969;border:none" OnClick="btnManageUpdate" Text="Update Tutor Request"></asp:button>
+						<asp:button runat="server" class="manage" style="padding-top: 0px; width: 200px;height:inherit;background-color: #696969;border:none" OnClick="btnManageUpdate" Text="Update Tutor Request" ></asp:button>
 					</div>
-	         </div>
+				</div>
 
 				<!-- Content -->
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">

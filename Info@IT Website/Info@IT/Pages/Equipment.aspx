@@ -6,6 +6,7 @@
 <asp:Content runat="server" ID="Head" ContentPlaceHolderID="head">
 	<link href="../css/Master.css" rel="stylesheet" />
 	<script src="../Script/Scripts.js"></script>
+	
 </asp:Content>
 
 <%-- Body --%>
@@ -13,16 +14,15 @@
 	<div class="contentWrapperReport">
 			<div>
 				<!-- Side Nav -->
-				
-                <div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey; ">
+				<div style="position:absolute; min-height: 100%; width: 200px; left: 0px; padding-bottom: 2px; background-color: grey">
 					<div onclick="openFlatButtonEquipment()" class="manage_Style">
 						<p class="manage" style="padding-top: 0px">Manage</p>
 					</div>
                     <div id="addButtonEquipment" class="manageAdd">
-                        <asp:button runat="server" class="manage" style="padding-top: 0px;height:inherit;background-color: #696969;border:none" OnClick="btnManageAdd"  Text="Add Equipment"></asp:button>
+                        <asp:button runat="server" class="manage" style="padding-top: 0px; width: 200px;height:inherit;background-color: #696969;border:none" OnClick="btnManageAdd"  Text="Add Equipment"></asp:button>
                     </div>
                     <div id="updateButtonEquipment" class="manageAdd_Style">
-						<asp:button runat="server" class="manage" style="padding-top: 0px;height:inherit;background-color: #696969;border:none" OnClick="btnManageUpdate" Text="Update Equipment" ></asp:button>
+						<asp:button runat="server" class="manage" style="padding-top: 0px; width: 200px;height:inherit;background-color: #696969;border:none" OnClick="btnManageUpdate" Text="Update Equipment" ></asp:button>
 					</div>
 				</div>
 
