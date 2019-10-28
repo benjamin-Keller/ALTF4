@@ -13,6 +13,24 @@ namespace Info_IT.Pages {
     public partial class InspectionDetails {
         
         /// <summary>
+        /// script control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager script;
+        
+        /// <summary>
+        /// updateDG control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel updateDG;
+        
+        /// <summary>
         /// cmbInspectionCode control.
         /// </summary>
         /// <remarks>
@@ -56,23 +74,5 @@ namespace Info_IT.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList cmbStatus;
-        
-        /// <summary>
-        /// script control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.ScriptManager script;
-        
-        /// <summary>
-        /// updateDG control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel updateDG;
     }
 }

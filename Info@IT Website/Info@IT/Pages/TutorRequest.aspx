@@ -30,6 +30,9 @@
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
                     <div style ="position:relative ; top:0 ; height: 50% ; width:100%;">
                         
+                    <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
+			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
+				   <ContentTemplate>
 						<label style="position:absolute; left:220px;">Description:</label>
 						<label style="position:absolute; left:400px; top: 0px; width: 150px;">Module Description:</label>
 						<label style="position:absolute; left:580px; top: 0px; width: 150px;">Venue Description:</label>
@@ -98,9 +101,6 @@
                         </asp:DropDownList>
                     </div>
 
-                    <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
-			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
-				   <ContentTemplate>
 					
 					<!-- DataGrid -->
 					<div style="position:relative; top:230px; left: 220px; background-color: darkgrey; height: 50%">

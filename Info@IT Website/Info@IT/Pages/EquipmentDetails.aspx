@@ -28,17 +28,17 @@
 
 				<!-- Content -->
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
-
+                    
+                  <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
+			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
+				   <ContentTemplate>
+					
 					<div style="position:relative; top:0; height: 50%; width:100%; background-color: blue;">
 						<label style="position:absolute; left:220px; top: 0px; width: 128px;">Equipment Type:</label>
                         
 						<asp:TextBox runat="server" ID="txtDescription" style="position:absolute; left:220px; top: 24px;"/>
 					</div>
 
-                  <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
-			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
-				   <ContentTemplate>
-					
 					<!-- DataGrid -->
 					<div style="position:relative; top:50px; left: 220px; height: 50%; background-color: darkgrey">
 						<asp:DataGrid runat="server" ID="dgEquipmentType" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgEquipmentType_Load1" OnSelectedIndexChanged="dgEquipmentType_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True">

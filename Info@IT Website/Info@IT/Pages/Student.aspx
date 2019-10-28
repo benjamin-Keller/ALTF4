@@ -30,7 +30,9 @@
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
 
                     <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
-
+                         <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
+			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
+				   <ContentTemplate>
 					<div style="position:relative; top:0; height: 50%; width:100%;">
 						<label style="position:absolute; left:220px; width: 150px;">Student Number:</label>
 						<label style="position:absolute; left:400px">Name:</label>
@@ -45,9 +47,7 @@
 						<asp:TextBox runat="server" ID="txtEmailAddress"  style="position:absolute; left:760px; width: 150px;"/>
 					</div>
 
-                        <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
-			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
-				   <ContentTemplate>
+                       
 
 					<!-- DataGrid -->
 					<div style="position:relative; top:50px; left: 220px; height: 50%; background-color: darkgrey">

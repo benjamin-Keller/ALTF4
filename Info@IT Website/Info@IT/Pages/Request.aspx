@@ -28,7 +28,10 @@
 
 				<!-- Content -->
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
-
+                    
+                    <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
+			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
+				   <ContentTemplate>
 					<div style="position:relative; top:0; height: 50%; width:100%;">
 						<label style="position:absolute; left:220px">Description:</label>
 						<label style="position:absolute; left:400px">Staff:</label>
@@ -81,9 +84,6 @@
                         <asp:Calendar runat="server" ID="dateRequest" style="position:absolute; left:760px;"/>
 					</div>
 
-                    <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
-			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
-				   <ContentTemplate>
 
 					<!-- DataGrid -->
 					<div style="position:relative; top:300px; left: 220px; height: 50%; background-color: darkgrey">

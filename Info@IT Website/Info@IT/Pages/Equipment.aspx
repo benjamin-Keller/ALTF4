@@ -28,6 +28,10 @@
 
 				<!-- Content -->
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
+                    
+                    <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
+			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
+				   <ContentTemplate>
 
 					<div style="position:relative; top:0; height: 50%; width:100%;">
                         <label style="position:absolute; left:220px; top: 0px; width: 150px;">Description:</label>
@@ -39,10 +43,6 @@
                         <asp:DropDownList runat="server" ID="cmbEquipType" style="position:absolute; left:580px; top: 24px; width: 150px;"/>
 					</div>
 					
-                    <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
-			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
-				   <ContentTemplate>
-
 					<!-- DataGrid -->
 					<div style="position:relative; top:50px; left: 220px; height: 50%; background-color: darkgrey">
 						<asp:DataGrid runat="server" ID="dgEquipment" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgEquipment_Load1" OnSelectedIndexChanged="dgEquipment_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True">

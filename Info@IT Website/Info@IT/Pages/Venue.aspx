@@ -29,7 +29,10 @@
 
 				<!-- Content -->
            <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
-
+               <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
+			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
+				   <ContentTemplate>
+				   
                <div style="position:relative; top:0; height: 50%; width:100%;">
                    <label style = "position:absolute; left:220px;">Description</label>
                    <label style = "position:absolute; left:400px;">Capacity</label>
@@ -47,10 +50,7 @@
                </div>
                     <%--<div style="position:relative; top:-2147483648%; height: 50%; background-color: darkgrey; left: 1px;"></div>--%>
 
-			   <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
-			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
-				   <ContentTemplate>
-				   
+			   
 						<!-- DataGrid -->
 						<div style="position:relative; top:65px; left: 220px; height: 50%; background-color: darkgrey">
 							<asp:DataGrid runat="server" ID="dgVenue" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgVenue_Load1" OnSelectedIndexChanged="dgVenue_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" OnPageIndexChanged="dgVenue_PageIndexChanged">

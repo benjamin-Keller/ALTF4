@@ -28,7 +28,9 @@
 
 				<!-- Content -->
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px; background-color: white">
-
+                     <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
+			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
+				   <ContentTemplate>
 					<div style="position:relative; top:0; height: 50%; width:100%;">
 						<label style="position:absolute; left:220px; width:150px">Inspection Code:</label>
 						<label style="position:absolute; left:400px; width:150px">Equipment Code:</label>
@@ -43,9 +45,7 @@
                         <asp:DropDownList runat="server" ID="cmbStatus" style="position:absolute; width:150px; height: 21px; left:940px; top: 24px"/>
 					</div>
 
-                    <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
-			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
-				   <ContentTemplate>
+                   
 
 					<!-- DataGrid -->
 					<div style="position:relative; top:300px; left: 220px; height: 50%; background-color: darkgrey">

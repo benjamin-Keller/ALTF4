@@ -27,6 +27,10 @@
 
 				<!-- Content -->
                 <div style="min-height: 100%; width:100%; padding-top:10px; padding-bottom: 2px;">
+                    
+                    <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
+			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
+				   <ContentTemplate>
 
                     <div style="position:relative; top:0; height: 50%; width:100%;">
 
@@ -44,10 +48,6 @@
                         <asp:Calendar runat="server" ID="calInspectDate" selectionmode="DayWeekMonth" style="position:absolute; left:220px;"/><br/>
 					</div>
 					
-                    <asp:ScriptManager runat="server" ID="script"></asp:ScriptManager>
-			   <asp:UpdatePanel runat="server" ID="updateDG" UpdateMode="Conditional">
-				   <ContentTemplate>
-
 					<!-- DataGrid -->
 					<div style="position:relative; top:200px; left: 220px; height: 50%; background-color: darkgrey">
 						<asp:DataGrid runat="server" ID="dgInspection" style="width:100%; height:50%; vertical-align:middle;" OnLoad="dgInspection_Load1" OnSelectedIndexChanged="dgInspection_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True">
